@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 구간 다운로드</title>
+    <style>
+        input::placeholder{color:#ddd;}
+        input:focus::-webkit-input-placeholder {color:transparent;}
+        input:read-only{background-color: #fff; color: #333; cursor: default;}
+        input:read-only:focus{border-color:#ccc;}
+        *:focus{outline: 1px dotted #ddd;}
+        .btn{display: inline-block; min-width: 68px; min-height: 26px; padding: 0 5px; font-family: 'Noto Sans KR', Helvetica, sans-serif; font-size: 14px; text-align: center; line-height: 1.4; border-radius: 0; cursor: pointer; transition: all .2s ease-in-out;}
+        .form-control{display: inline-block; width: 5%; min-width:25px; height: 24px; font-size: 13px; text-align: center; border: 1px solid #ccc; padding: 0 5px;}
+        .form-control:focus{outline: none; border-color: #333;}
+        .empty-2{padding:0 2px;}
+        .empty-5{padding:0 5px;}
+        .content_download{position: relative; width: 100%;}
+        .btn_box{position: relative; text-align: right; margin: 10px 0;}
+        .btn_download{background: #e31d19; border: 1px solid #e31d19; color:#fff; font-weight: 500; padding: 6px 12px;}
+        .btn_download:hover{background: #d22619; border: 1px solid #d22619;}
+        .btn_outline_download{background: #fff; border: 1px solid #e31d19; color: #e31d19;}
+        .btn_outline_download:hover{background: #e31d19; border: 1px solid #e31d19; color: #fff;}
+        .btn_part{background: #3b8de5; border: 1px solid #3b8de5; color: #fff;}
+        .btn_part:hover{background: #1c73d1; border: 1px solid #1c73d1; color: #fff;}
+        .option_download{display: none; position: relative; overflow:hidden; vertical-align: middle; line-height:1.8; text-align: right; background: #f5f5f5; padding: 10px 10px;}
+        .option_download span{display: inline-block;}
+        .option_download .op_name{font-size: 13px; padding-right: 5px;}
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="warp">
+        <div class="container">
+            <section class="section_download">
+                <div class="content_download">
+                    <div class="btn_box">
+                        <button class="btn btn_download btn_part">부분 다운로드</button>
+                        <button class="btn btn_download btn_all">전체 다운로드</button>
+                    </div>
+                    <div id="optionDownload" class="option_download">
+                        <span class="op_name">시간설정</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="" readonly value="00">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <span class="empty-2">~</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="hh" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <button class="btn btn_part">확인</button>
+                    </div>
+                </div>
+                <!-- <script>
+                    //<button class="btn btn_download btn_part" onclick="option_time()">부분 다운로드</button>
+                    function option_time() {
+                        var op = document.getElementById("optionDownload");
+                        if (op.style.display === "block") {
+                            op.style.display = "none";
+                        } else {
+                            op.style.display = "block";
+                        }
+                    }
+                </script> -->
+                <script>
+                    $(function() {
+                        $(".btn_part").on("click", function() {
+                            $("#optionDownload").slideToggle("fast");
+                        });
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

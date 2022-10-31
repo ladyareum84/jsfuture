@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* 20220208 클립다운 설치안내 페이지 */
+.download_guide{position: relative; color: #19487E;}
+.download_guide .content_ani{display: inline-block; position: relative;}
+.download_guide .inner{position: relative; max-width: 960px; margin: 0 auto;}
+.download_guide .line_style{position:relative; left: 0; border-top: 1px solid #ddd;}
+.download_guide mark{display: inline; background-color: #FFEF2E; color: #19487E;}
+.download_guide .download_section{position: relative; overflow: hidden; width: 100%; text-align: center; padding: 60px 0;}
+.download_guide .download_section .content-header h1{font-size:32px; font-size: 3.2rem; padding-bottom: 20px; color: #19487E;}
+.download_guide .download_section .content-header .content-text{font-size:18px; font-size: 1.8rem; color: #19487E;}
+.download_guide .img_box svg{max-width: 100%; height: auto; -ms-interpolation-mode:bicubic;}
+
+.download_guide .section_top{top:60px;}
+.download_guide .section_top .content-header h1{font-size:42px; font-size: 4.2rem;}
+.download_guide .section_top .content-header .content-text{color: #E41D19; padding-bottom: 60px;}
+.download_guide .section_top .content_ani{padding: 40px 0;}
+.download_guide .section_top .content_ani .ani_loading{width: 50%;}
+.download_guide .section_browser{background-color: #19487E;}
+.download_guide .section_browser .content-header h1{color: #fff; }
+.download_guide .section_browser .content-header .content-text{color: #fff;}
+.download_guide .section_browser .img_box .content_ani{position: absolute; width: 10%;}
+.download_guide .section_browser .img_browser_chrome .content_ani{left: 14%; bottom: 20%;}
+.download_guide .section_browser .img_browser_ie .content_ani{left: 40%; bottom: 16%;}
+.download_guide .section_browser .img_browser_ect .content_ani{right: 16%; top: 35%; -webkit-transform: rotate(180deg); transform: rotate(180deg);}
+.download_guide .section_install-info .content-header h1{color: #E41D19;}
+.download_guide .section_install-info .content-header .content-text{padding-bottom:0;}
+.download_guide .section_install-info .item_guide{position: relative; overflow: hidden; text-align: left; padding: 20px 0;}
+.download_guide .section_install-info .col-img{width: 45%;}
+.download_guide .section_install-info .col-img .ani_cursor{position: absolute; bottom: -3.5%; right: 20%;}
+.download_guide .section_install-info .col-img .ani_cursor.point1{bottom: 4.5%; left: 30%;}
+.download_guide .section_install-info .item_guide .item_use{display: flex; flex-direction: row; align-items: normal;}
+.download_guide .section_install-info .item_guide .num_style{display: inline-block; width:38px; height:38px; background: #FFED12; border-radius: 50%; vertical-align: middle; padding: 10px 10px;}
+.download_guide .section_install-info .item_guide .num_style .num{position: relative; left:-1px; color: #19487E; font-size: 18px; font-size: 1.8rem; font-weight: 600; letter-spacing: -1px;}
+.download_guide .section_install-info .item_guide .text_info{position: relative; top:2px; font-size: 18px; font-size: 1.8rem; line-height: 1.3; color: #19487E; padding-top: 8px; padding-left: 10px;}
+.download_guide .section_install-info .item_guide .text-guide{font-size: 13px; font-size: 1.3rem; line-height: 1.4; color: #888; padding-top: 5px;}
+.download_guide .section_install-info .text_complete{padding-top: 40px;}
+
+/* Media Query */
+@media screen and (max-width: 767px){
+}    
+
+@media screen and (max-width: 480px){
+    .download_guide .download_section.section_top .content-header h1{font-size: 36px; font-size: 3.6rem;}
+    .download_guide .download_section .content-header .content-text{font-size: 14px; font-size: 1.4rem;}
+    .download_guide .download_section .content-header h1{font-size: 24px; font-size: 2.4rem;}
+    .download_guide .section_install-info .item_guide .num_style{width:32px; height:32px;}
+    .download_guide .section_install-info .item_guide .num_style .num{top:-2px; left:-3px; font-size: 16px; font-size: 1.6rem;}
+    .download_guide .section_install-info .item_guide .text_info{font-size: 14px; font-size: 1.4rem; line-height: 1.3;}
+    .download_guide .section_install-info .item_guide .text-guide{font-size: 12px; font-size: 1.2rem}
+    .download_guide .section_browser .col-3{width: 100%;}
+    .download_guide .section_browser .img_box{padding-bottom: 10px;}
+    .download_guide .section_browser .img_browser_chrome .content_ani{left: 14%; bottom: 16%;}
+    .download_guide .section_browser .img_browser_ie .content_ani{left: 40%; bottom: 16%;}
+    .download_guide .section_install-info .col-img .ani_cursor.point1{left: 15%; bottom: -9%;}
+    .download_guide .section_install-info .col-img .ani_cursor{right: 5%; bottom: -19%;}
+}
+
+
+
+/* IE전용 Style */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .download_guide .img_box svg{width: 382px; height:234px;}
+}
+

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="title" content="유튜브 음원추출 - 클립다운(clipdown)">
+		<meta name="keywords" content="유튜브 mp3 음원추출 사이트, 유튜브 mp3 변환, 모바일 유튜브 mp3 음원추출 사이트, 클립다운, clip down, clipdown">
+		<meta name="Description" content="유튜브 mp3 음원추출 사이트 - 클립다운으로 유튜브, 카카오tv, 아프리카tv 동영상을 다운로드하세요.">		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white"><!--  -->
+		<!-- <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<title>유튜브 음원추출 - 클립다운(clipdown)</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./resource/css/common.css">
+		<link rel="stylesheet" href="./resource/css/style.css">		
+		<link rel='stylesheet' href='./resource/font/font.css' type='text/css'>		
+		<link rel="shortcut icon" href="http://www.clipdown.net/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://www.clipdown.net/favicon.ico" type="image/x-icon">		
+	</head>
+	 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	 	<div class="wrap">
+		 	<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header page-scroll">
+						<button id="navbar" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand page-scroll" href="#page-top">
+							<img src="./resource/images/logo_clipdown.png" style="width: 64px;" alt="클립다운" >
+						</a>
+					</div>
+					
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div id="navbar-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-left">
+							<li class="hidden">
+								<a class="page-scroll" href="#page-top"></a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#about">서비스 소개</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#services">이용방법</a>
+							</li>
+							<li class="menu_download">
+								<a class="page-scroll" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename" title="클립다운 설치하기">다운로드</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="#notice">고객센터</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container -->
+			</nav>
+	 	</div>
+		
+		<!-- Intro Section -->
+		<section id="intro" class="intro-section">
+			<div class="bg_01"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+						<div class="left_text">					
+							<h1 class="header_title">
+								<span class="text-block" style="letter-spacing: 1px;">모든 것을 <span class="point-text">한번에!</span></span>
+								<span class="text-block ">유튜브 <span class="point-text">ONE-STOP</span></span>
+								<span class="text-block">프로그램 <span class="point-text">클립다운</span></span>
+							</h1>
+							<div class="btn-box">				
+								<a class="btn btn-lg btn-point" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename">다운로드 for Window</a>
+							</div>
+						</div>				
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+						<div class="right_img img_main_style hide">
+							<div class="bg_mac">
+								<img class="img-fluid" src="./resource/images/img_main_bg_macbook.png" alt="">
+							</div>
+							<div class="main_img">
+								<img class="img-fluid" src="./resource/images/clipdown_guide_01.gif" alt="">	
+							</div>
+						</div>
+						<div class="right_img img_main_style">
+							<div class="bg_mac">
+								<img class="img-fluid" src="./resource/images/img_main_bg_macbook.png" alt="">
+							</div>
+							<div class="main_img main_video">
+								<video id="videoPlayer" class="" width="100%" height="100%" muted="muted" autoplay poster="./resource/video/poster_thumbnail.png">
+									<source src="./resource/video/clipdown_guide_01.mp4" type="video/mp4">
+								</video>
+								<div id="PlayBtn" class="video-overlay play" style="display:none; width:100%; height:100%;">
+									<div class="btn_play"></div>				
+								</div> 
+							</div>
+						</div>
+					</div>
+					<div class="right_img m_img_main_style">
+						
+						<div class="main_img m_main_img">
+							<img class="img-fluid" src="./resource/images/img_main_mobile_item.png" alt="">	
+						</div>
+
+						<div class="m-btn-box">				
+							<div class="btn-group">				
+								<a class="m_btn" href="#"><img class="img-fluid" src="./resource/images/btn_onestore.png" width="170px" height="50px" alt="onestore"></a>
+								<a class="m_btn" href="#"><img class="img-fluid" src="./resource/images/btn_galaxystore.png" width="170px" height="50px" alt="galaxystore"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- About Section -->
+		<section id="about" class="videolist-section uselist-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h1 class="header_title weight-500_medium">클립다운을 사용해야 하는 이유</h1>
+						<div class="content_info">
+							<ul class="row-contents">
+								<li class="col-4">
+									<div class="item_box">
+										<div class="img_item">
+											<svg id="icon_download_video" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="62" viewBox="0 0 80.013 61.343">
+												<image id="Layer_601" data-name="Layer 601" width="80.013" height="61.343" xlink:href="data:image/png;base64,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"/>
+											</svg>
+										</div>
+										<div class="item_title">초간단 다운로드</div>
+										<div class="item_description">
+											<span class="text-block"><span class="point-text">동영상 주소 하나</span>로</span>
+											<span class="text-block">유튜브 <span class="point-text">동영상 다운로드</span>와</span>
+											<span class="text-block">유튜브 <span class="point-text">음원추출</span>이 가능합니다.</span>
+										</div>
+									</div>	
+								</li>
+								<li class="col-4">
+									<div class="item_box">
+										<div class="img_item">
+											<svg id="Layer_602" data-name="Layer 602" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79.609" height="61.034" viewBox="0 0 79.609 61.034">
+												<image id="Layer_602-2" data-name="Layer 602" width="79.609" height="61.034" xlink:href="data:image/png;base64,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"/>
+											</svg>								  
+										</div>
+										<div class="item_title">광고 없는 유튜브</div>
+										<div class="item_description">
+											<span class="text-block"><span class="point-text">계정 연동</span>으로 <span class="point-text">모든 유튜브 기능</span>을</span>
+											<span class="text-block">활용하여 <span class="point-text">광고 없는 동영상</span>을</span>
+											<span class="text-block"><span class="point-text">시청</span>할 수 있습니다.</span>
+										</div>
+									</div>
+								</li>
+								<li class="col-4">
+									<div class="item_box">
+										<div class="img_item">
+											<svg id="icon_8k" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79.552" height="60.99" viewBox="0 0 79.552 60.99">
+												<image id="Layer_600" data-name="Layer 600" width="79.552" height="60.99" xlink:href="data:image/png;base64,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"/>
+											</svg>
+											
+											
+										</div>
+										<div class="item_title">8K급 고화질 영상 다운로드</div>
+										<div class="item_description">
+											<span class="text-block">최대 <span class="point-text">8K의 고화질</span></span>
+											<span class="text-block">영상 다운로드가 <span class="point-text">가능</span>합니다.</span>
+										</div>
+									</div>
+								</li>
+								<li class="col-4">
+									<div class="item_box">
+										<div class="img_item">
+											<svg id="icon_download_audio" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80.325" height="61.582" viewBox="0 0 80.325 61.582">
+												<image id="Layer_603" data-name="Layer 603" width="80.325" height="61.582" xlink:href="data:image/png;base64,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"/>
+											</svg>	
+										</div>
+										<div class="item_title">편리한 유튜브 음원추출</div>
+										<div class="item_description">
+											<span class="text-block">동영상 인코딩, MP3 <span class="point-text">변환없이</span></span>
+											<span class="text-block">편리한 <span class="point-text">추출이 가능</span>합니다.</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="">
+							</div>	
+						</div>
+						<div class="info-area">
+							<p class="info-text">클립다운 설치 후 유튜브 영상 다운로드 및 MP3 음원추출이 가능합니다.</p>
+							<p class="info-text-s info-color">* 단, 실시간/재생불가/지역제한 영상 등은 다운로드 불가능하며, 다운로드 한 영상은 개인소장 용도로만 이용 가능합니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Services Section -->
+		<section id="services" class="services-section">
+			<div class="bg_02"></div>
+			<div class="container">
+				<div class="row">
+					<!-- pc -->
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="contents-pc">
+							<h1 class="header_title weight-500_medium">PC 클립다운 이용방법</h1>
+							<div class="row-contents content_info">
+								<div class="col-2">
+									<div class="left_img">
+										<img class="img-fluid" src="./resource/images/img_pc-download.png" alt="">
+									</div>
+												
+								</div>
+								<div class="col-2">
+									<div class="right_text">					
+										<h2 class="content_title">동영상 다운로드와 음원추출</h2>
+										<div class="content-text">
+											<span class="text-block">동영상 주소 입력창과 URL 복사 시 나타나는 팝업의</span>
+											<span class="text-block">다운로드 버튼을 활용하여 <span class="point-text">간편한 다운로드</span>가 가능합니다.</span> 
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="row-contents content_info">
+								<div class="col-2">
+									<div class="left_text">					
+										<h2 class="content_title">편리한 동영상 시청</h2>
+										<div class="content-text">
+											<span class="text-block">우측의 브라우저를 통해서 <span class="point-text">광고 없이 편안하게 시청</span>하세요. </span>
+											<span class="text-block">동영상 주소 복사 시 나타나는 팝업을 통해</span>
+											<span class="text-block">원하는 영상을 바로 재생할 수 있습니다.</span>  		 
+										</div>
+									</div>
+												
+								</div>
+								<div class="col-2">
+									<div class="right_img">
+										<img class="img-fluid" src="./resource/images/img_pc-view.png" alt="">
+									</div>
+										
+								</div>
+							</div>
+							<div class="btn-box btn-win">				
+								<a class="btn btn-lg btn-point" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename">다운로드 for Window</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- mobile -->
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="contents-mobile">
+							<h1 class="header_title weight-500_medium">모바일 클립다운 이용방법</h1>
+							<div class="row-contents content_info">
+								<div class="col-2">
+									<div class="left_img">
+										<img class="img-fluid" src="./resource/images/img_mobile_download.png" alt="">
+									</div>
+												
+								</div>
+								<div class="col-2">
+									<div class="right_text">					
+										<h2 class="content_title">간편한 모바일 다운로드</h2>
+										<div class="content-text">
+											<span class="text-block point-text">동영상 주소와 클릭 한 번으로</span>
+											<span class="text-block">동영상과 음원을 소장하세요!</span> 
+										</div>
+										<div class="content-text">
+											<span class="text-block">다운로드 받은 동영상과 음원은</span>  
+											<span class="text-block">보관함에서 <span class="point-text">언제 어디서나</span> 확인 가능합니다.</span>  
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="row-contents content_info">
+								<div class="col-2">
+									<div class="left_text">					
+										<h2 class="content_title">광고없는 영상 시청</h2>
+										<div class="content-text">
+											<span class="text-block">모바일에서 자유롭게 영상을 시청하세요!</span>
+											<span class="text-block">모바일 클립다운은 이용 방법이 간편하여</span> 	
+											<span class="text-block"><span class="point-text">누구나 무료로 쉽게</span> 즐길 수 있습니다.</span>
+												
+										</div>
+									</div>
+												
+								</div>
+								<div class="col-2">
+									<div class="right_img">
+										<img class="img-fluid" src="./resource/images/img_mobile_noAD.png" alt="">
+									</div>
+										
+								</div>
+							</div>
+							<div class="m-btn-box">				
+								<div class="btn-group">				
+									<a class="m_btn" href="#"><img class="img-fluid" src="./resource/images/btn_onestore.png" width="170px" height="50px" alt="onestore"></a>
+									<a class="m_btn" href="#"><img class="img-fluid" src="./resource/images/btn_galaxystore.png" width="170px" height="50px" alt="galaxystore"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		<!-- Notice Section -->
+		<section id="notice" class="notice-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h1 class="header_title">문의하기 전 잠깐!</h1>
+						<div>
+							<div class="tabs-menu">
+								<ul id="tab-header" class="nav nav-pills mb-3" role="tablist">
+									<li class="nav-item active">
+									  <a class="nav-link" id="content-faq-tab" data-toggle="pill" href="#content-faq" role="tab" aria-controls="content-faq" aria-selected="true">자주 묻는 질문</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link" id="content-notice-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">공지사항</a>
+									</li>
+								</ul>
+
+								<div class="tab-content" id="pills-tabContent">									
+									<div class="tab-pane active" id="content-faq" role="tabpanel" aria-labelledby="content-faq-tab">
+										<!-- TABS PRESENTATION -->
+			                            <div class="tabs_faq">
+				                            <div class="row">
+				                            	<!-- Search form -->
+				                            	<div class="col-sm-12 col-xs-12">
+				                            	 	<div class="search-bar">
+														<div class="search-form">
+															<input class="form-control" type="text" placeholder="궁금하신 내용을 검색해주세요." aria-label="Search">
+															<div class="search-btn"><i class="icon icon-search"></i></div>
+														</div>	
+				                            	 	</div>				                            	
+				                            	</div>
+				                            	<!-- // Search form -->
+				                                <!-- Nav tabs -->
+				                                <div class="col-sm-3 col-xs-12">
+					                                <ul id="pills-tab2" class="nav-tab tab-menu nav-pills nav-stacked pr15">
+					                                    <li class="active"><a href="#howUse" data-toggle="tab">사용방법</a></li>
+					                                    <li><a href="#installUse" data-toggle="tab">설치</a></li>
+					                                    <li><a href="#downloadUse" data-toggle="tab">다운로드</a></li>
+					                                    <li><a href="#ectUse" data-toggle="tab">기타</a></li>
+					                                </ul>
+													<div class="contact-content">                                
+														<div class="contact-info">
+															<span class="text-block content_title">고객센터 상담 안내</span>
+															<span class="text-block">운영시간 : 09:30 ~ 17:00</span> 
+															<span class="text-block">전화번호 : <a href="tel:02-838-5111">02-838-5111</a></span> 
+															<span class="text-block">이메일 : <a href="mailto:webmaster@jsfuture.co.kr" alt="이메일 보내기" title="이메일 보내기">webmaster@jsfuture.co.kr</a></span> 
+														</div>
+													</div>
+				                                </div>
+				                                <!-- Tab panes -->
+				                                <div class="tab-content col-sm-9 col-xs-12">
+				                                    <div class="tab-pane active" id="howUse"> 			                                    
+				                                    	<form>
+				                                    		<table class="table table-style">
+				                                    			<thead>
+				                                    				<tr>
+				                                    					<th scope="col" style="min-width:50px;">구분</th>
+				                                    					<th scope="col">제목</th>
+				                                    				</tr>
+				                                    			</thead>
+				                                    			<tbody>
+				                                    				<tr>
+				                                    					<th>사용방법</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">이미지 + 텍스트</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>사용방법</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>사용방법</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>사용방법</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>사용방법</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    			</tbody>
+				                                    		</table>
+				                                    	</form>
+				                                    	<!-- layer PopUp  -->
+				                                    	<div class="popup">
+															<div class="popup-header">
+																<div class="header-title">
+																	<span class="separation">[사용방법]</span>
+																	<span class="title">이미지 + 텍스트</span>
+																</div>
+																<div class="btn-area">
+																	<button type="button" class="btn-close" name="close"><span class="close icon-close"></span></button>	
+																</div>
+															</div>
+															<div class="popup-body">
+																<div class="poup-content">
+																	<div class="con_style_float">
+																		<div class="img_left">
+																			<img src="http://www.clipdown.net/common_resource/images/img_faq_webview.jpg">
+																		</div>
+																		<p class="text_right">
+																			그림에 표시된 버튼을 통하여 우측 창 열기/접기 기능을 이용하실 수 있습니다. <br /><br />혹, 해당 버튼을 클릭하였으나 우측 창이 계속해서 나타나지 않을 경우 아래의 전화 혹은 메일로 연락 부탁드립니다.</p>
+																	</div>
+																</div>	
+															</div>
+														</div>
+				                                    	<!-- // layer PopUp  -->				                                    	
+			                                    	</div>   
+				                                    <div class="tab-pane" id="installUse"> 			                                    
+				                                    	<form>
+				                                    		<table class="table table-style">
+				                                    			<thead>
+				                                    				<tr>
+				                                    					<th scope="col" style="min-width:50px;">구분</th>
+				                                    					<th scope="col">제목</th>
+				                                    				</tr>
+				                                    			</thead>
+				                                    			<tbody>
+				                                    				<tr>
+				                                    					<th>설치</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>설치</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>설치</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>설치</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>설치</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    			</tbody>
+				                                    		</table>
+				                                    	</form>
+				                                    	<!-- layer PopUp  -->
+				                                    	<div class="popup">
+															<div class="popup-header">
+																<div class="header-title">
+																	<span class="separation">[설치]</span>
+																	<span class="title">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</span>
+																</div>
+																<div class="btn-area">
+																	<button type="button" class="btn-close" name="close"><span class="close icon-close"></span></button>	
+																</div>
+															</div>
+															<div class="popup-body">
+																<div class="poup-content">
+																	<p>동영상 다운로드가 지원되는 사이트에서도 일부 동영상은 다운로드 하실 수 없습니다.<br><br>
+                                                                     저작권자에 의해 다운로드가 허용되지 않은 동영상, 게시자가 삭제한 동영상, 이용료를 지불해야 하는 유료 동영상 등은 다운로드 하실 수 없으니 이용에 참고해주시기 바랍니다.
+														            </p>
+																</div>	
+															</div>
+														</div>
+				                                    	<!-- // layer PopUp  -->				                                    	
+			                                    	</div> 
+				                                    <div class="tab-pane" id="downloadUse"> 			                                    
+				                                    	<form>
+				                                    		<table class="table table-style">
+				                                    			<thead>
+				                                    				<tr>
+				                                    					<th scope="col" style="min-width:50px;">구분</th>
+				                                    					<th scope="col">제목</th>
+				                                    				</tr>
+				                                    			</thead>
+				                                    			<tbody>
+				                                    				<tr>
+				                                    					<th>다운로드</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>다운로드</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>다운로드</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>다운로드</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>다운로드</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    			</tbody>
+				                                    		</table>
+				                                    	</form>
+				                                    	<!-- layer PopUp  -->
+				                                    	<div class="popup">
+															<div class="popup-header">
+																<div class="header-title">
+																	<span class="separation">[다운로드]</span>
+																	<span class="title">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</span>
+																</div>
+																<div class="btn-area">
+																	<button type="button" class="btn-close" name="close"><span class="close icon-close"></span></button>	
+																</div>
+															</div>
+															<div class="popup-body">
+																<div class="poup-content">
+																	<p>동영상 다운로드가 지원되는 사이트에서도 일부 동영상은 다운로드 하실 수 없습니다.<br><br>
+														                     저작권자에 의해 다운로드가 허용되지 않은 동영상, 게시자가 삭제한 동영상, 이용료를 지불해야 하는 유료 동영상 등은
+														                     다운로드 하실
+														                     수 없으니 이용에 참고해주시기 바랍니다.
+														            </p>
+																</div>	
+															</div>
+														</div>
+				                                    	<!-- // layer PopUp  -->				                                    	
+			                                    	</div>
+				                                    <div class="tab-pane" id="ectUse"> 			                                    
+				                                    	<form>
+				                                    		<table class="table table-style">
+				                                    			<thead>
+				                                    				<tr>
+				                                    					<th scope="col" style="min-width:50px;">구분</th>
+				                                    					<th scope="col">제목</th>
+				                                    				</tr>
+				                                    			</thead>
+				                                    			<tbody>
+				                                    				<tr>
+				                                    					<th>기타</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>기타</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>기타</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>기타</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    				<tr>
+				                                    					<th>기타</th>
+				                                    					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</a></td>
+				                                    				</tr>
+				                                    			</tbody>
+				                                    		</table>
+				                                    	</form>
+				                                    	<!-- layer PopUp  -->
+				                                    	<div class="popup">
+															<div class="popup-header">
+																<div class="header-title">
+																	<span class="separation">[기타]</span>
+																	<span class="title">주소 복사 시에 뜨는 팝업을 더 이상 보고싶지 않아요.</span>
+																</div>
+																<div class="btn-area">
+																	<button type="button" class="btn-close" name="close"><span class="close icon-close"></span></button>	
+																</div>
+															</div>
+															<div class="popup-body">
+																<div class="poup-content">
+																	<p>동영상 다운로드가 지원되는 사이트에서도 일부 동영상은 다운로드 하실 수 없습니다.<br><br>
+																	저작권자에 의해 다운로드가 허용되지 않은 동영상, 게시자가 삭제한 동영상, 이용료를 지불해야 하는 유료 동영상 등은
+																	다운로드 하실
+																	수 없으니 이용에 참고해주시기 바랍니다.
+														            </p>
+																</div>	
+															</div>
+														</div>
+				                                    	<!-- // layer PopUp  -->				                                    	
+			                                    	</div>
+				                                </div>
+				                            </div><!-- //row -->
+			                            </div><!-- contents_tabs // -->
+			                            <!-- TABS PRESENTATION // -->
+									</div>
+									<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+										<form>
+                                   		<table class="table table-style">
+                                   			<thead>
+                                   				<tr>
+                                   					<th scope="col">작성일</th>
+                                   					<th scope="col">제목</th>
+                                   				</tr>
+                                   			</thead>
+                                   			<tbody>
+                                   				<tr>
+                                   					<th>2020.08.27</th>
+                                   					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">4월 9일(목) 클립다운 서비스 정기점검 안내</a></td>
+                                   				</tr>
+                                   				<tr>
+                                   					<th>2020.08.27</th>
+                                   					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">4월 9일(목) 클립다운 1.0.0.3 버전 업데이트 안내</a></td>
+                                   				</tr>
+                                   				<tr>
+                                   					<th>2020.08.27</th>
+                                   					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">4월 9일(목) 클립다운 서비스 정기점검 안내</a></td>
+                                   				</tr>
+                                   				<tr>
+                                   					<th>2020.08.27</th>
+                                   					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">4월 9일(목) 클립다운 1.0.0.3 버전 업데이트 안내</a></td>
+                                   				</tr>
+                                   				<tr>
+                                   					<th>2020.08.27</th>
+                                   					<td><a href="#layerPopup" class="btn_layerpopup" data-js="open">4월 9일(목) 클립다운 1.0.0.3 버전 업데이트 안내</a></td>
+                                   				</tr>
+                                   			</tbody>
+                                   		</table>
+                                   	</form>
+                                   	<!-- layer PopUp  -->
+                                   	<div class="popup">
+										<div class="popup-header">
+											<div class="header-title">
+												<span class="separation">[공지]</span>
+												<span class="title">4월 9일(목) 클립다운 정기점검 안내</span>
+											</div>
+											<div class="btn-area">
+												<button type="button" class="btn-close" name="close"><span class="close icon-close"></span></button>	
+											</div>
+										</div>
+										<div class="popup-body">
+											<div class="poup-content">
+												<p>
+												안녕하세요. ㈜제이스퓨처입니다.<br /><br />
+
+												저희 서비스를 이용해주시는 고객분들께 감사의 말씀 드리며,<br />
+												서비스 정기점검으로 인한 공지사항 참고하셔서 서비스 이용에 불편이 없으시길 바랍니다.<br /><br />
+												
+												[서비스 정기점검 안내]<br />
+												- 점검내용 : 서비스 안정화<br />
+												- 점검일시 : 2020년 4월 9일(목) 04시 ~ 06시<br />
+												- 점검영향 : 홈페이지 이용 및 프로그램 다운로드 불가<br />
+												* 기존 설치된 프로그램은 정상적으로 이용 가능합니다.<br /><br />
+												
+												점검 상황에 따라 점검 시간이 연장 또는 조기 종료될 수 있으니 참고하시기 바랍니다.<br /><br />
+												
+												감사합니다.<br /><br /><br />
+									            </p>
+											</div>	
+										</div>
+									</div>
+                                   	<!-- // layer PopUp  -->
+									</div>
+								</div>
+								<div class="m_contact-content">                                
+									<div class="contact-info">
+										<span class="text-block content_title">고객센터 상담 안내</span>
+										<span class="text-block">운영시간 : 09:30 ~ 17:00</span> 
+										<span class="text-block">전화번호 : <a href="tel:02-838-5111">02-838-5111</a></span> 
+										<span class="text-block">이메일 : <a href="mailto:Webmaster@jsfuture.co.kr" alt="이메일 보내기" title="이메일 보내기">Webmaster@jsfuture.co.kr</a></span> 
+									</div>
+								</div>
+							</div>
+						    
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!-- Contact Section -->
+		<section id="contact" class="contact-section hide">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					    <div class="left_text">
+						    <h1 class="header_title weight-500_medium">문의하기
+						    	<span class="text-block sub-text">개선사항이나 불편하신 점을 알려주세요.</span> 
+						    </h1>						    
+						    <div class="content-text">                                
+                                <div class="contact-info">
+                                    <span class="text-block">고객센터 상담 안내</span>
+                                    <span class="text-block">운영시간 : 09:30 ~ 17:00</span> 
+                                    <span class="text-block">전화번보 : <a href="tel:02-838-5111">02-838-5111</a></span> 
+                                </div>
+                            </div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					    <form class="contact-form">
+                            <div class="form-group selectbox">
+                               <label class=""></label>
+                               <select class="form-control select-style">
+	                               <option>오류사항</option>
+	                               <option>서비스이용</option>
+                               </select>
+                              <!--   <div class="select-arrow"></div> -->
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="이메일">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control textarea-style" id="exampleFormControlTextarea1" rows="8" placeholder="문의내용"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-md btn-point">전송하기</button>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</section>	
+		<footer class="footer-section">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="policy-info">
+                            <a href="http://www.clipdown.net/info.html">이용약관</a>
+                            <span class="divider_vertical"></span>
+                            <a href="http://www.clipdown.net/privacy.html">개인정보취금밥침</a>
+                        </div>
+                        <div class="office-info">
+                            <span class="text-block">㈜제이스퓨처  서울특별시 구로구 디지털로 26길 111, JNK 디지털타워</span>
+                            <span class="">대표이사:장영호</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">사업자등록번호 350-87-00231</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">통신판매업신고 : 제 2017-서울구로-0813호</span>
+                            
+                        </div>
+                        <div class="copyright">
+                            Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+                        </div>
+					</div>
+                </div>
+            </div>
+		</footer>
+		<!--back-to-top -->
+        <div class="back-to-top">
+            <a href="#top" title="Back to top">
+                <span class="arrow-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                </span>					
+            </a>
+        </div>
+        <!-- //back-to-top -->
+        <!-- floatBanner-->
+        <div id="floatbox" class="folat-box">
+           <a class="float-banner" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename" title="클립다운 설치하기">
+                <div class="icon-download">
+                    <div class="arrow bounce">
+                        <span class="fa fa-arrow-down fa-2x"></span>
+                    </div> 
+                </div>
+                <div class="banner-info">
+					<div class="img-clipdown">
+					<!-- <img src="./resource/images/img_clipdown_red.png" class="img-fluid">-->
+                       <img src="./resource/images/logo_clipdown.png" class="img-fluid">
+                   </div>
+                   <div class="info-text">
+					<span class="text-block">클립다운</span>
+					<span class="text-block point-color">다운로드</span>
+                   </div>
+                </div>
+            </a>
+        </div> 
+        <!-- //floatBanner -->
+		<!-- 하단영역부터 다운로드버튼 중앙정렬 -->
+		<div class="btn_download_bottom">
+			<div class="btn-box">				
+				<a class="btn btn-lg btn-grad" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename">
+					<div class="icon-download">
+						<div class="arrow bounce">
+							<span class="fa fa-arrow-down fa-2x"></span>
+						</div> 
+					</div>
+					<div class="info-text">클립다운 다운로드</div>
+				</a>
+			</div>
+		</div> <!-- //하단영역 다운로드버튼 중앙정렬 -->
+	</body>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+	<script src="./resource/js/common.js"></script>
+	<script src="./resource/js/jquery.bpopup.min.js"></script>
+	<script>
+	var animateButton = function(e) {
+	
+	e.preventDefault;
+	//reset animation
+	e.target.classList.remove('animate');
+	
+	e.target.classList.add('animate');
+	setTimeout(function(){
+	  e.target.classList.remove('animate');
+	},700);
+	};
+	
+	var bubblyButtons = document.getElementsByClassName("bubbly-button");
+	
+	for (var i = 0; i < bubblyButtons.length; i++) {
+	bubblyButtons[i].addEventListener('click', animateButton, false);
+	}
+	</script>
+	<script> 
+      $('html').on("click",function(e){ 
+		if( $(e.target).attr("id") != "navbar") {
+			$('.collapse').removeClass('in');
+		}
+	}); 
+	</script>
+
+	<script>
+	var video = document.getElementById("videoPlayer");
+	var playButton = document.getElementById("PlayBtn");
+
+	playButton.addEventListener("click", function() {
+	  if (video.paused == true) 
+	  {
+		video.play();
+		playButton.style.display = "none";
+	  }
+	});
+
+	video.addEventListener("click", function(){
+		if (video.paused == false) 
+		{
+			video.pause();
+			playButton.style.display = "block";
+		}
+	});
+	</script>
+	<script>
+		// 스크롤 시 하단 중앙영역 다운로드 노출
+		let isShowing = false;
+		let isCSSChanged = false;
+		$(window).scroll(function () {
+			let viewportHeight = window.innerHeight;
+			let noticeMarginTop = 150;
+			let noticeOffsetTop = $("#notice").offset().top;
+			let noticeTitleHeight = $("#notice .header_title").height();
+			let noticeHeight = $("#notice").height();
+			
+			let space = 50;
+			let scrollValue = $(document).scrollTop();
+			let showButtonScorllTopPosition = noticeOffsetTop - viewportHeight + noticeMarginTop + noticeTitleHeight;
+				
+			// console.log(scrollValue, showButtonScorllTopPosition);
+				
+			if(scrollValue >= showButtonScorllTopPosition + space) {
+				
+				console.log($('.btn_download_bottom.show').css('bottom'));
+	
+				if(isShowing === false) {
+					// 버튼 보이기
+					$('.btn_download_bottom').addClass("show").show();
+					$('.folat-box').fadeOut(500)
+					isShowing = true;
+					console.log("show");
+				}
+					
+				if(scrollValue >= showButtonScorllTopPosition + noticeHeight) {
+					if(isCSSChanged === false) {
+						isCSSChanged = true;
+						// 위치 변경
+						let currentBottom = parseInt($('.btn_download_bottom.show').css('bottom').replace("px", ""));
+						let changeBottom = currentBottom + 180;
+						$('.btn_download_bottom.show').css('bottom', changeBottom + 'px');
+						console.log("버튼 CSS 변경");
+					}
+				} else {
+					if(isCSSChanged === true) {
+						// 위치 변경 원복
+						let currentBottom = parseInt($('.btn_download_bottom.show').css('bottom').replace("px", ""));
+						let changeBottom = currentBottom - 180;
+	
+						$('.btn_download_bottom').css('bottom', changeBottom + 'px');
+						isCSSChanged = false;
+						console.log("버튼 CSS 변경 원복");
+					}			
+				}
+				
+			} else {
+				if(isShowing === true) {
+					// 버튼 숨기기
+					$('.btn_download_bottom').removeClass("show").hide();
+					$('.folat-box').fadeIn(500)
+					isShowing = false;
+					console.log("hide");
+				}
+			}
+			
+		});
+	
+		</script>
+</html>

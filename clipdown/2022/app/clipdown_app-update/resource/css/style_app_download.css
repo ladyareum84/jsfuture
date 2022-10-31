@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* 
+    * 2022-07-06 
+    * 클립다운 APP apk 다운로드 설치안내 페이지 
+*/
+.font_en{font-family: 'Poppins', sans-serif; font-weight: 300;}
+.app_download_guide{position: relative; height: auto; min-height:100%; background: #f5f5f5;}
+.app_download_guide .inner{position: relative; max-width: 567px; margin: 0 auto;}
+.app_download_guide .contents{padding-bottom: 40px;}
+.app_download_guide .header{position: relative; padding: 15px 15px; background: #444;}
+.app_download_guide .header .header_title{font-size: 16px; font-size: 1.6rem; font-weight: 500; color: #fff;}
+.app_download_guide .section{padding:0 20px;}
+.app_download_guide .section .content_item{margin: 20px 0;}
+.app_download_guide .content_notice{background: #fff; padding: 20px 20px;}
+.app_download_guide .content_notice p{font-size: 18px; font-size: 1.8rem; font-weight: 500; text-align: center; padding-top: 20px; padding-bottom: 20px;}
+.app_download_guide .content_notice .content_text{font-size: 16px; font-size: 1.6rem; line-height: 1.8; text-align: left;}
+.app_download_guide .guide_list .list_item{line-height: 1.4; text-align: left; margin-bottom: 30px;}
+.app_download_guide .guide_list .list_item:last-child{margin-bottom: 0;}
+.app_download_guide .list_item .item_guide{background: #f5f5f5; text-align: center; margin: 10px 0; padding: 20px 20px;}
+.app_download_guide .item_guide .img_guide{padding-bottom: 15px;}
+.app_download_guide .item_guide .img_guide:last-child{padding-bottom: 0;}
+.app_download_guide .item_guide .text_guide{font-size: 13px; font-size: 1.3rem; line-height: 1.4; padding-bottom: 10px;}
+
+.btn_box{display: block; position: relative; width: 100%; text-align: center;}
+.btn_box div:last-child{padding-right: 0;}
+.btn_downlad{display: inline-block; position: relative; overflow: hidden; min-width: 240px;  text-align: center; vertical-align: middle; touch-action: manipulation;
+-webkit-tap-highlight-color: transparent; white-space: nowrap; padding: 15px 26px 14px;}
+.btn_downlad:hover{text-decoration: none;}
+.download_apk, .download_one{display: inline-block; padding-right: 10px;}
+.download_apk .btn_downlad{background: #e21d19; color: #fff; font-size: 16px; font-size: 1.6rem; font-weight: 500;}
+.download_apk .btn_downlad:hover{background: #eb524e;}
+.download_apk .icon-download{display: inline-block;}
+.download_apk .btn_downlad span{position: relative; top:-3px;}
+
+.download_one .btn_downlad{background: #272727; color: #fff; padding: 9px 26px;}
+.download_one .btn_downlad:hover{background: #000;}
+.download_one .btn_downlad svg{position: relative; top: 2px;}
+@media screen and (max-width : 539px) { 
+    .btn_box div:last-child{padding-bottom: 0;}
+    .btn_downlad{display: block; width: 100%;}
+    .download_apk, .download_one{display: block; padding-right: 0; padding-bottom: 20px;}
+}
+.footer-section{position: relative; width: 100%; transform : translateY(-100%); text-align: center; padding: 20px 0;}
+.footer-section .copyright{font-size: 11px; font-size: 1.1rem; color: #aaa;}
+
+.icon-download{position: relative; overflow: hidden;}
+.icon-download .arrow span{position: relative; top: 4px; color: #fff; font-size: 20px; font-size: 2rem; text-decoration: none; padding-top: 0;}
+.icon-download
+.arrow {width: 22px; height: 22px; text-align: center;}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

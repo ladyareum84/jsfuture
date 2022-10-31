@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*!
+ * 2022-04-21
+ * 모바일웹 결제 결과페이지
+ * Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+*/
+
+/* rest */ 
+:root{font-size:62.5%; /* font-size:10px; */}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{margin:0; padding:0; border: 0; font-size:100%; font: inherit; vertical-align:baseline;}
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{display:block;} /* HTML5 display-role reset for older browsers */
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
+div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family:'Noto Sans KR', Helvetica, sans-serif; font-size:1.4rem; font-size:14px; line-height: 1.4; color:#666;}
+html, body{width: 100%; height: 100%;}
+html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+body{overflow-x: hidden; overflow-y: auto;-ms-overflow-style:none;}
+table{border-collapse:collapse; border-spacing:0; width:100%;}
+a{background-color: transparent; color:#666; text-decoration:none; -webkit-text-decoration-skip:object;}
+a:focus, a:hover{outline: 0;}
+a:hover{text-decoration:underline;}
+fieldset, iframe, img, button{border:0;}
+img{max-width:100%; width:100%; height:auto; -webkit-perspective: 1;}
+
+.clear{zoom:1; clear:both;}
+.clear:after{content:" "; display:block; clear:both;} 
+.loading{width:100%; height:100%; text-align:center; position:relative;}
+.loading img{position:absolute; left:25px; top:10px;}
+
+body{background: #fafafa; overflow: hidden;}
+.pop_wrap{position:relative; width:100%; height:auto; margin: 0 auto;}
+.header{width: 100%; height: 50px; background: #eaeaea; padding: 0 20px;}
+.header h1.logo{padding: 5px 0;}
+.header .sub_text{ font-size:16px; font-weight: 500; color: #333; letter-spacing: -1px;}
+.container{position:relative; width: 100%; height: auto; margin: 0 auto;}
+.contents_header{margin: 0 20px; padding: 20px 0 10px 0;}
+.contents_header .header_title{font-size: 18px; font-weight: 500; color: #333;}
+.contents_header .header_title .sub_text_s{font-size: 12px;}
+.tit_area{width: 100%; margin-bottom: 20px;}
+.contents{position: relative; background:#fff; border: 1px solid #eaeaea; margin: 0 20px;}
+.contents .content_item{padding: 20px 20px;}
+.content_item .content_message{display: flex; justify-content: center; align-items: center; position: relative; min-height: 100px;}
+.content_item .content_message{font-size: 14px; color:#666;}
+.content_item .content_message .text_point{font-weight: 500; color:#333;}
+.content_item .content_message .content_title{font-size: 18px; letter-spacing: -1px;}
+.contents .content_item.item_guide{text-align: center; padding: 0 20px;}
+.contents .content_item.item_guide .guide_info{border-top:1px solid #eee; padding: 10px 0 20px;}
+.contents .content_item.item_guide .guide_info p{font-size: 12px;}
+.content_item .text_point{font-weight: 600;}
+.box_btn{position: relative; width: 100%; text-align: center; margin: 20px 0;}
+.btn_style{display: inline-block; position: relative; overflow: hidden; padding: 6px 30px; font-size: 14px; background: #666; color: #fff; border: 1px solid #666; border-radius: 3px;text-decoration: none;}
+.btn_style:hover{background: #333; border: 1px solid #333; text-decoration: none;} 
+
+
+
+
+/* custom style */
