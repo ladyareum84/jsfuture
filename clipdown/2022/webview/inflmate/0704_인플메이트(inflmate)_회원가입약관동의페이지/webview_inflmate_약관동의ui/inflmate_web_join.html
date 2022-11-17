@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>인플메이트 통합 회원 가입 </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <style>
+        :root {font-size: 62.5%;}
+        * { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+        /* HTML5 display-role reset for older browsers */
+        html, body {width: 100%; height: 100%;}
+        html {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+        body { overflow-x: hidden; overflow-y: auto; -ms-overflow-style: none; font-family: 'Noto Sans KR', Helvetica, sans-serif; font-size: 1.6rem; font-size: 16px; font-weight: 400; line-height: 1.6; color: #333;}
+        a{text-decoration: none;}
+        img, svg{ max-width: 100%; height: 100%;}    
+        ul, ol{list-style-type:none;}  
+        .wrap {position: relative; width: 100%; background: #fff;}
+        .webview_box {height: 100%; text-align: center;}
+        .webview_box .content_box{padding-bottom: 10px;}
+        .webview_box .content_box:last-child{padding-bottom: 0;}
+        .webview_box .content_box .content_heading{font-size: 16px; font-size: 1.6rem;}
+        .webview_box .content_box .content_item{margin: 20px 0 0;}
+        .point-text {color: #e21d19 !important;}
+        .weight-700_extraBold {font-weight: 700;}
+        .btn_area {position: relative;width: 100%;text-align: center;vertical-align: middle; margin: 20px 0 10px;}
+        .btn {display: inline-block;position: relative; min-width: 86px; padding: 5px 15px; color: #757575; font-size: 16px; font-size: 1.6rem; font-weight: 500; text-align: center; vertical-align: middle; touch-action: manipulation; margin: 0 2px;}
+        .btn_defualt {background: #888; border: 1px solid #888;  color: #fff; }
+        .btn_defualt:hover {background: #333; border: 1px solid #333; color: #fff;}
+        .btn_point {background: #eb524e; border: 1px solid #eb524e; color: #fff;}
+        .btn_point:hover {background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+        /* PC프로그램 웹뷰창 최소사이즈 기준 */
+        .webview_join{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+        .webview_join .inner {position: relative; max-width: 500px; width: 100%; height: 100%; margin: 0 auto;}
+        .webview_join .webview_box{padding : 20px 20px;}
+        .join_info .profile_img{display: flex; align-items: center; justify-content: center;}
+        .join_info .profile_img img{height: 40px;}
+        .join_info .heading_title{font-size: 22px; font-size: 2.2rem;}
+        .join_info .user_info{display: inline-block; font-size: 14px; font-size: 1.4rem; padding: 5px 0;} 
+        .join_info .user_info .icon{position: relative; float: left; width: 24px; height: 24px; padding-right:10px;}
+        .join_info .link_text{color:#888; font-size: 13px; font-size: 1.3rem; text-decoration:none; padding: 5px 0;}
+        .join_info .link_text:hover{text-decoration:underline;}
+        .join_info .btn_join{display: block; background: #1a73e8; color: #fff; font-weight: 400; border-radius: 5px; padding: 8px 20px;}
+        .form_join{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: left;}
+        .form_join .agree_all{border-bottom: 1px solid #eee;}
+        .agree_all label{font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 1.7; margin: 10px 0;}
+        .agree_all .checkbox span{top:6px;}
+        .terms_agree_list{padding: 10px 0;}
+        .terms_agree_list li.agree_item{position: relative; padding: 2px 0;}
+        .terms_agree_list .checkbox{font-size: 14px; font-size: 1.4rem; font-weight: 500; color: #333;}
+        .form_join .help-text{font-size: 12px; font-size: 1.2rem; color: #888;}
+        .form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 5px 0; }
+        /* checkbox style */
+        .checkbox, .radio{display: inline-block; position: relative; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer; -webkit-transition: all .3s;transition: all .3s; -o-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s;}
+        .checkbox input, .radio input{position: absolute; z-index: -1; top:3px; left: 0; width:14px; height:14px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
+        .checkbox span, .radio span{position: absolute; top: 2px; left: 0; width: 14px; height: 14px; border: 1px solid #c9caca; background: #fff;}
+        .checkbox input:checked~span:after, .radio>input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
+        .checkbox span:after, .radio span:after{content: ''; display: none; position: absolute; }
+        .checkbox span:after{top: 0; left: 4px; width: 4px; height: 8px; border: solid #333; border-width: 0 2px 2px 0; transform: rotate(45deg);}
+        @media screen and (min-width : 601px) { 
+            .webview_box{border: 1px solid #eee; border-radius: 8px; -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.10); box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.10);}
+        }
+        @media screen and (max-width : 360px) { 
+
+        }
+    </style>		
+    
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap webview_join">
+        <div class="inner">
+            <section class="webview_box join_info">
+                <article class="content_box">
+                    <div class="profile_img">
+                        <img src="./ico_clipdown_PC_install.svg" alt="">
+                    </div>
+                    <h1 class="heading_title hide"></h1>
+                    <p class="user_info">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 64 64" width="512"><g id="User"><circle cx="32" cy="32" fill="#e6ecff" r="31"/><g fill="#4294ff"><path d="m56.877 50.4748a31.0647 31.0647 0 0 0 -49.7651-.0156 30.9669 30.9669 0 0 0 49.7651.0156z"/><circle cx="32" cy="22" r="12"/></g></g></svg>
+                        </span>
+                        <span>design@jsfuture.co.kr</span>
+                    </p>
+                </article>
+                <article class="content_box">
+                    <h2 class="content_heading">
+                        <span class="weight-700_extraBold">클립다운</span><span class="point-text weight-700_extraBold">PLUS+</span>를 이용하기 위해<br />
+                        통합 회원(인플메이트) 가입이 필요합니다.
+                    </h2>
+                    <div class="content_item form_join">
+                        <form action="" id="form_wrap">
+                            <div class="agree_all">
+                                <label class="checkbox"> 
+                                    <input type="checkbox" name="agree_all" value="all">모두 동의합니다.
+                                        <span></span>
+                                </label>
+                            </div>
+                            <ul class="terms_agree_list">
+                                <li class="agree_item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="agree" value="">인플메이트 회원 이용약관 <i class="help-text point-text">(필수)</i>
+                                        <span></span>
+                                    </label>
+                                    <div class="terms_link fl_r">
+                                        <a href="" class="link_text">약관보기</a>
+                                    </div>
+                                </li>
+                                <li class="agree_item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="agree" value="">클립다운 PLUS + 이용약관 <i class="help-text point-text">(필수)</i>
+                                        <span></span>
+                                    </label>
+                                    <div class="terms_link fl_r">
+                                        <a href="" class="link_text">약관보기</a>
+                                    </div>
+                                </li>
+                                <li class="agree_item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="agree" value="">개인정보 수집 및 이용동의 <i class="help-text point-text">(필수)</i>
+                                        <span></span>
+                                    </label>
+                                    <div class="terms_link fl_r">
+                                        <a href="" class="link_text">약관보기</a>
+                                    </div>
+                                </li>
+                                <li class="agree_item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="agree" value="">만 14세 이상입니다. <i class="help-text point-text">(필수)</i>
+                                        <span></span>
+                                    </label>
+                                </li>
+                                <li class="agree_item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="agree" value="">광고성 정보 수신 동의 <i class="help-text">(선택)</i>
+                                        <span></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="content_item">
+                        <div class="btn_area">
+                            <a href="" class="btn btn_join">가입하기</a>
+                        </div>
+                        <a href="" class="link_text">다음에 할게요!</a>
+                    </div>
+                    
+                </article>
+            </section>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+    // 동의 모두선택 / 해제
+    const agreeChkAll = document.querySelector('input[name=agree_all]');
+        agreeChkAll.addEventListener('change', (e) => {
+        let agreeChk = document.querySelectorAll('input[name=agree]');
+        for(let i = 0; i < agreeChk.length; i++){
+        agreeChk[i].checked = e.target.checked;
+        }
+    });
+    </script>
+</body>    
