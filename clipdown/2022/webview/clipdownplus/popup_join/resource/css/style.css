@@ -1,0 +1,96 @@
+@charset "utf-8";
+ 
+/* Custom Style */
+.wrap{position: relative; width: 100%; height: 100%;}
+.btn_defualt{background: #fff; border: 1px solid #f7f7f7;}
+
+/* webview popup info style */
+.webview_info .inner{position: relative; max-width: 390px; width: 100%; height:100%; margin: 0 auto;}
+.webview_box{width: 100%; height: 100%; text-align: center; padding: 30px 30px;}
+.webview_info .webview_box .content_info_message{position: absolute; top:50%; left:50%; width: 100%; transform: translate(-50%, -50%);}
+.content_info_message .text_message p{font-size: 14px; font-size: 1.4rem; line-height: 1.6; padding-bottom: 15px;}
+.content_info_message .guide_text{font-size: 12px; font-size: 1.2rem; color: #757575; padding-top: 5px;}
+.content_info_message .btn_area{position: relative; width: 100%; text-align: center; padding-top: 30px;}
+.content_info_message .btn_area .btn_wv_info{font-family: 'Roboto', sans-serif; color:#757575; font-size: 14px; font-size: 1.4rem; font-weight: 500; text-align: center;}
+.content_info_message .btn_area .btn_login_google{font-family: 'Roboto', sans-serif; width: 190px; background: #fff url("../images/icon_login_google.png") no-repeat 1rem 50%; background-size: 18px auto; padding: 10px 10px 10px 40px; border-top: 1px solid #f8f8f8; border-radius: 3px; -webkit-box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 28%); box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 28%);}
+.content_info_message .btn_area .btn_login_google:hover{background-color: #eee;}
+.content_info_message .btn_area .btn_avs{background:#fff; border:1px solid #e21d19; color:#e21d19; padding: 10px 10px 10px 10px;}
+.content_info_message .btn_area .btn_avs:hover{background-color: #e21d19; color:#fff;}
+
+/* 
+    * 2022-11-18        
+    * 클립다운PLUL+ Webview 휴대폰인증 가입팝업, 서비스 안내 팝업 스타일
+*/
+
+/* webview 휴대폰 인증 회원가입 팝업스타일 */
+.webview_popup_join .inner{position: relative; margin: 0 auto; max-width: 504px; max-height: 786px;}
+.webview_popup_join .contents{position: relative; padding: 20px 20px;}
+.webview_popup_join .header{position: relative; background: #f8f8f8; height: 36px; padding: 6px 20px;}
+.webview_popup_join .logo_brand{display:inline-block; position: relative; width: 23%; top:3px;}
+.webview_popup_join .sub-header {padding: 10px 0 0 0;}
+.webview_popup_join .sub-header .sub_title{font-size: 16px; font-size: 1.6rem; font-weight: 500; color: #3b393a;}
+.webview_popup_join .content-item{margin: 10px 0; margin-bottom: 20px;}
+.webview_popup_join .label-control{font-size: 1.4rem; font-size: 14px; line-height: 2.4;}
+.webview_popup_join .form-group{margin-bottom: 20px;}
+.webview_popup_join .form-control{width: 100%; min-width: 135px; height: 42px !important; line-height: 42px !important;}
+.webview_popup_join .form-control:focus{outline: 2px solid #e21d19 !important; outline-offset: -2px;}
+.webview_popup_join .agree-list-box .agree-item{margin-bottom: 5px;}
+.webview_popup_join .agree-list-box .agree-item:last-child{margin-bottom: 0;}
+.webview_popup_join .form_info-input .content-item.mr-t20{margin-top: 0;}
+.webview_popup_join .form_info-input .form-info-box .form-group{border-bottom: 1px solid #efefef; margin-bottom: 0; padding: 20px 0 10px 0;}
+.webview_popup_join .form_info-input .form-info-box{border-bottom: 0;}
+.webview_popup_join .form_info-input .form_birth, .form_info-input .form_school{margin-bottom: 10px;}
+.webview_popup_join .form_info-input .form_birth .form_selectbox:before, .form_birth .form_selectbox:before{right: 25px;}
+.webview_popup_join .form_info-input .form_birth label, .form_birth label{margin-right:10px;}
+.webview_popup_join .btn-box{padding-top: 0; margin-bottom: 30px;}
+.webview_popup_join .btn_full_point {display: inline-block; position: relative; width: 100%; background: #3b393a; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; padding: 10px 20px; ;}
+.webview_popup_join .btn_full_point:focus{background: #e21d19;}
+.webview_popup_join .item_img_box{position: relative; max-width: 504px; margin: 0 auto;}
+/* .webview_popup_join form style */
+.item_content{display: inline-block; width: 100%;}
+.inline-input{margin:0 5px;}/* 컨텐츠 영역의 input 사용시 */
+.help-block{display: block; margin: 5px 0;}
+.help-text{font-size: 12px; font-size: 1.2rem; color: #9fa0a0;}
+.help-block .help-highlight{color: #fff;}
+.help-inline{display: inline-block; font-size:13px; font-size:1.3rem; color: #9fa0a0; margin: 5px 0;}
+.label-control{font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 2;}
+.label-control .required{font-size: 16px; font-size: 1.6rem; color: #e02222; vertical-align: middle; padding-right: 5px;}
+.form-control{display: inline-block; width: 100%; background: #fff; border: 1px solid #ddd; font-size: 1.4rem; font-size: 14px; padding: 5px 10px;}
+.form-input-area{position: relative; width: 100%;}
+.form_selectbox{position: relative;}
+.form_selectbox .select-style{font-size: 13px; font-size: 1.3rem; padding: 0 25px 0 10px; -webkit-appearance: none;}
+.form_selectbox:before, .option-select:before, .sorting_select:before, .lang_select:before {content: ''; position: absolute; top: 50%; right: 8px;  width: 0; height: 0; margin-top: -1px; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; transition: all ease 0.25s; z-index:10;}
+.form-control-static{position: relative; width: 100%; height: 34px; font-size:14px; font-size:1.4rem; line-height:1.6; padding: 5px 10px;}
+.input-group{margin-bottom: 10px;}
+.input-group.mb0{margin-bottom: 0;}
+.input-group .btn_input-group .btn-input{min-height: 34px ; font-size: 12px ; font-size: 1.2rem ; line-height: 1.2; border-radius: 0; padding: 4px 10px;}
+.input-text{height:28px; line-height: 2;}
+.input-text.disabled{color:#999; opacity: .8;}
+.check_form-group{overflow: hidden;}
+.check_form-group .m-checkbox{color:#626061; line-height: 1.6; margin: 5px 0;}
+/* .webview_popup_join Agreement on Terms and Conditions */
+.agree_style{position: relative; width: 100%;}
+.agree_style .agree-item{position: relative; margin-bottom: 10px;}
+.agree_style .agree-item .agree-head{display: block;position: relative;background: #fff;border: 1px solid #efefef;font-size: 14px;font-size: 1.4rem;font-weight: 700; margin-bottom: -1px; padding: 5px 20px;}
+.agree_style .agree-item .required{background: #fff; border: 1px solid #ddd; z-index: 10;}
+.agree_style .agree-item .required:focus{background: #fef9f9; border: 1px solid #e21d19; z-index: 10;}
+.agree_style .agree-contents{display: block; width: 100%; height: auto; background: #fff; border: 1px solid #efefef; margin-top: -1px;}
+.agree_style .agree_content{display: block; width: 100%; height: auto; background: #fff;}
+.agree_style .agree_content .check_form-group .m-checkbox{font-weight: 400;}
+.agree_style .agree_all label{font-size: 16px; font-size: 1.6rem; margin:10px 0;}
+.agree_style .agree_all .m-checkbox span{top: 5px;}
+.agree_style .agreement_title{margin-bottom:10px;}
+.agree_style .check_form-group .m-checkbox{font-size:14px; font-size:1.4rem; font-weight: 500; line-height: 1.5; color: #3b393a;}
+.agree_style .check_form-group .m-checkbox .help-text{display: inline-block;}
+.agree_style .check_form-group .terms_link{ margin: 5px 0;}
+.agree_style .check_form-group .terms_link .help-text{font-size:13px; font-size:1.3rem; font-weight: 400; color: #3b393a;}
+.agree_style .agree_content{position: relative; overflow-y: auto; height:auto; max-height:130px; color: #3b393a; font-size: 13px; font-size: 1.3rem; letter-spacing: -.06rem; padding: 10px 20px;}
+.agree_style .agree_policy .agree-head{margin-bottom: 0;}
+.agree_style .agree_policy .agree-item_2depth{margin-bottom: 2px;}
+.agree_style .agree_policy .agree-item_2depth .agree-head_2depth{display:block; position:relative; background:#f7f7f7; border: 1px solid #efefef; margin-bottom: -1px; margin-top: -1px; padding:2px 20px;}
+.agree_style .agree_policy .agree-head_2depth .check_form-group .m-checkbox{font-size: 11px; font-size: 1.1rem; line-height: 2; font-weight: 400;}
+.agree_style .agree_policy .agree-head_2depth .terms_link .help-text{font-size:10px; font-size:10px; font-weight: 400; color: #626061;}
+.agree_style .agree_policy .agree-contents_2depth{display: block; background:#fefefe; border: 1px solid #efefef;}
+
+
+
