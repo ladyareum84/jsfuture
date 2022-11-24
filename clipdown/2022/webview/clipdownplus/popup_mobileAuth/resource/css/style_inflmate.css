@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 
+    * 2022-07-05       
+    * 개별 CSS 스타일
+    * 클립다운 PC프로그램 WebView 인플메이트 통합가입 페이지
+*/
+
+/* 
+    * .webview_join 스타일 Custom Style
+    * PC프로그램 웹뷰창 최소사이즈 기준 
+*/
+
+.wrap {position: relative; width: 100%; background: #fff;}
+.webview_box {height: 100%; text-align: center;}
+.webview_box .content_box{padding-bottom: 10px;}
+.webview_box .content_box:last-child{padding-bottom: 0;}
+.webview_box .content_box .content_heading{font-size: 16px; font-size: 1.6rem;}
+.webview_box .content_box .content_item{margin: 20px 0 0;}
+.webview_box .point-text {color: #e21d19 !important;}
+.weight-700_extraBold {font-weight: 700;}
+.webview_box .btn_area {position: relative;width: 100%;text-align: center;vertical-align: middle; margin: 20px 0 10px;}
+.webview_box .btn {display: inline-block;position: relative; min-width: 86px; padding: 5px 15px; color: #757575; font-size: 16px; font-size: 1.6rem; font-weight: 500; text-align: center; vertical-align: middle; touch-action: manipulation; margin: 0 2px;}
+.webview_box .btn_default {background: #888; border: 1px solid #888;  color: #fff; }
+.webview_box .btn_default:hover {background: #333; border: 1px solid #333; color: #fff;}
+.webview_box .btn_point{background: #eb524e; border: 1px solid #eb524e; color: #fff;}
+.webview_box .btn_point:hover {background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+.webview_box .btn_outline_point{background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+.webview_box .btn_outline_point:hover{background: #fff; border: 1px solid #f52c29; color: #f52c29;}
+
+.webview_join{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+.webview_join .inner {position: relative; max-width: 504px; width: 100%; height: 100%; margin: 0 auto;}
+.webview_join .webview_box{padding : 20px 20px;}
+.join_info .profile_img{display: flex; align-items: center; justify-content: center;}
+.join_info .profile_img img{height: 40px;}
+.join_info .heading_title{font-size: 22px; font-size: 2.2rem;}
+.join_info .user_info{display: inline-block; font-size: 14px; font-size: 1.4rem; padding: 5px 0;} 
+.join_info .user_info .icon{position: relative; float: left; width: 24px; height: 24px; padding-right:10px;}
+.join_info .link_text{color:#888; font-size: 13px; font-size: 1.3rem; text-decoration:none; padding: 5px 0;}
+.join_info .link_text:hover{text-decoration:underline;}
+.join_info .btn_join{display: block; background: #eb524e; border: 1px solid #eb524e; color: #fff; font-weight: 400; border-radius: 0; padding: 8px 20px;}
+.join_info .btn_join:hover{background: #e21d19; border: 1px solid #e21d19;}
+.form_join{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: left;}
+.form_join .agree_all{border-bottom: 1px solid #eee;}
+.agree_all label{font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 1.7; margin: 10px 0;}
+.agree_all .checkbox span{top:6px;}
+.terms_agree_list{padding: 10px 0;}
+.terms_agree_list li.agree_item{position: relative; padding: 3px 0;}
+.terms_agree_list .checkbox{font-size: 14px; font-size: 1.4rem; font-weight: 400; color: #333;}
+.form_join .help-text{font-size: 12px; font-size: 1.2rem; color: #888;}
+.form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 3px 0; }
+
+/* checkbox style */
+.checkbox, .radio{display: inline-block; position: relative; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer; -webkit-transition: all .3s;transition: all .3s; -o-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s;}
+.checkbox input, .radio input{position: absolute; z-index: -1; top:3px; left: 0; width:14px; height:14px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
+.checkbox span, .radio span{position: absolute; top: 2px; left: 0; width: 14px; height: 14px; border: 1px solid #c9caca; background: #fff;}
+.checkbox input:checked~span:after, .radio>input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
+.checkbox span:after, .radio span:after{content: ''; display: none; position: absolute; }
+.checkbox span:after{top: 0; left: 4px; width: 4px; height: 8px; border: solid #333; border-width: 0 2px 2px 0; transform: rotate(45deg);}
+@media screen and (min-width : 601px) { 
+    .webview_box{border: 1px solid #eee; border-radius: 8px; -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.10); box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.10);}
+}
+@media screen and (max-width : 360px) { 
+
+}
+
+
+/* 
+    * 2022-11-22 update  
+    * 인플메이트 휴대폰인증 회원가입 스타일 추가
+*/
+
+.form_group{text-align: left; margin-bottom: 20px;}
+.form_group .btn_area{margin: 10px 0;}
+.label_control{display: inline-block; position: relative; width: 100%; font-size: 1.6rem; font-size: 1.4rem; font-size: 14px; padding: 5px 0;}
+.input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
+.input_form .form_control{display: inline-block; width: 100%; height: 34px !important; background: #fff; border: 1px solid #ddd; font-size: 1.4rem; font-size: 14px; padding: 5px 10px;}
+.input_form .form_control::placeholder{font-size: 13px; font-size: 1.3rem; color:#aaa;}
+.input_form .time{position: absolute; top: 13px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
+.input_form .form_input_error{border: 1px solid #e21d19;}
+.input_form .form_input_error::placeholder{color: #e21d19;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
+.help_block{display: block; margin: 5px 0;}
+.help_text{font-size: 12px; font-size: 1.2rem; color:#757575;}
+.join_info .form_auth .text_link {font-size: 12px; font-size: 1.2rem; color:#1a73e8}
+.join_info .btn_primary{display: block; background: #1a73e8; color: #fff; font-weight: 400; border-radius: 5px; padding: 8px 20px;} 
+.join_info .btn_apply{display: block; border-radius: 0; background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+.join_info .btn_apply:hover{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+

@@ -1,0 +1,90 @@
+@charset "utf-8";
+ 
+/* Custom Style */
+.wrap{position: relative; width: 100%; height: 100%;}
+
+
+/* 
+    * 2022-11-18        
+    * 클립다운 PLUS+ Webview 휴대폰인증 광고 가입 팝업
+*/
+
+/* webview 휴대폰인증 광고 가입 팝업스타일 */
+.webview_popup_join .inner{position: relative; margin: 0 auto; max-width: 504px; max-height: 786px;}
+.webview_popup_join .contents{position: relative; padding: 20px 20px;}
+.webview_popup_join .header{position: relative; background: #f8f8f8; height: 36px; padding: 6px 20px;}
+.webview_popup_join .logo_brand{display:inline-block; position: relative; width: 23%; top:3px;}
+.webview_popup_join .sub-header {padding: 10px 0 0 0;}
+.webview_popup_join .sub-header .sub_title{font-size: 16px; font-size: 1.6rem; font-weight: 500; color: #3b393a;}
+.webview_popup_join .content-item{margin: 10px 0; margin-bottom: 20px;}
+.webview_popup_join .label-control{font-size: 1.4rem; font-size: 14px; line-height: 2.4;}
+.webview_popup_join .form-group{margin-bottom: 20px;}
+.webview_popup_join .form-control{width: 100%; min-width: 135px; height: 42px !important; line-height: 42px !important;}
+.webview_popup_join .form-control:focus{outline: 2px solid #e21d19 !important; outline-offset: -2px;}
+.webview_popup_join .agree-list-box .agree-item{margin-bottom: 5px;}
+.webview_popup_join .agree-list-box .agree-item:last-child{margin-bottom: 0;}
+.webview_popup_join .form_info-input .content-item.mr-t20{margin-top: 0;}
+.webview_popup_join .form_info-input .form-info-box .form-group{border-bottom: 1px solid #efefef; margin-bottom: 0; padding: 20px 0 10px 0;}
+.webview_popup_join .form_info-input .form-info-box{border-bottom: 0;}
+.webview_popup_join .form_info-input .form_birth, .form_info-input .form_school{margin-bottom: 10px;}
+.webview_popup_join .form_info-input .form_birth .form_selectbox:before, .form_birth .form_selectbox:before{right: 25px;}
+.webview_popup_join .form_info-input .form_birth label, .form_birth label{margin-right:10px;}
+.webview_popup_join .btn-box{padding-top: 0; margin-bottom: 30px;}
+.webview_popup_join .btn_full_point {display: inline-block; position: relative; width: 100%; background: #3b393a; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; padding: 10px 20px; cursor: pointer;}
+.webview_popup_join .btn_full_point:focus{background: #e21d19;}
+.webview_popup_join .item_img_box{position: relative; max-width: 504px; margin: 0 auto;}
+/* .webview_popup_join form style */
+.item_content{display: inline-block; width: 100%;}
+.inline-input{margin:0 5px;}/* 컨텐츠 영역의 input 사용시 */
+.help-block{display: block; margin: 5px 0;}
+.help-text{font-size: 12px; font-size: 1.2rem; color: #9fa0a0;}
+.help-block .help-highlight{color: #fff;}
+.help-inline{display: inline-block; font-size:13px; font-size:1.3rem; color: #9fa0a0; margin: 5px 0;}
+.label-control{font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 2;}
+.label-control .required{font-size: 16px; font-size: 1.6rem; color: #e02222; vertical-align: middle; padding-right: 5px;}
+.form-control{display: inline-block; width: 100%; background: #fff; border: 1px solid #ddd; font-size: 1.4rem; font-size: 14px; padding: 5px 10px;}
+.form-input-area{position: relative; width: 100%;}
+.form_selectbox{position: relative;}
+.form_selectbox .select-style{font-size: 13px; font-size: 1.3rem; padding: 0 25px 0 10px; -webkit-appearance: none;}
+.form_selectbox:before, .option-select:before, .sorting_select:before, .lang_select:before {content: ''; position: absolute; top: 50%; right: 8px;  width: 0; height: 0; margin-top: -1px; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #333; transition: all ease 0.25s; z-index:10;}
+.form-control-static{position: relative; width: 100%; height: 34px; font-size:14px; font-size:1.4rem; line-height:1.6; padding: 5px 10px;}
+.input-group{margin-bottom: 10px;}
+.input-group.mb0{margin-bottom: 0;}
+.input-group .btn_input-group .btn-input{min-height: 34px ; font-size: 12px ; font-size: 1.2rem ; line-height: 1.2; border-radius: 0; padding: 4px 10px;}
+.input-text{height:28px; line-height: 2;}
+.input-text.disabled{color:#999; opacity: .8;}
+.check_form-group{overflow: hidden;}
+.check_form-group .m-checkbox{color:#626061; line-height: 1.6; margin: 5px 0;}
+/* .webview_popup_join Agreement on Terms and Conditions */
+.agree_style{position: relative; width: 100%;}
+.agree_style .agree-item{position: relative; margin-bottom: 10px;}
+.agree_style .agree-item .agree-head{display: block;position: relative;background: #fff;border: 1px solid #efefef;font-size: 14px;font-size: 1.4rem;font-weight: 700; margin-bottom: -1px; padding: 5px 20px;}
+.agree_style .agree-item .required{background: #fff; border: 1px solid #ddd; z-index: 10;}
+.agree_style .agree-item .required:focus{background: #fef9f9; border: 1px solid #e21d19; z-index: 10;}
+.agree_style .agree-contents{display: block; width: 100%; height: auto; background: #fff; border: 1px solid #efefef; margin-top: -1px;}
+.agree_style .agree_content{display: block; width: 100%; height: auto; background: #fff;}
+.agree_style .agree_content .check_form-group .m-checkbox{font-weight: 400;}
+.agree_style .agree_all label{font-size: 16px; font-size: 1.6rem; margin:10px 0;}
+.agree_style .agree_all .m-checkbox span{top: 5px;}
+.agree_style .agreement_title{margin-bottom:10px;}
+.agree_style .check_form-group .m-checkbox{font-size:14px; font-size:1.4rem; font-weight: 500; line-height: 1.5; color: #3b393a;}
+.agree_style .check_form-group .m-checkbox .help-text{display: inline-block;}
+.agree_style .check_form-group .terms_link{ margin: 5px 0;}
+.agree_style .check_form-group .terms_link .help-text{font-size:13px; font-size:1.3rem; font-weight: 400; color: #3b393a;}
+.agree_style .agree_content{position: relative; overflow-y: auto; height:auto; max-height:130px; color: #3b393a; font-size: 13px; font-size: 1.3rem; letter-spacing: -.06rem; padding: 10px 20px;}
+.agree_style .agree_policy .agree-head{margin-bottom: 0;}
+.agree_style .agree_policy .agree-item_2depth{margin-bottom: 2px;}
+.agree_style .agree_policy .agree-item_2depth .agree-head_2depth{display:block; position:relative; background:#f7f7f7; border: 1px solid #efefef; margin-bottom: -1px; margin-top: -1px; padding:2px 20px;}
+.agree_style .agree_policy .agree-head_2depth .check_form-group .m-checkbox{font-size: 11px; font-size: 1.1rem; line-height: 2; font-weight: 400;}
+.agree_style .agree_policy .agree-head_2depth .terms_link .help-text{font-size:10px; font-size:10px; font-weight: 400; color: #626061;}
+.agree_style .agree_policy .agree-contents_2depth{display: block; background:#fefefe; border: 1px solid #efefef;}
+/* 7일간보지않기 스타일 */
+.content_bottom{position: absolute; width: 100%; bottom: 0; height: 28px; background: #eee; padding: 5px 20px;}
+.content_bottom .item_cookie{position: relative; float: right; line-height: .6;}
+.content_bottom .checkbox{display: inline-block; position: relative; font-size: 1.1rem; line-height: 1.6; color: #aaa; cursor: pointer; padding-left: 19px; }
+.content_bottom .checkbox input{position: absolute; top:0px; left:0; width: 14px; height: 14px; margin: 0; opacity: 0; z-index: -1;}
+.content_bottom .checkbox span{position: absolute; top:1px; left: 0; width: 14px; height: 14px; background: #fff; border: 1px solid #ddd; }
+.content_bottom .checkbox span::after{ content: ''; display: none; position: absolute; top:1px; left: 5px; width: 4px; height: 8px; border: solid #666; border-width:0 2px 2px 0; transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg);}
+.content_bottom .checkbox input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
+
+
