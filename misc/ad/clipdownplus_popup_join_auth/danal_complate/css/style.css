@@ -71,7 +71,7 @@ p.txt_info	{margin:57px 0 0 145px;}
 
 
 /* custom style */
-body{background: #fafafa !important;}
+body{background: #fafafa;}
 .pop_wrap{position:relative; width:100%; height:auto; margin: 0 auto;}
 .pop_win .header{width: 100%; height: 50px; background: #eaeaea;}
 .pop_win .header h1.logo{padding: 8px 20px;}
@@ -124,4 +124,21 @@ body{background: #fafafa !important;}
 .tabs-menu.m_tabs_payment .nav-item{background: #f0f0f0;}
 
 
+/* clipdonwPLUS+ Webview 가입팝업 - 결제완료 */
+*, ::after, ::before{box-sizing: border-box;}
+.webview_join_body{background: #fff;}
+.webview_popup_join .inner{position: relative; margin: 0 auto; max-width: 504px; max-height: 786px;}
+.webview_popup_join .contents{position: relative; padding: 20px 20px; border: 1px solid #ddd; margin-bottom: 20px;} 
+.webview_popup_join .header{position: relative; height: 36px; padding: 6px 20px; background: #f8f8f8;}
+.webview_popup_join .logo_brand{display:inline-block; position: relative; width: 23%; top:3px;}
+.webview_popup_join .sub-header {padding: 10px 0 0 0;}
+.webview_popup_join .sub-header .sub_title{font-size: 16px; font-size: 1.6rem; font-weight: 500; color: #3b393a;}
+.webview_popup_join .contents .content_item{padding: 20px 0;}
+.webview_popup_join .content-item{margin: 10px 0; margin-bottom: 20px;}
+.webview_popup_join .itme_clipdown{position: relative; width: 100%; text-align: center; background: #f7f7f7;  padding: 20px 0;}
+.webview_popup_join .itme_clipdown .icon_clipdown{display: inline-block; vertical-align: middle;}
+.webview_popup_join .itme_clipdown .content_text{display: inline-block; font-size: 1.4em; font-size: 14px; text-align: left; vertical-align: middle; padding-left: 10px;}
+.webview_popup_join .item_guide .guide_info{border-top: 1px dashed #eee;}
+.webview_popup_join .item_guide .guide_list{padding-top: 15px;}
+.webview_popup_join .content_item.item_guide{background: #f7f7f7;}
 

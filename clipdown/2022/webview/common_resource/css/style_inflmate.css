@@ -15,11 +15,11 @@
 .webview_box {height: 100%; text-align: center;}
 .webview_box .content_box{padding-bottom: 10px;}
 .webview_box .content_box:last-child{padding-bottom: 0;}
-.webview_box .content_box .content_heading{font-size: 16px; font-size: 1.6rem; line-height: 1.6; padding: 20px 0;}
+.webview_box .content_box .content_heading{font-size: 16px; font-size: 1.6rem;}
 .webview_box .content_box .content_item{margin: 20px 0 0;}
 .webview_box .point-text {color: #e21d19 !important;}
 .weight-700_extraBold {font-weight: 700;}
-.webview_box .btn_area {position: relative;width: 100%;text-align: center;vertical-align: middle; margin: 20px 0 20px;}
+.webview_box .btn_area {position: relative;width: 100%;text-align: center;vertical-align: middle; margin: 20px 0 10px;}
 .webview_box .btn {display: inline-block;position: relative; min-width: 86px; padding: 5px 15px; color: #757575; font-size: 16px; font-size: 1.6rem; font-weight: 500; text-align: center; vertical-align: middle; touch-action: manipulation; margin: 0 2px;}
 .webview_box .btn_default {background: #888; border: 1px solid #888;  color: #fff; }
 .webview_box .btn_default:hover {background: #333; border: 1px solid #333; color: #fff;}
@@ -42,11 +42,11 @@
 .join_info .btn_join:hover{background: #e21d19; border: 1px solid #e21d19;}
 .form_join{border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: left;}
 .form_join .agree_all{border-bottom: 1px solid #eee;}
-.agree_all label{font-size: 14px; font-size: 1.4rem; font-weight: 500; line-height: 1.8; margin: 10px 0;}
+.agree_all label{font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 1.7; margin: 10px 0;}
 .agree_all .checkbox span{top:6px;}
 .terms_agree_list{padding: 10px 0;}
 .terms_agree_list li.agree_item{position: relative; padding: 3px 0;}
-.terms_agree_list .checkbox{font-size: 14px; font-size: 1.4rem; line-height: 1.2; font-weight: 400; color: #333;}
+.terms_agree_list .checkbox{font-size: 14px; font-size: 1.4rem; font-weight: 400; color: #333;}
 .form_join .help-text{font-size: 12px; font-size: 1.2rem; color: #888;}
 .form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 3px 0; }
 
@@ -74,16 +74,14 @@
 .form_group .btn_area{margin: 10px 0;}
 .label_control{display: inline-block; position: relative; width: 100%; font-size: 1.6rem; font-size: 1.4rem; font-size: 14px; padding: 5px 0;}
 .input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
-.input_form .form_control{display: inline-block; width: 100%; height: 42px !important; background: #fff; border: 1px solid #d8d8d8; font-size: 1.4rem; font-size: 14px; padding: 5px 10px;}
+.input_form .form_control{display: inline-block; width: 100%; height: 42px !important; background: #fff; border: 1px solid #ddd; font-size: 1.4rem; font-size: 14px; padding: 5px 10px;}
 .input_form .form_control::placeholder{font-size: 13px; font-size: 1.3rem; color:#aaa;}
-.input_form .form_control:focus{border: 1px solid #333;}
-.input_form .time{position: absolute; top: 18px; right: 20px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
+.input_form .time{position: absolute; top: 13px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
 .input_form .form_input_error{border: 1px solid #e21d19;}
 .input_form .form_input_error::placeholder{color: #e21d19;}
-.input_form .form_control.form_input_error:focus{outline: 0; outline-offset:0; border: 1px solid #e21d19;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
 .help_block{display: block; margin: 5px 0;}
 .help_text{font-size: 12px; font-size: 1.2rem; color:#757575;}
-.join_info .content_heading{padding-top: 20px; padding-bottom: 20px;}
 .join_info .form_auth .text_link {font-size: 12px; font-size: 1.2rem; color:#1a73e8; cursor: pointer;}
 .join_info .btn_primary{display: block; background: #1a73e8; color: #fff; font-weight: 400; border-radius: 5px; padding: 8px 20px;} 
 .join_info .btn_apply{display: block; border-radius: 0; background: #fff; border: 1px solid #e21d19; color: #e21d19;}
@@ -93,6 +91,5 @@
 .join_info .item_guide .guide_list{font-size: 12px; font-size: 1.2rem;  padding-top: 15px;}
 .join_info .item_guide .guide_info p, .join_info .item_guide .guide_list .list_title, .join_info .item_guide .guide_list .list_item{color: #888;}
 
-.join_info .form_auth{margin: 0;}
-.join_info .form_auth .form_group{margin-bottom: 10px;}
-.join_info .content_box .content_item.form_join{margin-top: 10px;}
+
+

@@ -40,22 +40,20 @@
 .form_group{margin-bottom: 20px;}
 .form_group .btn_area{margin: 10px 0; padding: 0;}
 .input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
-.input_form .form_control{display: inline-block; width: 100%; height: 42px !important; background: #fff; border: 1px solid #d8d8d8; font-size: 1.4rem; font-size: 14px; padding: 7px 10px 5px 10px;}
+.input_form .form_control{display: inline-block; width: 100%; height: 42px !important; background: #fff; border: 1px solid #ddd; font-size: 1.4rem; font-size: 14px; padding: 7px 10px 5px 10px;}
 .input_form .form_control::placeholder{font-size: 12px; font-size: 1.2rem; color:#aaa;}
-.input_form .form_control:focus{border: 1px solid #333;}
 .input_form .form_input_error{border: 1px solid #e21d19;}
-.input_form .form_control.form_input_error::placeholder{color: #e21d19;}
-.input_form .form_control.form_input_error:focus{outline: 0; outline-offset:0; border: 1px solid #e21d19;}
+.input_form .form_input_error::placeholder{color: #e21d19;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
 .input_form .time{position: absolute; top: 18px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
 .help_block{display: block; margin: 5px 0;}
 .help_text{font-size: 12px; font-size: 1.2rem; color:#757575; text-align: left;}
-.form_group .text_link {font-size: 12px; font-size: 1.2rem; color:#1a73e8;}
+.form_group .text_link {font-size: 12px; font-size: 1.2rem; color:#1a73e8; cursor: pointer;}
 
 /* webview 팝업 로그인 안내 */
 .btn:focus{box-shadow:none !important;}
 .login_mobileAuth .content_item{margin-bottom: 20px;}
-.login_mobileAuth .content_item:last-child{margin-bottom: 0;}
-.login_mobileAuth .text_message p{font-size: 16px; font-size: 1.6rem; line-height: 1.6; padding-bottom: 15px;}
+.login_mobileAuth .text_message p{font-size: 14px; font-size: 1.4rem; line-height: 1.6; padding-bottom: 15px;}
 .login_mobileAuth .form_input{max-width: 260px;}
 .login_mobileAuth .form_input_error{max-width: 260px; border: 1px solid #e21d19;}
 .login_mobileAuth .form_input_error::placeholder{color: #e21d19;}

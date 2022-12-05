@@ -19,7 +19,7 @@
 .webview_popup_join .content-item{margin: 10px 0; margin-bottom: 20px;}
 .webview_popup_join .label-control{font-size: 1.4rem; font-size: 14px; line-height: 2.4;}
 .webview_popup_join .form-group{margin-bottom: 20px;}
-.webview_popup_join .form-control{width: 100%; min-width: 135px; height: 42px !important; line-height: 42px !important;}
+.webview_popup_join .form-control{width: 100%; min-width: 135px; height: 48px !important; line-height: 48px !important;}
 .webview_popup_join .form-control:focus{outline: 2px solid #e21d19 !important; outline-offset: -2px;}
 .webview_popup_join .agree-list-box .agree-item{margin-bottom: 5px;}
 .webview_popup_join .agree-list-box .agree-item:last-child{margin-bottom: 0;}
