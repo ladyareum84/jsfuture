@@ -46,7 +46,7 @@
 .input_form .form_input_error{border: 1px solid #e21d19;}
 .input_form .form_control.form_input_error::placeholder{color: #e21d19;}
 .input_form .form_control.form_input_error:focus{outline: 0; outline-offset:0; border: 1px solid #e21d19;}
-.input_form .time{position: absolute; top: 18px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
+.input_form .time{position: absolute; top: 18px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 400;}
 .help_block{display: block; margin: 5px 0;}
 .help_text{font-size: 12px; font-size: 1.2rem; color:#757575; text-align: left;}
 .form_group .text_link {font-size: 12px; font-size: 1.2rem; color:#1a73e8;}
