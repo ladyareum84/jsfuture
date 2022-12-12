@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="title" content="HTML5 Video Player">
+        <meta name="keywords" content="">
+        <meta name="Description" content="">		
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">		
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta name="format-detection" content="telephone=no"/> 
+        <title>공지사항</title>
+		<link rel="stylesheet" href="common.css">	
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+			<div class="container">
+				<section class="contents">
+					<article class="guide_box">
+						<div class="guide_info">
+							<p>
+								클립다운 Lite의 <br />다양한 소식들을 확인하세요!
+							</p>
+							
+						</div>
+					</article>
+					<article class="content-box ">
+                        <div id="accordion" class="accordion-list-box">
+							<!-- section 1 -->
+							<div class="acc-item">
+								<h3 class="acc-head">
+									<span class="text-block heade-title ellipsis">최초 서비스 시작 안내</span>
+									<span class="text-block info_sub">2022-03-17</span>
+								</h3>
+								<div class="acc-contents">
+									<p>안녕하세요. (주)제이스 퓨처입니다.</p>
+									<p>광고 없는 동영상 시청이 가능한 클립다운 라이트 서비스를<br /> 이제 플레이 스토어에서 만나보실 수 있습니다.</p>
+									<p>광고 제거 기능을 통해 다양한 동영상을 끊김없이 시청하실 수 있으며,<br /> PIP 모드를 통해 동영상 시청과 
+										동시에 다른 앱들을 이용할 수 있습니다.</p>
+									<p>이용 중 불편하신 사항은 고객센터에 의견을 남겨주시면<br /> 적극 반영하여 더 좋은 서비스를 제공하는 
+										클립다운 라이트가 되겠습니다.</p>
+									<p>감사합니다.</p>
+								</div>
+							</div>
+							<!-- section 2 -->
+							<div class="acc-item">
+								<h3 class="acc-head">
+									<span class="text-block heade-title ellipsis">서비스 정기 점검 안내</span>
+									<span class="text-block info_sub">2022-03-18</span>
+								</h3>
+								<div class="acc-contents">
+									<p>
+									Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+								    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+								    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+								    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.										
+									</p>
+								</div>										
+							</div>
+							<!-- section 3 -->
+							<div class="acc-item">
+								<h3 class="acc-head">
+									<span class="text-block heade-title ellipsis">유튜브 로그인은 어디서 하나요?</span>
+									<span class="text-block info_sub">2022-03-11</span>
+								</h3>
+								<div class="acc-contents">
+									<p>
+									Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+								    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+								    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+								    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.										
+									</p>
+								</div>										
+							</div>
+						</div>
+                    </article>
+                </section>
+				<footer class="footer">
+					<div class="copyright">
+						Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+					</div>
+				</footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        <script>
+			WebFont.load({
+			  google: {
+				families: ['Noto Sans KR', 'Roboto']
+			  }
+			});
+		</script>
+        <script>
+        //Accordion
+        $(document).ready(function(){	
+            $(".acc-contents").hide(); 
+            $(".acc-item > .acc-head").on("click", function(){
+                if($(this).hasClass('active')){
+                $(this).removeClass("active");
+                $(this).siblings('.acc-contents').slideUp(200);
+                }else{
+                $(".acc-item > .acc-head").removeClass("active");
+                $(this).addClass("active");
+                $('.acc-contents').slideUp(200);
+                $(this).siblings('.acc-contents').slideDown(200);
+                    }   
+            });
+        });
+        </script>
+    </body>
+</html>
