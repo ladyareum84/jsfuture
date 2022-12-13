@@ -184,7 +184,6 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     touch-action: manipulation; 
     -webkit-tap-highlight-color: transparent; 
     white-space: nowrap;
-	cursor: pointer;
 }
 .btn.focus, .btn:focus, .btn:hover{color:#fff; text-decoration: none;}
 a.btn:hover{text-decoration: none;}
@@ -241,16 +240,16 @@ a.disabled{pointer-events: none;}
 .radio_lg span:after{top: 4px; left: 4px; width: 8px; height: 8px;}
 
 /*  Modal, Alert Form */
-.modal{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999;} 
-.modal .modal_body{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: auto; background: #fff; padding: 20px 20px;}
-.modal .modal_body .modal_contents{padding-top: 10px;}
-.modal .modal_contents .item_message{padding-bottom: 10px;}
-.modal .modal_contents .item_message p{font-size: 1.3rem; font-size: 13px; padding-bottom: 5px;}
-.modal .modal_body .modal_action{position: relative; width: 100%; text-align: right; border-top:1px solid #ddd; padding: 15px 0 0;}
-.modal .modal_action .btn_group{display: block; position: relative; vertical-align: middle;}
+.maodal{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999;} 
+.maodal .modal_body{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: auto; background: #fff; padding: 20px 20px;}
+.maodal .modal_body .modal_contents{padding-top: 10px;}
+.maodal .modal_contents .item_message{padding-bottom: 10px;}
+.maodal .modal_contents .item_message p{font-size: 1.3rem; font-size: 13px; padding-bottom: 5px;}
+.maodal .modal_body .modal_action{position: relative; width: 100%; text-align: right; border-top:1px solid #ddd; padding: 15px 0 0;}
+.maodal .modal_action .btn_group{display: block; position: relative; vertical-align: middle;}
 .btn_modal{display: inline-block; position: relative; overflow: hidden; min-width: 65px; padding: 5px 20px 3px 20px; font-size: 1.2rem; font-size: 12px; text-align: center; vertical-align: middle; border-radius: 3px; -webkit-tap-highlight-color: transparent;}
 .btn_modal:hover, .btn_modal:focus{text-decoration: none;}
 .btn_modal.btn_cancel{background: #f1f1f1; border: 1px solid #f1f1f1; color:#333;}
 .btn_modal.btn_cancel:hover{background: #eee; border: 1px solid #eee; color:#333;}
 .btn_modal.btn_check{background: #f52c29; border: 1px solid #f52c29; color: #fff;}
-.btn_modal.btn_check:hover{background: #e21d19;  border: 1px solid #e21d19; color: #fff;}
+.btn_modal.btn_check:hover{background: #e21d19;  border: 1px solid #e21d19; color: #fff;
