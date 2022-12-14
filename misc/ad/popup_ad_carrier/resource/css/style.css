@@ -211,9 +211,9 @@ a.disabled{pointer-events: none;}
 .items_agency_select{position: relative; max-width: 520px; margin: 0 auto;}
 .items_agency_select .form{display: grid; grid-template-columns: 30% 30% 30%; grid-column-gap: 4%; align-content: center; justify-content: center; justify-items: center; margin-top: 10px;}
 .items_agency_select .item_method{width: 16rem;}
-.items_agency_select .item_method .btn_radio { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; background: #fff; color: #1C2729; text-align: center; border: 1px solid #ddd; padding: 10px 10px; cursor: pointer;}
+.items_agency_select .item_method .btn_radio{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 52px; background: #fff; color: #1C2729; text-align: center; border: 1px solid #ddd; padding: 10px 10px; cursor: pointer;}
 .item_method input[type="radio"] {display: none;}
-.item_method input[type="radio"]:checked + .btn_radio {color: #e21d19; border: 3px solid #e21d19; padding: 8px 8px;}
+.item_method input[type="radio"]:checked + .btn_radio {position: relative; color: #e21d19; border: 3px solid #e21d19; padding: 8px 8px; z-index: 999;}
 .style_night .item_box_text{ font-size: 18px; font-size: 1.8rem; border: 0; border-radius:0 ; text-align: left; padding:10px 0; -webkit-border-radius:; -moz-border-radius:; -ms-border-radius:; -o-border-radius:; }
 .style_night .items_agency_select{max-width: 310px;}
 .style_night .items_agency_select .form{grid-template-columns: 50% 50%;}
@@ -227,3 +227,14 @@ a.disabled{pointer-events: none;}
 .img_sk{width: 73px; height: 28px;}
 .img_kt{width: 30px; height: 24px;}
 .img_lg{width: 89px; height: 24px;}
+
+
+/* 
+    * 2022-12-14 Update
+    * 상단 header태그영역 이미지화
+    * 이미지 롤링기능 추가
+*/
+
+.rolling_banner{position: relative;}
+.rolling_banner .item_list{position:relative; height: 310px; overflow: hidden; margin: 0 auto;}
+.rolling_banner .item_list li{display: flex; align-items: center; justify-self: center; position: absolute; top: 0; left: 0; width: 520px; height: 310px;}
