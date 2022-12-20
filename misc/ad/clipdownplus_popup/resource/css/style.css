@@ -120,3 +120,48 @@
 .pop_win.webview_popup_join .itme_clipdown .content_text{display: inline-block; font-size: 13px; font-size: 1.3rem; text-align: left; vertical-align: middle; padding-left: 10px;}
 .pop_win .item_guide .guide_list{padding-top: 15px;}
 .pop_win .item_guide .guide_list dt, .webview_popup_join .item_guide .guide_list dd {font-size: 12px; font-size: 1.2rem;}
+
+/* 
+    * 2022-12-20 
+    * webview 휴대폰인증 광고 가입 팝업스타일 재작업
+    * 메인 이미지 변경
+    * checkbox 스타일 변경
+    * 약관 리스트 스타일 변경
+    
+*/
+.cb{display: inline-block; position: relative; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 500; line-height: 1.7; cursor: pointer; margin: 3px 0;}
+.cb input{position: absolute; z-index: -1; top:2px; left: 0; width:16px; height:16px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
+.cb span{position: absolute; top: 2px; left: 0; width: 16px; height: 16px; border: 1px solid #c9caca; background: #f8f8f8;}
+.cb span:after{content: ''; position: absolute; top: 1px; left: 5px; width: 5px; height: 10px; border: solid #c9caca; border-width: 0 2px 2px 0; transform: rotate(45deg);}
+.cb input:checked~span{border: 1px solid #e21d19; background: #e21d19;}
+.cb input:checked~span:after{border: solid #fff; border-width: 0 2px 2px 0;}
+.style_form .content-item{margin: 20px 0;}
+.style_form .form-control{border: 3px solid #bababa;}
+.style_form .form-control::placeholder{font-weight: 400; color:#333;}
+.style_form .form-control:focus{outline: 3px solid #e21d19 !important; outline-offset: -3px;}
+.style_form .item_img_box{background-color: #f8f8f8;}
+.style_form .agree_style{margin-top: 20px; margin-bottom: 20px;}
+.style_form .agree_style .agree-item .required{border: 1px solid #efefef; padding: 3px 10px;}
+.style_form .agree_style .agree-item .required:focus{border: 1px solid #e21d19;}
+.style_form .agree_style .agree_policy .agree-item_2depth{border: 1px solid #efefef; margin-top: -2px; margin-bottom:0; padding: 5px 0;}
+.style_form .agree_style .agree_policy .agree-item_2depth .agree-head_2depth{background: #fff; border: 0; padding: 2px 10px; margin: 0;}
+.style_form .agree_style .agree_policy .agree-item_2depth .agree-head_2depth .check_form-group{overflow: unset;}
+.style_form .agree_style .check_form-group .terms_link{margin: 0;}
+.style_form .agree_style .check_form-group .terms_link{margin: 0;} 
+.style_form .agree_style .agree_policy .agree-head_2depth .cb{color: #bababa; font-size: 11px; font-size: 1.1rem; font-weight: 400; line-height: 2; margin: 0;}
+.style_form .agree_style .check_form-group .terms_link{margin: 0;} 
+.style_form .agree_style .agree_policy .agree-head_2depth .help-text{font-size: 10px; font-size: 1rem; color: #9fa0a0;}
+
+/* Style 01 */
+.style_01 .item_top{position: relative; padding: 20px 20px 10px 20px;}
+.style_01 .item_top .item_img{position: relative; width: 100%; text-align: center;}
+.style_01 .item_top .item_img svg{width: 88px;}
+.style_01 .item_top .item_img .yt_color{fill: #ddd;}
+.style_01 .item_top .item_img .yt_color.focus{fill: #FD0214;}
+.style_01 .item_top .item_text{font-size: 18px; font-size: 1.8rem; line-height: 1.6; text-align: center;}
+
+/* Style 02 */
+.style_02 svg{height: 100%;}
+.style_02 .item_top{display: flex; align-items: center; justify-content: center; position: relative; width: 100%; background: #f8f8f8; padding: 40px 20px;}
+.style_02 .item_top .item_img{display: inherit; position: relative; width: 15%;}
+.style_02 .item_top .item_text{font-size: 18px; font-size: 1.8rem; line-height: 1.6; padding: 0 15px;}
