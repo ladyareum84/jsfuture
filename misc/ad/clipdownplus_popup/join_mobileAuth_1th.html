@@ -22,35 +22,22 @@
 </head>
 
 <body>
-    <div class="wrap webview_popup_join style01">
+    <div class="wrap webview_popup_join">
       <section class="content_box">
-        <div class="item_title">
-          <h2>휴대폰 SMS 인증 완료 후<br /> 서비스 이용이 가능합니다.</h2>
-        </div>
-        <div class="item_top">
-          <div class="img_banner">
-            <div class="item_img">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="111.999" viewBox="0 0 160 111.999">
-                <defs>
-                  <clipPath id="clip-path">
-                    <rect id="Rectangle_1" data-name="Rectangle 1" width="160" height="111.999" fill="none"/>
-                  </clipPath>
-                </defs>
-                <g id="icon_youtube" transform="translate(0 0)">
-                  <g id="Group_1" data-name="Group 1" transform="translate(0 0)" clip-path="url(#clip-path)">
-                    <path class="yt_color" id="Path_1" data-name="Path 1" d="M156.656,17.489A20.038,20.038,0,0,0,142.51,3.344C130.032,0,80,0,80,0S29.966,0,17.489,3.344A20.038,20.038,0,0,0,3.343,17.489C0,29.966,0,56,0,56S0,82.033,3.343,94.51a20.039,20.039,0,0,0,14.146,14.146C29.966,112,80,112,80,112s50.033,0,62.51-3.343A20.039,20.039,0,0,0,156.656,94.51C160,82.033,160,56,160,56s0-26.034-3.344-38.511" transform="translate(0 -0.001)" fill="#FD0214"/>
-                    <path id="Path_2" data-name="Path 2" d="M48.594,72.3l41.567-24-41.567-24Z" transform="translate(15.406 7.703)" fill="#fff"/>
-                  </g>
-                </g>
-              </svg>                      
+        <div class="header">
+          <div class="inner">
+            <div class="logo_brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="134" height="17" viewBox="0 0 134 17">
+                    <text id="CLIPDOWN_PLUS_" data-name="CLIPDOWN PLUS+" fill="#1c2729" font-size="14" font-family="S-CoreDream-6Bold, S-Core Dream" font-weight="700"><tspan x="5.113" y="13">CLIPDOWN </tspan><tspan y="13" fill="#e41d19">PLUS+</tspan></text>
+                </svg>
             </div>
-            <p class="item_text">
-              YouTube와 YouTube Music을 광고 없이,<br />
-              오프라인과 백그라운드에서도 즐겨보세요.
-            </p>
-          </div>          
+          </div>
         </div>
-        <div class="contents style_form">
+        <div class="item_img_box">
+          <img src="./resource/images/popup_join_03.png" lass="item_img">
+
+        </div>
+        <div class="contents">
           <div class="inner">
             <div class="item_content">
                 <form role="form" class="form-horizontal">
@@ -63,13 +50,10 @@
                         <div class="content-item">
                           <div class="form-group">
                             <div class="row-contents">
-                              <div class="col-9">
+                              <div class="col-12">
                                 <div class="input-group mb0">
-                                  <input type="text" name="phone_number" class="form-control font_num" required="required" placeholder="숫자만 입력해주세요." autofocus="autofocus" maxlength="11">
+                                  <input type="text" id="name" class="form-control font_num" required="required" placeholder="' - ' 없이 숫자만 입력">
                                 </div>
-                              </div>
-                              <div class="col-4">
-                                <a href="#" class="btn_apply">확인</a>
                               </div>
                             </div>
                           </div>
@@ -84,60 +68,71 @@
                 <div id="agree_agreeordion" class="agree-list-box">
                   <!-- section 1 -->
                   <div class="agree-item agree_policy">
-                    <div class="agree_head">
+                    <div class="agree-head required">
                       <div class="check_form-group">
-                        <label class="cb ">
+                        <label class="m-checkbox">
                           <input type="checkbox" name="agree_all" value="all">전체동의
-                          <i class="help-text">(필수)</i>
                           <span></span>
                         </label>
                       </div>
                     </div>
-                    <ul class="agree_list half">
-                      <li class="list_item">
+                      
+                    <div class="agree-item_2depth">
+                      <div class="agree-head_2depth">
                         <div class="check_form-group">
-                          <label class="cb">
-                            <input type="checkbox" name="agree" value="">
-                            <a href="#">인플메이트 회원 이용약관 동의</a>                            
+                          <label class="m-checkbox">
+                            <input type="checkbox" name="agree" value="">인플메이트 회원 이용약관 동의
+                            <span></span>
+                          </label>
+                          <div class="terms_link fl-r">
+                            <a href="#" class="help-text">약관보기</a>
+                          </div>
+                        </div>
+                      </div>                      
+                    </div>  
+                    <div class="agree-item_2depth">
+                      <div class="agree-head_2depth">
+                        <div class="check_form-group">
+                          <label class="m-checkbox">
+                            <input type="checkbox" name="agree" value="">클립다운 PLUS+ 이용약관 동의
+                            <span></span>
+                          </label>
+                          <div class="terms_link fl-r">
+                            <a href="#" class="help-text">약관보기</a>
+                          </div>
+                        </div>
+                      </div>                      
+                    </div>
+                    <div class="agree-item_2depth">
+                      <div class="agree-head_2depth">
+                        <div class="check_form-group">
+                          <label class="m-checkbox">
+                            <input type="checkbox" name="agree" value="">개인정보 수집 및 이용동의
+                            <span></span>
+                          </label>
+                          <div class="terms_link fl-r">
+                            <a href="#" class="help-text">약관보기</a>
+                          </div>
+                        </div>
+                      </div>                     
+                    </div>
+                    <div class="agree-item_2depth">
+                      <div class="agree-head_2depth">
+                        <div class="check_form-group">
+                          <label class="m-checkbox">
+                            <input type="checkbox" name="agree" value="">만 14세 이상입니다.
                             <span></span>
                           </label>
                         </div>
-                      </li>
-                      <li class="list_item">
-                        <div class="check_form-group">
-                          <label class="cb">
-                            <input type="checkbox" name="agree" value="">
-                            <a href="#">클립다운 PLUS+ 이용약관 동의</a>                            
-                            <span></span>
-                          </label>
-                        </div>
-                      </li>
-                      <li class="list_item">
-                        <div class="check_form-group">
-                          <label class="cb">
-                            <input type="checkbox" name="agree" value="">
-                            <a href="#">개인정보 수집 및 이용동의</a>                            
-                            <span></span>
-                          </label>
-                        </div>
-                      </li>
-                      <li class="list_item">
-                        <div class="check_form-group">
-                          <label class="cb">
-                            <input type="checkbox" name="agree" value="">
-                            <a href="#">만 14세 이상입니다.</a>                            
-                            <span></span>
-                          </label>
-                        </div>
-                      </li>
-                    </ul>
+                      </div>                     
+                    </div>
                   </div>
                 </div>
               </div>                         
             </div>
             <div class="item_content">              
                 <div class="btn-box">
-                  <div href="#" class="btn_full_point">다음</div>
+                  <div href="#" class="btn_full_point">확인</div>
                 </div>
               </a>
             </div>
