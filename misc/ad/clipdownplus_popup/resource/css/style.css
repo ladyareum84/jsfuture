@@ -163,5 +163,5 @@
 /* Style 02 */
 .style_02 svg{height: 100%;}
 .style_02 .item_top{display: flex; align-items: center; justify-content: center; position: relative; width: 100%; background: #f8f8f8; padding: 40px 20px;}
-.style_02 .item_top .item_img{display: inherit; position: relative; width: 15%;}
+.style_02 .item_top .item_img{position: relative; width: 15%; max-width: 72px;}
 .style_02 .item_top .item_text{font-size: 18px; font-size: 1.8rem; line-height: 1.6; padding: 0 15px;}
