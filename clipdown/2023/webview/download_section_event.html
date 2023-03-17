@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 구간 다운로드</title>
+    <style>
+        input::placeholder{color:#ddd;}
+        input:focus::-webkit-input-placeholder {color:transparent;}
+        input:read-only{background-color: #fff; color: #333; cursor: default;}
+        input:read-only:focus{border-color:#ccc;}
+        *:focus{outline: 1px dotted #ddd;}
+        .btn{display: inline-block; min-width: 68px; min-height: 34px; padding: 0 5px; font-family: 'Noto Sans KR', Helvetica, sans-serif; font-size: 14px; text-align: center; line-height: 1.4; border-radius: 50px; cursor: pointer; transition: all .2s ease-in-out;}
+        .form-control{display: inline-block; width: 5%; min-width:25px; height: 24px; font-size: 13px; text-align: center; border: 1px solid #ccc; padding: 0 5px;}
+        .form-control:focus{outline: none; border-color: #333;}
+        .empty-2{padding:0 2px;}
+        .empty-5{padding:0 5px;}
+        .content_download{position: relative; width: 100%;}
+        .btn_box{position: relative; margin: 10px 0;}
+        .btn_download{background: #e31d19; border: 1px solid #e31d19; color:#fff; font-weight: 500; padding: 8px 20px;}
+        .btn_download:hover{background: #d22619; border: 1px solid #d22619;}
+        .btn_outline_download{background: #fff; border: 1px solid #e31d19; color: #e31d19;}
+        .btn_outline_download:hover{background: #e31d19; border: 1px solid #e31d19; color: #fff;}
+        .btn_part{background: #3b8de5; border: 1px solid #3b8de5; color: #fff;}
+        .btn_part:hover{background: #1c73d1; border: 1px solid #1c73d1; color: #fff;}
+        .option_download{display: none; position: relative; overflow:hidden; vertical-align: middle; line-height:1.8; text-align: right; background: #f5f5f5; padding: 10px 10px;}
+        .option_download span{display: inline-block;}
+        .option_download .op_name{font-size: 13px; padding-right: 5px;}
+        
+        .btn_ta_l{position: relative; float: left; z-index: 100;}
+        .btn_ta_r{text-align: right;}
+        .btn_event_share{display: inline-block; position: relative; background: #4149B8; color: #FCCA00; border: 2px solid #131745; border-radius: 50px; padding:0 20px; text-decoration: none;}
+        .btn_event_share:hover{text-decoration: none; background: #FCCA00; color: #4149B8;}
+        .btn_event_share:hover .icon_mirror svg path{fill: #4149B8;}
+        .btn_event_share span{ position: relative; top: -10px; font-size:16px; font-weight:500; padding-left:5px; color: #fff; text-shadow: 0 0px 6px #fcca01, 0 0px 6px #131745;}
+        .btn_event_share:hover span{color: #4149B8; text-shadow: none;}
+        .btn_event_share:hover.shadow{text-shadow:none;}
+        .btn_event_share .icon_mirror{display: inline-block; position: relative;}
+        .btn_event_share .icon_mirror svg{ position: relative; width:32px; top: -3px;}
+        .guide_bubbles {color: #4149B8; position: absolute; border-radius: 50px; background: #FCCA00; text-align: center; padding: 2px 10px; top: 37px; left: 23px; border: 2px solid #131745;}
+        .guide_bubbles span { font-size: 12px; font-weight: 600;}
+        .guide_bubbles:before {content: ""; width: 0px; height: 0px; position: absolute; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid transparent; border-bottom: 10px solid #1f224d; right: 70%; top: -21px;}
+        .guide_bubbles:after {content: ""; width: 0px; height: 0px; position: absolute; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid transparent; border-bottom: 10px solid #FCCA00; right: 70%; top: -18px;}
+        .fadeInUp {-webkit-animation-name: fadeInUp; animation-name: fadeInUp;}
+        .animate {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+        @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+        }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="warp">
+        <div class="container">
+            <section class="section_download">
+                <div class="content_download">
+                    <div class="btn_box">
+                        <div class="btn_ta_l">
+                            <a href="" class="btn btn_event btn_event_share">
+                                <div class="icon_mirror blink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="36.945" viewBox="0 0 40 36.945">
+                                        <defs>
+                                            <clipPath id="clip-path">
+                                            <rect id="Rectangle_148" data-name="Rectangle 148" width="40" height="36.945" fill="#fff21e"></rect>
+                                            </clipPath>
+                                        </defs>
+                                        <g id="icon_mirror" clip-path="url(#clip-path)">
+                                            <path id="Path_182" data-name="Path 182" d="M6.282,7.735c.132-.257.267-.507.41-.747A10.357,10.357,0,0,1,8.625,4.573,12.557,12.557,0,0,0,4.385,7a13.344,13.344,0,0,0,1.9.74" transform="translate(6.578 6.861)" fill="#fff21e"></path>
+                                            <path id="Path_183" data-name="Path 183" d="M8.624,16.009a10.4,10.4,0,0,1-1.93-2.415c-.145-.24-.28-.49-.412-.748a13.344,13.344,0,0,0-1.9.74A12.557,12.557,0,0,0,8.624,16.009Z" transform="translate(6.576 19.27)" fill="#fff21e"></path>
+                                            <path id="Path_184" data-name="Path 184" d="M11.613,12.846c-.132.258-.268.508-.412.748a10.415,10.415,0,0,1-1.93,2.415,12.557,12.557,0,0,0,4.24-2.423A13.463,13.463,0,0,0,11.613,12.846Z" transform="translate(13.906 19.27)" fill="#fff21e"></path>
+                                            <path id="Path_185" data-name="Path 185" d="M9.271,4.574A10.4,10.4,0,0,1,11.2,6.989c.145.24.28.49.412.747a13.345,13.345,0,0,0,1.9-.74,12.581,12.581,0,0,0-4.24-2.423" transform="translate(13.906 6.862)" fill="#fff21e"></path>
+                                            <path id="Path_186" data-name="Path 186" d="M6.981,12.554c.07.423.148.823.23,1.2.46,2.117,1,3.427,1.507,3.427s1.048-1.31,1.508-3.427c.082-.378.16-.778.23-1.2-.565-.04-1.147-.06-1.737-.06s-1.173.02-1.737.06" transform="translate(10.472 18.742)" fill="#fff21e"></path>
+                                            <path id="Path_187" data-name="Path 187" d="M10.226,7.742c-.46-2.117-1-3.427-1.508-3.427S7.671,5.625,7.211,7.742c-.082.377-.16.778-.23,1.2Q7.828,9,8.718,9c.59,0,1.173-.02,1.737-.06-.072-.422-.15-.822-.23-1.2" transform="translate(10.472 6.474)" fill="#fff21e"></path>
+                                            <path id="Path_188" data-name="Path 188" d="M8.115,8.678c.078-.465.16-.908.25-1.323A11.713,11.713,0,0,1,9.34,4.43,7.371,7.371,0,0,0,5.83,7.723c-.1.162-.193.33-.285.5.125.03.252.06.377.087a21,21,0,0,0,2.192.363" transform="translate(8.318 6.646)" fill="#fff21e"></path>
+                                            <path id="Path_189" data-name="Path 189" d="M9.339,16.8a11.757,11.757,0,0,1-.973-2.925c-.09-.415-.175-.857-.252-1.322a20.948,20.948,0,0,0-2.19.362c-.127.028-.252.057-.377.088.09.175.185.342.283.5A7.371,7.371,0,0,0,9.339,16.8Z" transform="translate(8.319 18.834)" fill="#fff21e"></path>
+                                            <path id="Path_190" data-name="Path 190" d="M9.513,12.555c-.078.465-.16.907-.25,1.322A11.713,11.713,0,0,1,8.288,16.8,7.371,7.371,0,0,0,11.8,13.51c.1-.163.192-.33.285-.5-.125-.03-.253-.06-.378-.088A21.8,21.8,0,0,0,9.513,12.555Z" transform="translate(12.432 18.834)" fill="#fff21e"></path>
+                                            <path id="Path_191" data-name="Path 191" d="M8.288,4.43A11.757,11.757,0,0,1,9.26,7.355c.09.415.175.857.253,1.323a20.948,20.948,0,0,0,2.19-.363c.127-.027.252-.057.377-.087-.09-.173-.185-.343-.283-.5A7.371,7.371,0,0,0,8.288,4.43Z" transform="translate(12.432 6.646)" fill="#fff21e"></path>
+                                            <path id="Path_192" data-name="Path 192" d="M6.955,14.085h-4.3A12.519,12.519,0,0,1,6.2,5.84a13.777,13.777,0,0,0,2.25.927,19.991,19.991,0,0,0-1.49,7.317" transform="translate(3.98 8.761)" fill="#fff21e"></path>
+                                            <path id="Path_193" data-name="Path 193" d="M8.672,13.361H4.782A18.819,18.819,0,0,1,6.239,6.323c.2.052.4.1.61.145a21.789,21.789,0,0,0,2.257.378,51.783,51.783,0,0,0-.435,6.515" transform="translate(7.173 9.486)" fill="#fff21e"></path>
+                                            <path id="Path_194" data-name="Path 194" d="M11.395,12.988H6.745a50.955,50.955,0,0,1,.433-6.417c.617.045,1.25.07,1.892.07s1.275-.025,1.893-.07a50.955,50.955,0,0,1,.432,6.417" transform="translate(10.118 9.858)" fill="#fff21e"></path>
+                                            <path id="Path_195" data-name="Path 195" d="M13.164,13.361H9.276a52.226,52.226,0,0,0-.437-6.515A21.79,21.79,0,0,0,11.1,6.468c.208-.045.41-.093.61-.145A18.868,18.868,0,0,1,13.164,13.361Z" transform="translate(13.258 9.486)" fill="#fff21e"></path>
+                                            <path id="Path_196" data-name="Path 196" d="M16.174,14.086h-4.3a20.015,20.015,0,0,0-1.49-7.32,13.649,13.649,0,0,0,2.25-.928,12.519,12.519,0,0,1,3.543,8.247" transform="translate(15.571 8.76)" fill="#fff21e"></path>
+                                            <path id="Path_197" data-name="Path 197" d="M11.872,9.546h4.3a12.519,12.519,0,0,1-3.543,8.245,13.776,13.776,0,0,0-2.25-.927,19.991,19.991,0,0,0,1.49-7.318" transform="translate(15.573 14.32)" fill="#fff21e"></path>
+                                            <path id="Path_198" data-name="Path 198" d="M9.276,9.546h3.888a18.819,18.819,0,0,1-1.458,7.038c-.2-.052-.4-.1-.61-.145a21.788,21.788,0,0,0-2.257-.378,52.226,52.226,0,0,0,.438-6.515" transform="translate(13.258 14.32)" fill="#fff21e"></path>
+                                            <path id="Path_199" data-name="Path 199" d="M6.746,9.546H11.4a50.955,50.955,0,0,1-.433,6.418c-.617-.047-1.25-.07-1.892-.07s-1.275.025-1.892.07a50.922,50.922,0,0,1-.433-6.418" transform="translate(10.119 14.32)" fill="#fff21e"></path>
+                                            <path id="Path_200" data-name="Path 200" d="M4.782,9.546H8.67a52.226,52.226,0,0,0,.437,6.515,21.788,21.788,0,0,0-2.257.378c-.208.045-.41.092-.61.145A18.819,18.819,0,0,1,4.782,9.546" transform="translate(7.173 14.32)" fill="#fff21e"></path>
+                                            <path id="Path_201" data-name="Path 201" d="M2.653,9.546h4.3a20.015,20.015,0,0,0,1.49,7.32,13.649,13.649,0,0,0-2.25.928A12.531,12.531,0,0,1,2.653,9.546" transform="translate(3.98 14.32)" fill="#fff21e"></path>
+                                            <path id="Path_202" data-name="Path 202" d="M9.419,5.731h.012l.162,0H9.6l.16.008h.023l.15.007h.027l.14.008.043,0,.125.01.045,0c.04.005.08.007.118.01l.06.008c.037,0,.073,0,.1.01s.055.005.082.007l.08.008c.038,0,.075.01.112.012l.05.008c.05,0,.1.01.148.017l0,0c.268.035.53.077.79.127V4.8a2.117,2.117,0,0,0-2.11-2.11H8.739A2.117,2.117,0,0,0,6.629,4.8v1.18q.39-.075.787-.127l.008,0c.05-.007.1-.013.145-.017l.055-.008c.035,0,.072-.01.11-.012l.08-.01L7.9,5.8,8,5.786l.06-.005c.037,0,.077-.008.117-.01l.045-.005.127-.007.04,0,.14-.008.028,0,.15-.005.023,0,.16-.005H8.9c.055,0,.108,0,.165,0h.01c.057,0,.115,0,.173,0S9.361,5.731,9.419,5.731Z" transform="translate(9.944 4.038)" fill="#fff21e"></path>
+                                            <path id="Path_203" data-name="Path 203" d="M9.038,5.727V.852a.851.851,0,1,0-1.7,0V5.727a3.111,3.111,0,0,1,.342-.02H8.695a3.147,3.147,0,0,1,.343.02" transform="translate(11.003 0.001)" fill="#fff21e"></path>
+                                            <path id="Path_204" data-name="Path 204" d="M3.934,8.048A4.128,4.128,0,0,0,.494,4.126,4.13,4.13,0,0,0,3.934.2a4.13,4.13,0,0,0,3.44,3.925,4.128,4.128,0,0,0-3.44,3.922" transform="translate(0.741 0.303)" fill="#fff21e" fill-rule="evenodd"></path>
+                                            <path id="Path_205" data-name="Path 205" d="M15.049,7.72A3.912,3.912,0,0,0,11.789,4a3.916,3.916,0,0,0,3.26-3.72A3.916,3.916,0,0,0,18.309,4a3.912,3.912,0,0,0-3.26,3.717" transform="translate(17.683 0.426)" fill="#fff21e" fill-rule="evenodd"></path>
+                                            <path id="Path_206" data-name="Path 206" d="M3.445,19.493A4.135,4.135,0,0,0,0,15.563a4.135,4.135,0,0,0,3.445-3.93,4.135,4.135,0,0,0,3.445,3.93,4.135,4.135,0,0,0-3.445,3.93" transform="translate(0 17.451)" fill="#fff21e" fill-rule="evenodd"></path>
+                                            <path id="Path_207" data-name="Path 207" d="M16.678,17.817a4.067,4.067,0,0,0-3.388-3.865,4.067,4.067,0,0,0,3.388-3.865,4.067,4.067,0,0,0,3.387,3.865,4.067,4.067,0,0,0-3.387,3.865" transform="translate(19.935 15.132)" fill="#fff21e" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <span class="blink">공유 이벤트</span>                                 
+                            </a>
+                            <div class="guide_bubbles animate fadeInUp">
+                                <span>영상공유하고 선물받자!</span>
+                            </div>
+                        </div>
+                        <div class="btn_ta_r">
+                            <button class="btn btn_download btn_part">부분 다운로드</button>
+                            <button class="btn btn_download btn_all">전체 다운로드</button>
+                        </div>
+                        
+                    </div>
+                    <div id="optionDownload" class="option_download">
+                        <span class="op_name">시간설정</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="" readonly value="00">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <span class="empty-2">~</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="hh" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <button class="btn btn_part">확인</button>
+                    </div>
+                </div>
+                <!-- <script>
+                    //<button class="btn btn_download btn_part" onclick="option_time()">부분 다운로드</button>
+                    function option_time() {
+                        var op = document.getElementById("optionDownload");
+                        if (op.style.display === "block") {
+                            op.style.display = "none";
+                        } else {
+                            op.style.display = "block";
+                        }
+                    }
+                </script> -->
+                <script>
+                    $(function() {
+                        $(".btn_part").on("click", function() {
+                            $("#optionDownload").slideToggle("fast");
+                        });
+                    });
+                </script>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
