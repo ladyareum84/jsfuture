@@ -41,6 +41,7 @@ table{border-collapse:collapse; border-spacing:0; width:100%;}
 a{background-color: transparent; color:#666; text-decoration:none; -webkit-text-decoration-skip:object;}
 a:focus, a:hover{outline: 0; text-decoration:underline;}
 fieldset, iframe, img, button{border:0;}
+img{image-rendering: -webkit-optimize-contrast; transform: translateZ(0); backface-visibility: hidden;}
 textarea,input[type="file"],input[type="password"],input[type="text"]{text-indent:4px; border:1px solid #ddd;}
 select{padding:0 0 0 5px; height:28px; border:1px solid #e5e5e5;}
 select{-webkit-appearance: normal; -moz-appearance: normal; appearance: normal; height:28px \0IE8;} /* IE8 전용*/
