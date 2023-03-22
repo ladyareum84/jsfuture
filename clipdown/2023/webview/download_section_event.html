@@ -24,6 +24,7 @@
         .btn_outline_download:hover{background: #e31d19; border: 1px solid #e31d19; color: #fff;}
         .btn_part{background: #3b8de5; border: 1px solid #3b8de5; color: #fff;}
         .btn_part:hover{background: #1c73d1; border: 1px solid #1c73d1; color: #fff;}
+        .btn_part_square{min-width: 58px; min-height: 26px; border-radius: 3px;}
         .option_download{display: none; position: relative; overflow:hidden; vertical-align: middle; line-height:1.8; text-align: right; background: #f5f5f5; padding: 10px 10px;}
         .option_download span{display: inline-block;}
         .option_download .op_name{font-size: 13px; padding-right: 5px;}
@@ -39,8 +40,8 @@
         .btn_event_share:hover.shadow{text-shadow:none;}  
         .btn_event_share .icon_mirror{display: inline-block; position: relative;}
         .btn_event_share .icon_mirror svg{ position: relative; width:32px; top: -3px;}
-        .guide_bubbles {color: #4149B8; position: absolute; border-radius: 50px; background: #FCCA00; text-align: center; padding: 2px 10px; top: 37px; left: 23px; border: 2px solid #131745;}
-        .guide_bubbles span { font-size: 12px; font-weight: 600;}
+        .guide_bubbles {min-width: 130px; color: #4149B8; position: absolute; border-radius: 50px; background: #FCCA00; text-align: center; padding: 2px 10px; top: 37px; left: 23px; border: 2px solid #131745;}
+        .guide_bubbles span {position: relative; top:-1px; font-size: 12px; font-weight: 600;}
         .guide_bubbles:before {content: ""; width: 0px; height: 0px; position: absolute; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid transparent; border-bottom: 5px solid #1f224d; right: 70%; top: -12px;}
         .guide_bubbles:after {content: ""; width: 0px; height: 0px; position: absolute; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid transparent; border-bottom: 5px solid #FCCA00; right: 70%; top: -9px;}
         .bounce{animation: bounce 2s linear infinite;}
@@ -127,7 +128,7 @@
                         <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
                         <span class="empty-2">:</span>
                         <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
-                        <button class="btn btn_part">확인</button>
+                        <button class="btn btn_part btn_part_square">확인</button>
                     </div>
                 </div>
                 <!-- <script>
