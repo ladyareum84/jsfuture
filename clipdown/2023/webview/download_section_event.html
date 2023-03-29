@@ -40,8 +40,12 @@
         .btn_event_share:hover.shadow{text-shadow:none;}  
         .btn_event_share .icon_mirror{display: inline-block; position: relative;}
         .btn_event_share .icon_mirror svg{ position: relative; width:32px; top: -3px;}
-        .guide_bubbles {min-width: 130px; color: #4149B8; position: absolute; border-radius: 50px; background: #FCCA00; text-align: center; padding: 2px 10px; top: 37px; left: 23px; border: 2px solid #131745;}
-        .guide_bubbles span {position: relative; top:-1px; font-size: 12px; font-weight: 600;}
+        .btn_event_share:hover .guide_bubbles{ background: #4149B8; color: #FCCA00;}
+        .btn_event_share:hover .guide_bubbles span{color: #FCCA00; text-shadow: none;}
+        .btn_event_share:hover .guide_bubbles:after{border-bottom: 5px solid #4149B8;}
+
+        .guide_bubbles {min-width: 130px;  position: absolute; border-radius: 50px; background: #FCCA00; text-align: center; padding: 2px 10px; top: 37px; left: 23px; border: 2px solid #131745;}
+        .guide_bubbles span {position: relative; top:-1px; color: #4149B8; font-size: 12px; font-weight: 600; text-shadow:none;}
         .guide_bubbles:before {content: ""; width: 0px; height: 0px; position: absolute; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid transparent; border-bottom: 5px solid #1f224d; right: 70%; top: -12px;}
         .guide_bubbles:after {content: ""; width: 0px; height: 0px; position: absolute; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid transparent; border-bottom: 5px solid #FCCA00; right: 70%; top: -9px;}
         .bounce{animation: bounce 2s linear infinite;}
@@ -64,6 +68,7 @@
             <section class="section_download">
                 <div class="content_download">
                     <div class="btn_box">
+                        <!-- 좌측영역 이벤트 버튼 -->
                         <div class="btn_ta_l">
                             <a href="" class="btn btn_event btn_event_share">
                                 <div class="icon_mirror blink">
@@ -103,11 +108,12 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <span class="blink">공유 이벤트</span>                                 
+                                <span class="blink">공유 이벤트</span> 
+                                <div class="guide_bubbles animate fadeInUp bounce">
+                                    <span>영상공유하고 선물받자!</span>
+                                </div>                                 
                             </a>
-                            <div class="guide_bubbles animate fadeInUp bounce">
-                                <span>영상공유하고 선물받자!</span>
-                            </div> 
+                            
                         </div>
                         <div class="btn_ta_r">
                             <button class="btn btn_download btn_part">구간 다운로드</button>
