@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://www.clipdown.net/common_resource/font/font.css' type='text/css'>
+    <link rel="stylesheet" href="http://www.clipdown.net/common_resource/css/common.css">
+    <link rel="stylesheet" type="text/css" href="./resource/css/style_popup.css">
+</head>
+<body>
+    <!-- 클립다운 라이트 설치안내 팝업 #1 -->
+    <div id="installInfo" class="layer_popup" style="display:block;">
+        <div class="bg_dimmed op_85"></div>
+        <div class="popup_wrap popup_info_install">
+        
+            <div class="popup_contents">
+                <div class="content_item">
+                    <div class="item_text">
+                        <h1 class="content_title">클립다운 <span class="point-text weight-600_bold">Lite</span>를 공유 받았어요</h1>
+                    </div>
+                    <div class="item_des">
+                        광고없는 유튜브를 설치하고 <br/>
+                        이용후기를 알려주세요.
+                    </div>
+                    <div class="item_img img_style">
+                        <img src="./resource/images/img_popup_clipdownLite_noAD.png" class="img_fluid" alt="" style="width:260px;">
+                    </div>
+                    <div class="btn_area">
+                        <div class="btn_group">
+                            <a href="" class="btn btn_install">엡 설치하기</a>
+                        </div>
+                    </div>
+                    <button type="button" class="popup_close link_text" name="close">괜찮아요, 웹에서 볼게요.</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- // 클립다운 라이트 설치안내 팝업 #1 -->
+
+    <!-- 클립다운 라이트 설치안내 팝업 #2 -->
+    <div id="installInfo" class="layer_popup" style="display:none;">
+        <div class="bg_dimmed op_85"></div>            
+        <div class="popup_wrap popup_info_install">
+            <div class="btn_box_top">
+                <button type="button" class="btn_popup_close" name="close">
+                    <span class="btn_close icon-close"></span>
+                </button>
+            </div>
+            <div class="popup_contents">
+                <div class="content_item">
+                    <div class="item_banner_box">
+                        <div class="item_img">
+                            <img src="./resource/images/img_install_clipdownLite.png" class="img_fluid" alt="" style="width:300px;">
+                        </div>
+                        <div class="btn_area">
+                            <div class="btn_group">
+                                <a href="" class="btn btn_install">엡 설치하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- // 클립다운 라이트 설치안내 팝업 #2 -->
+</body>
+<script type="text/javascript" src="./resource/js/jquery-1.8.3.min.js"></script>
+<script>
+    // Popup Close
+		$('.btn_popup_close, .popup_close').click(function(){
+			$('.layer_popup').hide();
+		});
+</script>
+</html>
