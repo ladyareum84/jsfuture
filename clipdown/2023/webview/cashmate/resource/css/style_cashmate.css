@@ -110,7 +110,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 
 /* Point Badge Style */
-.badge_point{display: inline-block; position: relative; min-width: 78px; height: 32px; background: #e21d19; color: #fff; text-align: center; line-height: 1.5; border-radius: 30px; padding: 4px 4px 4px 29px;}
+.badge_point{display: inline-block; position: relative; min-width: 78px; height: 32px; background: #e21d19; color: #fff; text-align: center; line-height: 1.5; border-radius: 30px; padding: 4px 4px 4px 29px; -webkit-touch-callout: none; user-select: none;}
 .badge_point .icon_point{position: absolute; top:6px; left: 4px; width: 20px; height: 20px; background: #fff; color: #e21d19; font-weight: 700; line-height: 1; border-radius:50%; padding: 4px 4px;}
 .badge_point .point_data{font-weight: 700; line-height: 2; padding: 0 6px 0 0;}
 
@@ -118,7 +118,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .btn_default{background: #fff; border: 1px solid #333; color: #333;}
 .btn_default:hover{background: #333; border: 1px solid #333; color: #fff;}
 .btn_point{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
-.btn_point:hover{background: #dc141c; border: 1px solid #dc141c; color: #fff;}
+.btn_point:hover{background: #d22619; border: 1px solid #d22619; color: #fff;}
 .btn_outline_point{background: #fff; border: 1px solid #e21d19; color: #e21d19;}
 .btn_full_gray{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
 .btn_block{display: block; width: 100%;}
@@ -247,10 +247,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .product_list .info_product .info_sub_title{display: inline-block; font-size: 11px; font-size: 1.1rem;}
 .content_reward_ad .product_list .info_product .info_title{font-size: 13px; font-size: 1.3rem !important; padding-bottom: 5px;}
 .content_reward_ad .product_list .product_price{position: relative;}
-.content_reward_ad .product_list .product_price .badge_price{display: inline-block; position: relative; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 4px;}
+.content_reward_ad .product_list .product_price .badge_price{display: inline-block; position: relative; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 4px; -webkit-touch-callout: none; user-select: none;}
 .content_reward_ad .product_list .product_price .price{position: relative; font-size: 15px; font-size: 1.5rem; vertical-align: middle;}
-
-
 .content_reward_ad .content_list{width: 100%; height: 379px; overflow-y: auto; margin-top:20px}
 .content_reward_ad .content_list .list_item{display: flex; align-items: center; border-bottom: 1px solid #f7f7f7; padding: 10px 10px;} 
 .content_reward_ad .content_list .list_item a{display: flex; flex: 1; align-items: center;}
@@ -259,6 +257,10 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .content_list .list_item .info_product .info_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
 .content_reward_ad .content_list .list_item .info_product .info_summary{padding: 5px 0;}
 .content_reward_ad .content_list .list_item .item_right{margin-left: auto;}
+
+
+
+
 
 
 /* 클립다운 PC Web Dark Style */

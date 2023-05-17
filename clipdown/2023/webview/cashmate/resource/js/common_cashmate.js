@@ -37,3 +37,21 @@ $('.tabs.sub_tabs_nav li').click(function(){
 	});
 	$('#'+tab_id).show();
 });
+
+
+var windowHeight;
+$(document).ready(function() {
+	$("#monthlyCouponTooltipBtn, #monthlyCouponTooltipCloseBtn").click(function () {
+		if ($("#monthlyCouponTooltipBtn").attr("aria-expanded") == 'true') {
+			$("#monthlyCouponTooltipBtn").attr("aria-expanded", "false");
+		} else {
+			$("#monthlyCouponTooltipBtn").attr("aria-expanded", "true");
+		}
+
+		if ($("#monthlyCouponNoticeTooltip").attr("aria-hidden") == 'true') {
+			$("#monthlyCouponNoticeTooltip").attr("aria-hidden", "false");
+		} else {
+			$("#monthlyCouponNoticeTooltip").attr("aria-hidden", "true");
+		}
+	});
+});

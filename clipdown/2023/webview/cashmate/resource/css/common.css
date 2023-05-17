@@ -256,6 +256,15 @@ a.disabled{pointer-events: none;}
 .radio_lg span{top: 3px; width: 18px; height: 18px;}
 .radio_lg span:after{top: 4px; left: 4px; width: 8px; height: 8px;}
 
+.btn_box_top{position: absolute; top: -20px; right: 10px; }
+.btn_box_top .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 14px; height: 14px; padding:0;}
+.btn_box_top .btn_popup_close:focus{outline:0;}
+.btn_box_top .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 14px; height: 14px; opacity: 1;}
+.btn_box_top .btn_popup_close .icon-close:before, .btn_box_top .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#fff;}
+.btn_box_top .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+.btn_box_top .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
+
+
 
 
 
