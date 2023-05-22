@@ -97,6 +97,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section .header_title{position: relative; border-bottom: 1px solid #ddd; padding: 20px 0 10px 0;}
 .section .header_title h1{font-size: 16px; font-size: 1.6rem; font-weight: 600; line-height: 2;}
 .section .header_title h1 .summary{font-size: 13px; font-size: 1.3rem; font-weight: 400;}
+.section .list_content{margin: 20px 0;}
 
 .guide_noti_box{background: #f7f7f7; padding: 10px 10px; margin-bottom: 10px;}
 .guide_noti_box .icon_noti{display: inline-block; padding-right: 5px;}
@@ -238,7 +239,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* point page */
 .section_point .guide_noti_box{margin-bottom: 0;}
-.section_point .ad_list{margin: 20px 0;}
 .content_reward_ad .category_menu{display: inline-block; width: 100%; position: relative; background: #f7f7f7; vertical-align: top; padding: 10px 10px;}
 .content_reward_ad .category_menu .list_item{display: inline-block; position: relative; vertical-align: top; padding-bottom:5px; margin-right: 3px;}
 .content_reward_ad .category_menu .list_item a{display: block; position: relative; background: #fff; border: 1px solid #ddd; border-radius: 30px; font-weight: 600; vertical-align: middle; padding: 6px 20px;}
@@ -258,10 +258,21 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .content_list .list_item .info_product .info_summary{padding: 5px 0;}
 .content_reward_ad .content_list .list_item .item_right{margin-left: auto;}
 
-
-
-
-
+/* event Page */
+.section_point{}
+.content_event .content_list{margin: 20px 0 0;}
+.content_event .item_event{margin-bottom: 20px;}
+.content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
+.content_event .item_event .card_event{display: flex; align-items: center; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;} 
+.content_event .item_event .card_event .link_card{display: flex; flex: 1; align-items: center;}
+.content_event .item_event .card_event .event_title{flex-grow: 1; padding-right: 20px;}
+.content_event .item_event .card_event .event_title h3{font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-weight: 600;}
+.content_event .item_event .card_event .event_title .event_desc{display: block; font-size: 11px; font-size: 1.1rem; font-weight: 400; color: #666; padding-top: 5px;}
+.content_event .item_event .card_event .event_img{flex-shrink: 0; width: 88px; height: 88px; margin-left: auto;}
+.content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
+@media screen and (max-width: 698px){
+    .content_list .row-contents .col-2{width: 100%;}
+}
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
