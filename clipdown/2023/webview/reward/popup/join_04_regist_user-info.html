@@ -7,13 +7,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>인플메이트 회원가입 휴대폰번호 약관동의 </title>
+    <title>인플메이트 회원가입 프로필 등록 </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
-    <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../resource/css/style_inflmate.css' type='text/css'>
-    <link rel='stylesheet' href='../resource/font/font.css' type='text/css'>
+    <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
+
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">		
     
@@ -25,30 +24,17 @@
     <![endif]-->
 </head>
 <body>
-    <div class="wrap webview_join">
+    <div class="wrap wrap_popup">
         <div class="inner">
             <section class="webview_box join_info">
                 <article class="content_box">
                     <h2 class="content_heading">
-                        <span class="weight-700_extraBold">클립다운</span><span class="point-text weight-700_extraBold">PLUS+</span>를 이용하기 위해<br />
-                        통합 회원(인플메이트) 가입이 필요합니다.
+                        프로필 등록시<br />
+                        <span class="point-text weight-700_extraBold">일 최대 100P 적립 가능</span>합니다.
                     </h2>
-                    <div class="content_item form_auth">
-                        <div class="form_group">
-                            <div class="input_form">
-                                <input type="text" id="number" class="form_control form_input" maxlength="11" placeholder="휴대폰번호 – 없이 입력">
-                            </div>
-                        </div>
-                    </div>
                     <div class="content_item form_join">
                         <form action="" id="form_wrap">
-                            <div class="agree_all">
-                                <label class="checkbox"> 
-                                    <input type="checkbox" name="agree_all" value="all">모두 동의합니다.
-                                        <span></span>
-                                </label>
-                            </div>
-                            <ul class="terms_agree_list">
+                            <ul class="terms_agree_list list_scroll">
                                 <li class="agree_item">
                                     <label class="checkbox">
                                         <input type="checkbox" name="agree" value="">인플메이트 회원 이용약관 <i class="help-text point-text">(필수)</i>
@@ -91,12 +77,11 @@
                             </ul>
                         </form>
                     </div>
-                    <div class="content_item">
-                        <div class="btn_area">
-                            <a href="" class="btn btn_join">가입하기</a>
-                        </div>
-                        <a href="" class="link_text">다음에 할게요!</a>
+                    <div class="btn_area">
+                        <a href="" class="btn btn_point btn_block btn_lg">정보등록</a>                                                  
                     </div>
+                    <a href="" class="link_text">건너뛰기</a>
+                    
                     
                 </article>
             </section>
