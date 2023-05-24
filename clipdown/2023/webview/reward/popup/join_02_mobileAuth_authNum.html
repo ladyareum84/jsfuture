@@ -37,13 +37,23 @@
                         <div class="form_group">
                             <label for="name" class="label_control">휴대폰 입력</label>
                             <div class="input_form">
-                                <input type="text" id="number" class="form_control form_input font_num" maxlength="11" placeholder="휴대폰번호 – 없이 입력">
+                                <input type="text" id="number" class="form_control font_num" maxlength="11" placeholder="휴대폰번호 – 없이 입력">
                             </div>
                         </div>
+                        <!-- 인증번호 입력 -->
                         <div class="form_group">
                             <label for="name" class="label_control">인증번호 입력</label>
                             <div class="input_form">
-                                <input type="text" id="number" class="form_control form_input font_num" maxlength="11" placeholder="인증번호 입력">
+                                <input type="text" id="number" class="form_control font_num" maxlength="11" placeholder="인증번호 입력">
+                                <span class="time">3:00</span>
+                                <div class="help_block help_text">인증번호를 받지 못하셨나요? <a href="#" class="text_link"> 재전송</a></div>
+                            </div>
+                        </div>
+                        <!-- 인증번호 입력 불일치 시 -->
+                        <div class="form_group hide">
+                            <label for="name" class="label_control">인증번호 입력</label>
+                            <div class="input_form">
+                                <input type="text" id="number" class="form_control form_input_error font_num" maxlength="11" placeholder="인증번호 재입력(실패 1/5회)">
                                 <span class="time">3:00</span>
                                 <div class="help_block help_text">인증번호를 받지 못하셨나요? <a href="#" class="text_link"> 재전송</a></div>
                             </div>

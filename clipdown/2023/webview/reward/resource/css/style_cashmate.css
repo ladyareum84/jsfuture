@@ -177,6 +177,9 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .label_control{font-size: 13px; font-size: 1.3rem; font-weight: 600; line-height: 2; margin-bottom: 10px; padding: 4px 0;}
 .form_control{display: inline-block; width: 100%; height: 34px !important; background: #fff; font-weight: 400; border: 1px solid #ddd; padding: 5px 5px;}
 .input_group{margin-bottom: 10px;}
+.form_input_error{border: 1px solid #e21d19;}
+.form_input_error::placeholder{color: #e21d19;}
+.form_input_error:focus{outline: 0; outline-offset:0;}
 
 /* input-size Width*/
 .input_width_xlg {width: 80% !important; min-width: 420px !important;}
