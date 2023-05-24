@@ -37,12 +37,15 @@ body{background: #202020;}
 .wrap_popup .webview_box{background: #fff; padding : 25px 25px;}
 .webview_box {height: 100%; text-align: center;}
 @media screen and (min-width : 601px) { 
-    .webview_box{border: 1px solid #f7f7f7; border-radius: 0 0 10px 10px;}
+    .webview_box{border-radius: 0 0 10px 10px;}
 }
 .webview_box .content_box{padding-bottom: 10px;}
 .webview_box .content_box:last-child{padding-bottom: 0;}
 .webview_box .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5;}
 .webview_box .content_box .content_item{margin: 20px 0 0;}
+.webview_box_header{position: relative; margin-bottom: -1px;}
+.webview_box_header .content_top_img{}
+
 
 .join_info .profile_img{display: flex; align-items: center; justify-content: center;}
 .join_info .profile_img img{height: 40px;}
