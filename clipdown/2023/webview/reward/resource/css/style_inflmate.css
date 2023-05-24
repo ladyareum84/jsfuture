@@ -117,6 +117,17 @@ body{background: #202020;}
 .guide_noti_box{background: #f7f7f7; padding: 10px 10px; margin-bottom: 10px;}
 .guide_noti_box .noti_text{}
 
+.webview_box .content_box .content_item.content_event{margin-top: 0;}
+.content_event .item_event{margin-bottom: 20px;}
+.content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
+.content_event .item_event .card_event{display: flex; align-items: center; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;} 
+.content_event .item_event .card_event .link_card{display: flex; flex: 1; align-items: center;}
+.content_event .item_event .card_event .event_title{flex-grow: 1; padding-right: 20px;}
+.content_event .item_event .card_event .event_title h3{font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-weight: 600;}
+.content_event .item_event .card_event .event_title .event_desc{display: block; font-size: 11px; font-size: 1.1rem; font-weight: 400; color: #666; padding-top: 5px;}
+.content_event .item_event .card_event .event_img{flex-shrink: 0; width: 88px; height: 88px; margin-left: auto;}
+.content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
+
 
 
 
