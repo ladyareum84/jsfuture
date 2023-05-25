@@ -1,13 +1,12 @@
 @charset "utf-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
  
- /*!
- * 2023-05-01
- * 클립다운 PC Webview / Popup 공통 UI
- * 클립다운 PC WebPage Background : 다크버전
- * 클립다운 PC 공통 Popup Content Background : 화이트버전 
+ 
+/*!
+ * 2022-11-21 update
+ * 공통 기본 레이아웃, 컴포넌트 스타일
  * Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
 */
 
@@ -26,61 +25,47 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video{
-	margin:0; 
-	padding:0; 
-	border: 0; 
-	font-weight: inherit;
-	font-style: inherit;
-	font-size:100%; 
-	font-family: inherit;
-	vertical-align:baseline;
-}
-article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section {display:block;} /* HTML5 display-role reset for older browsers */
+time, mark, audio, video{margin:0; padding:0; border: 0; font-size:100%; font: inherit; vertical-align:baseline;}
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{display:block;} /* HTML5 display-role reset for older browsers */
 audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
-div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family:'Malgun Gothic', 'Poppins', Noto Sans KR, Helvetica, sans-serif; font-size:1.3rem; font-size:13px; line-height: 1.3; color:#20222B;}
+div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family:'SCDream', 'Noto Sans KR', 'Poppins', Lato, Helvetica, sans-serif; font-size:1.4rem; font-size:14px; line-height: 1.4; color:#333;}
 html, body{width: 100%; height: 100%;}
 html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
-body{overflow-x: hidden; overflow-y: auto; -ms-overflow-style:none; -webkit-font-smoothing: antialiased;}
+body{overflow-x: hidden; overflow-y: auto;-ms-overflow-style:none;}
 textarea{width:100%;} 
 select, input, img, button{vertical-align:middle;}
-button{border: 0; background: transparent; cursor: pointer;}
-ol, ul, li{list-style-type:none;}
-legend, hr, caption span {position:absolute; left:-3000%;}
+ul, ol{list-style-type:none; }
+legend, hr, caption span, .hide{position:absolute; left:-3000%;}
 em, address{font-style:normal;}
-table{border-collapse:collapse; border-spacing:0;}
-table caption, legend{top:-9999px; text-indent: -9999px; font-size: 0; line-height: 0;}
+table{border-collapse:collapse; border-spacing:0; width:100%;}
 a{background-color: transparent; color:#666; text-decoration:none; -webkit-text-decoration-skip:object;}
-a:hover{color: #333;}
+a:focus, a:hover{outline: 0; text-decoration:underline;}
 fieldset, iframe, img, button{border:0;}
 textarea,input[type="file"],input[type="password"],input[type="text"]{text-indent:4px; border:1px solid #ddd;}
 select{padding:0 0 0 5px; height:28px; border:1px solid #e5e5e5;}
 select{-webkit-appearance: normal; -moz-appearance: normal; appearance: normal; height:28px \0IE8;} /* IE8 전용*/
 select::-ms-expand{ display: none;}
-select:focus, textarea:focus, input[type="password"]:focus, input[type="file"]:focus, input[type="text"]:focus {outline: 1px solid #666; outline-offset: -1px;}
+select:focus, textarea:focus, input[type="password"]:focus, input[type="file"]:focus, input[type="text"]:focus {outline: 1px solid #aaa; outline-offset: -1px;}
 textarea[readonly="readonly"],button[readonly="readonly"],select[readonly="readonly"],input[readonly="readonly"], 
 textarea[disabled="disabled"],button[disabled="disabled"],select[disabled="disabled"],input[disabled="disabled"]{background:#f5f5f5; border-color:#d4d4d4;}
 input[type=text]::-ms-clear {display: none;}
+input[type="password"],input[type="file"],input[type="text"]{height:28px; line-height:28px;}
 input[type="file"]{width:100%;}
 input[type="radio"]{vertical-align:text-bottom;}
-input::placeholder{font-size:12px; font-size:1.2rem; color:#aaa;}
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px transparent inset ; -webkit-text-fill-color: #666; }
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
+input::placeholder{font-size:14px; color:#bbb;}
 img{max-width:100%; width:100%; height:auto;} /* 모바일에서 이미지 선명도 - 노출되는 이미지 사이즈 2배크기의 원본이미지 적용 <img src='img.png' alt='' style='width:원본사이즈 1/2 사이즈 기재' />   */
 svg{max-width: 100%; width: 100%; user-select : none;}
-:focus{outline: 0;}
-
-
-/* Common */
-.text-block{display:block;}
-.ellipsis{overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
-.ellipsis-block{display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.5; letter-spacing: -.3px;}
-.hide{display:none;}
-.hidden{position: absolute; left: 0; top: -9999px;}
 .clear{zoom:1; clear:both;}
 .clear:after{content:" "; display:block; clear:both;}
 .skip{position:absolute; left:0; top:-100px; z-index:1000; width:100%; height:60px; line-height:60px; text-align:center; font-size:20px; color:#fff; transition:all 0.5s; background:#666;}
 .skip:focus{top:0;}
+
+/* Common */
+.text-block{display:block;}
+.ellipsis{overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
+.ellipsis-block{display: block; display: -webkit-box; overflow:hidden; height: 2.4em; line-height: 1.2em; -o-text-overflow:ellipsis; text-overflow:ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word;}
+.hide{display:none;}
+.hidden{position: absolute; left: 0; top: -9999px;}
 
 /* Responsive Layout Column Grid  */
 .row {position: relative; overflow: hidden; margin-left: -20px; margin-right: -20px;}
@@ -199,9 +184,8 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     touch-action: manipulation; 
     -webkit-tap-highlight-color: transparent; 
     white-space: nowrap;
-	cursor: pointer;
 }
-.btn.focus, .btn:focus, .btn:hover{outline: 0; box-shadow: none;}
+.btn.focus, .btn:focus, .btn:hover{color:#fff; text-decoration: none;}
 a.btn:hover{text-decoration: none;}
 a.disabled{pointer-events: none;}
 .link-text{
@@ -226,9 +210,9 @@ a.disabled{pointer-events: none;}
 .btn-circle{-moz-border-radius:50%; -webkit-border-radius: 50%; border-radius: 50%; min-width: 0; min-height: 0; width:36px; height:36px; padding: 0;}
 
 /* Color */
-.point-color, .point-text{color:#e21d19;}
+.point-color, .point-text{color:#e31d19;}
 .white-color{color:#fff;}
-.defualt-color{color:#333;}
+.default-color{color:#333;}
 .info-color{color:#666;}
 
 /* checkbox, radio */
@@ -237,11 +221,11 @@ a.disabled{pointer-events: none;}
 .m-checkbox-inline, .m-radio-inline{display: inline-block;}
 .m-checkbox-inline .m-checkbox, .m-radio-inline .m-radio, .m-checkbox input:checked~span:after, .m-radio>input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
 .m-checkbox-inline .m-checkbox:last-child, .m-checkbox-inline .m-radio:last-child{margin-right: 0;}
-.m-checkbox, .m-radio{display: inline-block; position: relative; margin-bottom: 13px; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer;}
+.m-checkbox, .m-radio{display: inline-block; position: relative; margin-bottom: 14px; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer;}
 .m-checkbox input, .m-radio input{position: absolute; z-index: -1; top:2px; left: 0; width:16px; height:16px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
 .m-checkbox span, .m-radio span{position: absolute; top: 2px; left: 0; width: 16px; height: 16px; border: 1px solid #c9caca; background: #fff;}
 .m-checkbox-disabled, .m-checkbox input[disabled]~span, .m-checkbox input:checked[disabled]~span, .m-radio-disabled, .m-radio input[disabled]~span, .m-radio input:checked[disabled]~span{opacity: .5; cursor: default; filter: alpha(opacity = 50);}
-.m-checkbox span:after, .m-radio span:after{display: block; position: absolute; content: '';}
+.m-checkbox span:after, .m-radio span:after{display: none; position: absolute; content: '';}
 .m-checkbox span:after{top: 1px; left: 5px; width: 5px; height: 10px; border: solid #3b393a; border-width: 0 2px 2px 0; transform: rotate(45deg);}
 .m-radio span{border-radius: 50% !important; -o-border-radius: 50% !important; -ms-border-radius: 50% !important;}
 .m-radio span:after{top: 4px; left: 4px; width: 6px; height: 6px; border-radius: 100% !important; background: #6e6e6e;}
@@ -255,17 +239,17 @@ a.disabled{pointer-events: none;}
 .radio_lg span{top: 3px; width: 18px; height: 18px;}
 .radio_lg span:after{top: 4px; left: 4px; width: 8px; height: 8px;}
 
-.btn_box_top{position: absolute; top: -20px; right: 10px; }
-.btn_box_top .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 13px; height: 13px; padding:0;}
-.btn_box_top .btn_popup_close:focus{outline:0;}
-.btn_box_top .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 13px; height: 13px; opacity: 1;}
-.btn_box_top .btn_popup_close .icon-close:before, .btn_box_top .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#fff;}
-.btn_box_top .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
-.btn_box_top .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
-
-
-
-
-
-
-
+/*  Modal, Alert Form */
+.maodal{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999;} 
+.maodal .modal_body{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: auto; background: #fff; padding: 20px 20px;}
+.maodal .modal_body .modal_contents{padding-top: 10px;}
+.maodal .modal_contents .item_message{padding-bottom: 10px;}
+.maodal .modal_contents .item_message p{font-size: 1.3rem; font-size: 13px; padding-bottom: 5px;}
+.maodal .modal_body .modal_action{position: relative; width: 100%; text-align: right; border-top:1px solid #ddd; padding: 15px 0 0;}
+.maodal .modal_action .btn_group{display: block; position: relative; vertical-align: middle;}
+.btn_modal{display: inline-block; position: relative; overflow: hidden; min-width: 65px; padding: 5px 20px 3px 20px; font-size: 1.2rem; font-size: 12px; text-align: center; vertical-align: middle; border-radius: 3px; -webkit-tap-highlight-color: transparent;}
+.btn_modal:hover, .btn_modal:focus{text-decoration: none;}
+.btn_modal.btn_cancel{background: #f1f1f1; border: 1px solid #f1f1f1; color:#333;}
+.btn_modal.btn_cancel:hover{background: #eee; border: 1px solid #eee; color:#333;}
+.btn_modal.btn_check{background: #f52c29; border: 1px solid #f52c29; color: #fff;}
+.btn_modal.btn_check:hover{background: #e21d19;  border: 1px solid #e21d19; color: #fff;
