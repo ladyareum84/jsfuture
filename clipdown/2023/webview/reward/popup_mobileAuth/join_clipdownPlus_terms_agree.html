@@ -7,12 +7,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>인플메이트 회원가입 약관동의 02 </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel='stylesheet' href='../resource/css/style_inflmate.css' type='text/css'>
-    <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
-
+    <title>WebView 클립다운PLUS+ 회원가입 - 약관 동의</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel='stylesheet' href='./resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/style.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/font/font.css' type='text/css'>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">		
     
@@ -24,21 +23,27 @@
     <![endif]-->
 </head>
 <body>
-    <div class="wrap wrap_popup">
+    <!--  // Webview 클립다운 PLUS+ 회원가입 약관 동의 폼 -->
+    <div class="wrap warp_popup login_mobileAuth">
         <div class="inner">
-            <section class="webview_box join_info">
-                <article class="content_box">
-                    <h2 class="content_heading">
-                        <span class="weight-700_extraBold">캐시메이트 이용을 위해 약관 동의가 필요합니다.</span>
-                        <br />
-                        <span class="guide_text">서비스 제공을 위해 약관에 동의해 주세요.</span> 
-                    </h2>
-                    <div class="content_item form_join">
+            <section class="webview_box">
+                <div class="content_box">
+                    <div class="content_item">
+                        <div class="content_text">
+                            <div class="text_message">
+                                <p>
+                                    <span class="weight-700_extraBold">클립다운 PLUS+</span> 이용을 위해<br />아래 약관 동의가 필요합니다.<br />
+                                    <span class="guide_text">서비스 이용 약관에 동의해주세요.</span>
+                                
+                                </p>
+                                
+                            </div>
+                        </div>
                         <form action="" id="form_wrap">
                             <ul class="terms_agree_list list_box_border">
                                 <li class="agree_item">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="agree" value="">인플메이트 회원 이용약관 <i class="help-text point-text">(필수)</i>
+                                        <input type="checkbox" name="agree" value="">클립다운 PLUS+ 이용약관 
                                         <span></span>
                                     </label>
                                     <div class="terms_link fl_r">
@@ -46,26 +51,20 @@
                                     </div>
                                 </li>                                
                             </ul>
+                            <div class="form_group">
+                                <div class="btn_area">
+                                    <a href="" class="btn btn_outline_point">시작하기</a>
+                                </div>
+                                
+                            </div>
                         </form>
-                    </div>
-                    <div class="btn_area">
-                        <a href="#" class="btn btn_outline_point btn_block btn_lg">시작하기</a>
+                        
                     </div>
                     
-                    
-                </article>
+                </div>
             </section>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script>
-    // 동의 모두선택 / 해제
-    const agreeChkAll = document.querySelector('input[name=agree_all]');
-        agreeChkAll.addEventListener('change', (e) => {
-        let agreeChk = document.querySelectorAll('input[name=agree]');
-        for(let i = 0; i < agreeChk.length; i++){
-        agreeChk[i].checked = e.target.checked;
-        }
-    });
-    </script>
 </body>    
+</html>

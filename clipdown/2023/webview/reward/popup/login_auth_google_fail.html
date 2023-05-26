@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>클립다운PC 팝업 - 인플메이트 비회원 로그인 </title>
+    <title>클립다운PC 팝업 로그인 - 인증 실패</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel='stylesheet' href='../resource/css/style_inflmate.css' type='text/css'>
@@ -27,44 +28,39 @@
     <div class="wrap wrap_popup">
         <div class="inner">
             <section class="webview_box login_info">
-                <article class="content_box_img">
-                    <div class="item_img">
-                        <div class="img_box">
-                            <img src="../resource/images/img_popup_login_inflemate.png" class="img_fluid" alt="" style="width: 346px;">
-                        </div>                        
+                <article class="content_box">
+                    <h2 class="content_heading">
+                        <span class="weight-700_extraBold">동영상 시청 포인트 <br />적립 기기가 변경</span>되어 <br />
+                        정보 확인이 필요합니다.
+                    </h2>
+                    <div class="content_item">                                                  
+                        <div class="input_form">
+                            <input type="text" id="email" class="form_control font_num" required="required" placeholder="이메일 주소를 입력하세요.">
+                        </div>                  
+                        <div class="btn_area">
+                            <button class="btn_wv_info btn_login_google">구글아이디로 시작하기</button>
+                        </div>
+                        <a href="" class="link_text">건너뛰기</a>
                     </div>
                 </article>
-                <article class="content_box">
-                    <div class="content_item form_auth">
-                        <div class="input_form">
-                            <input type="text" id="number" class="form_control font_num" maxlength="11" placeholder="휴대폰번호 - 없이 입력">
-                        </div>
-                        <div class="btn_area">
-                            <a href="#" class="btn btn_default btn_block btn_lg">로그인</a>
-                        </div>                        
-                    </div>
-                    <div class="content_item">
-                        <div class="join_link">
-                            <div class="btn_area">
-                                <a href="" class="btn btn_point btn_block btn_lg">회원가입</a>
+                <!-- Alert Form 인증 실패 -->
+                <div class="maodal">
+                    <div class="modal_body">
+                        <!-- 텍스트 한 줄일떄 -->
+                        <div class="modal_contents">
+                            <div class="item_message">
+                                <p>서비스 신청 시 <br /> 등록한 메일로 인증해주세요.</p>
+                            </div>
+                            <div class="modal_action">
+                                <div class="btn_group">
+                                    <a href="#" class="btn_modal btn_check">확인</a>
+                                </div>
                             </div>
                         </div>
-                        <span class="guide_text">* 구글 메일로 가입했거나 휴대폰번호가 변경된 경우 <a href="#" class="text_link">계정 찾기</a>를 진행해주세요.</span>
                     </div>
-                    
-                </article>
+                </div>
             </section>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script>
-    // 동의 모두선택 / 해제
-    const agreeChkAll = document.querySelector('input[name=agree_all]');
-        agreeChkAll.addEventListener('change', (e) => {
-        let agreeChk = document.querySelectorAll('input[name=agree]');
-        for(let i = 0; i < agreeChk.length; i++){
-        agreeChk[i].checked = e.target.checked;
-        }
-    });
-    </script>
 </body>    

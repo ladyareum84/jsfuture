@@ -43,6 +43,7 @@ body{background: #202020;}
 .webview_box .content_box{padding-bottom: 10px;}
 .webview_box .content_box:last-child{padding-bottom: 0;}
 .webview_box .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5;}
+.webview_box .content_box .content_heading .guide_text{display: block; font-size: 13px; font-size: 1.3rem; padding-top: 10px; color: #666;}
 .webview_box .content_box .content_item{margin: 20px 0 0;}
 .webview_box_header{position: relative; margin-bottom: -1px;}
 .webview_box_header .content_top_img{}
@@ -62,6 +63,7 @@ body{background: #202020;}
 .form_join .agree_all{border-bottom: 1px solid #eee;}
 .form_join .help-text{font-size: 11px; font-size: 1.1rem; color: #888;}
 .form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 3px 0; }
+.form_join .terms_link .link_text{padding-top: 0;}
 .form_join .form_list{border-bottom: 1px solid #f7f7f7;}
 .form_join .form_list .form_group{margin: 0; padding: 5px 0 0;}
 
@@ -79,7 +81,7 @@ body{background: #202020;}
 .webview_box .btn_full_gray{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
 .webview_box .btn_block{display: block; width: 100%;}
 .webview_box .btn_md{font-size: 13px; font-size: 1.3rem; line-height: 1.3; padding: 6px 20px;}
-.webview_box .btn_lg{font-size: 15px; font-size: 1.5rem; padding: 8px 20px;}
+.webview_box .btn_lg{font-size: 15px; font-size: 1.5rem; padding: 7px 20px 8px 20px;}
 .webview_box .btn_action{text-align: center; margin: 0; border-top: 1px solid #ddd; padding: 20px 0; margin-top: 20px;}
 .webview_box .btn_action .btn{min-width: 110px; font-weight: 600; border-radius: 50px;}
 .webview_box .btn_area{margin: 20px 0 10px;}
@@ -104,6 +106,7 @@ body{background: #202020;}
 /* webview 팝업 회원가입 안내 스타일 */
 .join_info .form_join{border: 0;}
 .join_info .form_join .terms_agree_list{margin: 30px 0;}
+.join_info .form_join .terms_agree_list .checkbox span{top: 4px;}
 .join_info .form_join .list_scroll{height: 100px; overflow-y: scroll; border: 1px solid #eee;}
 .join_info .form_join .list_scroll li{padding: 2px 10px;}
 .join_info .form_auth .form_group{margin-bottom: 10px;}
@@ -177,6 +180,22 @@ body{background: #202020;}
 .input_width_sm {width: 25% !important; min-width: 145px !important;}
 .input_width_xs {width: 100px !important;}
 
+/*  Modal, Alert Form */
+.maodal{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999;} 
+.maodal .modal_body{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: auto; background: #fff; padding: 20px 20px;}
+.maodal .modal_body .modal_contents{padding-top: 10px;}
+.maodal .modal_contents .item_message{padding-bottom: 15px;}
+.maodal .modal_contents .item_message p{font-size: 1.3rem; font-size: 13px; line-height: 1.5; padding-bottom: 5px;}
+.maodal .modal_body .modal_action{position: relative; width: 100%; text-align: center; border-top:1px solid #ddd; padding: 20px 0 0;}
+.maodal .modal_action .btn_group{display: block; position: relative; vertical-align: middle;}
+.btn_modal{display: inline-block; position: relative; overflow: hidden; min-width: 88px; padding: 4px 20px; font-size: 1.3rem; font-size: 13px; line-height: 1.3; text-align: center; vertical-align: middle; border-radius: 30px; -webkit-tap-highlight-color: transparent;}
+.btn_modal:hover, .btn_modal:focus{text-decoration: none;}
+.btn_modal.btn_cancel{background: #e7e7e7; border: 1px solid #e7e7e7; color: #666;}
+.btn_modal.btn_cancel:hover{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
+.btn_modal.btn_check{background: #fff; border: 1px solid #333; color: #333;}
+.btn_modal.btn_check:hover{background: #333; border: 1px solid #333; color: #fff;}
+
+
 /* 
     * [클립다운 PC 팝업] 클립다운 라이트 설치 확인
 */
@@ -194,6 +213,7 @@ body{background: #202020;}
 .info_box_app .item_right{margin-left: auto;}
 .info_box_app .icon_launcher{position: relative; overflow: hidden; width: 36px; height: 36px; border-radius: 5px; box-shadow: 0 0 4px 0 rgba(0,0,0,0.25); margin-right: 10px;}
 .info_box_app .item_text{font-weight: 600;}
+
 
 
 
