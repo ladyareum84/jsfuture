@@ -47,7 +47,7 @@ body{background: #202020;}
 .webview_box .content_box .content_item{margin: 20px 0 0;}
 .webview_box_header{position: relative; margin-bottom: -1px;}
 .webview_box_header .content_top_img{}
-.webview_box .item_empty{padding: 10px 0;}
+.webview_box .item_empty{padding: 5px 0;}
 
 .join_info .profile_img{display: flex; align-items: center; justify-content: center;}
 .join_info .profile_img img{height: 40px;}
@@ -98,6 +98,7 @@ body{background: #202020;}
 /* webview 팝업 로그인 안내 스타일 */
 .login_info input::placeholder{font-size:12px; font-size:1.2rem; font-weight: 400; color:#aaa;}
 .login_info .join_link{border-top: 1px solid #eee; padding: 10px 0 0px;}
+.login_info .content_heading{padding-bottom: 10px;}
 .login_info .content_box .content_item.form_auth{margin:10px 0;}
 .login_info .content_box .content_item.form_auth .btn_area{margin: 15px 0 10px;}
 .login_info .guide_text{font-size:11px; font-size:1.1rem; letter-spacing: -1px;}
