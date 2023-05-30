@@ -15,7 +15,7 @@ div, dl, dt, dd, h1, h2, h3, h4, h5, h6,
 form, fieldset, p, th, td, input, textarea, 
 select, button, pre, a {font-family:'Malgun Gothic', 'Poppins', Helvetica, sans-serif; font-size:13px; font-size:1.3rem; line-height: 1.3; color:#333;}
 .wrap{position: relative; width: 100%; height: 100%;}
-.container{position: relative; width: 100%; max-width: 780px; margin: 0 auto; padding: 0 20px;}
+.container{position: relative; width: 100%; max-width: 780px; margin: 0 auto; padding: 0;}
 .container:after{content:" "; display:block; clear:both;}
 
 /* Custom Style */
@@ -93,7 +93,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* custom style */
 .font_num{font-family: 'Poppins', Malgun Gothic, sans-serif; font-weight: 500;}
-.section{position: relative; overflow: hidden; }
+.section{position: relative; overflow: hidden; padding: 0 20px;}
 .section .header_title{position: relative; border-bottom: 1px solid #ddd; padding: 20px 0 10px 0;}
 .section .header_title h1{font-size: 16px; font-size: 1.6rem; font-weight: 600; line-height: 2;}
 .section .header_title h1 .summary{font-size: 13px; font-size: 1.3rem; font-weight: 400;}
@@ -281,6 +281,36 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .content_list .row-contents .col-2{width: 100%;}
 }
 
+/* 
+    * APP Webview 캐시메이트 메인페이지
+    * 클립다운라이트 앱에서만 노출
+*/
+.webview_cashmate .section_mb{background: #F7F7F7; padding: 0;}
+.webview_cashmate .section_mb .contents{padding: 30px 20px; margin-bottom: 20px; background: #fff;}
+.webview_cashmate .section_mb .contents:last-child{margin-bottom: 0;}
+.webview_cashmate .section_mb .header_title{display: none;}
+.webview_cashmate .section_mb .contents_top{display: block; text-align: center;}
+
+.webview_cashmate .section_mb .tabs.tabs_nav{display: none;}
+.webview_cashmate .section_mb .tabs_multi{margin: 0;}
+
+
+
+.webview_cashmate .section_mb .content_mypoint{position: relative;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint{display: inline-block; padding-right: 20px;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
+.webview_cashmate .section_mb .content_mypoint .item_state_user{position: relative; float: right;}
+.webview_cashmate .section_mb .content_mypoint .item_state_user .link-text{text-decoration: underline;}
+.webview_cashmate .section_mb .contents.contents_banner{padding: 0;}
+
+.content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; margin: 0 -5px;}
+.content_menu_point .box_point{flex: 1; border: 1px dashed #ddd; text-align: center; margin: 0 5px; padding: 7px 15px;}
+.content_menu_point .box_point .icon{position: relative; max-width: 68px; min-width: 48px; margin: 0 auto;}
+.content_menu_point .box_point .text_menu{font-size: 13px; font-size: 1.3rem; font-weight: 600; padding: 10px 0;}
+
+
+
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
 .webview_cashmate.dark{background: #20222B;}
@@ -317,3 +347,9 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .content_reward_ad .category_menu .list_item a.active{background: #272936; border: 1px solid #fff;}
 .webview_cashmate.dark .content_reward_ad .content_list .list_item{border-bottom: 1px solid #333542;}
 .webview_cashmate.dark .content_reward_ad .content_list .list_item .info_product .info_title{color: #fff;}
+
+
+@media screen and (max-width: 480px){
+    .webview_cashmate .header_title{display: none;}
+    .webview_cashmate .section .contents{padding: ;}
+}
