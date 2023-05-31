@@ -24,6 +24,11 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .head-title{text-align: center; padding: 40px 0;}
 .head-title h1{font-size:42px; font-size:4.2rem; font-weight: 500;}
 .notify_badge{display:inline-block; position:relative; min-width: 10px; top:-15px; right: 5px; background-color: #e21d19; font-family: 'Poppins', sans-serif; font-size:10px; font-weight: 700; color:#fff; text-align:center; white-space: nowrap; border-radius: 10px; padding: 0 6px;}
+.icon_arrow_right{display: inline-block; position: relative; vertical-align: middle; width: 0; height: 0; border-color: transparent transparent transparent #ddd; border-style: solid; border-width: 5px 0 5px 7px;}
+
+.webview_cashmate .list_scroll::-webkit-scrollbar{width: 8px; height: 8px; background: #f7f7f7;}
+.webview_cashmate .list_scroll::-webkit-scrollbar-thumb{border-radius: 3.5px; background-color: #ddd;}
+.webview_cashmate .list_scroll::-webkit-scrollbar-track{background: #f7f7f7;}
 
 /* webview popup info style */
 .webview_info .inner{position: relative; max-width: 390px; width: 100%; height:100%; margin: 0 auto;}
@@ -237,7 +242,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* error page */
 .section_error{overflow: inherit; height: 100vh;}
-.section_error .content_error{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.section_error .content_error{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;}
 .section_error .content_error .img_error{margin-bottom: 20px;}
 .section_error .content_error .img_error img{max-width: 236px;}
 .section_error .content_error .text_content{padding: 20px 0;}
@@ -248,7 +253,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_point .guide_noti_box{margin-bottom: 0;}
 .content_reward_ad .category_menu{display: inline-block; width: 100%; position: relative; background: #f7f7f7; vertical-align: top; padding: 10px 10px;}
 .content_reward_ad .category_menu .list_item{display: inline-block; position: relative; vertical-align: top; padding-bottom:5px; margin-right: 3px;}
-.content_reward_ad .category_menu .list_item a{display: block; position: relative; background: #fff; border: 1px solid #ddd; border-radius: 30px; font-weight: 600; vertical-align: middle; padding: 6px 20px;}
+.content_reward_ad .category_menu .list_item a{display: block; position: relative; background: #fff; border: 1px solid #ddd; border-radius: 30px; font-weight: 600; vertical-align: middle; padding: 6px 15px;}
 .content_reward_ad .category_menu .list_item a.active{background: #272936; border: 1px solid #272936; color: #fff;}
 .content_reward_ad .category_menu .list_item a:hover{border: 1px solid #272936;}
 .content_reward_ad .product_list .info_product .info_sub_title{display: inline-block; font-size: 11px; font-size: 1.1rem;}
@@ -277,43 +282,38 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_event .item_event .card_event .event_title .event_desc{display: block; font-size: 11px; font-size: 1.1rem; font-weight: 400; color: #666; padding-top: 5px;}
 .content_event .item_event .card_event .event_img{flex-shrink: 0; width: 88px; height: 88px; margin-left: auto;}
 .content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
-@media screen and (max-width: 698px){
+@media screen and (max-width: 600px){
     .content_list .row-contents .col-2{width: 100%;}
 }
 
-/* 
-    * APP Webview 캐시메이트 메인페이지
-    * 클립다운라이트 앱에서만 노출
-*/
-.webview_cashmate .section_mb{background: #F7F7F7; padding: 0;}
-.webview_cashmate .section_mb .contents{padding: 30px 20px; margin-bottom: 20px; background: #fff;}
-.webview_cashmate .section_mb .contents:last-child{margin-bottom: 0;}
-.webview_cashmate .section_mb .header_title{display: none;}
-.webview_cashmate .section_mb .contents_top{display: block; text-align: center;}
+/* inquiry Page */
+.content_inquiry{position: relative; max-width: 640px; margin: 0 auto;}
+.content_inquiry .content_item{position: relative; margin: 40px 0;}
+.content_inquiry .content_item:last-child{margin-bottom: 0;}
+.content_inquiry .content_item .list_title{padding-bottom: 10px;}
+.content_inquiry .content_item .list_title h3{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
+.content_inquiry .content_item  .content_list{}
+.content_inquiry .content_item  .content_list .list_item {background: #fff; border: 1px solid #ddd; margin-bottom: 10px;}
+.content_inquiry .content_item  .content_list .list_item:hover{border: 1px solid #9fa0a0;}
+.content_inquiry .content_item  .content_list .list_item:last-child{margin-bottom: 0;}
+.content_inquiry .content_item  .content_list .list_item a{display: block; position: relative; padding: 10px 20px; }
+.content_inquiry .content_item  .content_list .list_item .icon_arrow_right{float: right; margin: 3px 5px;}
+.content_inquiry .content_item  .content_list .info_box .list_item{padding: 20px 20px;}
+.content_inquiry .content_item  .content_list .info_box .list_item:hover{border: 1px solid #ddd;}
+.content_inquiry .content_item  .content_list .info_box .info_text{line-height: 1.5; padding-bottom: 30px;}
+.content_inquiry .content_item  .content_list .info_box .info_text:last-child{padding-bottom: 0;}
 
-.webview_cashmate .section_mb .tabs.tabs_nav{display: none;}
-.webview_cashmate .section_mb .tabs_multi{margin: 0;}
-
-
-
-.webview_cashmate .section_mb .content_mypoint{position: relative;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint{display: inline-block; padding-right: 20px;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
-.webview_cashmate .section_mb .content_mypoint .item_state_user{position: relative; float: right;}
-.webview_cashmate .section_mb .content_mypoint .item_state_user .link-text{text-decoration: underline;}
-.webview_cashmate .section_mb .contents.contents_banner{padding: 0;}
-
-.content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; margin: 0 -5px;}
-.content_menu_point .box_point{flex: 1; border: 1px dashed #ddd; text-align: center; margin: 0 5px; padding: 7px 15px;}
-.content_menu_point .box_point .icon{position: relative; max-width: 68px; min-width: 48px; margin: 0 auto;}
-.content_menu_point .box_point .text_menu{font-size: 13px; font-size: 1.3rem; font-weight: 600; padding: 10px 0;}
-
-
+.webview_cashmate.dark .content_inquiry .content_item .list_title h3{color: #fff;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item a{color: #fff;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item {background: #272936; border: 1px solid #353745; margin-bottom: 10px;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item:hover{background: #20222B; border: 1px solid #9E9EA5;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box .list_item:hover{background: #272936; border: 1px solid #353745;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box p{color: #fff; line-height: 2;}
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
 .webview_cashmate.dark{background: #20222B;}
+.webview_cashmate.dark .section .contents{display: block;}
 .webview_cashmate.dark .section .header_title{border-bottom: 1px solid #333542;}
 .webview_cashmate.dark .section .header_title h1{color: #fff;}
 .webview_cashmate.dark .section .header_title h1 .summary{color: #9E9EA5;}
@@ -349,7 +349,53 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .content_reward_ad .content_list .list_item .info_product .info_title{color: #fff;}
 
 
-@media screen and (max-width: 480px){
-    .webview_cashmate .header_title{display: none;}
-    .webview_cashmate .section .contents{padding: ;}
+/* 
+    * APP Webview 캐시메이트 메인페이지
+    * 클립다운라이트 앱에서만 노출
+*/
+.webview_cashmate .section_mb .contents_top{display: none;}
+.webview_cashmate .section.section_mb .contents{padding: 20px 20px;}
+.webview_cashmate .section_mb{background: #F7F7F7; padding: 0;}
+.webview_cashmate .section_mb .contents{padding: 30px 20px; margin-bottom: 10px; background: #fff;}
+.webview_cashmate .section_mb .contents:last-child{margin-bottom: 0;}
+.webview_cashmate .section_mb .header_title{display: none;}
+.webview_cashmate .section_mb .contents_top{display: block;}
+.webview_cashmate .section_mb .tabs.tabs_nav{display: none;}
+.webview_cashmate .section_mb .tabs_multi{margin: 0;}
+.webview_cashmate .section_mb .form_list{height: auto; overflow-y: hidden;}
+
+.webview_cashmate .section_mb .content_mypoint{position: relative;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint{display: inline-block; padding-right: 20px;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint{padding: 0;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
+.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
+.webview_cashmate .section_mb .content_mypoint .item_state_user{position: relative; float: right;}
+.webview_cashmate .section_mb .content_mypoint .item_state_user .link-text{text-decoration: underline;}
+.webview_cashmate .section_mb .contents.contents_banner{padding: 0;}
+
+.webview_cashmate .section_mb .content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; margin: 0 -5px;}
+.webview_cashmate .section_mb .content_menu_point .box_point{flex: 1; border: 1px dashed #ddd; text-align: center; margin: 0 5px; padding: 7px 15px;}
+.webview_cashmate .section_mb .content_menu_point .box_point .icon{position: relative; max-width: 52px; min-width: 48px; margin: 0 auto;}
+.webview_cashmate .section_mb .content_menu_point .box_point .text_menu{font-size: 13px; font-size: 1.3rem; font-weight: 600; padding: 5px 0;}
+
+
+.webview_cashmate .section_mb.section .list_content{margin: 0;}
+.webview_cashmate .section_mb.section_mypage .contents{text-align: center;}
+.webview_cashmate .section_mb.section_point .contents{padding: 0;}
+.webview_cashmate .section_mb.section_point .guide_noti_box{padding: 20px 20px 10px;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .category_menu{padding: 10px 20px;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .content_list{height: auto; overflow-y: hidden; padding: 0 10px;}
+.webview_cashmate .section_mb.section_event .contents{padding: 0;}
+.webview_cashmate .section_mb.section_event .guide_noti_box{padding: 20px 20px;}
+.webview_cashmate .section_mb.section_event .content_event{padding: 20px 20px;}
+
+@media screen and (max-width: 640px){
+
+
+
+
+
+
+
 }
+
