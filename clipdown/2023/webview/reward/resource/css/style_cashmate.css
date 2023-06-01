@@ -25,7 +25,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .head-title h1{font-size:42px; font-size:4.2rem; font-weight: 500;}
 .notify_badge{display:inline-block; position:relative; min-width: 10px; top:-15px; right: 5px; background-color: #e21d19; font-family: 'Poppins', sans-serif; font-size:10px; font-weight: 700; color:#fff; text-align:center; white-space: nowrap; border-radius: 10px; padding: 0 6px;}
 .icon_arrow_right{display: inline-block; position: relative; vertical-align: middle; width: 0; height: 0; border-color: transparent transparent transparent #ddd; border-style: solid; border-width: 5px 0 5px 7px;}
-
 .webview_cashmate .list_scroll::-webkit-scrollbar{width: 8px; height: 8px; background: #f7f7f7;}
 .webview_cashmate .list_scroll::-webkit-scrollbar-thumb{border-radius: 3.5px; background-color: #ddd;}
 .webview_cashmate .list_scroll::-webkit-scrollbar-track{background: #f7f7f7;}
@@ -180,13 +179,19 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .form_group .help-block{display: block; margin: 5px 0;}
 .form_group .help-text{font-size: 11px; font-size: 1.1rem; color: #666;}
 .label_control{font-size: 13px; font-size: 1.3rem; font-weight: 600; line-height: 2; margin-bottom: 10px; padding: 4px 0;}
-.form_control{display: inline-block; width: 100%; height: 34px !important; background: #fff; font-weight: 400; border: 1px solid #ddd; padding: 5px 5px;}
+.form_control{display: inline-block; width: 100%; height: 34px; background: #fff; font-weight: 400; border: 1px solid #ddd; padding: 5px 5px;}
 .input_group{margin-bottom: 10px;}
-.input_group .form_control{margin: 5px 0;}
+.input_group:last-child{margin-bottom: 0;}
+/* .input_group .form_control{margin: 5px 0;} */
 .input_group .btn_input{font-size: 11px; font-size: 1.1rem; font-weight: 600; border-radius: 0; padding: 8px 10px;}
 .form_input_error{border: 1px solid #e21d19;}
 .form_input_error::placeholder{color: #e21d19;}
 .form_input_error:focus{outline: 0; outline-offset:0;}
+.form_style .m-radio-inline{margin-bottom: 10px; line-height: 2.6;}
+.textarea_style{height: 80px; overflow: auto; padding: 10px 10px;}
+.item_input_file .btn_input{font-size: 11px; font-size: 1.1rem; border-radius: 0; padding: 4px 10px;}
+.item_input_file .input_file{display: none;}
+.item_input_file .help-text{padding-left: 10px;}
 
 /* input-size Width*/
 .input_width_xlg {width: 80% !important; min-width: 420px !important;}
@@ -249,6 +254,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_error .content_error .text_content p{font-size: 15px; font-size: 1.5rem; font-weight: 600; line-height: 1.6; padding-bottom: 10px; color: #333;}
 .webview_cashmate.dark .content_error .text_content p{color: #fff;}
 
+
+
 /* point page */
 .section_point .guide_noti_box{margin-bottom: 0;}
 .content_reward_ad .category_menu{display: inline-block; width: 100%; position: relative; background: #f7f7f7; vertical-align: top; padding: 10px 10px;}
@@ -287,28 +294,25 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 }
 
 /* inquiry Page */
-.content_inquiry{position: relative; max-width: 640px; margin: 0 auto;}
-.content_inquiry .content_item{position: relative; margin: 40px 0;}
+.content_inquiry{position: relative;}
+.content_inquiry .inner_content{position: relative; max-width: 640px; margin: 0 auto;}
+.content_inquiry .content_item{position: relative;}
+.content_inquiry .content_item.item_box{position: relative; margin: 40px 0;}
 .content_inquiry .content_item:last-child{margin-bottom: 0;}
 .content_inquiry .content_item .list_title{padding-bottom: 10px;}
 .content_inquiry .content_item .list_title h3{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
-.content_inquiry .content_item  .content_list{}
-.content_inquiry .content_item  .content_list .list_item {background: #fff; border: 1px solid #ddd; margin-bottom: 10px;}
-.content_inquiry .content_item  .content_list .list_item:hover{border: 1px solid #9fa0a0;}
-.content_inquiry .content_item  .content_list .list_item:last-child{margin-bottom: 0;}
-.content_inquiry .content_item  .content_list .list_item a{display: block; position: relative; padding: 10px 20px; }
-.content_inquiry .content_item  .content_list .list_item .icon_arrow_right{float: right; margin: 3px 5px;}
-.content_inquiry .content_item  .content_list .info_box .list_item{padding: 20px 20px;}
-.content_inquiry .content_item  .content_list .info_box .list_item:hover{border: 1px solid #ddd;}
-.content_inquiry .content_item  .content_list .info_box .info_text{line-height: 1.5; padding-bottom: 30px;}
-.content_inquiry .content_item  .content_list .info_box .info_text:last-child{padding-bottom: 0;}
+.content_inquiry .content_item .content_list .list_item {background: #fff; border: 1px solid #ddd; margin-bottom: 10px;}
+.content_inquiry .content_item .content_list .list_item:hover{border: 1px solid #9fa0a0;}
+.content_inquiry .content_item .content_list .list_item:last-child{margin-bottom: 0;}
+.content_inquiry .content_item .content_list .list_item a{display: block; position: relative; padding: 10px 20px; }
+.content_inquiry .content_item .content_list .list_item .icon_arrow_right{float: right; margin: 3px 5px;}
+.content_inquiry .content_item .content_list .info_box .list_item{padding: 20px 20px;}
+.content_inquiry .content_item .content_list .info_box .list_item:hover{border: 1px solid #ddd;}
+.content_inquiry .content_item .content_list .info_box .info_text{line-height: 1.5; padding-bottom: 30px;}
+.content_inquiry .content_item .content_list .info_box .info_text:last-child{padding-bottom: 0;}
+.content_inquiry .content_item .textarea_style{height: 150px;}
 
-.webview_cashmate.dark .content_inquiry .content_item .list_title h3{color: #fff;}
-.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item a{color: #fff;}
-.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item {background: #272936; border: 1px solid #353745; margin-bottom: 10px;}
-.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item:hover{background: #20222B; border: 1px solid #9E9EA5;}
-.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box .list_item:hover{background: #272936; border: 1px solid #353745;}
-.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box p{color: #fff; line-height: 2;}
+
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
@@ -332,7 +336,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #20222B inset ; -webkit-text-fill-color: #fff; }
 .webview_cashmate.dark .m-checkbox span, .webview_cashmate.dark .m-radio span, .webview_cashmate.dark .m-radio>input:checked~span{background: #20222B;}
 .webview_cashmate.dark .btn_action{border-top: 1px solid #414450;}
-.webview_cashmate.dark .btn_default{background: #fff; border: 1px solid #333; color: #333;}
 .webview_cashmate.dark .btn_default{background: #272936; border: 1px solid #464756; color: #fff;}
 .webview_cashmate.dark .btn_default:hover{background: #20222B; border: 1px solid #9E9EA5; color: #fff;}
 .webview_cashmate.dark .btn_outline_point{background: #272936; border: 1px solid #e21d19; color: #e21d19;}
@@ -347,6 +350,12 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .content_reward_ad .category_menu .list_item a.active{background: #272936; border: 1px solid #fff;}
 .webview_cashmate.dark .content_reward_ad .content_list .list_item{border-bottom: 1px solid #333542;}
 .webview_cashmate.dark .content_reward_ad .content_list .list_item .info_product .info_title{color: #fff;}
+.webview_cashmate.dark .content_inquiry .content_item .list_title h3{color: #fff;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item a{color: #fff;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item {background: #272936; border: 1px solid #353745; margin-bottom: 10px;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item:hover{background: #20222B; border: 1px solid #9E9EA5;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box .list_item:hover{background: #272936; border: 1px solid #353745;}
+.webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box p{color: #fff; line-height: 2;}
 
 
 /* 

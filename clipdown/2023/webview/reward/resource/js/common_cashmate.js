@@ -55,3 +55,10 @@ $(document).ready(function() {
 		}
 	});
 });
+
+
+// input file name
+jQuery('#inputFile').change(function(e) {
+	var filename = e.target.files[0].name
+	jQuery('.help-text').html(filename);
+  });
