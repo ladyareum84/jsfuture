@@ -113,9 +113,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .m-radio>input:checked~span:after{background: #e21d19;}
 .img_round{position: relative; overflow: hidden; border-radius: 50% !important;}
 
-
-
-
 /* Point Badge Style */
 .badge_point{display: inline-block; position: relative; min-width: 78px; height: 32px; background: #e21d19; color: #fff; text-align: center; line-height: 1.5; border-radius: 30px; padding: 4px 4px 4px 29px; -webkit-touch-callout: none; user-select: none;}
 .badge_point .icon_point{position: absolute; top:6px; left: 4px; width: 20px; height: 20px; background: #fff; color: #e21d19;  font-size: 14px; font-size: 1.4rem; font-weight: 700; line-height: 1; border-radius:50%; padding: 3px 4px;}
@@ -132,7 +129,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .btn_md{font-size: 13px; font-size: 1.3rem; line-height: 1.7; padding: 4px 20px;}
 .btn_lg{ font-size: 13px; font-size: 1.3rem; line-height: 2;  padding: 5px 20px;}
 .btn_action{text-align: center; margin: 0; border-top: 1px solid #ddd; padding: 20px 0; margin-top: 20px;}
-.btn_action .btn{min-width: 110px; font-weight: 600; border-radius: 50px;}
+.btn_area{margin: 20px 0 10px;}
+.btn_action .btn, .btn_area .btn{min-width: 110px; font-weight: 600; border-radius: 50px;}
 
 
 /* Tabs Multi */
@@ -424,19 +422,24 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 /* Popup Style */
 .layer_popup{display: block; position: fixed; _position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1050; }
 .layer_popup .bg_dimmed{position: absolute; top:0; left: 0; width: 100%; height: 100%; background:#000; opacity: .65; filter: alpha(opacity=65);}
-.layer_popup .popup_wrap{position: absolute; top:50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; max-width: 480px; z-index: 5001; box-shadow:0px 0px 15px 0px rgb(0 0 0 / 40%);}
-.layer_popup .popup_header{background: #20222b; text-align: left; padding: 10px 40px 10px 20px;}
+.layer_popup .popup_wrap{position: absolute; top:50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; max-width: 400px; z-index: 5001;}
+.layer_popup .popup_inner{position: relative; margin: 0 10px;}
+.layer_popup .popup_header{background: #20222b; text-align: left; padding: 12px 40px 12px 20px; border-radius: 10px 10px 0 0;}
 .layer_popup .popup_header .header_title h3{font-size: 15px; font-size: 1.5rem; font-weight: 600; color:#fff;}
-.layer_popup .popup_contents{position: relative; background: #fff; padding: 20px 20px;}
-.layer_popup .popup_content{position: relative; width: 100%;}
-.layer_popup .btn_box{position: absolute; top: 0; right: 10px; padding:10px 0;}
-.layer_popup .btn_box .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 24px; height: 24px; padding:0;}
+.layer_popup .popup_contents{position: relative; background: #fff; border: 1px solid #20222b; border-radius: 0 0 10px 10px; padding: 20px 20px;}
+.layer_popup .popup_content{position: relative; width: 100%; text-align: center;}
+.layer_popup .btn_box{position: absolute; top: 1px; right: 0; padding:10px 10px;}
+.layer_popup .btn_box .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 18px; height: 18px; padding:0;}
 .layer_popup .btn_box .btn_popup_close:focus{outline:0;}
-.layer_popup .btn_box .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 24px; height: 24px; opacity: 1;}
+.layer_popup .btn_box .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 18px; height: 18px; opacity: 1;}
 .layer_popup .btn_box .btn_popup_close .icon-close:before, .layer_popup .btn_box .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#fff;}
 .layer_popup .btn_box .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
 .layer_popup .btn_box .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
-
+.layer_popup .content_box{padding-bottom: 10px;}
+.layer_popup .content_box:last-child{padding-bottom: 0;}
+.layer_popup .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5; padding-bottom: 10px;}
+.layer_popup .content_box .content_heading .guide_text{display: block; font-size: 13px; font-size: 1.3rem; padding-top: 10px; color: #333;}
+.layer_popup .content_box .content_item{margin: 20px 0 0;}
 
 
 @media screen and (max-width: 640px){
