@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>[APP] WebView 캐시메이트 - 이벤트 리스트 페이지 </title>
+    <title>[APP] WebView 문의하기 리스트 페이지 </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
@@ -22,7 +22,7 @@
 <body>
     <div class="wrap webview_cashmate">
         <div class="container">
-            <section class="section section_event section_mb">
+            <section class="section section_inquiry section_mb">
                 <article class="contents contents_top">
                     <div class="guide_noti_box">
                         <span class="icon_noti">
@@ -35,53 +35,29 @@
                                 </g>
                             </svg>                                                  
                         </span>
-                        <span class="noti_text">포인트가 와르르! <br />이벤트에 참여해 보세요</span>
+                        <span class="noti_text noti_title">서비스 문의사항을 선택해 주세요.</span>
                     </div>
                 </article>
                 <article class="contents">
-                    <div class="content content_event">
-                        <div class="content_list">
-                            <div class="row-contents">
-                                <div class="col-2">
-                                    <div class="item_event">
-                                        <span class="event_date">이벤트 기간 : <span class="font_num">무제한</span></span>
-                                        <div class="card_event">
-                                            <a href="#" class="link_card">
-                                                <div class="event_title">
-                                                    <h3>
-                                                        클립다운 앱 설치하면<br />
-                                                        <span class="font_num point-color weight-600_bold">2,000 포인트 바로 지급!</span>
-                                                    </h3>
-                                                    <span class="event_desc">* 1회만 적립 가능합니다.</span>
-                                                </div>
-                                                <div class="event_img">
-                                                    <img src="../resource/images/img_event_install-app.png" alt="">
-                                                </div> 
-                                            </a>                                               
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="item_event">
-                                        <span class="event_date">이벤트 기간 : <span class="font_num">무제한</span></span>
-                                        <div class="card_event">
-                                            <a href="#" class="link_card">
-                                                <div class="event_title">
-                                                    <h3>
-                                                        클립다운을 널리 알려주세요!<br />
-                                                        <span class="font_num point-color">친구 초대 시 각각 2,000P</span>
-                                                    </h3>
-                                                </div>
-                                                <div class="event_img">
-                                                    <img src="../resource/images/img_event_invite.png" alt="">
-                                                </div> 
-                                            </a>                                               
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+                    <div class="content content_inquiry">
+                        <div class="content_item">
+                            <ul class="list_box_menu">
+                                <li class="list_item" style="padding-top: 0;">
+                                    <a href="./inquiry_detail_form.html">
+                                        <span class="list_title">포인트 지급 누락 문의</span>
+                                        <span class="icon_arrow_right"></span> 
+                                    </a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="./inquiry_detail_form.html">
+                                        <span class="list_title">기타 문의</span>
+                                        <span class="icon_arrow_right"></span> 
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    
                 </article>
             </section>
         </div>
