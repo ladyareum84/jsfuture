@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* 
     * 2023-04-28~ 
@@ -159,8 +159,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .board_list tbody tr:last-child td {border-bottom: 0;}
 .board_list tbody td.date{width: 12%; text-align: left; font-weight: 400;}
 .board_list tbody td.product{max-width: 220px; text-align: right;}
-.board_list tbody td.product .point{font-weight: 700;}
-.board_list tbody td.product .point{font-weight: 700;}
+.board_list tbody td.product .point{font-weight: 700; padding: 5px 0;}
 .board_list tbody td.product .point_save{color: #e21d19;}
 
 /* option filter style */
@@ -265,8 +264,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .category_menu .list_item a:hover{border: 1px solid #272936;}
 .content_reward_ad .product_list .info_product .info_sub_title{display: inline-block; font-size: 11px; font-size: 1.1rem;}
 .content_reward_ad .product_list .info_product .info_title{font-size: 13px; font-size: 1.3rem !important; padding-bottom: 5px;}
-.content_reward_ad .product_list .product_price{position: relative;}
-.content_reward_ad .product_list .product_price .badge_price{display: inline-block; position: relative; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 4px; -webkit-touch-callout: none; user-select: none;}
+.content_reward_ad .product_list .product_price{position: relative; padding: 5px 0;}
+.content_reward_ad .product_list .product_price .badge_price{display: inline-block; position: relative; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 5px; -webkit-touch-callout: none; user-select: none;}
 .content_reward_ad .product_list .product_price .price{position: relative; font-size: 15px; font-size: 1.5rem; vertical-align: middle;}
 .content_reward_ad .content_list{width: 100%; height: 379px; overflow-y: auto; margin-top:20px}
 .content_reward_ad .content_list .list_item{display: flex; align-items: center; border-bottom: 1px solid #f7f7f7; padding: 10px 10px;} 
@@ -362,53 +361,65 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     * APP Webview 캐시메이트 메인페이지
     * 클립다운라이트 앱에서만 노출
 */
+
+
 .section_mypage, .section_errorpage{min-height: 100%;}
-.webview_cashmate .section_mb .contents_top{display: none;}
-.webview_cashmate .section.section_mb .contents{padding: 20px 20px;}
 .webview_cashmate .section_mb{background: #F7F7F7; padding: 0;}
-.webview_cashmate .section_mb .contents{padding: 30px 20px; margin-bottom: 10px; background: #fff;}
+.webview_cashmate .section_mb .contents{background: #fff; padding: 0 20px; margin-bottom: 10px;}
 .webview_cashmate .section_mb .contents:last-child{margin-bottom: 0;}
-.webview_cashmate .section_mb .header_title{display: none;}
-.webview_cashmate .section_mb .contents_top{display: block;}
-.webview_cashmate .section_mb .tabs.tabs_nav{display: none;}
-.webview_cashmate .section_mb .tabs_multi{padding: 20px 20px; margin: 0;}
+.webview_cashmate .section_mb .contents_top{display: block; padding: 0; margin-bottom: 0;}
+.webview_cashmate .section_mb .list_content{margin: 0;}
+
+
+/* 정리예정 */
+
 .webview_cashmate .section_mb .form_list{height: auto; overflow-y: hidden;}
 
-.webview_cashmate .section_mb.section .list_content{margin: 0;}
-.webview_cashmate .section_mb.section_mypage .contents{padding: 0;}
-.webview_cashmate .section_mb.section_mypage .guide_noti_box{text-align: left; padding: 20px 20px;}
-.webview_cashmate .section_mb.section_mypage .content_item{padding: 20px 20px;}
-.webview_cashmate .section_mb.section_mypage .content_item .form_group{padding: 10px 0 0;}
-.webview_cashmate .section_mb.section_mypage .content_item .input_group .btn_input{width: 100%; padding: 4px 10px; margin-top: 5px;}
-.webview_cashmate .section_mb.section_mypage .input_width_md{width: 100% !important;}
-.webview_cashmate .section_mb.section_mypage .btn_action{border: 0; padding: 20px 20px;}
-.webview_cashmate .section_mb.section_mypage .item_logout{text-align: center; padding: 20px 0;}
-.webview_cashmate .section_mb.section_mypage .item_logout p{font-size: 15px; font-size: 1.5rem; margin-bottom: 20px;}
-
-
-
-.webview_cashmate .section_mb.section_point .contents{padding: 0;}
-.webview_cashmate .section_mb.section_point .guide_noti_box{padding: 20px 20px 10px;}
-.webview_cashmate .section_mb.section_point .content_reward_ad .category_menu{padding: 10px 20px;}
-.webview_cashmate .section_mb.section_point .content_reward_ad .content_list{height: auto; overflow-y: hidden; padding: 0 10px;}
-.webview_cashmate .section_mb.section_event .contents{padding: 0;}
-.webview_cashmate .section_mb.section_event .guide_noti_box{padding: 20px 20px;}
-.webview_cashmate .section_mb.section_event .content_event{padding: 20px 20px;}
-
-.webview_cashmate .section_mb .content_mypoint{position: relative; text-align: center; padding: 20px 20px;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint{display: inline-block; padding-right: 20px;}
-.webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint{padding: 0;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
-.webview_cashmate .section_mb .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
-.webview_cashmate .section_mb .content_mypoint .item_state_user{position: relative; float: right;}
-.webview_cashmate .section_mb .content_mypoint .item_state_user .link-text{text-decoration: underline;}
+.webview_cashmate .section_mb .contents_top .guide_noti_box .icon_noti{display: none;}
+.webview_cashmate .section_mb .contents_top .content_mypoint{position: relative; text-align: center; padding: 20px 0;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint{display: inline-block; padding-right: 20px;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_state_user{position: relative; float: right;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_state_user .link-text{text-decoration: underline;}
 .webview_cashmate .section_mb .contents.contents_banner{padding: 0;}
-
-.webview_cashmate .section_mb .content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; margin: 0 -5px;}
+.webview_cashmate .section_mb .content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; padding: 40px 0; margin: 0 -5px;}
 .webview_cashmate .section_mb .content_menu_point .box_point{flex: 1; border: 1px dashed #ddd; text-align: center; margin: 0 5px; padding: 7px 15px;}
 .webview_cashmate .section_mb .content_menu_point .box_point .icon{position: relative; max-width: 52px; min-width: 48px; margin: 0 auto;}
 .webview_cashmate .section_mb .content_menu_point .box_point .text_menu{font-size: 13px; font-size: 1.3rem; font-weight: 600; padding: 5px 0;}
 
+/* Section Style */
+
+.webview_cashmate .section_mb.section_mypoint .contents_top.main{padding: 20px 20px; margin-bottom: 10px;}
+.webview_cashmate .section_mb.section_mypoint .contents_top.main .content_mypoint{text-align: left;}
+.webview_cashmate .section_mb.section_mypoint .tabs_multi{margin: 0;}
+.webview_cashmate .section_mb.section_mypage .contents_top .guide_noti_box{text-align: left; padding: 20px 20px; margin-bottom: 0;}
+.webview_cashmate .section_mb.section_mypage .contents_top .guide_noti_box .noti_title{font-size: 15px; font-size: 1.5rem;}
+.webview_cashmate .section_mb.section_mypage .contents_top .content_mypoint .item_mypoint{padding: 0;}
+.webview_cashmate .section_mb.section_mypage .contents{padding: 0;}
+.webview_cashmate .section_mb.section_mypage .content_item{padding: 20px 20px;}
+.webview_cashmate .section_mb.section_mypage .content_item .form_group{padding: 0 0 10px;}
+.webview_cashmate .section_mb.section_mypage .content_item .input_group .btn_input{width: 100%; padding: 4px 10px; margin-top: 10px;}
+.webview_cashmate .section_mb.section_mypage .input_width_md{width: 100% !important;}
+.webview_cashmate .section_mb.section_mypage .btn_action{border: 0; padding: 20px 20px;}
+.webview_cashmate .section_mb.section_mypage .item_logout{text-align: center; padding: 40px 0;}
+.webview_cashmate .section_mb.section_mypage .item_logout p{font-size: 15px; font-size: 1.5rem; margin-bottom: 20px;}
+.webview_cashmate .section_mb.section_mypage .list_box_menu{}
+.webview_cashmate .section_mb.section_mypage .list_box_menu .list_item{position: relative; border-bottom: 1px solid #f7f7f7; padding: 20px 0;}
+.webview_cashmate .section_mb.section_mypage .list_box_menu .list_item a{display: block; position: relative; font-size: 15px; font-size: 1.5rem;}
+
+.webview_cashmate .section_mb.section_point .contents{padding: 0;}
+.webview_cashmate .section_mb.section_point .guide_noti_box{padding: 20px 20px 10px;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .category_menu{padding: 10px 20px;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .content_list{height: auto; overflow-y: hidden;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .product_list{padding: 0 20px;}
+.webview_cashmate .section_mb.section_point .content_reward_ad .product_list .list_item{padding: 10px 0;}
+
+.webview_cashmate .section_mb.section_event .guide_noti_box{padding: 20px 20px; margin-bottom: 0;}
+.webview_cashmate .section_mb.section_event .contents{}
+.webview_cashmate .section_mb.section_event .content_event .content_list{padding-top: 20px; margin: 0;}
+
+.webview_cashmate .section_mb.section_event .content_event{}
 
 
 @media screen and (max-width: 640px){
