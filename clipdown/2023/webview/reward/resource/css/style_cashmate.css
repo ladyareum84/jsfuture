@@ -381,7 +381,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint .item_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
 .webview_cashmate .section_mb .contents_top .content_mypoint .item_mypoint .item_point{font-size: 28px; font-size: 2.8rem; font-weight: 600; padding: 5px 0 0;}
 .webview_cashmate .section_mb .contents_top .content_mypoint .item_state_user{position: relative; float: right;}
-.webview_cashmate .section_mb .contents_top .content_mypoint .item_state_user .link-text{text-decoration: underline;}
+.webview_cashmate .section_mb .contents_top .content_mypoint .item_state_user .link-text{text-decoration: underline; font-size: 15px; font-size: 1.5rem;}
 .webview_cashmate .section_mb .contents.contents_banner{padding: 0;}
 .webview_cashmate .section_mb .content_menu_point{display: flex; flex-flow: row nowrap; justify-content: space-around; position: relative; padding: 40px 0; margin: 0 -5px;}
 .webview_cashmate .section_mb .content_menu_point .box_point{flex: 1; border: 1px dashed #ddd; text-align: center; margin: 0 5px; padding: 7px 15px;}
