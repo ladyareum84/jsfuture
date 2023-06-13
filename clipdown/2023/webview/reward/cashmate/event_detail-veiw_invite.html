@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
     <title>[PC] WebView 캐시메이트 - 이벤트 상세페이지 </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
 
@@ -20,17 +19,52 @@
     <![endif]-->
 </head>
 <body>
-    <div class="wrap webview_cashmate dark">
+    <div class="wrap webview_cashmate">
         <div class="container">
             <section class="section section_event">
                 <div class="header_title">
                     <h1>앱 설치 이벤트 안내</h1>
                 </div>
-                <article class="contents">
-                    <div class="list_content">
-                        <div class="content content_event">
-                            
-                            이벤트 영역 
+                <article class="contents contents_event">
+                    <div class="content_top">
+                        <img src="../resource/images/img_event_invite_section_top.svg" alt="">
+                        <div class="btn_area">
+                            <a href="#" class="btn btn_event_invite">참여하기</a>                            
+                        </div>
+                    </div>
+                </article>
+                <article class="contents contents_event">
+                    <div class="content content_middle">
+                        <div class="inner">
+                            <div class="content_title">
+                                <h1>친구초대 참여방법</h1>
+                            </div>
+                            <div class="content_box">
+                                <div class="item_title">
+                                    <h3>추천인 등록</h3>
+                                </div>
+                                <form action="">
+                                    <div class="content_item">
+                                        <div class="input_group event">
+                                            <input type="text" id="email" class="form_control font_num form_input" required="required" placeholder="추천코드 또는 휴대폰번호 입력">
+                                            <a href="#" class="btn btn_dark btn_input">등록하기</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="content_box">
+                                <div class="item_title">
+                                    <h3>친구추천</h3>
+                                </div>
+                                <div class="content_item">
+                                    <p class="content_text">서비스 신청 또는 이벤트 페이지에서 추천인을 입력받는 경우 포인트가 지급됩니다.</p> 
+                                    <div class="btn_group">
+                                        <a href="" class="btn btn_default btn_lg btn-round">추천코드 복사</a>
+                                        <a href="" class="btn btn_outline_point btn_lg btn-round">친구에게 공유하기</a>                                        
+                                    </div>   
+                                    <span class="help-text">※ 유튜브 로그인 시 사용하는 메일로 등록해야 포인트 혜택을 모두 받으실 수 있습니다.</span>
+                                </div>
+                            </div>
                                                  
                         </div>
                     </div> 

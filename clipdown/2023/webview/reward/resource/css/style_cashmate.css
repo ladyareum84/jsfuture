@@ -121,9 +121,12 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 /* Button Style */
 .btn_default{background: #fff; border: 1px solid #333; color: #333;}
 .btn_default:hover{background: #333; border: 1px solid #333; color: #fff;}
+.btn_dark{background: #333; border: 1px solid #333; color: #fff;}
+.btn_dark:hover{background: #20222B; border: 1px solid #20222B; color: #fff;}
 .btn_point{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
 .btn_point:hover{background: #d22619; border: 1px solid #d22619; color: #fff;}
 .btn_outline_point{background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+.btn_outline_point:hover{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
 .btn_full_gray{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
 .btn_block{display: block; width: 100%;}
 .btn_md{font-size: 13px; font-size: 1.3rem; line-height: 1.7; padding: 4px 20px;}
@@ -275,7 +278,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .content_list .list_item .item_right{margin-left: auto;}
 
 /* event Page */
-.section_point{}
 .content_event .content_list{margin: 20px 0 0;}
 .content_event .item_event{margin-bottom: 20px;}
 .content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
@@ -288,6 +290,32 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
 @media screen and (max-width: 600px){
     .content_list .row-contents .col-2{width: 100%;}
+}
+/* event detailView invite style */
+.section_event{padding: 0;}
+.section_event .content .inner{position: relative; width: 100%; max-width: 500px; margin: 0 auto;}
+.section_event .content_top{position: relative; background: #102521;}
+.section_event .content_top .btn_area{position: absolute; width: 100%; left: 0; bottom: 30%; text-align: center;}
+.section_event .content_top .btn_area .btn_event_invite{width: 36%; background: #102521; color: #FED849; font-size: 15px; font-size: 1.5rem; border: 2px solid #FED849; border-radius: 5px; padding: 10px 20px;}
+.section_event .content_top .btn_area .btn_event_invite:hover{background: #FED849; color: #102521;}
+.section_event .content_middle{position: relative; background: #fff; text-align: center; padding: 0 20px;}
+.section_event .content_middle .content_title{position: relative; padding: 60px 0 40px; text-align: center;}
+.section_event .content_middle .content_title h1{font-size: 28px; font-size: 2.8rem; font-weight: 600;}
+.section_event .content_middle .content_box{position: relative; width: 100%; margin-bottom: 40px;}
+.section_event .content_box .item_title{text-align: left; border-bottom: 2px dotted #ddd; padding: 20px 0 10px;}
+.section_event .content_box .item_title h3{font-size: 18px; font-size: 1.8rem; font-weight: 600; letter-spacing: -1px;}
+.section_event .content_box .content_item{padding: 20px 0;}
+.section_event .content_box .content_item .content_text{padding-bottom: 10px;}
+.section_event .input_group.event, .section_event .input_group{display: table; position: relative; width: 100%; border-collapse: separate;}
+.section_event .input_group.event .form_input{width: 50%; min-width: 100px; border: 1px solid #666;}
+.section_event .input_group.event .btn_input{width: 20%; height: 34px; font-size: 12px; font-size: 1.2rem; margin-left: 5px; }
+.section_event .btn_group{padding: 20px 0;}
+.section_event .btn_group .btn{width: 40%; margin: 0 5px;}
+.section_event .help-text{display: block; padding: 5px; font-size: 11px; font-size: 1.1rem;}
+@media screen and (max-width: 480px){
+    .section_event .content_top .btn_area{bottom: 28%;}
+    .section_event .content_top .btn_area .btn_event_invite{width: 36%; font-size: 13px; font-size: 1.3rem; padding: 3px 10px;}
+    .section_event .btn_group .btn{width: auto; margin: 0;}
 }
 
 /* inquiry Page */
@@ -308,8 +336,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_inquiry .content_item .content_list .info_box .info_text{line-height: 1.5; padding-bottom: 30px;}
 .content_inquiry .content_item .content_list .info_box .info_text:last-child{padding-bottom: 0;}
 .content_inquiry .content_item .textarea_style{height: 150px;}
-
-
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
