@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>[PC] WebView 캐시메이트 - 이벤트 상세페이지 </title>
+    <title>[PC] WebView 이벤트 상세페이지 - 친구초대 안내 </title>
     <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
 
@@ -29,7 +29,7 @@
                     <div class="content_top">
                         <img src="../resource/images/img_event_invite_section_top.svg" alt="">
                         <div class="btn_area">
-                            <a href="#eventInfo" class="btn btn_event_invite">참여하기</a>                            
+                            <a href="#" class="btn btn_event_invite">참여하기</a>                            
                         </div>
                     </div>
                 </article>
@@ -77,87 +77,17 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="../resource/js/common_cashmate.js"></script>
     <script>
-        // PLUGIN
-        const InfiniteScroll = function (element) {
-        element = typeof element == 'object' ? element : document.querySelector( element );
-        const elementTarget = document.querySelector( element.dataset.list ) || window;
-        const eventName = 'infiniteScroll';
-        const event = new Event( eventName );
-        let isLoading = false;
-        const treshold = element.dataset.treshold || '50%';
-        
-        this.thrPc = ( parseFloat( treshold ) / 100 );
+        $(document).ready(function($) {
 
-        const verify = () => {
-            if ( isLoading ) return;
-            
-            const treshold = this.thrPc * elementTarget.offsetHeight;
-            const { scrollHeight, scrollTop, offsetHeight } = elementTarget;
-            const infiniteHeight = element.offsetHeight;
-            const distanceFromInfinite = scrollHeight - scrollTop - offsetHeight - treshold - infiniteHeight;
-            
-            if ( distanceFromInfinite < 0 ) {
-            show();
-            element.dispatchEvent( event );
-            }
-        }
+            $(".btn_event_invite").click(function(event){         
 
-        (function init () {
-            if ( element ) {
-            if ( isImmediateCheck() ) {
-                show();
-                window.addEventListener( 'load', () => element.dispatchEvent( event ) );
-            }
-            elementTarget.addEventListener( 'scroll', verify, { passive: true } );
-            window.addEventListener( 'resize', verify );
-            }
-        })();
+                    event.preventDefault();
 
-        function show () {
-            isLoading = true;
-            element.classList.add('active');
-        }
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 663);
 
-        function hide () {
-            isLoading = false;
-            element.classList.remove('active');
-        }
+            });
 
-        function isImmediateCheck () {
-            var immediateCheck = element.dataset.immediateCheck;
-            return immediateCheck === 'true' || immediateCheck === '';
-        }
-
-        // Public methods
-        this.complete = function () {
-            hide();
-        };
-
-        this.stop = function () {
-            hide();
-            elementTarget.removeEventListener( 'scroll', verify );
-            elementTarget.removeEventListener( 'resize', verify );
-            element.style.display = 'none';
-            element.innerHTML = '';
-        };
-
-        this.on = function ( event, callback ) {
-            if ( event == eventName) {
-            element.addEventListener( event, callback );
-            } else {
-            console.error( 'This event does not exist' );
-            }
-        };
-        }
-
-        // EXAMPLE
-        // -------
-        var list = document.querySelector('.category_list li'),
-            nextItem = 1,
-            total = 100;
-
-        var infiniteScroll = new InfiniteScroll('.infinite_scroll');
-        infiniteScroll.on( 'infiniteScroll', loadData );
+        });
     </script>
     
 </body>
