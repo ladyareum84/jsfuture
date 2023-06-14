@@ -221,14 +221,17 @@ a.disabled{pointer-events: none;}
 .m-checkbox-inline, .m-radio-inline{display: inline-block;}
 .m-checkbox-inline .m-checkbox, .m-radio-inline .m-radio, .m-checkbox input:checked~span:after, .m-radio>input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
 .m-checkbox-inline .m-checkbox:last-child, .m-checkbox-inline .m-radio:last-child{margin-right: 0;}
-.m-checkbox, .m-radio{display: inline-block; position: relative; margin-bottom: 14px; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer;}
+.m-checkbox, .m-radio{display: inline-block; position: relative; margin-bottom: 13px; padding-left: 25px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer;}
 .m-checkbox input, .m-radio input{position: absolute; z-index: -1; top:2px; left: 0; width:16px; height:16px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
 .m-checkbox span, .m-radio span{position: absolute; top: 2px; left: 0; width: 16px; height: 16px; border: 1px solid #c9caca; background: #fff;}
 .m-checkbox-disabled, .m-checkbox input[disabled]~span, .m-checkbox input:checked[disabled]~span, .m-radio-disabled, .m-radio input[disabled]~span, .m-radio input:checked[disabled]~span{opacity: .5; cursor: default; filter: alpha(opacity = 50);}
-.m-checkbox span:after, .m-radio span:after{display: none; position: absolute; content: '';}
+.m-checkbox span:after, .m-radio span:after{display: block; position: absolute; content: '';}
 .m-checkbox span:after{top: 1px; left: 5px; width: 5px; height: 10px; border: solid #3b393a; border-width: 0 2px 2px 0; transform: rotate(45deg);}
 .m-radio span{border-radius: 50% !important; -o-border-radius: 50% !important; -ms-border-radius: 50% !important;}
-.m-radio span:after{top: 4px; left: 4px; width: 6px; height: 6px; border-radius: 100% !important; background: #6e6e6e;}
+.m-radio span:after{top: 4px; left: 4px; width: 6px; height: 6px; border-radius: 100% !important; background: #c9caca;}
+.m-radio input:checked~span{border: 1px solid #3b393a; background: #fff;}
+.m-radio input:checked~span:after{background: #3b393a !important;}
+
 .m-checkbox .form-control, .m-radio .form-control{position: relative; z-index: 1; opacity: 1; filter: alpha(opacity = 100);}
 .m-inputbox span{top: 6px;}
 .m-1depth-list .m-checkbox{margin-bottom:20px;}
