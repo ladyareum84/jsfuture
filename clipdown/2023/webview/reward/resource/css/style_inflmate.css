@@ -60,7 +60,7 @@ body{background: #202020;}
 .form_join .agree_all{border-bottom: 1px solid #eee;}
 .form_join .help-text{font-size: 11px; font-size: 1.1rem; color: #888;}
 .form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 3px 0; }
-.form_join .terms_link .link_text{padding-top: 0;}
+.form_join .terms_link .link_text{padding: 0;}
 .form_join .form_list{border-bottom: 1px solid #f7f7f7;}
 .form_join .form_list .form_group{margin: 0; padding: 5px 0 0;}
 .form_join .form_list .m-radio-inline{line-height: 2; margin-bottom: 10px;}
@@ -168,7 +168,7 @@ body{background: #202020;}
 .input_group{margin-bottom: 10px;}
 .input_group .form_control{height: 34px; padding: 5px 5px;}
 .input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
-.input_form .time{position: absolute; top: 13px; right: 45px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
+.input_form .time{position: absolute; top: 18px; right: 14px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
 .input_form .form_input_error{border: 1px solid #e21d19;}
 .input_form .form_input_error::placeholder{color: #e21d19;}
 .input_form .form_input_error:focus{outline: 0; outline-offset:0;}
