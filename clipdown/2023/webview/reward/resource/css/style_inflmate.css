@@ -208,7 +208,7 @@ body{background: #202020;}
 .wrap_popup .link_text{display: inline-block; color:#666; font-size: 11px; font-size: 1.1rem; text-decoration:none; padding-top: 10px;}
 .item_check_install{padding: 0 20px;}
 .item_check_install .content_text{font-weight: 500;}
-.info_box_app{background: #fff; border: 1px solid #e21d19; padding: 6px 10px; margin: 15px 0 20px 0;}
+.info_box_app{background: #fff; border: 1px solid #e21d19; padding: 6px 10px; margin: 30px 0 20px 0;}
 .info_box_app{display: flex; align-items: center;}
 .info_box_app .item_left{display: flex; flex: 1; align-items: center;}
 .info_box_app .item_right{margin-left: auto;}
