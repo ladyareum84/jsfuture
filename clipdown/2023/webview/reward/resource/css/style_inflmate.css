@@ -41,7 +41,7 @@ body{background: #202020;}
 .webview_box {height: 100%; text-align: center;}
 .webview_box .content_box{padding-bottom: 10px;}
 .webview_box .content_box:last-child{padding-bottom: 0;}
-.webview_box .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5;}
+.webview_box .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5; letter-spacing: -.07rem;}
 .webview_box .content_box .content_heading .guide_text{display: block; font-size: 13px; font-size: 1.3rem; padding-top: 10px; color: #666;}
 .webview_box .content_box .content_item{margin: 20px 0 0;}
 .webview_box_header{position: relative; margin-bottom: -1px;}
@@ -175,7 +175,8 @@ body{background: #202020;}
 .input_group{margin-bottom: 10px;}
 .input_group .form_control{height: 42px; padding: 5px 5px;}
 .input_group .btn_input{min-width: 80px; font-size: 21px; font-size: 1.2rem; font-weight: 600; border-radius: 0; padding: 12px 10px;}
-.input_group .btn_input.disabled{border: 1px solid #ddd; color: #bbb; cursor: default;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
+.input_group .btn_input.disabled{border: 1px solid #ddd; color: #bbb; pointer-events: none; cursor: default;}
 .input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
 .input_form .time{position: absolute; top: 18px; right: 14px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
 .input_form .form_input_error{border: 1px solid #e21d19;}

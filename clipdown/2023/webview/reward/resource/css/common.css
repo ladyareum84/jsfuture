@@ -203,7 +203,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 }
 .btn.focus, .btn:focus, .btn:hover{outline: 0; box-shadow: none;}
 a.btn:hover{text-decoration: none;}
-a.disabled{pointer-events: none;}
+a.disabled{pointer-events: none; cursor: default;}
 .link-text{
     min-width: 80px;	
     min-height: 28px; 
