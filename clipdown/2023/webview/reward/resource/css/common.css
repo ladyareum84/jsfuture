@@ -11,7 +11,7 @@
  * Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
 */
 
-/* rest */ 
+/* reset */ 
 *, ::after, ::before{box-sizing: border-box;}
 :root{font-size:62.5%; /* font-size:10px; */}
 html, body, div, span, applet, object, iframe,

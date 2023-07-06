@@ -170,6 +170,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .filter_date input[type=radio] + label{display: inline-block; position: relative; background: transparent; border: 1px solid #ddd; color: #666; font-size: 11px; font-size: 1.1rem; border-radius: 7px; padding: 4px 12px 5px; cursor: pointer;}
 .filter_date input[type=radio]:checked + label{background: #666; border: 1px solid #666; color: #fff; z-index: 1;}
 /* list empty style */
+.list_item.empty{border-bottom: 1px solid transparent !important;}  /* ul 리스트 스타일 일때 적용 */
 .content_empty{padding: 0 !important;}
 .content_empty .list_empty{display: table; width: 100%; height: 290px; text-align: center;}
 .content_empty .list_empty span{display: table-cell; line-height: 1.5; vertical-align: middle;}
