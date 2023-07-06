@@ -254,7 +254,10 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_error .content_error .text_content{padding: 20px 0;}
 .section_error .content_error .text_content p{font-size: 15px; font-size: 1.5rem; font-weight: 600; line-height: 1.6; padding-bottom: 10px; color: #333;}
 .webview_cashmate.dark .content_error .text_content p{color: #fff;}
-
+@media screen and (max-width: 320px){
+    .section_error .content_error{padding: 0 10px;}
+    .section_error .content_error .text_content p{font-size: 13px; font-size: 1.3rem;}
+}
 
 
 /* point page */
