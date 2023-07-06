@@ -170,7 +170,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .filter_date input[type=radio] + label{display: inline-block; position: relative; background: transparent; border: 1px solid #ddd; color: #666; font-size: 11px; font-size: 1.1rem; border-radius: 7px; padding: 4px 12px 5px; cursor: pointer;}
 .filter_date input[type=radio]:checked + label{background: #666; border: 1px solid #666; color: #fff; z-index: 1;}
 /* list empty style */
-.list_item.empty{border-bottom: 1px solid transparent !important;}  /* ul 리스트 스타일 일때 적용 */
+.list_item.empty{display: block !important; border-bottom: 1px solid transparent !important;}  /* ul 리스트 스타일 일때 적용 */
 .content_empty{padding: 0 !important;}
 .content_empty .list_empty{display: table; width: 100%; height: 290px; text-align: center;}
 .content_empty .list_empty span{display: table-cell; line-height: 1.5; vertical-align: middle;}
@@ -221,29 +221,48 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .content_infinite_scroll {/* We need to limit the height and show a scrollbar   height: 100vh;overflow-y: auto;*/}     
     .infinite_scroll {height: 24px; margin-top: 1rem;}
     .infinite_scroll .loader {opacity: 0;}
-    .infinite_scroll.active .loader {opacity: 1;}
-    /* Animation Style */
-    @keyframes loader_animate {
-        100% {
-        transform: rotate(360deg);
-        }
+    .infinite_scroll.active .loader {opacity: 1;}    
+}
+
+/* Page Loaing */
+.page_loading{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;}
+.page_loading .bg_load{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);  width: 48px; height: 48px; border-radius: 50%; background: #000; opacity: 0.2;}
+.page_loading .loader{display: block; margin: 0 auto; width: 36px; height: 36px; animation: loader_animate 2s linear infinite; }
+.page_loading .loader circle{stroke-width: 4px; stroke-dasharray: 1, 150; stroke-dashoffset: 0; stroke-linecap: round; animation: stroke_animate 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; stroke: #fff;}
+.loading_text{display: inline-block; background: rgb(0 0 0 / 75%); border-radius: 3px; text-align: left; width: 226px; padding: 5px 20px 8px 20px;}
+.loading_text .load_text{position: relative; color: #fff; font-size: 13px; font-weight: 600; vertical-align: middle; letter-spacing: -1px;}
+.loading_text .ani_loader{display: inline-block; overflow: hidden; vertical-align: bottom; animation:extend 1s steps(5, end) infinite;}
+.loading_text .ani_loader:before{content: '...'; color: #fff; font-size: 16px; font-weight: 600;}
+
+/* Animation Style */
+@keyframes loader_animate {
+    100% {
+    transform: rotate(360deg);
     }
-    @keyframes stroke_animate {
-        0% {
-            stroke-dasharray: 1, 150;
-            stroke-dashoffset: 0;
-        }
-        50% {
-            stroke-dasharray: 90, 150;
-            stroke-dashoffset: -35;
-        }
-        100% {
-            stroke-dasharray: 90, 150;
-            stroke-dashoffset: -124;
-        }
+}
+@keyframes stroke_animate {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
     }
 }
 
+@keyframes extend {
+    0% {
+      width: 0.25em;
+    }
+    100% {
+      width: 1em;
+    }
+  }
 
 
 /* error page */
