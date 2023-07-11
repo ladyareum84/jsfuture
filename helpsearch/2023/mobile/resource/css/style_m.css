@@ -178,7 +178,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .content_head{padding-bottom: 10px;}
 .content_head .head_title{font-size: 16px; font-size: 1.6rem; font-weight: 900; color: #333;}
 .content_head .head_title span{position: relative; vertical-align: middle;}
-.content_head .head_title .icon{display: inline-block; position: relative; padding-right: 5px;}
+.content_head .head_title .icon{display: inline-block; position: relative; padding-right: 5px; }
 .content_list{padding: 10px 0 20px;}
 .content_list:last-child{padding-bottom: 0;}
 .content_list .list_result .list_item{padding-bottom: 20px;}
