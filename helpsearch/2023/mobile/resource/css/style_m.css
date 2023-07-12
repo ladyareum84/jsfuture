@@ -139,7 +139,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .content_search_bar .form_searchbar{display: flex; flex-grow: 1; flex-shrink: 0; flex-basis: 200px;}
 .content_search_bar .input_group{display: flex; width: 100%;}
 .content_search_bar .form_control{display: inline-block; width: 100%; height: 48px; background: #fff; font-size:16px; font-size: 1.6rem; font-weight: 700; border: 2px solid #0085e2; padding: 5px 10px;}
-.content_search_bar .input_group .btn_search{flex-shrink: 0; background: #0085e2; border: 1px solid #0085e2; color: #fff; font-size:16px; font-size: 1.6rem; font-weight: 700; padding: 5px 20px; margin-left: -1px;}
+.content_search_bar .input_group .btn_search{flex-shrink: 0; background: #0085e2; border: 2px solid #0085e2; color: #fff; font-size:16px; font-size: 1.6rem; font-weight: 700; padding: 5px 20px; margin-left: -2px;}
 
 .content_shop{position: relative; padding: 30px 0 10px 0;}
 .content_shop .list_stie{position: relative; overflow: hidden; max-width: 728px; margin:0 -8px; }
