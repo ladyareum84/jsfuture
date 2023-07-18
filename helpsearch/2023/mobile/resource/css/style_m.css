@@ -98,7 +98,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .text_underline{text-decoration : underline; text-underline-position : under; text-underline-offset: 1px;}
 .link_text_b{display: inline-block; font-size: 16px; font-size: 1.6rem; font-weight: 900; color: #0000ff; text-overflow: ellipsis;}
 .link_text_s{display: inline-block; font-size: 13px; font-size: 1.3rem; line-height: 1.3; color:#848484;}
-.link_site{color: #008000; padding-left: 10px;}
+.link_site{color: #008000; margin-left: 10px;}
 .link_site span{position: relative;}
 .link_site span:after{content: ''; position: absolute; top: 50%; width: 0; height: 0; margin-top: -3px; border-top: 6px solid #008000; border-left: 4px solid transparent; border-right: 4px solid transparent; margin-left: 5px; z-index: 10;}
 .link_text{display: inline-block; font-size: 16px; font-size: 1.6rem; line-height: 1.6; font-weight: 700; color: #0085e2; text-overflow: ellipsis;}
