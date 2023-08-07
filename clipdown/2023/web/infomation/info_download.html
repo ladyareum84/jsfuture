@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클립다운 실패 안내</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        html, body{width: 100%; height: 100%;}
+        html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+        body{overflow-x: hidden; overflow-y: auto;-ms-overflow-style:none;}
+        img{max-width:400px; width:100%; height:auto;}
+        
+        .row{display: flex; flex-flow: row wrap;}
+        .column{flex:1}
+        .merge2{flex:2}
+        .merge3{flex:3}
+
+        .wrap{position:relative; /* min-height: 100% */;}
+        .container{position:relative; width: 100%; max-width: 960px; margin: 0 auto;}
+        .container:after{content:" "; display:block; clear:both;}
+        .section_info{position: relative; margin-bottom: 60px;}
+
+        .header_title{background: #333; padding: 20px 20px; margin-bottom: 40px;}
+        .header_title h1{font-size: 24px; color: #fff;}
+        .content_box{padding: 0 20px;}
+        .content_title{padding: 20px 0;}
+        .content_title h3{color: #333; font-size: 20px;}
+        .content_box .row{}
+        .content_box .row .column{padding-bottom: 30px;}
+        .content_box .info_des{font-size: 20px; line-height: 1.5; padding-left: 20px;}
+        .content_box .info_des .strong{font-weight: bold;}
+
+        @media screen and (max-width: 767px){
+            .section_info_m .header_title h1{font-size: 20px;}
+            .section_info_m .column{flex:auto;}
+            .section_info_m .column_img{text-align: center;}
+            .section_info_m .content_title h3{font-size: 18px;}
+            .section_info_m .content_box .info_des{font-size: 16px; padding: 0;}
+        }        
+               
+    </style>
+</head>
+<body>
+    <div class="wrap"> 
+            <!-- Web -->
+            <section class="section_info">
+                <div class="header_title">
+                    <div class="container">
+                        <h1>다운로드 실패 안내 PC</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <article class="content_box">
+                        <div class="content_title"><h3>1. 다운로드 진행 중 실패</h3></div>
+                        <div class="row">
+                            <div class="column">
+                                <img src="./images/PC_01_download.png" alt="">
+                            </div>
+                            <div class="column">
+                                <div class="info_des">
+                                    유튜브 구조 변경으로 인해 <br />
+                                    다운로드 진행 중 실패하는 상황이 발생하고 있습니다.                                
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container">
+                    <article class="content_box">
+                        <div class="content_title"><h3>2. 해상도 변경 후 다운로드 재시도</h3></div>
+                        <div class="row">
+                            <div class="column">
+                                <img src="./images/PC_02_resolution.png" alt="">
+                            </div>
+                            <div class="column">
+                                <div class="info_des">
+                                    다운로드 실패 시 비디오 버튼 우측 아래에 있는<br /> 해상도 버튼을 클릭하여 <br />
+                                    <span class="strong">720P 외 다른 해상도로 다운로드를 진행해주세요.</span>
+                                    <br />
+                                    <br />
+                                    * 오디오는 해상도 변경이 불가능하며<br />빠른 시일내에 조치하도록 하곘습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                </div>        
+            </section>
+
+
+            <!-- Mobile -->
+            <section class="section_info section_info_m">
+                <div class="header_title">
+                    <div class="container">
+                        <h1>다운로드 실패 안내 APP</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <article class="content_box">
+                        <div class="content_title"><h3>1. 다운로드 진행 중 실패</h3></div>
+                        <div class="row">
+                            <div class="column column_img">
+                                <img src="./images/APP_01_download.png" alt="" class="img_app">
+                            </div>
+                            <div class="column">
+                                <div class="info_des">
+                                    유튜브 구조 변경으로 인해 <br />
+                                    다운로드 진행 중 실패하는 상황이 발생하고 있습니다.                                
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container">
+                    <article class="content_box">
+                        <div class="content_title"><h3>2. 해상도 변경 후 다운로드 재시도</h3></div>
+                        <div class="row">
+                            <div class="column column_img">
+                                <img src="./images/APP_02_retry.png" alt="">
+                            </div>
+                            <div class="column">
+                                <div class="info_des">
+                                    다운로드 실패 시 비디오 버튼 우측 아래에 있는<br /> 해상도 버튼을 클릭하여 <br />
+                                    <span class="strong">720P 외 다른 해상도로 다운로드를 진행해주세요.</span>
+                                    <br />
+                                    <br />
+                                    * 오디오는 해상도 변경이 불가능하며<br />빠른 시일내에 조치하도록 하곘습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                </div>        
+            </section>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</html>
