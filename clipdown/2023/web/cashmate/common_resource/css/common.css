@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* rest */
 :root{font-size:62.5%; /* font-size:10px; */}
 html, body, div, span, applet, object, iframe,
@@ -15,7 +17,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video{margin:0; padding:0; border: 0; font-size:100%; font: inherit; vertical-align:baseline;}
 article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{display:block;} /* HTML5 display-role reset for older browsers */
 audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
-div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family:'SCDream', 'Noto Sans KR', Helvetica, sans-serif; font-size:1.4rem; font-size:14px; line-height: 1.2; color:#333;}
+div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family:'SCDream', 'Noto Sans KR', Helvetica, sans-serif; font-size:14px; font-size:1.4rem; line-height: 1.4; color:#333;}
 html, body{width: 100%; height: 100%;}
 html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 body{overflow-x: hidden; overflow-y: auto;-ms-overflow-style:none;}
@@ -40,7 +42,7 @@ input[type="password"],input[type="file"],input[type="text"]{height:28px; line-h
 input[type="file"]{width:100%;}
 input[type="radio"]{vertical-align:text-bottom;}
 input::placeholder{font-size:14px; color:#666;}
-img{max-width:100px; width:100%; height:auto;} /* 모바일에서 이미지 선명도 - 노출되는 이미지 사이즈 2배크기의 원본이미지 적용 <img src='img.png' alt='' style='width:원본사이즈 1/2 사이즈 기재' />   */
+img{max-width:100%; height:auto;} /* 모바일에서 이미지 선명도 - 노출되는 이미지 사이즈 2배크기의 원본이미지 적용 <img src='img.png' alt='' style='width:원본사이즈 1/2 사이즈 기재' />   */
 svg{max-width:100%;}
 .clear{zoom:1; clear:both;}
 .clear:after{content:" "; display:block; clear:both;}
@@ -220,12 +222,12 @@ a.disabled{pointer-events: none;}
 .navbar-default .navbar-toggle .icon-bar{background-color:#333;}
 .navbar-default .navbar-brand{height: 60px; padding: 15px 15px;}
 .navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a{font-size: 16px; font-weight: 500; line-height: 1.4; color:#333;}
-.navbar-default .navbar-nav > li > a{padding: 20px 20px;}
-/* í´ë¦½ë‹¤ìš´ í”ŒëŸ¬ìŠ¤ ì„œë¹„ìŠ¤ ê´€ë ¨ ìž‘ì—… 220428  */
-.navbar-default .navbar-nav .menu_clipdownplus{padding: 18px 20px;}
+.navbar-default .navbar-nav > li > a{padding: 20px 12px;}
+/* clipdownPlus menu 220428  */
+.navbar-default .navbar-nav .menu_clipdownplus{padding: 18px 12px;}
 .navbar-default .navbar-nav .menu_clipdownplus .point-text{font-size: 17px; padding-left: 3px;}
 .navbar-default .navbar-nav .divider:before{content: ''; display: inline-block; top:50%; width: 1px; height: 16px; background: #ccc; margin: 20px 3px;}
-/** í´ë¦½ë‹¤ìš´ PLUS+ NEW Badge */
+/**  PLUS+ NEW Badge */
 .notify_badge{display:inline-block; position:relative; min-width: 10px; top:-15px; right: 5px; background-color: #e21d19; font-family: 'Poppins', sans-serif; font-size:10px; font-weight: 700; color:#fff; text-align:center; white-space: nowrap; border-radius: 10px; padding: 0 6px;}
 .badge_bg{background-color: #e21d19!important; background-image: linear-gradient(90deg, #fd5581, #fd8b55);}
 .notify_badge .ripple{position:absolute; width:70px; height:26px; z-index:-1; left:50%; top:50%; opacity:0; border-radius: 30px; margin:-13px 0 0 -35px; -webkit-animation:ripple 1.8s infinite; animation:ripple 1.8s infinite}

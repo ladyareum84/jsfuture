@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* common Style */
+svg{max-width: 100%; width: 100%; height: 100%;}
+.link-text{font-size:14px; font-size:1.4rem; color: #888;}
+.btn-group .btn{float: left; margin-right: 10px;}
+.btn-sm{font-size: 12px !important; font-weight: 400;}
+.btn-md{font-size:16px !important;; padding: 8px 10px 4px 10px !important;;}
+.btn-lg{max-width: 280px !important;; font-size:18px !important;; padding: 12px 24px !important; min-height: 100% !important;}
+.btn_defualt{background: #fff; border: 1px solid #e5e5e5; color: #888;}
+.btn_defualt:hover, .btn_defualt:focus, .btn_defualt:active:focus{color: #333;}
+.btn_point{background: #fff; border: 1px solid #eb524e; color: #eb524e;}
+.btn_point:hover, .btn_point:focus, .btn_point:active:focus{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+.btn_outline_defualt{background: #fff; border: 1px solid #ddd; color: #888;}
+.btn_outline_defualt:hover, .btn_outline_defualt:focus .btn_outline_defualt:active, 
+.btn_outline_defualt:active:focus{background: #fff; border: 1px solid #333; color: #333;}
+.btn_outline_point{background: #fff; border: 1px solid #eb524e; color: #eb524e;}
+.btn_outline_point:hover, .btn_outline_point:active, .btn_outline_point:focus, 
+.btn_outline_point:active:focus{background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+
+/* 
+    * Custom Style 
+*/
+.wrap{position: relative; width: 100%; height: 100%;}
+.content_fl{display: flex; flex-direction: column; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center;}
+.content_left{width: 50%; align-items: flex-start; padding-right: 20px;}
+.content_right{width: 50%; user-select: none;}
+.head-title{text-align: center; padding: 40px 0;}
+.head-title h1{font-size:42px; font-size:4.2rem; font-weight: 500;}
+
+.wrap_cashmate{}
+.wrap_cashmate .section_main{position: relative; background: #363A4A; margin-top: 63px; }
+.wrap_cashmate .section_main .contents{display: flex; flex-direction: row; width: 100%; height: 500px;}
+.wrap_cashmate .section_main .content_left{width: 50%; align-items: flex-start; padding-right: 20px;}
+.wrap_cashmate .section_main .content_right{width: 50%; user-select: none;}
+.section_main .head-title{text-align: left; padding: 20px 0 10px;}
+.section_main .head-title h1{color: #fff;}
+.section_main .head-title .tit_lg{font-size: 52px; font-size: 5.2rem;}
+.section_main .item_logo{position: relative; width: 100%; max-width: 270px;}
+.section_main .intro_des{position: relative; color: #fff; line-height: 2.6; padding: 10px 0 20px 0;}
+.section_main .intro_des .item_tag{position: relative; background: #43495D; font-size: 15px; font-size: 1.5rem; border-radius: 30px; padding: 10px 20px; margin-right: 10px;}
+.section_main .btn_area{padding: 10px 0;}
+.section_main .btn_banner{display: inline-block; max-width: 220px;}
+.section_main .img_main_visual{position: relative; min-width: 620px; width: 110%; top: -20px;}
+
+@media screen and (max-width: 856px) {
+    .head-title h1{font-size: 32px; font-size: 3.2rem;}
+    .section_main .item_logo{max-width: 220px;}
+    .section_main .head-title .tit_lg{font-size: 40px; font-size: 4rem;}
+    .section_main .intro_des .item_tag{font-size: 13px; font-size: 1.3rem;}
+    .section_main .btn_banner{max-width: 180px;}
+}
+
+@media screen and (max-width: 767px) {
+    .content_fl{padding: 20px 0;}
+    .content_left, .content_right{width: 100%; align-items: center; }
+    .wrap_cashmate .section_main .contents{flex-direction: column-reverse; height: 100%;}
+    .wrap_cashmate .section_main .content_left{padding-right: 0; padding: 10px 0 40px;}
+    .wrap_cashmate .section_main .content_right{padding: 20px 0 10px 0;}
+    .section_main .img_main_visual{position: relative; width: 100%; min-width: 300px; top: 0;}
+    .head-title h1{font-size: 28px; font-size: 2.8rem;}
+    .section_main .item_logo{max-width: 220px;}
+    .section_main .head-title{text-align: center;}
+    .section_main .head-title .tit_lg{font-size: 32px; font-size: 3.2rem;}
+    .section_main .intro_des{padding: 0 0 10px 0;}
+    .section_main .intro_des .item_tag{margin: 0 5px; padding: 0;}
+    .section_main .btn_banner{max-width: 200px;}
+}
+@media screen and (max-width: 320px) {
+    .section_main .intro_des .item_tag{font-size: 11px; font-size: 1.1rem;}
+}

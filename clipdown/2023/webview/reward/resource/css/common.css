@@ -75,6 +75,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .text-block{display:block;}
 .ellipsis{overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
 .ellipsis-block{display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.5; letter-spacing: -.3px;}
+.ellipsis-multi{display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; line-height: 1.5; letter-spacing: -.3px;}
 .hide{display:none;}
 .hidden{position: absolute; left: 0; top: -9999px;}
 .clear{zoom:1; clear:both;}
