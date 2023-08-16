@@ -107,6 +107,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_intro .intro_des{text-align: center;}
     .section_guide{padding-bottom: 40px;}
     .acc-item .acc-contents{padding: 10px 20px 10px 20px;}
+    .acc-item .acc-head{padding: 20px 10px 10px;}
 }
 @media screen and (max-width: 360px) {
     
