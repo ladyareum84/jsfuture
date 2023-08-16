@@ -57,18 +57,17 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_guide .content_guide{display: grid; gap: 2rem; --auto-grid-min-size: 20em; grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));}
 .section_guide .content_guide .content_box{background: #fff; border-radius: 1.5rem; text-align: center; padding: 2rem;}
 .content_guide .content_box .item_img{}
-.content_guide .content_box .text_des{position: relative; padding: 10px 0;}
-.content_guide .content_box .text_des span{font-size: 16px; font-size: 1.6rem; font-weight: 500;}
+.content_guide .content_box .text_des{position: relative; padding: 10px 0; padding-bottom: 20px;}
+.content_guide .content_box .text_des span{font-size: 18px; font-size: 1.8rem; font-weight: 600;}
 .content_guide .content_box .btn_guide{display: inline-block; background: #01875f; color: #fff; border-radius: 5px; padding: 12px 12px 10px 12px;}
 .content_guide .content_box .btn_guide:hover{text-decoration: none;}
-.content_guide .content_box .btn_guide span{font-size: 13px; font-size: 1.3rem; font-weight: 500;}
 
-.section_faq{padding: 120px 0 60px;} 
+.section_faq{} 
 .accordion-list-box{width: 100%; padding-top: 20px; padding-bottom: 20px;}
 .accordion-list-box .acc-item{position: relative;}
 .acc-item .acc-head{display: block; position: relative; background: #fff; border-bottom: 1px solid #eee; padding: 40px 20px 10px;}
 .acc-item .acc-head .heade-title{color: #e21d19; font-size: 18px; font-size: 1.8rem; font-weight: 400; margin: 0;}
-.acc-item .acc-contents{display: block; position: relative; width: 100%; height: auto; background: #fff; border-bottom: 1px solid #eee; font-size: 16px; font-size: 1.6rem; font-weight:400; padding: 10px 60px 20px; margin-top: -1px; z-index: 99;}
+.acc-item .acc-contents{display: block; position: relative; width: 100%; height: auto; background: #fff; font-size: 16px; font-size: 1.6rem; font-weight:400; padding: 10px 60px 20px; margin-top: -1px; z-index: 99;}
 .acc-item .style_q{font-weight: 800; letter-spacing: -1px; padding-right: 10px; vertical-align: middle;}
 .acc-item .style_aw p{font-size: 16px; font-size: 1.6rem; line-height: 1.4; padding-bottom: 5px;}
 .acc-item .style_aw p:last-child{padding-bottom: 0;}
@@ -84,13 +83,14 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_intro .intro_des .content_title{font-size: 32px; font-size: 3.2rem;}
     .section_intro .intro_des .text_des{font-size: 20px; font-size: 2.0rem;}
     .section_intro .intro_des .text-lg{font-size: 20px; font-size: 2.0rem; letter-spacing: -1px;}
+    .section_faq{margin: 30px 0; padding: 30px 0;} 
 
 }
 
 @media screen and (max-width: 767px) {
     .content_fl{padding: 20px 0;}
     .content_left, .content_right{width: 100%; align-items: center; }
-    .section{margin: 30px 0; padding: 0;}
+    .section{margin: 30px 0; padding: 30px 0;}
     .wrap_cashmate .section_main .contents{flex-direction: column-reverse; height: 100%;}
     .wrap_cashmate .section_main .content_left{width: 100%; align-items: center; padding-right: 0; padding: 10px 0 40px;}
     .wrap_cashmate .section_main .content_right{width: 100%; align-items: center; padding: 20px 0 10px 0;}
@@ -105,8 +105,10 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_main .btn_banner{max-width: 200px;}
     .section_intro .content_item, .section_intro .content_item.item_02{flex-direction: column-reverse; padding: 30px 0;}
     .section_intro .intro_des{text-align: center;}
-    .section_guide{padding-bottom: 40px;}
-    .acc-item .acc-contents{padding: 10px 20px 10px 20px;}
+    .section_guide{padding-bottom: 60px;}
+    .content_guide .content_box .btn_guide span{font-size: 16px; font-size: 1.6rem;}
+    .section_faq .head-title{padding: 20px 0;}
+    .acc-item .acc-contents{padding: 10px 10px 20px 10px}
     .acc-item .acc-head{padding: 20px 10px 10px;}
 }
 @media screen and (max-width: 360px) {
