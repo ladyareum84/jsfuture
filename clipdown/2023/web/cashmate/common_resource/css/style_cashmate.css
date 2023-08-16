@@ -47,7 +47,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_intro{}
 .section_intro .content_item{display: flex; flex-direction: row; width: 100%; padding: 60px 0;}
 .section_intro .intro_des{}
-.section_intro .intro_des .content_title{font-size: 38px; font-size: 3.8rem; font-weight: 600; padding-bottom: 10px;}
+.section_intro .intro_des .content_title{font-size: 38px; font-size: 3.8rem; letter-spacing: -1px; font-weight: 600; padding-bottom: 10px;}
 .section_intro .intro_des .text_des{font-size: 28px; font-size: 2.8rem; line-height: 1.6; padding: 20px 0;}
 .section_intro .item_img{position: relative; max-width: 500px;}
 .section_intro .content_item.item_02{flex-direction: row-reverse;}
