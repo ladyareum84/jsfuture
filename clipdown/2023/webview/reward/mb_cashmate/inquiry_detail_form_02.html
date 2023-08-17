@@ -82,6 +82,11 @@
                                                             <input type="file" name="input_file01" id="input_file01" accept="image/*" />
                                                             <label  for="input_file01">
                                                                 <span class="icon_box"><i class="icon icon_plus"></i></span>
+                                                                <div class="btn_box_close">
+                                                                    <button id="fileClose" type="button" class="btn_close" name="close">
+                                                                        <span class="icon icon-close"></span>
+                                                                    </button>
+                                                                </div>
                                                               
                                                             </label>
                                                         </div>
@@ -89,12 +94,22 @@
                                                             <input type="file" name="input_file02" id="input_file02" accept="image/*" />
                                                             <label  for="input_file02">
                                                                 <span class="icon_box"><i class="icon icon_plus"></i></span>
+                                                                <div class="btn_box_close">
+                                                                    <button id="fileClose" type="button" class="btn_close" name="close">
+                                                                        <span class="icon icon-close"></span>
+                                                                    </button>
+                                                                </div>
                                                             </label>
                                                         </div>
                                                         <div class="item_upload">
                                                             <input type="file" name="input_file03" id="input_file03" accept="image/*" />
                                                             <label  for="input_file03">
                                                                 <span class="icon_box"><i class="icon icon_plus"></i></span>
+                                                                <div class="btn_box_close">
+                                                                    <button id="fileClose" type="button" class="btn_close" name="close">
+                                                                        <span class="icon icon-close"></span>
+                                                                    </button>
+                                                                </div>
                                                             </label>
                                                         </div>
                                                     </div> 
@@ -124,7 +139,7 @@
         // Refs
         var $file = $(this),
             $label = $file.next('label'),
-            $labelText = $label.find('span'),
+            $labelText = $label.find('.icon_box'),
             $labelDefault = $labelText.text();
         
         // When a new file is selected
@@ -140,6 +155,7 @@
             }else{
             $label.removeClass('prev');
                     $labelText.text(labelDefault);
+
             }
         });
         
