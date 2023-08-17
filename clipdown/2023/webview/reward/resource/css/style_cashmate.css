@@ -194,6 +194,18 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .item_input_file .input_file{display: none;}
 .item_input_file .help-text{padding-left: 10px;}
 
+.upload_box{display: flex; justify-content: flex-start; width: 100%;}
+.upload_box .item_upload{position: relative; width: 20%; min-width: 80px; height: 80px; text-align: center; margin-right: 5px;}
+.item_upload input[type=file]{position: absolute; top: 0; left: 0; width: 2px; height: 2px; overflow: hidden; opacity: 0;}
+.item_upload label{position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; overflow: hidden; background: #f7f7f7; padding: 10px 10px; z-index: 1;}
+.item_upload label.prev{background-size: cover; background-position: center;} 
+.item_upload label.prev .icon_box{display: none;}
+.icon_box{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+.icon_box .icon{display: block; position: relative;}
+.icon_box .icon_plus{ width: 2px; height: 15px; background: #ccc;}
+.icon_box .icon_plus:after{content: ''; position: absolute; left: 0; top: 0;  width: 2px; height: 15px; background: #ccc; transform: rotate(90deg); transform-origin: center center;}
+
+
 /* input-size Width*/
 .input_width_xlg {width: 80% !important; min-width: 420px !important;}
 .input_width_lg {width: 60% !important; min-width: 320px !important;}
