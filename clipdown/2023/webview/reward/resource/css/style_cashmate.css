@@ -20,7 +20,7 @@ select, button, pre, a {font-family:'Malgun Gothic', 'Poppins', Helvetica, sans-
 
 /* Custom Style */
 svg{max-width: 100%; width: 100%; height: 100%;}
-.font_en{font-family: 'Poppins' Helvetica, sans-serif;;}
+.font_en{font-family: 'Poppins', sans-serif;}
 .head-title{text-align: center; padding: 40px 0;}
 .head-title h1{font-size:42px; font-size:4.2rem; font-weight: 500;}
 .notify_badge{display:inline-block; position:relative; min-width: 10px; top:-15px; right: 5px; background-color: #e21d19; font-family: 'Poppins', sans-serif; font-size:10px; font-weight: 700; color:#fff; text-align:center; white-space: nowrap; border-radius: 10px; padding: 0 6px;}
@@ -359,6 +359,19 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_event .btn_group{padding: 20px 0;}
 .section_event .btn_group .btn{width: 40%; margin: 0 5px;}
 .section_event .help-text{display: block; padding: 5px; font-size: 11px; font-size: 1.1rem;}
+
+.section_event .clipboard_box{position: absolute; width: 100%; left: 0; bottom: 33%; text-align: center;}
+.section_event .content_clipboard{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.section_event .content_clipboard .label_text{color: #FED849; font-size: 18px; font-size: 1.8rem; font-weight: 600; margin-right: 20px;}
+.section_event .content_clipboard .code_clipboard{width: 28%; background: #102521; border: 2px solid #FED849; border-radius: 5px; padding: 8px 20px; cursor: pointer;}
+.section_event .content_clipboard .code_clipboard .text_code{position: relative; top: 1px; color: #FED849; font-size: 16px; font-size: 1.6rem; font-weight: 700;}
+.section_event .content_register_code .item_info{}
+.section_event .content_register_code .item_info h3{font-size: 20px; font-size: 2rem; font-weight: 500; line-height: 1.6;}
+.section_event .content_register_code .item_point{display: inline-block; background: #f7f7f7; margin: 10px 0; padding: 6px 14px; border-radius: 20px;}
+.section_event .content_register_code .item_point span{font-size: 14px; font-size: 1.4rem; font-weight: 700;}
+.section_event .register_box{background: #f7f7f7; border-radius: 20px; padding: 20px 20px;}
+
+
 @media screen and (max-width: 480px){
     .section_event .content_top .btn_area{bottom: 28%;}
     .section_event .content_top .btn_area .btn_event_invite{width: 36%; font-size: 13px; font-size: 1.3rem; padding: 3px 10px;}
@@ -367,7 +380,10 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_event .content_middle .content_title h1{font-size: 22px; font-size: 2.2rem;}
     .section_event .content_box .item_title{ border-bottom: 2px dotted #ddd; padding: 20px 0 10px;}
     .section_event .content_box .item_title h3{font-size: 15px; font-size: 1.5rem;}
-    
+    .section_event .clipboard_box{bottom: 31%;}
+    .section_event .content_clipboard .label_text{font-size: 14px; font-size: 1.4rem; margin-right: 10px;}
+    .section_event .content_clipboard .code_clipboard{padding: 4px 20px;}
+    .section_event .content_clipboard .code_clipboard .text_code{font-size: 13px; font-size: 1.3rem;}
 }
 
 /* inquiry Page */
