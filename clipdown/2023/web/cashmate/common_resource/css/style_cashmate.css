@@ -121,7 +121,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_faq .head-title{padding: 20px 0;}
     .acc-item .acc-head .head-title{font-size: 16px; font-size: 1.6rem;}
     .acc-item .style_aw p{font-size: 14px; font-size: 1.4rem;}
-    .acc-item .acc-contents{padding: 10px 10px 20px 10px}
+    .acc-item .acc-contents{padding: 10px 10px 20px 35px}
     .acc-item .acc-head{padding: 20px 28px 10px 0;}
 }
 @media screen and (max-width: 360px) {
@@ -139,6 +139,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .accordion-list-box{padding-top: 10px; padding-bottom: 10px;}
     .acc-item .acc-head{padding: 10px 28px 10px 0;}
     .acc-item .acc-head .head-title{font-size: 14px; font-size: 1.4rem;}
-    .acc-item .acc-contents{padding: 5px 10px 10px;}
+    .acc-item .acc-contents{padding: 5px 0 10px 0;}
     .acc-item .style_aw p, .acc-item .style_aw .aw_list li{font-size: 13px; font-size: 1.3rem;}
 }
