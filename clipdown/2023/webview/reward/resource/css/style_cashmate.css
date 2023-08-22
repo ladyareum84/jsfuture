@@ -380,6 +380,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_event .content_clipboard .label_text{font-size: 14px; font-size: 1.4rem; margin-right: 10px;}
     .section_event .content_clipboard .code_clipboard{padding: 4px 20px;}
     .section_event .content_clipboard .code_clipboard .text_code{font-size: 13px; font-size: 1.3rem;}
+    .section_event .content_middle .item_info{position: relative; max-width: 300px; margin: 0 auto;}
 }
 
 /* inquiry Page */
