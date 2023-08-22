@@ -29,14 +29,14 @@
                     <div class="content_top">
                         <img src="../resource/images/img_event_invite_section_top.svg" alt="">
                         <!-- ID 존재 시 -->
-                        <div class="content_clipboard clipboard_box hidden">
+                        <div class="content_clipboard clipboard_box">
                             <span class="label_text">추천코드</span>
-                            <a href="#" class="code_clipboard" data-clipboard-text="ZED1247">
+                            <a href="#" class="code_clipboard" data-clipboard-text="ZED1247" data-clipboard-demo data-clipboard-action="복사 되었습니다.">
                                 <span class="text_code font_en">ZED1247</span>
                             </a>
                         </div>
                         <!-- ID 부재 시 -->
-                        <div class="content_clipboard clipboard_box">
+                        <div class="content_clipboard clipboard_box hide">
                             <span class="label_text">추천코드</span>
                             <a href="#" class="code_clipboard">
                                 <span class="text_code font_en">로그인 후 확인 가능</span>
@@ -52,29 +52,9 @@
                             </div>
                             <div class="content_box">
                                 <div class="item_info">
-                                    <h3>
-                                        혹시 클립다운을<br />
-                                        <span class="weight-600_bold">누군가의 소개로 설치하셨나요?</span>
-                                    </h3>
-                                    <div class="item_point">
-                                        <span class="font_en point-text">+2000P</span>
-                                    </div>
+                                    <img src="../resource/images/img_event_code_step.png" alt="">
                                 </div>
-                            </div>   
-                            <div class="content_box register_box">
-                                <div class="item_title">
-                                    <h3>추천인 코드등록</h3>
-                                </div>
-                                <form action="">
-                                    <div class="content_item">
-                                        <div class="input_group event">
-                                            <input type="text" id="email" class="form_control font_num form_input" required="required" placeholder="추천인 코드를 입력해주세요.">
-                                            <a href="#" class="btn btn_dark btn_input">등록하기</a>
-                                        </div>
-                                        <p class="content_text">※ 서비스 신청 후 추천인 코드를 등록하면 <span class="font_en weight-600_bold">2000P</span>를 드립니다.</p>
-                                    </div>
-                                </form>
-                            </div>                                                                            
+                            </div>                                                                              
                         </div>
                     </div> 
                 </article>
@@ -87,16 +67,15 @@
     <script src="../resource/js/common_cashmate.js"></script>
     <script src="../resource/js/clipboard.min.js"></script>
     <script>
-        var clipboard = new ClipboardJS('.code_clipboard');
+        var clipboard = new ClipboardJS('.code_clipboardbtn');
 
-            clipboard.on('success', function(e) {
-                console.info('Text:', e.text);
-                alert("텍스트가 복사되었습니다. \nCtrl + v 를 눌러서 붙여넣기 하세요.");
-            });
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
 
-            clipboard.on('error', function(e) {
-                alert("Ctrl + C 를 눌러서 복사해 주세요.");
-        });
+            e.clearSelection();
+        });        
     </script>
     
 </body>
