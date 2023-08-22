@@ -365,7 +365,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_event .content_clipboard .label_text{color: #FED849; font-size: 18px; font-size: 1.8rem; font-weight: 600; margin-right: 20px;}
 .section_event .content_clipboard .code_clipboard{width: 28%; background: #102521; border: 2px solid #FED849; border-radius: 5px; padding: 8px 20px; cursor: pointer;}
 .section_event .content_clipboard .code_clipboard .text_code{position: relative; top: 1px; color: #FED849; font-size: 16px; font-size: 1.6rem; font-weight: 700;}
-.section_event .content_middle .item_info{position: relative; width: 400px; margin: 0 auto;}
+.section_event .content_middle .item_info{position: relative; max-width: 400px; margin: 0 auto;}
 
 
 @media screen and (max-width: 480px){
