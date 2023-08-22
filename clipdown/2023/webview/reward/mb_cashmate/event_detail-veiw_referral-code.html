@@ -31,17 +31,18 @@
                         <!-- ID 존재 시 -->
                         <div class="content_clipboard clipboard_box">
                             <span class="label_text">추천코드</span>
-                            <a href="#" class="code_clipboard" data-clipboard-text="ZED1247" data-clipboard-demo data-clipboard-action="복사 되었습니다.">
+                            <a href="#" class="code_clipboard" data-clipboard-text="ZED1247">
                                 <span class="text_code font_en">ZED1247</span>
                             </a>
                         </div>
-                        <!-- ID 부재 시 -->
+                        <!-- ID 부재 시 
                         <div class="content_clipboard clipboard_box hide">
                             <span class="label_text">추천코드</span>
                             <a href="#" class="code_clipboard">
                                 <span class="text_code font_en">로그인 후 확인 가능</span>
                             </a>
                         </div>
+                        -->
                     </div>
                 </article>
                 <article id="eventInfo" class="contents contents_event">
@@ -63,19 +64,23 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
     <script src="../resource/js/common_cashmate.js"></script>
     <script src="../resource/js/clipboard.min.js"></script>
+    
     <script>
-        var clipboard = new ClipboardJS('.code_clipboardbtn');
+        
+        var clipboard = new ClipboardJS('.code_clipboard');
 
-        clipboard.on('success', function(e) {
-            console.info('Action:', e.action);
-            console.info('Text:', e.text);
-            console.info('Trigger:', e.trigger);
+            clipboard.on('success', function(e) {
+                console.info('Text:', e.text);
+                alert("코드가 복사되었습니다. \nCtrl + v 를 눌러서 붙여넣기 하세요.");
+            });
 
-            e.clearSelection();
-        });        
+            clipboard.on('error', function(e) {
+                alert("Ctrl + C 를 눌러서 복사해 주세요.");
+        });
+           
     </script>
     
 </body>
