@@ -321,7 +321,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .content_list .list_item .img_box{position: relative; overflow: hidden; width: 68px; min-width: 68px; height: 68px; border-radius: 6px; margin-right: 15px; background: #E6E6E6;}
 .content_reward_ad .content_list .list_item .info_product {margin-right: 15px;}
 .content_reward_ad .content_list .list_item .info_product .info_title{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
-.content_reward_ad .content_list .list_item .info_product .info_summary{margin: 5px 0;}
+.content_reward_ad .content_list .list_item .info_product .info_summary{margin: 5px 0; word-break: break-all;}
 .content_reward_ad .content_list .list_item .item_right{margin-left: auto;}
 
 /* event Page */
