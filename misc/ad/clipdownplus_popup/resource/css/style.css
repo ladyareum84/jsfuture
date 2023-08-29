@@ -171,6 +171,34 @@
 .style01 .help_box{text-align: center; padding: 10px 0; }
 .style01 .help_box.help-text{color: #3b393a; font-size: 11px; font-size: 1.1rem;}
 
+/* 
+    * 2023-05-10
+    * webview 휴대폰인증 광고 가입 팝업 스타일 변경 작업
+    * 상단이미지 변경 
+    * 공통 스타일 마크업 / 스타일 추가 
+*/
 
+.content_style .item_title{padding: 40px 20px 0;}
+.content_style .item_title h2{font-size: 24px; font-size: 2.4rem; font-weight:600; line-height: 1.4; text-align: center;}
+.content_style .img_banner{display: flex; align-items: center; justify-content: center; position: relative; width: 100%; background: #f8f8f8;}
+.content_style .item_title h2{font-size: 24px; font-size: 2.4rem; font-weight:600; line-height: 1.4; text-align: center;}
+.content_style .content_footer{position: relative; background: #f8f8f8; padding: 20px 0;}
+.content_style.style02 .item_header{background: #f8f8f8; padding: 15px 20px 10px 20px;}
+.content_style.style02 .img_banner .item_img{position: relative; top: 3px; width: 100%; max-width: 50px;}
+.content_style.style02 .img_banner .item_text{font-size: 13px; font-size: 1.3rem; line-height: 1.5; padding: 0 15px;}
+.content_style.style02 .item_text .help_box{display: block; padding-top: 5px;}
+.content_style.style02 .item_text .help-text{font-size: 11px; font-size: 1.1rem; font-weight: 300;}
 
+/* 
+    * 2023-08-28
+    * webview 휴대폰인증 광고 가입 팝업 스타일 변경 작업
+    * 특정 타겟에 특화된 신규팝업 (class="ad_target")
+    * 상단이미지 변경 
+    * 스타일 추가 
+*/
 
+.ad_target .content_style.style02 .item_header{letter-spacing: -.05rem;}
+.ad_target .item_header{display: flex; align-items: center; justify-content: space-between;}
+.ad_target .item_header .summary{font-size: 13px; font-size: 1.3rem;}
+.ad_target .item_header .item_img{}
+.ad_target .style_form .sub-header .sub_info{}
