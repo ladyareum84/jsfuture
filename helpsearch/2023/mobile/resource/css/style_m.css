@@ -198,3 +198,73 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .list_result .pictures a img{position: absolute; width: 100%; height: 100%; object-fit: cover;}
 .list_result .pictures a:after{content: ''; display: block; padding-bottom: 100%;}
 .list_result .pictures a:hover{border: 3px solid #0085e2;}
+
+.content_aside{position: absolute; width: 35%; top: 0; right: -300px;}
+.content_aside .img_ad_box{display: inline-block; position: relative; background: #f7f7f7; width: 250px; height: 250px;}
+@media (max-width: 767px){
+	.content_aside{position: relative; width: 100%; right: 0; text-align: center; padding: 50px 0 0px;}
+
+}
+
+/* Pagination Style  */
+.list_pagination{display: block; padding: 10px 0;}
+.m_list_pagination{display: none;}
+.pagination, .pagination ul {display: flex; font-family: 'Poppins', Malgun Gothic, sans-serif;}
+.pagination {justify-content: center;}
+.pagination li {position: relative; margin: .2rem;}
+.pagination a {display: block; color: #4b4b4b; background: #fff; border: 1px solid #fff; font-size: 14px;font-size: 1.4rem; text-align: center; text-decoration: none; padding: 5px 3px;}
+.pagination a:hover {border: 1px solid #fff; color: #333; font-weight: 700;}
+.pagination li.active a {background: #fff; border: 1px solid #fff; color: #333; font-weight: 700;}
+.pagination .pages li a {width: 28px; height: 28px;}
+.pagination .previous li a, .pagination .next li a {height: 28px; padding: 5px 8px;}
+
+@media screen and (max-width: 640px){
+    .list_pagination{display: none;}
+    .m_list_pagination{display: block;}  
+    .loader {display: block; margin: 0 auto; width: 24px; height: 24px; animation: loader_animate 2s linear infinite;}      
+    .loader circle {stroke-width: 4px; stroke-dasharray: 1, 150; stroke-dashoffset: 0; stroke-linecap: round; animation: stroke_animate 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; stroke: #efefef;}
+    .content_infinite_scroll {/* We need to limit the height and show a scrollbar   height: 100vh;overflow-y: auto;*/}     
+    .infinite_scroll {height: 24px; margin-top: 1rem;}
+    .infinite_scroll .loader {opacity: 0;}
+    .infinite_scroll.active .loader {opacity: 1;}    
+}
+
+/* Page Loaing */
+.page_loading .bg_load{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);  width: 48px; height: 48px; border-radius: 50%; background: #000; opacity: 0.5;}
+.page_loading .layer_al_c{position: absolute; top:50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; text-align: center; z-index: 5001;}
+.page_loading .loader{display: block; margin: 0 auto; width: 36px; height: 36px; animation: loader_animate 2s linear infinite; }
+.page_loading .loader circle{stroke-width: 4px; stroke-dasharray: 1, 150; stroke-dashoffset: 0; stroke-linecap: round; animation: stroke_animate 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; stroke: #fff;}
+.loading_text{display: inline-block; background: rgb(0 0 0 / 75%); border-radius: 3px; text-align: left; width: 226px; padding: 5px 20px 8px 20px;}
+.loading_text .load_text{position: relative; color: #fff; font-size: 13px; font-weight: 600; vertical-align: middle; letter-spacing: -1px;}
+.loading_text .ani_loader{display: inline-block; overflow: hidden; vertical-align: bottom; animation:extend 1s steps(5, end) infinite;}
+.loading_text .ani_loader:before{content: '...'; color: #fff; font-size: 16px; font-weight: 600;}
+
+/* Animation Style */
+@keyframes loader_animate {
+    100% {
+    transform: rotate(360deg);
+    }
+}
+@keyframes stroke_animate {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+@keyframes extend {
+    0% {
+      width: 0.25em;
+    }
+    100% {
+      width: 1em;
+    }
+  }
