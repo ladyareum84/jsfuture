@@ -236,7 +236,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .pagination .pages li a {width: 28px; height: 28px;}
 .pagination .previous li a, .pagination .next li a {height: 28px; padding: 5px 8px;}
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 767px){
     .list_pagination{display: none;}
     .m_list_pagination{display: block;}  
     .loader {display: block; margin: 0 auto; width: 24px; height: 24px; animation: loader_animate 2s linear infinite;}      
@@ -312,8 +312,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_reward_ad .category_menu .list_item a:hover{border: 1px solid #272936;}
 .content_reward_ad .product_list .info_product .info_sub_title{display: inline-block; font-size: 11px; font-size: 1.1rem;}
 .content_reward_ad .product_list .info_product .info_title{font-size: 13px; font-size: 1.3rem !important; margin-bottom: 5px;}
-.content_reward_ad .product_list .product_price{position: relative; padding: 5px 0;}
-.content_reward_ad .product_list .product_price .badge_price{display: inline-block; position: relative; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 5px; -webkit-touch-callout: none; user-select: none;}
+.content_reward_ad .product_list .product_price{display: inline-block; position: relative; min-width: 78px; height: 18px; padding: 0 0 0 24px;}
+.content_reward_ad .product_list .product_price .badge_price{position: absolute; top:0; left: 0; width: 18px; height: 18px; background: #e21d19; color: #fff; font-size: 13px; font-size: 1.3rem; font-weight: 700; vertical-align: middle; border-radius: 50%; padding: 2px 5px; -webkit-touch-callout: none; user-select: none;}
 .content_reward_ad .product_list .product_price .price{position: relative; font-size: 15px; font-size: 1.5rem; vertical-align: middle;}
 .content_reward_ad .content_list{width: 100%; height: 379px; overflow-y: auto; margin-top:20px}
 .content_reward_ad .content_list .list_item{display: flex; align-items: center; border-bottom: 1px solid #f7f7f7; padding: 10px 10px;} 
@@ -386,10 +386,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .section_event .clipboard_box.disabled .content_clipboard .code_clipboard{width: 40%; padding: 4px 10px;}
     .section_event .clipboard_box.disabled .content_clipboard .code_clipboard .text_code{font-size: 13px; font-size: 1.3rem;}
     .section_event .clipboard_box.disabled .guide_text{font-size: 11px; font-size: 1.1rem; font-weight: 600; padding-top: 5px}
-
-
-
-
     .section_event .content_middle .item_info{position: relative; max-width: 300px; margin: 0 auto;}
 }
 
