@@ -285,7 +285,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .wrap_helpsearch .content_search_bar .btn_logo{width: 63px; margin-right: 10px;}
 .wrap_helpsearch .content_search_bar .btn_logo img{width: 63px;}
 .wrap_helpsearch .content_search_bar .form_control{height: 63px; border: 2px solid #ff0000;}
-.wrap_helpsearch .content_search_bar .input_group .btn_search{font-size: 18px; font-size: 1.8rem; background: #ff0000; border: 2px solid #ff0000; padding: 5px 40px}  
+.wrap_helpsearch .content_search_bar .input_group .btn_search{font-size: 18px; font-size: 1.8rem; background: #ff0000; border: 2px solid #ff0000; padding: 5px 30px}  
 .wrap_helpsearch.wrap_search .content_search_bar .btn_logo img{width: 48px;}
 .wrap_helpsearch.wrap_search .content_search_bar .form_control{height: 48px; border: 2px solid #ff0000;}
 .wrap_helpsearch.wrap_search .content_search_bar .input_group .btn_search{font-size: 16px;font-size: 1.6rem; background: #ff0000; border: 2px solid #ff0000; padding: 5px 20px}  
