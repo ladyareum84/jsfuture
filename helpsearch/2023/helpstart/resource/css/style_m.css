@@ -125,7 +125,6 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .section{background: #fff;}
 .section_top{border-bottom: 1px solid #ddd;}
 .section_top.header_sticty{position: sticky; width: 100%; padding-top: 0; top:0; z-index: 100;}
-.section_middle{}
 .bg_gray{background: #f7f7f7;}
 .section_top .header_title{text-align: center; padding-top: 80px;}
 .section_top .header_title h1{font-size: 5.7vw; letter-spacing: -1px;}
@@ -150,6 +149,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .content_ad{position: relative; padding: 0 0 60px;}
 .ad_banner{position: relative; background: #fff; border: 1px solid transparent;}
 .ad_banner.bottom{width: 100%; min-height: 60px; text-align: center;}
+.section_middle .ad_banner{background: #f7f7f7;}
 .wrap_search .content_ad{display: none;}
 
 /* footer */
