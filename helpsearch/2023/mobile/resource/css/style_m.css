@@ -103,7 +103,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .link_site span:after{content: ''; position: absolute; top: 50%; width: 0; height: 0; margin-top: -3px; border-top: 6px solid #008000; border-left: 4px solid transparent; border-right: 4px solid transparent; margin-left: 5px; z-index: 10;}
 .link_text{display: inline-block; font-size: 16px; font-size: 1.6rem; line-height: 1.6; font-weight: 700; color: #0085e2; text-overflow: ellipsis;}
 .link_more{float: right; color: #0085e2; font-size: 14px; font-size: 1.4rem; font-weight: 700; margin-right: 15px;}
-.link_more:after{content: ''; position: absolute; width: 8px; height: 8px; right: 22px; border-right: 2px solid #0085e2; border-bottom: 2px solid #0085e2; margin-top: 4px; transform: rotate(-45deg);}
+.link_more:after{content: ''; position: absolute; width: 8px; height: 8px; right: 2px; border-right: 2px solid #0085e2; border-bottom: 2px solid #0085e2; margin-top: 4px; transform: rotate(-45deg);}
 
 /* Content Columns */
 .row-contents {position: relative; overflow: hidden; margin-left: -10px; margin-right: -10px;}
@@ -124,14 +124,14 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 .section{background: #fff;}
 .section_top{border-bottom: 1px solid #ddd;}
-.section_top.header_sticty{position: sticky; width: 100%; padding-top: 40px; top:-40px; z-index: 100;}
+.section_top.header_sticty{position: sticky; width: 100%; padding-top: 0; top:0px; z-index: 100;}
 .section_middle{}
 .bg_gray{background: #f7f7f7;}
-.section_top .header_title{text-align: center; padding-top: 100px;}
+.section_top .header_title{text-align: center; padding-top: 80px;}
 .section_top .header_title h1{font-size: 5.7vw; letter-spacing: -1px;}
 .section_top .header_title h1 b{font-weight: 900;}
 
-.content_search_bar{display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%; padding: 60px 0 60px;}
+.content_search_bar{display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%; padding: 40px 0 60px;}
 .content_search_bar .btn_logo{width: 48px; margin-right: 5px;}
 .content_search_bar .btn_logo a{display: block; position: relative;}
 .content_search_bar .form_searchbar{display: flex; flex-grow: 1; flex-shrink: 0; flex-basis: 200px;}
@@ -150,6 +150,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .content_ad{position: relative; padding: 0 0 60px;}
 .ad_banner{position: relative; background: #fff; border: 1px solid transparent;}
 .ad_banner.bottom{width: 100%; min-height: 60px; text-align: center;}
+.wrap_search .content_ad{display: none;}
 
 /* footer */
 .section_footer{text-align: center; border-top: 1px solid #f5f5f5; padding:40px 10px 20px;}
@@ -261,12 +262,12 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 @media (max-width: 767px){
     .content_shop .list_stie li{width: 33.333%; float: left;; padding: 5px 5px;}
-	.content_aside{position: relative; width: 100%; right: 0; text-align: center; padding: 50px 0 0px; margin: 0 0 35px 0;}
-
+	.content_aside{display: none;}
+    .wrap_search .content_ad{display: block;}
 }
 
 @media screen and (max-width: 640px){
-    .content_search_bar{padding: 40px 0 40px;}
+    .content_search_bar{padding: 20px 0 40px;}
     .content_shop{padding: 30px 0;}
     .content_ad{padding: 0 0 30px;}
 
