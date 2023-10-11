@@ -124,7 +124,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 .section{background: #fff;}
 .section_top{border-bottom: 1px solid #ddd;}
-.section_top.header_sticty{position: sticky; width: 100%; padding-top: 0; top:0px; z-index: 100;}
+.section_top.header_sticky{position: sticky; width: 100%; padding-top: 0; top:0px; z-index: 100;}
 .section_middle{}
 .bg_gray{background: #f7f7f7;}
 .section_top .header_title{text-align: center; padding-top: 80px;}
@@ -264,13 +264,15 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 @media (max-width: 767px){
     .content_shop .list_stie li{width: 33.333%; float: left;; padding: 5px 5px;}
 	.content_aside{display: none;}
+    .wrap_search .content_search_bar{padding: 20px 0px;}
     .wrap_search .content_ad{display: block;}
+    .content_sticky{position: sticky; width: 100%; bottom: 0; padding-bottom: 0; z-index: 100;}    
 }
 
 @media screen and (max-width: 640px){
     .content_shop{padding: 40px 0;}
     .content_ad{padding: 0 0 30px;}
-
+    .content_sticky.content_ad{padding: 0;}
     .list_pagination{display: none;}
     .m_list_pagination{display: block;}  
     .loader {display: block; margin: 0 auto; width: 24px; height: 24px; animation: loader_animate 2s linear infinite;}      
