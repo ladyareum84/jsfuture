@@ -127,11 +127,11 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .section_top.header_sticty{position: sticky; width: 100%; padding-top: 40px; top:-40px; z-index: 100;}
 .section_middle{}
 .bg_gray{background: #f7f7f7;}
-.section_top .header_title{text-align: center; padding-top: 50px;}
+.section_top .header_title{text-align: center; padding-top: 100px;}
 .section_top .header_title h1{font-size: 5.7vw; letter-spacing: -1px;}
 .section_top .header_title h1 b{font-weight: 900;}
 
-.content_search_bar{display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%; padding: 40px 0 60px;}
+.content_search_bar{display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; width: 100%; padding: 60px 0 60px;}
 .content_search_bar .btn_logo{width: 48px; margin-right: 5px;}
 .content_search_bar .btn_logo a{display: block; position: relative;}
 .content_search_bar .form_searchbar{display: flex; flex-grow: 1; flex-shrink: 0; flex-basis: 200px;}
@@ -148,8 +148,8 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 /* AD banner */
 .content_ad{position: relative; padding: 0 0 60px;}
-.ad_banner{position: relative; background: transparent; border: 1px solid transparent;}
-.ad_banner.bottom{width: 100%; min-height: 50px; text-align: center;}
+.ad_banner{position: relative; background: #fff; border: 1px solid transparent;}
+.ad_banner.bottom{width: 100%; min-height: 60px; text-align: center;}
 
 /* footer */
 .section_footer{text-align: center; border-top: 1px solid #f5f5f5; padding:40px 10px 20px;}
@@ -266,7 +266,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 }
 
 @media screen and (max-width: 640px){
-    .content_search_bar{padding: 20px 0 40px;}
+    .content_search_bar{padding: 40px 0 40px;}
     .content_shop{padding: 30px 0;}
     .content_ad{padding: 0 0 30px;}
 
