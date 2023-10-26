@@ -150,11 +150,17 @@
 
     </script>
     <script>
+        $(window).resize(function() {
+        if($(window).width() < 768) {
+            $(".wrap").attr('class','wrap_dark')
+        }
+        });
+
         $(document).ready(function() {
             if($(window).width() < 768) {
                 $(".wrap").attr('class','wrap_dark')
             }
-         });
+        });
     </script>
     
 </body>
