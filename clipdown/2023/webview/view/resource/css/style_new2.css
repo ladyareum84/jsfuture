@@ -153,9 +153,9 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a, 
     .wrap_dark .add_read_more .read_more, .wrap_dark .add_read_more .read_less{color:#fff;}
     .wrap_dark{background: #121212;}
-    .wrap_dark .video_action_bar .action_box{background: #323232;}
-    .wrap_dark .video_action_bar, .section_ad_banner, .section_footer{border-color: #323232;}
-    .wrap_dark .section_header{background-color: #131313;}
+    .wrap_dark .video_action_bar .action_box{background: #212121;}
+    .wrap_dark .video_action_bar, .section_ad_banner, .section_footer{border-color: #212121;}
+    .wrap_dark .section_header{background-color: #121212;}
     .wrap_dark .section_header .logo_clipdown svg #Group_40 path, .section_header .logo_clipdown svg #Group_40 rect{fill: #fff;}
 }
 
