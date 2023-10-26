@@ -126,7 +126,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .video_description p{white-space: pre-line;}
 .btn_share .item_share{font-size: 1.5rem; line-height: 24px;}
 .btn_share .icon_share{position: relative; width: 100%; text-align: center;}
-.btn_share .icon_share svg{position: relative; top: -1px; width: 18px; height: 18px; vertical-align: middle; fill: #a2a2a2;}
+.btn_share .icon_share svg{position: relative; top: -1px; width: 16px; height: 16px; vertical-align: middle; fill: #a2a2a2;}
 
 /* 더보기 */
 .add_read_more.show_less_content .second_section, .add_read_more.show_less_content .read_less {display: none;}
