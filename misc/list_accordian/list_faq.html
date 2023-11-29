@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="title" content="HTML5 Video Player">
+        <meta name="keywords" content="">
+        <meta name="Description" content="">		
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">		
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta name="format-detection" content="telephone=no"/> 
+        <title>자주 하는 질문</title>
+		<link rel="stylesheet" href="common.css">	
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+			<div class="container">
+				<section class="contents">
+					<article class="guide_box">
+						<div class="guide_info">
+							<p>
+								무엇을 도와드릴까요?<br />
+								쉽고 빠르게 문제를 해결하세요!
+							</p>
+							
+						</div>
+					</article>
+					<article class="content-box ">
+                        <div id="accordion" class="accordion-list-box">
+							<!-- section 1 -->
+							<div class="acc-item">
+								<h3 class="acc-head"><span class="heade-title"><span class="style_q">Q.</span>백그라운드 재생은 불가능한가요?</span></h3>
+								<div class="acc-contents">
+									<p class=""><span class="style_aw">A.</span>
+									플레이 스토어 정책상 백그라운 재생 기능은 제공이 어려운 점 양해 부탁드립니다.								
+									</p>
+								</div>
+							</div>
+							<!-- section 2 -->
+							<div class="acc-item">
+								<h3 class="acc-head"><span class="heade-title"><span class="style_q">Q.</span>로그인은 유튜브와 동일하나요?</span></h3>
+								<div class="acc-contents">
+									<p><span class="style_aw">A.</span>
+									앱 내에서 유튜브 로그인을 하시면 평소 사용중이신 계정과 동일한 환경에서 이용이 가능합니다.										
+									</p>
+								</div>										
+							</div>
+							<!-- section 3 -->
+							<div class="acc-item">
+								<h3 class="acc-head"><span class="heade-title"><span class="style_q">Q.</span>PIP 모드가 무엇인가요?</span></h3>
+								<div class="acc-contents">
+									<p><span class="style_aw">A.</span>
+									소형 플레이어를 통해 다른 앱 이용중에도 영상 시청을 가능하게 해주는 기능입니다.										
+									</p>
+								</div>										
+							</div>
+							<!-- section 4 -->
+							<div class="acc-item">
+								<h3 class="acc-head"><span class="heade-title"><span class="style_q">Q.</span>로그인을 해야 광고가 제거 되나요?</span></h3>
+								<div class="acc-contents">
+									<p><span class="style_aw">A.</span>
+									로그인에 상관없이 모든 동영상은 광고 없이 시청이 가능합니다.								
+									</p>
+								</div>										
+							</div>
+						</div>
+                    </article>
+                </section>
+				<section class="contents contents_contact">
+					<div class="contact-info">
+						<h3 class="content_title">고객센터</h3>
+						<span class="text-block">전화번호 : <a href="tel:02-838-5111">1688-5631</a></span>
+						<span class="text-block">이메일 : <a href="mailto:webmaster@jsfuture.co.kr" alt="이메일 보내기" title="이메일 보내기">webmaster@jsfuture.co.kr</a></span>
+					</div>
+				</section>
+				<footer class="footer">
+					<div class="copyright">
+						Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+					</div>
+				</footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        <script>
+			WebFont.load({
+			  google: {
+				families: ['Noto Sans KR', 'Roboto']
+			  }
+			});
+		</script>
+		<script>
+        //Accordion
+        $(document).ready(function(){	
+            $(".acc-contents").hide(); 
+            $(".acc-item > .acc-head").on("click", function(){
+                if($(this).hasClass('active')){
+                $(this).removeClass("active");
+                $(this).siblings('.acc-contents').slideUp(200);
+                }else{
+                $(".acc-item > .acc-head").removeClass("active");
+                $(this).addClass("active");
+                $('.acc-contents').slideUp(200);
+                $(this).siblings('.acc-contents').slideDown(200);
+                    }   
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -151,7 +151,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .tabs_multi .sub_tabs_box .sub_tabs_nav li.active {color: #333; border-bottom: 2px solid #333; font-weight: 600; cursor: default;}
 .tabs_multi .sub_tabs_box .sub_tabs_nav .divi {display: inline-block; position: relative; top: -1px; width: 3px; height: 3px; background: #c9caca; border-radius: 50%; vertical-align: middle; margin: 0 10px;}
 .tabs_multi .sub_tabs_box .sub_tabs_nav li:last-of-type .divi {width: 0; height: 0;}
-.sub_content{padding-top: 10px;}
+.sub_content{position: relative; overflow: hidden; width: 100%; padding-top: 10px;}
 
 .form_table_group{}
 .table_style{width: 100%;}
@@ -517,7 +517,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate .section_mb.section_inquiry .contents{padding: 0;}
 .webview_cashmate .section_mb.section_inquiry .content_item{padding: 20px 20px;}
 
-
 /* Popup Style */
 .layer_popup{display: block; position: fixed; _position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1050; }
 .layer_popup .bg_dimmed{position: absolute; top:0; left: 0; width: 100%; height: 100%; background:#000; opacity: .65; filter: alpha(opacity=65);}
@@ -555,3 +554,56 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .ad_style01 .content_ad_info .content_heading{font-size: 13px; font-size: 1.3rem; font-weight: 600; padding: 0 10px 10px;}
 .ad_style01 .content_ad_info .content_des{line-height: 1.5; padding: 0 15px 0 10px; white-space: pre-line;}
 .ad_style01 .content_box .content_item{margin-top: 30px; padding: 0 10px;}
+
+/* 
+    * update 2023-11-24
+    * 클립다운라이트 UI 2차 개선작업
+*/
+/* Accordion */
+.accordion-list-box{width:100%; padding-top:10px; padding-bottom:10px;}
+.accordion-list-box .acc-item{position: relative;}
+.accordion-list-box .acc-item .acc-head{display:block; position:relative; background:#fff; border-bottom:1px solid #f7f7f7; font-size: 14px; font-size: 1.4rem; font-weight: 500; cursor: pointer; padding:15px 50px 15px 20px;}
+.accordion-list-box .acc-item .acc-head .head-title{color:#333; font-weight: 500; text-align: left; padding: 0; margin:0;}
+.accordion-list-box .acc-item .acc-head .head-title:after{content: " "; position: absolute; width: 10px; height: 10px; right: 20px; border-right: 2px solid #ddd; border-bottom: 2px solid #ddd; margin-top: 3px; transform: rotate(45deg); transition: all .2s ease-in-out;}
+.accordion-list-box .acc-item .acc-head .info_sub{font-family: 'Roboto', sans-serif; font-size: 12px; font-size: 1.2rem; color: #888; padding-top: 3px;}
+.accordion-list-box .acc-item .acc-head:hover{z-index: 999;}
+.accordion-list-box .acc-item .acc-head:hover .head-title, .accordion-list-box .acc-head:hover i{color:#333;}
+.accordion-list-box .acc-item .acc-head:hover .head-title:after{border-color:#333;}
+.accordion-list-box .acc-item .acc-head.active{border-bottom: 1px solid #f7f7f7; border-bottom: transparent;}
+.accordion-list-box .acc-item .acc-head.active:hover{cursor:default;}
+.accordion-list-box .acc-item .acc-head.active .head-title{color: #333; font-weight: 700;}
+.accordion-list-box .acc-item .acc-head.active .head-title:after{border-color:#333; transform: rotate(-135deg); margin-top: 7px;}
+.accordion-list-box .acc-item .acc-contents{display:block; position: relative; width:100%; height: auto; background:#f7f7f7; border:1px solid #f7f7f7; border-top: transparent; padding:10px 40px 20px 20px; margin-top: -1px; z-index: 999;}
+.accordion-list-box .acc-item .acc-contents p{line-height: 1.5;}
+.accordion-list-box .acc-item .style_q{font-family: 'Roboto'; font-size:16px; font-size: 1.6rem; font-weight: 700; float: left; padding-right: 5px;}
+.accordion-list-box .acc-item .style_aw{font-family: 'Roboto'; font-size:16px; font-size: 1.6rem; font-weight: 700; float: left; padding-right: 5px; color: #e21d19; vertical-align: middle;}
+.accordion-list-box .acc-item .aw_list{line-height: 1.6; padding: 10px 0; padding-left: 17px;}
+.accordion-list-box .acc-item .aw_list li{list-style-type: decimal; }
+.contents_contact{background: #f7f7f7; text-align: left; margin: 10px 10px;}
+.contents_contact .contact-info{padding: 10px 10px;}
+.contents_contact .contact-info .content_title{font-size:14px; font-size: 1.4rem; line-height: 1.2; font-weight: 700; padding-bottom: 10px;}
+.contents_contact .contact-info span{padding-bottom: 5px;}
+.contents_contact .contact-info span a{vertical-align: top;}
+.footer{text-align: center; margin-top:20px; padding: 10px 20px;}
+.footer .copyright{font-size: 11px; font-size: 1.1rem; color: #aaa; vertical-align: middle;}
+
+.webview_cashmate .section_mb.section_customer .guide_noti_box{padding: 20px 20px; margin-bottom: 0;}
+.webview_cashmate .section_mb.section_customer .contents{padding: 0;}
+.webview_cashmate .section_mb.section_customer .contents .tabs_multi{margin: 0;}
+.webview_cashmate .section_mb.section_customer .content_item{padding: 20px 20px;}
+.webview_cashmate .section_mb.section_customer .contents_top .guide_noti_box .noti_title_s{font-size: 13px; font-size: 1.3rem; font-weight: 500;}
+.webview_cashmate .section_mb.section_customer .content_item .form_group{padding: 0;}
+.webview_cashmate .section_mb.section_customer .content_inquiry .content_item{padding: 0 20px;}
+.webview_cashmate .section_mb.section_customer .content_title{font-weight: 600; padding: 10px 0;}
+
+.inquiry_detail{margin-bottom: 20px;}
+.inquiry_detail .attached_file{display: flex; justify-content: flex-start; width: 100%; padding: 10px 0;}
+.inquiry_detail .attached_file .item_img{position: relative; width: 75px; height: 75px; text-align: center; margin-right: 5px;}
+.inquiry_answer .detail{padding-bottom: 10px;}
+
+.filter_data{text-align: left; padding: 0 20px;}
+.filter_data .data_num{font-size: 14px; font-size: 1.4rem; line-height: 1.4; vertical-align: middle;}
+.metadata_item{font-size: 11px; font-size: 1.1rem; font-weight: 500;}
+.metadata_item:after{content: ''; display: inline-block; position: relative; top: 4px; width: 1px; height: 10px; background: #bbb; margin: 3px 8px;}
+.date_registration{font-size: 11px; font-size: 1.1rem; font-weight: 500; color: #666; padding: 5px 0;}
+.aw_replied{color: #e21d19; font-weight: 600;}
