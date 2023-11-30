@@ -370,7 +370,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_event .content_clipboard .code_clipboard .text_code{position: relative; top: 1px; color: #FED849; font-size: 16px; font-size: 1.6rem; font-weight: 700;}
 .section_event .clipboard_box .guide_text{display: block; font-size: 13px; font-size: 1.3rem; padding-top: 10px; color: #fff;}
 .section_event .disabled a{pointer-events: none; cursor: default; }
-.section_event .content_middle .item_info{position: relative; max-width: 400px; margin: 0 auto;}
+.section_event .content_middle .item_info{position: relative; max-width: 400px; margin: 0 auto; padding-bottom: 40px;}
+.section_event .content_middle .item_info:last-child{padding-bottom: 0;}
 
 
 @media screen and (max-width: 480px){
@@ -619,3 +620,21 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 /* Category Menu Scrollbar hide */
 .webview_cashmate .section_mb.section_point .content_reward_ad .category_menu{-ms-overflow-style: none; scrollbar-width: none;}
 .webview_cashmate .section_mb.section_point .content_reward_ad .category_menu::-webkit-scrollbar{display: none;}
+
+/* invitation - 친구초대 페이지 */
+.section_invite{padding: 0;}
+.section_invite .inner{position: relative;width: 100%; max-width: 780px; margin: 0 auto;}
+.section_invite .content_item{margin-bottom: 40px;}
+.section_invite .content_top{position: relative; background: #000;}
+.section_invite .content_middle{position: relative; background: #fff; text-align: center; padding: 0 20px;}
+.section_invite .content_middle .content_title{position: relative;padding: 60px 0 20px;text-align: center;}
+.section_invite .content_middle .content_title h1{font-size: 18px; font-size: 1.8rem; font-weight: 600; letter-spacing: -1px;}
+.section_invite .content_box{position: relative; width: 100%; border: 1px solid #333; border-radius: 5px; padding: 0 10px; margin-bottom: 10px;}
+.section_invite .content_clipboard{display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 5px 0;}
+.section_invite .content_clipboard .item_code .text_code{position: relative; top: 1px; font-size: 16px; font-size: 1.6rem; line-height: 1.6; font-weight: 700; vertical-align: middle;}
+.section_invite .content_clipboard .item_code{width: 80%; text-align: left;}
+.section_invite .content_clipboard .btn_code{width: 20%;}
+.section_invite .invite_list .list_item{display: flex; flex-direction: row; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding: 10px 0;}
+.section_invite .invite_list .list_item:last-child{border-bottom: 0;}
+.section_invite .invite_list .list_item span{font-size: 14px; font-size: 1.4rem; line-height: 1.4; vertical-align: middle;}
+.section_invite .invite_list .list_item .data{position: relative; top: 2px; font-weight: 700;}
