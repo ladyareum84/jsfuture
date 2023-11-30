@@ -579,8 +579,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .accordion-list-box .acc-item .style_aw{font-family: 'Roboto'; font-size:16px; font-size: 1.6rem; font-weight: 700; float: left; padding-right: 5px; color: #e21d19; vertical-align: middle;}
 .accordion-list-box .acc-item .aw_list{line-height: 1.6; padding: 10px 0; padding-left: 17px;}
 .accordion-list-box .acc-item .aw_list li{list-style-type: decimal; }
-.contents_contact{background: #f7f7f7; text-align: left; margin: 10px 10px;}
-.contents_contact .contact-info{padding: 10px 10px;}
+.contents_contact{background: #f7f7f7; text-align: left; margin: 10px 20px;}
+.contents_contact .contact-info{padding: 15px 15px;}
 .contents_contact .contact-info .content_title{font-size:14px; font-size: 1.4rem; line-height: 1.2; font-weight: 700; padding-bottom: 10px;}
 .contents_contact .contact-info span{padding-bottom: 5px;}
 .contents_contact .contact-info span a{vertical-align: top;}
@@ -589,12 +589,15 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 .webview_cashmate .section_mb.section_customer .guide_noti_box{padding: 20px 20px; margin-bottom: 0;}
 .webview_cashmate .section_mb.section_customer .contents{padding: 0;}
+.webview_cashmate .section_mb.section_customer .sub_content{padding-top: 0;}
 .webview_cashmate .section_mb.section_customer .contents .tabs_multi{margin: 0;}
+.webview_cashmate .section_mb.section_customer .contents .tabs_multi .tabs{margin-bottom: 10px}
 .webview_cashmate .section_mb.section_customer .content_item{padding: 20px 20px;}
 .webview_cashmate .section_mb.section_customer .contents_top .guide_noti_box .noti_title_s{font-size: 13px; font-size: 1.3rem; font-weight: 500;}
 .webview_cashmate .section_mb.section_customer .content_item .form_group{padding: 0;}
-.webview_cashmate .section_mb.section_customer .content_inquiry .content_item{padding: 0 20px;}
 .webview_cashmate .section_mb.section_customer .content_title{font-weight: 600; padding: 10px 0;}
+.webview_cashmate .section_mb.section_customer .inquiry_option{border-bottom: 1px solid #f7f7f7; margin-bottom: -10px;}
+
 
 .inquiry_detail{margin-bottom: 20px;}
 .inquiry_detail .attached_file{display: flex; justify-content: flex-start; width: 100%; padding: 10px 0;}
