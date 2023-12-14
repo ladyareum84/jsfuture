@@ -110,7 +110,9 @@ nav.gnb_inner{position: relative; overflow: hidden;}
 .accordion-list-box .acc-item .acc-head.active .heade-title{color: #333;}
 .accordion-list-box .acc-item .acc-head.active .heade-title:after{border-color:#333; transform: rotate(-135deg); margin-top: 7px;}
 .accordion-list-box .acc-item .acc-contents{display:block; position: relative; width:100%; height: auto; background:#f7f7f7; border:1px solid #f7f7f7; border-top: transparent; padding:10px 40px 20px 20px; margin-top: -1px; z-index: 999;}
-.accordion-list-box .acc-item .acc-contents p{line-height: 1.6;}
+.accordion-list-box .acc-item .acc-contents p{position: relative; padding-left: 22px;} /* 2023-12-07 Update */
+.accordion-list-box .acc-item .acc-contents .style_aw{float: left;} /* 2023-12-07 Update */
+
 
 /* style */
 .guide_box{background: #f7f7f7; padding: 20px 20px;}
@@ -122,3 +124,15 @@ nav.gnb_inner{position: relative; overflow: hidden;}
 .contact-info .content_title{font-weight: 500; padding-bottom: 10px;}
 .contact-info span{padding-bottom: 5px;}
 .contact-info span a{vertical-align: top;}
+
+/* 
+    * 2023-12-07 
+    * 유의사항 리스트영역 스타일 템플릿  
+*/
+
+.notice_desc_list{}
+.notice_desc_list .notice_desc{position: relative; padding-left: 15px;}
+.notice_desc_list .notice_desc .dot{position: absolute; left: 0; top:0;}
+
+
+
