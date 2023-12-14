@@ -13,14 +13,16 @@
   <link rel="stylesheet" href="./resource/css/style.css">
 </head>
 <body>
-  <div id="fullpage" class="wrap">
-      <section class="section section_01">        
-        <div class="inner">
-          <header class="header">
-            <div class="inner">
-              <a href="#" class="logo_brand"><img src="./resource/images/logo_clipdownLite.png" alt=""></a>
-            </div>
-          </header>
+  <div class="wrap">
+    <div id="fullpage">
+      
+      <section class="section section_01">   
+        <header class="header">
+          <div class="inner">
+            <a href="#" class="logo_brand"><img src="./resource/images/logo_clipdownLite.png" alt=""></a>
+          </div>
+        </header>   
+        <div class="inner">          
           <article class="content">
             <h1 class="header_title">
               새로운<br />
@@ -151,6 +153,7 @@
           </article>
         </div>
       </section>
+    </div>
       <!-- layer Popup -->
       <div id="layer_popup" class="layer_popup">
         <div class="bg_dimmed"></div>
@@ -183,7 +186,7 @@
   </div>
     
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 <!-- partial -->
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
@@ -199,8 +202,6 @@ $(document).ready(function() {
 		//options here
     css3: true,
     scrollingSpeed: 700,
-		autoScrolling:true,
-		scrollHorizontally: true,
     sectionSelector: '.section'
 	});
 });
