@@ -196,6 +196,8 @@
 <script src="./resource/js/clipboard.min.js"></script>
 <script src="./resource/js/script.js"></script>
 <script>
+  window.scrollY + document.documentElement.clientHeight === document.documentElement.scrollHeight;
+  
   // 모바일 웹 100vh 세로 사이즈 문제해결
 function setScreenSize() {
 	let vh = window.innerHeight * 0.01;
@@ -230,19 +232,19 @@ clipboard.on('success', function(e) {
 </script>
 
 <script>
-// $('.slider').slick({
-//   dots: true,
-//   arrows: false,
-//   initialSlide:1,
-//   accessibility: true,
-//   infinite: true,
-//   speed: 300,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-//   loop: true,
-//   fade: true,
-//   cssEase: 'linear',
-// });
+$('.slider').slick({
+  dots: true,
+  arrows: false,
+  initialSlide:1,
+  accessibility: true,
+  infinite: true,
+  speed: 300,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  loop: true,
+  fade: true,
+  cssEase: 'linear',
+});
 </script>
 
 
