@@ -38,7 +38,7 @@
           <article class="content content_slide"><!-- slider -->            
             <div class="slider">               
               <!-- Slider item 01 -->
-              <div class="slide_item slide_01 hide">
+              <div class="slide_item slide_01">
                 <div class="slide_title">					
                   <h3>
                     즐겨보던 유튜브만 봐도 <br />
@@ -51,13 +51,13 @@
                     <img class="img_item img_item_01" src="./resource/images/item_01_coin_s_01.png" alt="">	
                     	
                   </div> 
-                  <div class="item_img_main">
+                  <div class="item_img_main ani_fadein">
                     <img class="img_item" src="./resource/images/img_slider_01.png" alt="">	
                   </div> 
                 </div>                                   
               </div>
               <!-- Slider item 02 -->
-              <div class="slide_item slide_02 ">
+              <div class="slide_item slide_02">
                 <div class="slide_title">					
                   <h3>PIP모드로 멀티태스킹</h3>
                 </div>
@@ -72,13 +72,13 @@
                          	
                   </div> 
                   <div class="item_img_main">
-                    <img class="img_item" src="./resource/images/img_slider_02.png" alt="">	
+                    <img class="img_item ani_fadein" src="./resource/images/img_slider_02.png" alt="">	
                     <img class="img_item img_item_01" src="./resource/images/item_02_star_01.png" alt="">	
                   </div> 
                 </div>                                   
               </div>
               <!-- Slider item 03 -->
-              <div class="slide_item slide_03 hide">
+              <div class="slide_item slide_03">
                 <div class="slide_title">					
                   <h3>
                     쌓은 포인트로 <br />
@@ -96,7 +96,7 @@
                     <img class="img_item img_item_07" src="./resource/images/item_03_giftbox_03.png" alt="">	                           	
                   </div> 
                   <div class="item_img_main">
-                    <img class="img_item" src="./resource/images/img_slider_03.png" alt="">	
+                    <img class="img_item ani_fadein" src="./resource/images/img_slider_03.png" alt="">	
                   </div> 
                 </div> 
               </div>
@@ -209,16 +209,16 @@
 </script>
 
 <script>
-// $(document).ready(function() {
-// 	$('#fullpage').fullpage({
-// 		//options here
-//     css3: true,
-//     autoScrolling:true,
-//     scrollHorizontally: true,
-//     scrollingSpeed: 700,
-//     sectionSelector: '.section'
-// 	});
-// });
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+    css3: true,
+    autoScrolling:true,
+    scrollHorizontally: true,
+    scrollingSpeed: 700,
+    sectionSelector: '.section'
+	});
+});
 </script>
 
 <script>
@@ -235,19 +235,21 @@ clipboard.on('success', function(e) {
 </script>
 
 <script>
-// $('.slider').slick({
-//   dots: true,
-//   arrows: false,
-//   initialSlide:1,
-//   accessibility: true,
-//   infinite: true,
-//   speed: 300,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-//   loop: true,
-//   fade: true,
-//   cssEase: 'linear',
-// });
+$('.slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
+  initialSlide:1,
+  accessibility: true,
+  infinite: true,
+  speed: 300,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  loop: true,
+  fade: true,
+  cssEase: 'linear',
+});
 </script>
 
 
