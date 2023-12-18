@@ -681,5 +681,43 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     
 }
 
+.section_02 .content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;  
+  
+  
+}
+
+.section_02 .text_effect{
+  opacity: 0;  
+  animation: switch 8s linear infinite;
+}
+.section_02 .text_effect span{
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+.section_02 .text_effect:nth-child(2) { animation-delay: 2s}
+.section_02 .text_effect:nth-child(3) { animation-delay: 4s}
+.section_02 .text_effect:nth-child(4) { animation-delay: 6s}
+.section_02 .text_effect:nth-child(5) { animation-delay: 8s}
+
+
+@keyframes switch {
+  0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+  3% { opacity: 1;filter: blur(0); transform:scale(1)}
+  10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+  13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+  80% { opacity: 0}
+  100% { opacity: 0}
+}
+
 
 
