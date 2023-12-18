@@ -78,6 +78,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .wrap{
     position: relative;
     width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     max-height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -101,13 +102,9 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     margin: 0 auto;
 }
 .header{
-    display: flex;
-    align-items: center;
     position: relative;
     width: 100%;
     height: 56px;
-    top: 0;
-    left: 0;
     background-color: transparent;
 }
 .logo_brand{
@@ -247,7 +244,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 .slide_01 .item_img_main{position: relative; top:-10px; right: -10px; transform: scale(1);}
 .slide_01 .item_img_sub .img_item_02{top:-40px; right: 0; height: 40px;}
-.slide_01 .item_img_sub .img_item_01{top:80px; left: 10px; height: 100px;}
+.slide_01 .item_img_sub .img_item_01{top:80px; left: 10px; height: 80px;}
 .slide_02 .item_img_main{position: relative; top:-50px; right: 0; transform: scale(0.75);}
 .slide_02 .item_img_main .img_item_01{position: absolute; top:220px; right: 38px; height: 50px; z-index: -1;}
 .slide_02 .item_img_sub .img_item_06{top:112px; right: 20px; height: 72px; z-index: 10;}
@@ -297,6 +294,77 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 
 /* Animation */
+.slide_01 .main_visual .item_img_main{
+  right: -360px; 
+  animation: 
+    slideR 0.4s 0.3s linear forwards,
+    fadein 0.4s 0.3s linear forwards; 
+  
+}
+.slide_01 .main_visual .item_img_sub .img_item_01{
+  opacity: 0;
+  animation: 
+  fadein 0.8s 1.5s linear forwards,
+  bounce01 2.5s 2s ease infinite;
+}
+.slide_01 .main_visual .item_img_sub .img_item_02{
+  opacity: 0;
+  animation: 
+  fadein 0.6s 0.8s linear forwards,
+  bounce02 2.5s 1.7s ease infinite;
+}
+
+.slide_02
+
+
+
+
+.ani_fadein{ animation: fadein 0.5s  0.5s linear forwards;}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@-webkit-keyframes slideR {
+  100% { right: -10px; }
+}
+
+@keyframes slideR {
+  100% { right: -10px; }
+}
+
+.ex_bounce{ animation: bounce 2.5s  1s infinite ease;}
+@keyframes bounce01 {
+  0% {
+      top: 80px;
+    }
+    50% {
+      top: 40px;
+    }
+    100% {
+      top: 80px;
+    }
+  
+}
+@keyframes bounce02 {
+  0% {
+      top: -40px;
+    }
+    50% {
+      top: 0;
+    }
+    100% {
+      top: -40px;
+    }
+  
+}
+
+
+
+
+
+
+
 
 .animated {
   -webkit-animation-duration: 3s;
@@ -310,7 +378,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
   animation-iteration-count: infinite;
 }
 
-.animated
+
 
 @keyframes identifier {
     0% {

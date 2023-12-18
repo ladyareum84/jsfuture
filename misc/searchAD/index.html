@@ -14,15 +14,17 @@
 </head>
 <body>
   <div class="wrap">
-    <div id="fullpage">
-      
+    <div id="fullpage" class="fullpage">      
       <section class="section section_01">   
-        <header class="header">
+        <!-- <header header class="header">
           <div class="inner">
             <a href="#" class="logo_brand"><img src="./resource/images/logo_clipdownLite.png" alt=""></a>
           </div>
-        </header>   
-        <div class="inner">          
+        </header>  -->
+        <div class="inner">
+          <article class="content header">
+            <a href="#" class="logo_brand"><img src="./resource/images/logo_clipdownLite.png" alt=""></a>
+          </article>             
           <article class="content">
             <h1 class="header_title">
               새로운<br />
@@ -33,8 +35,7 @@
               클립다운 Lite에서 똑똑한 앱테크를 시작해보세요.
             </div>            
           </article>
-          <article class="content content_slide"><!-- slider -->
-            
+          <article class="content content_slide"><!-- slider -->            
             <div class="slider">               
               <!-- Slider item 01 -->
               <div class="slide_item slide_01 hide">
@@ -56,7 +57,7 @@
                 </div>                                   
               </div>
               <!-- Slider item 02 -->
-              <div class="slide_item slide_02 hide">
+              <div class="slide_item slide_02 ">
                 <div class="slide_title">					
                   <h3>PIP모드로 멀티태스킹</h3>
                 </div>
@@ -77,7 +78,7 @@
                 </div>                                   
               </div>
               <!-- Slider item 03 -->
-              <div class="slide_item slide_03">
+              <div class="slide_item slide_03 hide">
                 <div class="slide_title">					
                   <h3>
                     쌓은 포인트로 <br />
@@ -196,26 +197,28 @@
 <script src="./resource/js/clipboard.min.js"></script>
 <script src="./resource/js/script.js"></script>
 <script>
-  window.scrollY + document.documentElement.clientHeight === document.documentElement.scrollHeight;
+// window.scrollY + document.documentElement.clientHeight === document.documentElement.scrollHeight;
   
   // 모바일 웹 100vh 세로 사이즈 문제해결
-function setScreenSize() {
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-setScreenSize();
-window.addEventListener('resize', setScreenSize);
+// function setScreenSize() {
+// 	let vh = window.innerHeight * 0.01;
+// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+// }
+// setScreenSize();
+// window.addEventListener('resize', setScreenSize);
 </script>
 
 <script>
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-    css3: true,
-    scrollingSpeed: 700,
-    sectionSelector: '.section'
-	});
-});
+// $(document).ready(function() {
+// 	$('#fullpage').fullpage({
+// 		//options here
+//     css3: true,
+//     autoScrolling:true,
+//     scrollHorizontally: true,
+//     scrollingSpeed: 700,
+//     sectionSelector: '.section'
+// 	});
+// });
 </script>
 
 <script>
@@ -232,19 +235,19 @@ clipboard.on('success', function(e) {
 </script>
 
 <script>
-$('.slider').slick({
-  dots: true,
-  arrows: false,
-  initialSlide:1,
-  accessibility: true,
-  infinite: true,
-  speed: 300,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  loop: true,
-  fade: true,
-  cssEase: 'linear',
-});
+// $('.slider').slick({
+//   dots: true,
+//   arrows: false,
+//   initialSlide:1,
+//   accessibility: true,
+//   infinite: true,
+//   speed: 300,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   loop: true,
+//   fade: true,
+//   cssEase: 'linear',
+// });
 </script>
 
 
