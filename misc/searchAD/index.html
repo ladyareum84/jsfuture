@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="./resource/css/style.css">
 </head>
 <body>
-  <div id="fullpage">
-      <div class="section jsf_section section_01" style="background-color: red;">
+  <div class="wrap">
+    <div id="fullpage" class="fullpage">      
+      <section class="section section_01">   
         <div class="inner">
           <article class="content header">
             <a href="#" class="logo_brand"><img src="./resource/images/logo_clipdownLite.png" alt=""></a>
-          </article>
+          </article>             
           <article class="content">
             <h1 class="header_title">
               새로운<br />
@@ -95,12 +96,13 @@
                 </div> 
               </div>
             </div>
-          </article>            
+          </article>          
         </div>
-      </div>
-      <div class="section" style="background-color: greenyellow;">
+        
+      </section>
+      <section class="section section_02">
         <article class="content">
-          <div class="text_effect">
+          <!-- <div class="text_effect">
             <span>번거로운 미션은</span>
           </div>
           <div class="text_effect">
@@ -111,10 +113,61 @@
           </div>
           <div class="text_effect">
             <span>유튜브 시청형<br /> 리워드 앱</span>
-          </div>      
+          </div>       -->
         </article>
+            
+      </section>    
+      <section class="section section_03">
+        <div class="inner">
+          <article class="content">
+            <h1 class="header_title">
+              <span class="text_block light">당신을 위한</span>
+              <span class="text_block bold">쿠폰 혜택!</span>                      
+            </h1>           
+          </article>
+          <article class="content">
+            <div class="content_box">
+              <a href="#layer_popup" class="img_box code_clipboard btn_coupon" data-clipboard-text="QWER123">
+                <img src="./resource/images/img_coupon.png" alt="">
+              </a>
+            </div>
+            <div class="guide_box">
+              <div class="text_guide">해당 포인트 쿠폰은 2023년 12월 31일까지 제공 됩니다.</div>
+              <div class="text_guide">포인트 쿠폰의 초대코드를 앱에 입력하셔야 혜택이 적용 됩니다.</div>
+            </div>            
+          </article>
+        </div>
+      </section>
+    </div>
+      <!-- layer Popup -->
+      <div id="layer_popup" class="layer_popup">
+        <div class="bg_dimmed"></div>
+        <div class="popup_wrap">
+            <div class="popup_inner">
+              <div class="popup_contents">
+                <div class="popup_content">
+                  <div class="content_box">
+                    <h2 class="content_heading">
+                      <div class="code_box font_num">QWER123</div>
+                      <div class="guide_text">
+                          초대코드가 복사 되었습니다.
+                      </div>
+                    </h2>
+                    <div class="btn_area">
+                      <a href="#" class="btn btn_default btn_point_s btn_check">확인</a>
+                    </div>                         
+                  </div>
+                </div>
+              </div>
+            </div>                     
+        </div>
       </div>
-      <div class="section" style="background-color: orange;">Some section</div>      
+      <div class="btn_area_fixed">
+        <a href="#" class="btn_point">시작하기</a>
+      </div>
+      <div class="box_bg">
+        <img src="./resource/images/bg_01.png" alt="" class="bg_section">
+      </div>
   </div>
     
 </body>
@@ -137,6 +190,56 @@
 // }
 // setScreenSize();
 // window.addEventListener('resize', setScreenSize);
+
+(() => {
+  const target = document.querySelector("section.section_02 .content");
+  
+  let options = {
+    root: document.querySelector("body"),
+    rootMargin: "0px",
+    threshold: 1.0,
+  };
+
+  const makeTexts = () => {
+    target.innerHTML = `
+       <div class="text_effect">
+          <span>번거로운 미션은</span>
+        </div>
+          <div class="text_effect">
+            <span>이제 그만!</span>
+          </div>
+          <div class="text_effect">
+            <span>이제껏 없었던</span>
+          </div>
+          <div class="text_effect">
+          <span>유튜브 시청형<br /> 리워드 앱</span>
+      </div>
+    `;
+  }
+
+  const clearTexts = () => {
+    target.innerHTML = "";
+  }
+
+  let intersectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log("set");
+        makeTexts();
+      } else {
+        console.log("clear");
+        clearTexts();
+      }
+    });
+  }, options);
+
+  if(target !== null) {
+    // 주시 시작
+    intersectionObserver.observe(target);
+  }
+})();
+
+
 </script>
 
 <script>
@@ -145,7 +248,7 @@ $(document).ready(function() {
 		//options here
     css3: true,
     autoScrolling:true,
-    scrollHorizontally: true,
+    scrollHorizontally: false,
     scrollingSpeed: 700,
     sectionSelector: '.section'
 	});
@@ -167,10 +270,7 @@ clipboard.on('success', function(e) {
 
 <script>
 $('.slider').slick({
-  responsive: [
-  { breakpoint: 320, // 화면의 넓이가 320px 이상일 때
-      settings: {
-        slidesToShow: 1,
+  slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
   arrows: false,
@@ -182,17 +282,7 @@ $('.slider').slick({
   autoplaySpeed: 3000,
   loop: true,
   fade: true,
-  cssEase: 'linear'
-      }
-    }
- 
-  
-      
-    
-  
-  
-
-  ]
+  cssEase: 'linear',
 });
 $('.slider').slick('goTo', 0);
 </script>
