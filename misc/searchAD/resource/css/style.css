@@ -166,19 +166,44 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     justify-content: center;
     align-items: center;
     position: relative;
+    top: -15%;
     width: 100%;
-    height: 40%;
+    height: 15%;
+    max-height: 100px;
 }
-.section_02 .text_effect{position: absolute; width: 100%; top: 40%; left: 0; transform: translateY(-40%); text-align: center;}
-.section_02 .text_effect p{font-size: 3.6rem; font-weight: 700; color: #fff;}
-.section_02.item_02-02 .text_effect p, .section_02.item_02-04 .text_effect p{font-weight: 900;}
-.section_02.item_02-01{}
-.section_02.item_02-02{}
-.section_02.item_02-03{}
-.section_02.item_02-04{}
+.section_02 .text_effect{
+  position: absolute; 
+  width: 100%; 
+  top: 50%; 
+  left: 0; 
+  transform: translateY(-50%); 
+  text-align: center;
+}
+.section_02 .text_effect{
+  opacity: 0;  
+  animation: switch 6.5s linear infinite;
+}
+.section_02 .text_effect span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 4.4rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.section_02 .text_effect:nth-child(2) { animation-delay: 1.5s}
+.section_02 .text_effect:nth-child(3) { animation-delay: 3s}
+.section_02 .text_effect:nth-child(4) { animation-delay: 4.5s}
+.section_02 .text_effect:nth-child(5) { animation-delay: 6s;}
+
+
+
 
 .section_03{display: flex; align-items: center; position: relative; top: -40px}
-.section_03 .content{padding: 20px 0;}
+.section_03 .content{display: flex; flex-direction: column; justify-content: center; position: relative; top: -40px; margin-top padding: 20px 0;}
 .section_03 .header_title{text-align: center; color: #fff; }
 .section_03 .header_title span.light{font-size: 3.6rem;}
 .section_03 .header_title span.bold{font-size: 3.8rem; letter-spacing: 2px;}
@@ -253,19 +278,19 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_02 .item_img_main .img_item_01{position: absolute; top:220px; right: 38px; height: 50px; z-index: -1;}
 .slide_02 .item_img_sub .img_item_06{top:112px; right: 20px; height: 72px; z-index: 10;}
 .slide_02 .item_img_sub .img_item_01{top:100px; left: -15px; height: 20px;}
-.slide_02 .item_img_sub .img_item_02{top:120px; right: 0; height: 15px;}
+.slide_02 .item_img_sub .img_item_02{top:120px; right: 15px; height: 15px;}
 .slide_02 .item_img_sub .img_item_03{top:38px; left: 10px; height: 25px;}
 .slide_02 .item_img_sub .img_item_04{top:10px; right: 20px; height: 30px;}
-.slide_02 .item_img_sub .img_item_05{top:160px; left: 10px; height: 15px;}
+.slide_02 .item_img_sub .img_item_05{top:160px; left: 25px; height: 15px;}
 
 .slide_03 .item_img_main{position: relative; top:-80px; right: 0; transform: scale(0.65);}
 .slide_03 .item_img_sub .img_item_01{top:116px; right: -80px; height: 160px;}
 .slide_03 .item_img_sub .img_item_02{top:0; left: 0; height: 45px;}
-.slide_03 .item_img_sub .img_item_03{top:48px; right: -20px; height: 40px;}
+.slide_03 .item_img_sub .img_item_03{top:48px; right: -10px; height: 40px;}
 .slide_03 .item_img_sub .img_item_04{top:250px; left: 20px; height: 30px;}
 .slide_03 .item_img_sub .img_item_05{top:140px; left: -15px; height: 50px;}
 .slide_03 .item_img_sub .img_item_06{top:200px; right: -10px; height: 40px;}
-.slide_03 .item_img_sub .img_item_07{top:-30px; right: 48px; height: 28px;}
+.slide_03 .item_img_sub .img_item_07{top:-30px; right: 56px; height: 28px;}
 
 
 
@@ -301,14 +326,14 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_01 .main_visual .item_img_sub .img_item_01{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.5s linear forwards,
-  bounce01 3s 1.5s ease infinite;
+  fadein 0.8s 0.5s linear forwards,
+  bounce01 4s 0.8s ease infinite;
 }
 .slide_01 .main_visual .item_img_sub .img_item_02{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.5s linear forwards,
-  bounce02 3s 1.7s ease infinite;
+  fadein 0.8s 0.5s linear forwards,
+  bounce02 4s 0.8s ease infinite;
 }
 
 
@@ -316,52 +341,51 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_02 .main_visual .item_img_main .img_item_01{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.5s linear forwards,
-  bounce01-01 5s 1.5s ease infinite;
-
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-01 4s 1.8s ease infinite;
 }
 
 .slide_02 .main_visual .item_img_sub .img_item_01{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.7s linear forwards,
-  bounce02-01 5s 1.7s ease infinite;
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-02 4s 1.8s ease infinite;
 
 }
 .slide_02 .main_visual .item_img_sub .img_item_02{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.5s linear forwards,
-  bounce02-02 5s 1.5s ease infinite;
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-03 4s 1.8s ease infinite;
   
 }
 .slide_02 .main_visual .item_img_sub .img_item_03{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.7s linear forwards,
-  bounce02-03 5s 1.7s ease infinite;
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-04 4s 1.8s ease infinite;
   
 }
 .slide_02 .main_visual .item_img_sub .img_item_04{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.5s linear forwards,
-  bounce02-04 5s 1.5s ease infinite;
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-05 4s 1.8s ease infinite;
   
 }
 .slide_02 .main_visual .item_img_sub .img_item_05{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.7s linear forwards,
-  bounce02-05 5s 1.7s ease infinite;
-  
+  fadein 0.8s 1.8s linear forwards,
+  bounce02-06 4s 1.8s ease infinite;  
 }
 .slide_02 .main_visual .item_img_sub .img_item_06{
   opacity: 0;
   right: -30px;
   animation: 
-    slideR_02 0.5s 0.6s linear forwards,
-    fadein 0.5s 0.6s linear forwards; 
+    fadein 0.5s 0.6s linear forwards,
+    slideR_02 0.8s 0.8s linear forwards;
+    
 
 }
 
@@ -375,7 +399,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_03 .main_visual .item_img_sub .img_item_01{
   opacity: 0;
   animation: 
-    slideR_03 0.5s 0.6s linear forwards,
+    slideR_03 0.8s 0.8s linear forwards,
     fadein 0.5s 0.6s linear forwards; 
 
 }
@@ -418,24 +442,10 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_03 .main_visual .item_img_sub .img_item_07{
   opacity: 0;
   animation: 
-  fadein 0.8s 1.7s linear forwards,
-  bounce03-06 4s 1.7s ease infinite;
-  
+  fadein 0.8s 1.5s linear forwards,
+  bounce03-06 4s 1.5s ease infinite;
+
 }
-
-.slide_03 .main_visual .item_img_sub .img_item_07{
-  opacity: 0;
-  animation: 
-  fadein 0.8s 1.7s linear forwards,
-  bounce03-07 4s 1.7s ease infinite;
-  
-}
-
-
-
-
-
-
 
 .ani_fadein{ animation: fadein 1s linear forwards;}
 @keyframes fadein {
@@ -508,30 +518,42 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 }
 @keyframes bounce02-01 {
   0% {
-      top: 80px;
+      top: 210px;
     }
     50% {
-      top: 90px;
+      top: 220px;
     }
     100% {
-      top: 80px;
+      top: 210px;
     }
   
 }
 
 @keyframes bounce02-02 {
   0% {
-      top: 90px;
+      top: 110px;
     }
     50% {
       top: 100px;
     }
     100% {
-      top: 90px;
+      top: 110px;
     }
   
 }
 @keyframes bounce02-03 {
+  0% {
+      top: 130px;
+    }
+    50% {
+      top: 120px;
+    }
+    100% {
+      top: 130px;
+    }
+  
+}
+@keyframes bounce02-04 {
   0% {
       top: 28px;
     }
@@ -543,39 +565,27 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     }
   
 }
-@keyframes bounce02-04 {
+@keyframes bounce02-05 {
   0% {
-      top: 0px;
+      top: 0;
     }
     50% {
       top: 10px;
     }
     100% {
-      top: 0px;
-    }
-  
-}
-@keyframes bounce02-05 {
-  0% {
-      top: 150px;
-    }
-    50% {
-      top: 160px;
-    }
-    100% {
-      top: 150px;
+      top: 0;
     }
   
 }
 @keyframes bounce02-06 {
   0% {
-      top: 10px;
+      top: 190px;
     }
     50% {
-      top: 20px;
+      top: 200px;
     }
     100% {
-      top: 10px;
+      top: 190px;
     }
   
 }
@@ -687,31 +697,9 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     
 }
 
-.section_02 .content{
-  
-  
-}
-
-.section_02 .text_effect{
-  opacity: 0;  
-  animation: switch 8s linear infinite;
-}
-.section_02 .text_effect span{
-  display: block;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-
-.section_02 .text_effect:nth-child(2) { animation-delay: 2s}
-.section_02 .text_effect:nth-child(3) { animation-delay: 4s}
-.section_02 .text_effect:nth-child(4) { animation-delay: 6s}
-.section_02 .text_effect:nth-child(5) { animation-delay: 8s}
-
 
 @keyframes switch {
-  0% { opacity: 0;filter: blur(20px); transform:scale(5)}
+  0% { opacity: 0;filter: blur(20px); transform:scale(5);}
   3% { opacity: 1;filter: blur(0); transform:scale(1)}
   10% { opacity: 1;filter: blur(0); transform:scale(.9)}
   13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
