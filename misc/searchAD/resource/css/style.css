@@ -38,7 +38,7 @@ audio, canvas, progress, video {display: inline-block; vertical-align: baseline;
 div,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,p,th,td,input,textarea,select,button,pre,a{font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif; font-size:14px; font-size:1.4rem; line-height: 1.4; color:#333;}
 html, body{width: 100%; height: 100%;}
 html{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
-body{overflow-x: hidden; overflow-y: auto; -ms-overflow-style:none; -webkit-font-smoothing: antialiased;}
+body{overflow: hidden; touch-action: none; -ms-overflow-style:none; -webkit-font-smoothing: antialiased;}
 textarea{width:100%; resize: none;} 
 select, input, img, button{vertical-align:middle; border-radius: 0;}
 button{border: 0; background: transparent; cursor: pointer;}
@@ -192,14 +192,10 @@ svg{max-width: 100%; width: 100%; user-select : none;}
   vertical-align: middle;
   color: #fff;
 }
-
 .section_02 .text_effect:nth-child(2) { animation-delay: 1.5s}
 .section_02 .text_effect:nth-child(3) { animation-delay: 3s}
 .section_02 .text_effect:nth-child(4) { animation-delay: 4.5s}
 .section_02 .text_effect:nth-child(5) { animation-delay: 6s;}
-
-
-
 
 .section_03{display: flex; align-items: center; position: relative; top: -40px}
 .section_03 .content{display: flex; flex-direction: column; justify-content: center; position: relative; top: -40px; margin-top padding: 20px 0;}
@@ -290,8 +286,6 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .slide_03 .item_img_sub .img_item_05{top:140px; left: -15px; height: 50px;}
 .slide_03 .item_img_sub .img_item_06{top:200px; right: -10px; height: 40px;}
 .slide_03 .item_img_sub .img_item_07{top:-30px; right: 56px; height: 28px;}
-
-
 
 /* Popup Style */
 .layer_popup{display: none; position: fixed; _position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1050; }
@@ -660,40 +654,6 @@ svg{max-width: 100%; width: 100%; user-select : none;}
       top: -20px;
     }
   
-}
-
-
-
-
-
-
-
-
-.animated {
-  -webkit-animation-duration: 3s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-
-
-@keyframes identifier {
-    0% {
-        transform : translateX(0px); /* 애니메이션이 0%만큼 동작시 */
-      }
-      50% {
-        transform : translateX(-20px); /* 애니메이션이 50%만큼 동작시 */
-      }
-      100% {
-        transform : translateX(20px); /* 애니메이션이 100%만큼 동작시 */
-      }
-    
 }
 
 
