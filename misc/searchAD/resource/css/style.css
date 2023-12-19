@@ -162,20 +162,15 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .section_01 .slide_nav{padding-left: 20px;}
 .section_02{padding: 0 10px;}
 .section_02 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
     position: relative;
-    top: -20%;
     width: 100%;
-    height: 15%;
-    max-height: 100px;
+    height: 100%;
 }
 .section_02 .text_effect{
   position: absolute; 
   width: 100%; 
-  top: 50%; 
+  top: 35%; 
   left: 0; 
   transform: translateY(-50%); 
   text-align: center;
@@ -663,7 +658,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 @keyframes switch {
   0% { opacity: 0;filter: blur(20px); transform:scale(5);}
-  3% { opacity: 1;filter: blur(0); transform:scale(1)}
+  2% { opacity: 1;filter: blur(0); transform:scale(1)}
   10% { opacity: 1;filter: blur(0); transform:scale(.9)}
   13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
   80% { opacity: 0}
