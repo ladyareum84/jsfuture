@@ -667,3 +667,10 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 
 
 
+@media only screen and (max-width: 767px) {
+  .main_visual {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
