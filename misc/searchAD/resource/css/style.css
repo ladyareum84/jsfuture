@@ -101,19 +101,44 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     margin: 0 auto;
 }
 .header{
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
     width: 100%;
     height: 56px;
     background-color: transparent;
+    z-index: 999;
 }
+.header .inner{padding: 0 20px;}
 .logo_brand{
     display: inline-block;
     position: relative;
+    padding: 10px 0;
 }
 .logo_brand img{
     height: 12px;
 }
 
+.header .menu_sub{
+  position: relative;
+  float: right;
+  height: 24px;
+  margin: 8px 0;
+  padding: 5px 0;
+
+}
+
+.header .menu_sub .icon_bar{
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+}
+.menu_sub .icon_bar+.icon_bar{
+  margin-top: 4px
+}
 .section{
   display: flex;
   justify-content: center;
@@ -156,7 +181,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 /* Style Section */
 .section_01 .content{padding: 20px 0;}
 .section_01 .content_slide{height: 400px; margin: 0 -20px;}
-.section_01 .header_title{font-size: 3.6rem; font-weight: 600; color: #fff;}
+.section_01 .header_title{font-size: 3.6rem; font-weight: 600; line-height: 1.2; color: #fff;}
 .section_01 .title_des{font-size: 1.4rem; font-weight: 400; color: #fff; padding-top: 10px;}
 .section_01 .slide_nav{padding-left: 20px;}
 .section_02{padding: 0 10px;}
@@ -221,6 +246,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
     color: #fff;
     font-size: 2.2rem;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 /* Slider dot Style */
