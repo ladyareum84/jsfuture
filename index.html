@@ -17,7 +17,7 @@
     <style>
         body{font-family: 'SCDream', 'Noto Sans KR', 'Apple SD Gothic Neo', Helvetica, sans-serif;}
         a{color: #3b393a; text-decoration: none;}
-        code{background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 1px 1px -1px rgb(0 0 0 / 15%); padding: 3px 5px;}
+        code{position: relative; vertical-align: middle; font-size: 11px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 1px 1px -1px rgb(0 0 0 / 15%); padding: 3px 5px;}
         hr{opacity:.18;}
         .wrapper{position:relative;}
         .container{position:relative; width:100%; max-width:1280px; margin:0 auto; padding: 20px 20px;}
@@ -88,38 +88,185 @@
                         <article class="list-pagelink">
                             <div class="card">
                                 <div class="card-header">
+                                    <span>클립다운 공유하기 페이지 개선 작업</span>
+                                    <span class="float-end">2023.10.27</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        -  클립다운 공유하기 페이지 개선 작업진행<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-320
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/view_share/index.html" target="_blank">외부 공유하기 페이지</a>
+                                            <span class="float-end">2023.10.27</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 반응형 웹페이지 스타일 방식으로 변경</p>
+                                                <p class="lead lead_text">- 하단영역 캐시메이트 배너 영역 추가</p>    
+                                                <p class="lead lead_text">- 해상도 767px 이하부터 다크모드 <code>.wrap_dark</code> 모바일 스타일로 변경</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>  
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
                                     <span>클립다운 캐시메이트 서비스 공통 UI 페이지 작업 </span>
                                     <span class="float-end">2023.05.-</span>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text"> 
                                         - 클립다운 프로그램 PC Webview 페이지별 UI 스타일 작업 <br />
-                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-269?atlOrigin=eyJpIjoiMTQ4OGUyZTdmM2ZjNGI4NDkyZTEzNjRiNGVmMmEzZGIiLCJwIjoiaiJ9 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-269
                                     </p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
                                             <a href="../jsfuture/clipdown/2023/webview/reward/mypage/mypage.html" target="_blank">마이페이지</a>
-                                            <span class="float-end">2023.00.00</span>
-                                            <div class="alert">
-                                                <p class="lead lead_text">- 가입팝업을 통한 가입률 향상을 위한 디자인 레이아웃 및 스타일 2차 작업</p> 
-                                                <p class="lead lead_text">- 전체 마크업 구조 및 스타일 변경</p>                                            
-                                            </div>
+                                            <span class="float-end">2023.05.31</span>
                                         </li>
                                         <li class="list-group-item">
                                             <a href="../jsfuture/clipdown/2023/webview/reward/mypage/errorpage.html" target="_blank">에러페이지</a>
                                             <span class="float-end">2023.00.00</span>
-                                            <div class="alert">
-                                                <p class="lead lead_text">- 가입팝업을 통한 가입률 향상을 위한 디자인 레이아웃 및 스타일 2차 작업</p> 
-                                                <p class="lead lead_text">- 전체 마크업 구조 및 스타일 변경</p>                                            
-                                            </div>
                                         </li>
                                         <li class="list-group-item">
                                             <a href="../jsfuture/clipdown/2023/webview/reward/view/download_section.html" target="_blank">시청화면페이지 - 포인트 적립 안내 툴팁</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/point_save.html" target="_blank">캐시메이트 - 포인트 모으기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/point_use.html" target="_blank">캐시메이트 - 포인트 쓰기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/event_list.html" target="_blank">캐시메이트 - 이벤트 리스트 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/event_detail-veiw_invite.html" target="_blank">캐시메이트 - 이벤트 상세 페이지_친구초대</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_list.html" target="_blank">문의하기페이지 - 메인화면</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_detail_clipdown.html" target="_blank">문의하기페이지 - 클립다운</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_detail_form.html" target="_blank">문의하기페이지 - 캐시메이트 1:1 문의하기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램  Webview Popup UI 스타일 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-270
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_inflemate.html" target="_blank">로그인 - 인플메이트 통합 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_auth_google.html" target="_blank">로그인 - 기기변경 확인</a>
                                             <span class="float-end">2023.00.00</span>
-                                            <div class="alert">
-                                                <p class="lead lead_text">- 유튜브 플레이어 하단 구간 다운로드의 좌측 영역 포인트 적립안내 툴팁 추가</p> 
-                                                <p class="lead lead_text">- 전체 마크업 구조 및 스타일 변경</p>                                            
-                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_auth_google_fail.html" target="_blank">로그인 - 기기변경 확인 > 메일 인증 실패 시</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_01-01_terms_agree.html" target="_blank">회원가입 - 약관동의 01</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_01-02_terms_agree.html" target="_blank">회원가입 - 약관동의 02</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_02_mobileAuth_authNum.html" target="_blank">회원가입 - 휴대폰 인증</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_03_account_google.html" target="_blank">회원가입 - 구글계정 연동</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_04_register_user-info.html" target="_blank">회원가입 - 프로필 등록</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_05_complate_event.html" target="_blank">회원가입 - 이벤트 안내</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_mypage.html" target="_blank">마이페이지 - 로그인</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/check_install.html" target="_blank">광고 - 클립다운 라이트 설치 확인 > 앱 미설치 시 노출되는 팝업</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/event_info_check-install.html" target="_blank">이벤트 - 클립다운 라이트 설치 확인 > 앱 미설치 안내</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 캐시메이트 APP Webview 페이지별 UI 스타일 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-271
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/main.html" target="_blank">캐시메이트 메인페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/main_banner.html" target="_blank">캐시메이트 메인 배너영역 이미지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_usage-detail.html" target="_blank">보유포인트 - 사용내역</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_use.html" target="_blank">보유포인트 - 포인트 쓰기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_use_check.html" target="_blank">보유포인트 - 포인트 쓰기 > 팝업 사용확인</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_use_insufficient-point.html" target="_blank">보유포인트 - 포인트 쓰기 > 팝업 잔액부족</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_save.html" target="_blank">보유포인트 - 포인트 모으기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_save_ad.html" target="_blank">보유포인트 - 포인트 모으기 > 팝업 광고</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/event_list.html" target="_blank">보유포인트 - 이벤트</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/event_detail-veiw_invite.html" target="_blank">보유포인트 - 이벤트 > 친구초대하기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
                                         </li>
                                     </ul>
                                 </div>
