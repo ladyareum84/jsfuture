@@ -137,7 +137,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .section_ad_banner{display: none;}
 .section_ad_banner{border-top: 5px solid #f5f5f5;}
 .section_ad_banner .contents{position: relative; text-align: center; padding: 20px 0;}
-.section_ad_banner .item_banner{width: 360px; min-height: 200px; background: #f7f7f7; margin: 0 auto;}
+.section_ad_banner .item_banner{width: 360px; min-height: 200px; background: #f7f7f7; margin: 0 auto; padding: 0;}
 
 .section_footer{text-align: center; border-top: 1px solid #f5f5f5; padding: 20px 10px;}
 .copyright{font-size: 11px; font-size: 1.1rem; color: #666;}
