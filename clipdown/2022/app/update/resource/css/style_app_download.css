@@ -25,7 +25,7 @@
 
 .btn_box{display: block; position: relative; width: 100%; text-align: center;}
 .btn_box div:last-child{padding-right: 0;}
-.btn_downlad{display: inline-block; position: relative; overflow: hidden; min-width: 240px;  text-align: center; vertical-align: middle; touch-action: manipulation;
+.btn_downlad{display: inline-block; position: relative; overflow: hidden; min-width: 276px;  text-align: center; vertical-align: middle; touch-action: manipulation;
 -webkit-tap-highlight-color: transparent; white-space: nowrap; padding: 15px 26px 14px;}
 .btn_downlad:hover{text-decoration: none;}
 .download_apk, .download_one{display: inline-block; padding-right: 10px;}
@@ -37,7 +37,7 @@
 .download_one .btn_downlad{background: #272727; color: #fff; padding: 9px 26px;}
 .download_one .btn_downlad:hover{background: #000;}
 .download_one .btn_downlad svg{position: relative; top: 2px;}
-@media screen and (max-width : 539px) { 
+@media screen and (max-width : 640px) { 
     .btn_box div:last-child{padding-bottom: 0;}
     .btn_downlad{display: block; width: 100%;}
     .download_apk, .download_one{display: block; padding-right: 0; padding-bottom: 20px;}
