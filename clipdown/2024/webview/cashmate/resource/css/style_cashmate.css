@@ -664,9 +664,9 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_invite .invite_list .list_item .data{position: relative; top: 2px; font-weight: 700;}
 
 /* tooltip style bubble */
-.tooltip_layer{position: absolute; top:0; background: #fff; text-align: center; border: 1px solid #989898; padding: 8px 10px; box-sizing: border-box; box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); z-index: 9999;}
+.tooltip_layer{position: absolute; top:0; background: #fff; text-align: center; border: 1px solid #666; padding: 8px 10px; box-sizing: border-box; box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); z-index: 9999;}
 .tooltip_layer::before, .tooltip_layer::after{content: ''; position: absolute; width: 0; height: 0; border-top: 5px solid transparent; border-left: 5px solid transparent; border-right: 5px solid transparent; right: 30px;}
-.tooltip_layer::before{border-bottom: 5px solid #898989; top: -10px;}
+.tooltip_layer::before{border-bottom: 5px solid #666; top: -10px;}
 .tooltip_layer::after{border-bottom: 5px solid #fff; top: -9px;}
 .tooltip_layer .content_text {position: relative; top: 2px;}
 .tooltip_layer .content_text span{font-weight: 700;}
