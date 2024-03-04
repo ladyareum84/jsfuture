@@ -669,6 +669,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .tooltip_layer::before{border-bottom: 5px solid #ddd; top: -10px;}
 .tooltip_layer::after{border-bottom: 5px solid #fff; top: -9px;}
 .tooltip_layer .content_text {position: relative; top: 2px;}
-.tooltip_layer .content_text span{font-weight: 600;}
+.tooltip_layer .content_text span{font-weight: 700;}
 
 .tooltip_layer.tooltip_point{top: 50px; right: 20px; min-width: 145px;}
