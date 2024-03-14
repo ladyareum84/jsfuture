@@ -671,3 +671,24 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .tooltip_layer .content_text {position: relative; top: 2px;}
 .tooltip_layer .content_text span{font-weight: 700;}
 .tooltip_layer.tooltip_point{top: 50px; right: 20px; min-width: 145px;}
+
+/* 
+    * 2024-03-13
+    * 캐시메이트 이벤트 기본 레이아웃 스타일
+    * 출석체크 캘린더 스타일
+*/
+.calendar_month{}
+.calendar_head{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
+.calendar_head .day_calendar{display: flex; position: relative; width: 14.2857%;     text-align: center;}
+.calendar_head .day_calendar span{position: relative; width: 100%; font-size: 22px; font-size: 2.2rem; font-weight: 500; padding: 2vw 0;}
+.calendar_body .week{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
+.calendar_body .week .day_item{display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 14.2857%; aspect-ratio: 1 / 1;} 
+.calendar_body .week .day_item span{display: flex; align-items: center; justify-content: center;}
+.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.6rem;}
+
+
+
+
+
+
+
