@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="_100" x="17.5" y="8.5" width="26" height="23" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.184"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_13" x="5.5" y="13.5" width="14" height="14" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-opacity="0.18"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="item_stemp" transform="translate(-1136 -812)">
+    <g id="Ellipse_27" data-name="Ellipse 27" transform="translate(1136 812)" fill="#e21c1a" stroke="#e21c1a" stroke-width="1">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="23.5" fill="none"/>
+    </g>
+    <g id="Group_2422" data-name="Group 2422" transform="translate(-51 -20)">
+      <text id="적립완료" transform="translate(1195 868)" fill="#fff" font-size="9" font-family="GmarketSansMedium, Gmarket Sans" letter-spacing="-0.05em"><tspan x="0" y="0">적립완료</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 1187, 832)" filter="url(#_100)">
+        <text id="_100-2" data-name="100" transform="translate(19 25)" fill="#fff" font-size="14" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="-0.05em"><tspan x="0" y="0">100</tspan></text>
+      </g>
+      <g id="icon_point" transform="translate(1193.348 847.105)">
+        <g transform="matrix(1, 0, 0, 1, -6.35, -15.11)" filter="url(#Ellipse_13)">
+          <circle id="Ellipse_13-2" data-name="Ellipse 13" cx="5.5" cy="5.5" r="5.5" transform="translate(7 15)" fill="#fff"/>
+        </g>
+        <text id="P" transform="translate(3.652 8.895)" fill="#e21c1a" font-size="9" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">P</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

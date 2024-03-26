@@ -677,14 +677,33 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     * 캐시메이트 이벤트 기본 레이아웃 스타일
     * 출석체크 캘린더 스타일
 */
+.section_event_attend .contents .content_title{padding: 20px 0;}
+.section_event_attend .contents .content_title h1{font-size: 2.2rem; font-weight: 600;}
+.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 2px; font-size: 2.4rem;}
+.section_event_attend .contents_attend_state{position: relative; padding: 20px 0;}
+.contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center;}
+.contents_attend_state .state_box .state_item{ position: relative; width: 50%; text-align: center; padding: 20px 0;}
+.contents_attend_state .state_box.row_01 .state_item{display: block;}
+.contents_attend_state .state_box.row_01 .state_puzzle{background: #f7f7f7; height: 92px;}
+.contents_attend_state .state_box.row_02 .state_item{display: flex; justify-content: space-around;}
+
+
+
+
 .calendar_month{}
 .calendar_head{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_head .day_calendar{display: flex; position: relative; width: 14.2857%;     text-align: center;}
-.calendar_head .day_calendar span{position: relative; width: 100%; font-size: 22px; font-size: 2.2rem; font-weight: 500; padding: 2vw 0;}
+.calendar_head .day_calendar span{position: relative; width: 100%; color: #666; font-size: 18px; font-size: 1.8rem; font-weight: 600; padding: 2vw 0;}
 .calendar_body .week{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_body .week .day_item{display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 14.2857%; aspect-ratio: 1 / 1;} 
 .calendar_body .week .day_item span{display: flex; align-items: center; justify-content: center;}
-.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.6rem;}
+.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.6rem; font-weight: 600;}
+.calendar_body .week .day_item .day.check .active_check{position: absolute; top:0; left: 0; width: 100%; height: 100%; z-index: 1;}
+
+
+@media (min-width: 992px) {
+    .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
+}
 
 
 
