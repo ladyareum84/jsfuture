@@ -443,7 +443,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
-.webview_cashmate.dark{background: #20222B;}
+.webview_cashmate.dark{background: #20222B; height: initial;}
 .webview_cashmate.dark .section .contents{display: block;}
 .webview_cashmate.dark .section .header_title{border-bottom: 1px solid #333542;}
 .webview_cashmate.dark .section .header_title h1{color: #fff;}
@@ -483,6 +483,12 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item:hover{background: #20222B; border: 1px solid #9E9EA5;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box .list_item:hover{background: #272936; border: 1px solid #353745;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box p{color: #fff; line-height: 2;}
+/* 0411 PC dark 모드일때 이벤트 상세페이지 - 친구초대 */
+.webview_cashmate.dark .section_invite .content_top, .webview_cashmate.dark .section_invite .content_middle {position: relative; max-width: 640px; margin: 0 auto;}
+.webview_cashmate.dark .section_invite .content_item{padding-bottom: 40px; margin-bottom: 0;}
+.webview_cashmate.dark .section_invite .content_item div{color: #333;}
+.webview_cashmate.dark .content_event .item_event{padding: 0 20px;}
+.webview_cashmate.dark .section_invite .input_group.code_register .form_control{background: #fff; color: #333;}
 
 
 /* 
