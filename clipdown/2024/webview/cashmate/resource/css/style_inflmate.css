@@ -126,7 +126,7 @@ body{background: #202020;}
 .guide_noti_box{background: #f7f7f7; padding: 10px 10px; margin-bottom: 10px;}
 .guide_noti_box .noti_text{}
 
-.webview_box .content_box .content_item.content_event{border: 0; margin-top: 0;}
+.webview_box .content_box .content_item.content_event{position: relative; overflow: hidden; border: 0; margin-top: 0;}
 .content_event .item_event{margin-bottom: 20px;}
 .content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
 .content_event .item_event .card_event{display: flex; align-items: center; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;} 
@@ -223,3 +223,5 @@ body{background: #202020;}
 .info_box_app .icon_launcher{position: relative; overflow: hidden; width: 36px; height: 36px; border-radius: 5px; box-shadow: 0 0 4px 0 rgba(0,0,0,0.25); margin-right: 10px;}
 .info_box_app .item_text{font-weight: 600;}
 
+/*  */
+.wrap_popup .webview_box.join_info_event {padding-bottom: 40px;}

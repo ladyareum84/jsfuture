@@ -83,6 +83,7 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .clear:after{content:" "; display:block; clear:both;}
 .skip{position:absolute; left:0; top:-100px; z-index:1000; width:100%; height:60px; line-height:60px; text-align:center; font-size:20px; color:#fff; transition:all 0.5s; background:#666;}
 .skip:focus{top:0;}
+.full_height{height: 100%;}
 
 /* Responsive Layout Column Grid  */
 .row {position: relative; overflow: hidden; margin-left: -20px; margin-right: -20px;}
