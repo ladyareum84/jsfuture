@@ -35,9 +35,9 @@ body{background: #202020;}
     
 */
 .wrap {position: relative; width: 100%;}
-.wrap_popup{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%; padding: 0 10px;}
-.wrap_popup .inner {position: relative; max-width: 398px; width: 100%; height: 100%; margin: 0 auto; min-width: 320px;}
-.wrap_popup .webview_box{background: #fff; padding : 25px 25px; border-radius: 0 0 10px 10px}
+.wrap_popup{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+.wrap_popup .inner {position: relative; max-width: 398px; width: 100%; height: 100%; margin: 0 auto; min-width: 280px;}
+.wrap_popup .webview_box{background: #fff; padding : 25px 25px;}
 .webview_box {height: 100%; text-align: center;}
 .webview_box .content_box{padding-bottom: 10px;}
 .webview_box .content_box:last-child{padding-bottom: 0;}
@@ -113,8 +113,8 @@ body{background: #202020;}
 .join_info .form_auth .form_group{margin-bottom: 10px;}
 
 .join_info .form_auth .input_group{display: table; position: relative; width: 100%; border-collapse: separate;}
-.join_info .form_auth .input_group .form_control{width: 60%; min-width: 100px;}
-.join_info .form_auth .input_group .btn_input{width: 38%;}
+.join_info .form_auth .input_group .form_control{width: 68%; min-width: 100px;}
+.join_info .form_auth .input_group .btn_input{width: 30%;}
 .join_info .form_auth .text_link{font-size:11px; font-size:1.1rem; color: #1a73e8;}
 
 
@@ -174,7 +174,7 @@ body{background: #202020;}
 .form_control{display: inline-block; width: 100%; height: 42px; background: #fff; border: 1px solid #ddd; padding: 7px 10px 5px 10px;}
 .input_group{margin-bottom: 10px;}
 .input_group .form_control{height: 42px; padding: 5px 5px;}
-.input_group .btn_input{min-width: 80px; font-size: 21px; font-size: 1.2rem; font-weight: 600; border-radius: 0; padding: 12px 10px;}
+.input_group .btn_input{min-width: 80px; font-size: 21px; font-size: 1.2rem; font-weight: 600; border-radius: 0; padding: 12px 5px;}
 .input_form .form_input_error:focus{outline: 0; outline-offset:0;}
 .input_group .btn_input.disabled{border: 1px solid #ddd; color: #bbb; pointer-events: none; cursor: default;}
 .input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}

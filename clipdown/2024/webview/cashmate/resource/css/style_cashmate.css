@@ -698,8 +698,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_event_attend{padding: 0;}
 .section_event_attend .contents{padding: 0 20px;}
 .section_event_attend .contents .content_title{padding: 20px 0;}
-.section_event_attend .contents .content_title h1{font-size: 2.2rem; font-weight: 600;}
-.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 2px; font-size: 2.4rem;}
+.section_event_attend .contents .content_title h1{font-size: 1.8rem; font-weight: 600;}
+.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 2px; font-size: 2rem;}
 .section_event_attend .contents_attend_state{position: relative; padding: 20px 20px;}
 .contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center;}
 .contents_attend_state .state_box .state_item{ position: relative; width: 50%; text-align: center; padding: 20px 0;}
@@ -710,22 +710,25 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .calendar_month{}
 .calendar_head{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_head .day_calendar{display: flex; position: relative; width: 14.2857%;     text-align: center;}
-.calendar_head .day_calendar span{position: relative; width: 100%; color: #666; font-size: 18px; font-size: 1.8rem; font-weight: 600; padding: 2vw 0;}
+.calendar_head .day_calendar span{position: relative; width: 100%; color: #666; font-size: 14px; font-size: 1.4rem; font-weight: 600; padding: 2vw 0;}
 .calendar_body .week{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_body .week .day_item{display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 14.2857%; aspect-ratio: 1 / 1;} 
 .calendar_body .week .day_item span{display: flex; align-items: center; justify-content: center;}
-.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.6rem; font-weight: 600;}
+.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.2rem; font-weight: 500;}
 .calendar_body .week .day_item .day.check .active_check{position: absolute; top:0; left: 0; width: 100%; height: 100%; z-index: 1;}
 @media (min-width: 992px) {
     .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
 }
 
 /* Puzzle Style */
-.attend_puzzle{position: relative; max-width: 480px; min-width: 280px; margin: 0 auto; border: 8px solid #333;}
+.attend_puzzle{position: relative; max-width: 480px; min-width: 280px; margin: 0 auto;}
 .attend_puzzle{background-image: url('../images/event/attend_puzzle/img_puzzle_bg.png'); background-size: contain; background-repeat: no-repeat;}
 .puzzle_piece_state{display: inline-block; position: relative; width: 100%; max-width: 480px; vertical-align: middle;}
 .puzzle_piece_state .piece_item{position: relative; float: left; width: 33.333%; min-width: 80px; opacity: 0;}
 .puzzle_piece_state .piece_item.on{opacity: 1;}
+.attend_puzzle.puzzle_s{min-width: 160px;}
+
+.attend_puzzle.puzzle_s .puzzle_piece_state .piece_item{min-width: auto;}
 
 
 
