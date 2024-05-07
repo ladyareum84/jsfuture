@@ -701,11 +701,30 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_event_attend .contents .content_title h1{font-size: 1.8rem; font-weight: 600;}
 .section_event_attend .contents .content_title h1 .font_en{position: relative; top: 2px; font-size: 2rem;}
 .section_event_attend .contents_attend_state{position: relative; padding: 20px 20px;}
-.contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center;}
+.section_event_attend .contents_attend_state .inner{position: relative; width: 100%; margin: 0 auto;}
+.contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
 .contents_attend_state .state_box .state_item{ position: relative; width: 50%; text-align: center; padding: 20px 0;}
 .contents_attend_state .state_box.row_01 .state_item{display: block;}
-.contents_attend_state .state_box.row_01 .state_puzzle{background: #f7f7f7; height: 92px;}
-.contents_attend_state .state_box.row_02 .state_item{display: flex; justify-content: space-around;}
+.contents_attend_state .state_box.row_01 .state_attend_point h3{font-size: 1.4rem; font-weight: 700;}
+.contents_attend_state .state_box.row_01 .state_attend_point .state_point{font-size: 2.4rem; font-weight: 700; text-align: center; padding: 10px 0;}
+.contents_attend_state .state_box.row_01 .state_attend_point .text_link{font-size: 1.1rem; color:#666;}
+.contents_attend_state .state_box.row_01 .state_attend_point .text_link:after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    margin-top: 7px;
+    margin-left: 5px;
+    transform: rotate(-45deg);
+    transition: all .2s ease-in-out;
+}
+.contents_attend_state .state_box.row_01 .state_puzzle{background: #f7f7f7; padding: 0;}
+.contents_attend_state .state_box.row_02 .state_item{ margin-bottom: 10px; }
+.contents_attend_state .state_box.row_02 .state_item{display: flex; justify-content: space-between; align-items: center; background: #f7f7f7; border-radius: 5px; margin: 0 5px; padding: 10px 10px;}
+.contents_attend_state .state_box.row_02 .state_attend_day{margin-left: 0 !important;}
+.contents_attend_state .state_box.row_02 .state_puzzle_acquire{margin-right: 0 !important;}
 
 .calendar_month{}
 .calendar_head{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
@@ -714,11 +733,23 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .calendar_body .week{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_body .week .day_item{display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 14.2857%; aspect-ratio: 1 / 1;} 
 .calendar_body .week .day_item span{display: flex; align-items: center; justify-content: center;}
-.calendar_body .week .day_item .day{position: relative; width: 8.5vw; height: 8.5vw; text-align: center; background: #f7f7f7; border-radius: 50%; font-size: 1.2rem; font-weight: 500;}
+.calendar_body .week .day_item .day{position: relative; width: 10.5vw; height: 10.5vw; text-align: center; background: transparent; border-radius: 50%; font-size: 1.4rem; font-weight: 500;}
 .calendar_body .week .day_item .day.check .active_check{position: absolute; top:0; left: 0; width: 100%; height: 100%; z-index: 1;}
 @media (min-width: 992px) {
     .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
+    .calendar_body .week .day_item .day_check{width: 4vw; height: calc(4vw * 1.7430); margin: -6.8vw;}
 }
+
+.day_check{position: relative; overflow: hidden; width: 10.5vw; height: calc(10.5vw* 1.7430); margin: -1.8vw; transform: rotate(60deg);}
+.day_check .hex_inner1{position: absolute; top:50%; left: 50%; width: inherit; height: inherit; transform: translate(-50%, -50%) rotate(60deg); overflow: hidden;}
+.day_check .hex_inner2{display: flex; justify-content: center; align-items: center; width: inherit; height: inherit; background-size: cover !important; position: absolute;  top:50%; left: 50%; transform: translate(-50%, -50%) rotate(-120deg); overflow: hidden; background: transparent;}
+.day_check.check_on .hex_inner2{background: #207FD1;}
+.day_check.check_on .hex_inner2 .day{color: #fff;}
+.day_check.check_on.check_badge .badge_gold{width: 8.1vw;}
+.check_today{position: absolute; top: -14px; left: -8%; min-width: 56px; border-radius: 50px; background: #ffd700; text-align: center; padding: 3px 6px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
+.check_today::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #ffd700; border-bottom: 5px solid transparent;}
+.check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
+
 
 /* Puzzle Style */
 .attend_puzzle{position: relative; max-width: 480px; min-width: 280px; margin: 0 auto;}
@@ -727,7 +758,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .puzzle_piece_state .piece_item{position: relative; float: left; width: 33.333%; min-width: 80px; opacity: 0;}
 .puzzle_piece_state .piece_item.on{opacity: 1;}
 .attend_puzzle.puzzle_s{min-width: 160px;}
-
 .attend_puzzle.puzzle_s .puzzle_piece_state .piece_item{min-width: auto;}
 
 

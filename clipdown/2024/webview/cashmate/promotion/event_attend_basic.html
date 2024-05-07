@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>[APP] WebView 이벤트 - 출석체크 </title>
+    <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap webview_cashmate">
+        <div class="container">
+            <section class="section section_event_attend">                
+                <article class="contents_attend_visual">
+                    <div class="content_top">
+                        <img src="../resource/images/img_cashmate_invitaion.png" alt="" style="width: 780px;">                            
+                    </div>
+                </article>
+                <article class="contents contents_attend_state">
+                    <div class="inner">
+                        <div class="state_box row_01">
+                            <div class="state_item state_attend_point">
+                                <h3><span class="font_en">3</span>월 출첵 리워드</h3>
+                                <div class="state_point"><span class="font_en">700P</span></div>
+                                <a href="#" class="text_link guide_text">적립 내역 확인</a>
+                            </div>
+                            <div class="state_item state_puzzle">
+                                <div class="attend_puzzle puzzle_s">
+                                    <div class="puzzle_piece_state">
+                                        <div class="piece_item on 01">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_01.png" alt="">
+                                        </div>
+                                        <div class="piece_item on 02">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_02.png" alt="">
+                                        </div>
+                                        <div class="piece_item 03">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_03.png" alt="">
+                                        </div>
+                                        <div class="piece_item 04">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_04.png" alt="">
+                                        </div>
+                                        <div class="piece_item 05">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_05.png" alt="">
+                                        </div>
+                                        <div class="piece_item 06">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_06.png" alt="">
+                                        </div>
+                                        <div class="piece_item 07">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_07.png" alt="">
+                                        </div>
+                                        <div class="piece_item 08">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_08.png" alt="">
+                                        </div>
+                                        <div class="piece_item 09">
+                                            <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_09.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="state_box row_02">
+                            <div class="state_item state_attend_day">
+                                <div class="text_item">출석</div>
+                                <div class="state_day">
+                                    <span class="font_en num_state point-color">8일</span> / 
+                                    <span class="font_en num_total">31일</span>
+                                </div>
+                            </div>
+                            <div class="state_item state_puzzle_acquire">
+                                <div class="text_item">조각획득</div>
+                                <div class="state_day">
+                                    <span class="font_en num_state point-color">2개</span> / 
+                                    <span class="font_en num_total">7개</span>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>                   
+                    
+                </article>
+                <article class="contents contents_attend">
+                    <div class="content content_middle">
+                        <div class="inner">
+                            <div class="content_title">
+                                <h1><span class="font_en">3</span>월 출석현황</h1>
+                            </div>
+                            <div class="content_item">
+                                <div class="content_box calendar_month">
+                                    <div class="calendar_head">
+                                        <div class="day_calendar sun"><span>일</span></div>
+                                        <div class="day_calendar"><span>월</span></div>
+                                        <div class="day_calendar"><span>화</span></div>
+                                        <div class="day_calendar"><span>수</span></div>
+                                        <div class="day_calendar"><span>목</span></div>
+                                        <div class="day_calendar"><span>금</span></div>
+                                        <div class="day_calendar sat"><span>토</span></div>
+                                    </div>
+                                    <div class="calendar_body">
+                                        <div class="week">
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">1</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <div class="day_item">
+                                                <span class="day font_en">3</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">4</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">5</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">6</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">7</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">8</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">9</span>
+                                            </div>
+                                        </div>
+                                        <div class="week">                                            
+                                            <div class="day_item">
+                                                <span class="day font_en">10</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">11</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">12</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">13</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">14</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en check">15
+                                                    <span class="active_check">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+                                                            <defs>
+                                                              <filter id="_100" x="18.5" y="13.5" width="26" height="23" filterUnits="userSpaceOnUse">
+                                                                <feOffset input="SourceAlpha"></feOffset>
+                                                                <feGaussianBlur stdDeviation="0.5" result="blur"></feGaussianBlur>
+                                                                <feFlood flood-opacity="0.184"></feFlood>
+                                                                <feComposite operator="in" in2="blur"></feComposite>
+                                                                <feComposite in="SourceGraphic"></feComposite>
+                                                              </filter>
+                                                              <filter id="Ellipse_13" x="5.5" y="17.5" width="15" height="15.091" filterUnits="userSpaceOnUse">
+                                                                <feOffset input="SourceAlpha"></feOffset>
+                                                                <feGaussianBlur stdDeviation="0.5" result="blur-2"></feGaussianBlur>
+                                                                <feFlood flood-opacity="0.18"></feFlood>
+                                                                <feComposite operator="in" in2="blur-2"></feComposite>
+                                                                <feComposite in="SourceGraphic"></feComposite>
+                                                              </filter>
+                                                            </defs>
+                                                            <g id="item_stemp" transform="translate(-1136 -812)">
+                                                              <circle id="Ellipse_27" data-name="Ellipse 27" cx="23.5" cy="23.5" r="23.5" transform="translate(1136 812)" fill="#e21c1a"></circle>
+                                                              <g id="Group_2421" data-name="Group 2421" transform="translate(-52 -15)">
+                                                                <g transform="matrix(1, 0, 0, 1, 1188, 827)" filter="url(#_100)">
+                                                                  <text id="_100-2" data-name="100" transform="translate(20 30)" fill="#fff" font-size="14" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="-0.05em"><tspan x="0" y="0">100</tspan></text>
+                                                                </g>
+                                                                <g id="icon_point" transform="translate(1193.98 845.703)">
+                                                                  <g transform="matrix(1, 0, 0, 1, -5.98, -18.7)" filter="url(#Ellipse_13)">
+                                                                    <ellipse id="Ellipse_13-2" data-name="Ellipse 13" cx="6" cy="6.045" rx="6" ry="6.045" transform="translate(7 19)" fill="#fff"></ellipse>
+                                                                  </g>
+                                                                  <text id="P" transform="translate(4.62 9.297)" fill="#e21c1a" font-size="9" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">P</tspan></text>
+                                                                </g>
+                                                              </g>
+                                                            </g>
+                                                        </svg>
+                                                            
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en check">16
+                                                    <span class="active_check">
+                                                        <img src="../resource/images/event/attend_item_check.svg" alt="">  
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <div class="day_item">
+                                                <span class="day font_en">17</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">18</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">19</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">20</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">21</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">22</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">23</span>
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <div class="day_item">
+                                                <span class="day font_en">24</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">25</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">26</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">27</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">28</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">29</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="day font_en">30</span>
+                                            </div>
+                                        </div>
+                                        <div class="week">
+                                            <div class="day_item">
+                                                <span class="day font_en">31</span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>
+                                            <div class="day_item">
+                                                <span class="dis"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>                                    
+                                </div>  
+                            </div>                                                                                                      
+                        </div>
+                    </div> 
+                </article>
+                <article class="contents contents_attend_mission">                    
+                    <div class="content_item">
+                        <div class="content_title">
+                            <h1>출석체크 미션</h1>
+                            <div class="item_content_r">
+                                <a href="" class="btn_guide">안내</a>
+                            </div>
+                        </div>
+                        <ul class="mission_list">
+                            <li>
+                                <div class="img_box">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <span class="text-block">출석체크만 해도,</span>
+                                    <span class="text-block bold">매일 100P 리워드 적립!</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img_box">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <span class="text-block">골드버튼 퍼즐 완성하면,</span>
+                                    <span class="text-block bold">5000P 추가 적립!</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content_item">
+                        <div class="content_title">
+                            <h1>골드버튼 조각 획득 방법</h1>
+                        </div>
+                        <div class="attend_puzzle puzzle_bg">
+                            <div class="puzzle_piece_state">
+                                <div class="piece_item on 01">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_01.png" alt="">
+                                </div>
+                                <div class="piece_item on 02">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_02.png" alt="">
+                                </div>
+                                <div class="piece_item 03">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_03.png" alt="">
+                                </div>
+                                <div class="piece_item 04">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_04.png" alt="">
+                                </div>
+                                <div class="piece_item 05">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_05.png" alt="">
+                                </div>
+                                <div class="piece_item 06">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_06.png" alt="">
+                                </div>
+                                <div class="piece_item 07">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_07.png" alt="">
+                                </div>
+                                <div class="piece_item 08">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_08.png" alt="">
+                                </div>
+                                <div class="piece_item 09">
+                                    <img src="../resource/images/event/attend_puzzle/img_puzzle_piece_09.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                </article>
+                <article class="contents contents_attend_invite">
+                    <div class="content_title">
+                        <h1>친구초대</h1>
+                    </div>
+                    <div class="content_item">
+                        
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    <script src="../resource/js/common_cashmate.js"></script>
+    <script src="../resource/js/clipboard.min.js"></script>
+    
+    
+</body>
+</html>
