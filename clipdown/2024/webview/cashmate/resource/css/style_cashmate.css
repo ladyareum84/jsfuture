@@ -696,10 +696,11 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     * 출석체크 캘린더 스타일
 */
 .section_event_attend{padding: 0;}
+.section_event_attend .font_en{position: relative; top: 1px;}
 .section_event_attend .contents{padding: 0 20px;}
-.section_event_attend .contents .content_title{padding: 20px 0;}
-.section_event_attend .contents .content_title h1{font-size: 1.8rem; font-weight: 600;}
-.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 2px; font-size: 2rem;}
+.section_event_attend .contents .content_title{padding: 20px 0 10px 0;}
+.section_event_attend .contents .content_title h1{font-size: 1.6rem; font-weight: 600; line-height: 1.6;}
+.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 1px; font-weight: 700;}
 .section_event_attend .contents_attend_state{position: relative; padding: 20px 20px;}
 .section_event_attend .contents_attend_state .inner{position: relative; width: 100%; margin: 0 auto;}
 .contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
@@ -735,10 +736,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .calendar_body .week .day_item span{display: flex; align-items: center; justify-content: center;}
 .calendar_body .week .day_item .day{position: relative; width: 10.5vw; height: 10.5vw; text-align: center; background: transparent; border-radius: 50%; font-size: 1.4rem; font-weight: 500;}
 .calendar_body .week .day_item .day.check .active_check{position: absolute; top:0; left: 0; width: 100%; height: 100%; z-index: 1;}
-@media (min-width: 992px) {
-    .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
-    .calendar_body .week .day_item .day_check{width: 4vw; height: calc(4vw * 1.7430); margin: -6.8vw;}
-}
 
 .day_check{position: relative; overflow: hidden; width: 10.5vw; height: calc(10.5vw* 1.7430); margin: -1.8vw; transform: rotate(60deg);}
 .day_check .hex_inner1{position: absolute; top:50%; left: 50%; width: inherit; height: inherit; transform: translate(-50%, -50%) rotate(60deg); overflow: hidden;}
@@ -750,6 +747,23 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .check_today::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #ffd700; border-bottom: 5px solid transparent;}
 .check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
 
+/* Attend info List */
+.section_event_attend .contents.attend_info .content_title, .section_event_attend .contents.attend_mission .content_title{padding: 20px 0 0 0;}
+.section_event_attend .content_item{padding: 10px 0;}
+.section_event_attend .list_item{display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
+.attend_info{position: relative; background: #207FD1;}
+.attend_info .content_title h1, .attend_info .content_title .summary{color: #fff;}
+.attend_info .list_item{border-bottom: 2px dotted #fff;}
+.attend_info .list_item:last-child{border-bottom: 0; padding-bottom: 20px;}
+.attend_info .list_item div{color: #fff;}
+.attend_info .list_item .num_box{width: 0; font-size: 14px; font-size: 1.4rem; font-weight: 700;}
+.attend_info .list_item .text_box{width: 65%; line-height: 1.6;}
+.attend_info .list_item .img_box{width: 20%; text-align: right;}
+.attend_info .list_item .img_box img{width: 20%; min-width: 44px;}
+.attend_mission .content_title h1{color: #207FD1;}
+.attend_mission .text_box{width: 50%; line-height: 1.5;}
+.attend_mission .btn_Part{background: #207FD1; color: #fff; line-height: 1.6; padding: 4px 15px;}
+.attend_mission .btn_Part_complete{background: #eee; color: #aaa; line-height: 1.6; padding: 4px 15px; cursor: default;}
 
 /* Puzzle Style */
 .attend_puzzle{position: relative; max-width: 480px; min-width: 280px; margin: 0 auto;}
@@ -760,6 +774,27 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .attend_puzzle.puzzle_s{min-width: 160px;}
 .attend_puzzle.puzzle_s .puzzle_piece_state .piece_item{min-width: auto;}
 
+/*  */
+.bul_list [class^=bul_item_]{
+    position: relative;
+    font-size: 10px;
+    font-size: 1rem;
+    letter-spacing: -.06rem;
+    text-align: left;
+    line-height: 1.4;
+}
+.bul_item_dot{padding-left: 6px;}
+.bul_item_dot:before{content: ''; display: block; position: absolute; top: 7px; left: 0; width: 3px; height: 3px; border-radius: 50%; background-color: #888;}
+.contents_guideline{background: #f7f7f7; padding: 20px 20px 40px !important;}
+.contents_guideline h3{font-weight: 700; padding-bottom: 10px;}
+.contents_guideline .bul_list li{display: block; font-size: 12px; font-size: 1.2rem; line-height: 1.4; padding: 0; padding-left: 8px; padding-bottom: 5px;}
 
 
+@media (min-width: 992px) {
+    .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
+    .calendar_body .week .day_item .day_check{width: 4vw; height: calc(4vw * 1.7430); margin: -6.8vw;}
+    .day_check.check_on.check_badge .badge_gold{width: 3.4vw;}
+
+    .attend_info .list_item .img_box img{width: 40%;}
+}
 
