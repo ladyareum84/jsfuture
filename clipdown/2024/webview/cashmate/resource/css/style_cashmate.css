@@ -744,7 +744,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .day_check .hex_inner2{display: flex; justify-content: center; align-items: center; width: inherit; height: inherit; background-size: cover !important; position: absolute;  top:50%; left: 50%; transform: translate(-50%, -50%) rotate(-120deg); overflow: hidden; background: transparent;}
 .day_check.check_on .hex_inner2{background: #207FD1;}
 .day_check.check_on .hex_inner2 .day{color: #fff;}
-.day_check.check_on.check_badge .badge_gold{width: 8.1vw;}.check_today{position: absolute; top: -14px; left: -5%; min-width: 65px; border-radius: 50px; background: #ffd700; text-align: center; padding: 4px 8px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
+.day_check.check_on.check_badge .badge_gold{width: 8.1vw;}.check_today{position: absolute; top: -14px; left: -15%; min-width: 65px; border-radius: 50px; background: #ffd700; text-align: center; padding: 4px 8px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
 .check_today::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #ffd700; border-bottom: 5px solid transparent;}
 .check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
 
