@@ -752,7 +752,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 /* Attend info List */
 .section_attend .contents.attend_info .content_title, .section_attend .contents.attend_mission .content_title{padding: 20px 0 0 0;}
 .section_attend .contents.attend_info .content_title h1, .section_attend .contents.attend_mission .content_title h1{font-size: 18px; font-size: 1.8rem; }
-.section_attend .contents.attend_info .content_title .summary, .section_attend .contents.attend_mission .content_title .summary{font-size: 16px; font-size: 1.6rem; }
+.section_attend .contents.attend_info .content_title .summary, .section_attend .contents.attend_mission .content_title .summary{font-size: 14px; font-size: 1.4rem; }
 .section_attend .content_item{padding: 10px 0;}
 .section_attend .list_item{display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
 
@@ -763,13 +763,14 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .attend_info .list_item:last-child{border-bottom: 0; padding-bottom: 20px;}
 .attend_info .list_item div{color: #fff;}
 .attend_info .list_item .num_box{width: 0; font-size: 16px; font-size: 1.6rem; font-weight: 700;}
-.attend_info .list_item .text_box{width: 65%; font-size: 16px; font-size: 1.6rem; line-height: 1.6;}
+.attend_info .list_item .text_box{width: 65%; font-size: 14px; font-size: 1.4rem; line-height: 1.4;}
 .attend_info .list_item .img_box{width: 20%; text-align: right;}
 .attend_info .list_item .img_box img{width: 20%; min-width: 44px;}
 .attend_mission .content_title h1{color: #207FD1;}
-.attend_mission .text_box{width: 50%; line-height: 1.5;}
-.attend_mission .btn_Part{background: #207FD1; color: #fff; line-height: 1.6; padding: 4px 15px;}
-.attend_mission .btn_Part_complete{background: #eee; color: #aaa; line-height: 1.6; padding: 4px 15px; cursor: default;}
+.attend_mission .text_box{width: 50%; font-size: 14px; font-size: 1.4rem; line-height: 1.4;}
+.attend_mission .btn{font-size: 14px; font-size: 1.4rem; line-height: 1.8; padding: 5px 20px;}
+.attend_mission .btn_Part{background: #207FD1; color: #fff;}
+.attend_mission .btn_Part_complete{background: #eee; color: #aaa; cursor: default;}
 
 /* Puzzle Style */
 .attend_puzzle{position: relative; max-width: 480px; min-width: 280px; margin: 0 auto;}
