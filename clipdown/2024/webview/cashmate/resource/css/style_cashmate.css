@@ -695,21 +695,22 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     * 캐시메이트 이벤트 기본 레이아웃 스타일
     * 출석체크 캘린더 스타일
 */
-.section_event_attend{padding: 0;}
-.section_event_attend .font_en{position: relative; top: 1px;}
-.section_event_attend .contents{padding: 0 20px;}
-.section_event_attend .contents .content_title{padding: 20px 0 10px 0;}
-.section_event_attend .contents .content_title h1{font-size: 1.6rem; font-weight: 600; line-height: 1.6;}
-.section_event_attend .contents .content_title h1 .font_en{position: relative; top: 1px; font-weight: 700;}
-.section_event_attend .contents_attend_state{position: relative; padding: 20px 20px;}
-.section_event_attend .contents_attend_state .inner{position: relative; width: 100%; margin: 0 auto;}
-.contents_attend_state .state_box{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
-.contents_attend_state .state_box .state_item{ position: relative; width: 50%; text-align: center; padding: 20px 0;}
-.contents_attend_state .state_box.row_01 .state_item{display: block;}
-.contents_attend_state .state_box.row_01 .state_attend_point h3{font-size: 1.4rem; font-weight: 700;}
-.contents_attend_state .state_box.row_01 .state_attend_point .state_point{font-size: 2.4rem; font-weight: 700; text-align: center; padding: 10px 0;}
-.contents_attend_state .state_box.row_01 .state_attend_point .text_link{font-size: 1.1rem; color:#666;}
-.contents_attend_state .state_box.row_01 .state_attend_point .text_link:after{
+.section_attend{padding: 0;}
+.section_attend .font_en{position: relative; top: 1px;}
+.section_attend .contents{padding: 0 20px;}
+.section_attend .contents .content_title{padding: 20px 0;}
+.section_attend .contents .content_title h1{font-size: 1.6rem; font-weight: 600; line-height: 1.6;}
+.section_attend .contents .content_title h1 .font_en{position: relative; top: 1px; font-weight: 700;}
+.section_attend .content_attend_state{position: relative; padding: 0;}
+.section_attend .content_attend_state .inner{position: relative; width: 100%; max-width: 480px; margin: 0 auto;}
+.content_attend_state .state_bg{background: #fff; border-radius: 5px; padding: 10px 10px;}
+.content_attend_state .state_box{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
+.content_attend_state .state_box .state_item{ position: relative; width: 50%; text-align: center; padding: 10px 0;}
+.content_attend_state .state_box.row_01 .state_item{display: block;}
+.content_attend_state .state_box.row_01 .state_attend_point h3{font-size: 1.4rem; font-weight: 700;}
+.content_attend_state .state_box.row_01 .state_attend_point .state_point{font-size: 2.4rem; font-weight: 700; text-align: center; padding: 10px 0;}
+.content_attend_state .state_box.row_01 .state_attend_point .text_link{font-size: 1.1rem; color:#666;}
+.content_attend_state .state_box.row_01 .state_attend_point .text_link:after{
     content: '';
     position: absolute;
     width: 6px;
@@ -721,12 +722,14 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     transform: rotate(-45deg);
     transition: all .2s ease-in-out;
 }
-.contents_attend_state .state_box.row_01 .state_puzzle{background: #f7f7f7; padding: 0;}
-.contents_attend_state .state_box.row_02 .state_item{ margin-bottom: 10px; }
-.contents_attend_state .state_box.row_02 .state_item{display: flex; justify-content: space-between; align-items: center; background: #f7f7f7; border-radius: 5px; margin: 0 5px; padding: 10px 10px;}
-.contents_attend_state .state_box.row_02 .state_attend_day{margin-left: 0 !important;}
-.contents_attend_state .state_box.row_02 .state_puzzle_acquire{margin-right: 0 !important;}
+.content_attend_state .state_box.row_01 .state_puzzle{background: #f7f7f7; padding: 0;}
+.content_attend_state .state_box.row_02 .state_item{ margin-bottom: 10px; }
+.content_attend_state .state_box.row_02 .state_item{display: flex; justify-content: space-between; align-items: center; background: #f7f7f7; border-radius: 5px; margin: 0 5px; padding: 10px 10px;}
+.content_attend_state .state_box.row_02 .state_attend_day{margin-left: 0 !important;}
+.content_attend_state .state_box.row_02 .state_puzzle_acquire{margin-right: 0 !important;}
 
+.bg_bar{position: relative; height: 20px; background: #fff; border-top-left-radius: 20px; border-top-right-radius: 20px; margin: 0 -20px; margin-top: 40px;}
+.content_middle .content_title{padding: 10px 0 !important; text-align: center;}
 .calendar_month{}
 .calendar_head{display: flex; justify-content: center; align-items: center; max-width: 767px; margin:0 auto;}
 .calendar_head .day_calendar{display: flex; position: relative; width: 14.2857%;     text-align: center;}
@@ -748,9 +751,9 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
 
 /* Attend info List */
-.section_event_attend .contents.attend_info .content_title, .section_event_attend .contents.attend_mission .content_title{padding: 20px 0 0 0;}
-.section_event_attend .content_item{padding: 10px 0;}
-.section_event_attend .list_item{display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
+.section_attend .contents.attend_info .content_title, .section_attend .contents.attend_mission .content_title{padding: 20px 0 0 0;}
+.section_attend .content_item{padding: 10px 0;}
+.section_attend .list_item{display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
 .attend_info{position: relative; background: #207FD1;}
 .attend_info .content_title h1, .attend_info .content_title .summary{color: #fff;}
 .attend_info .list_item{border-bottom: 2px dotted #fff;}
@@ -771,7 +774,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .puzzle_piece_state{display: inline-block; position: relative; width: 100%; max-width: 480px; vertical-align: middle;}
 .puzzle_piece_state .piece_item{position: relative; float: left; width: 33.333%; min-width: 80px; opacity: 0;}
 .puzzle_piece_state .piece_item.on{opacity: 1;}
-.attend_puzzle.puzzle_s{min-width: 160px;}
+.attend_puzzle.puzzle_s{min-width: 100px;}
 .attend_puzzle.puzzle_s .puzzle_piece_state .piece_item{min-width: auto;}
 
 /*  */
@@ -789,8 +792,21 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .contents_guideline h3{font-weight: 700; padding-bottom: 10px;}
 .contents_guideline .bul_list li{display: block; font-size: 12px; font-size: 1.2rem; line-height: 1.4; padding: 0; padding-left: 8px; padding-bottom: 5px;}
 
+/* Main Top Visual */
+.section_attend .contents.contents_attend_visual{position: relative; background: #207FD1;}
+.contents_attend_visual .bg_item_attend{background-image: url(../images/event/img_main_item.png); background-size: contain; background-repeat: no-repeat; position: absolute; top: 200px; right: 0; width: 60%; height: 50%; opacity: .35;}
+.contents_attend_visual .content_top{display: block; position: relative; text-align: center; padding: 20px 0 20px;}
+.contents_attend_visual .content_top .content_title{position: relative; width: 82%; max-width: 500px; margin: 0 auto; padding-bottom: 60px;}
+.contents_attend_visual .content_top .content_message{position: relative;}
+.contents_attend_visual .content_top .content_message h2{display: inline-block; font-size: 20px; font-size: 2rem; font-weight: 700; color: #fff; padding: 10px 20px; letter-spacing: -.1rem;}
+.item_bubble{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -180%); border-radius: 50px; background: #fff; text-align: center; padding: 3px 10px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
+.item_bubble::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 7px solid transparent; border-right: 7px solid transparent;  border-top: 7px solid #fff; border-bottom: 7px solid transparent;}
+.item_bubble .item_text{position: relative; top: 1px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01rem;}
+.item_bubble .item_img{position: relative; float: right; width: 16%; right: 7px;}
+
 
 @media (min-width: 992px) {
+    .contents_attend_visual .bg_item_attend{background-image: url(../images/event/img_main_item.png); background-size: contain; background-repeat: no-repeat; position: absolute; top: 278px; right: 0; width: 55%; height: 50%; opacity: .35;}
     .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
     .calendar_body .week .day_item .day_check{width: 4vw; height: calc(4vw * 1.7430); margin: -6.8vw;}
     .day_check.check_on.check_badge .badge_gold{width: 3.4vw;}
