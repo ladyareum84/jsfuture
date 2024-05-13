@@ -367,6 +367,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_event .item_event .card_event .event_title .event_desc{display: block; font-size: 11px; font-size: 1.1rem; font-weight: 400; color: #666; padding-top: 5px;}
 .content_event .item_event .card_event .event_img{flex-shrink: 0; width: 88px; height: 88px; margin-left: auto;}
 .content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
+.content_event .item_event.banner .card_event{padding: 0; border: transparent;}
+.content_event .item_event.banner .card_event .img_banner{flex-shrink: 0; width: 100%; margin-left: auto;}
 @media screen and (max-width: 600px){
     .content_list .row-contents .col-2{width: 100%;}
 }
