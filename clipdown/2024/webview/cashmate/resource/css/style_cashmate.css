@@ -165,7 +165,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* option filter style */
 .content_option{position: relative; overflow: hidden; width: 100%;  padding: 10px 0;}
-.content_option .filter_date{display: inline-block; padding-left: 20px;}
+.content_option .filter_date{display: inline-block;}
 .filter_date input[type=radio]{display: none; margin: 10px 10px;}
 .filter_date input[type=radio] + label{display: inline-block; position: relative; background: transparent; border: 1px solid #ddd; color: #666; font-size: 11px; font-size: 1.1rem; border-radius: 7px; padding: 4px 12px 5px; cursor: pointer;}
 .filter_date input[type=radio]:checked + label{background: #666; border: 1px solid #666; color: #fff; z-index: 1;}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>[APP] WebView 보유포인트 - 포인트 내역 리스트 </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel='stylesheet' href='./resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/style_cashmate.css' type='text/css'>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap webview_cashmate">
+        <div class="container">
+            <section class="section section_mypoint section_mb">
+                <article class="contents contents_top" style="margin-bottom: 10px;">
+                    <div class="content_mypoint">
+                        <div class="item_mypoint">
+                            <div class="item_title fl-l">보유포인트</div>
+                            <div class="font_num item_point fl-r">1,950P</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contents">
+                    <div class="tabs_multi">
+                        <div class="tab_container">
+                            <!-- Tab content 01_1 포인트 내역 -->
+                            <div class="tab_content" id="tab_01_1">
+                                <div class="sub_tabs_box">
+                                    <ul class="tabs sub_tabs_nav">
+                                        <li rel="sub_tab_01" class="active">적립</li>
+                                        <li rel="sub_tab_02" class="">사용</li>
+                                    </ul>
+                                    <div class="content_option">
+                                        <div class="filter_date option_sort fl-l">
+                                            <label class="form_selectbox">
+                                                <select id="filter_sort" name="sorting" class="form_control select_style">
+                                                    <option value="latest">최신순</option>
+                                                    <option value="past">과거순</option>
+                                                    
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="filter_date option_sort fl-l" style="padding-left: 5px;">
+                                            <label class="form_selectbox">
+                                                <select id="filter_sort" name="sorting" class="form_control select_style">
+                                                    <option value="all">전체</option>
+                                                    <option value="viewer">영상시청</option>
+                                                    <option value="AD">광고참여</option>
+                                                    <option value="attend">출석체크</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="filter_date fl-r">
+                                            <input type="radio" id="radio1" name="filterDate" value="all" checked="">
+                                            <label for="radio1">1주일</label>
+                                            <input type="radio" id="radio2" name="filterDate" value="false">
+                                            <label for="radio2">1개월</label>
+                                            <input type="radio" id="radio3" name="filterDate" value="false">
+                                            <label for="radio3">3개월</label>
+                                        </div>
+                                    </div>
+                                    <!-- Sub content 01 적립 -->
+                                    <div class="sub_content" id="sub_tab_01">
+                                        <div class="form_table_group form_list list_scroll content_infinite_scroll">
+                                            <form role="form">
+                                                <table class="table_style board_list">
+                                                    <caption>포인트 내역 - 적립</caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">동영상 시청</li>
+                                                                    <li class="point point_save font_num">+100P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- 리스트 내역이 없을 때 노출 -->
+                                                        <tr class="hide">
+                                                            <td class="content_empty">
+                                                                <div class="list_empty">
+                                                                    <span>
+                                                                        포인트 적립 이력이 존재하지 않습니다.<br/>
+                                                                        유튜브를 시청하시면 포인트가 자동으로 적립됩니다.
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- // 리스트 내역이 없을 때 노출 -->
+                                                    </tbody>
+                                                </table>
+                                            </form>                                           
+                                        </div>
+                                        <div class="list_pagination point">
+                                            <div class="pagination">
+                                                <ul class="previous">
+                                                    <li><a href="">이전</a></li>
+                                                </ul>
+                                                <ul class="pages">
+                                                    <li class="active"><a href="">1</a></li>
+                                                    <li><a href="">2</a></li>
+                                                    <li><a href="">3</a></li>
+                                                    <li><a href="">4</a></li>
+                                                    <li><a href="">5</a></li>
+                                                </ul>
+                                                <ul class="next">
+                                                    <li><a href="">다음</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <!-- Sub content 02 사용 -->
+                                    <div class="sub_content" id="sub_tab_02">
+                                        <div class="form_table_group form_list list_scroll">
+                                            <form role="form">
+                                                <table class="table_style board_list">
+                                                    <caption>포인트 내역 - 사용</caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">[구매] 스타벅스 아이스 아메리카노 (T)</li>
+                                                                    <li class="point point_use font_num">-6,000P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">[구매] 스타벅스 아이스 아메리카노 (T)</li>
+                                                                    <li class="point point_use font_num">-6,000P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">[구매] 스타벅스 아이스 아메리카노 (T)</li>
+                                                                    <li class="point point_use font_num">-6,000P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">[구매] 스타벅스 아이스 아메리카노 (T)</li>
+                                                                    <li class="point point_use font_num">-6,000P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date font_num">YYYY.MM.DD</td>
+                                                            <td class="product">
+                                                                <ul>
+                                                                    <li class="list_title">[구매] 스타벅스 아이스 아메리카노 (T)</li>
+                                                                    <li class="point point_use font_num">-6,000P</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- table 리스트 내역이 없을 때 노출 -->
+                                                        <tr class="hide">
+                                                            <td class="content_empty">
+                                                                <div class="list_empty">
+                                                                    <span> 포인트 사용 이력이 존재하지 않습니다. </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- // 리스트 내역이 없을 때 노출 -->
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="./resource/js/common_cashmate.js"></script>
+    <script>
+        // PLUGIN
+        const InfiniteScroll = function (element) {
+        element = typeof element == 'object' ? element : document.querySelector( element );
+        const elementTarget = document.querySelector( element.dataset.list ) || window;
+        const eventName = 'infiniteScroll';
+        const event = new Event( eventName );
+        let isLoading = false;
+        const treshold = element.dataset.treshold || '50%';
+        
+        this.thrPc = ( parseFloat( treshold ) / 100 );
+
+        const verify = () => {
+            if ( isLoading ) return;
+            
+            const treshold = this.thrPc * elementTarget.offsetHeight;
+            const { scrollHeight, scrollTop, offsetHeight } = elementTarget;
+            const infiniteHeight = element.offsetHeight;
+            const distanceFromInfinite = scrollHeight - scrollTop - offsetHeight - treshold - infiniteHeight;
+            
+            if ( distanceFromInfinite < 0 ) {
+            show();
+            element.dispatchEvent( event );
+            }
+        }
+
+        (function init () {
+            if ( element ) {
+            if ( isImmediateCheck() ) {
+                show();
+                window.addEventListener( 'load', () => element.dispatchEvent( event ) );
+            }
+            elementTarget.addEventListener( 'scroll', verify, { passive: true } );
+            window.addEventListener( 'resize', verify );
+            }
+        })();
+
+        function show () {
+            isLoading = true;
+            element.classList.add('active');
+        }
+
+        function hide () {
+            isLoading = false;
+            element.classList.remove('active');
+        }
+
+        function isImmediateCheck () {
+            var immediateCheck = element.dataset.immediateCheck;
+            return immediateCheck === 'true' || immediateCheck === '';
+        }
+
+        // Public methods
+        this.complete = function () {
+            hide();
+        };
+
+        this.stop = function () {
+            hide();
+            elementTarget.removeEventListener( 'scroll', verify );
+            elementTarget.removeEventListener( 'resize', verify );
+            element.style.display = 'none';
+            element.innerHTML = '';
+        };
+
+        this.on = function ( event, callback ) {
+            if ( event == eventName) {
+            element.addEventListener( event, callback );
+            } else {
+            console.error( 'This event does not exist' );
+            }
+        };
+        }
+
+        // EXAMPLE
+        // -------
+        var list = document.querySelector('.form_list tbody'),
+            nextItem = 1,
+            total = 100;
+
+        var infiniteScroll = new InfiniteScroll('.infinite_scroll');
+        infiniteScroll.on( 'infiniteScroll', loadData );
+    </script>
+    
+</body>
+</html>
