@@ -764,6 +764,38 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .check_today::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #ffd700; border-bottom: 5px solid transparent;}
 .check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
 
+/* calendar javascript style */
+.content_title.calendar_nav{display: flex; justify-content: center; align-items: center;}
+.calendar_nav .nav_btn{padding: 0 15px;}
+.calendar_nav .nav_btn.go_prev, .calendar_nav .nav_btn.go_next{display: block;width: 48px; height: 32px; font-size: 0; display: flex; justify-content: center; align-items: center; }
+.calendar_nav .nav_btn.go_prev::before, .calendar_nav .nav_btn.go_next::before{content: ''; display: block; width: 14px; height: 14px; border: 2px solid #333; border-width: 2px 2px 0 0; transition: border 0.1s;}
+.calendar_nav .nav_btn.go_prev{transform: rotate(-135deg);}
+.calendar_nav .nav_btn.go_next{transform: rotate(45deg);}
+.section_attend .contents .calendar_nav h1{font-size: 18px; font-size: 1.8rem; font-weight: 600; line-height: 1.8;}
+.section_attend .content_item.calendar_wrap{position: relative; padding-bottom: 40px;}
+.calendar_wrap .days{display: flex; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee;}
+.calendar_wrap .dates{display: flex; flex-flow: wrap; height: 30vh;}
+.calendar_wrap .day{
+    display: flex;
+    justify-content: center;
+    width: calc(100% / 7);
+    height: 10.5vw;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    align-items: center;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+.calendar_wrap .day:nth-child(7n -6){color: #e21d19;}
+.calendar_wrap .day.disable{color: #ddd;}
+
+
+
+
+
+
 /* Attend info List */
 .section_attend .contents.attend_info .content_title, .section_attend .contents.attend_mission .content_title{padding: 20px 0 0 0;}
 .section_attend .contents.attend_info .content_title h1, .section_attend .contents.attend_mission .content_title h1{font-size: 18px; font-size: 1.8rem; }

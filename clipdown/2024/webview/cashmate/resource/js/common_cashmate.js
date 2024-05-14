@@ -63,6 +63,7 @@ jQuery('#inputFile').change(function(e) {
 	jQuery('.help-text').html(filename);
   });
 
+
 // Calendar
 $(document).ready(function() {
     calendarInit();
@@ -117,7 +118,7 @@ function calendarInit() {
         // console.log(prevDate, prevDay, nextDate, nextDay);
 
         // 현재 월 표기
-        $('.year-month').text(currentYear + '.' + (currentMonth + 1));
+        $('.year_month').text(currentYear + '.' + (currentMonth + 1));
 
         // 렌더링 html 요소 생성
         calendar = document.querySelector('.dates')
@@ -145,13 +146,13 @@ function calendarInit() {
     }
 
     // 이전달로 이동
-    $('.go-prev').on('click', function() {
+    $('.go_prev').on('click', function() {
         thisMonth = new Date(currentYear, currentMonth - 1, 1);
         renderCalender(thisMonth);
     });
 
     // 다음달로 이동
-    $('.go-next').on('click', function() {
+    $('.go_next').on('click', function() {
         thisMonth = new Date(currentYear, currentMonth + 1, 1);
         renderCalender(thisMonth); 
     });
