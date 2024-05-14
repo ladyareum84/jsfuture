@@ -55,7 +55,7 @@ a:hover{color: #333;}
 fieldset, iframe, img, button{border:0;}
 textarea,input[type="file"],input[type="password"],input[type="text"]{text-indent:4px; border:1px solid #ddd;}
 select{padding:0 0 0 5px; height:28px; border:1px solid #e5e5e5;}
-select{-webkit-appearance: normal; -moz-appearance: normal; appearance: normal; height:28px \0IE8;} /* IE8 전용*/
+select{-webkit-appearance: none; -moz-appearance: none; appearance: none; height:28px \0IE8;} /* IE8 전용*/
 select::-ms-expand{ display: none;}
 select:focus, textarea:focus, input[type="password"]:focus, input[type="file"]:focus, input[type="text"]:focus {outline: 1px solid #666; outline-offset: -1px;}
 textarea[readonly="readonly"],button[readonly="readonly"],select[readonly="readonly"],input[readonly="readonly"], 

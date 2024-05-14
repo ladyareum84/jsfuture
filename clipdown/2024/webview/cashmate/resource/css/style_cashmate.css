@@ -169,8 +169,22 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .filter_date input[type=radio]{display: none; margin: 10px 10px;}
 .filter_date input[type=radio] + label{display: inline-block; position: relative; background: transparent; border: 1px solid #ddd; color: #666; font-size: 11px; font-size: 1.1rem; border-radius: 7px; padding: 4px 12px 5px; cursor: pointer;}
 .filter_date input[type=radio]:checked + label{background: #666; border: 1px solid #666; color: #fff; z-index: 1;}
-.option_sort .form_control{height: 25px; font-size: 11px; font-size: 1.1rem; border: 1px solid #fff; padding: 3px 3px;}
+.option_sort .form_control{height: 25px; font-size: 11px; font-size: 1.1rem; border: 1px solid #fff; padding: 3px 15px 3px 3px;}
 .option_sort select:focus{outline: 0;}
+.form_selectbox{display: block; position: relative;}
+.form_selectbox::after{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    top: 50%;
+    right: 5px;
+    margin-top:-2px;
+    z-index: 2;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(102,102,102)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;  
+    pointer-events:none;
+}
+
 /* list empty style */
 .list_item.empty{display: block !important; border-bottom: 1px solid transparent !important;}  /* ul 리스트 스타일 일때 적용 */
 .content_empty{padding: 0 !important;}
