@@ -125,7 +125,7 @@ function calendarInit() {
         calendar.innerHTML = '';
         
         // 지난달
-        for (var i = prevDate - prevDay + 1; i <= prevDate; i++) {
+        for (var i = prevDate - prevDay + 0; i <= prevDate; i++) {
             calendar.innerHTML = calendar.innerHTML + '<div class="day prev disable">' + i + '</div>'
         }
         // 이번달
