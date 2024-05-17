@@ -39,7 +39,7 @@ function calendarInit() {
         currentDate = thisMonth.getDate();
 
         // 이전 달의 마지막 날 날짜와 요일 구하기
-        var startDay = new Date(currentYear, currentMonth, 0);
+        var startDay = new Date(currentYear, currentMonth 0);
         var prevDate = startDay.getDate();
         var prevDay = startDay.getDay();
 

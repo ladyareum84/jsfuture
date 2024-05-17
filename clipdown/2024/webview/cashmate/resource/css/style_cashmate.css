@@ -714,6 +714,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_attend{padding: 0;}
 .section_attend .font_en{position: relative; top: 0; font-weight: 700;}
 .section_attend .contents{padding: 0 20px;}
+.section_attend .contents .inner{position: relative; width: 100%; max-width: 480px; margin: 0 auto;}
 .section_attend .contents .content_title{padding: 20px 0;}
 .section_attend .contents .content_title h1{font-size: 1.6rem; font-weight: 600; line-height: 1.6;}
 .section_attend .content_attend_state{position: relative; padding: 0;}
@@ -760,7 +761,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .day_check .hex_inner2{display: flex; justify-content: center; align-items: center; width: inherit; height: inherit; background-size: cover !important; position: absolute;  top:50%; left: 50%; transform: translate(-50%, -50%) rotate(-120deg); overflow: hidden; background: transparent;}
 .day_check.check_on .hex_inner2{background: #207FD1;}
 .day_check.check_on .hex_inner2 .day{color: #fff;}
-.day_check.check_on.check_badge .badge_gold{width: 8.1vw;}.check_today{position: absolute; top: -14px; left: -15%; min-width: 65px; border-radius: 50px; background: #ffd700; text-align: center; padding: 4px 8px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
+.day_check.check_on.check_badge .badge_gold{width: 8.1vw;}
+.check_today{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -195%); min-width: 65px; border-radius: 50px; background: #ffd700; text-align: center; padding: 4px 8px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);}
 .check_today::after{content: ''; width: 0; height: 0; position: absolute; bottom: -9px; right: 43%; border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #ffd700; border-bottom: 5px solid transparent;}
 .check_today span{position: relative; top: 0; font-size: 1.1rem; font-weight: 600; }
 
@@ -774,13 +776,14 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_attend .contents .calendar_nav h1{font-size: 18px; font-size: 1.8rem; font-weight: 600; line-height: 1.8;}
 .section_attend .content_item.calendar_wrap{position: relative; padding-bottom: 40px;}
 .calendar_wrap .days{display: flex; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee;}
-.calendar_wrap .dates{display: flex; flex-flow: wrap; height: 30vh;}
+.calendar_wrap .dates{display: flex; flex-flow: wrap;}
 .calendar_wrap .day{
     display: flex;
     justify-content: center;
-    width: calc(100% / 7);
-    height: 10.5vw;
-    font-size: 1.3rem;
+    width: 14.2857%;
+    aspect-ratio: 1 / 1;
+    font-size: 14px;
+    font-size: 1.4rem;
     text-align: center;
     font-weight: 500;
     font-family: 'Poppins', Helvetica, sans-serif;
@@ -790,9 +793,6 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 }
 .calendar_wrap .day:nth-child(7n -6){color: #e21d19;}
 .calendar_wrap .day.disable{color: #ddd;}
-
-
-
 
 
 
@@ -856,13 +856,25 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .item_bubble .item_text{position: relative; top: 1px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01rem;}
 .item_bubble .item_img{position: relative; float: right; width: 16%; right: 7px;}
 
+@media (min-width: 600px) {
+    .day_check{width: 7.5vw; height: calc(7.5vw * 1.7430);}
+    .day_check.check_on.check_badge .badge_gold{width: 5.8vw;}
+    .attend_mission .text_box{width: 60%;}
+}
+
+@media (min-width: 768px) {
+    .day_check{width: 6vw; height: calc(6vw * 1.7430);}
+    .day_check.check_on.check_badge .badge_gold{width: 4.5vw;}
+    
+}
 
 @media (min-width: 992px) {
     .contents_attend_visual .bg_item_attend{background-image: url(../images/event/img_main_item.png); background-size: contain; background-repeat: no-repeat; position: absolute; top: 278px; right: 0; width: 55%; height: 50%; opacity: .35;}
-    .calendar_body .week .day_item .day{width: 5vw; height: 5vw;}
-    .calendar_body .week .day_item .day_check{width: 4vw; height: calc(4vw * 1.7430); margin: -6.8vw;}
-    .day_check.check_on.check_badge .badge_gold{width: 3.4vw;}
-
+    .calendar_body .week .day_item .day_check{width: 58px; height: calc(58px * 1.7430); margin: -12px 0;}
+    .day_check.check_on.check_badge .badge_gold{width: 48px;}
     .attend_info .list_item .img_box img{width: 40%;}
+    .check_today{transform: translate(-50%, -220%);}
 }
+
+
 
