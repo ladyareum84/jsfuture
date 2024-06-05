@@ -229,8 +229,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 .icon_box{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
 .icon_box .icon{display: block; position: relative;}
-.icon_box .icon_plus{ width: 2px; height: 15px; background: #ddd;}
-.icon_box .icon_plus:after{content: ''; position: absolute; left: 0; top: 0;  width: 2px; height: 15px; background: #ddd; transform: rotate(90deg); transform-origin: center center;}
+.icon_box .icon_plus{ width: 2px; height: 15px; background: #4A4D5B;}
+.icon_box .icon_plus:after{content: ''; position: absolute; left: 0; top: 0;  width: 2px; height: 15px; background: #4A4D5B; transform: rotate(90deg); transform-origin: center center;}
 
 
 /* input-size Width*/
