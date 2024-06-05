@@ -374,7 +374,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_event .content_list{margin: 20px 0 0;}
 .content_event .item_event{margin-bottom: 20px;}
 .content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
-.content_event .item_event .card_event{display: flex; align-items: center; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;} 
+.content_event .item_event .card_event{display: flex; align-items: center; background: transparent; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;} 
 .content_event .item_event .card_event .link_card{display: flex; flex: 1; align-items: center;}
 .content_event .item_event .card_event .event_title{flex-grow: 1; padding-right: 20px;}
 .content_event .item_event .card_event .event_title h3{font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-weight: 600;}
@@ -444,6 +444,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .content_inquiry .content_item{position: relative;}
 .content_inquiry .content_item.item_box{position: relative; margin: 40px 0;}
 .content_inquiry .content_item:last-child{margin-bottom: 0;}
+.content_inquiry .content_item .form_group:nth-of-type(1){padding: 0;}
 .content_inquiry .content_item .list_title{padding-bottom: 10px;}
 .content_inquiry .content_item .list_title h3{font-size: 15px; font-size: 1.5rem; font-weight: 600;}
 .content_inquiry .content_item .content_list .list_item {background: #fff; border: 1px solid #ddd; margin-bottom: 10px;}
@@ -459,7 +460,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 /* 클립다운 PC Web Dark Style */
 .webview_cashmate.dark div{color: #fff;}
-.webview_cashmate.dark{background: #20222B; height: initial;}
+.webview_cashmate.dark{background: #20222B; height: inherit;}
 .webview_cashmate.dark .section .contents{display: block;}
 .webview_cashmate.dark .section .header_title{border-bottom: 1px solid #333542;}
 .webview_cashmate.dark .section .header_title h1{color: #fff;}
@@ -467,7 +468,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .tabs.tabs_nav{border-bottom: 1px solid #464756;}
 .webview_cashmate.dark .tabs.tabs_nav li.active{color: #fff; border-bottom: 1px solid #fff;}
 .webview_cashmate.dark .tabs.sub_tabs_nav{border-bottom: 2px solid #9fa0a0;}
-.webview_cashmate.dark .tabs_multi .sub_tabs_box .sub_tabs_nav li.active{color: #fff; border-bottom: 1px solid #fff;}
+.webview_cashmate.dark .tabs_multi .sub_tabs_box .sub_tabs_nav li.active{color: #fff; border-bottom: 2px solid #fff;}
 .webview_cashmate.dark .filter_date input[type=radio] + label{color: #9E9EA5; border: 1px solid #414450;}
 .webview_cashmate.dark .filter_date input[type=radio]:checked + label{background: #20222B; color: #fff; border: 1px solid #F7F7F7;}
 .webview_cashmate.dark .board_list tbody tr td{color: #fff; border-bottom: 1px solid #333542;}
@@ -484,6 +485,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .btn_outline_point{background: #272936; border: 1px solid #e21d19; color: #e21d19;}
 .webview_cashmate.dark .btn_outline_point:hover{background: #20222B; border: 1px solid #e21d19; color: #e21d19;}
 .webview_cashmate.dark .btn_full_gray{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
+.webview_cashmate.dark .link-text{color: #9E9EA5;}
+.webview_cashmate.dark .link-text:hover{color: #fff;}
 .webview_cashmate.dark .list_scroll::-webkit-scrollbar{width: 8px; height: 8px; background: #272936;}
 .webview_cashmate.dark .list_scroll::-webkit-scrollbar-thumb{border-radius: 3.5px; background-color: #9E9EA5;}
 .webview_cashmate.dark .list_scroll::-webkit-scrollbar-track{background: #272936;}
@@ -499,6 +502,22 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .list_item:hover{background: #20222B; border: 1px solid #9E9EA5;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box .list_item:hover{background: #272936; border: 1px solid #353745;}
 .webview_cashmate.dark .content_inquiry .content_item  .content_list .info_box p{color: #fff; line-height: 2;}
+/* 0604 */
+.webview_cashmate.dark .item_upload label{background: #272936; border: 1px solid #414450;}
+.webview_cashmate.dark .inquiry_option .filter_data{padding: 0;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-head{background: #20222b; border-bottom: 1px solid #414450; padding: 15px 50px 15px 0;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-head .head-title{color: #fff;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-head .head-title:after{border-right: 2px solid #9fa0a0; border-bottom: 2px solid #9fa0a0;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-head:hover .head-title:after{border-right: 2px solid #fff; border-bottom: 2px solid #fff;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-contents{background: #272936; border: 1px solid #272936; border-top: transparent;}
+.webview_cashmate.dark .accordion-list-box .acc-item .acc-contents p{color: #fff;}
+
+
+.webview_cashmate.dark .date_registration{color: #9E9EA5;}
+.webview_cashmate.dark .section .header_title .btn_back{position: relative; float: left; top: 4px; margin-right: 10px; vertical-align: middle;}
+.btn_back .icon_back{display: inline-block; width: 24px; height: 24px;}
+.btn_back:hover .icon_back path{fill: #fff;}
+
 /* 0411 PC dark 모드일때 이벤트 상세페이지 - 친구초대 */
 .webview_cashmate.dark .section_invite .content_top, .webview_cashmate.dark .section_invite .content_middle {position: relative; max-width: 640px; margin: 0 auto;}
 .webview_cashmate.dark .section_invite .content_item{padding-bottom: 40px; margin-bottom: 0;}
@@ -802,12 +821,9 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_attend .contents.attend_info .content_title .summary, .section_attend .contents.attend_mission .content_title .summary{font-size: 14px; font-size: 1.4rem; }
 .section_attend .content_item{padding: 10px 0;}
 .section_attend .list_item{display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
-
-
 .attend_info{position: relative; background: #f1f8fe;}
 .attend_info .list_item{border-bottom: 2px dotted #a5cbec;}
 .attend_info .list_item:last-child{border-bottom: 0; padding-bottom: 20px;}
-
 .attend_info .list_item .num_box{width: 0; font-size: 16px; font-size: 1.6rem; font-weight: 700;}
 .attend_info .list_item .text_box{width: 65%; font-size: 14px; font-size: 1.4rem; line-height: 1.4;}
 .attend_info .list_item .img_box{width: 20%; text-align: right;}
