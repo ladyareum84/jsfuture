@@ -910,7 +910,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .item_bubble .item_text{position: relative; top: 1px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01rem;}
 .item_bubble .item_img{position: relative; float: right; width: 16%; right: 7px;}
 
-/* Popup event Style */
+/* Popup event Style 0708 미적용 */
 .popup_event .popup_wrap {max-width: 300px;}
 .popup_event .popup_contents{border: 0; border-radius: 15px 15px; padding: 0;}
 .popup_event .header_title{padding: 30px 10px 10px;}
@@ -923,8 +923,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .popup_event .btn_event_check{width: 100%; height: 44px; padding: 13px 10px; background: #207FD1; color: #fff; font-size: 14px; font-size: 1.4rem; border-radius: 0 0 13px 13px;}
 .popup_event .state_attend{left: -10px;}
 .popup_event .state_goldBtn{max-width: 80px;}
-.popup_event .banner_box{position: relative; background: #F1F8FE; border: 1px solid #d5ecff; border-radius: 5px;}
-.popup_event .banner_box .banner{display: flex; width: 100%; align-items: center; justify-content: center; padding: 8px 10px; }
+.popup_event .banner_box{position: relative; background: #F1F8FE; border: 1px solid #d5ecff; border-radius: 5px; margin-bottom: 10px;}
+.popup_event .banner_box .banner{display: flex; width: 100%; align-items: center; justify-content: center; padding: 6px 10px; }
 .popup_event .banner_box .icon{position: relative; width: 28px; height: 28px; }
 .popup_event .banner_box .text{position: relative; top: -1px; padding-left: 5px; padding-right: 10px;}
 .arrow_right{width: 8px; height: 8px; border: 1px solid #333; border-width: 0 0 2px 2px; line-height: 0; font-size: 0; -webkit-transform: rotate(-135deg); -ms-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg);}
