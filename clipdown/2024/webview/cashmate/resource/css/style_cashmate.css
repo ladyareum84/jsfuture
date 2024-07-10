@@ -910,6 +910,16 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .item_bubble .item_text{position: relative; top: 1px; font-size: 1.4rem; font-weight: 600; letter-spacing: -.01rem;}
 .item_bubble .item_img{position: relative; float: right; width: 16%; right: 7px;}
 
+/* Viewpage Player - Timer */
+.view_player{position: relative; width: 100%;}
+.video_player{position: relative; padding-top: 56.25%;}
+.video_player iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} 
+.timer_view{display: block; position: absolute; top: 10px; left: 10px; max-width: 100%; text-align: center;}
+.timer_view .item_img{position: relative; width: 100%; max-width: 80px;}
+.timer_view .box_timer{position: absolute; width: 100%; bottom: 6px; left: 0;}
+.timer_view .box_timer .time{background: #333; color: #fff; font-size: 14px; font-size: 1.4rem; font-weight: 700; border-radius: 30px; padding: 3px 10px; box-shadow: 0 -4px 6px -4px rgba(0, 0, 0, 0.45);}
+
+
 /* Popup event Style 0708 미적용 */
 .popup_event .popup_wrap {max-width: 300px;}
 .popup_event .popup_contents{border: 0; border-radius: 15px 15px; padding: 0;}
@@ -953,6 +963,11 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .day_check{width: 7.5vw; height: calc(7.5vw * 1.7430);}
     .day_check.check_on.check_badge .badge_gold{max-width: 48px; width: 5.8vw;}
     .attend_mission .text_box{width: 60%;}
+}
+@media (max-width: 480px) {
+    .timer_view .item_img{max-width: 62px;}
+    .timer_view .box_timer{bottom: 2px;}
+    .timer_view .box_timer .time{font-size: 12px; font-size: 1.2rem; padding: 3px 8px;}
 }
 
 

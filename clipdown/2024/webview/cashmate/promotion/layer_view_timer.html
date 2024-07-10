@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>WebView Popup 출석체크 이벤트  </title>
+    <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="view_player">
+        <div class="video_player">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JBf2tRocNNg?si=g_SdTMOqrHdPhvC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- Timer Style -->
+        <div class="timer_view">
+            <div class="item_img">
+                <img src="../resource/images/coin_size_fix_big.gif" alt="">
+            </div>
+            <div class="box_timer">
+                <span class="time font_en weight-600_bold">01:00</span>
+            </div>
+        </div>
+        <!-- //Timer Style -->
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    <script src="../resource/js/common_cashmate.js"></script>
+    <script src="../resource/js/clipboard.min.js"></script>      
+</body>
+</html>
