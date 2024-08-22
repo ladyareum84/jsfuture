@@ -400,9 +400,9 @@ svg{max-width: 100%; width: 100%; height: auto;}
 }
 
 @media screen and (max-width: 480px){
-    .section_main .img_top_main .item_download.item_download_view{top:18%; left: 18%; transform: scale(.6);}
-    .section_main .img_top_main .item_download.item_download_multi{top:11%; right: 3%; transform: scale(.5);}
-    .section_main .img_top_main .item_download.item_download_part{bottom: 21%; left: 2%;}
+    .section_main .img_top_main .item_download.item_download_view{top:6%; left: 18%; transform: scale(.45);}
+    .section_main .img_top_main .item_download.item_download_multi{top:-3%; right: -2%; transform: scale(.4);}
+    .section_main .img_top_main .item_download.item_download_part{bottom: 23%; left: 2%;}  
 
     
 }
