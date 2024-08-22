@@ -331,6 +331,7 @@ svg{max-width: 100%; width: 100%; height: auto;}
 	.download_banner .img-list .list_img .img_banner{height: 38px !important;}
 	.content_info_message .text_message p{font-size: 13px; font-size: 1.3rem; line-height: 1.5; }
 	/* .layer_popup .style_alert .btn_alert .guide-area{position: relative; text-align: right !important; padding: 8px 0;} */
+    .section_intro .content_item.item_03 .badge_coming .badge{font-size: 18px; font-size: 1.8rem;}
 }
 @media screen and (max-width: 360px){
 	.form .item_method .img_pay{width:68px;}
