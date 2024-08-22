@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 /* common Style */
-svg{max-width: 100%; width: 100%; height: 100%;}
+svg{max-width: 100%; width: 100%; height: auto;}
 .link-text{font-size:14px; font-size:1.4rem; color: #888;}
 .btn-group .btn{float: left; margin-right: 10px;}
 .btn-sm{font-size: 12px !important; font-weight: 400;}
 .btn-md{font-size:16px !important;; padding: 8px 10px 4px 10px !important;;}
-.btn-lg{max-width: 280px !important;; font-size:18px !important;; padding: 12px 24px !important; min-height: 100% !important;}
+.btn-lg{max-width: 280px !important;; font-size:18px !important;; padding: 12px 24px !important; min-height: 0;}
 .btn_defualt{background: #fff; border: 1px solid #e5e5e5; color: #888;}
 .btn_defualt:hover, .btn_defualt:focus, .btn_defualt:active:focus{color: #333;}
 .btn_point{background: #fff; border: 1px solid #eb524e; color: #eb524e;}
@@ -92,15 +92,14 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .section_main .main-intro .intro_des .item_des:before{content: '\2022'; display: inline-block; position: relative; right: 3px; color:#ddd;}
 .section_main .main-intro .intro_des .item_des:first-child:before{content: '';}
 .section_main .main-intro .img_top_main{width: 65%; margin: 0 auto; padding:40px 0 0;}
-.section_intro{background: #444154; color: #fff; padding: 120px 0;}
+.section_intro{background: #272936; color: #fff; padding: 120px 0;}
 .section_intro .head-title h1{color: #fff; font-weight: 500;}
 .section_intro .content_item{padding: 60px 0;}
 .section_intro .content_item .item_disible{opacity: .5;}
 .section_intro .content_item .item_des{color: #fff; font-size: 26px; font-size: 2.6rem; line-height: 1.6; padding: 40px 0;}
 .section_intro .content_item .item_des .item-point{color: #FFE200; font-size: 28px; font-size: 2.8rem; font-weight: 500; padding: 10px 0;}
-.section_intro .content_item .img_intro{position:relative; width:80%; text-align:center; margin: 0 auto;}
+.section_intro .content_item .img_intro{position:relative; width:100%; max-width: 414px; text-align:center; margin: 0 auto;}
 .section_intro .content_item.item_02 .img_intro{left:10px;}
-.section_intro .content_item.item_03 .item_des{padding-top: 60px;}
 .section_intro .content_item.item_03 .badge_coming{position: relative; width: 100%;}
 .section_intro .content_item.item_03 .badge_coming .badge{ display:inline-block; position:relative; min-width: 10px; background-color: #e21d19; font-family: 'Poppins', sans-serif; font-size:24px; font-size:2.4rem; font-weight: 600; color:#fff; text-align:center; white-space: nowrap; border-radius: 30px; padding: 8px 20px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 30px; margin-bottom: 10px;}
 
@@ -375,35 +374,43 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 
 
-/* 02240307 MainVisualStyle */
+/* 240307 MainVisualStyle */
 .section_main .main-intro .img_top_main{position: relative; top: 0; left: 0; width: 100%; max-width: 900px; padding: 40px 0; margin: 0 auto;}
-.section_main .img_top_main .item_base{position: relative; width: 100%; max-width: 900px; margin: 0 auto;}
+.section_main .img_top_main .item_base{position: relative; width: 100%; max-width: 900px; margin: 0 auto; left: 15px;}
 .section_main .img_top_main .item_download{position: absolute; }
 .section_main .img_top_main .item_download.item_download_view{top: 18%; left: 20%; transform: scale(.85);}
-.section_main .img_top_main .item_download.item_download_view .img_item_view{position: relative}
-.section_main .img_top_main .item_download.item_download_multi{top: 22%; right: 20%;}
+.section_main .img_top_main .item_download.item_download_view .img_item_view{position: relative;}
+.section_main .img_top_main .item_download.item_download_multi{top: 24%; right: 16%;}
 .section_main .img_top_main .item_download.item_download_multi .img_item_multi{position: relative;}
 .section_main .img_top_main .item_download.item_download_part{bottom: 20%; left: 20%; transform: scale(1);}
 .section_main .img_top_main .item_download.item_download_part .img_item_download_part{position: relative;}
-.section_main .img_top_main .img_item_view{width: 125px; height: 125px; }
+/* .section_main .img_top_main .img_item_view{width: 125px; height: 125px; }
 .section_main .img_top_main .img_item_multi{width: 206px; height: 243px;}
-.section_main .img_top_main .img_item_part{width: 525px; height: 46px;}
+.section_main .img_top_main .img_item_part{width: 525px; height: 46px;} */
+.section_main .img_top_main .img_item_view{width: 100%; }
+.section_main .img_top_main .img_item_multi{width: 100%; }
+.section_main .img_top_main .img_item_part{width: 100%; }
 
 
 @media screen and (max-width: 767px){
-    .section_main .img_top_main .item_download.item_download_view{left: 17%; transform: scale(.65);}
-    .section_main .img_top_main .item_download.item_download_multi{top: 16%; right: 15%; transform: scale(.75);}
-    .section_main .img_top_main .item_download.item_download_part{bottom: 20%; left: 11%; transform: scale(.85);}
-    /* .section_main .img_top_main .img_item_view{width: 125px; height: 125px; }
-    .section_main .img_top_main .img_item_multi{width: 206px; height: 243px;}
-    .section_main .img_top_main .img_item_part{width: 525px; height: 16px;} */
+    .section_main .img_top_main .item_download.item_download_view{top:18%; left: 22%; transform: scale(.7);}
+    .section_main .img_top_main .item_download.item_download_multi{top:18%; right: 10%; transform: scale(.65);}
+    .section_main .img_top_main .item_download.item_download_part{bottom: 21%; left: 18%; transform: scale(.6);}
 }
 
 @media screen and (max-width: 480px){
+    .section_main .img_top_main .item_download.item_download_view{top:18%; left: 18%; transform: scale(.6);}
+    .section_main .img_top_main .item_download.item_download_multi{top:11%; right: 3%; transform: scale(.5);}
+    .section_main .img_top_main .item_download.item_download_part{bottom: 21%; left: 2%;}
+
     
 }
 
 @media screen and (max-width: 360px){
+    .section_main{padding: 20px 0 40px;}
+    .section_main .main-intro .img_top_main{padding: 20px 0;}
+    .section_main .img_top_main .item_download.item_download_view{top:6%; left: 14%; transform: scale(.4);}
+    .section_main .img_top_main .item_download.item_download_multi{top:-4%; right: -5%; transform: scale(.4);}
+    .section_main .img_top_main .item_download.item_download_part{bottom: 19%; left: 5%;}
     
 }
-7
