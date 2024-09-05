@@ -286,7 +286,7 @@ svg {
 .contents_watch .btn_box .btn_clipdown:hover{background: #0556bf;}
 .contents_watch .content_view .content_item{flex-grow: 1; width: 100%; max-width: 100%; padding: 0 30px;} 
 .contents_watch .content_view .content_info{text-align: left;}
-.contents_watch .content_view .content_title{font-size: 2.4vw; font-weight: 700;}
+.contents_watch .content_view .content_title{font-size: 4vw; font-weight: 700;}
 .contents_watch .content_view .btn_box{margin-top: 20px; padding: 0 60px;}
 .contents_watch .content_view .btn_display{width: 100%; min-width: 175px;}
 .contents_watch .content_survey .chart_stackedBar{position: relative; width: 100%; padding-bottom: 20px;}
@@ -320,6 +320,11 @@ svg {
     .section_feature .contents{flex-direction: column;}
     .section_feature .content_item{max-width: 100%; margin: 32px 16px;}
     .section_feature .content_item .img_box{width: 200px; height: 200px;}
+    .contents_watch .content_view .content_title{font-size: 4.8rem;}
+
+}
+
+@media (max-width: 767px){
 
 }
 
@@ -328,7 +333,7 @@ svg {
     .contents_watch .content_view .content_item{padding: 0 20px;}
     .contents_watch .content_view .btn_box{padding: 0 30px;}
     .contents_watch .chart_stackedBar .item_text{line-height: 1.4; padding-bottom: 10px;}
-    .contents_watch .content_view .content_title{font-size: 2.4rem;}
+    .contents_watch .content_view .content_title{font-size: 3.2rem;}
 }
 
 
