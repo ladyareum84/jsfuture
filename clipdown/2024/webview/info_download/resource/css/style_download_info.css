@@ -274,6 +274,7 @@ svg {
 .section_feature .content_item .img_box img{width: 100%; height: 100%; object-fit: contain;}
 .section_feature .content_item .text_description{position: relative; font-size: 1.4rem;}
 
+.wrap_watch .container{min-width: 767px;}
 .contents_watch{display: flex; flex-direction: row;}
 .contents_watch .content_column{position: relative;}
 .contents_watch .content_view{flex: 1; flex-basis: 0.000000001px;  padding: 0 30px 20px;}
@@ -322,13 +323,22 @@ svg {
 
 }
 
+@media (max-width: 767px){
+    .contents_watch .content_box{padding: 20px 10px;}
+    .contents_watch .content_view .content_item{padding: 0 20px;}
+    .contents_watch .content_view .btn_box{padding: 0 30px;}
+    .contents_watch .chart_stackedBar .item_text{line-height: 1.4; padding-bottom: 10px;}
+    .contents_watch .content_view .content_title{font-size: 2.4rem;}
+}
+
+
 @media (max-width: 599px) {
     .contents{padding: 20px;}
     .section_info .box_logo img{width: 24rem;}
     .section_info .header_title h1{font-size: 3.2rem; line-height: 4.4rem;}
     .section_info .sub_title h2{font-size: 1.6rem; line-height: 2.6rem;}
     .section_feature .contents{flex-direction: column;}
-    .section_info .btn_box .btn_clipdown{font-size: 1.8rem; height: 50px; line-height: 5rem;}   
+    .section_info .btn_box .btn_clipdown{font-size: 1.8rem; height: 50px; line-height: 5rem;}
 }
 @media (max-width: 360px) {
     .section_info .header_title h1 br{display: none;}
