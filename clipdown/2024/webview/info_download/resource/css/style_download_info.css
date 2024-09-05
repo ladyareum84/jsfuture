@@ -276,16 +276,18 @@ svg {
 
 .contents_watch{display: flex; flex-direction: row;}
 .contents_watch .content_column{position: relative;}
-.contents_watch .content_view{flex: 1; flex-basis: 0.000000001px;  padding: 30px 30px;}
+.contents_watch .content_view{flex: 1; flex-basis: 0.000000001px;  padding: 0 30px 20px;}
 .contents_watch .content_aside{display: flex; position: relative; width: 402px; min-width: 300px; flex-basis: 0.000000001px; padding: 30px 0;}
 .contents_watch .player{position: relative; padding-top: 56.25%; min-height: 480px; background: #000;}
-.contents_watch .player_inner{position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: row; align-items: center;}
-.contents_watch .btn_box .btn_clipdown{color: #fff; height: 48px; line-height: 6rem; border-radius: 0;}
-.contents_watch .content_view .content_item{width: 100%; max-width: 100%;}
-.contents_watch .content_view .content_info{text-align: left; padding: 30px 15px 30px 60px;}
-.contents_watch .content_view .content_title{font-size: 3.2rem; font-weight: 700;}
+.contents_watch .player_inner{display: flex; flex-wrap: wrap; align-content: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.contents_watch .content_box{display: flex; width: 100%; padding: 20px 30px;}
+.contents_watch .btn_box .btn_clipdown{background: #065fd4; color: #fff; height: 48px; line-height: 6rem; border-radius: 0;}
+.contents_watch .btn_box .btn_clipdown:hover{background: #0556bf;}
+.contents_watch .content_view .content_item{flex-grow: 1; width: 100%; max-width: 100%; padding: 0 30px;} 
+.contents_watch .content_view .content_info{text-align: left;}
+.contents_watch .content_view .content_title{font-size: 2.4vw; font-weight: 700;}
+.contents_watch .content_view .btn_box{margin-top: 20px; padding: 0 60px;}
 .contents_watch .content_view .btn_display{width: 100%; min-width: 175px;}
-.contents_watch .content_survey{padding: 30px 60px 30px 15px;}
 .contents_watch .content_survey .chart_stackedBar{position: relative; width: 100%; padding-bottom: 20px;}
 .contents_watch .chart_stackedBar .item_text{text-align: left; font-size: 1.6rem; font-weight: 500; line-height: 2.4;}
 .contents_watch .chart_stackedBar .item_graph{display: flex; flex-wrap: wrap; width: 100%;}
@@ -293,10 +295,10 @@ svg {
 .contents_watch .item_graph .col_bar.bar_a{background: #e21d19;}
 .contents_watch .item_graph .col_bar.bar_b{background: #888;}
 .contents_watch .player_info{display: block; position: relative;}
-.contents_watch .player_info .content_title{color: #333; font-size: 2.4rem; font-weight: 700; padding: 20px 0;}
-.contents_watch .player_info .box_description{position: relative; min-width: min(450px, 100%); background: #f4f4f4; border-radius: 6px; padding: 10px 10px;}
+.contents_watch .player_info .content_title{color: #333; font-size: 2.4rem; font-weight: 700; letter-spacing: -.05rem; padding: 20px 0;}
+.contents_watch .player_info .box_description{position: relative; min-width: min(450px, 100%); background: #f4f4f4; border-radius: 6px; padding: 20px 20px;}
 .contents_watch .box_description .item_tag{font-size: 1.4rem; font-weight: 500; line-height: 1.8; margin-bottom: 10px;}
-.contents_watch .box_description .item_tag span{color: #3ea6ff; padding-right: 3px;}
+.contents_watch .box_description .item_tag span{color: #065fd4; padding-right: 3px;}
 .contents_watch .box_description .item_link{position: relative; width: 100%;}
 .contents_watch .box_description .item_link .link_text p{color: #333;}
 .contents_watch .box_description .item_link .link_text p a{color: #333; line-height: 2;}
@@ -309,6 +311,7 @@ svg {
 .contents_watch .content_aside .content_item .img_box img{width: 100%; height: 100%; object-fit: contain;}
 .contents_watch .content_aside .content_item .text_description{position: relative; color: #333; font-size: 1.3rem;}
 
+.empty_block{display: block; padding-bottom: 20px;}
 
 @media (min-width: 600px) and (max-width: 1023.9px){
     .section{margin-bottom: 32px;}
