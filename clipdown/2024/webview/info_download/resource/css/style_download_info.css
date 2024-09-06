@@ -227,7 +227,8 @@ svg {
     cursor: pointer;
     box-sizing: border-box;
 }
-
+.text_underline{display: inline; border-bottom: 1px solid #fff;}
+.empty_block{display: block; padding-bottom: 20px;}
 
 /* style */
 .wrap{position: relative; width: 100%;}
@@ -266,6 +267,7 @@ svg {
 .section_info .header_title h1{font-size: 6rem; line-height: 8rem; font-weight: 900; color: #fff;}
 .section_info .sub_title{margin-top: 40px; text-align: center;}
 .section_info .sub_title h2{font-size: 1.8rem; line-height: 2.6rem; font-weight: 600; color: #fff;}
+.section_info .sub_title h3{font-size: 2.8rem; font-weight: 600;}
 .section_info .btn_box .btn_display{min-width: 175px;}
 .section_info .btn_box .btn_clipdown{height: 60px; line-height: 6rem; border-radius: 48px;}
 .section_feature .contents{display: flex; flex-direction: row; justify-content: center; padding-top: 32px;}
@@ -273,6 +275,15 @@ svg {
 .section_feature .content_item .img_box{width: 100px; height: 100px; margin-bottom: 24px;}
 .section_feature .content_item .img_box img{width: 100%; height: 100%; object-fit: contain;}
 .section_feature .content_item .text_description{position: relative; font-size: 1.4rem;}
+.section_install .contents{display: flex; flex-direction: row; justify-content: center; padding-bottom: 20px;}
+.section_install .content_item{display: flex; justify-content: flex-start; align-items: center;  flex-direction: column; flex: 1 1 0; margin: 16px; text-align: center;}
+.section_install .text_description{text-align: left; padding: 30px 20px 40px;}
+.section_install .text_description .des_title{font-size: 1.8rem; font-weight: 600; padding-bottom: 20px;}
+.section_install .text_description .sub_text{font-size: 1.6rem;}
+.section_install .item_box{display: flex; flex-direction: column; position: relative; width: 100%; border: 1px solid #565656; border-radius: 6px; box-shadow: 8px 8px 0 rgb(255 255 255 / 20%);}
+.section_install .content_item .img_box{position: relative; bottom: 0; width: 100%; background: #0f0f0f; overflow: hidden; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;}
+.section_install .content_item .img_box img{position: relative; max-width: 400px;}
+.section_install .guide_box{position: relative; text-align: center; padding: 5px 50px;}
 
 .wrap_watch .container{min-width: 767px;}
 .contents_watch{display: flex; flex-direction: row;}
@@ -304,7 +315,6 @@ svg {
 .contents_watch .box_description .item_link .link_text p{color: #333;}
 .contents_watch .box_description .item_link .link_text p a{color: #333; line-height: 2;}
 .contents_watch .box_description .item_link .link_text a:hover{text-decoration: underline;}
-
 .contents_watch .content_aside .contents{display: flex; flex-direction: column; justify-content: center; padding: 30px 30px 30px 0;}
 .contents_watch .content_aside .content_title{color: #333; font-size: 2rem; font-weight: 700; text-align: center;}
 .contents_watch .content_aside .content_item{display: flex; justify-content: center; align-items: center;  flex-direction: column; flex: 1 1 0; max-width: 300px; margin-bottom: 20px; text-align: center;}
@@ -312,7 +322,7 @@ svg {
 .contents_watch .content_aside .content_item .img_box img{width: 100%; height: 100%; object-fit: contain;}
 .contents_watch .content_aside .content_item .text_description{position: relative; color: #333; font-size: 1.3rem;}
 
-.empty_block{display: block; padding-bottom: 20px;}
+
 
 @media (min-width: 600px) and (max-width: 1023.9px){
     .section{margin-bottom: 32px;}
@@ -321,12 +331,12 @@ svg {
     .section_feature .content_item{max-width: 100%; margin: 32px 16px;}
     .section_feature .content_item .img_box{width: 200px; height: 200px;}
     .contents_watch .content_view .content_title{font-size: 4.8rem;}
+    .section_install .contents{flex-direction: column;}
+    .section_install .text_description{text-align: center; padding: 40px 20px 30px;}
+    .section_install .content_item .img_box img{max-width: 600px;}
 
 }
 
-@media (max-width: 767px){
-
-}
 
 @media (max-width: 767px){
     .contents_watch .content_box{padding: 20px 10px;}
@@ -334,18 +344,25 @@ svg {
     .contents_watch .content_view .btn_box{padding: 0 30px;}
     .contents_watch .chart_stackedBar .item_text{line-height: 1.4; padding-bottom: 10px;}
     .contents_watch .content_view .content_title{font-size: 3.2rem;}
+    .section_install .contents{flex-direction: column;}
+    .section_install .text_description{text-align: center; padding: 40px 20px 30px;}
+    .section_install .content_item .img_box img{max-width: 600px;}
 }
 
 
 @media (max-width: 599px) {
+    .section{margin-bottom: 30px;}
     .contents{padding: 20px;}
     .section_info .box_logo img{width: 24rem;}
     .section_info .header_title h1{font-size: 3.2rem; line-height: 4.4rem;}
     .section_info .sub_title h2{font-size: 1.6rem; line-height: 2.6rem;}
     .section_feature .contents{flex-direction: column;}
     .section_info .btn_box .btn_clipdown{font-size: 1.8rem; height: 50px; line-height: 5rem;}
+    .section_install .guide_box{padding: 5px 20px;}
+    .section_install .text_description{padding: 30px 20px 20px;}
+    
 }
 @media (max-width: 360px) {
-    .section_info .header_title h1 br{display: none;}
+    .section_info .header_title h1 br{display: none;}    
 
 }
