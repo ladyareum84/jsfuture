@@ -228,7 +228,7 @@ svg {
     box-sizing: border-box;
 }
 .text_underline{display: inline; border-bottom: 1px solid #fff;}
-.empty_block{display: block; padding-bottom: 20px;}
+.empty_block{display: block; padding-bottom: 40px;}
 
 /* style */
 .wrap{position: relative; width: 100%;}
@@ -297,7 +297,7 @@ svg {
 .contents_watch .btn_box .btn_clipdown:hover{background: #0556bf;}
 .contents_watch .content_view .content_item{flex-grow: 1; width: 100%; max-width: 100%; padding: 0 30px;} 
 .contents_watch .content_view .content_info{text-align: left;}
-.contents_watch .content_view .content_title{font-size: 4vw; font-weight: 700;}
+.contents_watch .content_view .content_title{font-size: 4vw; font-weight: 700; line-height: 1.1;}
 .contents_watch .content_view .btn_box{margin-top: 20px; padding: 0 60px;}
 .contents_watch .content_view .btn_display{width: 100%; min-width: 175px;}
 .contents_watch .content_survey .chart_stackedBar{position: relative; width: 100%; padding-bottom: 20px;}
