@@ -331,7 +331,7 @@ svg {
 .contents_experience .content_visual .content_box{display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1;}
 .contents_experience .content_visual .content_box img{height: 100%; object-fit: cover;}
 .contents_experience .content_visual .content_box .content_column{display: flex; flex-direction: column; align-items: flex-start; margin: 40px; padding: 0 20px;}
-.contents_experience .content_visual .content_box .box_logo{min-height: 32px; height: 2.2vw;}
+.contents_experience .content_visual .content_box .box_logo{min-height: 24px; height: 1.8vw;}
 .contents_experience .content_visual .content_box .content_title{margin-top: 16px;}
 .contents_experience .content_visual .content_box .content_title h2{font-size: 3.4rem; font-weight: 900; letter-spacing: -.1rem;}
 .contents_experience .content_visual .content_box .description{margin-top: 20px; font-size: 1.6rem; font-weight: 600;}
