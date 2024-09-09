@@ -259,6 +259,9 @@ svg {
 .btn_box{display: flex; flex-direction: row; justify-content: center; margin-top: 40px;}
 .btn_box .btn_clipdown{background: #3ea6ff; color: #0f0f0f; font-size: 2rem; font-weight: 700; padding: 0 24px;}
 .btn_box .btn_clipdown:hover{background: #65b8ff;}
+.check_btn{display: flex; align-items: center; justify-content: center; padding: 15px 0;}
+.check_btn label{font-size: 1.2rem; line-height: 1; cursor: pointer;}
+.check_btn input{margin-right: 5px;}
 
 .section_info{text-align: center;} 
 .section_info .box_logo{display: flex; justify-content: center; margin-top: 100px; max-height: 40px; height: 40px;}
@@ -321,7 +324,7 @@ svg {
 .contents_watch .content_aside .content_item .img_box{width: 100px; height: 100px; margin-bottom: 10px;}
 .contents_watch .content_aside .content_item .img_box img{width: 100%; height: 100%; object-fit: contain;}
 .contents_watch .content_aside .content_item .text_description{position: relative; color: #333; font-size: 1.3rem;}
-
+.contents_watch .content_view .check_btn label{color: #333;}
 
 
 @media (min-width: 600px) and (max-width: 1023.9px){
