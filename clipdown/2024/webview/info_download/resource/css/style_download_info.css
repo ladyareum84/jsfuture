@@ -326,6 +326,22 @@ svg {
 .contents_watch .content_aside .content_item .text_description{position: relative; color: #333; font-size: 1.3rem;}
 .contents_watch .content_view .check_btn{padding: 30px 0 15px;}
 
+.contents_experience{}
+.contents_experience .section_visual .content_visual{overflow: hidden; display: flex; flex-direction: row-reverse; border-radius: 38.5px;}
+.contents_experience .content_visual .content_box{display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1;}
+.contents_experience .content_visual .content_box img{height: 100%; object-fit: cover;}
+.contents_experience .content_visual .content_box .content_column{display: flex; flex-direction: column; align-items: flex-start; margin: 40px; padding: 0 20px;}
+.contents_experience .content_visual .content_box .box_logo{min-height: 12px; height: 1vw;}
+.contents_experience .content_visual .content_box .content_title{margin-top: 16px;}
+.contents_experience .content_visual .content_box .content_title h2{font-size: 3.4rem; font-weight: 900; letter-spacing: -.1rem;}
+.contents_experience .content_visual .content_box .description{margin-top: 20px; font-size: 1.6rem; font-weight: 600;}
+.contents_experience .section_info h1, .contents_experience .section_info h2, .contents_experience .section_info h2{color: #333;}
+.contents_experience .btn_box .btn_clipdown{background: #065fd4; color: #fff; padding: 0 48px;}
+.contents_experience .btn_box .btn_clipdown:hover{background: #0556bf;}
+
+
+
+
 
 @media (min-width: 600px) and (max-width: 1023.9px){
     .section{margin-bottom: 32px;}
@@ -337,6 +353,8 @@ svg {
     .section_install .contents{flex-direction: column;}
     .section_install .text_description{text-align: center; padding: 40px 20px 30px;}
     .section_install .content_item .img_box img{max-width: 600px;}
+
+    .contents_experience .content_visual .content_box .content_title h2{font-size: 2.8rem;}
 
 }
 
@@ -350,6 +368,9 @@ svg {
     .section_install .contents{flex-direction: column;}
     .section_install .text_description{text-align: center; padding: 40px 20px 30px;}
     .section_install .content_item .img_box img{max-width: 600px;}
+    .contents_experience .section_visual .content_visual{flex-direction: column-reverse;}
+    .contents_experience .content_visual .content_box .content_title h2{font-size: 2.6rem;}
+
 }
 
 
@@ -363,6 +384,11 @@ svg {
     .section_info .btn_box .btn_clipdown{font-size: 1.8rem; height: 50px; line-height: 5rem;}
     .section_install .guide_box{padding: 5px 20px;}
     .section_install .text_description{padding: 30px 20px 20px;}
+
+    .contents_experience .content_visual .content_box .content_column{margin: 40px 20px; padding: 0 10px;}
+    .contents_experience .content_visual .content_box .content_title h2{font-size: 2.4rem;}
+    .contents_experience .content_visual .content_box .description{margin-top: 16px; font-size: 1.4rem;}
+    .contents_experience .section_info .header_title{margin-top: 0;}
     
 }
 @media (max-width: 360px) {
