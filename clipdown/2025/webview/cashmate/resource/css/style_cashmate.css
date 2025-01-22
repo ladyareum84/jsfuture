@@ -924,12 +924,12 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 
 .today_attend{position: absolute; top: 50%; left: 50%; width: 10.5vw; height: calc(7.5vw* 1.7430); transform: translate(-50%, -50%); z-index: 999;}
 .today_attend .badge_today{display: flex; justify-content: center; position: absolute; top: 0; left: 0; width: 100%;}
-.today_attend .badge_today .back_badge{width: 100%;}
+.today_attend .badge_today .back_badge{width: 100%; max-width: 58px;}
 .today_attend .badge_today .icon_check{position: absolute; width: 24px; height: 24px; top:50%; left: 50%; transform: translate(-50%, -50%);}
 .today_attend .today_ani{animation: pulse 1.6s infinite;}
-.check_today.uncheck{top: -13px; left: -10px; background: #207fd1; color: #fff; z-index: 999;}
+.check_today.uncheck{top: -10px; left: -8px; width: 100%; background: #207fd1; color: #fff; z-index: 999;}
 .check_today.uncheck::after{border-top: 5px solid #207fd1;}
-.check_today.uncheck.ani_bounce{animation: bounce 2s ease infinite;}
+.check_today.uncheck.ani_bounce{animation: bounce 1.8s ease infinite;}
 
 
 
@@ -948,10 +948,13 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .day_check.check_on.check_badge .badge_gold{width: 48px;}
     .attend_info .list_item .img_box img{width: 40%;}
     .check_today{transform: translate(-50%, -220%);}
+    .today_attend{width: 100%; height: 100%;}
+    .check_today.uncheck{top: 0; left: 0;}
 }
 
 @media (min-width: 768px) {
     .day_check{width: 6vw; height: calc(6vw * 1.7430);}
+    .check_today.uncheck{top: -20px; left: 0;}
     .day_check.check_on.check_badge .badge_gold{width: 4.5vw;}
 
 }
@@ -960,8 +963,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
     .day_check{width: 7.5vw; height: calc(7.5vw * 1.7430);}
     .day_check.check_on.check_badge .badge_gold{max-width: 48px; width: 5.8vw;}
     .attend_mission .text_box{width: 60%;}
-    .today_attend{width: 7.5vw; height: calc(4.5vw * 1.7430);}
-    .check_today.uncheck{top: -5px; left: -1px;}
+    .check_today.uncheck{top: -20px; left: 0px;} 
 }
 
 
