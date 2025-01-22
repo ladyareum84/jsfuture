@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*
+    * 2023-05-23 Style Update
+    * 클립다운 PC 리뉴얼과 캐시메이트 신규 서비스 공통 webview 팝업UI 스타일 작업
+    * 기존 클립다운 PLUS+ 팝업UI들도 업데이트
+
+*/
+
+/*
+    * .wrap_popup 스타일 Custom Style
+    * PC프로그램 웹뷰창 최소사이즈 기준
+*/
+
+body{background: #202020;}
+.font_num{font-family: 'Poppins', Malgun Gothic, sans-serif; font-weight: 500;}
+.join_info{max-height: 350px;}
+
+/* 정리필요 스타일 */
+.join_info .btn_primary{display: block; background: #1a73e8; color: #fff; font-weight: 400; border-radius: 5px; padding: 8px 20px;}
+.join_info .btn_apply{display: block; border-radius: 0; background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+.join_info .btn_apply:hover{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+.join_info .content_item.item_guide{text-align: center; margin-top: 40px;}
+.join_info .item_guide .guide_info{border-top:  1px solid #ddd; padding: 40px 0 20px 0;}
+.join_info .item_guide .guide_list{font-size: 11px; font-size: 1.1rem;  padding-top: 15px;}
+.join_info .item_guide .guide_info p, .join_info .item_guide .guide_list .list_title, .join_info .item_guide .guide_list .list_item{color: #888;}
+
+
+
+
+/*
+    * Custom Style
+
+*/
+.wrap {position: relative; width: 100%;}
+.wrap_popup{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+.wrap_popup .inner {position: relative; max-width: 398px; width: 100%; height: 100%; margin: 0 auto; min-width: 280px;}
+.wrap_popup .webview_box{background: #fff; padding : 25px 25px;}
+.webview_box {height: 100%; text-align: center;}
+.webview_box .content_box{padding-bottom: 10px;}
+.webview_box .content_box:last-child{padding-bottom: 0;}
+.webview_box .content_box .content_heading{font-size: 15px; font-size: 1.5rem; line-height: 1.5; letter-spacing: -.07rem;}
+.webview_box .content_box .content_heading .guide_text{display: block; font-size: 13px; font-size: 1.3rem; padding-top: 10px; color: #666;}
+.webview_box .content_box .content_item{margin: 20px 0 0;}
+.webview_box_header{position: relative; margin-bottom: -1px;}
+.webview_box_header .content_top_img{}
+.webview_box .item_empty{padding: 5px 0;}
+
+.join_info .profile_img{display: flex; align-items: center; justify-content: center;}
+.join_info .profile_img img{height: 40px;}
+.join_info .heading_title{font-size: 22px; font-size: 2.2rem;}
+.join_info .user_info{display: inline-block; font-size: 13px; font-size: 1.3rem; padding: 5px 0;}
+.join_info .user_info .icon{position: relative; float: left; width: 24px; height: 24px; padding-right:10px;}
+.join_info .link_text{color:#666; font-size: 11px; font-size: 1.1rem; text-decoration:none; padding: 5px 0;}
+.join_info .link_text:hover{text-decoration:underline;}
+.join_info .btn_join{display: block; background: #eb524e; border: 1px solid #eb524e; color: #fff; font-weight: 400; border-radius: 0; padding: 8px 20px;}
+.join_info .btn_join:hover{background: #e21d19; border: 1px solid #e21d19;}
+
+.form_join{border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: left;}
+.form_join .agree_all{border-bottom: 1px solid #eee;}
+.form_join .help-text{font-size: 11px; font-size: 1.1rem; color: #888;}
+.form_join .terms_link{position: relative; top:-2px; float: right; line-height: 1; margin: 3px 0; }
+.form_join .terms_link .link_text{padding: 0;}
+.form_join .form_list{border-bottom: 1px solid #f7f7f7;}
+.form_join .form_list .form_group{margin: 0; padding: 5px 0 0;}
+.form_join .form_list .m-radio-inline{line-height: 2; margin-bottom: 10px;}
+
+.help_block{display: block; margin: 5px 0;}
+.help_text{font-size: 11px; font-size: 1.1rem; color:#666;}
+
+/* Button Style */
+.webview_box .btn{min-width: 110px; font-weight: 600; border-radius: 50px;}
+.webview_box .btn_default{background: #fff; border: 1px solid #333; color: #333;}
+.webview_box .btn_default:hover{background: #333; border: 1px solid #333; color: #fff;}
+.webview_box .btn_point{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+.webview_box .btn_point:hover{background: #d22619; border: 1px solid #d22619; color: #fff;}
+.webview_box .btn_outline_point{background: #fff; border: 1px solid #e21d19; color: #e21d19;}
+.webview_box .btn_outline_point:hover{background: #e21d19; border: 1px solid #e21d19; color: #fff;}
+.webview_box .btn_full_gray{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
+.webview_box .btn_block{display: block; width: 100%;}
+.webview_box .btn_md{font-size: 13px; font-size: 1.3rem; line-height: 1.3; padding: 6px 20px;}
+.webview_box .btn_lg{font-size: 14px; font-size: 1.4rem; padding: 7px 20px 8px 20px;}
+.webview_box .btn_action{text-align: center; margin: 0; border-top: 1px solid #ddd; padding: 20px 0; margin-top: 20px;}
+.webview_box .btn_action .btn{min-width: 110px; font-weight: 600; border-radius: 50px;}
+.webview_box .btn_area{margin: 20px 0 10px;}
+.webview_box .guide_text{font-size: 11px; font-size: 1.1rem; color: #666; padding-top: 5px;}
+.webview_box .guide_text .text_link{color: #333; font-size: 11px; font-size: 1.1rem; font-weight: 600; cursor: pointer; text-decoration: underline;}
+.webview_box .error_text{color:#e21d19;}
+
+.btn_checkbox_agree{}
+.btn_checkbox_agree input[type="checkbox"]{display: none;}
+.btn_checkbox_agree input[type="checkbox"] + label{cursor: pointer;}
+.btn_checkbox_agree .bnt_checkbox{display: block; background: #e21d19; border: 1px solid #e21d19; color: #fff; font-size: 15px; font-size: 1.5rem; font-weight: 600; border-radius: 30px; padding: 8px 20px; margin: 0;}
+.btn_checkbox_agree .bnt_checkbox:hover{background: #d22619; border: 1px solid #d22619;}
+
+/* webview 팝업 로그인 안내 스타일 */
+.login_info input::placeholder{font-size:12px; font-size:1.2rem; font-weight: 400; color:#aaa;}
+.login_info .join_link{border-top: 1px solid #eee; padding: 10px 0 0px;}
+.login_info .content_heading{padding-bottom: 10px;}
+.login_info .content_box .content_item.form_auth{margin:10px 0;}
+.login_info .content_box .content_item.form_auth .btn_area{margin: 15px 0 10px;}
+.login_info .guide_text{font-size:11px; font-size:1.1rem; letter-spacing: -1px;}
+.login_info .guide_text .text_link{font-size:10px; font-size:1rem;}
+
+/* webview 팝업 회원가입 안내 스타일 */
+.join_info .form_join{border: 0;}
+.join_info .form_join .terms_agree_list{margin: 30px 0;}
+.join_info .form_join .terms_agree_list .checkbox span{top: 4px;}
+.join_info .form_join .list_scroll{height: 100px; overflow-y: scroll; border: 1px solid #eee;}
+.join_info .form_join .list_scroll li{padding: 2px 10px;}
+.join_info .form_auth .form_group{margin-bottom: 10px;}
+
+.join_info .form_auth .input_group{display: table; position: relative; width: 100%; border-collapse: separate;}
+.join_info .form_auth .input_group .form_control{width: 68%; min-width: 100px;}
+.join_info .form_auth .input_group .btn_input{width: 30%;}
+.join_info .form_auth .text_link{font-size:11px; font-size:1.1rem; color: #1a73e8;}
+
+
+.btn_wv_info{font-family: 'Roboto', sans-serif; color:#666; font-size: 14px; font-size: 1.4rem; font-weight: 500; text-align: center;}
+.btn_login_google{font-family: 'Roboto', sans-serif; width: 100%; background: #fff url("/images/cashmate/icon_login_google.png") no-repeat 2rem 50%; background-size: 18px auto; padding: 10px 10px 10px 40px; border-top: 1px solid #f7f7f7; border-radius: 30px; -webkit-box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 28%); box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 28%);}
+.btn_login_google:hover{background-color: #eee;}
+
+
+.guide_noti_box{background: #f7f7f7; padding: 10px 10px; margin-bottom: 10px;}
+.guide_noti_box .noti_text{}
+
+.webview_box .content_box .content_item.content_event{border: 0; margin-top: 0;}
+.content_event .item_event{margin-bottom: 20px;}
+.content_event .item_event .event_date{display: block; font-size: 13px; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;}
+.content_event .item_event .card_event{display: flex; align-items: center; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px 20px;}
+.content_event .item_event .card_event .link_card{display: flex; flex: 1; align-items: center;}
+.content_event .item_event .card_event .event_title{flex-grow: 1; padding-right: 20px;}
+.content_event .item_event .card_event .event_title h3{font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-weight: 600;}
+.content_event .item_event .card_event .event_title .event_desc{display: block; font-size: 11px; font-size: 1.1rem; font-weight: 400; color: #666; padding-top: 5px;}
+.content_event .item_event .card_event .event_img{flex-shrink: 0; width: 88px; height: 88px; margin-left: auto;}
+.content_event .item_event .event_date span, .content_event .item_event .card_event .event_title h3 span{font-weight: 600;}
+
+
+
+
+/*
+    * Common UI Style
+
+*/
+.agree_all label{font-size: 16px; font-size: 1.6rem; font-weight: 600; line-height: 1.7; margin: 10px 0;}
+.agree_all .checkbox span{top:6px;}
+.terms_agree_list{padding: 10px 0;}
+.terms_agree_list li.agree_item{position: relative; padding: 3px 0;}
+.terms_agree_list .checkbox{font-size: 13px; font-size: 1.3rem; line-height: initial; font-weight: 400; color: #20222B;}
+.list_box_border{border: 1px solid #eee; padding: 10px 10px;}
+
+/* checkbox style */
+.checkbox, .radio{display: inline-block; position: relative; padding-left: 20px; font-size: 13px; font-size: 1.3rem; font-weight: 400; line-height: 1.5; cursor: pointer;}
+.checkbox input, .radio input{position: absolute; z-index: -1; top:3px; left: 0; width:14px; height:14px; margin: 0; opacity: 0; filter: alpha(opacity = 0);}
+.checkbox span, .radio span{position: absolute; top: 2px; left: 0; width: 14px; height: 14px; border: 1px solid #fff; background: #fff;}
+.checkbox input:checked~span:after, .radio>input:checked~span:after{display: inline-block; margin-right: 15px; margin-bottom: 5px;}
+.checkbox span:after, .radio span:after{content: ''; display: block; position: absolute; }
+.checkbox span:after{top: -1px; left: 4px; width: 5px; height: 10px; border: solid #eee; border-width: 0 2px 2px 0; transform: rotate(45deg);}
+.checkbox input:checked~span:after{top: -1px; left: 4px; width: 5px; height: 10px; border: solid #e21d19; border-width: 0 2px 2px 0; transform: rotate(45deg);}
+
+.m-radio>input span{border: 1px solid #bdbdc0; background: #fff;}
+.m-radio span:after{background: #bdbdc0 !important;}
+.m-radio>input:checked~span{border: 1px solid #e21d19; background: #fff;}
+.m-radio>input:checked~span:after{background: #e21d19 !important;}
+
+/* form style */
+.form_group{text-align: left; margin-bottom: 20px;}
+.form_group .help-block{display: block; margin: 5px 0;}
+.form_group .help-text{font-size: 11px; font-size: 1.1rem; color: #666;}
+.form_group .btn_area{margin: 10px 0;}
+.label_control{font-size: 13px; font-size: 1.3rem; font-weight: 600; line-height: 1.5; vertical-align: middle; margin-bottom: 10px; padding: 4px 0;}
+.form_control{display: inline-block; width: 100%; height: 42px; background: #fff; border: 1px solid #ddd; padding: 7px 10px 5px 10px;}
+.input_group{margin-bottom: 10px;}
+.input_group .form_control{height: 42px; padding: 5px 5px;}
+.input_group .btn_input{min-width: 80px; font-size: 21px; font-size: 1.2rem; font-weight: 600; border-radius: 0; padding: 12px 5px;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
+.input_group .btn_input.disabled{border: 1px solid #ddd; color: #bbb; pointer-events: none; cursor: default;}
+.input_form{display: inline-block; position: relative; width: 100%; padding: 5px 0;}
+.input_form .time{position: absolute; top: 18px; right: 14px; color:#e21d19; font-size: 1.3rem; font-size: 13px; font-weight: 600;}
+.input_form .form_input_error{border: 1px solid #e21d19;}
+.input_form .form_input_error::placeholder{color: #e21d19;}
+.input_form .form_input_error:focus{outline: 0; outline-offset:0;}
+/* input-size Width*/
+.input_width_xlg {width: 80% !important; min-width: 420px !important;}
+.input_width_lg {width: 60% !important; min-width: 320px !important;}
+.input_width_md {width: 50% !important; min-width: 200px !important;}
+.input_width_sm {width: 25% !important; min-width: 145px !important;}
+.input_width_xs {width: 100px !important;}
+
+/*  Modal, Alert Form */
+.modal{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999;}
+.modal .modal_body{position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: auto; background: #fff; padding: 20px 20px;}
+.modal .modal_body .modal_contents{padding-top: 10px;}
+.modal .modal_contents .item_message{padding-bottom: 15px;}
+.modal .modal_contents .item_message p{font-size: 1.3rem; font-size: 13px; line-height: 1.5; padding-bottom: 5px;}
+.modal .modal_body .modal_action{position: relative; width: 100%; text-align: center; border-top:1px solid #ddd; padding: 20px 0 0;}
+.modal .modal_action .btn_group{display: block; position: relative; vertical-align: middle;}
+.btn_modal{display: inline-block; position: relative; overflow: hidden; min-width: 88px; padding: 4px 20px; font-size: 1.3rem; font-size: 13px; line-height: 1.3; text-align: center; vertical-align: middle; border-radius: 30px; -webkit-tap-highlight-color: transparent;}
+.btn_modal:hover, .btn_modal:focus{text-decoration: none;}
+.btn_modal.btn_cancel{background: #e7e7e7; border: 1px solid #e7e7e7; color: #666;}
+.btn_modal.btn_cancel:hover{background: #a7a7a7; border: 1px solid #a7a7a7; color: #fff;}
+.btn_modal.btn_check{background: #fff; border: 1px solid #333; color: #333;}
+.btn_modal.btn_check:hover{background: #333; border: 1px solid #333; color: #fff;}
+
+
+/*
+    * [클립다운 PC 팝업] 클립다운 라이트 설치 확인
+*/
+/* Point Badge Style */
+.wrap_popup .badge_point{display: inline-block; position: relative; min-width: 78px; height: 28px; background: #e21d19; color: #fff; text-align: center; line-height: 1.5; border-radius: 30px; padding: 4px 4px 4px 25px; -webkit-touch-callout: none; user-select: none;}
+.wrap_popup .badge_point .icon_point{position: absolute; top:5px; left: 4px; width: 18px; height: 18px; background: #fff; color: #e21d19;  font-size: 14px; font-size: 1.4rem; font-weight: 700; line-height: 1; border-radius:50%; padding: 2px 4px;}
+.wrap_popup .badge_point .point_data{font-size: 14px; font-size: 1.4rem; font-weight: 700; line-height: 1.4; padding: 0 6px 0 0;}
+
+.wrap_popup .link_text{display: inline-block; color:#666; font-size: 11px; font-size: 1.1rem; text-decoration:none; padding-top: 10px;}
+.item_check_install{padding: 0 20px;}
+.item_check_install .content_text{font-weight: 500;}
+.info_box_app{background: #fff; border: 1px solid #e21d19; padding: 6px 10px; margin: 30px 0 20px 0;}
+.info_box_app{display: flex; align-items: center;}
+.info_box_app .item_left{display: flex; flex: 1; align-items: center;}
+.info_box_app .item_right{margin-left: auto;}
+.info_box_app .icon_launcher{position: relative; overflow: hidden; width: 36px; height: 36px; border-radius: 5px; box-shadow: 0 0 4px 0 rgba(0,0,0,0.25); margin-right: 10px;}
+.info_box_app .item_text{font-weight: 600;}
+
+/* 0422 가입팝업완료 시 친구초대 안내 */
+.wrap_popup .webview_box.join_info_invite{padding-bottom: 40px;}
+
+/* 0610 앱 미설치/ PC 광고 참여 불가 시 앱 이용안내 팝업  */
+.info_box_qr{background: #f7f7f7; padding: 10px 0; margin-top: -10px;}
+.info_box_qr .img_qr{width: 30%; border: 1px solid #e21d19;}
+.info_box_qr .item_text{position: relative; padding: 10px 0 0;}
+
