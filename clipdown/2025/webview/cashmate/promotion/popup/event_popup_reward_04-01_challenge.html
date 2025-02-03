@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>WebView Popup 출석체크 이벤트  </title>
+    <link rel='stylesheet' href='../../resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='../../resource/css/style_cashmate.css' type='text/css'>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap webview_cashmate">
+    </div>
+
+    <!-- layer Popup 골드버튼 획득 보상 -->
+    <div id="" class="layer_popup popup_event popup_event_result">
+        <div class="popup_wrap_full">
+            <div class="popup_inner">
+                <div class="popup_contents">
+                    <!-- 도전 보상 선택 시 -->
+                    <div class="popup_content">                       
+                        <div class="header_title">
+                            <h1 id="title" class=""><span class="attend_color_point">도전 보상</span>을<br />선택하셨습니다.</h1>
+                        </div>
+                        <div class="content_box">
+                            <div class="ani_state">
+                                <div id="" class="ani_container">
+                                    <div class="img_reward img_reward_fixed">
+                                        <img src="./img_popup_reward_fix_01-01.png" alt="">     
+                                    </div>                                                                       
+                                </div>         
+                            </div>                           
+                        </div>
+                        <div class="content_box">
+                            <div class="item_reward item_reward_column">
+                                <a href="#" class="btn_reward btn_column btn_refresh btn_challenge">
+                                    <div class="img_column img_refresh">
+                                        <svg id="icon_refresh" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="58" viewBox="0 0 58 58">
+                                            <defs>
+                                                <clipPath id="clip-path">
+                                                <rect id="사각형_1840" data-name="사각형 1840" width="58" height="58" fill="#d9d9d9"/>
+                                                </clipPath>
+                                            </defs>
+                                            <g id="그룹_4211" data-name="그룹 4211" clip-path="url(#clip-path)">
+                                                <path id="패스_2089" data-name="패스 2089" d="M26.4,0A26.477,26.477,0,0,0,0,26.5H10.58A15.869,15.869,0,1,1,26.4,42.32H18.18V36.977L0,47.558l18.18,10.58V52.9H26.4A26.449,26.449,0,1,0,26.4,0" transform="translate(2.071 0)" fill="#d9d9d9" fill-rule="evenodd"/>
+                                            </g>
+                                        </svg>                                              
+                                    </div>
+                                    <h3 class="text_btn">다시 선택</h3>
+                                </a>
+
+                                <a href="#" class="btn_reward btn_column btn_challenge">
+                                    <div class="img_column img_challenge">
+                                        <img src="./img_challenge_on.png" alt="">                                                                                                                                              
+                                    </div>
+                                </a>
+                            </div>                      
+                        </div>
+                    </div>
+                    <!-- // 도전 보상 선택 시 -->
+            </div>
+        </div>
+    </div>
+    <!-- // layer Popup 골드버튼 획득 보상 -->
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    <script src="../../resource/js/common_cashmate.js"></script>
+    <script src="../../resource/js/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+</body>
+</html>
