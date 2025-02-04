@@ -181,7 +181,4 @@ $('.counter').each(function() {
       }
   
     });  
-    
-    
-  
   });

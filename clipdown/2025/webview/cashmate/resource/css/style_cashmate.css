@@ -958,10 +958,17 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .ani_state .count_point{position: relative; z-index: 999; padding: 10px 0;}
 .ani_state .count_point .text_count{font-size: 60px; font-size: 6rem; font-weight: 700; letter-spacing: -1px;}
 
+
 .ani_state .img_reward{position: relative; width: 100%; height: 280px; text-align: center; }
 .ani_state .img_reward .img_reward_goldBtn{display: flex; justify-content: center; position: relative; z-index: 1; bottom: -100px;}
 .ani_state .img_reward .img_reward_goldBtn img{width: 60%;}
 .ani_state .ani_reward_pointFalling{display: flex; position: absolute; width: 180%; top: 50%; left: 50%; transform: translate(-50%, -78%);}
+
+.reward_fixed{padding: 60px 0 0;}
+.reward_fixed .img_counter{height: 260px;}
+.reward_fixed .count_point{top:40px}
+.reward_challenge .text_count{color: #fff;}
+.img_state_card{position: relative; bottom: 100px; left: -10px; width: 100%; z-index: 0;}
 
 .popup_event_result .btn_area{padding: 40px 0 20px;}
 .popup_event_result .item_reward{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; position: relative; margin-bottom: 20px;}
