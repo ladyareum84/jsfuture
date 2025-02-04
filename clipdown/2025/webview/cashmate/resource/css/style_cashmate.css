@@ -937,7 +937,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .layer_popup .popup_content .header_title{padding: 30px 10px 20px;}
 
 .popup_event_result .header_title h1{font-size: 32px; font-size: 3.2rem; font-weight: 900;}
-.popup_event_result .title_description{font-size: 1.4rem; font-weight: 600; padding: 10px 0;}
+.popup_event_result .title_description{font-size: 1.6rem; font-weight: 600; padding: 10px 0;}
 .popup_event_result .popup_wrap_full{position: relative; width: 100%;}
 .popup_event_result .popup_inner{position: relative; width: 100%; max-width: 480px; margin: 0 auto;}
 .popup_event_result .popup_contents{border: 0; border-radius: 0;}
@@ -951,8 +951,8 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .ani_state .ani_complete_check {position: relative; height: 150px;}
 .ani_state .img_state_01{position: relative; top: 30px; left: -12px; max-width: 280px;}
 
-.content_today_point .btn_popup_event{}
-.ani_state .img_counter{position: relative; height: 400px;}
+.content_today_point .ani_state .img_counter{height: 400px;}
+.ani_state .img_counter{position: relative; height: 100%;}
 .ani_state .img_counter .img_state_02-01{position: relative; max-width: 124px;}
 .ani_state .img_counter .img_state_02-02{position: relative;  bottom: 220px; left: 0; width: 100%; z-index: 0;}
 .ani_state .count_point{position: relative; z-index: 999; padding: 10px 0;}
@@ -982,10 +982,10 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .popup_event_result .title_description .emphasis{font-size: 16px; font-size: 1.6rem; padding: 10px 0 0;}
 .ani_state .img_reward_fixed{width: 90%; height: 100%;}
 .popup_event_result .item_reward_column{justify-content: center; position: relative; width: 100%;}
-.popup_event_result .item_reward_column .btn_column{display: flex; flex-direction: column; justify-content: space-around; align-items: center; width: 130px; height: 130px; padding: 10px 10px; margin: 0 10px;}
+.popup_event_result .item_reward_column .btn_column{display: flex; flex-direction: column; justify-content: space-around; align-items: center; width: 130px; height: 130px; margin: 0 10px;}
 .popup_event_result .item_reward_column .btn_column.btn_refresh{background: #fbfbfb; border: 4px solid #f1f1f1;}
-.popup_event_result .item_reward_column .img_column{position: relative; width: 60%; max-width: 88px;}
-.popup_event_result .item_reward_column .img_column.img_refresh{width: 50%;}
+.popup_event_result .item_reward_column .img_column{position: relative; width: 100%; max-width: 88px;}
+.popup_event_result .item_reward_column .img_column.img_refresh{width: 70%; padding: 12px 12px;}
 .popup_event_result .item_reward_column .text_btn{font-size: 16px; font-size: 1.6rem; font-weight: 700;}
 
 .popup_event_result .item_reward_column .img_column.img_challenge{position: relative; bottom: -10px; width: 100%; max-width: 100%;}

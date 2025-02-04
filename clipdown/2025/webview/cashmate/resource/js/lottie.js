@@ -7,4 +7,19 @@ let animation = bodymovin.loadAnimation({
   loop : false, //반복재생
   autoplay : true //자동재생  
   //animationData :animationData // 직접 객체정보를 넣거나
+  
 });
+
+
+//
+var lottieAni = bodymovin.loadAnimation({
+  container : document.getElementById('lottie-coin'),
+  path: '../../resource/json/ani_coin_big.json',
+  renderer : 'svg',
+  loop : true,
+  autoplay : true
+});​
+
+
+
+
