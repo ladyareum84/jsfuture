@@ -939,7 +939,7 @@ svg{max-width: 100%; width: 100%; height: 100%;}
 .popup_event_result .header_title h1{font-size: 32px; font-size: 3.2rem; font-weight: 900;}
 .popup_event_result .title_description{font-size: 1.4rem; font-weight: 600; padding: 10px 0;}
 .popup_event_result .popup_wrap_full{position: relative; width: 100%;}
-.popup_event_result .popup_inner{position: relative; margin: 0;}
+.popup_event_result .popup_inner{position: relative; width: 100%; max-width: 480px; margin: 0 auto;}
 .popup_event_result .popup_contents{border: 0; border-radius: 0;}
 .popup_event_result .btn_popup_event{position: relative; margin: 20px 0;}
 .popup_event_result .btn_event_check{width: 100%; height: 48px; padding: 12px 10px; background: #207fd1; color: #fff; font-size: 16px; font-size: 1.6rem; border-radius: 8px;}
