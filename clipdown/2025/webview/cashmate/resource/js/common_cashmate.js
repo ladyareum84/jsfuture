@@ -170,7 +170,7 @@ $('.counter').each(function() {
   
     {
   
-      duration: 800,
+      duration: 2000,
       easing:'linear',
       step: function() {
         $this.text(Math.floor(this.countNum));
