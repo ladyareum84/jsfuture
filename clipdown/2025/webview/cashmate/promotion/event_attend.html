@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>[APP] WebView 이벤트 - 출석체크 </title>
+    <title>출석체크 이벤트 </title>
     <link rel='stylesheet' href='../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../resource/css/style_cashmate.css' type='text/css'>
 
@@ -19,6 +19,45 @@
     <![endif]-->
 </head>
 <body>
+    <!-- 보상 방식 변경 안내 layer Popup -->
+    <div id="rewardNoticeModal" class="layer_popup popup_event_info" style="display: block;">
+      <div class="bg_dimmed"></div>
+      <div class="popup_wrap">
+          <div class="popup_inner">
+              <div class="btn_popup btn_popup_close">
+                  <a id="doNotExpose" href="#" class="btn_close">
+                      <span class="close"></span>
+                      다시 보지 않기
+                  </a>
+              </div>
+              <div class="popup_contents">
+                  <div class="popup_content">
+                      <div class="header_title">
+                          <h1 id="title">보상 방식 변경 안내</h1>
+                      </div>
+                      <div class="content_box">
+                          <div class="content_info">
+                              <div class="content_heading">일일 출석 및 골드버튼 포인트 <br />지급 방식이 변경되었어요</div>
+                              <div class="des_tag">
+                                  <span class="item_tag">#랜덤</span>
+                                  <span class="item_tag">#럭키</span>
+                                  <span class="item_tag">#도전보상</span>
+                                  <span class="item_tag">#<span class="font-en">10,000P</span></span>
+                              </div>
+                              <div class="guide_text">* 출석체크 > 안내 페이지에서 상세 내용 확인 가능해요</div>
+                          </div>
+                      </div>
+                      <div class="btn_popup half">
+                          <a id="confirm" href="#" class="btn btn_info btn_close">확인</a>
+                          <a id="goToGuidePage" href="#" class="btn btn_info point">자세히 보기</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- //보상 방식 변경 안내 layer Popup -->
+
     <div class="wrap webview_cashmate">
         <section class="section section_attend">
             <article class="contents contents_ticker">
@@ -26,16 +65,16 @@
                     <div class="ticker_container">
                         <ul class="ticker_rolling">
                             <li class="ticker_item">
-                                🥳 <span class="font_en">5111</span>님, 100번째 출석 <span class="font_en point-color">100P</span> 당첨 축하드려요!
+                                🍀 <span class="font_en">5111</span>님, 100번째 출석 <span class="font_en point-color">100P</span> 당첨 축하드려요!
                             </li>
                             <li class="ticker_item">
                                 🎉 <span class="font_en">4111</span>님, 100번째 출석 <span class="font_en point-color">100P</span> 당첨 축하드려요!
                             </li>
                             <li class="ticker_item">
-                                🥳 <span class="font_en">3111</span>님, 100번째 출석 <span class="font_en point-color">100P</span> 당첨 축하드려요!
+                                🍀 <span class="font_en">3111</span>님, 100번째 출석 <span class="font_en point-color">100P</span> 당첨 축하드려요!
                             </li>
-                            <li class="ticker_item">🥳 <span class="font_en">1111</span>님, 1,00번째 출석 <span class="font_en point-color">1,000P</span> 당첨 축하드려요!</li>
-                            <li class="ticker_item">🥳 <span class="font_en">2222</span>님, 10,000번째 출석 <span class="font_en point-color">10,000P</span> 당첨 축하드려요!</li>
+                            <li class="ticker_item">🍀 <span class="font_en">1111</span>님, 1,00번째 출석 <span class="font_en point-color">1,000P</span> 당첨 축하드려요!</li>
+                            <li class="ticker_item">🎉 <span class="font_en">2222</span>님, 10,000번째 출석 <span class="font_en point-color">10,000P</span> 당첨 축하드려요!</li>
                         </ul>
                     </div>
                     
@@ -545,8 +584,8 @@
                                 </div>                                    
                             </div>  
                         </div>
-                        <div class="btn_area">
-                            <a href="#" class="btn btn_attend">출석하기</a>
+                        <div id="attendButton" class="btn_popup_event">
+                            <a href="" class="btn btn_attend today_ani">출석하고 포인트 받기</a>
                         </div>                                                                                                         
                     </div>
                 </div> 
@@ -565,7 +604,7 @@
                                 <div class="num_box font_en">1</div>                               
                                 <div class="text_box">
                                     <span class="text-block">출석체크만 해도,</span>
-                                    <span class="text-block bold">매일 <span class="font_en">100P</span> 적립!</span>
+                                    <span class="text-block bold">매일 랜덤 포인트 적립!</span>
                                 </div>
                                 <div class="img_box">
                                     <img src="../resource/images/event/img_attend_main.svg" alt="" style="min-width: 72px;">
@@ -574,11 +613,11 @@
                             <li class="list_item">   
                                 <div class="num_box font_en">2</div>                               
                                 <div class="text_box">
-                                    <span class="text-block">10/100/1,000/10,000번째로 출석하면</span>
-                                    <span class="text-block bold">럭키 포인트<span class="font_en">5,000P</span>적립!</span>
+                                    <span class="text-block">행운의 순번에 출석하면,</span>
+                                    <span class="text-block bold">럭키 포인트<span class="font_en">1,000P</span>적립!</span>
                                 </div>
                                 <div class="img_box">
-                                    <img src="../resource/images/event/img_badge_goldBtn.svg" alt="">
+                                    <img src="../resource/images/event/icon_clover.svg" alt="">
                                 </div>
                             </li>
                             <li class="list_item">   
@@ -629,7 +668,7 @@
                 </div>
             </article>
         </section>
-        <section class="section section_attend">
+        <section class="section section_attend hide">
             <article class="contents contents_guideline">
                 <div class="inner">
                     <div class="content_title">
@@ -661,7 +700,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
     <script src="../resource/js/common_cashmate.js"></script>
-    <script src="../resource/js/clipboard.min.js"></script>
+    <!-- lottie script-->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script>
         const tickerRolling = document.querySelector(".ticker_rolling");
         const tickerLength = tickerRolling.children.length;
@@ -686,7 +726,13 @@
             }, 0);
         }
         }, 1000);
-    </script>    
+    </script>
+    <script>
+    // Popup Close
+    $('.btn_close').click(function(){
+        $('.layer_popup').hide();
+    });
+    </script>
     
 </body>
 </html>

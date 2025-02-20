@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>팝업 - 골드버튼 획득 보상  </title>
+    <title>팝업 - 출석완료 오늘의 포인트  </title>
     <link rel='stylesheet' href='../../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../../resource/css/style_cashmate.css' type='text/css'>
 
@@ -22,45 +22,49 @@
     <div class="wrap webview_cashmate">
     </div>
 
-    <!-- layer Popup 골드버튼 획득 보상 -->
+    <!-- layer Popup 출석완료 -->
     <div id="" class="layer_popup popup_event popup_event_result">
         <div class="popup_wrap_full">
             <div class="popup_inner">
-                <!-- 골드버튼 획득 -->
-                <div id="goldButtonContainer" class="popup_contents">
-                    <!-- step1 : 골드버튼 보상 받기 -->
-                    <div id="step1" class="popup_content content_gold box_top">
-                        <div class="content_box">
+                <!-- 오늘의 포인트 / 랜덤 출석 포인트 -->
+                <div id="step2" class="popup_content content_today_point">                    
+                    <div id="step2" class="popup_content content_today_point"> 
+                        <div class="content_box box_top">
                             <div class="ani_state">
-                                <div id="" class="ani_container">
-                                    <div class="img_reward_goldBtn ani_effect ani_goldBtn">
-                                        <img src="../../resource/images/event/img_badge_goldBtn.svg" alt="">
+                                <div class="ani_container">
+                                    <div class="ani_complete_check ani_effect ani_point_01">
+                                        <dotlottie-player src="https://lottie.host/1113d6c8-e664-4092-9bf0-8f48acef1d05/LSzZzOCtoW.json" background="transparent" speed="1.8" style="width: 100%; height: 100%" loop autoplay></dotlottie-player>
                                     </div>
-                                    <div class="ani_reward_effect ain_gold_item">
-                                        <div class="ani_sparkle_01 ani_effect">
-                                            <dotlottie-player id="lottieSparkle" src="https://lottie.host/ec2057cd-a78d-443c-8708-408c08444f4a/lrYoTROElv.json" background="transparent" speed="1.5" style="width: 100%; height: 100%" loop autoplay></dotlottie-player>
-                                        </div>
+                                    <div class="ani_confitte">
+                                        <dotlottie-player src="https://lottie.host/ae3e2e3e-d370-4f50-9d42-ead5cc12976f/fPUMKuO4Zz.json" background="transparent" speed="1" style="width: 100%; height: 100%" loop autoplay></dotlottie-player>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ani_counter">
+                                <div class="count_point">
+                                    <div class="font_en text_count ani_count">
+                                        <span id="number" class="counter" data-count="500">0</span>P
                                     </div>
                                 </div>
                             </div>
                             <div class="header_title">
-                                <h1 id="title">
-                                    <span class="text-block ani_effect tit_gold_01">골드버튼 완성!</span>
-                                    <span class="text-block ani_effect tit_gold_02">보상을 받으러 가볼까요?</span>
-                                </h1>
+                                <h1 id="title1" class="tit_today_01 ani_effect">오늘의 포인트는?</h1>
+                                <h1 id="title2" class="tit_today_02 ani_effect hide">이만큼 받았어요!</h1>
                             </div>
                         </div>
+                        
                         <div class="btn_popup_event btn_bottom">
-                            <a id="goToStep2" href="#" class="btn btn_event_check btn_yellow ani_effect">보상 받으러가기</a>
+                            <a id="getPoint" href="#" class="btn btn_event_check ani_effect">확인</a>
                         </div>
                     </div>
-                    <!-- // 골드버튼 획득 -->
+                    <!-- // 오늘의 포인트 / 랜덤 출석 포인트 -->
+                </div>
             </div>
         </div>
     </div>
-    <!-- // layer Popup 골드버튼 획득 보상 -->
+    <!-- // layer Popup 출석완료 -->
 
-    
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>WebView Popup 출석체크 이벤트  </title>
+    <title>팝업 - 골드버튼 획득 도전 보상 획득 성공</title>
     <link rel='stylesheet' href='../../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../../resource/css/style_cashmate.css' type='text/css'>
 
@@ -26,43 +26,40 @@
     <div id="" class="layer_popup popup_event popup_event_result">
         <div class="popup_wrap_full">
             <div class="popup_inner">
-                <div class="popup_contents">
-                    
-                    <!-- 도전 보상 당첨 -->
-                    <div class="popup_content">                       
-                        <div class="header_title">
-                            <h1 id="title" class="">행운의 주인공<span class="font_en attend_color_point">당첨!</span></h1>
-                        </div>
-                        <div class="content_box">
-                            <div class="ani_state reward_fixed reward_challenge">
+                <div id="goldButtonContainer" class="popup_contents ">                    
+                    <!-- step4 challengeRewardSuccess : 도전 보상 획득 성공 -->
+                    <div id="step4_challengeRewardSuccess" class="popup_content content_challenge">                       
+                        <div class="content_box box_top">
+                            <div class="ani_state">
                                 <div class="ani_container">
-                                    <div class="img_counter">
-                                        <div class="count_point">
-                                            <div class="font_en text_count"><span class="counter" data-count="10000">0</span></div>
-                                        </div>
-                                        <div class="img_state_card">
-                                            <img src="../../resource/images/event/popup/img_card_point_challenge.png" alt="">                                        
-                                        </div>
+                                    <div class="img_card img_card_default ani_effect ani_complete_check">
+                                        <img src="../../resource/images/event/popup/img_challenge_point_01.svg" alt="">
                                     </div>
-                                    
-                                </div>         
-                            </div>                           
+                                    <div class="ani_confitte">
+                                        <dotlottie-player src="https://lottie.host/ae3e2e3e-d370-4f50-9d42-ead5cc12976f/fPUMKuO4Zz.json" background="transparent" speed="1" style="width: 100%; height: 100%" loop autoplay></dotlottie-player>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header_title">
+                                <h1 id="title" class="ani_effect ani_tit">행운의 주인공 당첨!!</h1>
+                            </div>
+                            <div class="btn_popup_event btn_bottom">
+                                <a id="confirm" href="#" class="btn btn_event_check ani_effect">확인</a>
+                            </div>
                         </div>
                     </div>
                     <!-- // 도전 보상 당첨 -->
-                     
+                </div>
             </div>
         </div>
     </div>
-    <!-- // layer Popup 골드버튼 획득 보상 -->
-
-    
+    <!-- // layer Popup 골드버튼 획득 보상 -->    
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
     <script src="../../resource/js/common_cashmate.js"></script>
     <script src="../../resource/js/clipboard.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </body>
 </html>

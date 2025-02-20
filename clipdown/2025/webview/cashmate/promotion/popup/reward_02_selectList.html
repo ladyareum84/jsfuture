@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <title>WebView Popup 출석체크 이벤트  </title>
+    <title>팝업 - 골드버튼 획득 보상 선택  </title>
     <link rel='stylesheet' href='../../resource/css/common.css' type='text/css'>
     <link rel='stylesheet' href='../../resource/css/style_cashmate.css' type='text/css'>
 
@@ -26,41 +26,56 @@
     <div id="" class="layer_popup popup_event popup_event_result">
         <div class="popup_wrap_full">
             <div class="popup_inner">
-                <div class="popup_contents">
-                    
-                    <!-- 보상 선택하기 -->
-                    <div class="popup_content">                       
-                        <div class="header_title">
-                            <h1 id="title" class="">아래 <span class="attend_color_point">두가지 보상</span>중<br /> <span class="attend_color_point">하나를 선택</span>하세요</h1>
-                        </div>
+                <div id="goldButtonContainer" class="popup_contents ">                    
+                    <!-- step2 : 보상 종류 선택하기 -->
+                    <div id="step2" class="popup_content content_reward ">
                         <div class="content_box">
-                            <div class="btn_area">
-                                <div class="item_reward">
-                                    <a href="#" class="btn_reward btn_challenge">
-                                        <div class="img_box">
-                                            <img src="../../resource/images/event/popup/img_reward_challenge.png" alt="">
-                                        </div>
-                                        <div class="text_box">
-                                            <h3 class="title_btn">도전 보상</h3>
-                                            <span class="text-block guide_text">도전 보상에 대한 설명은 두 줄... 도전 보상에 대한 설명은 두 줄...</span>
-                                        </div>
-                                    </a>
+                            <div class="ani_state ani_reward_select ani_effect">
+                                <div id="" class="ani_container">
+                                    <div class="ani_select ani_hand_l up">
+                                        <img src='../../resource/images/event/popup/img_reward_select_hand_l.png' alt="">
+                                    </div>
+                                    <div class="ani_select ani_hand_r down">
+                                        <img src='../../resource/images/event/popup/img_reward_select_hand_r.png' alt="">
+                                    </div>    
                                 </div>
-                                <div class="item_reward">
-                                    <a href="#" class="btn_reward">
-                                        <div class="img_box">
-                                            <img src="../../resource/images/event/popup/img_reward_fixed.png" alt="">
-                                        </div>
-                                        <div class="text_box">
-                                            <h3 class="title_btn">확정 보상</h3>
-                                            <span class="text-block guide_text">확정 보상에 대한 설명은 두 줄... 도전 보상에 대한 설명은 두 줄...</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>                      
+                            </div>
+                            <div class="header_title ">
+                                <h1 id="title" class="">
+                                    <span class="text-block ani_effect tit_reward_01">아래 두 가지 보상 중</span>
+                                    <span class="text-block ani_effect tit_reward_02">하나를 선택해주세요</span>
+                                </h1>
+                            </div>
                         </div>
+                        <div class="btn_popup_event btn_bottom">
+                            <div class="item_reward">
+                                <a id="challengeReward" href="#" class="btn_reward_full btn_challenge ani_effect">
+                                    <div class="img_box">
+                                        <img src="../../resource/images/event/popup/img_reward_btn_challenge.png" alt="">
+                                    </div>
+                                    <div class="text_box">
+                                        <div class="badge_ribbon">
+                                            <span>포인트 2배 뽑기 도전</span>
+                                        </div>
+                                        <h3 class="title_btn">도전 보상</h3>
+                                        <span class="text-block guide_text">뽑기 성공 시 <span class="font_en">10,000P</span> 획득!</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item_reward">
+                                <a id="basicReward" href="#" class="btn_reward_full btn_default ani_effect">
+                                    <div class="img_box">
+                                        <img src="../../resource/images/event/popup/img_reward_btn_default.png" alt="">
+                                    </div>
+                                    <div class="text_box">
+                                        <h3 class="title_btn">기본 보상</h3>
+                                        <span class="text-block guide_text"><span class="font_en">5,000P</span> 지급 받기</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>     
                     </div>
-                    <!-- // 보상 선택하기 -->
+                    <!-- // step2 : 보상 종류 선택하기 -->
                     
             </div>
         </div>
