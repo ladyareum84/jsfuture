@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>눈치게임 참여 내역 </title>
+    <link rel='stylesheet' href='./resource/css/nunchi_style.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/font.css' type='text/css'>
+
+
+</head>
+<body>
+    <div class="wrap webview_nunchi">
+        <section class="section section_nunchi">
+            <div class="container">
+                <article class="contents">
+                    <div class="tabs">
+                        <div class="tab_container">
+                            <ul class="tabs_nav font_bold">
+                                <li data-tab="tab_join_01" class="tab_item active">전체</li>
+                                <li data-tab="tab_join_02" class="tab_item">완료</li>
+                                <li data-tab="tab_join_03" class="tab_item">진행중</li>
+                                <div class="tab_slider"></div>
+                            </ul>
+                            
+                            <div class="tab_content">
+                                <!-- content tab 01 -->
+                                <div class="tab_pane active" id="tab_join_01">
+                                    <div class="tab_notice">최근 7일간 참여한 내역을 확인할 수 있어요</div>
+                                    <!-- Round Card 01 -->
+                                    <div class="round_card card_type_row">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 1</span> 
+                                                <span class="tit_type_row font_bold">당첨</span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19 ~ 2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_row">로우넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 가능</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">7</span>회    
+                                                        </div>
+                                                        <div class="ticket_group">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">3</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">4</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">1등, 3등!</span>
+                                                        </div>
+                                                        <div class="result_point">
+                                                            <span class="point_total">13,000P</span> 획득
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">2,3,5,<span class="num_win_row">11</span>,13,16,<span class="num_win_row">25</span></span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 02 -->
+                                    <div class="round_card card_type_high">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span> 
+                                                <span class="tit_round font_round separator">Round 20</span> 
+                                                <span class="rule_type_no_win font_bold">미당첨</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19 ~ 2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_high">하이넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 불가</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">1</span>회    
+                                                        </div>
+                                                        <div class="ticket_group">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">1</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">0</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">아쉽게도 숫자가 겹쳤어요</span>
+                                                        </div>
+                                                        <div class="result_point hidden">
+                                                            <span class="point_total">13,000P</span> 획득
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">125</span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+                                    <!-- Round Card 03 진행중, 대기 -->
+                                    <div class="round_card card_type_wait">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 11</span> 
+                                                <span class="tit_type_wait font_bold">대기</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_row">로우넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 불가</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">2</span>회    
+                                                        </div>
+                                                        <div class="ticket_group">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">2</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">0</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">아직 진행중이에요</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">2,3</span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 04 -->
+                                    <div class="round_card card_type_row">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 1</span> 
+                                                <span class="tit_type_row font_bold">당첨</span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19 ~ 2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_row">로우넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 가능</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">7</span>회    
+                                                        </div>
+                                                        <div class="ticket_group">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">3</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">4</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">1등, 3등!</span>
+                                                        </div>
+                                                        <div class="result_point">
+                                                            <span class="point_total">13,000P</span> 획득
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">2,3,5,<span class="num_win_row">11</span>,13,16,<span class="num_win_row">25</span></span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 05 -->
+                                    <div class="round_card card_type_high">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span> 
+                                                <span class="tit_round font_round separator">Round 20</span> 
+                                                <span class="tit_type_high font_bold">당첨</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19 ~ 2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_high">하이넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 가능</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">1</span>회    
+                                                        </div>
+                                                        <div class="ticket_group hidden">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">3</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">4</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">1등</span>
+                                                        </div>
+                                                        <div class="result_point hidden">
+                                                            <span class="point_total">10,000P</span> 획득
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">2,3,5,<span class="num_win_high">11</span>,13,16,<span class="num_win_high">25</span></span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+                                    <!-- Round Card 03 진행중, 대기 -->
+                                    <div class="round_card card_type_wait">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 11</span> 
+                                                <span class="tit_type_wait font_bold">대기</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="round_list_box">
+                                            <ul class="list_content list_info">
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">진행 기간</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="date">2025.06.19</span>    
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">룰 타입</div>
+                                                    <div class="info_data font_bold">
+                                                        <span class="value_rule rule_type_row">로우넘버</span>
+                                                        <span class="p_lr_5">/</span>
+                                                        <span class="value_duplicate">중복 참여 불가</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">참여 횟수</div>
+                                                    <div class="info_data">
+                                                        <div class="ticket_total">
+                                                            총 <span class="count">2</span>회    
+                                                        </div>
+                                                        <div class="ticket_group">
+                                                            (
+                                                                <div class="ticket_icon paid">
+                                                                    <span class="count">2</span>
+                                                                </div>
+                                                                <div class="ticket_icon free">
+                                                                    <span class="count">0</span>
+                                                                </div>
+                                                            )
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">결과</div>
+                                                    <div class="info_data result">
+                                                        <div class="result_value">
+                                                            <span class="">아직 진행중이에요</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list_item info_box">
+                                                    <div class="info_tit">선택 숫자</div>
+                                                    <div class="info_data join_num">
+                                                        <span class="num">2,3</span>
+                                                    </div>
+                                                </li>
+                                            </ul> 
+                                            <div class="btn_group">
+                                                <a href="#" class="link_text">결과보기</a>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+
+
+                                    <div class="btn_more_wrap">
+                                        <button id="btnMore" class="btn_more">
+                                            <span>더보기</span>
+                                            <span class="icon_arrow_down">
+                                                <svg  width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="fi_2722987"><g id="_16" data-name="16"><path d="m12 16a1 1 0 0 1 -.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1 -.7.29z"></path></g></svg>
+                                            </span>                                            
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- // content tab 01 -->
+                                <!-- content tab 02 -->
+                                <div class="tab_pane" id="tab_join_02">
+                                    <div class="tab_notice">최근 7일간 참여한 내역을 확인할 수 있어요</div>
+                                    
+                                </div>
+                                <!-- // content tab 02 -->
+
+                                <!-- content tab 03 -->
+                                <div class="tab_pane" id="tab_join_03">
+                                    <!-- 완료된 라운드가 없을 때 -->
+                                    <div class="no_round_wrap">
+                                        <div class="list_content_empty">
+                                            <div class="empty_icon">
+                                                <svg id="icon_error" xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 100 100">
+                                                    <g id="그룹_3" data-name="그룹 3">
+                                                        <g id="그룹_2" data-name="그룹 2">
+                                                        <path id="패스_3" data-name="패스 3" d="M50,0a50,50,0,1,0,50,50A50.041,50.041,0,0,0,50,0Zm0,94.953A44.953,44.953,0,1,1,94.953,50,45.032,45.032,0,0,1,50,94.953Z"/>
+                                                        </g>
+                                                    </g>
+                                                    <g id="그룹_5" data-name="그룹 5" transform="translate(29.49 29.275)">
+                                                        <g id="그룹_4" data-name="그룹 4">
+                                                        <path id="패스_4" data-name="패스 4" d="M130.332,125.71l15.924-15.924a2.7,2.7,0,0,0-3.822-3.822L126.51,121.888l-15.924-15.924a2.7,2.7,0,0,0-3.822,3.822l15.924,15.924-15.924,15.8a2.771,2.771,0,0,0,0,3.822,2.771,2.771,0,0,0,3.822,0L126.51,129.4l15.924,15.924a2.771,2.771,0,0,0,3.822,0,2.771,2.771,0,0,0,0-3.822Z" transform="translate(-106 -105.2)"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div class="font_bold text_empty">
+                                                아직 참여한 기록이 없어요
+                                            </div>                                        
+                                        </div>                                        
+                                    </div>                                    
+                                    <!-- // 완료된 라운드가 없을 때 -->
+                                </div>
+                                <!-- // content tab 03 -->
+                            </div>                    
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+
+    <script>
+    // Tabs
+    const tabItems = document.querySelectorAll(".tab_item");
+    const tabSlider = document.querySelector(".tab_slider");
+
+    // 슬라이더 초기 위치 설정
+    function moveSlider(element) {
+        tabSlider.style.width = element.offsetWidth + "px";
+        tabSlider.style.left = element.offsetLeft + "px";
+    }
+
+    moveSlider(document.querySelector(".tab_item.active"));
+
+    // 탭 클릭 이벤트
+    tabItems.forEach(tab => {
+        tab.addEventListener("click", function() {
+            // active 변경
+            tabItems.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // 슬라이더 이동
+            moveSlider(this);
+
+            // 탭 콘텐츠 표시
+            const target = this.getAttribute("data-tab");
+            document.querySelectorAll(".tab_pane").forEach(c => c.classList.remove("active"));
+            document.getElementById(target).classList.add("active");
+        });
+    });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll(".round_card");
+        const btnMore = document.getElementById("btnMore");
+        let visibleCount = 5;
+
+    // 처음 로드 시 버튼 표시 여부 결정
+    if (cards.length <= visibleCount) {
+        btnMore.style.display = "none";
+    }
+
+    // 카드 표시 함수
+    function showCards() {
+        for (let i = 0; i < visibleCount && i < cards.length; i++) {
+            cards[i].classList.add("show");
+        }
+    }
+
+    showCards();
+
+    btnMore.addEventListener("click", function() {
+        visibleCount += 5;
+        showCards();
+
+        // 모든 카드 노출 시 버튼 숨김
+        if (visibleCount >= cards.length) {
+            btnMore.style.display = "none";
+            }
+        });
+    });
+
+    </script>
+    
+    
+</body>
+</html>

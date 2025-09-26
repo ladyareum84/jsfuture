@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./resource/css/style_m.css">
+        <link rel="shortcut icon" href="./resource/images/favicon/favicon.png">
+        <title> HelpBrowser : 통합검색  </title>
+    </head>
+    <body>
+        <div class="wrap wrap_search wrap_helpbrowser">
+            <section class="section section_top header_sticky bg_gray">
+                <div class="container">
+                    <div class="content content_search_bar">
+                        <form id="searchForm" name="search" method="get" onsubmit="return searchKey(this)" class="form_searchbar">
+                            <div class="input_group">
+                                <input type="text" name="key"  placeholder="키워드를 입력해주세요." class="form_control" autofocus>  
+                                <input type="button" value="검색" class="btn_search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_middle">
+                <div class="contents">
+                    <div class="content_list_nav">
+                        <div class="nav_scroll_wrap">
+                            <div class="container">
+                                <ul class="list_category">
+                                    <li class="list_item active">
+                                        <a href="#" role="">통합검색</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">뉴스</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">블로그</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">카페</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">지식iN</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">웹문서</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" role="">이미지</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <div class="option_sort">
+                                            <label class="form_selectbox">
+                                                <select id="filter_sort" name="sorting" class="form_control select_style">
+                                                    <option value="accuracy">정확도순</option>
+                                                    <option value="latest">최신순</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="content">
+                        <div class="container">
+                            <div class="content_left">
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/0_icon_site.png""></span>
+                                            <span>사이트</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <a href="#" class="link_text_b text_underline">사이트명 노출영역</a>
+                                                <a href="#" class="link_site text_lg">www.domain.com <span></span></a>
+                                                <div class="text_des">텍스트노출영역</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                    <span class="line_double"></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/2_icon_news.png"></span>
+                                            <span>NEWS 뉴스</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis2 mr_75">BTS 정국, 美 GMA 서머 콘서트 출격…솔로 데뷔곡 'Seven' 무대 최초 공개</a>
+                                                    <span class="option text_s">2023.07.10</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방탄소년단(BTS) 정국이 본격 솔로 행보에 나선다. 미국 방송사 ABC의 대표 아침 뉴스 프로그램 '굿 모닝 아메리카(Good Morning America)'는 지난 7월 7일(이하 현지시간) 공식 SNS에 "방탄소년단 정국이 오는 7월 14일 미국 뉴욕 센트럴파크에서 시작되는 '2023 서머 콘서트 시리즈(2023 Summer Concert Series)'에 첫 주자로 출연한다"라고 소식을 전했다.</div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis2 mr_75">BTS 정국, 美 GMA 서머 콘서트 출격…솔로 데뷔곡 'Seven' 무대 최초 공개</a>
+                                                    <span class="option text_s">2023.07.10</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방탄소년단(BTS) 정국이 본격 솔로 행보에 나선다. 미국 방송사 ABC의 대표 아침 뉴스 프로그램 '굿 모닝 아메리카(Good Morning America)'는 지난 7월 7일(이하 현지시간) 공식 SNS에 "방탄소년단 정국이 오는 7월 14일 미국 뉴욕 센트럴파크에서 시작되는 '2023 서머 콘서트 시리즈(2023 Summer Concert Series)'에 첫 주자로 출연한다"라고 소식을 전했다.</div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis2 mr_75">BTS 정국, 美 GMA 서머 콘서트 출격…솔로 데뷔곡 'Seven' 무대 최초 공개</a>
+                                                    <span class="option text_s">2023.07.10</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방탄소년단(BTS) 정국이 본격 솔로 행보에 나선다. 미국 방송사 ABC의 대표 아침 뉴스 프로그램 '굿 모닝 아메리카(Good Morning America)'는 지난 7월 7일(이하 현지시간) 공식 SNS에 "방탄소년단 정국이 오는 7월 14일 미국 뉴욕 센트럴파크에서 시작되는 '2023 서머 콘서트 시리즈(2023 Summer Concert Series)'에 첫 주자로 출연한다"라고 소식을 전했다.</div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis2 mr_75">BTS 정국, 美 GMA 서머 콘서트 출격…솔로 데뷔곡 'Seven' 무대 최초 공개</a>
+                                                    <span class="option text_s">2023.07.10</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방탄소년단(BTS) 정국이 본격 솔로 행보에 나선다. 미국 방송사 ABC의 대표 아침 뉴스 프로그램 '굿 모닝 아메리카(Good Morning America)'는 지난 7월 7일(이하 현지시간) 공식 SNS에 "방탄소년단 정국이 오는 7월 14일 미국 뉴욕 센트럴파크에서 시작되는 '2023 서머 콘서트 시리즈(2023 Summer Concert Series)'에 첫 주자로 출연한다"라고 소식을 전했다.</div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis2 mr_75">BTS 정국, 美 GMA 서머 콘서트 출격…솔로 데뷔곡 'Seven' 무대 최초 공개</a>
+                                                    <span class="option text_s">2023.07.10</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방탄소년단(BTS) 정국이 본격 솔로 행보에 나선다. 미국 방송사 ABC의 대표 아침 뉴스 프로그램 '굿 모닝 아메리카(Good Morning America)'는 지난 7월 7일(이하 현지시간) 공식 SNS에 "방탄소년단 정국이 오는 7월 14일 미국 뉴욕 센트럴파크에서 시작되는 '2023 서머 콘서트 시리즈(2023 Summer Concert Series)'에 첫 주자로 출연한다"라고 소식을 전했다.</div>
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="link_more">뉴스 더보기</a>
+                                    </div>
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/3_icon_blog.png"></span>
+                                            <span>Blog 블로그</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis mr_75">미드저니로 BTS 지민 만들어보기!! </a>
+                                                    <span class="option text_s">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">이번 포스트에서는 미드저니로 BTS 지민을 만들어보겠습니다. 왜 BTS 지민이냐... 물어보신다면 혹시라도 조회수가 많이 나오지 않을까 하는 사심가득한 마음 때문입니다. 인공지능 소프트웨어 미드저니를 사용하려면 두 개의 허들이 있습니다. </div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">3분차이</span>
+                                                        <span class="link_site text_s">blog.naver.com/yoplaut</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis mr_75">[아이랑 태국 방콕 여행] 왕궁 둘러보기 (택시, BTS, 페리로 이동) </a>
+                                                    <span class="option text_s">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방콕에는 지하철 MRT가 있고, 지상철 BTS가 있다. BTS는 거리마다 요금이 다른 듯하다. 우리는 Saphan Taksin - Ratchadamri, 5정거장 이동이다. 1인당 35바트. 매표기에서 하려니 동전만 가능해서, 매표소에서 신용카드로...</div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">SO SIMPLE</span>
+                                                        <span class="link_site text_s">blog.naver.com/alwayswithmm</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis mr_75">미드저니로 BTS 지민 만들어보기!! </a>
+                                                    <span class="option text_s">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">이번 포스트에서는 미드저니로 BTS 지민을 만들어보겠습니다. 왜 BTS 지민이냐... 물어보신다면 혹시라도 조회수가 많이 나오지 않을까 하는 사심가득한 마음 때문입니다. 인공지능 소프트웨어 미드저니를 사용하려면 두 개의 허들이 있습니다. </div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">3분차이</span>
+                                                        <span class="link_site text_s">blog.naver.com/yoplaut</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis mr_75">미드저니로 BTS 지민 만들어보기!! </a>
+                                                    <span class="option text_s">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">이번 포스트에서는 미드저니로 BTS 지민을 만들어보겠습니다. 왜 BTS 지민이냐... 물어보신다면 혹시라도 조회수가 많이 나오지 않을까 하는 사심가득한 마음 때문입니다. 인공지능 소프트웨어 미드저니를 사용하려면 두 개의 허들이 있습니다. </div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">3분차이</span>
+                                                        <span class="link_site text_s">blog.naver.com/yoplaut</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                        <a href="#" class="link_more">블로그 더보기</a>
+                                    </div> 
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/5_icon_cafe.png"></span>
+                                            <span>Cafe 까페</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">BTS멤버들 손바닥 만지고 왔습니다..ㅋ</a>
+                                                    <span class="option text_s hide">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">니혼진들을 비롯한 전세계 bts 아미들 사이에서 미친듯이 카메라 셔터를 누를 수 밖에 없었습니다... ㅠ bts 자필 그림 스케치와 핸드프린팅, 각종 캐릭터가 많이 있더군요..ㅋ bts 팬이시면 오빠야들 핸드프린팅에 살포시...</div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">네일동 : 일본여행카페</span>
+                                                        <span class="link_site text_s">http://cafe.naver.com/jpnstory/3244821</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">[아이랑 태국 방콕 여행] 왕궁 둘러보기 (택시, BTS, 페리로 이동) </a>
+                                                    <span class="option text_s hide">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">방콕에는 지하철 MRT가 있고, 지상철 BTS가 있다. BTS는 거리마다 요금이 다른 듯하다. 우리는 Saphan Taksin - Ratchadamri, 5정거장 이동이다. 1인당 35바트. 매표기에서 하려니 동전만 가능해서, 매표소에서 신용카드로...</div>
+                                                <div class="channel_info">
+                                                    <a href="#">
+                                                        <span class="link_text_s">SO SIMPLE</span>
+                                                        <span class="link_site text_s">blog.naver.com/alwayswithmm</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">미드저니로 BTS 지민 만들어보기!! </a>
+                                                    <span class="option text_s hide">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">이번 포스트에서는 미드저니로 BTS 지민을 만들어보겠습니다. 왜 BTS 지민이냐... 물어보신다면 혹시라도 조회수가 많이 나오지 않을까 하는 사심가득한 마음 때문입니다. 인공지능 소프트웨어 미드저니를 사용하려면 두 개의 허들이 있습니다. </div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">3분차이</span>
+                                                        <span class="link_site text_s">blog.naver.com/yoplaut</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">미드저니로 BTS 지민 만들어보기!! </a>
+                                                    <span class="option text_s hide">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">이번 포스트에서는 미드저니로 BTS 지민을 만들어보겠습니다. 왜 BTS 지민이냐... 물어보신다면 혹시라도 조회수가 많이 나오지 않을까 하는 사심가득한 마음 때문입니다. 인공지능 소프트웨어 미드저니를 사용하려면 두 개의 허들이 있습니다. </div>
+                                                <div class="channel_info">
+                                                    <a href="#" class="ellipsis">
+                                                        <span class="link_text_s">3분차이</span>
+                                                        <span class="link_site text_s">blog.naver.com/yoplaut</span>
+                                                    </a>
+                                                </div>
+                                            </li>                                    
+                                        </ul>
+                                        <a href="#" class="link_more">까페 더보기</a>
+                                    </div> 
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/4_icon_kin.png"></span>
+                                            <span>지식iN</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <span class="qna_mark">Q</span>
+                                                    <a href="#" class="link_text text_underline ellipsis">BTS멤버들 손바닥 만지고 왔습니다..ㅋ</a>
+                                                    <span class="option text_s hide">2023.07.03</span>
+                                                </div>                                        
+                                                <div class="text_des">
+                                                    <span class="qna_mark">A</span>
+                                                    <span class="answer ellipsis3">니혼진들을 비롯한 전세계 bts 아미들 사이에서 미친듯이 카메라 셔터를 누를 수 밖에 없었습니다... ㅠ bts 자필 그림 스케치와 핸드프린팅, 각종 캐릭터가 많이 있더군요..ㅋ bts 팬이시면 오빠야들 핸드프린팅에 살포시...</span>
+                                                </div>
+                                                
+                                            </li>
+                                            
+                                        </ul>
+                                        <a href="#" class="link_more">지식iN 더보기</a>
+                                    </div>
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/6_icon_web.png"></span>
+                                            <span>Web 웹</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <ul class="list_result">
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">BTS | BIGHIT MUSIC - HYBE</a>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">
+                                                방탄소년단 공식 홈페이지 - The official website for BTS
+                                                </div>                                        
+                                            </li>
+                                            <li class="list_item">
+                                                <div class="content_title">
+                                                    <a href="#" class="link_text text_underline ellipsis">방탄소년단 - 나무위키</a>
+                                                </div>                                        
+                                                <div class="text_des ellipsis3">
+                                                    2013년6월 13일에 데뷔한 대한민국의 7인조 보이그룹이다. 대한민국 가요계 역사 상 전례 없는 최상위급 대중적 인기를 얻으며, 2010년대 중후반부터 세계적인 기록들로 해외 음악 시장을 강타하고 있는 월드 스타 보이그룹이다.
+                                                </div>                                        
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="link_more">웹문서 더보기</a>
+                                    </div> 
+                                </div>
+                                <div class="divider_line">
+                                    <span></span>
+                                </div>
+                                <div class="content_item">
+                                    <div class="content_head">
+                                        <h2 class="head_title">
+                                            <span class="icon"><img src="./resource/images/search/8_icon_image.png"></span>
+                                            <span>Image 이미지</span>
+                                        </h2>
+                                    </div>
+                                    <div class="content content_list">
+                                        <div class="list_result">
+                                            <div class="pictures">
+                                                <a href="https://i.pinimg.com/originals/92/77/c8/9277c8163ecf78ab2dc7eeb2a9f1ac66.jpg">
+                                                    <img src="https://search.pstatic.net/sunny/?type=b150&src=https://i.pinimg.com/originals/92/77/c8/9277c8163ecf78ab2dc7eeb2a9f1ac66.jpg" alt="">
+                                                </a>
+                                                <a href="http://imgnews.naver.net/image/008/2023/06/17/0004900544_001_20230617223801037.jpg">
+                                                    <img src="https://search.pstatic.net/common/?type=b150&src=http://imgnews.naver.net/image/008/2023/06/17/0004900544_001_20230617223801037.jpg" alt="">
+                                                </a>
+                                                <a href="https://i.pinimg.com/originals/41/ad/6d/41ad6db1faa4c8b7806ac985691d26d9.jpg">
+                                                    <img src="https://search.pstatic.net/sunny/?type=b150&src=https://i.pinimg.com/originals/41/ad/6d/41ad6db1faa4c8b7806ac985691d26d9.jpg" alt="">
+                                                </a>
+                                                <a href="https://i.pinimg.com/736x/52/7c/53/527c5331ae3faa26412e61f856153030.jpg">
+                                                    <img src="https://search.pstatic.net/sunny/?type=b150&src=https://i.pinimg.com/736x/52/7c/53/527c5331ae3faa26412e61f856153030.jpg" alt="">
+                                                </a>
+                                                <a href="https://i.pinimg.com/originals/ec/c5/3d/ecc53dbc1d0c5d4c8a039830eb163e8f.jpg">
+                                                    <img src="https://search.pstatic.net/sunny/?type=b150&src=https://i.pinimg.com/originals/ec/c5/3d/ecc53dbc1d0c5d4c8a039830eb163e8f.jpg" alt="">
+                                                </a>
+                                                <a href="https://i.pinimg.com/originals/8e/b5/90/8eb5909c27b1738fbf075dd8544d5ef9.jpg">
+                                                    <img src="https://search.pstatic.net/sunny/?type=b150&src=https://i.pinimg.com/originals/ec/c5/3d/ecc53dbc1d0c5d4c8a039830eb163e8f.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="link_more">이미지 더보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 우측 사이드 광고영역 -->
+                            <div class="content_aside">
+                                <a href="#" class="img_ad_box">
+                                    <img src="https://www.kyci.or.kr/userSite/cardnews/img/cardnews34_8.jpg" alt="">
+                                </a>
+                            </div>   
+                            
+                             <!-- 모바일 가로배너 광고영역 -->
+                             <div class="content content_ad content_sticky">
+                                <div class="ad_banner bottom">
+                                   <!-- 광고 배너 이미지 iframe 영역 -->
+                                   광고 배너 이미지 iframe 영역
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    
+                     
+                </div>      
+            </section>
+            <footer class="section_footer">
+                <div class="container">
+                    <div class="contents">
+                        <div class="policy-info">
+                            <a href="https://inflmate.com/policy/privacy.php" target="_blank">개인정보처리방침</a>
+                            <span class="divider_vertical"></span>
+                            <a href="mailto:webmaster@jsfuture.co.kr" alt="이메일 보내기" title="이메일 보내기">고객센터</a>
+                        </div>
+                        <div class="office-info">
+                            <span class="text-block">㈜제이스퓨처  경기도 과천시 양지마을 1로 29,(그리심, 2층)</span>
+                            <span class="">대표이사:장영호</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">사업자등록번호 350-87-00231</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">통신판매업신고 : 제 2017-서울구로-0813호</span>            
+                        </div>
+                        <div class="copyright">
+                            Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

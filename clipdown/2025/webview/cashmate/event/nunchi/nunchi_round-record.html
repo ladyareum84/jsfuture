@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>눈치게임 라운드 기록 </title>
+    <link rel='stylesheet' href='./resource/css/nunchi_style.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/font.css' type='text/css'>
+
+
+</head>
+<body>
+    <div class="wrap webview_nunchi">
+        <section class="section section_nunchi">
+            <div class="container">
+                <article class="contents">
+                    <div class="tabs">
+                        <div class="tab_container">
+                            <ul class="tabs_nav font_bold">
+                                <li data-tab="tab_round_01" class="tab_item active">종료순</li>
+                                <li data-tab="tab_round_02" class="tab_item">번호순</li>
+                                <div class="tab_slider"></div>
+                            </ul>
+                            
+                            <div class="tab_content">
+                                <!-- content tab 01 -->
+                                <div class="tab_pane active" id="tab_round_01">
+                                    <div class="tab_notice">라운드 기록은 최대 10개까지 확인 가능해요</div>
+                                    <!-- Round Card 01 -->
+                                    <div class="round_card card_type_row">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 1</span> 
+                                                <span class="tit_type_row font_bold">로우넘버</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="roun_list_rank">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">8922</span>
+                                                    <span class="item_num separator_pl">3</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">1234</span>
+                                                    <span class="item_num separator_pl">16</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">4321</span>
+                                                    <span class="item_num separator_pl">23</span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 02 -->
+                                    <div class="round_card card_type_high">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type">
+                                                <span class="tit_season font_round separator">Season 1</span>  
+                                                <span class="tit_round font_round separator">Round 2</span> 
+                                                <span class="tit_type_high font_bold">하이넘버</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="roun_list_rank">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">8922</span>
+                                                    <span class="item_num separator_pl">3</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">1234</span>
+                                                    <span class="item_num separator_pl">16</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">4321</span>
+                                                    <span class="item_num separator_pl">23</span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 03 -->
+                                    <div class="round_card card_type_high">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type"> 
+                                                <span class="tit_season font_round separator">Season 1</span> 
+                                                <span class="tit_round font_round separator">Round 2</span> 
+                                                <span class="tit_type_high font_bold">하이넘버</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="roun_list_rank">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">8922</span>
+                                                    <span class="item_num separator_pl">3</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">1234</span>
+                                                    <span class="item_num separator_pl">16</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">4321</span>
+                                                    <span class="item_num separator_pl">23</span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 04 -->
+                                    <div class="round_card card_type_row">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type"> 
+                                                <span class="tit_round font_round separator">Round 1</span> 
+                                                <span class="tit_type_row font_bold">로우넘버</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="roun_list_rank">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">8922</span>
+                                                    <span class="item_num separator_pl">3</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">1234</span>
+                                                    <span class="item_num separator_pl">16</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">4321</span>
+                                                    <span class="item_num separator_pl">23</span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // content tab 01 -->
+                                <!-- content tab 02 -->
+                                <div class="tab_pane" id="tab_round_02">
+                                    <div class="tab_notice">라운드 기록은 최대 10개까지 확인 가능해요</div>
+                                    <!-- Round Card 01 -->
+                                    <div class="round_card card_type_high">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type"> 
+                                                <span class="tit_season font_round separator">Season 1</span> 
+                                                <span class="tit_round font_round separator">Round 2</span> 
+                                                <span class="tit_type_high font_bold">하이넘버</span> 
+                                            </h3>
+                                        </div>
+                                        <!-- 당첨자가 일부 없을 때 -->
+                                        <div class="roun_list_rank">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_empty">당첨자가 없습니다</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_user separator">1234</span>
+                                                    <span class="item_num separator_pl">16</span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_empty">당첨자가 없습니다</span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+
+                                    <!-- Round Card 02 -->
+                                    <div class="round_card card_type_row">
+                                        <div class="card_header">
+                                            <h3 class="tit_round_type"> 
+                                                <span class="tit_season font_round separator">Season 1</span> 
+                                                <span class="tit_round font_round separator">Round 1</span> 
+                                                <span class="tit_type_row font_bold">로우넘버</span> 
+                                            </h3>
+                                        </div>
+
+                                        <div class="roun_list_rank">
+                                            <!-- 당첨자가 없을 때 -->
+                                            <div class="list_no_winner">
+                                                <div class="bg_list_empty"></div>
+                                                <span class="font_bold text_empty">아쉽게도 당첨자가 없어요</span>                                                
+                                            </div>
+                                            <!-- // 당첨자가 없을 때 -->
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">회원</span>
+                                                <span class="item_num tit_number">숫자</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </span>
+                                                    <span class="item_empty"></span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </span>
+                                                    <span class="item_empty"></span>
+                                                </li>
+                                                <li class="list_item">
+                                                    <span class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </span>
+                                                    <span class="item_empty"></span>
+                                                </li>
+                                            </ul>                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // content tab 02 -->
+                            </div>                    
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+
+    <script>
+    // Tabs
+    const tabItems = document.querySelectorAll(".tab_item");
+    const tabSlider = document.querySelector(".tab_slider");
+
+    // 슬라이더 초기 위치 설정
+    function moveSlider(element) {
+        tabSlider.style.width = element.offsetWidth + "px";
+        tabSlider.style.left = element.offsetLeft + "px";
+    }
+
+    moveSlider(document.querySelector(".tab_item.active"));
+
+    // 탭 클릭 이벤트
+    tabItems.forEach(tab => {
+        tab.addEventListener("click", function() {
+            // active 변경
+            tabItems.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // 슬라이더 이동
+            moveSlider(this);
+
+            // 탭 콘텐츠 표시
+            const target = this.getAttribute("data-tab");
+            document.querySelectorAll(".tab_pane").forEach(c => c.classList.remove("active"));
+            document.getElementById(target).classList.add("active");
+        });
+    });
+    </script>
+    
+</body>
+</html>

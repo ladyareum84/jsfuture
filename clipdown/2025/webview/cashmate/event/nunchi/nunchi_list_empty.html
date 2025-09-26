@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>눈치게임 참여기록 없을때 </title>
+    <link rel='stylesheet' href='./resource/css/nunchi_style.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/font.css' type='text/css'>
+
+
+</head>
+<body>
+    <div class="wrap webview_nunchi">
+        <section class="section section_nunchi">
+            <div class="container">
+                <article class="contents">
+                    <div class="tabs">
+                        <div class="tab_container">
+                            <div class="tab_content">
+                                <!-- 완료된 라운드가 없을 때 -->
+                                <div class="no_round_wrap">
+                                    <div class="list_content_empty">
+                                        <div class="empty_icon">
+                                            <svg id="icon_error" xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 100 100">
+                                                <g id="그룹_3" data-name="그룹 3">
+                                                    <g id="그룹_2" data-name="그룹 2">
+                                                    <path id="패스_3" data-name="패스 3" d="M50,0a50,50,0,1,0,50,50A50.041,50.041,0,0,0,50,0Zm0,94.953A44.953,44.953,0,1,1,94.953,50,45.032,45.032,0,0,1,50,94.953Z"/>
+                                                    </g>
+                                                </g>
+                                                <g id="그룹_5" data-name="그룹 5" transform="translate(29.49 29.275)">
+                                                    <g id="그룹_4" data-name="그룹 4">
+                                                    <path id="패스_4" data-name="패스 4" d="M130.332,125.71l15.924-15.924a2.7,2.7,0,0,0-3.822-3.822L126.51,121.888l-15.924-15.924a2.7,2.7,0,0,0-3.822,3.822l15.924,15.924-15.924,15.8a2.771,2.771,0,0,0,0,3.822,2.771,2.771,0,0,0,3.822,0L126.51,129.4l15.924,15.924a2.771,2.771,0,0,0,3.822,0,2.771,2.771,0,0,0,0-3.822Z" transform="translate(-106 -105.2)"/>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="font_bold text_empty">
+                                            아직 완료된 라운드가 없어요
+                                        </div>                                        
+                                    </div>                                        
+                                </div>                                    
+                                <!-- // 완료된 라운드가 없을 때 -->
+                            </div>                    
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+
+    <script>
+    // Tabs
+    const tabItems = document.querySelectorAll(".tab_item");
+    const tabSlider = document.querySelector(".tab_slider");
+
+    // 슬라이더 초기 위치 설정
+    function moveSlider(element) {
+        tabSlider.style.width = element.offsetWidth + "px";
+        tabSlider.style.left = element.offsetLeft + "px";
+    }
+
+    moveSlider(document.querySelector(".tab_item.active"));
+
+    // 탭 클릭 이벤트
+    tabItems.forEach(tab => {
+        tab.addEventListener("click", function() {
+            // active 변경
+            tabItems.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // 슬라이더 이동
+            moveSlider(this);
+
+            // 탭 콘텐츠 표시
+            const target = this.getAttribute("data-tab");
+            document.querySelectorAll(".tab_pane").forEach(c => c.classList.remove("active"));
+            document.getElementById(target).classList.add("active");
+        });
+    });
+    </script>
+    
+</body>
+</html>

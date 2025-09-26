@@ -1,0 +1,26 @@
+/* Font */
+@font-face {
+    font-family: 'ONEMobileTitle';
+    src: url('../font/ONEMobileTitleRegular.woff2') format('woff2'),
+        url('../font/ONEMobileTitle.woff') format('woff'),
+        url('.02./font/ONEMobileTitle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONEMobileRegular';
+    src: url('../font/ONEMobileRegular.woff2') format('woff2'),
+        url('../font/ONEMobileRegular.woff') format('woff'),
+        url('../font/ONEMobileRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ONEMobilePOP';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');

@@ -1,0 +1,603 @@
+@font-face {
+	font-family: 'Calibre';
+	src: url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Bold.eot');
+	src: url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Bold.eot?#iefix') format('embedded-opentype'),
+		url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Bold.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Calibre';
+	src: url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Regular.eot');
+	src: url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Regular.eot?#iefix') format('embedded-opentype'),
+		url('https://ahoy.co.uk/resources/mfonts/fonts/CalibreWeb-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@brand: #E90069;
+@accent: #160C3B;
+@white: #fff;
+
+@orange: #F88445;
+@light_blue: #156FBE;
+@mid_blue: #122683;
+
+@slow: .4s;
+
+@easing: cubic-bezier(0.19, 1, 0.22, 1);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #F6F6F6;
+	font-family: 'Calibre', sans-serif;
+	font-weight: bold;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	width: 70%;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+
+.stage {
+	position: relative;
+	height: 100%;
+}
+
+.stage-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 2;
+}
+
+h1 {
+	font-size: 90px;
+	line-height: .88;
+	text-transform: uppercase;
+	color: @accent;
+	max-width: 960px;
+	
+	span {
+		color: @brand;
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0%;
+			height: 6px;
+			transform: translateX(-53%);
+			background-color: @brand;
+			transition: width @slow @easing;
+		}
+		
+		&:hover:before {
+			width: 100%;
+		}
+	}
+}
+
+h2 {
+	transform: translateY(-200px);
+	font-size: 60px;
+	text-transform: uppercase;
+	color: @brand;
+	line-height: 1;
+	pointer-events: none;
+	
+	span {
+		font-size: 18px;
+		display: block;
+		color: @accent;
+		letter-spacing: .14em;
+		padding-top: 5px;
+	}
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: @accent;
+	color: @white;
+	padding: 20px 0;
+	cursor: pointer;
+	transition: background-color @slow @easing;
+	z-index: 10;
+	max-height: 60px;
+	
+	&:hover {
+		background-color: @brand;
+	}
+	
+	&.is-active {
+		background-color: @accent;
+		cursor: default;
+	}
+}
+
+h3 {
+	font-size: 25px;
+	color: @white;
+	text-transform: uppercase;
+}
+
+.close {
+	position: absolute;
+	right: 0;
+	top: 40px;
+	height: 36px;
+	width: 36px;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+	transition: transform 1s @easing;
+	opacity: 0;
+	
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: @white;
+		transform-origin: 50% 50%;
+	}
+	
+	&:before {
+		transform: rotate(-45deg);
+	}
+	
+	&:after {
+		transform: rotate(45deg);
+	}
+	
+	&:hover {
+		transform: rotate(180deg);
+		
+	}
+}
+
+form {
+	transform: translateY(200px);
+	opacity: 0;
+	position: relative;
+	z-index: 60;
+	padding-top: 65px;
+	padding-bottom: 40px;
+}
+ 
+.form-col {
+	width: 36%;
+	margin-right: 20px;
+	display: inline-block;
+	vertical-align: top;
+	transform: translateZ(0);
+	position: relative;
+	z-index: 60;
+	
+	div {
+		margin-bottom: 30px;
+	}
+}
+
+label,
+input,
+textarea {
+	width: 100%;
+	display: block;
+	font-size: 15px;
+	position: relative;
+	z-index: 2000;
+}
+
+label {
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	margin-bottom: 10px;
+}
+
+input {
+	height: 47px;
+	line-height: 47px;
+	padding: 0 10px;
+}
+
+textarea {
+	height: 255px;
+	bottom: 0;
+	padding: 12px 10px;
+}
+
+input,
+textarea {
+	border: 1px solid transparent;
+	transition: border-color @slow @easing;
+	outline: 0;
+	
+	&:hover,
+	&:focus {
+		border-color: @brand;
+	}
+}
+
+button {
+	background-color: @brand;
+	color: @white;
+	text-transform: uppercase;
+	border: 0;
+	padding: 20px 20px;
+	text-align: center;
+	min-width: 203px;
+	margin: 44px auto 0;
+	display: block; 
+	cursor: pointer;
+	transition: background-color @slow @easing;
+	
+	&:hover {
+		background-color: lighten(@brand, 10);
+	}
+}
+
+
+.shapes {
+	transform: translateZ(0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.shape {
+	position: absolute;
+	width: 107px;
+	height: 107px;
+	z-index: 20;
+	animation-name: blurLots;
+	animation-duration: 10s, 30s; 
+	animation-timing-function: linear; 
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	transition: top 2s cubic-bezier(0.86, 0, 0.07, 1),
+				left 2s cubic-bezier(0.86, 0, 0.07, 1),
+				height 2s cubic-bezier(0.86, 0, 0.07, 1),
+				width 2s cubic-bezier(0.86, 0, 0.07, 1);
+	
+	.inner {
+		transition: transform 2s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+}
+ 
+svg {
+	width: 100%;
+	height: 100%;
+	animation-name: pulse;
+	animation-duration: 4s; 
+	animation-timing-function: linear; 
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.reacted .shape,
+.filmed .shape {
+	animation: none !important;
+	width: 147px;
+	height: 147px;
+	transition: all 2s cubic-bezier(0.86, 0, 0.07, 1);
+	
+	svg {
+		animation: none !important;
+	}
+	
+	.inner {
+		animation-name: blurOut;
+		animation-duration: 2s; 
+	}
+}
+
+.outer {
+	animation-name: move;
+	animation-duration: 10s; 
+	animation-timing-function: linear; 
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+.shape-1 {
+	top: 6%;
+	left: 28%;
+	
+	.reacted & {
+		top: 178px;
+		left: 923px;
+	}
+	
+	.filmed & {
+		top: 231px;
+		left: 850px;
+	}
+}
+.shape-2 {
+	top: 38%;
+	left: 83%;
+	width: 59px;
+	height: 59px;
+	animation-name: blurLittle;
+	
+	.reacted & {
+		top: 178px;
+		left: 1069px;
+	}
+	
+	.filmed & {
+		top: 378px;
+		left: 996px;
+	}
+}
+.shape-3 {
+	top: -8%;
+	left: -12%;
+	
+	.reacted & {
+		top: 324px;
+		left: 923px;
+	}
+	
+	.filmed & {
+		top: 378px;
+		left: 850px;
+	}
+}
+
+.shape-4 {
+	top: 68%;
+	left: 59%;
+	width: 260px;
+	height: 260px;
+	
+	.reacted & {
+		top: 105px;
+		left: 850px;
+	}
+	
+	.filmed & {
+		top: 451px;
+		left: 777px;
+	}
+}
+.shape-5 {
+	top: 29%;
+	left: 5%;
+	animation-name: blurLittle;
+	width: 66px;
+	height: 66px;
+	
+	.reacted & {
+		top: 104px;
+		left: 1142px;
+	}
+	
+	.filmed & {
+		top: 305px;
+		left: 923px;
+	}
+}
+.shape-6 {
+	top: 108%;
+	left: -32%;
+	
+	.reacted & {
+		top: 251px;
+		left: 996px;
+	}
+	
+	.filmed & {
+		top: 158px;
+		left: 777px;
+	}
+}
+
+.shape-7 {
+	top: -3%;
+	left: 49%;
+	animation-name: blurIsh;
+	width: 66px;
+	height: 66px;
+	
+	.reacted & {
+		top: 251px;
+    	left: 850px;
+	}
+	
+	.filmed & {
+		top: 157px;
+		left: 922px;
+		
+		.inner {
+			transform: rotate(-90deg);
+		}
+	}
+}
+.shape-8 {
+	top: 79%;
+	left: 25%;
+	animation-name: blurIsh;
+	width: 86px;
+	height: 86px;
+	
+	.reacted & {
+		top: 397px;
+    	left: 996px;
+	}
+	
+	.filmed & {
+		top: 304px;
+		left: 1070px;
+		
+		.inner {
+			transform: rotate(-90deg);
+		}
+	}
+}
+.shape-9 {
+	top: -20%;
+	left: 108%;
+	
+	.reacted & {
+		top: 249px;
+    	left: 1142px;
+	}
+	
+	.filmed & {
+		top: 450px;
+		left: 925px;
+		
+		.inner {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.shape-10 {
+	top: 16%;
+	left: 75%;
+	animation-name: blurIsh;
+	width: 55px;
+	height: 55px;
+	
+	.reacted & {
+		top: 323px;
+		left: 1069px;
+	}
+	
+	.filmed & {
+		top: 230px;
+		left: 995px;
+		
+		.inner {
+			transform: rotate(-90deg);
+		}
+	}
+}
+.shape-11 {
+	top: 109%;
+	left: 5%;
+	
+	.reacted & {
+		top: 175px;
+		left: 1214px;
+	}
+	
+	.filmed & {
+		top: 523px;
+    	left: 849px;
+		
+		.inner {
+			transform: rotate(90deg);
+		}
+	}
+}
+.shape-12 {
+	top: -40%;
+	left: 128%;
+	
+	.reacted & {
+		top: 175px;
+		left: 777px;
+		
+		.inner {
+			transform: scale(-1);
+		}
+	}
+	
+	.filmed & {
+		top: 85px;
+    	left: 850px;
+		
+		.inner {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+@keyframes move {
+	from {transform:translate(0, 0);}
+	65% {transform:translate(0, 15px);}
+	to {transform: translate(0, 0);}  
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes blurLots {
+	from {
+		filter: blur(10px);
+		-webkit-filter: blur(10px);
+	}
+	to {
+		filter: blur(20px);
+		-webkit-filter: blur(20px);
+	}
+}
+
+@keyframes blurLittle {
+	from {
+		filter: blur(0px);
+		-webkit-filter: blur(0px);
+	}
+	to {
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+	}
+}
+
+@keyframes blurIsh {
+	from {
+		filter: blur(5px);
+		-webkit-filter: blur(5px);
+	}
+	to {
+		filter: blur(10px);
+		-webkit-filter: blur(10px);
+	}
+}
+
+@keyframes blurOut {
+	from {
+		filter: blur(5px);
+		-webkit-filter: blur(5px);
+	}
+	to {
+		filter: blur(0);
+		-webkit-filter: blur(0);
+	}
+}

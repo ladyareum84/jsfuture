@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+/* layer Popup */
+.layer_popup{display: none; position: fixed; _position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1000;}
+.layer_popup .bg_dimmed{position: absolute; top:0; left: 0; width: 100%; height: 100%; background:#000; opacity: .65; filter: alpha(opacity=65);}
+.layer_popup .popup_wrap.popup_event{position: absolute; top:50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 90%; max-width: 680px; z-index: 5001; box-shadow:0px 0px 15px 0px rgb(0 0 0 / 40%);}
+.layer_popup .popup_event .popup_header{background: #4149B8; border: 1px solid #4149B8; text-align: center; padding: 15px 20px;}
+.layer_popup .popup_event .popup_header .header-title h1{font-size: 18px; font-size: 1.8rem; line-height:1.8; font-weight: 500; color:#fff; text-align: left; margin: 0;}
+.layer_popup .popup_event .popup_header .btn-box{position: absolute; top: 0; right: 20px; padding:15px 0;}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 24px; height: 24px; padding:0;}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close:focus{outline:0;}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 24px; height: 24px; opacity: 1;}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close .icon-close:before, .popup_header .btn-box .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#fff;}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+.layer_popup .popup_event .popup_header .btn-box .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
+.layer_popup .popup_event .popup_contents{position: relative; background: #fff; border: 1px solid #4149B8; margin-top: -1px; padding: 20px 20px;}
+.layer_popup .popup_event .popup_content{position: relative; width: 100%;}
+
+
+/* 230508  공유하기 이벤트 페이지 내 앱 설치 안내 추가 작업 */
+.header_deepLink{display: none;}
+.layer_popup .bg_dimmed.op_85{opacity: .85; filter: alpha(opacity=85);}
+.popup_wrap.popup_info_install{width: 100%; max-width: 300px; position: fixed; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 50%; top: 50%; background: #FFF;  z-index: 5001; text-align: center; background: transparent; border: 1px solid transparent; box-shadow: none;}
+.popup_info_install .popup_contents{position: relative;}
+.popup_info_install .content_item .item_text .content_title{font-size: 18px; font-size: 1.8rem; font-weight: 500; color:#fff; padding-bottom: 20px;}
+.popup_info_install .content_item .item_des{font-size: 14px; font-size: 1.4rem; line-height: 1.6; color: #fff; padding-bottom: 20px;}
+.popup_info_install .content_item .item_img{position: relative; left: 10px;}
+.popup_info_install .content_item .img_style{left: 20px;}
+.popup_info_install .content_item .btn_area{position: relative; top:-20px;}
+.popup_info_install .content_item .btn_area .btn_group{display: inline-block; position: relative; width: 100%; max-width: 300px; vertical-align: middle;}
+.popup_info_install .content_item .btn_install{width: 100%; background: #e21d19; font-size: 16px; font-size: 1.6rem; color: #fff; border-radius: 50px; padding: 10px 20px 5px 20px;}
+.popup_info_install .link_text{background: transparent; font-size:11px; font-size: 1.1rem; color: #c3c2cc;}
+.popup_info_install .item_banner_box{position: relative; background-color: #131745; border-radius: 15px;}
+.popup_info_install .item_banner_box .item_img{left: 0;}
+.popup_info_install .item_banner_box .btn_area{position: relative; top:-10px; padding: 10px 20px 20px;}
+
+.layer_popup .btn_box_top{position: absolute; top: -20px; right: 10px; }
+.layer_popup .btn_box_top .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 14px; height: 14px; padding:0;}
+.layer_popup .btn_box_top .btn_popup_close:focus{outline:0;}
+.layer_popup .btn_box_top .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 14px; height: 14px; opacity: 1;}
+.layer_popup .btn_box_top .btn_popup_close .icon-close:before, .layer_popup .btn_box_top .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#fff;}
+.layer_popup .btn_box_top .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+.layer_popup .btn_box_top .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
+
+@media screen and (max-width: 767px){
+    .header_deepLink{display: block;}
+    .header_deepLink{position: relative; background: #272727; border-bottom: 1px solid transparent;}
+    .header_deepLink a:hover{text-decoration: none;}
+    .header_deepLink .link_app{display: flex; align-items: center; justify-content: space-between; flex-direction: row; position: relative; width: 100%; height: 63px; padding: 0 10px;}
+    .header_deepLink .link_app .list_item{display: flex; flex-direction: row; flex-grow: 1; flex-shrink: 1; align-items: center; max-width:  calc(100% - 80px);}
+    .header_deepLink .link_app .list_item .img_app{display: flex; justify-content: center; position: relative;}
+    .header_deepLink .link_app .list_item .img_app svg{border-radius: 5px; box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);}
+    .header_deepLink .link_app .list_item .des_app{position: relative; top: 3px; font-size: 13px; font-size: 1.3rem; font-weight: 500; line-height: 1.3; padding-left: 10px; color: #fff;}
+    .header_deepLink .link_app .btn_area{display: flex; flex-direction: column; align-items: stretch; position: relative;}
+    .header_deepLink .link_app .btn_area .btn_deeplink{background: #272727; color: #fff; border: 1px solid #e21d19; border-radius: 30px; padding: 5px 15px 0;}
+    
+}

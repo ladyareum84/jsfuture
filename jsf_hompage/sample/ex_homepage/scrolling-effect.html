@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Scrolling Effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- <link rel="stylesheet" href="./resource/css/style.css"> -->
+    <style>
+        body{margin: 0; padding: 0; height: 5000px; overflow-x: hidden; background: #00947a;}
+        h1{margin: 0; padding: 0; font-family: sans-serif; position: fixed; top:50%;  transform: translateY(-50%); white-space: nowrap; font-size: 5em; color: #fff; left:1920px;}
+    </style>
+</head>
+<body class="motion_scroll">
+    <h1>Moving Text On Scroll</h1>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+   $(document).on('scroll', function(){
+       $('.motion_scroll h1').css("left", Math.max(1920 - 0.35*window.scrollY,
+       0) + "px");
+   })
+    
+</script>
+</html>

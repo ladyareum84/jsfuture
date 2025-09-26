@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Project List">
+    <meta name="keywords" content="">
+    <meta name="Description" content="">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>서비스작업 코딩 페이지 리스트</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel='stylesheet' href='./resource/font/font.css' type='text/css'>	
+   
+    <style>
+        body{font-family: 'SCDream', 'Noto Sans KR', 'Apple SD Gothic Neo', Helvetica, sans-serif;}
+        a{color: #3b393a; text-decoration: none;}
+        code{position: relative; vertical-align: middle; font-size: 11px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 1px 1px -1px rgb(0 0 0 / 15%); padding: 3px 5px;}
+        hr{opacity:.18;}
+        .wrapper{position:relative;}
+        .container{position:relative; width:100%; max-width:1280px; margin:0 auto; padding: 20px 20px;}
+        .list-pagelink{margin-bottom:60px;}
+        .list-pagelink .content-header{margin-bottom: 5px;}
+        .list-pagelink .content_heading{font-size:18px; font-weight:400;}
+        .list-pagelink ul li{font-size: 16px; line-height: 1.6; border-bottom: 1px solid #ddd; padding: 10px 10px;}
+        .list-pagelink ul li a:hover{color: #e21d19; text-decoration: none;}
+        .list-group-item .float-end{font-size: 14px; color: #888;}
+        .list-group-item .alert{background-color: #E6E6FA; border-color: #E6E6FA; padding: .5rem .5rem; margin: .5rem 0 0;}
+        .list-group-item .alert .lead_text{font-size: 13px; font-weight: 400; margin-bottom: .05rem;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <h3>서비스 페이지 작업 퍼블리싱 리스트</h3>
+            </header>
+            <div>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-2024-tab" data-bs-toggle="pill" data-bs-target="#pills-2024" type="button" role="tab" aria-controls="pills-2024" aria-selected="true">2024</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-2023-tab" data-bs-toggle="pill" data-bs-target="#pills-2023" type="button" role="tab" aria-controls="pills-2023" aria-selected="true">2023</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-2022-tab" data-bs-toggle="pill" data-bs-target="#pills-2022" type="button" role="tab" aria-controls="pills-2022" aria-selected="true">2022</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-2021-tab" data-bs-toggle="pill" data-bs-target="#pills-2021" type="button" role="tab" aria-controls="pills-2021" aria-selected="true">2021</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <!-- 2024 퍼블리싱작업 영역 -->
+                <div class="tab-pane fade show active" id="pills-2024" role="tabpanel" aria-labelledby="pills-2024-tab">
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>네이버 광고 검색 랜딩페이지 2차 수정작업</span>
+                                    <span class="float-end">2024.02.01</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                    - 안드로이드 유저 : 플레이스토어로 이동<br />
+                                    - iOS 유저 대상으로 제공 될 안내 문구와 공유하기 버튼 교체 작업<br />
+                                    
+                                    - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-365
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2024/webview/ad_search/index.html" target="_blank">iOS유저 대상 랜딩페이지</a>
+                                            <span class="float-end">2024.02.01</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">
+                                                    - 서브페이지 숨김처리 <br />
+                                                    - 메인화면  타이틀 문구 변경 <br />
+                                                    - 메인화면 하단영역 iOS 유저 안내문구 추가
+                                                </p>                                     
+                                            </div>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                            </div>                            
+                        </article>
+                    </section>   
+                </div>
+                <!-- 2023 퍼블리싱작업 영역 -->
+                <div class="tab-pane fade show" id="pills-2023" role="tabpanel" aria-labelledby="pills-2023-tab">
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>네이버 광고 검색 렌딩페이지</span>
+                                    <span class="float-end">2023.12.15</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        -  네이버 검색광고에 노출되는 모바일 랜딩페이지 퍼블리싱 작업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-355
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/searchAD/index.html" target="_blank">캐시메이트 소개 랜딩페이지</a>
+                                            <span class="float-end">2023.12.15</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 모바일만 노출되는 Web페이지</p>
+                                                <p class="lead lead_text">- 페이지 스크롤 형식으로 Section 화면 전체가 보이게 노출</p>                                                   
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section> 
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 공유하기 페이지 개선 작업</span>
+                                    <span class="float-end">2023.10.27</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        -  클립다운 공유하기 페이지 개선 작업진행<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-320
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/view_share/index.html" target="_blank">외부 공유하기 페이지</a>
+                                            <span class="float-end">2023.10.27</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 반응형 웹페이지 스타일 방식으로 변경</p>
+                                                <p class="lead lead_text">- 하단영역 캐시메이트 배너 영역 추가</p>    
+                                                <p class="lead lead_text">- 해상도 767px 이하부터 다크모드 <code>.wrap_dark</code> 모바일 스타일로 변경</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>  
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 캐시메이트 서비스 공통 UI 페이지 작업 </span>
+                                    <span class="float-end">2023.05.-</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램 PC Webview 페이지별 UI 스타일 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-269
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mypage/mypage.html" target="_blank">마이페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mypage/errorpage.html" target="_blank">에러페이지</a>
+                                            <span class="float-end">2023.00.00</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/view/download_section.html" target="_blank">시청화면페이지 - 포인트 적립 안내 툴팁</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/point_save.html" target="_blank">캐시메이트 - 포인트 모으기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/point_use.html" target="_blank">캐시메이트 - 포인트 쓰기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/event_list.html" target="_blank">캐시메이트 - 이벤트 리스트 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/cashmate/event_detail-veiw_invite.html" target="_blank">캐시메이트 - 이벤트 상세 페이지_친구초대</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_list.html" target="_blank">문의하기페이지 - 메인화면</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_detail_clipdown.html" target="_blank">문의하기페이지 - 클립다운</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/inquiry/inquiry_detail_form.html" target="_blank">문의하기페이지 - 캐시메이트 1:1 문의하기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램  Webview Popup UI 스타일 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-270
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_inflemate.html" target="_blank">로그인 - 인플메이트 통합 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_auth_google.html" target="_blank">로그인 - 기기변경 확인</a>
+                                            <span class="float-end">2023.00.00</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_auth_google_fail.html" target="_blank">로그인 - 기기변경 확인 > 메일 인증 실패 시</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_01-01_terms_agree.html" target="_blank">회원가입 - 약관동의 01</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_01-02_terms_agree.html" target="_blank">회원가입 - 약관동의 02</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_02_mobileAuth_authNum.html" target="_blank">회원가입 - 휴대폰 인증</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_03_account_google.html" target="_blank">회원가입 - 구글계정 연동</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_04_register_user-info.html" target="_blank">회원가입 - 프로필 등록</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/join_05_complate_event.html" target="_blank">회원가입 - 이벤트 안내</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/login_mypage.html" target="_blank">마이페이지 - 로그인</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/check_install.html" target="_blank">광고 - 클립다운 라이트 설치 확인 > 앱 미설치 시 노출되는 팝업</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/popup/event_info_check-install.html" target="_blank">이벤트 - 클립다운 라이트 설치 확인 > 앱 미설치 안내</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 캐시메이트 APP Webview 페이지별 UI 스타일 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-271
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/main.html" target="_blank">캐시메이트 메인페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/main_banner.html" target="_blank">캐시메이트 메인 배너영역 이미지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_usage-detail.html" target="_blank">보유포인트 - 사용내역</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_use.html" target="_blank">보유포인트 - 포인트 쓰기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_use_check.html" target="_blank">보유포인트 - 포인트 쓰기 > 팝업 사용확인</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_use_insufficient-point.html" target="_blank">보유포인트 - 포인트 쓰기 > 팝업 잔액부족</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/point_save.html" target="_blank">보유포인트 - 포인트 모으기</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/popup_point_save_ad.html" target="_blank">보유포인트 - 포인트 모으기 > 팝업 광고</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/event_list.html" target="_blank">보유포인트 - 이벤트</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/reward/mb_cashmate/event_detail-veiw_invite.html" target="_blank">보유포인트 - 이벤트 > 친구초대하기 페이지</a>
+                                            <span class="float-end">2023.05.31</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                            
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>[공유하기페이지] 공유 이벤트 디자인 작업 </span>
+                                    <span class="float-end">2023.02.01</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - Web 공유하기페이지에서 공유 이벤트  디자인 작업 <br />
+                                        - 클립다운 PC / APP 시청화면페이지의 플레이어 좌측 하단영역 이벤트 배너 노출 작업 (구간다운로드 버튼 영역))
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2023/webview/promotion_view/download_section_event.html" target="_blank">시청화면페이지 이벤트 배너 </a>
+                                            <span class="float-end">2023.02.00</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- </p>
+                                                <p class="lead lead_text">- </p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>   
+                </div>
+                <!-- 2022 퍼블리싱작업 영역 -->
+                <div class="tab-pane fade show" id="pills-2022" role="tabpanel" aria-labelledby="pills-2022-tab">   
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>부가서비스 광고 추가 디자인 작업 </span>
+                                    <span class="float-end">2022.12.21</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램 팝업창 내 노출 될 신규 부가서비스 템플릿 변경 및 이미지 작업 <br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-241 <br />
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/clipdownplus_popup/join_mobileAuth.html" target="_blank">Webview 휴대폰 인증 광고 가입 팝업 퍼블리싱 작업 2차 - 최종</a>
+                                            <span class="float-end">2022.12.21</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 가입팝업을 통한 가입률 향상을 위한 디자인 레이아웃 및 스타일 2차 작업</p> 
+                                                <p class="lead lead_text">- 전체 마크업 구조 및 스타일 변경</p>                                            
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/clipdownplus_popup/join_mobileAuth_type01.html" target="_blank">[Sample]광고 가입 팝업 퍼블리싱 작업 1차 - Type01</a>
+                                            <span class="float-end">2022.12.20</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/clipdownplus_popup/join_mobileAuth_type02.html" target="_blank">[Sample]광고 가입 팝업 퍼블리싱 작업 1차 - Type02</a>
+                                            <span class="float-end">2022.12.20</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section> 
+                    
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>부가서비스 광고 추가 디자인 작업 </span>
+                                    <span class="float-end">2022.12.14</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램 팝업창 내 노출 될 신규 부가서비스 템플릿 변경 및 이미지 작업 <br />
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/popup_ad_carrier/ads_service_slider.html" target="_blank">부가서비스 광고 디자인 작업</a>
+                                            <span class="float-end">2022.12.14</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 12.13 부가서비스 추가 이미지 디자인 작업 (상단 헤더영역 이미지화)</p>
+                                                <p class="lead lead_text">- 12.14 퍼블리싱 작업, 이미지영역 롤링 기능 추가 작업</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>   
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>[clipdownPLUS+] Webview 휴대폰 인증 가입 팝업 디자인 작업</span>
+                                    <span class="float-end">2022.12.02</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.18 [클립다운 PLUS+] Webview 휴대폰 인증 광고 가입 팝업 퍼블리싱 작업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-217
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/clipdownplus_popup/join_mobileAuth.html" target="_blank">광고 회원가입 팝업</a>
+                                            <span class="float-end">2022.11.18</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 서비스 가입 팝업페이지는 신규 CSS 스타일 추가 적용</p>
+                                                <p class="lead lead_text">- 메인이미지 스타일 타입은 3가지(popup_join_01.png~popup_join_03.png)</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/clipdownplus_popup/join_mobileAuth_complate.html" target="_blank">광고 회원가입완료 팝업</a>
+                                            <span class="float-end">2022.11.21</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 서비스 가입 완료 페이지 UI 변경으로 인한 코딩작업</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.21 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 로그인 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/login_mobileAuth_info.html" target="_blank">로그인 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">로그인 안내 , 로그인 - 비회원 팝업 컨텐츠</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/login_mobileAuth_authNum.html" target="_blank">로그인 예외 케이스 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">로그인 - 회원인경우 인증번호 입력, 인증번호 실패, 실패로 인한 차단  컨텐츠</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.22 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 가입하기 약관동의 팝업<br />
+                                        - 서비스 이용 UI 가입하기 예외 케이스 팝업<br />
+                                        - 11.25 서비스 이용 UI 가입완료 팝업 추가작업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/join_mobileAuth_agree.html" target="_blank">회원가입 약관동의 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">회원가입 – 휴대폰번호/약관동의</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/join_mobileAuth_authNum.html" target="_blank">회원가입 예외 케이스 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">회원가입 – 인증번호 입력, 인증번호 불일치</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/join_mobileAuth_complate.html" target="_blank">회원가입 완료 팝업</a>
+                                            <span class="float-end">2022.11.25</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">회원가입 – 인증번호 입력, 인증번호 불일치</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.22 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 계정찾기 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/login_mobileAuth_findID.html" target="_blank">계정찾기 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">-</p>                                              
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.22 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 휴대폰번호 변경 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/login_mobileAuth_modifyPhone.html" target="_blank">휴대폰번호 변경 팝업</a>
+                                            <span class="float-end">2022.11.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">-</p>                                              
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.23 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 휴대폰번호 수집 팝업<br />
+                                        - 서비스 이용 UI 휴대폰번호 수집 예외 케이스 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/join_mobileAuth_authNum.html" target="_blank">휴대폰번호 수집 팝업</a>
+                                            <span class="float-end">2022.11.23</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">휴대폰 SMS 인증, 인증번호 입력, 휴대폰번호 등록</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/sms_mobileAuth_guide_authNum.html" target="_blank">휴대폰번호 수집 예외 케이스 팝업</a>
+                                            
+                                            <span class="float-end">2022.11.23</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">인증번호 불일치, 인증번호 실패, 인증번호 발송초과, 이미 등록 된 휴대폰</p>                                                 
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.23 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 구글 로그인 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-218
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/login_mobileAuth_google.html" target="_blank">구글 로그인 팝업</a>
+                                            <span class="float-end">2022.11.23</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">레이어팝업형식 구글 로그인, 휴대폰 본인인증</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.23 [클립다운 PLUS+ WEB] 홈페이지 서비스 해지 안내 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 홈페이지 해지 팝업<br />
+                                        - 서비스 이용 UI 홈페이지 해지 예외 케이스 팝업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-219
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/clipdonwplus/popup_mobileAuth.html" target="_blank">홈페이지 해지안내 팝업</a>
+                                            <span class="float-end">2022.11.23</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">휴대폰 인증 컨텐츠</p>                                                
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/clipdonwplus/popup_error_message.html" target="_blank">홈페이지 해지안내 예외 케이스 팝업</a>
+                                            <span class="float-end">2022.11.23</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">인증 실패 , 에러메세지</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.30 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - 서비스 이용 UI 기기 초기화 안내 팝업 추가<br />
+                                        - Webview 기기 초기화 팝업 스타일 맞추기 위한 작업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-230
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/info_message_reset.html" target="_blank">기기 초기화 안내 팝업</a>
+                                            <span class="float-end">2022.11.30</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">-</p>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        11.30 [클립다운 PLUS+ PC] Webview 서비스 이용 UI 팝업 퍼블리싱 작업<br />
+                                        - Modal(Alert) form 신규 추가<br />
+                                        - Webview영역에 들어갈 모달(얼랏) 안내 폼 작업<br />
+                                        - 작업내용 : https://jsfuture.atlassian.net/browse/PMT-230
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"> 
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_mobileAuth/modal_form.html" target="_blank">Modal(Alert) 폼</a>
+                                            <span class="float-end">2022.11.30</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">안내 메세지의 경우  p태그로 한줄일때, 두줄일때 구분</ㅠ>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>              
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>부가서비스 광고 디자인 작업 </span>
+                                    <span class="float-end">2022.08.26</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 클립다운 프로그램 팝업창 내 노출 될 부가서비스 광고영역 (통시사 선택 영역 ) 퍼블리싱 작업 <br />
+                                        - 08.23 1차 퍼블리싱 작업, 3가지 타입의 시안 작업 완료 <br />
+                                        - 08.25 2차 퍼블리싱 작업, 목적변경으로 인한 디자인 형태 변경하여 1,2type 시안 먼저 작업
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/popup_ad_carrier/add_service_tylep01.html" target="_blank">시안 1Type_부가서비스 광고</a>
+                                            <span class="float-end">2022.08.26</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/ad/popup_ad_carrier/add_service_tylep02.html" target="_blank">시안 2Type_부가서비스 광고</a>
+                                            <span class="float-end">2022.08.26</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>                    
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>인플메이트 약관동의UI 및 이용약관 디자인작업 </span>
+                                    <span class="float-end">2022.07.12</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                        - 통합 회원가입처리를 위한 약관동의 UI 신규페이지 코딩작업 <br />
+                                        - 통합 이용약관 UI 신규페이지 코딩작업
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/inflmate/join_agree/inflmate_join.html" target="_blank">통합 약관동의 페이지</a>
+                                            <span class="float-end">2022.07.04</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">- 웹반응형(webview) 형식, 구글 로그인 벤치마킹</p>
+                                                <p class="lead lead_text">- 클립다운플러스 소셜로그인 이후 약관동의 페이지 노출 할 페이지 작업</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/inflmate/policy/member.html" target="_blank">통합 이용약관 페이지</a>
+                                            <span class="float-end">2022.07.12</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">테스트 로컬 내 페이지 작업</p>
+                                                <p class="lead lead_text"><a href="https://inflmate.com/policy/privacy.php">[회사테스트로컬] 인플메이트 이용약관</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>[ect] 제이스퓨처 홈페이지 리뉴얼 컨셉시안</span>
+                                    <span class="float-end">-</span>
+                                </div>
+
+                                <div class="card-body">
+                                    <p class="card-text">회사 홈페이지 리뉴얼버전 퍼블리싱 작업 2차</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/type01/index.html" target="_blank">시안01 제이스퓨처 홈페이지</a>
+                                            <span class="float-end">2022.07.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text"> 1. 다크버전으로, 심플하게 텍스트 애니메이션으로 너무 지루해 보이지 않게 적용</p>
+                                                <p class="lead lead_text">
+                                                    2. 메인영역 애니메이션 5초 후 자동으로 About 메뉴 페이지로 이동 될 수 있게 했습니다.<br />
+                                                    - 페이지 이동이 부자연스러움이 다소 있으며, 개발 리소스가 필요해 보임
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/type02/index.html" target="_blank">시안02 제이스퓨처 홈페이지</a>
+                                            <span class="float-end">2022.07.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">1. 라이트버전으로. 인트로 5초정도 애니메이션 진행되고 메인페이지로 이동됩니다.</p>
+                                                <p class="lead lead_text">2. 홈의 메인영역은 텍스트의 라인으로 애니메이션 포인트를 주었고, 각 페이지 이동은 자연스럽게 우측 하단의 버튼으로 이동 할 수 있도록 했음</p>
+                                                <p class="lead lead_text">3. About 하단 컨텐츠 영역의 경우 임의로 추가적인 부분을 넣어봤습니다.</p>     
+                                            </div>                                            
+                                       </li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body">
+                                    <p class="card-text">회사 홈페이지 리뉴얼버전 퍼블리싱 작업 1차</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="https://ladyareum.github.io/office_project/Design/homepage/index.html" target="_blank">시안1 제이스퓨처 홈페이지</a>
+                                            <span class="float-end">2022.07.14</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="https://ladyareum.github.io/office_project/Design/homepage/index_02.html" target="_blank">시안2 제이스퓨처 홈페이지</a>
+                                            <span class="float-end">2022.07.14</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">메인페이지 배경영역 변경</p>
+                                            </div>                                            
+                                       </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 모바일 설치파일 안내페이지 </span>
+                                    <span class="float-end">2022.07.07</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - 갤럭시 스토어 설치 중단으로 인한 클립다운 다운로드 설치 Webview 안내페이지 <br>
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/app/update/clipdown_download.html" target="_blank">클립다운 설치파일 다운로드 메인페이지</a>
+                                            <span class="float-end">2022.07.06</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/app/update/clipdown_download_guide.html" target="_blank">클립다운 설치파일 다운로드 안내페이지</a>
+                                            <span class="float-end">2022.07.07 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">
+                                                클립다운 다운로드 페이지(app_clipdown_download.html)의 [클립다운 설치파일 다운로드] 버튼 클릭 시<br />
+                                                apk 설치파일 다운로드 진행과 함께 [설치파일 다운로드 안내페이지(app_clipdown_download_guide.html)]로 이동
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 홈페이지 모바일 메인영역 스타일 디자인 작업</span>
+                                    <span class="float-end">- </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - 클립다운홈페이지 반응형일때 보여지는 메인영역 스타일 수정작업 <br>
+                                        - 신규 클립다운 라이트 서비스 노출 3가지 스타일로 작업
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/m_top/main_style_02.html" target="_blank">01 텍스트 링크 스타일</a>
+                                            <span class="float-end">2022.04.26 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">- 클립다운 라이트 다운로드 텍스트만 노출하는 링크형식</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/m_top/main_style_03.html" target="_blank">02 팝업 스타일</a>
+                                            <span class="float-end">2022.04.27 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">- 홈페이지 이탈 시 클립다운 라이트 소개 + 다운로드 배너가 팝업으로 노출되는 형식</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/m_top/main_style_01.html" target="_blank">03 슬라이더 스타일</a>
+                                            <span class="float-end">2022.04.26 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">- 원스토어/ 갤럭시 스토어 영역과 구글 플레어 스토어 영역 나눠 슬라이더로 메인이미지 + 다운로드 배너 노출되는 형식</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운플러스 유료화 프로젝트</span>
+                                    <span class="float-end">i=2022.06.30</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">작업진행사항</h5>
+                                    <p class="card-text">
+                                        작업요청일 : 2022년 2월 17일 <br />
+                                        작업일 : 2022년 2월 18일<br />
+                                        [상세내용]<br />
+                                        - 클립다운 유료화 관련 디자인 작업 진행<br />
+                                        - 일정이슈료 개발작업에 맞춰서 우선순위 작업진행<br />
+                                        - PC프로그램 ,웹뷰 / 홈페이지 신규페이지 / APP<br />
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/download_section.html" target="_blank">[WEB] 구간 다운로드_디자인 및 퍼블리싱 작업</a>
+                                            <span class="float-end">2022.02.21 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">- 유튜브 페이지 > 구간 다운로드 서비스 기능추가</p>
+                                                <p class="lead lead_text">- 웹뷰창 최소 사이즈 : 660 * 614</p>
+                                                <p class="lead lead_text">- 부분다운로드 / 전체 다운로드 > 부분다운로드 버튼 클릭 시 옵션 설정영역 노출</p>
+                                                <p class="lead lead_text">CSS inline 내부 스타일적용</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_info_message.html" target="_blank">[PC프로그램] WebView영역 안내창_안내메세지 퍼블리싱작업</a>
+                                            <span class="float-end">2022.02.28 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">WebView 영역 > 로그인/성인인증 안내창 컨텐츠 영역 - 안내 메세지 가이드 작업</p>
+                                                <p class="lead lead_text">- html5 , 외부 스타일 (css, images 폴더) 구조 설정</p>
+                                                <p class="lead lead_text">- 구글 로그인버튼의 경우 코드진행여부 확인필요, 폰트 : Roboto Medium / font-size:14px;</p>
+                                                <p class="lead lead_text">- 휴대폰인증 버튼의 경우 구글로그인버튼 스타일 동일하나 클립다운 컬러색 유지;</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/clipdonwplus/clipdownplus.html" target="_blank">[WEB] 클립다운 플러스 홈페이지 퍼블리싱 작업</a>
+                                            <span class="float-end">- </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/clipdonwplus/popup_style.html" target="_blank">[WEB] 클립다운 플러스 홈페이지 팝업 안내창 리스트</a>
+                                            <span class="float-end">2022.03.25</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">팝업 안내창 , 얼랏(확인) 안내창 두가지 스타일가이드</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_info_join.html" target="_blank">[PC프로그램] 클립다운 플러스 가입 안내 시안</a>
+                                            <span class="float-end">2022.04.15</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">PC프로그램 웹뷰 팝업 안내창영역에 들어갈 가입안내 이미지 스타일 2가지 </p>
+                                                <p class="lead lead_text">[가이드] <a href="https://scene.zeplin.io/project/623289fe0cf6d9b59ce4864e" target="_blank">팝업 시안 이미지</a></p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/popup_login_google.html" target="_blank">[APP]webview 로그인 / 가입 팝업 컨텐츠</a>
+                                            <span class="float-end">2022.04.15</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">APP 웹뷰 팝업 안내창영역에 들어갈 컨텐츠 </p>
+                                                <p class="lead lead_text"><code>.title_message</code> 컨텐츠 타이틀영역 추가 </p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/info_message_reset.html" target="_blank">[PC]webview 안내페이지 형식 - 기기초기화 안내</a>
+                                            <span class="float-end">2022.04.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">PC프로그램 웹뷰 화면에서 기기초기화 안내메세지 노출되도록 개별 코딩파일 작업 </p>
+                                                <p class="lead lead_text">CSS 스타일 inline 형식</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownplus/payment/payment_template.html" target="_blank">[팝업-윈도우새창] 결제 결과페이지 템플릿작업 및 스타일 추가</a>
+                                            <span class="float-end">2022.04.22</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">1. [신규]반응형에 맞춘 결제 결과페이지 템플릿 작업</p>
+                                                <p class="lead lead_text">2. 다날 결제 결과페이지 - 반응형 스타일로 html 구조 및 CSS 스타일 추가 (개발 테스트 로컬 작업)</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 라이트 (구글플레이용) 서비스 안내페이지</span>
+                                    <span class="float-end">2022.03.28 </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    클립다운 라이트 앱 소개 내용 추가
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/index.html" target="_blank">클립다운 라이트 서비스 소개영역 및 다운로드 버튼 퍼블리싱 작업</a>
+                                            <span class="float-end">2022.03.31 </span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">[작업영역]</p>
+                                                <p class="lead lead_text">- 클립다운홈페이지 서비스 영역 변경 : 클립다운 라이트 앱 소개내용 추가 및 수정</p>
+                                                <p class="lead lead_text">- 반응형 모바일일때 상단 메인영역 : 다운로드 버튼영역 추가 및 수정</p>
+                                                <p class="lead lead_text">- 반응형 모바일일때 하단 다운로드 버튼 고정 : [클립다운 다운로드] 버튼 및 클릭 시 팝업 노출로 변경</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownlite/list_accordian/list_faq.html" target="_blank">webview FAQ 리스트 형식 및 내용 적용 </a>
+                                            <span class="float-end">2022.03.18 </span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/webview/clipdownlite/list_accordian/list_notice.html" target="_blank">webview 공지사항 리스트 형식</a>
+                                            <span class="float-end">2022.03.18 </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 홈페이지 런처파일 설치안내 가이드 페이지/팝업 작업</span>
+                                    <span class="float-end">2022.02.10 </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - 클립다운홈페이지 메뉴에서 다운로드 클릭 시 이동되는 안내 페이지 <br>
+                                        - 설치안내 팝업버전, 페이지 버전 시안작업완료
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2022/web/download_guide.html" target="_blank">런처파일 설치안내 가이드 페이지</a>
+                                            <span class="float-end">2022.02.09 </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+
+                 <!-- 2021 퍼블리싱작업 영역 -->
+                 <div class="tab-pane fade show" id="pills-2021" role="tabpanel" aria-labelledby="pills-2021-tab">
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 홈페이지 브라우저별 런처파일 실행 안내팝업 작업</span>
+                                    <span class="float-end">2021.12.30 </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        - 클립다운 런처파일 다운로드 실행 안내팝업 노출 진행 <br>
+                                        - 이전 서비스 안내페이지에 적용한 팝업스타일에서 문구만 수정하여 진행
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2021/web_renewal/popup_info_install.html" target="_blank">런처파일 다운로드 실행 안내팝업</a>
+                                            <div class="alert">
+                                                <p class="lead lead_text">
+                                                    브라우저 파일위치는 2가지로 진행<br />
+                                                    좌측 하단 : 크롬 , 중앙정렬 : 엣지, 웨일 , IE<br />
+                                                    Mobile 에서는 실행안내팝업 미 노출<br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>[ect] 기타 작업산출물</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">2021년 채용 공고 디자인작업</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/misc/recruit/jsf_job_211206/jsf_job.html" target="_blank">채용공고 서비스 페이지 링크작업</a>
+                                            <span class="float-end">2021.11.30</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">12.01 시안이미지 작업완료</p>
+                                                <p class="lead lead_text">12.02 시안이미지 수정 작업완료</p>
+                                                <p class="lead lead_text">12.07 서비스 링크 코딩작업 완료, 채용사이트 내 html 작업시 반응형사이즈까지 맞추는 작업이 어려움이 있어 이미지로만 진행</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                        <a href="https://www.helpstart.co.kr/img/job/20211207/Job_jsf_20211207.jpg" target="_blank">채용공고 이미지 링크</a>
+                                        <span class="float-end">2021.12.07</span>
+                                       </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>제이스퓨처 홈페이지 리뉴얼 컨셉시안</span>
+                                    <span class="float-end">state </span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">컨셉시안 이미지 링크</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/concept/jsf_renewal_concept_01-01.png" target="_blank">컨셉시안 01-01</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/concept/jsf_renewal_concept_01-02.png" target="_blank">컨셉시안 01-02</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/concept/jsf_renewal_concept_02.png" target="_blank">컨셉시안 02</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/concept/jsf_renewal_concept_03.png" target="_blank">컨셉시안 03</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/jsf_hompage/concept/jsf_renewal_concept_04.png" target="_blank">컨셉시안 04</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>                    
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 홈페이지 리뉴얼버전</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">2020년 리뉴얼 홈페이지 콘텐츠 영역만 변경하는 작업</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><a href="https://ladyareum84.github.io/office_project/Clipdown/2020_Web_clipdown_renewal/index.html" target="_blank">이전 홈페이지 리뉴얼 2020</a>
+                                            <span class="float-end">2020.10.15</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">2021년 홈페이지 리뉴얼 작업완료</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item"><a href="../jsfuture/clipdown/2021/web_renewal/index.html" target="_blank">홈페이지 리뉴얼 2021</a>
+                                            <span class="float-end">2021.09.28</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">09.28 홈페이지 개선안 문서 파악</p>
+                                                <p class="lead lead_text">10.14 시안작업완료</p>
+                                                <p class="lead lead_text">10.18 메인 우측 가이드영상 및 gif 작업</p>
+                                                <p class="lead lead_text">10.26 작업완료</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>클립다운 업데이트 안내페이지</span>
+                                    <span class="float-end">2021.09.29 </span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><a href="../jsfuture/clipdown/2021/web_info_update/service_update.html" target="_blank">설치 업데이트 안내페이지</a></li>
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2021/web_info_update/service_info.html" target="_blank">서비스 안내페이지</a>
+                                            <div class="alert">
+                                                <p class="lead lead_text">10.07 OpenGraph meta Tag 추가 작업완료</p>
+                                            </div>
+                                        </li>	
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2021/web_info_update/popup_info_browser.html" target="_blank">설치파일 클릭 시 브라우저별 팝업</a>
+                                            <div class="alert">
+                                                <p class="lead lead_text">class에서 hide 빼고 개별 스타일 확인 가능</p>
+                                                <p class="lead lead_text">
+                                                Chrome 좌측하단 - class="install-info ta-l hide"
+                                                </p>
+                                                <p class="lead lead_text">
+                                                MSedge 중앙정렬 1005 수정 - class="install-info center hide"
+                                                </p>
+                                                <p class="lead lead_text">
+                                                Whale 중앙정렬 1005 수정 - class="install-info center"
+                                                </p>
+                                            </div>
+                                        </li>	
+                                        <li class="list-group-item">
+                                            <a href="../jsfuture/clipdown/2021/web_info_update/popup_info_update.html" target="_blank">업데이트 안내페이지 추가작업</a> 
+                                            <span class="float-end">2021.10.15</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">10.18 업데이트 안내페이지 추가작업 완료</p>
+                                                <p class="lead lead_text">- 윈도우 새창띄우기 , 사이즈 : 600x560 </p>
+                                                <p class="lead lead_text">- 레이어팝업 : 윈도우 실행파일 위치로 인한 top :60% 아래로 이동 </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section>                    
+                 </div> 
+                 
+                 <!-- [Template] Year 퍼블리싱작업 영역 -->
+                <div class="tab-pane fade show" id="pills-Year" role="tabpanel" aria-labelledby="pills-Year-tab">
+                    <section class="contents_section">
+                        <article class="list-pagelink">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>Project Title</span>
+                                    <span class="float-end">End date of work</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"> 
+                                    Details of work
+                                    </p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href="#" target="_blank">Link to task page</a>
+                                            <span class="float-end">End date of work</span>
+                                            <div class="alert">
+                                                <p class="lead lead_text">Description</p>                                     
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>                            
+                        </article>
+                    </section>   
+                </div>
+                <!-- // [Template] Year 퍼블리싱작업 영역 -->
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>눈치게임 규칙 설명 </title>
+    <link rel='stylesheet' href='./resource/css/nunchi_style.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/font.css' type='text/css'>
+</head>
+<body>
+    <div class="wrap webview_nunchi">
+        <section class="section section_nunchi">
+            <div class="container">
+                <article class="contents">
+                    <!-- 룰 타입 (라운드 방식) -->
+                    <div class="rule_card">
+                        <div class="card_header">
+                            <div class="tit_box_border bg_shimmer">
+                                <h3>룰 타입 (라운드 방식)</h3>
+                            </div>
+                        </div>
+                        <div class="card_contents">
+                            <div class="round_list_rule">                                    
+                                <div class="content_item">
+                                    <table class="rule_table">
+                                        <thead>
+                                            <tr>
+                                                <th class="tit_type">유형</th>
+                                                <th class="tit_des">설명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="rule_type_row">로우 넘버</td>
+                                                <td class="rule_des">
+                                                    가장 <span class="rule_type_row">낮은 숫자</span>를 단독으로 선택한 유저가 승리
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="rule_type_high">하이 넘버</td>
+                                                <td class="rule_des">
+                                                    가장 <span class="rule_type_high">높은 숫자</span>를 단독으로 선택한 유저가 승리
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="content_item">
+                                    <ul class="bul_list rule_des">
+                                        <li class="bul_item_dot">각 라운드의 룰은 랜덤으로 진행되며, 라운드가 시작과 동시에 공개됩니다</li>
+                                        <li class="bul_item_dot">선택 가능한 숫자 범위: 1~999</li>
+                                        <li class="bul_item_dot">라운드는 1,000명 참여 시 자동 마감되며, 결과는 마감 후 즉시 발표됩니다.</li>
+                                        <li class="bul_item_dot">다음 라운드는 이전 라운드 종료 후, 5분 뒤 자동으로 시작됩니다.</li>
+                                    </ul>                                        
+                                </div>
+                                                                                
+                            </div>                           
+                        </div>                        
+                    </div>
+
+                    <!-- 보상 내용 -->
+                    <div class="rule_card">
+                        <div class="card_header">
+                            <div class="tit_box_border bg_shimmer">
+                                <h3>보상 내용</h3>
+                            </div>
+                        </div>
+                        <div class="card_contents">
+                            <div class="content_item">
+                                <ul class="list_rule bul_list rule_des">
+                                    <li class="bul_item_dot" style="padding-bottom: 0;">
+                                        <span>라운드 별 1~3등에게는 아래와 같이 보상이 지급됩니다.</span>
+                                        <table class="rule_table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="tit_type">순위</th>
+                                                    <th class="tit_des">포인트</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="rank_icon">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </td>
+                                                    <td class="item_point">10,000P</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="rank_icon">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="2등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </td>
+                                                    <td class="item_point">5,000P</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="rank_icon">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="3등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </td>
+                                                    <td class="item_point">3,000P</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- <div class="roun_list_rank des_reward">
+                                            <div class="list_header">
+                                                <span class="item_rank tit_rank">순위</span>
+                                                <span class="item_user tit_member">포인트</span>
+                                            </div>
+                                            <ul class="list_content list_round">
+                                                <li class="list_item">
+                                                    <div class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_01.png" alt="순위1등" srcset="./resource/images/icon_rank_01.svg" />
+                                                    </div>
+                                                    <div class="item_user item_point">10,000P</div>
+                                                </li>
+                                                <li class="list_item">
+                                                    <div class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_02.png" alt="순위1등" srcset="./resource/images/icon_rank_02.svg" />
+                                                    </div>
+                                                    <div class="item_user item_point">5,000P</div>
+                                                </li>
+                                                <li class="list_item">
+                                                    <div class="item_rank badge_rank">
+                                                        <img src="./resource/images/icon_rank_03.png" alt="순위1등" srcset="./resource/images/icon_rank_03.svg" />
+                                                    </div>
+                                                    <div class="item_user item_point">3,000P</div>
+                                                </li>
+                                            </ul>                                               
+                                        </div>                                -->
+                                    </li>
+                                    <li class="bul_item_dot">보상은 당첨자 발표 후, 즉시 자동으로 지급됩니다.</li>
+                                    <li class="bul_item_dot">해당 라운드의 당첨자가 없는 경우, 보상 포인트는 다음 라운드로 이월됩니다.</li>
+                                    <li class="bul_item_dot">이월된 보상 포인트는 다음 라운드 1등 보상 금액에 합산됩니다.</li>                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 참여 방법 및 제한 -->
+                    <div class="rule_card">
+                        <div class="card_header">
+                            <div class="tit_box_border bg_shimmer">
+                                <h3>참여 방법 및 제한</h3>
+                            </div>
+                        </div>
+                        <div class="card_contents">
+                            <div class="content_item">
+                                <ul class="bul_list rule_des">
+                                    <li class="bul_item_dot">1회 참여 시, 참가비 100P가 보유 포인트에서 차감됩니다. </li>
+                                    <li class="bul_item_dot">1일 최대 5회까지 참여 가능합니다.</li>
+                                    <li class="bul_item_dot">1라운드당 1회만 참여 가능합니다. (중복 참여 불가)</li>   
+                                    <li class="bul_item_dot">무료 참가권이 있는 경우, 참가권이 먼저 사용됩니다.</li>                 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 무료 참가권 -->
+                    <div class="rule_card">
+                        <div class="card_header">
+                            <div class="tit_box_border bg_shimmer">
+                                <h3>무료 참가권</h3>
+                            </div>
+                        </div>
+                        <div class="card_contents">
+                            <div class="content_item">
+                                <ul class="bul_list rule_des">
+                                    <li class="bul_item_dot">광고를 참여하면 무료 참가권 1개를 지급해드립니다. </li>
+                                    <li class="bul_item_dot">정상 참여 완료된 광고만 인정됩니다. (일부 스킵/중단/오류 참여는 제외)</li>
+                                    <li class="bul_item_dot">광고는 어떤 경로를 통해 참여하든 전부 인정됩니다.</li>   
+                                    <li class="bul_item_dot">무료 참가권은 지급 즉시 사용 가능하며, 사용 여부는 [참여 내역] 에서 확인 가능합니다. </li>   
+                                    <li class="bul_item_dot">무료 참가권은 1일 최대 5개까지 획득 가능합니다. </li> 
+                                    <li class="bul_item_dot">무료 참가권은 획득일 당일에만 사용 가능합니다. (익일 자동 소멸)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                     
+                    
+                </article>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    
+</body>
+</html>

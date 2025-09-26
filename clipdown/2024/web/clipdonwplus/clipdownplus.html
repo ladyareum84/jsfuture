@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="유튜브 음원추출 - 클립다운 PLUS+">
+    <meta name="keywords" content="유튜브 mp3 음원추출 사이트, 유튜브 mp3 변환, 모바일 유튜브 mp3 음원추출 사이트, 클립다운, clip down, clipdown">
+    <meta name="Description" content="유튜브 mp3 음원추출 사이트 - 클립다운으로 유튜브, 카카오tv, 아프리카tv 동영상을 다운로드하세요.">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>클립다운 PLUS+(clipdownPlus)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.minbottomSheet_banner.css">
+    <link rel="stylesheet" href="./resource/css/common.css">
+    <link rel="stylesheet" href="./resource/css/style_plus_info.css">		
+    <link rel='stylesheet' href='./resource/font/font.css' type='text/css'>		
+    <!-- <link rel="shortcut icon" href="http://www.clipdown.net/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.clipdown.net/favicon.ico" type="image/x-icon"> -->
+    <!--[if lt IE 9]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+        <script src='http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js'></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+</head>
+<body>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"></body>
+    <div class="wrap">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button id="navbar" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <img src="./resource/images/logo_clipdown.png" style="width: 64px;" alt="클립다운" >
+                    </a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="navbar-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">서비스 소개</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#services">이용방법</a>
+                        </li>
+                        <li class="menu_download">
+                            <a class="page-scroll" href="http://down.clipdown.co.kr/launcher/5/clipdown_setup_5.exe" download="newfilename" title="클립다운 설치하기">다운로드</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#notice">고객센터</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="menu_clipdownplus" href="#">클립다운<span class="weight-700_extraBold point-text">PLUS+</span>
+                                <span class="notify_badge badge_bg">NEW
+                                    <span class="ripple badge_bg"></span>
+                                    <span class="ripple badge_bg"></span>
+                                    <span class="ripple badge_bg"></span>
+                                </span>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <div class="float_banner">
+            <div class="plus_status">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="content_headline">
+                                <span class="text-block plus_des">3대의 PC에서</span>
+                                <span class="text-block plus_des weight-600_bold">월 3,300원으로 자유롭게 이용하세요.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 btn_state_plus">
+                            <div class="btn-group">
+                                <button class="btn btn-lg btn-round btn_plus" onClick="location.href='clipdownplus_popup.html'">
+                                    <span class="text_gradient">클립다운 PLUS+ 시작하기</span>
+                                </button>
+                                <button class="btn btn-lg btn-round btn_defualt">해지하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section class="section_main">
+            <div class="container">
+                <div class="head-title">
+                    <h1>
+                        동영상 크리에이터를 위한<br />
+                        <span class="weight-600_bold">클립다운<span class="weight-700_extraBold point-text">PLUS+</span></span>
+                    </h1>
+                </div>
+                <div class="main-intro">
+                    <div class="intro_des">
+                        <span class="item_des">시청 제한 영상 다운로드</span>
+                        <span class="item_des">대량의 영상도 빠르게 추출!</span>
+                        <span class="item_des">필요한 부분만 잘라서 소장!</span>
+                    </div>
+                    <div class="img_top_main">
+                        <div class="item_base">
+                            <img src="./resource/images/img_main_base.png">                                                                                  
+                        </div>
+                        <div class="item_download item_download_view">
+                            <div class="img_item_view">
+                                <img src="./resource/images/img_main_download_view-restrictions.png">
+                            </div>                                                            
+                        </div>
+                        <div class="item_download item_download_multi">
+                            <div class="img_item_multi">
+                                <img src="./resource/images/img_main_download_multi.png">
+                            </div>                              
+                        </div>
+                        <div class="item_download item_download_part">
+                            <div class="img_item_part">
+                                <img src="./resource/images/img_main_download_part.png">      
+                            </div>                                                            
+                        </div>  
+                                             
+                    </div>                   
+                </div>
+            </div>
+        </section>
+        <section class="section_intro">
+            <div class="container">
+                <div class="head-title">
+                    <h1>이럴 때 클립다운 PLUS+ 하세요!</h1>
+                </div>
+                <div class="contents_intro">
+                    <article class="content_item item_01">
+                        <div class="row-contents">
+                            <div class="col-2">
+                                <div class="img_intro">
+                                    <dotlottie-player src="https://lottie.host/2bf5f169-8a1e-4fe0-98b7-af5d4c45e4b9/ppckPdDFNH.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>                                                           
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="item_des">
+                                    동영상 편집 소스, 교육 자료 제작 등 <br />
+                                    특정 부분의 컨텐츠만 필요로 하는 경우
+                                    <p class="item-point">동영상 추출 구간을 지정 하는 기능!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="content_item item_02">
+                        <div class="row-contents">
+                            <div class="col-2">
+                                <div class="img_intro">
+                                    <dotlottie-player src="https://lottie.host/cf26fe85-73d0-44f1-b49f-133eb3164454/8lyaJVxTB1.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>                          
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="item_des">
+                                    온라인 강의 등 한번에 많은 영상을 <br />
+                                    추출하거나 특정 채널의 영상 편집을 위해
+                                    <p class="item-point">동시에 여러 개를 추출 하는 기능!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="content_item item_03">
+                        <div class="row-contents">
+                            <div class="col-2">
+                                <div class="img_intro item_disible">
+                                    <img src="./resource/images/clipdownPlus_features_03.png">  
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="item_des">
+                                    <div class="badge_coming">
+                                        <p class="badge">COMING SOON!</p>
+                                    </div>
+                                    <span class="item_disible">
+                                        해외 채널 편집을 위해 제한된 영상에<br>
+                                        접근이 필요한 크리에이터들을 위한
+                                        <p class="item-point">VPN 기능 내장!</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div> 
+            </div>
+        </section>
+        <section class="section_comparison">
+            <div class="container">
+                <div class="head-title">
+                    <h1>클립다운 vs 클립다운 PLUS+</h1>
+                </div>
+                <div class="contents_table">
+                    <table class="table_comparison">
+                        <tr>
+                            <th style="width: 50%;">기능</th>
+                            <th style="width: 25%;">클립다운</th>
+                            <th style="width: 25%;">클립다운 PLUS+</th>
+                        </tr>
+                        <tr>
+                            <td>8K급 고화질 동영상 추출</td>
+                            <td><i class="icon icon-circle"></i></td>
+                            <td><i class="icon icon-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td>고음질 음원 추출</td>
+                            <td><i class="icon icon-circle"></i></td>
+                            <td><i class="icon icon-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td>광고 없는 유튜브 시청</td>
+                            <td><i class="icon icon-circle"></i></td>
+                            <td><i class="icon icon-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td>재생 리스트의 동영상 추출</td>
+                            <td><i class="icon icon-circle"></i></td>
+                            <td><i class="icon icon-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td>유튜브 외 사이트 동영상 추출</td>
+                            <td><i class="icon icon-circle"></i></td>
+                            <td><i class="icon icon-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td>국가 제한/IP 차단 영상 추출</td>
+                            <td><i class=""></i></td>
+                            <td><i class="icon icon-circle circle_check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>여러개의 동영상/오디오 동시에 추출</td>
+                            <td><i class=""></i></td>
+                            <td><i class="icon icon-circle circle_check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>구간 설정 추출</td>
+                            <td><i class=""></i></td>
+                            <td><i class="icon icon-circle circle_check"></i></td>
+                        </tr>
+                    </table>
+                </div>    
+            </div>
+        </section>
+        <section class="section_faq">
+            <div class="container">
+                <div class="head-title">
+                    <h1>자주 하는 질문</h1>
+                </div>
+                <article class="content-box ">
+                    <div id="accordion" class="accordion-list-box">
+                        <!-- section 1 -->
+                        <div class="acc-item">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q1.</span>동영상 추출 구간을 지정하는 기능은 어떻게 사용하나요?</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>클립다운 프로그램(PC) 우측의 유튜브 화면에서 원하는 동영상을 재생하시고, 재생화면 우측 아래에 있는 <span class="weight-500_medium">‘구간 다운로드’</span> 버튼을 클릭하시면 동영상 추출 구간을 입력하는 메뉴가 나타납니다.</p>
+                                    <p>원하는 구간의 시간을 입력하신 후 ‘확인’ 버튼을 눌러 다운로드를 진행해주시기 바랍니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section #  VPN 기능 질문 비활성 220615 -->
+                        <div class="acc-item hide">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q2.</span>VPN 기능은 어떻게 사용하나요?</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>동영상/오디오 파일 추출 시 지역문제로 인해 추출이 정상적으로 되지 않는 경우 자동으로 VPN 기능이 사용되며 다운로드 완료 후 기존에 사용중인 IP로 다시 변경됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section 2 -->
+                        <div class="acc-item">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q2.</span>동영상 추출 시도 시에 유튜브 계정 로그인을 요구 받았습니다. 유튜브 계정 로그인이 추가로 필요한 이유가 무엇인가요</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>일부 영상의 경우 동영상 추출을 위해 유튜브 계정이 필요합니다. </p>
+                                    <p>클립다운 프로그램에서 <span class="weight-500_medium">유튜브 로그인 후 PLUS+ 회원에 가입</span>하시면 해당 영상을 다운로드 하실 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section 3-->
+                        <div class="acc-item">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q3.</span>이용 가능 기기수를 초과했다는 안내메시지를 확인하였습니다. 이용 가능 기기 기준이 어떻게 되나요?</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>클립다운 PLUS+는 3대의 PC에서만 사용 가능하며, 이를 초과하는 경우 <span class="weight-500_medium">등록된 기기를 초기화(로그아웃)해야 새로운 기기에 등록</span>할 수 있습니다.</p>
+                                    <p>PC 3대를 초과하여 로그인하는 경우 등록된 기기를 초기화하는 화면이 나타나며 초기화 후에는 기존 PC에서는 로그아웃 됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section 4 -->
+                        <div class="acc-item">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q4.</span>서비스 불만족으로 인해 더 이상 사용하지 않으려 합니다. 서비스 해지 절차는 어떻게 되나요?</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>클립다운 PLUS+ 홈페이지 화면 하단의 <span class="weight-500_medium">해지하기</span>를 통해 클립다운 PLUS+를 해지하실 수 있습니다. </p>
+                                    <p>단, 해지 시 가입 할 때 사용하였던 구글 로그인 인증이 필요하며, 서비스 탈퇴를 원하시는 경우 해지 후 노출되는 안내 화면에서 탈퇴하기를 진행해주시기 바랍니다.</p>
+                                    <p>구글 로그인 계정 분실 및 정상적으로 해지가 되지 않는 경우 당사 고객센터(1688-5631)로 연락주시면 해지 절차를 도와드리도록 하겠습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section 5 -->
+                        <div class="acc-item">
+                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q5.</span>클립다운 PLUS+ 사용기간이 어떻게 되나요?</span></h3>
+                            <div class="acc-contents">
+                                <div class="style_aw">
+                                    <p>클립다운 PLUS+는 월 단위로 사용할 수 있으며, 결제일의 익월 전날까지 사용 가능합니다.</p>
+                                    <p>예를들어 7월 15일에 결제한 경우 8월 14일까지 서비스를 이용할 수 있으며 별도 해지요청이 없는 경우 서비스 종료일전에 자동으로 결제됩니다.</p>
+                                    <p>또한, 프로모션 등으로 무료 이용 혜택을 제공받아 이용일이 연장된 경우 자동결제일자가 변경될 수 있으며</p>
+                                    <p>결제수단 정보가 불일치하여 자동결제가 되지 않는 경우 별도 안내 없이 서비스가 종료될 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section 5 -->
+                        <!--                        <div class="acc-item">-->
+                        <!--                            <h3 class="acc-head"><span class="heade-title"><span class="style_q">Q5.</span>클립다운 PLUS+ 결제를 취소 또는 환불하기 원합니다.</span></h3>-->
+                        <!--                            <div class="acc-contents">-->
+                        <!--                                <div class="style_aw">-->
+                        <!--                                    <p>클립다운 PLUS+ 이용을 원하지 않는 경우 홈페이지 하단의 '해지하기' 버튼을 클릭하시면 됩니다.</p>-->
+                        <!--                                    <p>클립다운 PLUS+ 신청(결제)일 당일에 해지하는 경우 결제금액은 자동 취소되며, 취소 즉시 서비스 이용이 불가능합니다.</p>-->
+                        <!--                                    <p>당일 이후 해지 시에는 결제 취소가 불가능하며, 서비스 이용 오류 등으로 인해 정상적으로 서비스가 제공되지 않은 경우 당사 고객센터(02-838-5111)를 통해 당월건의 결제내역 취소를 도와드리고 있습니다.</p>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer class="footer-section">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="policy-info">
+                            <a href="http://www.clipdown.net/info.html">이용약관</a>
+                            <span class="divider_vertical"></span>
+                            <a href="http://www.clipdown.net/privacy.html">개인정보취금밥침</a>
+                        </div>
+                        <div class="office-info">
+                            <span class="text-block">㈜제이스퓨처  서울특별시 구로구 디지털로 26길 111, JNK 디지털타워</span>
+                            <span class="">대표이사:장영호</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">사업자등록번호 350-87-00231</span>
+                            <span class="divider_vertical"></span>
+                            <span class="">통신판매업신고 : 제 2017-서울구로-0813호</span>
+                            
+                        </div>
+                        <div class="copyright">
+                            Copyright ⓒ J’SFUTURE corp. All Rights Reserved.
+                        </div>
+					</div>
+                </div>
+            </div>
+		</footer>
+        <!-- floatBanner-->
+        <div id="floatbox" class="float-box">
+            <a gtm-id="rightFloatingDownloadButton" id="launcherDownload" class="float-banner" href="<?php echo $clipDownLauncherDownloadUrl ?>" download="newfilename" title="클립다운 설치하기" target="_blank">
+                <div class="icon-download">
+                    <div class="arrow bounce">
+                        <span class="fa fa-arrow-down fa-2x"></span>
+                    </div>
+                </div>
+                <div class="banner-info">
+                    <div class="img-clipdown">
+                        <img src="./resource/images/logo_clipdown.png" class="img-fluid">
+                    </div>
+                    <div class="info-text">
+                        <span class="text-block">클립다운</span>
+                        <span class="text-block point-color">다운로드</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- //floatBanner -->
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <scrip src="./resource/js/common.js"></scrip>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script> 
+        $('html').on("click",function(e){ 
+          if( $(e.target).attr("id") != "navbar") {
+              $('.collapse').removeClass('in');
+          }
+      }); 
+      </script>
+	
+</body>
+</html>

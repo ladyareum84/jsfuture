@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>팝업 - 골드버튼 획득 보상 선택  </title>
+    <link rel='stylesheet' href='../../resource/css/common.css' type='text/css'>
+    <link rel='stylesheet' href='../../resource/css/style_cashmate.css' type='text/css'>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap webview_cashmate">
+    </div>
+
+    <!-- layer Popup 골드버튼 획득 보상 -->
+    <div id="" class="layer_popup popup_event popup_event_result">
+        <div class="popup_wrap_full">
+            <div class="popup_inner">
+                <div id="goldButtonContainer" class="popup_contents ">                    
+                    <!-- step2 : 보상 종류 선택하기 -->
+                    <div id="step2" class="popup_content content_reward ">
+                        <div class="content_box">
+                            <div class="ani_state ani_reward_select ani_effect">
+                                <div id="" class="ani_container">
+                                    <div class="ani_select ani_hand_l up">
+                                        <img src='../../resource/images/event/popup/img_reward_select_hand_l.png' alt="">
+                                    </div>
+                                    <div class="ani_select ani_hand_r down">
+                                        <img src='../../resource/images/event/popup/img_reward_select_hand_r.png' alt="">
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="header_title ">
+                                <h1 id="title" class="">
+                                    <span class="text-block ani_effect tit_reward_01">아래 두 가지 보상 중</span>
+                                    <span class="text-block ani_effect tit_reward_02">하나를 선택해주세요</span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="btn_popup_event btn_bottom">
+                            <div class="item_reward">
+                                <a id="challengeReward" href="#" class="btn_reward_full btn_challenge ani_effect">
+                                    <div class="img_box">
+                                        <img src="../../resource/images/event/popup/img_reward_btn_challenge.png" alt="">
+                                    </div>
+                                    <div class="text_box">
+                                        <div class="badge_ribbon">
+                                            <span>포인트 2배 뽑기 도전</span>
+                                        </div>
+                                        <h3 class="title_btn">도전 보상</h3>
+                                        <span class="text-block guide_text">뽑기 성공 시 <span class="font_en">10,000P</span> 획득!</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item_reward">
+                                <a id="basicReward" href="#" class="btn_reward_full btn_default ani_effect">
+                                    <div class="img_box">
+                                        <img src="../../resource/images/event/popup/img_reward_btn_default.png" alt="">
+                                    </div>
+                                    <div class="text_box">
+                                        <h3 class="title_btn">기본 보상</h3>
+                                        <span class="text-block guide_text"><span class="font_en">5,000P</span> 지급 받기</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>     
+                    </div>
+                    <!-- // step2 : 보상 종류 선택하기 -->
+                    
+            </div>
+        </div>
+    </div>
+    <!-- // layer Popup 골드버튼 획득 보상 -->
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    <script src="../../resource/js/common_cashmate.js"></script>
+    <script src="../../resource/js/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+</body>
+</html>

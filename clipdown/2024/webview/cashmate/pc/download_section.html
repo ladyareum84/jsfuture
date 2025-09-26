@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 구간 다운로드</title>
+    <style>
+        input::placeholder{color:#ddd;}
+        input:focus::-webkit-input-placeholder {color:transparent;}
+        input:read-only{background-color: #fff; color: #333; cursor: default;}
+        input:read-only:focus{border-color:#ccc;}
+        ol, ul, li{list-style-type: none;}
+        *:focus{outline: 1px dotted #ddd;}
+        .btn{display: inline-block; min-width: 68px; min-height: 34px; padding: 0 5px; font-family: 'Noto Sans KR', Helvetica, sans-serif; font-size: 14px; text-align: center; line-height: 1.4; border-radius: 50px; cursor: pointer; transition: all .2s ease-in-out;}
+        .form-control{display: inline-block; width: 5%; min-width:25px; height: 24px; font-size: 13px; text-align: center; border: 1px solid #ccc; padding: 0 5px;}
+        .form-control:focus{outline: none; border-color: #333;}
+        .empty-2{padding:0 2px;}
+        .empty-5{padding:0 5px;}
+        .content_download{position: relative; width: 100%;}
+        .btn_box{position: relative; margin: 10px 0;}
+        .btn_download{background: #e31d19; border: 1px solid #e31d19; color:#fff; font-weight: 500; padding: 8px 20px;}
+        .btn_download:hover{background: #d22619; border: 1px solid #d22619;}
+        .btn_outline_download{background: #fff; border: 1px solid #e31d19; color: #e31d19;}
+        .btn_outline_download:hover{background: #e31d19; border: 1px solid #e31d19; color: #fff;}
+        .btn_part{background: #272A39; border: 1px solid #464756; color: #fff;}
+        .btn_part:hover{background: #20222B; border: 1px solid #20222B; color: #fff;}
+        .btn_part_square{min-width: 58px; min-height: 26px; border-radius: 3px;}
+        .option_download{display: none; position: relative; overflow:hidden; vertical-align: middle; line-height:1.8; text-align: right; background: #f5f5f5; padding: 10px 10px;}
+        .option_download span{display: inline-block;}
+        .option_download .op_name{font-size: 13px; padding-right: 5px;}
+        
+        /* renewal style */
+        .item_left{position: relative; float: left; z-index: 100;}
+        .item_right{text-align: right;}
+        .tooltip_reward{position: relative; padding: 10px 0;}
+        .tooltip_reward .btn_tooltip{display: flex; align-items: stretch; justify-content: center; cursor: pointer;}
+        .tooltip_reward .btn_tooltip .text_des{font-size: 13px; padding-right: 5px;}
+        .tooltip_reward .btn_tooltip .icon_tooltip{position: relative;}
+        .tooltip_reward .btn_tooltip .icon_tooltip svg{position: relative; width: 14px; height: 14px; vertical-align: top;}
+        .tooltip_reward .tooltip_layer{display: none;}
+        .tooltip_reward .tooltip_layer.notice_tooltip{position: absolute; top:-4px; left: 110px; width: 260px; background: #fff; border: 1px solid #2C2F42;padding: 10px 10px; box-sizing: border-box; box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15); z-index: 1000;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_header{position: relative; padding-bottom: 5px;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_header strong{font-size: 12px;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_list{padding: 0; margin: 0;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_list .item_notice{font-size: 11px; padding-bottom: 3px;}
+
+        .btn_box_top{position: absolute; top: -1px; right: 0; }
+        .btn_box_top .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 14px; height: 14px; border:0; padding:0; cursor: pointer;}
+        .btn_box_top .btn_popup_close:focus{outline:0;}
+        .btn_box_top .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 11px; height: 11px; opacity: 1;}
+        .btn_box_top .btn_popup_close .icon-close:before, .btn_box_top .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#9E9EA5;}
+        .btn_box_top .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+        .btn_box_top .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
+        @media screen and (max-width: 380px) {
+            .btn{font-size: 12px;}
+            .item_left{float: none;}
+            .tooltip_reward .btn_tooltip{justify-content: flex-end;}
+            .tooltip_reward .tooltip_layer.notice_tooltip{top:30px; left: inherit; right: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="container">
+            <section class="section_download">                
+                <div class="content_download">
+                    <div class="btn_box">
+                        <!-- 좌측영역 이벤트 버튼 -->
+                        <div class="item_left">
+                            <div class="tooltip_reward">
+                                <div class="btn_tooltip">
+                                    <span class="text_des">포인트 적립 안내</span>
+                                    <span class="icon_tooltip">
+                                        <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+                                            <g fill="#2C2F42" fill-rule="evenodd">
+                                                <path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/>
+                                                <path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="tooltip_layer notice_tooltip" aria-hidden="true">
+                                    <div class="notice_header">
+                                        <strong>포인트 적립 안내</strong>
+                                        <div class="btn_box_top">
+                                            <button type="button" class="btn_popup_close" name="close">
+                                                <span class="btn_close icon-close"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <ul class="notice_list">
+                                        <li class="item_notice">- 동영상 시청 3분마다 포인트가 적립됩니다.</li>
+                                        <li class="item_notice">- 프로그램(PC) 최소화 상태에서는 적립되지 않습니다.</li>
+                                        <li class="item_notice">- 시청포인트는 하루 최대 적립 가능액이 존재합니다.</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>    
+                            
+                        </div>
+                        <div class="item_right">
+                            <button class="btn btn_download btn_part">구간 다운로드</button>
+                            <button class="btn btn_download btn_all">전체 다운로드</button>
+                        </div>
+                        
+                    </div>
+                    <div id="optionDownload" class="option_download">
+                        <span class="op_name">시간설정</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="" readonly value="00">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <span class="empty-2">~</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="hh" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="mm" value="">
+                        <span class="empty-2">:</span>
+                        <input type="text" id="tiem" maxlength="4" class="form-control" placeholder="ss" value="">
+                        <button class="btn btn_part btn_part_square">확인</button>
+                    </div>
+                </div>                
+            </section>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(function() {
+        $(".btn_part").on("click", function() {
+            $("#optionDownload").slideToggle("fast");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+	openTooltip('.btn_tooltip', '.tooltip_layer');
+    });
+
+    function openTooltip(selector, layer) {
+                
+        var $layer = $(layer);
+
+        // 툴팁버튼 처리
+        $(selector).on('click', function() {
+            $layer.toggleClass('on');
+        });
+        
+        function overTooltip() {
+            
+            var $this = $(selector);
+            
+            // 마우스 오버시 툴팁 레이어 노출
+            $this.on('mouseover focusin', function() {
+                $(this).next(layer).show();	
+            })	
+            // 마우스 떠날시 툴팁 레이어 숨김
+            $this.on('mouseleave focusout', function() {
+                if(!$layer.hasClass('on')) {
+                        $(this).next(layer).hide();
+                }
+            })
+        }
+        overTooltip();
+    }
+</script>
+</html>

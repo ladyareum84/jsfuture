@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="42" viewBox="0 0 38 42">
+  <g id="base_stemp" transform="translate(-2)">
+    <path id="hex_check_on" d="M30.32,0a2,2,0,0,1,1.75,1.033l9.395,17a2,2,0,0,1,0,1.935l-9.395,17A2,2,0,0,1,30.32,38H11.68a2,2,0,0,1-1.75-1.033l-9.395-17a2,2,0,0,1,0-1.935l9.395-17A2,2,0,0,1,11.68,0Z" transform="translate(2 42) rotate(-90)" fill="#207fd1"/>
+  </g>
+</svg>

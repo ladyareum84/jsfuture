@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="100" viewBox="0 0 340 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #030303;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+        font-family: S-CoreDream-6Bold, "S-Core Dream";
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 28px;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="download_clipdown">
+    <g id="download_clipdown-2" data-name="download_clipdown">
+      <rect class="cls-1" x="2" width="337" height="100" rx="12" ry="12"/>
+      <rect x="23" y="14" width="72" height="72" rx="15" ry="15"/>
+      <image id="legacy_512" x="23" y="14" width="72" height="72" xlink:href="data:img/png;base64,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"/>
+      <g>
+        <text id="클립다운_다운로드" data-name="클립다운 다운로드" class="cls-2" x="113.757" y="42.228">클립다운 다운로드</text>
+        <text id="for_Window" data-name="for Window" class="cls-3" x="114.756" y="77.228">for Window</text>
+      </g>
+    </g>
+  </g>
+</svg>

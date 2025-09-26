@@ -1,0 +1,124 @@
+
+/* 웹폰트 직접 로딩방식 */
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:100;
+font-display: fallback;
+src:local('SCDream1Thin'), local('SCDream 1 Thin'),
+	url('./SCDream1Thin.eot'),
+	url('./SCDream1Thin.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream1Thin.svg#SCDream1Thin') format('svg'),
+	url('./SCDream1Thin.ttf') format('truetype'),
+	url('./SCDream1Thin.woff') format('woff'),
+	url('./SCDream1Thin.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:200;
+font-display: fallback;
+src:local('SCDream2ExtraLight'), local('SCDream 2 ExtraLight'),
+	url('./SCDream2ExtraLight.eot'),
+	url('./SCDream2ExtraLight.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream2ExtraLight.svg#SCDream2ExtraLight') format('svg'),
+	url('./SCDream2ExtraLight.ttf') format('truetype'),
+	url('./SCDream2ExtraLight.woff') format('woff'),
+	url('./SCDream2ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:300;
+font-display: fallback;
+src:local('SCDream3Light'), local('SCDream 3 Light'),
+	url('./SCDream3Light.eot'),
+	url('./SCDream3Light.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream3Light.svg#SCDream3Light') format('svg'),
+	url('./SCDream3Light.ttf') format('truetype'),
+	url('./SCDream3Light.woff') format('woff'),
+	url('./SCDream3Light.woff2') format('woff2');
+}	
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:400;
+font-display: fallback;
+src:local('SCDream4Regular'), local('SCDream 4 Regular'),
+	url('./SCDream4Regular.eot'),
+	url('./SCDream4Regular.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream4Regular.svg#SCDream4Regular') format('svg'),
+	url('./SCDream4Regular.ttf') format('truetype'),
+	url('./SCDream4Regular.woff') format('woff'),
+	url('./SCDream4Regular.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:500;
+src:local('SCDream5Medium'), local('SCDream 5 Medium'),
+	url('./SCDream5Medium.eot'),
+	url('./SCDream5Medium.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream5Medium.svg#SCDream5Medium') format('svg'),
+	url('./SCDream5Medium.ttf') format('truetype'),
+	url('./SCDream5Medium.woff') format('woff'),
+	url('./SCDream5Medium.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:600;
+font-display: fallback;
+src:local('SCDream6Bold'), local('SCDream 6 Bold'),
+	url('./SCDream6Bold.eot'),
+	url('./SCDream6Bold.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream6Bold.svg#SCDream6Bold') format('svg'),
+	url('./SCDream6Bold.ttf') format('truetype'),
+	url('./SCDream6Bold.woff') format('woff'),
+	url('./SCDream6Bold.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:700;
+src:local('SCDream7ExtraBold'), local('SCDream 7 ExtraBold'),
+	url('./SCDream7ExtraBold.eot'),
+	url('./SCDream7ExtraBold.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream7ExtraBold.svg#SCDream7ExtraBold') format('svg'),
+	url('./SCDream7ExtraBold.ttf') format('truetype'),
+	url('./SCDream7ExtraBold.woff') format('woff'),
+	url('./SCDream7ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:800;
+font-display: fallback;
+src:local('SCDream8Heavy'), local('SCDream 8 Heavy'),
+	url('./SCDream8Heavy.eot'),
+	url('./SCDream8Heavy.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream8Heavy.svg#SCDream8Heavy') format('svg'),
+	url('./SCDream8Heavy.ttf') format('truetype'),
+	url('./SCDream8Heavy.woff') format('woff'),
+	url('./SCDream8Heavy.woff2') format('woff2');
+}
+@font-face {
+font-family:'SCDream';
+font-style:normal;
+font-weight:900;
+font-display: fallback;
+src:local('SCDream9Black'), local('SCDream 9 Black'),
+	url('./SCDream9Black.eot'),
+	url('./SCDream9Black.eot?#iefix') format('embedded-opentype'),
+	url('./SCDream9Black.svg#SCDream9Black') format('svg'),
+	url('./SCDream9Black.ttf') format('truetype'),
+	url('./SCDream9Black.woff') format('woff'),
+	url('./SCDream9Black.woff2') format('woff2');
+}

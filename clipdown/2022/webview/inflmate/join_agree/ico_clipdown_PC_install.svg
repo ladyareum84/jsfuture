@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f83531;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        filter: url(#filter-2);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        opacity: 0.3;
+      }
+
+      .cls-4 {
+        fill: #fff21f;
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="0" y="0" width="512" height="512" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMjU2IiB4Mj0iMjU2IiB5Mj0iNTEyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2U1MmQyNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNkMTIyMjgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" mode="multiply" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="45" y="297" width="429" height="152" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="6" dy="10.392" in="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood result="flood" flood-color="#010101" flood-opacity="0.28"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ico_clipdown_PC_install">
+    <rect class="cls-1" width="512" height="512" rx="60" ry="60"/>
+    <path id="Clip" class="cls-2" d="M140.709,319.191a119.442,119.442,0,0,1,16.854,3.581V301.49a96.138,96.138,0,0,0-15.5-3.326,134.636,134.636,0,0,0-18.212-1.176q-18.777.1-33.652,5.729a69.523,69.523,0,0,0-24.773,15.45,66.567,66.567,0,0,0-15.158,23.226,78.852,78.852,0,0,0-5.26,29.059,76.223,76.223,0,0,0,4.921,27.881,57.625,57.625,0,0,0,14.705,21.691,67.143,67.143,0,0,0,24.377,14.018Q103.607,439,122.836,439a149.214,149.214,0,0,0,19-1.177,139.031,139.031,0,0,0,17.081-3.223V413.016a109.767,109.767,0,0,1-16.742,3.581,128.83,128.83,0,0,1-17.533,1.227,68.159,68.159,0,0,1-21.435-3.12,42.593,42.593,0,0,1-16.006-9.26,40.306,40.306,0,0,1-10.067-15.3,59.149,59.149,0,0,1-3.507-21.231,57.093,57.093,0,0,1,3.846-21.64,44.523,44.523,0,0,1,10.689-15.911,45.844,45.844,0,0,1,16.4-9.822,62.25,62.25,0,0,1,20.87-3.377A117.638,117.638,0,0,1,140.709,319.191Zm40.7-19.645v136.9h98.525V415.471H209.122V299.546H181.408Zm146.464,136.9v-136.9H300.159v136.9h27.713Zm101.1-55.967a69.206,69.206,0,0,0,21.266-8.493,38.691,38.691,0,0,0,13.235-13.454A35.4,35.4,0,0,0,468,340.677q0-14.528-8.371-23.942t-23.868-13.711a95.233,95.233,0,0,0-14.648-2.609,184.983,184.983,0,0,0-19.174-.869H358.278v136.9h27.714V382.934q3.165,0.307,6.787.409t7.352,0.1A126.049,126.049,0,0,0,428.976,380.479Zm-42.984-59.958H401.6q8.484,0,14.309.562a49.779,49.779,0,0,1,9.785,1.791q7.577,2.456,10.633,6.855a17.847,17.847,0,0,1,3.054,10.437,20.258,20.258,0,0,1-2.036,9.055,17.581,17.581,0,0,1-6.674,7.06,38.18,38.18,0,0,1-12.217,4.553,90.747,90.747,0,0,1-18.777,1.637q-3.961,0-7.636-.154t-6.051-.46V320.521Z"/>
+    <path id="Arrow_04_-_Shapes4FREE_1" data-name="Arrow 04 - Shapes4FREE 1" class="cls-3" d="M384,125L262.5,257,141,125h59V0H326l-1,125h59Z"/>
+    <path id="Arrow_04_-_Shapes4FREE_1-2" data-name="Arrow 04 - Shapes4FREE 1" class="cls-4" d="M379,116L257.5,248,136,116h59V0H321l-1,116h59Z"/>
+  </g>
+</svg>
