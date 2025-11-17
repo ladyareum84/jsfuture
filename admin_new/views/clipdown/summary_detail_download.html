@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 다운로드 버튼 이용현황</title>
+</head>
+
+<body>
+    <div class="page">
+         <div class="page-wrapper">
+        <!-- BEGIN PAGE HEADER -->
+        <div class="page-header">
+            <div class="container-xl">
+                <div class="row align-items-center mw-100">
+                    <div class="col">
+                        <div class="mb-3">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">클립다운</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="/views/clipdown/summary_detail_download.html">요약 보고서</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="#">다운로드 버튼 이용현황</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="page-title">다운로드 버튼 이용현황</h2>
+                        <div class="text-secondary mt-1">클립다운 버튼 이용 현황 확인입니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE HEADER -->
+        <!-- BEGIN PAGE BODY -->
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-cards">
+                    <!-- 조건검색 스타일 02 -->
+                    <div class="col-12">
+                        <div class="card">                    
+                            <div class="card-body">
+                                <div class="filter-item">
+                                    <div class="row row-cards">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">조회기간</label>
+                                                <div class="row">
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                    </div>
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                    </div>
+                                                </div>                                    
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">제휴사</label>
+                                                <select id="mid" name="mid" class="form-select">
+                                                    <option value="All" selected="selected">전체</option>
+                                                    <option value="partner01">$partner01</option>
+                                                    <option value="partner02">$partner02</option>
+                                                    <option value="partner03">$partner03</option>
+                                                </select> 
+                                            </div>                                                            
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">회원구분</label>
+                                                <select id="member_type" name="member_type" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="N">비회원</option>
+                                                    <option value="P">유료회원</option>
+                                                    <option value="F">무료회원</option>
+                                                </select>
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">&nbsp;</label>
+                                                <div class="text-start">
+                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
+                                                </div>
+                                            </div>                                                            
+                                        </div> 
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END 조건검색 스타일 02-->
+                    
+                    <!-- Content Table Style -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-table">
+                                <div class="custom-table custom-table-lg table-responsive">
+                                    <table id="grid" class="table table-vcenter table-selectable table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" style="min-width: 6.5rem;">날짜</th>
+                                                <th>메인</th>
+                                                <th colspan="3">토스트</th>
+                                                <th colspan="3">추천영상</th>
+                                                <th rowspan="2">합계</th>                                                
+                                            </tr>
+                                            <tr>
+                                                <th>다운로드</th>
+                                                <th>다운로드</th>
+                                                <th>닫기</th>
+                                                <th>오늘 하루 열지 않음</th>
+                                                <th>썸네일 다운로드</th>
+                                                <th>재생 다운로드</th>
+                                                <th>구간 다운로드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-tbody"></tbody>
+                                        <tfoot id="dt_footer"></tfoot>
+                                    </table>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Content Table Style -->
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        const grid = new DataTable("#grid", {
+            data: [
+                {
+                    data1: "2025-06-20	",
+                    data2: "8,842",
+                    data3: "19,335",
+                    data4: "1,542",
+                    data5: "57",
+                    data6: "5,671",
+                    data7: "7,385",
+                    data8: "111",
+                    data9: "41,344",
+                },
+            ],
+            columns: [
+                {
+                    title: "날짜",
+                    data: "data1",
+                },
+                {
+                    title: "다운로드",
+                    data: "date2",
+                },
+                {
+                    title: "다운로드",
+                    data: "data3",
+                },
+                {
+                    title: "닫기",
+                    data: "data4",
+                },
+                {
+                    title: "오늘 하루 열지 않음",
+                    data: "data5",
+                },
+                {
+                    title: "썸네일 다운로드",
+                    data: "data6",
+                },
+
+                {
+                    title: "재생 다운로드",
+                    data: "data7",
+                }, 
+                {
+                    title: "구간 다운로드",
+                    data: "data8",
+                },
+                {
+                    title: "합계",
+                    data: "data9",
+                },     
+
+            ],
+            ...dataTablesConfg,
+        });
+
+        
+        // Chart
+            window.ApexCharts && (new ApexCharts(document.getElementById(
+                'chart-demo-area'), {
+                chart: {
+                    type: "area",
+                    fontFamily: 'inherit',
+                    height: 240,
+                    parentHeightOffset: 0,
+                    toolbar: {
+                        show: false,
+                    },
+                    animations: {
+                        enabled: false
+                    },
+                },
+                dataLabels: {
+                    enabled: false,
+                },
+                fill: {
+                    colors: [
+                        'color-mix(in srgb, transparent, var(--tblr-primary) 16%)',
+                        'color-mix(in srgb, transparent, var(--tblr-primary) 16%)',
+                    ],
+                    type: 'solid'
+                },
+                stroke: {
+                    width: 2,
+                    lineCap: "round",
+                    curve: "smooth",
+                },
+                series: [{
+                    name: "series1",
+                    data: [56, 40, 39, 47, 34, 48, 44]
+                }, {
+                    name: "series2",
+                    data: [45, 43, 30, 23, 38, 39, 54]
+                }],
+                tooltip: {
+                    theme: 'dark'
+                },
+                grid: {
+                    padding: {
+                        top: -20,
+                        right: 0,
+                        left: -4,
+                        bottom: -4
+                    },
+                    strokeDashArray: 4,
+                },
+                xaxis: {
+                    labels: {
+                        padding: 0,
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                    type: 'datetime',
+                },
+                yaxis: {
+                    labels: {
+                        padding: 4
+                    },
+                },
+                labels: [
+                    '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24',
+                    '2020-06-25', '2020-06-26', '2020-06-27'
+                ],
+                colors: [
+                    'color-mix(in srgb, transparent, var(--tblr-primary) 100%)',
+                    'color-mix(in srgb, transparent, var(--tblr-purple) 100%)'
+                ],
+                legend: {
+                    show: true,
+                    position: 'bottom',
+                    offsetY: 12,
+                    markers: {
+                        width: 10,
+                        height: 10,
+                        radius: 100,
+                    },
+                    itemMargin: {
+                        horizontal: 8,
+                        vertical: 8
+                    },
+                },
+            })).render();
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+        // // Litepicker
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     window.Litepicker &&
+        //         new Litepicker({
+        //             element: document.getElementById("startDate"),
+        //             buttonText: {
+        //                 previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+        // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+        //                 nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+        // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+        //             },
+        //         });
+
+        //     window.Litepicker &&
+        //         new Litepicker({
+        //             element: document.getElementById("endDate"),
+        //             buttonText: {
+        //                 previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+        // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+        //                 nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+        // <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+        //             },
+        //         });
+        // });
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

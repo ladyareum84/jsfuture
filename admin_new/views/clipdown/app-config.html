@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 리포트</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+        <!-- BEGIN PAGE HEADER -->
+        <div class="page-header">
+            <div class="container-xl">
+                <div class="row align-items-center mw-100">
+                    <div class="col">
+                        <div class="mb-3">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">클립다운</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="#">프로그램 관리</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="page-title"> 프로그램 관리</h2>
+                        <div class="text-secondary mt-1">매체별 정보 등록/수정 합니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE HEADER -->
+        <!-- BEGIN PAGE BODY -->
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-cards">
+
+                    <!-- Content Table Style -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">                                
+                                <div class="tabs-square">
+                                    <!-- Tab Menu -->
+                                    <ul class="nav nav-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                        <a href="#tabs-program-02" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">클립다운 V2</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                        <a href="#tabs-program-01" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">클립다운 V1</a>
+                                        </li>
+                                    </ul>
+                                    <!-- // Tab Menu -->
+                                </div> 
+                            </div>
+                            <div class="contetn-item">
+                                <!-- Tab Content -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tabs-program-02" role="tabpanel">
+                                        <div class="col-12">
+                                            <div class="">
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="table-pro-v2" class="table table-vcenter table-selectable table-bordered"></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane " id="tabs-program-01" role="tabpanel">
+                                        <div class="col-12">
+                                            <div class="">
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="table-pro-v1" class="table table-vcenter table-selectable table-bordered"></table>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Content Table Style -->
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `
+        <div class="ms-auto d-flex flex-wrap btn-list">
+            <a href="/views/clipdown/app-config_detail_bacon.html" class="btn">바탕화면 아이콘 경로 편집</a>
+            <a href="#" class="btn">신규 매체 등록</a>
+            <a href="/views/clipdown/app-config_detail_edite_all.html" class="btn">일괄 수정</a>
+        </div>
+        `;
+
+        const grid = new DataTable("#table-pro-v2", {
+            layout: {
+                topEnd: toolbar,
+            },
+            data: [
+                {
+                    data1: "제이스퓨처",
+                    data2: "2",
+                    data3: "자료실_1",
+                    data4: "운영",
+                },
+            ],
+            columns: [
+                {
+                    title: '매체구분',
+                    data: 'data1'
+                },
+                {
+                    title: '매체코드',
+                    data: 'data2'
+                },
+                {
+                    title: '매체명',
+                    data: 'data3'
+                },
+                {
+                    title: '테스트 여부',
+                    data: 'data4'
+                    
+                },
+                {
+                    title: '업데이트 수정',
+                    data: 'null',
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const mediaPackageName = row.media_package_name;
+                        const advertisementId = row.id;
+
+                        return `
+                            <div class="btn-list flex-nowrap justify-content-center">
+                                <button href="#" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</button>
+                            </div>
+                        `;
+                    }
+                }
+
+            ],
+            ...dataTablesConfg,
+        });
+
+        const grid2 = new DataTable("#table-pro-v1", {
+            // layout: {
+            //     topEnd: toolbar,
+            // },
+            data: [
+                {
+                    data1: "제이스퓨처",
+                    data2: "1",
+                    data3: "자료실_1",
+                    data4: "운영",
+                },
+            ],
+            columns: [
+                {
+                    title: '매체구분',
+                    data: 'data1'
+                },
+                {
+                    title: '매체코드',
+                    data: 'data2'
+                },
+                {
+                    title: '매체명',
+                    data: 'data3'
+                },
+                {
+                    title: '테스트 여부',
+                    data: 'data4'
+                    
+                },
+                {
+                    title: '업데이트 수정',
+                    data: 'null',
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const mediaPackageName = row.media_package_name;
+                        const advertisementId = row.id;
+
+                        return `
+                            <div class="btn-list flex-nowrap justify-content-center">
+                                <a href="#" class="btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</a>
+                            </div>
+                        `;
+                    }
+                }
+            ],
+            ...dataTablesConfg,
+        });
+
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

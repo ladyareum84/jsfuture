@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 다운로드 사이트 관리</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+        <!-- BEGIN PAGE HEADER -->
+        <div class="page-header">
+            <div class="container-xl">
+                <div class="row align-items-center mw-100">
+                    <div class="col">
+                        <div class="mb-3">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">클립다운</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="#">다운로드 사이트 관리</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="page-title">다운로드 사이트 관리</h2>
+                        <div class="text-secondary mt-1">다운로드 사이트 리스트를 확인하고 수정합니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE HEADER -->
+        <!-- BEGIN PAGE BODY -->
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-cards">
+                    <!-- Content Table Style -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-table">
+                            <div class="custom-table custom-table-lg table-responsive">
+                                <table id="grid" class="table table-vcenter table-selectable table-bordered"></table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- // Content Table Style -->
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `<button href="#" class="btn btn-danger">필드 추가</button>`;
+
+        const grid = new DataTable("#grid", {
+            layout: {
+                topEnd: toolbar,
+            },
+            data: [
+                    {
+                    data1: "1",
+                    data2: "YouTbue",
+                    data3: "https://www.youtube.com/watch?v=",
+                    data4: "[a-zA-Z0-9-_]{11,}",
+                },
+                
+            ],
+            columns: [
+                {
+                    title: '순번',
+                    data: 'data1',
+                    width: '10%',
+                },
+                {
+                    title: '사이트명',
+                    data: 'data2'
+                },
+                {
+                    title: 'URL',
+                    data: 'data3'
+                },
+                {
+                    title: 'Pattern',
+                    data: 'data4'
+                },
+                {
+                    title: '삭제',
+                    data: 'null',
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const mediaPackageName = row.media_package_name;
+                        const advertisementId = row.id;
+
+                        return `
+                            <div class="btn-list flex-nowrap justify-content-center">
+                                <a href="#" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">삭제</a>
+                            </div>
+                        `;
+                    }
+                }
+            ],
+            ...dataTablesConfg,
+        });
+
+
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

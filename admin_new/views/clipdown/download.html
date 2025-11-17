@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 리포트</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+        <!-- BEGIN PAGE HEADER -->
+        <div class="page-header">
+            <div class="container-xl">
+                <div class="row align-items-center mw-100">
+                    <div class="col">
+                        <div class="mb-3">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">클립다운</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="#">다운로드 보고서</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="page-title">다운로드 보고서</h2>
+                        <div class="text-secondary mt-1">다운로드 결과를 확인하고 다운로드 합니다..</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE HEADER -->
+        <!-- BEGIN PAGE BODY -->
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-cards">
+                    <!-- 조건검색 스타일 02 -->
+                    <div class="col-12">
+                        <div class="card">                    
+                            <div class="card-body">
+                                <div class="filter-item">
+                                    <div class="row row-cards">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">조회기간</label>
+                                                <div class="row">
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                    </div>
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                    </div>
+                                                </div>                                    
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">제휴사</label>
+                                                <select id="mid" name="mid" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="99">테스트</option>
+                                                    <option value="103">기타</option>
+                                                    <option value="1">자료실_1</option>
+                                                    <option value="101">기타2</option>
+                                                </select> 
+                                            </div>                                                            
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">회원구분</label>
+                                                <select id="member_type" name="member_type" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="N">비회원</option>
+                                                    <option value="P">유료회원</option>
+                                                    <option value="F">무료회원</option>
+                                                </select>
+                                            </div>                                                               
+                                        </div>  
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">다운로드 결과</label>
+                                                <select id="download_result" name="download_result" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="Success">성공</option>
+                                                    <option value="fail">실패</option>
+                                                </select>
+                                            </div>                                                               
+                                        </div>                                        
+                                    </div>
+                                    <div class="row row-cards">
+                                        <div class="col-md-6">
+                                            <label class="form-label">검색</label>
+                                            <div class="row">
+                                                <div class="col-md-3 mb-3"> 
+                                                    <select id="search_param" name="search_param" class="form-select">
+                                                        <option value="all" selected="selected">전체</option>
+                                                        <option value="url">URL</option>
+                                                        <option value="title">타이틀</option>
+                                                        <option value="state">오류코드</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="input-icon mb-3">                                                        
+                                                        <span class="input-icon-addon">
+                                                            <!-- Download SVG icon from http://tabler.io/icons/icon/search -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                                                <path d="M21 21l-6 -6"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <input type="text" id="search_value" name="search_value" value="" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>  
+                                            </div>                                            
+                                        </div>
+                                        
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">&nbsp;</label>
+                                                <div class="text-start">
+                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
+                                                </div>
+                                            </div>                                                            
+                                        </div>                                        
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END 조건검색 스타일 02-->
+                    <!-- Content Table Style -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-table">
+                            <div class="custom-table custom-table-lg table-responsive">
+                                <table id="grid" class="table table-vcenter table-selectable table-bordered"></table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- // Content Table Style -->
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `<button href="#" class="btn">Excel 다운로드</button>`;
+
+        const grid = new DataTable("#grid", {
+            layout: {
+                topEnd: toolbar,
+            },
+            data: [
+                    {
+                    data1: "2025-06-19",
+                    data2: "clipdown.net",
+                    data3: "https://www.youtube.com/watch?v=ufUuI2NWbaM",
+                    data4: "j-hope (제이홉) feat. Miguel Sweet Dreams (Color Coded Lyrics)",
+                    data5: "video",
+                    data6: "성공",
+                    data7: "2023.07.06_P",
+                },
+                
+            ],
+            columns: [
+                {
+                    title: '날짜',
+                    data: 'data1',
+                    width: '10%',
+                },
+                {
+                    title: '제휴사명',
+                    data: 'data2'
+                },
+                {
+                    title: 'URL',
+                    data: 'data3'
+                },
+                {
+                    title: '타이틀',
+                    data: 'data4'
+                },
+                
+                {
+                    title: '포맷',
+                    data: 'data5',
+                    width: '8%',
+                },
+                {
+                    title: '결과',
+                    data: 'data6',
+                    width: '8%',
+                    render: function (data, type, row, meta) {
+                        const status = row.status;
+                        if (status === 'active') {
+                            return `<div class="btn-list flex-nowrap justify-content-center"><span class="badge bg-teal-lt text-teal-lt-fg">성공</span></div>`;
+                        } else {
+                            return `<div class="btn-list flex-nowrap justify-content-center tooltip-trigger"><span class="badge bg-red-lt text-red-lt-fg">실패</span><span class="tooltip">[8100]실패 원인 설명입니다.</span></div>`;
+                        }
+                    }
+                },
+                {
+                    title: 'Downloader',
+                    data: 'data7',
+                    width: '10%'
+                }
+
+            ],
+            
+            ...dataTablesConfg,
+        });        
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

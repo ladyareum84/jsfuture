@@ -1,0 +1,91 @@
+<aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="light">
+    <div class="container-fluid">
+        <!-- BEGIN NAVBAR TOGGLER -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu"
+            aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- END NAVBAR TOGGLER -->
+        <!-- BEGIN NAVBAR LOGO -->
+        <div class="navbar-brand navbar-brand-autodark">
+            <a href="/" aria-label="JSFUTERE">
+                <img src="/public/images/logo_jsfuture_bl.svg" width="110" height="32" alt="JSFUTERE"
+                    class="navbar-brand-image">
+            </a>
+        </div>
+        <!-- END NAVBAR LOGO -->
+        <div class="navbar-nav flex-row d-lg-none">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex lh-1 p-0 px-2" data-bs-toggle="dropdown" aria-label="Open user menu">
+                    <span class="avatar avatar-sm"></span>
+                    <div class="d-none d-xl-block ps-2">
+                        <div>제이스퓨처</div>
+                        <div class="mt-1 small text-secondary">master</div>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <a href="." class="dropdown-item">회원정보변경</a>
+                    <a href="." class="dropdown-item">권한설정</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">로그아웃</a>
+                </div>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="sidebar-menu">
+            <!-- BEGIN NAVBAR MENU -->
+            <ul class="navbar-nav pt-lg-3">
+                <!-- 홈메뉴 임시 제거 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <span class="nav-link-icon d-md-none d-lg-flex justify-content-lg-start">
+                            <!-- Download SVG icon from http://tabler.io/icons/icon/home -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">디자인 스타일</span>
+                    </a>
+                </li>
+                <!-- 홈메뉴 임시 제거 -->
+                <!-- BEGIN 클립다운 MENU -->
+                <li class="nav-item dropdown @if($activeMenu === 'clipdown') active @endif">
+                    <a class="nav-link dropdown-toggle @if($activeMenu === 'clipdown') show @endif" href="#navbar-base"
+                        data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                        <span class="nav-link-icon d-md-none d-lg-flex justify-content-lg-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                <path d="M10 9l5 3l-5 3z" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">클립다운</span>
+                    </a>
+                    <div class="dropdown-menu show">
+                        <div class="dropdown-menu-columns">
+                            <div class="dropdown-menu-column">
+                                <a class="dropdown-item" href="/views/clipdown/summary.html">요약 보고서</a>
+                                <a class="dropdown-item" href="/views/clipdown/report.html">클립다운 리포트</a>
+                                <a class="dropdown-item" href="/views/clipdown/sns-share.html">SNS 공유하기</a>
+                                <a class="dropdown-item" href="/views/clipdown/download.html">다운로드 보고서</a>
+                                <a class="dropdown-item" href="/views/clipdown/ip-report.html">IP 보고서</a>
+                                <a class="dropdown-item" href="/views/clipdown/app-config.html">프로그램 관리</a>
+                                <a class="dropdown-item" href="/views/clipdown/download-site-config.html">다운로드 사이트 관리</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END 클립다운 MENU -->
+            </ul>
+            <!-- END NAVBAR MENU -->
+        </div>
+    </div>
+</aside>

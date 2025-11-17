@@ -1,0 +1,4 @@
+[개인 로컬 Admin 실행방법]
+1. VSC 터미널(Command +J 또는 Ctrl+Shift+`)에서 python3 -m http.server 실행
+    - Ctrl + C : 실행 종료 (다시 실행 진행)
+2. http://localhost:8000/   ->> 열림

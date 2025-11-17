@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP 보고서</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+        <!-- BEGIN PAGE HEADER -->
+        <div class="page-header">
+            <div class="container-xl">
+                <div class="row align-items-center mw-100">
+                    <div class="col">
+                        <div class="mb-3">
+                            <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">클립다운</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="#"> IP 보고서</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <h2 class="page-title"> IP 보고서</h2>
+                        <div class="text-secondary mt-1">제휴사 IP별 모드 상태를 확인하고 다운로드 합니다..</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE HEADER -->
+        <!-- BEGIN PAGE BODY -->
+        <div class="page-body">
+            <div class="container-xl">
+                <div class="row row-cards">
+                    <!-- 조건검색 스타일 02 -->
+                    <div class="col-12">
+                        <div class="card">                    
+                            <div class="card-body">
+                                <div class="filter-item">
+                                    <div class="row row-cards">
+                                        <div class="col-md-5">
+                                            <div class="mb-3">
+                                                <label class="form-label">조회기간</label>
+                                                <div class="row">
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                    </div>
+                                                    <div class="input-icon w-50">
+                                                        <span
+                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path
+                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                </path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path>
+                                                            </svg></span>
+                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                    </div>
+                                                </div>                                    
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">모드</label> 
+                                                <select id="reportMode" name="mode" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="execute">실행</option>
+                                                    <option value="install">설치</option>
+                                                    <option value="uninstall">삭제</option>
+                                                    <option value="uninstall_day">당일삭제</option>
+                                                    <option value="update">업데이트</option>
+                                                    <option value="require">복구</option>
+                                                    <option value="compel">강제</option>
+                                                </select>
+                                            </div>                                                            
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">제휴사</label>
+                                                <select id="mid" name="mid" class="form-select">
+                                                    <option value="all" selected="selected">전체</option>
+                                                    <option value="99">테스트</option>
+                                                    <option value="103">기타</option>
+                                                    <option value="1">자료실_1</option>
+                                                    <option value="101">기타2</option>
+                                                </select> 
+                                            </div>                                                            
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <label class="form-label">&nbsp;</label>
+                                                <div class="text-start">
+                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
+                                                </div>
+                                            </div>                                                            
+                                        </div> 
+                                    </div>    
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END 조건검색 스타일 02-->
+                    <!-- Content Table Style -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-table">
+                            <div class="custom-table custom-table-lg table-responsive">
+                                <table id="grid" class="table table-vcenter table-selectable table-bordered"></table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- // Content Table Style -->
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `<button href="#" class="btn">Excel 다운로드</button>`;
+
+        const grid = new DataTable("#grid", {
+            layout: {
+                topEnd: toolbar,
+            },
+            data: [
+                {
+                    data1: "2025-06-19",
+                    data2: "clipdown.net",
+                    data3: "업데이트",
+                    data4: "58.226.214.251",
+                },
+
+
+            ],
+            columns: [
+                {
+                    title: '날짜',
+                    data: 'data1',
+                    width:'10%'
+                },
+                {
+                    title: '제휴사명',
+                    data: 'data2'
+                },                
+                {
+                    title: '모드',
+                    data: 'data3',
+                    width:'15%'
+                },
+                {
+                    title: 'IP',
+                    data: 'data4',
+                    width:'15%'
+                }
+
+            ],
+            ...dataTablesConfg,
+        });
+
+
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

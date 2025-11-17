@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 리포트</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+            <!-- BEGIN PAGE HEADER -->
+            <div class="page-header">
+                <div class="container-xl">
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="mb-3">
+                                <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        <a href="#">클립다운</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="/views/clipdown/app-config.html">프로그램 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="#">바탕화면 아이콘 경로 편집</a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <h2 class="page-title">바탕화면 아이콘 경로 편집</h2>
+                            <div class="text-secondary mt-1">바탕화면 바로가기 아이콘을 수정 합니다.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE HEADER -->
+            <!-- BEGIN PAGE BODY -->
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards">
+                        <!-- Content Table Style -->
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-table">
+                                    <div class="custom-table custom-table-lg table-responsive">
+                                        <table id="grid" class="table table-vcenter table-selectable table-bordered"></table>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <a href="#" class="btn btn-primary btn-2"> 수정 </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Content Table Style -->
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `
+        <div class="ms-auto d-flex flex-wrap btn-list">
+            <a href="#" class="btn">바탕화면 아이콘 경로 편집</a>
+            <a href="#" class="btn">신규 매체 등록</a>
+            <a href="#" class="btn">일괄 수정</a>
+        </div>
+        `;
+
+        const grid = new DataTable("#grid", {
+            // layout: {
+            //     topEnd: toolbar,
+            // },
+            data: [
+                {
+                    data1: "1",
+                    data2: "11st",
+                    data3: "http://click.dotmap.co.kr/?pf_code=100014100947100221",
+                    data4: "2021-02-16 09:51:04",
+                    data5: "2021-02-25 12:28:33",
+                },
+            ],
+            columns: [
+                {
+                    title: '순서',
+                    data: 'data1',
+                    width:'10%'
+                },
+                {
+                    title: '코드 값',
+                    data: 'data2'
+                },
+                {
+                    title: 'URL',
+                    data: 'data3',
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const mediaPackageName = row.media_package_name;
+                        const advertisementId = row.id;
+
+                        return `
+                            <input type="text" name="link[]" class="form-control" value="http://click.dotmap.co.kr/?pf_code=100014100947100221">
+                        `;
+                    }
+                },
+                {
+                    title: '생성 날짜',
+                    data: 'data4',
+                    width:'15%'
+                    
+                },
+                {
+                    title: '업데이트 날짜',
+                    data: 'data5',
+                    width:'15%'
+                }
+            ],
+            ...dataTablesConfg,
+        });
+
+
+             // date picker 설정
+            if (window.Litepicker) {
+                document.querySelectorAll('.datepicker').forEach((el) => {
+                    new Litepicker({
+                        element: el,
+                        buttonText: {
+                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                        },
+                        lang: 'ko',
+                        format: 'YYYY-MM-DD',
+                        i18n: {
+                            ko: {
+                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                                months: [
+                                    '1월', '2월', '3월', '4월', '5월', '6월',
+                                    '7월', '8월', '9월', '10월', '11월', '12월'
+                                ],
+                                nextMonth: '다음 달',
+                                prevMonth: '이전 달',
+                                reset: '초기화',
+                                apply: '적용',
+                            },
+                        },
+                    });
+                });
+            }
+
+
+
+
+
+
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>
