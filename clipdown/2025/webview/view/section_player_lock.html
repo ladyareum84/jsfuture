@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시청화면 캐시메이트 정보 영역</title>
+    <style>
+        *, *::before, *::after {box-sizing: border-box;}
+        html {-moz-text-size-adjust: none;-webkit-text-size-adjust: none;text-size-adjust: none;}
+        body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {margin-block-end: 0;}
+        html, body{margin: 0; padding: 0;}
+        input::placeholder{color:#ddd;}
+        input:focus::-webkit-input-placeholder {color:transparent;}
+        input:read-only{background-color: #fff; color: #333; cursor: default;}
+        input:read-only:focus{border-color:#ccc;}
+        button{border: none; outline: none; background: transparent; padding: 0; cursor: pointer;}
+        ol, ul, li{list-style-type: none;}
+        svg{max-width: 100%; height: 100%;}
+        *:focus{outline: 1px dotted #ddd;}
+        .hidden{display: none;}
+        .btn{
+            display: inline-block; 
+            min-width: 68px; 
+            min-height: 34px; 
+            padding: 0 5px; 
+            font-family: 'Noto Sans KR', Helvetica, sans-serif; 
+            font-size: 14px; 
+            text-align: center; 
+            line-height: 1.4; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: all .2s ease-in-out;
+        }
+        .container{padding: 0 10px;}
+        .form-control{display: inline-block; width: 5%; min-width:25px; height: 24px; font-size: 13px; text-align: center; border: 1px solid #ccc; padding: 0 5px;}
+        .form-control:focus{outline: none; border-color: #333;}
+        .empty-2{padding:0 2px;}
+        .empty-5{padding:0 5px;}
+        .section_download{padding: 10px 0;} /* 영역 테스트 스타일 , 개발 시 미적용 */
+        .content_download{position: relative; width: 100%;}
+        .btn_box{display: flex; justify-content: space-between; align-items: center; position: relative; margin: 10px 0;}
+        .btn_download{background: #e31d19; border: 1px solid #e31d19; color:#fff; font-weight: 500; padding: 8px 20px;}
+        .btn_download:hover{background: #d22619; border: 1px solid #d22619;}
+        .btn_outline_download{background: #fff; border: 1px solid #e31d19; color: #e31d19;}
+        .btn_outline_download:hover{background: #e31d19; border: 1px solid #e31d19; color: #fff;}
+        .btn_part{background: #272A39; border: 1px solid #464756; color: #fff;}
+        .btn_part:hover{background: #20222B; border: 1px solid #20222B; color: #fff;}
+        .btn_part_square{min-width: 58px; min-height: 26px; border-radius: 3px;}
+        .option_download{display: none; position: relative; overflow:hidden; vertical-align: middle; line-height:1.8; text-align: right; background: #f5f5f5; padding: 10px 10px;}
+        .option_download span{display: inline-block;}
+        .option_download .op_name{font-size: 13px; padding-right: 5px;}
+        
+        /* renewal style */
+        .item_left{ position: relative; float: left; z-index: 100;}
+        .item_right{text-align: right;}
+        .tooltip_reward{display: flex; position: relative;}
+        .tooltip_reward .btn_tooltip{display: flex; align-items: center; justify-content: center; cursor: pointer;}
+        .tooltip_reward .btn_tooltip .text_des{display: flex; position: relative; top: 1px; font-size: 13px; padding-right: 5px;}
+        .tooltip_reward .btn_tooltip .icon_tooltip{display: flex; position: relative;}
+        .tooltip_reward .btn_tooltip .icon_tooltip svg{position: relative; width: 14px; height: 14px; vertical-align: top;}
+        .tooltip_reward .tooltip_layer{display: none;}
+        .item_left .tooltip_reward .tooltip_layer.notice_tooltip{position: absolute; top: 20px; left: 0;}
+        .item_right .tooltip_reward .tooltip_layer.notice_tooltip{position: absolute; top: 20px; right: 0; text-align: left;}
+        .tooltip_reward .tooltip_layer.notice_tooltip{ width: 260px; background: #fff; border: 1px solid #2C2F42;padding: 10px 10px; box-sizing: border-box; box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15); z-index: 1000;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_header{position: relative; padding-bottom: 5px;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_header strong{font-size: 12px;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_list{padding: 0; margin: 0;}
+        .tooltip_reward .tooltip_layer.notice_tooltip .notice_list .item_notice{font-size: 11px; padding-bottom: 3px;}
+        .btn_box_top{position: absolute; top: -1px; right: 0; }
+        .btn_box_top .btn_popup_close{display: inline-block; vertical-align: middle; background:transparent; width: 14px; height: 14px; border:0; padding:0; cursor: pointer;}
+        .btn_box_top .btn_popup_close:focus{outline:0;}
+        .btn_box_top .btn_popup_close .btn_close{display: inline-block; position: relative; overflow: hidden; width: 11px; height: 11px; opacity: 1;}
+        .btn_box_top .btn_popup_close .icon-close:before, .btn_box_top .btn_popup_close .icon-close:after{content: ''; position: absolute; width: 100%; height:1px; top:50%; right:0; background:#9E9EA5;}
+        .btn_box_top .btn_popup_close .icon-close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+        .btn_box_top .btn_popup_close .icon-close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg)}
+
+        /* Screen Lock State Style 251117 */
+        .view_player{position: relative; width: 100%;}
+        .view_player .video_player{position: relative; width: 100%; padding-top: 56.25%; background: #fff;}
+        .view_player .video_player iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+        .player-controls-top{display: flex; position: absolute; top: 0; right: 24px; z-index: 999;}
+        .set_screen_lock{display: flex; align-items: center; justify-content: center; position: relative; width: 48px; height: 48px;}
+
+        .state_btn_lock{display: flex;}
+        .state_btn_lock .btn_full_lock{background: #E21D19; border: 1px solid #E21C1A; color: #fff; text-decoration: none;}
+        .state_btn_lock .btn_full_lock.disable{background: #eee; border: 1px solid #ddd; color: #aaa; pointer-events: none; cursor: default;}
+        .state_btn_lock .btn_full_lock.disable svg path{fill: #aaa;}
+        .btn_lock{display: flex; align-items: center; gap: .3rem; min-height: 30px; font-size: 13px; padding: 0 10px;}
+    </style>
+</head>
+<body>   
+    <div class="warp">
+        <section class="view_player">
+            <div class="video_player">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/988pJE7xm7I?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="player-controls-top"> 
+                <!-- 화면 잠금 아이콘 영역 -->
+                <div class="set_screen_lock">
+                    <button type="button" class="btn_player_lock">
+                        <svg id="icon_screen_lock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <clipPath id="clip-path">
+                                <rect id="사각형_2031" data-name="사각형 2031" width="24" height="24" fill="#fff"/>
+                                </clipPath>
+                            </defs>
+                            <g id="icon_screen_lock-2" data-name="icon_screen_lock" clip-path="url(#clip-path)">
+                                <path id="패스_1665" data-name="패스 1665" d="M33.733,45.067A1.133,1.133,0,0,1,32.6,43.933v-3.4a1.133,1.133,0,0,1,2.267,0v3.4a1.133,1.133,0,0,1-1.133,1.133" transform="translate(-21.733 -26.267)" fill="#fff"/>
+                                <path id="패스_1666" data-name="패스 1666" d="M23.533,40.533H12.2a3.4,3.4,0,0,1-3.4-3.4V29.2a3.4,3.4,0,0,1,3.4-3.4H23.533a3.4,3.4,0,0,1,3.4,3.4v7.933a3.4,3.4,0,0,1-3.4,3.4M12.2,28.067A1.135,1.135,0,0,0,11.067,29.2v7.933A1.135,1.135,0,0,0,12.2,38.267H23.533a1.135,1.135,0,0,0,1.133-1.133V29.2a1.135,1.135,0,0,0-1.133-1.133Z" transform="translate(-5.867 -17.2)" fill="#fff"/>
+                                <path id="패스_1667" data-name="패스 1667" d="M29.2,12.2H20.133A1.133,1.133,0,0,1,19,11.067v-3.4a5.667,5.667,0,0,1,11.333,0v3.4A1.133,1.133,0,0,1,29.2,12.2M21.267,9.933h6.8V7.667a3.4,3.4,0,0,0-6.8,0Z" transform="translate(-12.667 -1.333)" fill="#fff"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <!-- // 화면 잠금 아이콘 영역 -->
+            </div>
+            
+        </section>
+        <div class="container">            
+            <section class="section_download">                
+                <div class="content_download">
+                    <div class="btn_box">
+                        <!-- 좌측영역 이벤트 버튼 -->
+                        <div class="item_left">
+                            <div class="state_btn_lock">
+                                <a href="#" class="btn btn_full_lock btn_lock">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                        <defs>
+                                            <clipPath id="clip-path">
+                                            <rect id="사각형_2032" data-name="사각형 2032" width="16" height="16" fill="#fff"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g id="icon_screen_lock" transform="translate(115 13)">
+                                            <rect id="icon_box" width="18" height="18" transform="translate(-115 -13)" fill="rgba(101,104,112,0)"/>
+                                            <g id="icon_screen_lock" transform="translate(-114 -12)">
+                                            <g id="그룹_4755" data-name="그룹 4755" clip-path="url(#clip-path)">
+                                                <path id="패스_1668" data-name="패스 1668" d="M33.356,43.178a.755.755,0,0,1-.756-.756V40.156a.756.756,0,0,1,1.511,0v2.267a.755.755,0,0,1-.756.756" transform="translate(-25.356 -30.644)" fill="#fff"/>
+                                                <path id="패스_1669" data-name="패스 1669" d="M18.622,35.622H11.067A2.269,2.269,0,0,1,8.8,33.356V28.067A2.269,2.269,0,0,1,11.067,25.8h7.556a2.269,2.269,0,0,1,2.267,2.267v5.289a2.269,2.269,0,0,1-2.267,2.267m-7.556-8.311a.756.756,0,0,0-.756.756v5.289a.756.756,0,0,0,.756.756h7.556a.756.756,0,0,0,.756-.756V28.067a.756.756,0,0,0-.756-.756Z" transform="translate(-6.844 -20.067)" fill="#fff"/>
+                                                <path id="패스_1670" data-name="패스 1670" d="M25.8,8.8H19.756A.755.755,0,0,1,19,8.044V5.778a3.778,3.778,0,1,1,7.556,0V8.044A.755.755,0,0,1,25.8,8.8M20.511,7.289h4.533V5.778a2.267,2.267,0,0,0-4.533,0Z" transform="translate(-14.778 -1.556)" fill="#fff"/>
+                                            </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>화면 잠금</span>
+                                </a>
+                                <a href="#" class="btn btn_full_lock btn_lock disable">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+                                        <defs>
+                                            <clipPath id="clip-path">
+                                            <rect id="사각형_2032" data-name="사각형 2032" width="16" height="16" fill="#fff"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g id="icon_screen_lock" transform="translate(115 13)">
+                                            <rect id="icon_box" width="18" height="18" transform="translate(-115 -13)" fill="rgba(101,104,112,0)"/>
+                                            <g id="icon_screeb_lock" transform="translate(-114 -12)">
+                                            <g id="그룹_4755" data-name="그룹 4755" clip-path="url(#clip-path)">
+                                                <path id="패스_1668" data-name="패스 1668" d="M33.356,43.178a.755.755,0,0,1-.756-.756V40.156a.756.756,0,0,1,1.511,0v2.267a.755.755,0,0,1-.756.756" transform="translate(-25.356 -30.644)" fill="#fff"/>
+                                                <path id="패스_1669" data-name="패스 1669" d="M18.622,35.622H11.067A2.269,2.269,0,0,1,8.8,33.356V28.067A2.269,2.269,0,0,1,11.067,25.8h7.556a2.269,2.269,0,0,1,2.267,2.267v5.289a2.269,2.269,0,0,1-2.267,2.267m-7.556-8.311a.756.756,0,0,0-.756.756v5.289a.756.756,0,0,0,.756.756h7.556a.756.756,0,0,0,.756-.756V28.067a.756.756,0,0,0-.756-.756Z" transform="translate(-6.844 -20.067)" fill="#fff"/>
+                                                <path id="패스_1670" data-name="패스 1670" d="M25.8,8.8H19.756A.755.755,0,0,1,19,8.044V5.778a3.778,3.778,0,1,1,7.556,0V8.044A.755.755,0,0,1,25.8,8.8M20.511,7.289h4.533V5.778a2.267,2.267,0,0,0-4.533,0Z" transform="translate(-14.778 -1.556)" fill="#fff"/>
+                                            </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>화면 잠금</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item_right">
+                            <div class="tooltip_reward">
+                                <div class="btn_tooltip">
+                                    <span class="text_des">포인트 적립 안내</span>
+                                    <span class="icon_tooltip">
+                                        <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+                                            <g fill="#2C2F42" fill-rule="evenodd">
+                                                <path d="M13.5 27C20.956 27 27 20.956 27 13.5S20.956 0 13.5 0 0 6.044 0 13.5 6.044 27 13.5 27zm0-2C7.15 25 2 19.85 2 13.5S7.15 2 13.5 2 25 7.15 25 13.5 19.85 25 13.5 25z"/>
+                                                <path d="M12.05 7.64c0-.228.04-.423.12-.585.077-.163.185-.295.32-.397.138-.102.298-.177.48-.227.184-.048.383-.073.598-.073.203 0 .398.025.584.074.186.05.35.126.488.228.14.102.252.234.336.397.084.162.127.357.127.584 0 .22-.043.412-.127.574-.084.163-.196.297-.336.4-.14.106-.302.185-.488.237-.186.053-.38.08-.584.08-.215 0-.414-.027-.597-.08-.182-.05-.342-.13-.48-.235-.135-.104-.243-.238-.32-.4-.08-.163-.12-.355-.12-.576zm-1.02 11.517c.134 0 .275-.013.424-.04.148-.025.284-.08.41-.16.124-.082.23-.198.313-.35.085-.15.127-.354.127-.61v-5.423c0-.238-.042-.43-.127-.57-.084-.144-.19-.254-.318-.332-.13-.08-.267-.13-.415-.153-.148-.024-.286-.036-.414-.036h-.21v-.95h4.195v7.463c0 .256.043.46.127.61.084.152.19.268.314.35.125.08.263.135.414.16.15.027.29.04.418.04h.21v.95H10.82v-.95h.21z"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="tooltip_layer dark notice_tooltip" aria-hidden="true">
+                                    <div class="notice_header">
+                                        <strong>포인트 적립 안내</strong>
+                                        <div class="btn_box_top">
+                                            <button type="button" class="btn_popup_close" name="close">
+                                                <span class="btn_close icon-close"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <ul class="notice_list">
+                                        <li class="item_notice">- 동영상 시청 3분마다 포인트가 적립됩니다.</li>
+                                        <li class="item_notice">- 프로그램(PC) 최소화 상태에서는 적립되지 않습니다.</li>
+                                        <li class="item_notice">- 시청포인트는 하루 최대 적립 가능액이 존재합니다.</li>
+                                    </ul>
+                                </div>                                
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>                
+            </section>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+	openTooltip('.btn_tooltip', '.tooltip_layer');
+    });
+
+    function openTooltip(selector, layer) {
+                
+        var $layer = $(layer);
+
+        // 툴팁버튼 처리
+        $(selector).on('click', function() {
+            $layer.toggleClass('on');
+        });
+        
+        function overTooltip() {
+            
+            var $this = $(selector);
+            
+            // 마우스 오버시 툴팁 레이어 노출
+            $this.on('mouseover focusin', function() {
+                $(this).next(layer).show();	
+            })	
+            // 마우스 떠날시 툴팁 레이어 숨김
+            $this.on('mouseleave focusout', function() {
+                if(!$layer.hasClass('on')) {
+                        $(this).next(layer).hide();
+                }
+            })
+        }
+        overTooltip();
+    }
+</script>
+</html>
