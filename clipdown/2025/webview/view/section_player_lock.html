@@ -96,7 +96,7 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/988pJE7xm7I?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="player-controls-top"> 
-                <!-- 화면 잠금 아이콘 영역 -->
+                <!-- 플레이어 화면 잠금 아이콘 영역 -->
                 <div class="set_screen_lock">
                     <button type="button" class="btn_player_lock">
                         <svg id="icon_screen_lock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
@@ -121,9 +121,10 @@
             <section class="section_download">                
                 <div class="content_download">
                     <div class="btn_box">
-                        <!-- 좌측영역 이벤트 버튼 -->
+                        <!-- 좌측영역 화면 잠금/잠김 상태별 버튼 -->
                         <div class="item_left">
                             <div class="state_btn_lock">
+                                <!-- 화면 잠금 버튼 -->
                                 <a href="#" class="btn btn_full_lock btn_lock">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
                                         <defs>
@@ -144,6 +145,9 @@
                                     </svg>
                                     <span>화면 잠금</span>
                                 </a>
+                                <!-- // 화면 잠금 버튼 -->
+
+                                <!-- 화면 잠김 버튼 -->
                                 <a href="#" class="btn btn_full_lock btn_lock disable">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
                                         <defs>
@@ -162,8 +166,9 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <span>화면 잠금</span>
+                                    <span>화면 잠김</span>
                                 </a>
+                                <!-- // 화면 잠김 버튼 -->
                             </div>
                         </div>
 
