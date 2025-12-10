@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 780 781.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient-8);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12 {
+        mix-blend-mode: overlay;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-9);
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-7);
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-5);
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-6);
+      }
+
+      .cls-8 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-9 {
+        fill: url(#radial-gradient-12);
+      }
+
+      .cls-10 {
+        fill: url(#radial-gradient-11);
+      }
+
+      .cls-11 {
+        fill: url(#radial-gradient-10);
+      }
+
+      .cls-14 {
+        isolation: isolate;
+      }
+
+      .cls-12 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-15 {
+        fill: #fff;
+      }
+
+      .cls-16 {
+        fill: #ff4f12;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="194.97" y1="52.19" x2="585.03" y2="727.81" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fc9512"/>
+      <stop offset=".38" stop-color="#e8591e"/>
+      <stop offset=".8" stop-color="#d41c2b"/>
+      <stop offset="1" stop-color="#cd0430"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="38.93" cy="255.47" fx="38.93" fy="255.47" r="16.35" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="479.85" cy="24.06" fx="479.85" fy="24.06" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-3" cx="300.15" cy="25.44" fx="300.15" fy="25.44" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-4" cx="141.02" cy="108.96" fx="141.02" fy="108.96" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-5" cx="81" cy="601.9" fx="81" fy="601.9" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-6" cx="215.51" cy="721.07" fx="215.51" fy="721.07" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-7" cx="390" cy="765.46" fx="390" fy="765.46" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-8" cx="564.49" cy="721.07" fx="564.49" fy="721.07" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-9" cx="699" cy="601.9" fx="699" fy="601.9" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-10" cx="762.73" cy="433.87" fx="762.73" fy="433.87" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-11" cx="741.07" cy="255.47" fx="741.07" fy="255.47" r="16.35" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-12" cx="638.98" cy="108.96" fx="638.98" fy="108.96" r="16.35" xlink:href="#radial-gradient"/>
+  </defs>
+  <g class="cls-14">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g>
+          <circle class="cls-13" cx="390" cy="390" r="390"/>
+          <g>
+            <g>
+              <circle class="cls-16" cx="300.15" cy="25.44" r="7.28"/>
+              <circle class="cls-15" cx="300.15" cy="24.06" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="141.02" cy="108.96" r="7.28"/>
+              <circle class="cls-15" cx="141.02" cy="107.58" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="38.93" cy="256.86" r="7.28"/>
+              <circle class="cls-15" cx="38.93" cy="255.47" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="17.27" cy="435.26" r="7.28"/>
+              <circle class="cls-15" cx="17.27" cy="433.87" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="81" cy="603.29" r="7.28"/>
+              <circle class="cls-15" cx="81" cy="601.9" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="215.51" cy="722.46" r="7.28"/>
+              <circle class="cls-15" cx="215.51" cy="721.07" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="390" cy="765.46" r="7.28"/>
+              <circle class="cls-15" cx="390" cy="764.08" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="564.49" cy="722.46" r="7.28"/>
+              <circle class="cls-15" cx="564.49" cy="721.07" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="699" cy="603.29" r="7.28"/>
+              <circle class="cls-15" cx="699" cy="601.9" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="762.73" cy="435.26" r="7.28"/>
+              <circle class="cls-15" cx="762.73" cy="433.87" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="741.07" cy="256.86" r="7.28"/>
+              <circle class="cls-15" cx="741.07" cy="255.47" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="638.98" cy="108.96" r="7.28"/>
+              <circle class="cls-15" cx="638.98" cy="107.58" r="5.9"/>
+            </g>
+            <g>
+              <circle class="cls-16" cx="479.85" cy="25.44" r="7.28"/>
+              <circle class="cls-15" cx="479.85" cy="24.06" r="5.9"/>
+            </g>
+          </g>
+          <circle class="cls-15" cx="390" cy="390" r="362.14"/>
+          <circle class="cls-12" cx="38.93" cy="255.47" r="16.35"/>
+          <circle class="cls-4" cx="479.85" cy="24.06" r="16.35"/>
+          <circle class="cls-3" cx="300.15" cy="25.44" r="16.35"/>
+          <circle class="cls-8" cx="141.02" cy="108.96" r="16.35"/>
+          <circle class="cls-6" cx="81" cy="601.9" r="16.35"/>
+          <circle class="cls-7" cx="215.51" cy="721.07" r="16.35"/>
+          <circle class="cls-5" cx="390" cy="765.46" r="16.35"/>
+          <circle class="cls-1" cx="564.49" cy="721.07" r="16.35"/>
+          <circle class="cls-2" cx="699" cy="601.9" r="16.35"/>
+          <circle class="cls-11" cx="762.73" cy="433.87" r="16.35"/>
+          <circle class="cls-10" cx="741.07" cy="255.47" r="16.35"/>
+          <circle class="cls-9" cx="638.98" cy="108.96" r="16.35"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

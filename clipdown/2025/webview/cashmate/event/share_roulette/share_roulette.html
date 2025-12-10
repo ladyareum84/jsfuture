@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>공유하기 이벤트 - 룰렛</title>
+    <link rel='stylesheet' href='./resource/css/common_event.css' type='text/css'>
+    <link rel='stylesheet' href='./resource/css/roulette_style.css' type='text/css'>
+
+
+</head>
+<body>
+    <div class="wrap webview_share_roulette">
+        <!-- layer Popup Roulette -->
+        <div class="layer_popup popup_event_roulette">
+            <div class="bg_dimmed"></div>
+            <div class="popup_wrap_full">
+                <div class="contents center">
+                    <div class="roulette">
+                        <div class="popup_header">
+                            <h1 class="popup_title">최대 포인트에 당첨됐어요!</h1>
+                            <button type="button" class="popup_close_btn" aria-label="닫기">
+                                <!-- SVG 아이콘 -->
+                                <svg id="icon_dialog_close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <defs>
+                                        <clipPath id="clip-path">
+                                            <rect width="24" height="24" fill="none"/>
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#clip-path)">
+                                        <path d="M29,16.41,27.59,15,22,20.59,16.41,15,15,16.41,20.59,22,15,27.59,16.41,29,22,23.41,27.59,29,29,27.59,23.41,22Z" transform="translate(-10 -10)" fill="#fff"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="roulette_wheel">
+                            <img src="./resource/images/img_roulette_wheel.svg" alt="roulette wheel">
+                        </div>
+
+                        <div class="roulette_spinner">
+                            <div class="spinner_inner">
+                                <img src="./resource/images/img_roulette_spinner.svg" alt="">
+                            </div>                            
+                            <div class="roulette_win">
+                                <div class="spinner_dim ">
+                                    <img src="./resource/images/img_roulette_spinner_win_dim.svg" alt="">
+                                </div> 
+                                <div class="piece_highlight">
+                                    <div class="piece_inner">
+                                        <img src="./resource/images/img_roulette_spinner_piece_win.svg" alt="">
+                                    </div>                                    
+                                </div>
+                            </div> 
+                        </div>                             
+                        <div class="roulette_indicator">
+                            <img src="./resource/images/img_roulette_indicator.svg" alt="">
+                        </div>
+
+                        <button type="button" class="btn_roulette_center">
+                            <img src="./resource/images/img_roulette_btn_spin.svg" alt="">
+                        </button>
+                        <div class="ani_state">
+                            <div class="confetti_lottie">
+                                <dotlottie-player src="./resource/json/ani_roulette_win_confetti.json" background="transparent" speed="1" style="width: 100%; height: 100%" loop autoplay></dotlottie-player>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <!-- 당첨 안내 팝업 -->
+                    <div class="win_popup">
+                        <div class="popup_container">
+                            <div class="popup_body">
+                                <div class="img_roulette_coupon">
+                                    <img src="./resource/images/img_roulette_win_info_point.svg" alt="">
+                                </div>
+
+                                <div class="popup_overlay_btn">
+                                    <button type="button" class="btn_roulette_coupon">
+                                        <img src="./resource/images/img_roulette_win_info_btn.svg" class="img_win_info" alt="">
+                                        <span class="btn_label">포인트 사용하기</span>
+                                    </button>
+                                    <div class="ani_state">
+                                        <div class="ani_hand">
+                                            <dotlottie-player 
+                                                src="./resource/json/ani_roulette_win_click.json" 
+                                                background="transparent" 
+                                                speed="1"
+                                                style="width:100%; height:100%" 
+                                                loop autoplay>
+                                            </dotlottie-player>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const piece = document.querySelector(".piece_highlight.active .piece_inner");
+        const popup = document.querySelector(".win_popup");
+        const confetti = document.querySelector(".confetti_lottie");
+        
+        if (piece) {
+            piece.addEventListener("animationend", (e) => {
+                if (e.animationName === "winEffect") {
+                    popup.classList.add("show");
+                    confetti.style.display = "block";
+                }
+            });
+        }
+    });
+
+
+
+    </script>
+</body>
+</html>

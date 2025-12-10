@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="140" viewBox="0 0 260 140">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2035" data-name="사각형 2035" width="260" height="140" fill="none"/>
+    </clipPath>
+    <filter id="패스_1672" x="-6" y="-9" width="278" height="158" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="img_roulette_win_info_point" transform="translate(-50 -312)">
+    <g id="img_panel_roulette_coupon" transform="translate(50 312)">
+      <g id="그룹_4760" data-name="그룹 4760" clip-path="url(#clip-path)">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#패스_1672)">
+          <path id="패스_1672-2" data-name="패스 1672" d="M247.675,0a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8A5.058,5.058,0,1,1,143.3,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.058,5.058,0,1,1-10.06,0h-8.8a5.33,5.33,0,0,1-5.03,5.586A5.33,5.33,0,0,1,48.988,0h-8.8a5.33,5.33,0,0,1-5.03,5.586A5.33,5.33,0,0,1,30.125,0h-8.8a5.33,5.33,0,0,1-5.03,5.586A5.33,5.33,0,0,1,11.262,0H0V140H11.293c-.007-.115-.032-.226-.032-.343a5.33,5.33,0,0,1,5.03-5.586,5.33,5.33,0,0,1,5.03,5.586c0,.117-.024.227-.031.343h8.865c-.007-.115-.032-.226-.032-.343a5.33,5.33,0,0,1,5.03-5.586,5.33,5.33,0,0,1,5.03,5.586c0,.117-.024.227-.032.343h8.866c-.007-.115-.032-.226-.032-.343a5.33,5.33,0,0,1,5.03-5.586,5.33,5.33,0,0,1,5.03,5.586c0,.117-.025.227-.032.343h8.865c-.007-.115-.031-.226-.031-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343h8.865c-.006-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.024.227-.031.343h8.865c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343h8.865c-.007-.115-.031-.226-.031-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343h8.865c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.024.227-.031.343H162.2c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.024.227-.032.343h8.866c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343h8.865c-.006-.115-.031-.226-.031-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343h8.865c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.024.227-.031.343h8.865c-.007-.115-.032-.226-.032-.343a5.058,5.058,0,1,1,10.06,0c0,.117-.025.227-.032.343H260V0Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <text id="_1_000P" data-name="+1,000P" transform="translate(180 357)" fill="#e21c1a" font-size="24" font-family="JalnanOTF, Jalnan OTF"><tspan x="-49.512" y="0">+1,000P</tspan></text>
+    <g id="info" transform="translate(0 -14)">
+      <g id="text" transform="translate(10)">
+        <rect id="box" width="220" height="24" rx="12" transform="translate(60 387)" fill="#fff5f5"/>
+        <g id="그룹_4766" data-name="그룹 4766" transform="translate(80 391)">
+          <text id="조건" transform="translate(-4 13)" fill="#333" font-size="12" font-family="NotoSansKR-Regular, Noto Sans KR" letter-spacing="-0.025em"><tspan x="0" y="0">조건</tspan></text>
+          <text id="앱_신규_설치자_전용" data-name="앱 신규 설치자 전용" transform="translate(184 13)" fill="#e21c1a" font-size="12" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500" letter-spacing="-0.025em"><tspan x="-93.42" y="0">앱 신규 설치자 전용</tspan></text>
+        </g>
+        <rect id="box-2" data-name="box" width="220" height="24" rx="12" transform="translate(60 416)" fill="#fff5f5"/>
+        <g id="그룹_4765" data-name="그룹 4765" transform="translate(80 420)">
+          <text id="유효기간" transform="translate(-4 13)" fill="#333" font-size="12" font-family="NotoSansKR-Regular, Noto Sans KR" letter-spacing="-0.025em"><tspan x="0" y="0">유효기간</tspan></text>
+          <text id="오늘까지" transform="translate(184 13)" fill="#333" font-size="12" font-family="NotoSansKR-Medium, Noto Sans KR" font-weight="500" letter-spacing="-0.025em"><tspan x="-43.26" y="0">오늘까지</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

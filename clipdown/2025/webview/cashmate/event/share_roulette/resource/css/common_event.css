@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/*
+    * 2025/12/09
+    * 공통 스타일 처리 , reset
+    * 클립다운라이트 내/외부 이벤트에만 사용
+*/
+
+/* Common rest */
+*, 
+::after, 
+::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; /* font-size:10px; */
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+    font-style: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+div, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, p, th, td, input, textarea, select, button, pre, a {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+svg {
+    max-width: 100%;
+    width: 100%;
+    user-select: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+/* 검색창 스타일 제거 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+/* Common */
+.text-block {
+    display: block;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-block {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    letter-spacing: -.3px;
+}
+
+.ellipsis-multi {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    letter-spacing: -.3px;
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    position: absolute;
+    left: 0;
+    top: -9999px;
+}
+
+.clear {
+    zoom: 1;
+    clear: both;
+}
+
+.clear:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.text_underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.separator{
+    border-right: 1px solid #272E7B;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+.separator_pl{
+    padding-left: 8px;
+}
+
+/* Custom layout */
+.wrap{position: relative; width: 100%; min-height: 100%;}
+.container, .inner{position: relative; width: 100%; max-width: 780px; margin: 0 auto; padding: 20px 16px;}
+.container:after{content:" "; display:block; clear:both;}
+
+
+/* Custom Style */
+.font_en{font-family: 'Roboto', sans-serif;}
+.font_bold{font-family: 'ONEMobileTitle', sans-serif;}
+.font_round{font-family: 'ONEMobilePOP', sans-serif;}
+.font_gothic{font-family: 'ONEMobileRegular', sans-serif;}
+
