@@ -192,9 +192,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* Custom layout */
-.wrap{position: relative; width: 100%; min-height: 100%;}
-.container, .inner{position: relative; width: 100%; max-width: 780px; margin: 0 auto; padding: 20px 16px;}
-.container:after{content:" "; display:block; clear:both;}
+.event_wrap{position: relative; width: 100%; min-height: 100%;}
+.event_container, .event_inner{position: relative; width: 100%; max-width: 780px; margin: 0 auto; padding: 20px 16px;}
+.event_container:after{content:" "; display:block; clear:both;}
 
 
 /* Custom Style */

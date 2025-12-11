@@ -43,9 +43,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    top: -40%;
+    position: relative;
+    top: -100px;
     width: 100%;
     padding: 20px 20px 0;
 }
@@ -53,15 +52,17 @@
 .popup_header.win{display: flex;}
 
 .popup_header .popup_title {
+    font-family: auto;
     font-size: 22px;
     font-weight: 900;
     color: #FFED1A;
 }
 .popup_header .popup_close_btn {
     position: absolute;
-    right: -24px;
-    top: -48px;
+    right: -10px;
+    top: -26px;
     width: 32px;
+    height: 24px;
     background: none;
     border: none;
     padding: 0;
@@ -71,7 +72,7 @@
 /* Roulette Core */
 .roulette {
     position: relative;
-    top: -50px;
+    top: -30px;
     width: 280px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
@@ -103,6 +104,9 @@
     width:100%;
     transform-origin: center center;
     animation: rotate-center 2s cubic-bezier(.445, .05, .55, .95) infinite both;
+}
+.spinner_inner.auto-spinning {
+    animation: autoSpinRoulette 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
 }
 .roulette_spinner.win .spinner_inner {
     animation: none;
@@ -160,24 +164,38 @@
 
 /* Win Popup */
 .win_popup {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
+    z-index: 9999; */
+
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
 }
 .win_popup .popup_container { 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 32px;
+    padding: 0 32px; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-150px, -90px); */
+    position: relative;
+    width: 300px;
 }
 .win_popup .popup_body {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    top: 20px;
 }
 .win_popup .img_roulette_coupon img {
     display: block;
@@ -223,30 +241,40 @@
 
 /* Lottie Animation */
 .ani_state{
-    position: absolute;
+    position: absolute;	  
     width: 100%;
     height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99999;
+    pointer-events: none;
+}
+.ani_hand{
+    position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(0, 0);
+    left: 50%;
+    width: 100%;		
+    transform: translate(-30%,-20%);
+    z-index: 9998
 }
 .confetti_lottie{
-    display: block;
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    transform: translate(-50%,-88%);
+    z-index: 9998;
     pointer-events: none;
-    z-index: 9998; 
 }
 
 /* Animation Effect */
 .win_popup {
     opacity: 0;
-    transform: translate(-50%, -20%);
     transition: opacity .25s ease, transform .35s cubic-bezier(.18, .89, .32, 1.28);;
 }
 .win_popup.show {
     opacity: 1;
-    transform: translate(-50%, -50%);
     pointer-events: auto;
 }
 
@@ -300,6 +328,15 @@
     }
     100% {
         filter: drop-shadow(0 0 0px #FFB84D);
+    }
+}
+
+@keyframes autoSpinRoulette {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(900deg);
     }
 }
 
