@@ -43,30 +43,61 @@
     display: none;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    top: -100px;
     width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: -80px;
+    padding: 20px 20px 0;
 }
 
-.popup_header.win {
-    display: flex;
-}
+.popup_header.win{display: flex;}
 
 .popup_header .popup_title {
     font-family: auto;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 900;
     color: #FFED1A;
 }
+.popup_header .popup_close_btn {
+    position: absolute;
+    right: -10px;
+    top: -26px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon_close {
+    display: inline-block; 
+    position: relative; 
+    overflow: hidden; 
+    width: 24px; 
+    height: 24px; 
+    opacity: 1;
+}
+
+.icon_close:before,
+.icon_close:after {
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    height:2px; 
+    top:50%; 
+    right:0; 
+    background:#fff;
+}
+
+.icon_close:before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+.icon_close:after{-webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+
+
 
 /* Roulette Core */
 .roulette {
     position: relative;
-    top: -40px;
+    top: -30px;
     width: 280px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
@@ -119,7 +150,7 @@
     opacity: 1;
     transform: translate(-50%, -107%);
     transition: opacity .3s ease-in-out;
-    z-index: 999999;
+    z-index: 20;
 }
 .roulette_spinner.win .piece_highlight .piece_inner {
     width: 100%;
@@ -158,24 +189,38 @@
 
 /* Win Popup */
 .win_popup {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
+    z-index: 9999; */
+
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
 }
 .win_popup .popup_container { 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 32px;
+    padding: 0 32px; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-150px, -90px); */
+    position: relative;
+    width: 300px;
 }
 .win_popup .popup_body {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    top: 20px;
 }
 .win_popup .img_roulette_coupon img {
     display: block;
@@ -227,7 +272,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 99999;
+    z-index: 40;
     pointer-events: none;
 }
 .ani_hand{
@@ -236,7 +281,7 @@
     left: 50%;
     width: 100%;		
     transform: translate(-30%,-20%);
-    z-index: 9998
+    z-index: 20;
 }
 .confetti_lottie{
     position: absolute;
@@ -244,65 +289,18 @@
     left: 50%;
     width: 250%;
     transform: translate(-50%,-88%);
-    z-index: 9998;
+    z-index: 20;
     pointer-events: none;
 }
 
 /* Animation Effect */
 .win_popup {
     opacity: 0;
-    transform: translate(-50%, -20%);
     transition: opacity .25s ease, transform .35s cubic-bezier(.18, .89, .32, 1.28);;
 }
 .win_popup.show {
     opacity: 1;
-    transform: translate(-50%, -45%);
     pointer-events: auto;
-}
-
-/* popup_header Close icon style  */
-.popup_header .popup_close_btn {
-    position: absolute;
-    right: -10px;
-    top: -26px;
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-.icon_close {
-    display: inline-block; 
-    position: relative; 
-    overflow: hidden; 
-    width: 24px; 
-    height: 24px; 
-    opacity: 1;
-}
-.icon_close:before,
-.icon_close:after {
-    content: ''; 
-    position: absolute; 
-    width: 100%; 
-    height:2px; 
-    top:50%; 
-    right:0; 
-    background:#fff;
-}
-.icon_close:before {
-    -webkit-transform: rotate(45deg); 
-    -moz-transform: rotate(45deg); 
-    -ms-transform: rotate(45deg); 
-    -o-transform: rotate(45deg); 
-    transform: rotate(45deg);
-}
-.icon_close:after {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg); 
-    transform: rotate(-45deg);
 }
 
 
@@ -313,6 +311,7 @@
         top: -20px;
     }
 }
+
 
 /* Animation */
 @keyframes rotate-center {
@@ -332,10 +331,10 @@
         transform: scale(1);
     }
     40% {
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     60% {
-        transform: scale(1.05);
+        transform: scale(1);
     }
     80% {
         transform: scale(1.1);
