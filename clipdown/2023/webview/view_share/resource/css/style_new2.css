@@ -77,7 +77,8 @@ svg{max-width: 100%; width: 100%; user-select : none;}
 .divider_vertical:before{content: ''; display: inline-block; width: 1px; height: 10px; background: #ddd; margin: 0 3px; }
 .fl-l{float:left !important;}
 .fl-r{float:right !important;}
-.player_box{position: relative; padding-top: 56.25%; background: #000;}
+.player_box{position: relative; width: 100%;}
+.video_player{position: relative; padding-top: 56.25%; background: #000;}
 .player_box iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 .container{position: relative; max-width: 1280px; width: 100%; margin: 0 auto;}
 .inner{padding: 0 10px;}
