@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+
+/* 
+    * 2025-05-27
+    * 제이스퓨처 통합 어드민 스타일 시트
+    * Tabler UI 스타일 커스터마이징
+*/
+
+
+
+:host, :root{
+    --tblr-font-sans-serif: 'NotoSansKR', Roboto, sans-serif;
+    --tblr-font-en: 'Roboto' , sans-serif;
+    --tblr-font-weight-headings: var(--tblr-font-weight-black);
+}
+body {
+    font-feature-settings: "cv03", "cv04", "cv11";
+}
+.min-w-8{min-width: 8.8rem;}
+.col-md-20 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+.breadcrumb {
+    --tblr-breadcrumb-item-active-font-weight: var(--tblr-font-weight-medium);
+}
+.card{
+    --tblr-card-spacer-y: 1.25rem; --tblr-card-spacer-x: 1.25rem;
+}
+.card-title{
+    font-weight: var(--tblr-font-weight-bold);
+}
+.page-title{
+    font-size: var(--tblr-font-size-h1);
+    line-height: var(--tblr-line-height-h1);
+    font-weight: var(--tblr-font-weight-headings);
+}
+
+
+
+/* form */
+.form-check.form-check-inline{
+    margin-bottom: 0; 
+    padding: .5rem 0 .5rem 2rem;
+}
+.form-selectgroup-item .img_box{
+    width: 15rem;
+}
+.form-selectgroup-item .img_box img{
+    border-radius: 0.625rem;
+}
+
+
+/* coloris */
+.square .clr-field button, 
+.circle .clr-field button{
+    width: 22px;
+    height: 22px;
+    left: 5px;
+    right: auto;
+    border-radius: 6px;
+    background-image: unset;
+}
+.square .clr-field input, 
+.circle .clr-field input{
+    padding-left: 36px;
+}
+
+
+/* JSF Custom Style */
+.content_item .content-title{
+    display: block;
+    font-size: 1rem;
+    font-weight: var(--tblr-font-weight-bold);
+    line-height: 2rem;
+}
+
+.list_border_bottom{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.filter_radio{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.filter_radio .form-check{
+    margin-bottom: 0;
+}
+.form-tilde{ /* datepicker 사이 물결표 */
+    display: flex; 
+    align-items: center; 
+    padding: 0;
+} 
+.filter-item .input-icon-addon{
+    left: .188rem;
+}
+.table-media .cell-sort{
+    text-align: left;
+}
+.btn-list .btn-table, .custom-table .btn-table{
+    --tblr-btn-line-height: 1;
+    --tblr-btn-font-size: 0.75rem;
+}
+
+.filter-subtit{
+    display: flex;
+    align-items: center;
+}
+.filter-subtit h3{
+    margin-bottom: 0;
+}
+
+/* Table Style 재매핑 CSS  */
+/* =========================
+1. Base Table (Tabler 확장)
+========================= */
+.custom-table .table th,
+.custom-table .table td {
+padding: .625rem;
+vertical-align: middle;
+}
+
+.custom-table .table thead th {
+font-weight: var(--tblr-font-weight-bold);
+text-align: center;
+min-width: 5rem;
+border-bottom: none;
+}
+
+/* 좌우 여백 (card-table 대응) */
+.card-table .custom-table tr > *:first-child {
+padding-left: .625rem;
+}
+.card-table .custom-table tr > *:last-child {
+padding-right: .625rem;
+}
+
+/* 좌우 border 제거 */
+.card .custom-table .table tr > *:first-child {
+border-left: 0;
+}
+.card .custom-table .table tr > *:last-child {
+border-right: 0;
+}
+
+/* hover */
+.card-table .custom-table tbody tr:hover {
+background-color: color-mix(
+in srgb,
+var(--tblr-blue-lt) 100%,
+transparent
+);
+}
+
+
+/* =========================
+2. DataTables 기본 구조
+========================= */
+.custom-table .dataTable th,
+.custom-table .dataTable td {
+text-align: center;
+vertical-align: middle;
+}
+
+.custom-table .dataTable thead th {
+padding: .5rem .625rem;
+}
+
+/* 마지막 줄 border 제거 */
+.custom-table .dataTable tbody tr:last-child td,
+div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+border-bottom: 0 !important;
+}
+
+
+/* =========================
+3. Header / Sort 구조
+========================= */
+.custom-table .dt-column-header,
+.custom-table .dt-column-footer {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 4px;
+}
+
+/* numeric / date 동일 처리 */
+.custom-table .dt-type-numeric .dt-column-header,
+.custom-table .dt-type-date .dt-column-header {
+flex-direction: row;
+}
+
+/* hover */
+.custom-table thead th.dt-orderable-asc:hover,
+.custom-table thead th.dt-orderable-desc:hover {
+outline: 1px solid rgba(0,0,0,0.05);
+}
+
+
+/* =========================
+4. Layout (상단/하단 UI)
+========================= */
+.custom-table .dt-layout-row {
+margin: 0;
+}
+
+.custom-table .dt-layout-row:not(.dt-layout-table) {
+padding: 1rem;
+}
+
+/* 첫 row border */
+.card-table .custom-table thead tr:first-child,
+.card-table .custom-table tbody tr:first-child,
+.card-table .custom-table tfoot tr:first-child {
+border-top: 1px solid var(--tblr-border-color-translucent);
+}
+
+
+/* =========================
+5. Form (length select)
+========================= */
+.custom-table .dt-input {
+--tblr-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239ca3af' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+padding: 0.4375rem 2.25rem 0.4375rem 0.75rem;
+font-size: 0.875rem;
+border: var(--tblr-border-width) solid var(--tblr-border-color);
+border-radius: var(--tblr-border-radius);
+
+background-color: var(--tblr-bg-forms);
+background-image: var(--tblr-form-select-bg-img);
+background-repeat: no-repeat;
+background-position: right 0.75rem center;
+background-size: 16px 12px;
+}
+
+.custom-table .dt-length label {
+margin-left: .25rem;
+}
+
+
+/* =========================
+6. Pagination
+========================= */
+.custom-table .dt-paging {
+display: flex;
+}
+
+.custom-table .dt-paging-button {
+min-width: 2rem;
+padding: 6px 4px;
+border-radius: 6px;
+}
+
+.custom-table .dt-paging-button:hover {
+background: #f7f7f7;
+border: 1px solid #f7f7f7;
+}
+
+.custom-table .dt-paging-button.current {
+background-color: #206bc4;
+color: #fff !important;
+border: 0;
+}
+
+.custom-table .dt-paging-button.disabled {
+color: rgba(0,0,0,0.3) !important;
+}
+
+
+/* =========================
+7. Size Variant
+========================= */
+.custom-table-sm .dataTable th,
+.custom-table-sm .dataTable td {
+font-size: 0.813rem;
+}
+
+.custom-table-sm .dt-layout-row:not(.dt-layout-table) {
+display: none;
+}
+
+
+/* Tabs Style */
+.nav-tabs.tabs-header .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: var(--tblr-primary) !important;
+    font-weight: var(--tblr-font-weight-bold);
+}
+
+.tabs-square .nav{}
+.tabs-square .nav-tabs{
+    --tblr-nav-tabs-border-color: var(--tblr-border-color);
+    --tblr-nav-tabs-border-radius:0;
+    --tblr-nav-tabs-link-hover-border-color: var(--tblr-border-color) var(--tblr-border-color) var(--tblr-border-color);
+    --tblr-nav-tabs-link-active-bg: var(--tblr-body-bg);
+    --tblr-nav-tabs-link-active-border-color: var(--tblr-border-color) var(--tblr-border-color) var(--tblr-border-color);
+    border-bottom: inherit;
+}
+.tabs-square .nav-tabs .nav-link{
+    margin-bottom: calc(-1 * var(--tblr-nav-tabs-border-width));
+    border: var(--tblr-nav-tabs-border-width) solid transparent;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.tabs-square .nav-fill .nav-item, .tabs-square .nav-fill>.nav-link{
+    border: var(--tblr-nav-tabs-border-width) solid var(--tblr-border-color);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+}
+.tabs-square .nav-tabs .nav-item.show .nav-link, .tabs-square .nav-tabs .nav-link.active,
+.tabs-square .nav-tabs .nav-item.show:hover .nav-link, .tabs-square .nav-tabs .nav-link.active:hover{
+    position: relative;
+    color: var(--tblr-primary);
+    background-color: rgba(var(--tblr-primary-rgb), .04);
+    border-color: var(--tblr-primary);
+    z-index: 999;
+}
+
+.tabs-square .nav-tabs .nav-link:hover{
+    background-color: var(--tblr-nav-link-hover-bg);
+    border-color: transparent;
+    color: var(--tblr-nav-link-color);
+}
+.tabs-square .nav-item>.nav-item:not(:first-child), .tabs-square .nav-item:not(.nav-link:first-child){
+    margin-left: calc(-3 * var(--tblr-border-width));
+}
+
+/* Custom Tooltip Style */
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+/* 툴팁 글자 스타일 (기본적으로 숨김) */
+.custom-tooltip-text {
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;    
+    top: 50%;
+    right: 125%; 
+    transform: translateY(-50%);
+    margin-left: -100px; /* 가운데 정렬 */
+    width: auto;
+    width: max-content;
+    max-width: 400px;
+    min-width: 100px;
+    background-color: #333;
+    color: #fff;
+    font-size: var(--tblr-font-size-h5);
+    line-height: 1.4;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 9999; /* 다른 요소보다 위에 표시 */
+}
+
+/* 화살표 모양 만들기 */
+.custom-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+/* 마우스를 올렸을 때 툴팁 보여주기 */
+.custom-tooltip:hover .custom-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Form Row Style */
+.form_al_row {
+    display: flex;
+    align-items: center;
+}
+.form_al_row .form-label{
+    margin-bottom: 0;
+}
+.form_al_row .form-check{
+    margin-bottom: 0;
+}
+
+
+/* 
+    * Media Query
+
+*/
+@media (min-width: 992px) {
+    :host, :root {
+        margin-left: 0 !important;;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #filterCollapse.collapse:not(.show) {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .form-control, .form-select {
+        font-size: .875rem !important;
+    }
+    .filter-item .text-start{
+        text-align: center !important;
+    }
+    .filter-item .text-start .btn{
+        width: 100% !important;
+    }
+    .col-form-label.label_empty, 
+    .form-label.label_empty{
+        display: none;
+    }
+
+    .dt-layout-row {
+        display: flex !important;
+        flex-direction: row !important; /* 위아래로 쌓이지 않게 고정 */
+        justify-content: space-between !important; /* 양 끝으로 배치 */
+        align-items: center !important;
+        gap: 10px;
+    }
+    .dt-layout-cell {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    .dt-search input {
+            width: 100px !important; /* 모바일 대응 크기 */
+        }
+
+    .dt-layout-row {
+        /* 상단 영역 전체를 유연하게 관리 */
+        display: flex !important;
+        flex-wrap: wrap !important; 
+        justify-content: space-between !important;
+        gap: 10px;
+    }
+
+    /* 버튼들이 아래로 떨어졌을 때 우측 정렬 유지 및 위쪽 간격 추가 */
+    .dt-layout-end .d-flex {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 5px; /* 줄바꿈 시 상단과의 간격 */
+    }
+
+    .custom-table div.dt-container .dt-paging{
+        justify-content: center;
+    }
+
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell .btn{
+        --tblr-btn-padding-x: 0.5625rem;
+        --tblr-btn-padding-y: 0.3125rem;
+
+    }
+    .custom-table div.dt-container .dt-input{
+        padding: 0.3125rem 2.25rem 0.3125rem 0.75rem;
+    }
+    .card-header.cursor-pointer {
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    /* 열렸을 때 아이콘 회전 애니메이션 (선택사항) */
+    .card-header[aria-expanded="true"] .icon-tabler-chevron-down {
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+    }
+
+    
+
+
+}
+
+@media (max-width: 575.98px) {
+    .form-control, .form-select {
+        font-size: .875rem;
+    }
+}
+
+
+/* 모바일 전용 스타일 (768px 미만) */
+@media (max-width: 767.98px) {
+    /* 1. 부모 카드 외곽선 제거 */
+    .main-card-wrapper {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* 2. 개별 항목을 독립된 카드로 만들기 */
+    .custom-tab-item {
+        display: block !important; /* 모바일에서 리스트 형태로 보이게 강제 */
+        opacity: 1 !important;
+        margin-bottom: 12px !important;
+        background: #fff !important;
+        border: 1px solid rgba(101, 109, 119, 0.16) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04) !important;
+        overflow: hidden;
+    }
+
+    /* 3. 아코디언 헤더 */
+    .accordion-header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background: #fff;
+    }
+
+    /* 4. 활성화 상태 디자인 */
+    .custom-tab-item.active .accordion-header {
+        border-bottom: 1px solid rgba(101, 109, 119, 0.08);
+        color: #206bc4;
+    }
+
+    /* 5. 열리지 않은 컨텐츠 숨기기 */
+    .custom-tab-item:not(.active) .accordion-content {
+        display: none !important;
+    }
+
+    /* 6. 화살표 회전 */
+    .accordion-arrow { transition: transform 0.3s; }
+    .custom-tab-item.active .accordion-arrow { transform: rotate(180deg); }
+}
+
+/* 데스크톱 스타일 복구 */
+@media (min-width: 768px) {
+    .accordion-header { display: none !important; }
+    .accordion-content { display: block !important; }
+}
+
+
+/* 관리 버튼 크기 최소화 */
+.btn-table-action {
+    width: 28px !important;  /* 버튼 가로 크기 */
+    height: 28px !important; /* 버튼 세로 크기 */
+    padding: 0 !important;   /* 내부 여백 제거 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;      /* 약간의 곡률 */
+}
+
+/* 버튼 내 아이콘 크기 조절 */
+.btn-table-action svg {
+    width: 16px !important;  /* 아이콘 크기 축소 */
+    height: 16px !important;
+}
+
+/* 연초록 배경 (이미지 스타일) */
+.bg-light-green {
+    background-color: #f6faf6 !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* 광고 설정 배너 테이블 상단 영역에만 구분선 추가 */
+#bannerUpdateRow thead {
+    border-top: 1px solid #e6e7e9 !important;
+}
+
+
+
+
+
+
+
+

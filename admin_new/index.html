@@ -197,116 +197,129 @@
                                     <!-- 조건검색 스타일 02 -->
                                     <div class="col-12">
                                         <div class="card">
-                                            <!-- 사용 시 card-header 영역 삭제  -->
-                                            <div class="card-header">
+                                            <!-- card-header 영역  -->
+                                            <div class="card-header"> <!-- 사용 시 card-header 영역 삭제  -->
                                                 <h3 class="card-title">조건 검색 스타일 02
                                                     <span class="card-subtitle">
-                                                        <code>card-footer</code> 없는 버전
+                                                        <code>card-footer</code> 없는 버전 / 모바일 일때 아코디언 형식으로 노출
                                                     </span>
-                                                </h3>                                    
+                                                </h3>                                   
+                                            </div> <!-- // 사용 시 card-header 영역 삭제  -->
+                                            <div class="card-header d-md-none cursor-pointer" data-bs-toggle="collapse" data-bs-target="#filterCollapse">
+                                                <h3 class="card-title">조건 검색 스타일 02
+                                                    <span class="card-subtitle">
+                                                        모바일 일때 아코디언 형식으로 노출
+                                                    </span>
+                                                </h3> 
+                                                <div class="card-actions">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" />
+                                                    </svg>
+                                                </div>                                   
                                             </div> 
-                                            <!-- // 사용 시 card-header 영역 삭제  -->                       
-                                            <div class="card-body">
-                                                <div class="filter-item">
-                                                    <div class="row row-cards">
-                                                        <div class="col-md-3">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">조회구분</label>
-                                                                <select name="user[month]" class="form-select">
-                                                                    <option value="day" selected="selected">일별</option>
-                                                                    <option value="week">주별</option>
-                                                                    <option value="month">월별</option>
-                                                                </select> 
-                                                            </div>                                                               
+                                            <!-- // card-header 영역  -->      
+                                            <div class="collapse d-md-block" id="filterCollapse">               
+                                                <div class="card-body">
+                                                    <div class="filter-item">
+                                                        <div class="row row-cards">
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">조회구분</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="day" selected="selected">일별</option>
+                                                                        <option value="week">주별</option>
+                                                                        <option value="month">월별</option>
+                                                                    </select> 
+                                                                </div>                                                               
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">조회기간</label>
+                                                                    <div class="row">
+                                                                        <div class="input-icon w-50">
+                                                                            <span
+                                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                                    <path
+                                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                                    </path>
+                                                                                    <path d="M16 3v4"></path>
+                                                                                    <path d="M8 3v4"></path>
+                                                                                    <path d="M4 11h16"></path>
+                                                                                    <path d="M11 15h1"></path>
+                                                                                    <path d="M12 15v3"></path>
+                                                                                </svg></span>
+                                                                            <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                                        </div>
+                                                                        <div class="input-icon w-50">
+                                                                            <span
+                                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                                    <path
+                                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                                    </path>
+                                                                                    <path d="M16 3v4"></path>
+                                                                                    <path d="M8 3v4"></path>
+                                                                                    <path d="M4 11h16"></path>
+                                                                                    <path d="M11 15h1"></path>
+                                                                                    <path d="M12 15v3"></path>
+                                                                                </svg></span>
+                                                                            <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                                        </div>
+                                                                    </div>                                    
+                                                                </div>                                                               
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">서비스</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="Option01">$Option01</option>
+                                                                        <option value="Option02">$Option02</option>
+                                                                    </select>
+                                                                </div>                                                               
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">조회기간</label>
-                                                                <div class="row">
-                                                                    <div class="input-icon w-50">
-                                                                        <span
-                                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                                <path
-                                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                                </path>
-                                                                                <path d="M16 3v4"></path>
-                                                                                <path d="M8 3v4"></path>
-                                                                                <path d="M4 11h16"></path>
-                                                                                <path d="M11 15h1"></path>
-                                                                                <path d="M12 15v3"></path>
-                                                                            </svg></span>
-                                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                        <div class="row row-cards">
+                                                            
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">매체구분</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="ClipdownAPP">클립다운 모바일</option>
+                                                                        <option value="ClipdownLite">클립다운 라이트</option>
+                                                                        <option value="gomAudio">곰오디오</option>
+                                                                        <option value="gomPlayer">곰플레이어</option>
+                                                                    </select> 
+                                                                </div>                                                            
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">제휴사</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="partner01">$partner01</option>
+                                                                        <option value="partner02">$partner02</option>
+                                                                        <option value="partner03">$partner03</option>
+                                                                    </select> 
+                                                                </div>                                                            
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">&nbsp;</label>
+                                                                    <div class="text-start">
+                                                                        <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
                                                                     </div>
-                                                                    <div class="input-icon w-50">
-                                                                        <span
-                                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                                <path
-                                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                                </path>
-                                                                                <path d="M16 3v4"></path>
-                                                                                <path d="M8 3v4"></path>
-                                                                                <path d="M4 11h16"></path>
-                                                                                <path d="M11 15h1"></path>
-                                                                                <path d="M12 15v3"></path>
-                                                                            </svg></span>
-                                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
-                                                                    </div>
-                                                                </div>                                    
-                                                            </div>                                                               
+                                                                </div>                                                            
+                                                            </div>
+                                                            
                                                         </div>
-                                                        <div class="col-md-3">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">서비스</label>
-                                                                <select name="user[month]" class="form-select">
-                                                                    <option value="All" selected="selected">전체</option>
-                                                                    <option value="Option01">$Option01</option>
-                                                                    <option value="Option02">$Option02</option>
-                                                                </select>
-                                                            </div>                                                               
-                                                        </div>
-                                                    </div>
-                                                    <div class="row row-cards">
-                                                        
-                                                        <div class="col-md-3">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">매체구분</label>
-                                                                <select name="user[month]" class="form-select">
-                                                                    <option value="All" selected="selected">전체</option>
-                                                                    <option value="ClipdownAPP">클립다운 모바일</option>
-                                                                    <option value="ClipdownLite">클립다운 라이트</option>
-                                                                    <option value="gomAudio">곰오디오</option>
-                                                                    <option value="gomPlayer">곰플레이어</option>
-                                                                </select> 
-                                                            </div>                                                            
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">제휴사</label>
-                                                                <select name="user[month]" class="form-select">
-                                                                    <option value="All" selected="selected">전체</option>
-                                                                    <option value="partner01">$partner01</option>
-                                                                    <option value="partner02">$partner02</option>
-                                                                    <option value="partner03">$partner03</option>
-                                                                </select> 
-                                                            </div>                                                            
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <div class="mb-3">
-                                                                <label class="form-label">&nbsp;</label>
-                                                                <div class="text-start">
-                                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
-                                                                </div>
-                                                            </div>                                                            
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>                        
+                                                    </div>                        
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>클립다운 리포트</title>
+    <title>프로그램 업데이트 수정</title>
 </head>
 
 <body>
@@ -20,16 +20,19 @@
                                 <li class="breadcrumb-item">
                                     <a href="#">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">
+                                <li class="breadcrumb-item ">
                                     <a href="#">클립다운</a>
                                 </li>
+                                <li class="breadcrumb-item " aria-current="page">
+                                    <a href="/views/clipdown/app-config.html">프로그램 관리</a>
+                                </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    <a href="#">프로그램 관리</a>
+                                    <a href="#">업데이트 수정</a>
                                 </li>
                             </ol>
                         </div>
-                        <h2 class="page-title"> 프로그램 관리</h2>
-                        <div class="text-secondary mt-1">매체별 정보 등록/수정 합니다.</div>
+                        <h2 class="page-title"> 업데이트 수정</h2>
+                        <div class="text-secondary mt-1">매체별 프로그램 업데이트 수정 합니다.</div>
                     </div>
                 </div>
             </div>
@@ -41,47 +44,452 @@
                 <div class="row row-cards">
 
                     <!-- Content Table Style -->
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">                                
-                                <div class="tabs-square">
-                                    <!-- Tab Menu -->
-                                    <ul class="nav nav-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-program-02" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">클립다운 V2</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-program-01" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">클립다운 V1</a>
-                                        </li>
-                                    </ul>
-                                    <!-- // Tab Menu -->
-                                </div> 
+                    <div class="col-12 custom-accordion-container">
+                        <div class="card main-card-wrapper">
+                            <div class="card-header d-none d-md-block">
+                                <ul class="nav nav-tabs card-header-tabs nav-fill" role="tablist">
+                                    <li class="nav-item"><a href="#collapseMedia" class="nav-link active" data-bs-toggle="tab">매체 정보</a></li>
+                                    <li class="nav-item"><a href="#collapseUI" class="nav-link" data-bs-toggle="tab">UI 업데이트</a></li>
+                                    <li class="nav-item"><a href="#collapseCompel" class="nav-link" data-bs-toggle="tab">강제 업데이트</a></li>
+                                    <li class="nav-item"><a href="#collapseRequire" class="nav-link" data-bs-toggle="tab">필수 파일 업데이트</a></li>
+                                    <li class="nav-item"><a href="#collapseSetup" class="nav-link" data-bs-toggle="tab">SETUP 정보</a></li>
+                                    <li class="nav-item"><a href="#collapseInstall" class="nav-link" data-bs-toggle="tab">설치 옵션 항목 표시</a></li>
+                                    <li class="nav-item"><a href="#collapseBanner" class="nav-link" data-bs-toggle="tab">광고 배너 설정</a></li>
+                                </ul>
                             </div>
-                            <div class="contetn-item">
-                                <!-- Tab Content -->
+
+                            <div class="card-body p-0 bg-transparent">
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="tabs-program-02" role="tabpanel">
-                                        <div class="col-12">
-                                            <div class="">
-                                                <div class="card-table">
-                                                    <div class="custom-table custom-table-lg table-responsive">
-                                                        <table id="table-pro-v2" class="table table-vcenter table-selectable table-bordered"></table>
+                                    <!-- #collapseMedia -->
+                                    <div class="tab-pane fade active show custom-tab-item" id="collapseMedia" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseMedia')">
+                                            <span class="fw-bold">매체 정보</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        
+                                        <div class="accordion-content">
+                                            <div class="content_body p-3">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6 mb-3">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3 ">
+                                                                    <label for="standardMedia" class="form-label col-form-label">매체 구분</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-8">
+                                                                    <select id="mediaType" name="mediaType" class="form-select">
+                                                                        <option value="jsfuture">제이스퓨처</option>
+                                                                        <option value="gom">곰플레이어</option>
+                                                                        <option value="est">이스트소프트</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-12 col-md-6 mb-3">
+                                                            <div class="row content_item">
+                                                                <div class="col-sm-12 col-md-3">
+                                                                    <label for="standardMedia" class="form-label col-form-label">매체 코드</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-8">
+                                                                    <input type="text" class="form-control" id="mediaCode" name="mediaCode" disabled value="1">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6 mb-3">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3 ">
+                                                                    <label for="mediaId" class="form-label col-form-label">매체 ID</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-8">
+                                                                    <input type="text" class="form-control" id="mediaId" name="mediaId" value="nav001">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6 mb-3">
+                                                            <div class="row content_item">
+                                                                <div class="col-sm-12 col-md-3 ">
+                                                                    <label for="mediaName" class="form-label col-form-label">매체명</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-8">
+                                                                    <input type="text" class="form-control" id="mediaName" name="mediaName" value="자료실_1">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6 mb-3">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-3 ">
+                                                                    <label for="media_state" class="form-label col-form-label">테스트 여부</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-8">
+                                                                    <div class="d-flex flex-row gap-4">
+                                                                        <label for="status" class="form-check form-check-inline">
+                                                                            <input id="media_state" class="form-check-input" type="radio" name="media_state" checked="">
+                                                                            <span class="form-check-label">운영</span>
+                                                                        </label>
+                                                                        <label class="form-check form-check-inline">
+                                                                            <input id="media_state" class="form-check-input" type="radio" name="media_state">
+                                                                            <span class="form-check-label">테스트</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane " id="tabs-program-01" role="tabpanel">
-                                        <div class="col-12">
-                                            <div class="">
-                                                <div class="card-table">
-                                                    <div class="custom-table custom-table-lg table-responsive">
-                                                        <table id="table-pro-v1" class="table table-vcenter table-selectable table-bordered"></table>
-                                                    </div>                                                    
-                                                </div>
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Media')">수정</button>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- // #collapseMedia -->
+                                    <!-- #collapseUI -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseUI" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseUI')">
+                                            <span class="fw-bold">UI 업데이트</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="g-3 mb-3 content_header list_border_bottom p-3">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-auto">
+                                                        <div class="d-flex flex-nowrap align-items-end g-2">                                                        
+                                                            <div class="flex-grow-1 flex-md-grow-0">
+                                                                <label class="form-label mb-1 small text-muted">배포날짜</label>
+                                                                <div class="input-icon">
+                                                                    <span class="input-icon-addon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm">
+                                                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                                                                            <path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <input id="publishDateUI" class="form-control datepicker" style="min-width: 130px;" name="publishDateUI" placeholder="배포 일자" value="2025-09-10" readonly="">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="ms-2">
+                                                                <label class="form-label mb-1 small text-muted">&nbsp;</label>
+                                                                <input type="text" id="publishTimeUI" class="form-control text-center" style="width: 60px;" placeholder="시간" name="publishTimeUI" value="12">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-md-auto ms-md-auto mt-4">
+                                                        <div class="btn-list">
+                                                            <a href="/views/clipdown/app-config_detail_edite_update-history.html" class="btn btn-table btn-outline-primary w-100 w-md-auto">
+                                                                업데이트 내역
+                                                            </a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                                   
+                                            </div>
+                                            <div class="content_body">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="card-table">
+                                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                                        <table id="uiUpdateRow" class="table table-vcenter card-table table-bordered"></table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('UI')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseUI -->
+                                    <!-- #collapseCompel -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseCompel" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseCompel')">
+                                            <span class="fw-bold">강제 업데이트</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="g-3 mb-3 content_header list_border_bottom p-3">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-auto">
+                                                        <div class="d-flex flex-nowrap align-items-end g-2">                                                        
+                                                            <div class="flex-grow-1 flex-md-grow-0">
+                                                                <label class="form-label mb-1 small text-muted">배포날짜</label>
+                                                                <div class="input-icon">
+                                                                    <span class="input-icon-addon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm">
+                                                                            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                                                                            <path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <input id="publishDateCompel" class="form-control datepicker" style="min-width: 130px;" name="publishDateCompel" placeholder="배포 일자" value="2025-09-10" readonly="">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="ms-2">
+                                                                <label class="form-label mb-1 small text-muted">&nbsp;</label>
+                                                                <input type="text" id="publishTimeCompel" class="form-control text-center" style="width: 60px;" placeholder="시간" name="publishTimeCompel" value="12">
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-md-auto ms-md-auto mt-4">
+                                                        <div class="btn-list">
+                                                            <a href="/views/clipdown/app-config_detail_edite_update-history.html" class="btn btn-table btn-outline-primary w-100 w-md-auto">
+                                                                업데이트 내역
+                                                            </a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                                   
+                                            </div>
+                                            <div class="content_body">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="card-table">
+                                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                                        <table id="compelUpdateRow" class="table table-vcenter card-table table-bordered"></table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Compel')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseCompel -->
+                                    <!-- #collapseRequire -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseRequire" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseRequire')">
+                                            <span class="fw-bold">필수 파일 업데이트</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="g-3 mb-3 content_header list_border_bottom p-3">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                        <h4 class="mb-0">필수 파일 업데이트 상세 정보</h4>
+                                                    </div>
+
+                                                    <div class="col-auto col-md-auto ms-md-auto">
+                                                        <div class="btn-list">
+                                                            <a href="/views/clipdown/app-config_detail_edite_update-history.html" class="btn btn-table btn-outline-primary w-100 w-md-auto">
+                                                                업데이트 내역
+                                                            </a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                                   
+                                            </div>
+                                            <div class="content_body">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="card-table">
+                                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                                        <table id="requireUpdateRow" class="table table-vcenter card-table table-bordered"></table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Require')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseRequire -->
+                                    <!-- #collapseSetup -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseSetup" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseSetup')">
+                                            <span class="fw-bold">SETUP 정보</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="g-3 mb-3 content_header list_border_bottom p-3">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                        <h4 class="mb-0">SETUP 상세 정보</h4>
+                                                    </div>
+                                                    <div class="col-auto ms-auto">
+                                                        <div class="btn-list">
+                                                            <a href="#" class="btn btn-table btn-outline-success">
+                                                                XML 확인
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content_body p-3">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-12 mb-3">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-2 ">
+                                                                    <label for="setupName" class="form-label col-form-label">셋업명</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <input type="text" class="form-control" id="setupName" name="setupName" placeholder="ex) 클립다운 설치" value="기본">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-12 mb-3">
+                                                            <div class="row content_item">
+                                                                <div class="col-sm-12 col-md-2 ">
+                                                                    <label for="mediaName" class="form-label col-form-label">SETUP URL</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-10">
+                                                                    <input type="text" class="form-control" id="setupUrl" name="setupUrl" value="setup.exe">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-12 mb-3">
+                                                            <div class="row content_item">
+                                                                <div class="col-sm-12 col-md-2 ">
+                                                                    <label for="setupLicenseUrl" class="form-label col-form-label">LICENSE URL</label>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-10">
+                                                                    <input type="text" class="form-control" id="setupLicenseUrl" name="setupLicenseUrl" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Setup')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseSetup -->
+                                    <!-- #collapseInstall -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseInstall" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseInstall')">
+                                            <span class="fw-bold">설치 옵션 항목 표시</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="content_body">
+                                                <div class="content_item">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="table-responsive">
+                                                                <div class="card-table">
+                                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                                        <table id="installUpdateRow" class="table table-vcenter card-table table-bordered"></table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Install')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseInstall -->
+                                    <!-- #collapseBanner -->
+                                    <div class="tab-pane fade custom-tab-item" id="collapseBanner" role="tabpanel">
+                                        <div class="accordion-header d-md-none" onclick="runAccordion('collapseBanner')">
+                                            <span class="fw-bold">광고 배너 설정</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 9l6 6l6 -6"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="g-3 mb-3 content_header list_border_bottom p-3">
+                                                <div class="col-12 col-md-auto">
+                                                    <div class="row">
+                                                        <div class="d-flex flex-nowrap align-items-end g-2">                                                        
+                                                            <div class="flex-grow-0 flex-md-grow-0">
+                                                                <label class="form-label mb-1 small text-muted">일 광고 노출 횟수</label>
+                                                                <input id="ad_expose_cnt" class="form-control text-center" name="ad_expose_cnt" placeholder="" value="0" style="width: 100px;">
+                                                            </div>
+
+                                                            <div class="ms-3">
+                                                                <label class="form-label mb-1 small text-muted">웹 페이지 URL</label>
+                                                                <input type="text" id="ad_download_url" class="form-control" placeholder="" name="ad_download_url" value="" >
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>                                                        
+                                                </div>                                                    
+                                            </div>
+                                            <div class="content_body p-0">
+                                                <div class="content_item">
+                                                    <!-- Content Table Style -->
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="bannerUpdateRow" class="table table-vcenter card-table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th rowspan="2" class="text-center align-middle">순서</th>
+                                                                    <th colspan="2" class="text-center">이미지 사이즈</th>
+                                                                    <th rowspan="2" class="text-center align-middle">노출 기한(일)</th>
+                                                                    <th rowspan="2" class="text-center align-middle">행 편집</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="text-center border-start">가로(Width)</th>
+                                                                    <th class="text-center">세로(Height)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- // Content Table Style -->
+                                                </div>                                                
+                                            </div>
+                                            
+                                            <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" onclick="handleTabSubmit('Banner')">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // #collapseBanner -->
+
                                 </div>
                             </div>
                         </div>
@@ -100,156 +508,184 @@
 </script>
 <script>
     const callback = () => {
-        // Table Data
-        let toolbar = document.createElement("div");
-        toolbar.innerHTML = `
-        <div class="ms-auto d-flex flex-wrap btn-list">
-            <a href="#" class="btn">바탕화면 아이콘 경로 편집</a>
-            <a href="#" class="btn">신규 매체 등록</a>
-            <a href="#" class="btn">일괄 수정</a>
-        </div>
-        `;
+        // --- 1. 공통 상수 및 아이콘 정의 ---
+        const iconPlus = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>`;
+        const iconTrash = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>`;
+        
+        const emptyRow = { fileName: "", fileSize: "", version: "", filePath: "" };
+        const emptyBannerRow = { order: "", width: "", height: "", days: "" };
 
-        const grid = new DataTable("#table-pro-v2", {
-            layout: {
-                topEnd: toolbar,
-            },
-            data: [
-                {
-                    data1: "제이스퓨처",
-                    data2: "2",
-                    data3: "자료실_1",
-                    data4: "운영",
-                },
-            ],
-            columns: [
-                {
-                    title: '매체구분',
-                    data: 'data1'
-                },
-                {
-                    title: '매체코드',
-                    data: 'data2'
-                },
-                {
-                    title: '매체명',
-                    data: 'data3'
-                },
-                {
-                    title: '테스트 여부',
-                    data: 'data4'
-                    
-                },
-                {
-                    title: '업데이트 수정',
-                    data: 'null',
-                    orderable: false,
-                    searchable: false,
-                    render: function (data, type, row, meta) {
-                        const mediaPackageName = row.media_package_name;
-                        const advertisementId = row.id;
+        // --- 2. 데이터 테이블 초기화 ---
 
-                        return `
-                            <div class="btn-list flex-nowrap justify-content-center">
-                                <button href="#" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</button>
-                            </div>
-                        `;
-                    }
-                }
-
-            ],
+        // A. 공통 규격 테이블 (UI, 강제, 필수 파일)
+        const uiGrid = $("#uiUpdateRow").DataTable({
+            layout: { topEnd: () => createXmlButton() },
+            data: [{ fileName: "yab_script.txt", fileSize: "62,264", version: "1.0.0.1", filePath: "yab_script.txt" }],
+            columns: getColumnDefs(),
+            paging: false, searching: false, info: false, ordering: false, autoWidth: false,
             ...dataTablesConfg,
         });
 
-        const grid2 = new DataTable("#table-pro-v1", {
-            // layout: {
-            //     topEnd: toolbar,
-            // },
-            data: [
-                {
-                    data1: "제이스퓨처",
-                    data2: "1",
-                    data3: "자료실_1",
-                    data4: "운영",
-                },
-            ],
-            columns: [
-                {
-                    title: '매체구분',
-                    data: 'data1'
-                },
-                {
-                    title: '매체코드',
-                    data: 'data2'
-                },
-                {
-                    title: '매체명',
-                    data: 'data3'
-                },
-                {
-                    title: '테스트 여부',
-                    data: 'data4'
-                    
-                },
-                {
-                    title: '업데이트 수정',
-                    data: 'null',
-                    orderable: false,
-                    searchable: false,
-                    render: function (data, type, row, meta) {
-                        const mediaPackageName = row.media_package_name;
-                        const advertisementId = row.id;
-
-                        return `
-                            <div class="btn-list flex-nowrap justify-content-center">
-                                <a href="#" class="btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</a>
-                            </div>
-                        `;
-                    }
-                }
-            ],
+        const compelGrid = $("#compelUpdateRow").DataTable({
+            layout: { topEnd: () => createXmlButton() },
+            data: [{ fileName: "setup.exe", fileSize: "125,400", version: "2.0.1.0", filePath: "core/setup.exe" }],
+            columns: getColumnDefs(),
+            paging: false, searching: false, info: false, ordering: false, autoWidth: false,
             ...dataTablesConfg,
         });
 
+        const requireGrid = $("#requireUpdateRow").DataTable({
+            layout: { topEnd: () => createXmlButton() },
+            data: [{ fileName: "yab_script.txt", fileSize: "62,264", version: "1.0.0.1", filePath: "yab_script.txt" }],
+            columns: getColumnDefs(),
+            paging: false, searching: false, info: false, ordering: false, autoWidth: false,
+            ...dataTablesConfg,
+        });
 
-             // date picker 설정
-            if (window.Litepicker) {
-                document.querySelectorAll('.datepicker').forEach((el) => {
-                    new Litepicker({
-                        element: el,
-                        buttonText: {
-                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
-                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
-                        },
-                        lang: 'ko',
-                        format: 'YYYY-MM-DD',
-                        i18n: {
-                            ko: {
-                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
-                                months: [
-                                    '1월', '2월', '3월', '4월', '5월', '6월',
-                                    '7월', '8월', '9월', '10월', '11월', '12월'
-                                ],
-                                nextMonth: '다음 달',
-                                prevMonth: '이전 달',
-                                reset: '초기화',
-                                apply: '적용',
-                            },
-                        },
-                    });
+        // B. 설치 옵션 테이블
+        const installGrid = $("#installUpdateRow").DataTable({
+            data: [
+                { iconCode: "11st", linkUrl: "http://click.dotmap.co.kr/?pf_code=100014100947100221", isApplied: true },
+                { iconCode: "auction", linkUrl: "http://click.dotmap.co.kr/?pf_code=100007100947100005", isApplied: false }
+            ],
+            columns: [
+                { title: '순서', data: null, className: 'text-center align-middle', width: '5%', render: (data, type, row, meta) => meta.row + 1 },
+                { title: '아이콘 코드', data: 'iconCode', render: (data) => `<span>${data || '-'}</span>` },
+                { title: '바로가기 주소', data: 'linkUrl', render: (data) => `<span class="text-break">${data || '-'}</span>` },
+                { 
+                    title: '적용 여부', data: 'isApplied', className: 'text-center align-middle', width: '10%',
+                    render: (data) => `<label class="form-check form-switch mb-0 d-inline-block"><input class="form-check-input" type="checkbox" ${data ? 'checked' : ''}></label>` 
+                }
+            ],
+            paging: false, searching: false, info: false, ordering: false, autoWidth: false,
+            ...dataTablesConfg,
+        });
+
+        // C. 광고 배너 설정 테이블 (행 편집 버튼 적용)
+        const bannerGrid = $("#bannerUpdateRow").DataTable({
+            data: [{ order: "1", width: "1920", height: "1080", days: "365" }],
+            columns: [
+                { data: 'order', render: (data) => `<input type="text" class="form-control text-center mx-auto" style="max-width: 100px;" value="${data || ''}">` },
+                { data: 'width', render: (data) => `<input type="text" class="form-control text-center" value="${data || ''}">` },
+                { data: 'height', render: (data) => `<input type="text" class="form-control text-center" value="${data || ''}">` },
+                { data: 'days', render: (data) => `<input type="text" class="form-control text-center" value="${data || ''}">` },
+                {
+                    title: '행 편집',
+                    data: null,
+                    orderable: false,
+                    className: 'text-center align-middle',
+                    render: function () {
+                        return `
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn btn-icon btn-outline-danger btn-remove-row" title="삭제">${iconTrash}</a>
+                                <a href="#" class="btn btn-icon btn-outline-success btn-add-row" title="추가">${iconPlus}</a>
+                            </div>`;
+                    }
+                }
+            ],
+            paging: false, searching: false, info: false, ordering: false, autoWidth: false,
+            ...dataTablesConfg
+        });
+
+        // --- 3. 이벤트 바인딩 및 외부 라이브러리 설정 ---
+
+        setupTableEvents('#uiUpdateRow', uiGrid, emptyRow);
+        setupTableEvents('#compelUpdateRow', compelGrid, emptyRow);
+        setupTableEvents('#requireUpdateRow', requireGrid, emptyRow);
+        setupTableEvents('#installUpdateRow', installGrid, {}); // 설치 옵션은 추가 기능 미사용 시 빈 객체
+        setupTableEvents('#bannerUpdateRow', bannerGrid, emptyBannerRow);
+
+        if (window.Litepicker) {
+            initLitepicker();
+        }
+
+        // --- 내부 유틸리티 함수 정의 ---
+
+        function createXmlButton() {
+            let toolbar = document.createElement("div");
+            toolbar.className = "ms-auto d-flex flex-wrap btn-list";
+            toolbar.innerHTML = `<a href="#" class="btn btn-table btn-outline-success">XML 확인</a>`;
+            return toolbar;
+        }
+
+        function getColumnDefs() {
+            return [
+                { title: '순서', data: null, className: 'text-center align-middle', render: (data, type, row, meta) => meta.row + 1 },
+                { title: '파일명<br><small class="text-muted">ex) clipdown.exe</small>', data: 'fileName', render: (data) => `<input type="text" class="form-control" name="fileName" value="${data || ''}">` },
+                { title: '파일사이즈<br><small class="text-muted">ex) 5325</small>', data: 'fileSize', render: (data) => `<input type="text" class="form-control" name="fileSize" value="${data || ''}">` },
+                { title: '버전<br><small class="text-muted">ex) 1.0.0.2</small>', data: 'version', render: (data) => `<input type="text" class="form-control" name="version" value="${data || ''}">` },
+                { title: '파일경로<br><small class="text-muted">ex) image/btn.png</small>', data: 'filePath', render: (data) => `<input type="text" class="form-control" name="filePath" value="${data || ''}">` },
+                {
+                    title: '행 편집', data: null, orderable: false, className: 'text-center align-middle',
+                    render: () => `<div class="d-flex justify-content-center gap-2"><a href="#" class="btn btn-icon btn-outline-danger btn-remove-row" title="삭제">${iconTrash}</a><a href="#" class="btn btn-icon btn-outline-success btn-add-row" title="추가">${iconPlus}</a></div>`
+                }
+            ];
+        }
+
+        function setupTableEvents(tableId, gridInstance, defaultRow) {
+            const $table = $(tableId);
+            $table.off('click').on('click', '.btn-add-row', function (e) {
+                e.preventDefault();
+                gridInstance.row.add({...defaultRow}).draw(false);
+            }).on('click', '.btn-remove-row', function (e) {
+                e.preventDefault();
+                if (gridInstance.data().count() > 1) {
+                    gridInstance.row($(this).closest('tr')).remove().draw();
+                } else {
+                    alert("최소 한 개의 행은 유지해야 합니다.");
+                }
+            });
+        }
+
+        function initLitepicker() {
+            document.querySelectorAll('.datepicker').forEach((el) => {
+                new Litepicker({
+                    element: el,
+                    buttonText: {
+                        previousMonth: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                        nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                    },
+                    lang: 'ko',
+                    format: 'YYYY-MM-DD',
                 });
-            }
+            });
+        }
+    };
 
-
-
-
-
-
-
-    }; //여기 안에 넣기
     includeFoundation(callback);
+</script>
+
+<script>
+function runAccordion(targetId) {
+    // 모바일 환경 체크
+    if (window.innerWidth >= 768) return;
+
+    const targetPane = document.getElementById(targetId);
+    const isActive = targetPane.classList.contains('active');
+
+    // 1. 모든 패널 닫기
+    document.querySelectorAll('.custom-tab-item').forEach(pane => {
+        pane.classList.remove('active', 'show');
+    });
+
+    // 2. 이미 열려있던걸 누른게 아니라면 열기 (토글)
+    if (!isActive) {
+        targetPane.classList.add('active', 'show');
+        
+        // 3. 상단 탭과 동기화 (데스크톱 뷰 전환 대비)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + targetId) {
+                link.classList.add('active');
+            }
+        });
+
+        // 4. 부드러운 스크롤
+        setTimeout(() => {
+            targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+}
 </script>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>클립다운 리포트</title>
+    <title>클립다운 SNS 공유하기</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="page-header">
             <div class="container-xl">
                 <div class="row align-items-center mw-100">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="mb-3">
                             <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
                                 <li class="breadcrumb-item">
@@ -28,6 +28,8 @@
                                 </li>
                             </ol>
                         </div>
+                    </div>
+                    <div class="col">                        
                         <h2 class="page-title">SNS 공유하기</h2>
                         <div class="text-secondary mt-1">클립다운의 동영상/SNS 매체별 통계를 조회하고 확인합니다.</div>
                     </div>
@@ -41,109 +43,117 @@
                 <div class="row row-cards">
                     <!-- 조건검색 스타일 02 -->
                     <div class="col-12">
-                        <div class="card">                    
-                            <div class="card-body">
-                                <div class="filter-item">
-                                    <div class="row row-cards">
-                                        <div class="col-md-2">
-                                            <div class="mb-3">
-                                                <label class="form-label">조회구분</label>
-                                                <select name="user[month]" class="form-select">
-                                                    <option value="day" selected="selected">일별</option>
-                                                    <option value="week">주별</option>
-                                                    <option value="month">월별</option>
-                                                </select> 
-                                            </div>                                                               
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="mb-3">
-                                                <label class="form-label">조회기간</label>
-                                                <div class="row">
-                                                    <div class="input-icon w-50">
-                                                        <span
-                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                <path
-                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                </path>
-                                                                <path d="M16 3v4"></path>
-                                                                <path d="M8 3v4"></path>
-                                                                <path d="M4 11h16"></path>
-                                                                <path d="M11 15h1"></path>
-                                                                <path d="M12 15v3"></path>
-                                                            </svg></span>
-                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
-                                                    </div>
-                                                    <div class="input-icon w-50">
-                                                        <span
-                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                <path
-                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                </path>
-                                                                <path d="M16 3v4"></path>
-                                                                <path d="M8 3v4"></path>
-                                                                <path d="M4 11h16"></path>
-                                                                <path d="M11 15h1"></path>
-                                                                <path d="M12 15v3"></path>
-                                                            </svg></span>
-                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
-                                                    </div>
-                                                </div>                                    
-                                            </div>                                                               
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="mb-3">
-                                                <label class="form-label">제휴사</label>
-                                                <select id="mid" name="mid" class="form-select">
-                                                    <option value="all" selected="selected">전체</option>
-                                                    <option value="99">테스트</option>
-                                                    <option value="103">기타</option>
-                                                    <option value="1">자료실_1</option>
-                                                    <option value="101">기타2</option>
-                                                    <option value="4">홈페이지_신규_4</option>
-                                                    <option value="7">cashmate.co.kr (PC 파워링크)</option>
-                                                    <option value="20">곰플레이어 복구</option>
-                                                    <option value="102">기타3</option>
-                                                    <option value="100">테스트_100</option>
-                                                    <option value="2">홈페이지_2</option>
-                                                    <option value="3">clipdown.co.kr</option>
-                                                    <option value="5">clipdown.net</option>
-                                                    <option value="6">홈페이지_신규_6</option>
-                                                    <option value="8">네이버 카페 (월재연)</option>
-                                                    <option value="9">테스트_9</option>
-                                                    <option value="11">공유하기</option>
-                                                    <option value="12">일반재설치</option>
-                                                    <option value="13">클립다운 복구</option>
-                                                    <option value="14">헬프클린_검색광고</option>
-                                                    <option value="15">곰플레이어 번들 설치</option>
-                                                    <option value="16">곰플레이어 설치</option>
-                                                    <option value="17">곰플레이어 재설치</option>
-                                                    <option value="18">곰플레이어 재실행</option>
-                                                    <option value="19">클립다운 재실행</option>
-                                                    <option value="98">테스트</option>
-                                                    <option value="104">테스트</option>
-                                                    <option value="10">네이버 카페 (짠돌이)</option>
-                                                    <option value="31">이스트소프트 설치</option>
-                                                    <option value="41">이스트소프트 재설치</option>
-                                                </select> 
-                                            </div>                                                            
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="mb-3">
-                                                <label class="form-label">&nbsp;</label>
-                                                <div class="text-start">
-                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
-                                                </div>
-                                            </div>                                                            
-                                        </div>                                          
-                                    </div>
-                                </div>                        
+                        <div class="card">
+                            <div class="card-header d-md-none cursor-pointer" data-bs-toggle="collapse" data-bs-target="#filterCollapse">
+                                <h3 class="card-title">조회 조건 설정</h3>
+                                <div class="card-actions">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                                </div>
                             </div>
+                            <div class="collapse d-md-block" id="filterCollapse">                  
+                                <div class="card-body">
+                                    <div class="filter-item">
+                                        <div class="row row-cards">
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="form-label">조회구분</label>
+                                                    <select name="user[month]" class="form-select">
+                                                        <option value="day" selected="selected">일별</option>
+                                                        <option value="week">주별</option>
+                                                        <option value="month">월별</option>
+                                                    </select> 
+                                                </div>                                                               
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label class="form-label">조회기간</label>
+                                                    <div class="row">
+                                                        <div class="input-icon w-50">
+                                                            <span
+                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                    <path
+                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                    </path>
+                                                                    <path d="M16 3v4"></path>
+                                                                    <path d="M8 3v4"></path>
+                                                                    <path d="M4 11h16"></path>
+                                                                    <path d="M11 15h1"></path>
+                                                                    <path d="M12 15v3"></path>
+                                                                </svg></span>
+                                                            <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                        </div>
+                                                        <div class="input-icon w-50">
+                                                            <span
+                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                    <path
+                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                    </path>
+                                                                    <path d="M16 3v4"></path>
+                                                                    <path d="M8 3v4"></path>
+                                                                    <path d="M4 11h16"></path>
+                                                                    <path d="M11 15h1"></path>
+                                                                    <path d="M12 15v3"></path>
+                                                                </svg></span>
+                                                            <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                        </div>
+                                                    </div>                                    
+                                                </div>                                                               
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="form-label">제휴사</label>
+                                                    <select id="mid" name="mid" class="form-select">
+                                                        <option value="all" selected="selected">전체</option>
+                                                        <option value="99">테스트</option>
+                                                        <option value="103">기타</option>
+                                                        <option value="1">자료실_1</option>
+                                                        <option value="101">기타2</option>
+                                                        <option value="4">홈페이지_신규_4</option>
+                                                        <option value="7">cashmate.co.kr (PC 파워링크)</option>
+                                                        <option value="20">곰플레이어 복구</option>
+                                                        <option value="102">기타3</option>
+                                                        <option value="100">테스트_100</option>
+                                                        <option value="2">홈페이지_2</option>
+                                                        <option value="3">clipdown.co.kr</option>
+                                                        <option value="5">clipdown.net</option>
+                                                        <option value="6">홈페이지_신규_6</option>
+                                                        <option value="8">네이버 카페 (월재연)</option>
+                                                        <option value="9">테스트_9</option>
+                                                        <option value="11">공유하기</option>
+                                                        <option value="12">일반재설치</option>
+                                                        <option value="13">클립다운 복구</option>
+                                                        <option value="14">헬프클린_검색광고</option>
+                                                        <option value="15">곰플레이어 번들 설치</option>
+                                                        <option value="16">곰플레이어 설치</option>
+                                                        <option value="17">곰플레이어 재설치</option>
+                                                        <option value="18">곰플레이어 재실행</option>
+                                                        <option value="19">클립다운 재실행</option>
+                                                        <option value="98">테스트</option>
+                                                        <option value="104">테스트</option>
+                                                        <option value="10">네이버 카페 (짠돌이)</option>
+                                                        <option value="31">이스트소프트 설치</option>
+                                                        <option value="41">이스트소프트 재설치</option>
+                                                    </select> 
+                                                </div>                                                            
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <label class="form-label label_empty">&nbsp;</label>
+                                                    <div class="text-start">
+                                                        <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
+                                                    </div>
+                                                </div>                                                            
+                                            </div>                                          
+                                        </div>
+                                    </div>                        
+                                </div>
+                            </div>        
                         </div>
                     </div>
                     <!-- END 조건검색 스타일 02-->
@@ -151,19 +161,17 @@
                     <!-- Content Table Style -->
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">                                
-                                <div class="tabs-square">
-                                    <!-- Tab Menu -->
-                                    <ul class="nav nav-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-sns-video" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">동영상별 보고서</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-sns-media" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">SNS 매체별 보고서</a>
-                                        </li>
-                                    </ul>
-                                    <!-- // Tab Menu -->
-                                </div> 
+                            <div class="card-header">                                
+                                <!-- Tab Menu -->
+                                <ul class="nav nav-tabs card-header-tabs tabs-header" data-bs-toggle="tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                    <a href="#tabs-sns-video" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">동영상별 보고서</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <a href="#tabs-sns-media" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">SNS 매체별 보고서</a>
+                                    </li>
+                                </ul>
+                                <!-- // Tab Menu -->
                             </div>
                             <div class="contetn-item">
                                 <!-- Tab Content -->
@@ -208,7 +216,7 @@
                                                                     <th>유튜브 공유 (PC)</th>
                                                                     <th>다운로드</th>
                                                                     <th>유튜브 공유 (APP)</th>
-                                                                    <th>클립다운 Lite</th>
+                                                                    <th>공유수</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody class="table-tbody"></tbody>
@@ -306,64 +314,51 @@
             ],
             columns: [
                 {
-                    title: '날짜',
                     data: 'data1'
                 },
                 {
-                    title: '카카오톡',
                     data: 'data2'
                 },
                 {
-                    title: '네이버',
                     data: 'data3'
                 },
                 {
-                    title: '페이스북',
                     data: 'data4'
                     
                 },
                 {
-                    title: '카카오스토리',
                     data: 'data5'
                     
                 },
                 {
-                    title: '밴드',
                     data: 'data6'
                     
                 },
                 {
-                    title: '트위터',
                     data: 'data7'
                     
                 },
                 {
-                    title: '유튜브 공유 (PC)',
                     data: 'data8'
                     
                 },
                 {
-                    title: '다운로드',
                     data: 'data9'
                     
                 },
                 {
-                    title: '유튜브 공유 (APP)',
                     data: 'data10'
                     
                 },
                 {
-                    title: '유튜브 공유 (Lite)',
                     data: 'data11'
                     
                 },
                 {
-                    title: '합계',
                     data: 'data12'
                     
                 },
                 {
-                    title: '조회수',
                     data: 'data13'
                     
                 }

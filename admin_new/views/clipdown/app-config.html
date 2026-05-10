@@ -20,7 +20,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="#">Home</a>
                                 </li>
-                                <li class="breadcrumb-item active">
+                                <li class="breadcrumb-item">
                                     <a href="#">클립다운</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
@@ -43,34 +43,36 @@
                     <!-- Content Table Style -->
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">                                
-                                <div class="tabs-square">
-                                    <!-- Tab Menu -->
-                                    <ul class="nav nav-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-program-02" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">클립다운 V2</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                        <a href="#tabs-program-01" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">클립다운 V1</a>
-                                        </li>
-                                    </ul>
-                                    <!-- // Tab Menu -->
-                                </div> 
+                            <div class="card-header">                                
+                                <!-- Tab Menu -->
+                                <ul class="nav nav-tabs card-header-tabs tabs-header" data-bs-toggle="tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                    <a href="#tabs-program-02" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">클립다운 V2</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                    <a href="#tabs-program-01" class="nav-link " data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">클립다운 V1</a>
+                                    </li>
+                                </ul>
+                                <!-- // Tab Menu --> 
                             </div>
                             <div class="contetn-item">
                                 <!-- Tab Content -->
                                 <div class="tab-content">
+                                    <!-- 클립다운 V2 Tab -->
                                     <div class="tab-pane active" id="tabs-program-02" role="tabpanel">
                                         <div class="col-12">
                                             <div class="">
                                                 <div class="card-table">
                                                     <div class="custom-table custom-table-lg table-responsive">
-                                                        <table id="table-pro-v2" class="table table-vcenter table-selectable table-bordered"></table>
+                                                        <table id="table-pro-v2" class="table table-bordered dataTable"></table>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- // 클립다운 V2 Tab -->
+
+                                    <!-- 클립다운 V1 Tab -->
                                     <div class="tab-pane " id="tabs-program-01" role="tabpanel">
                                         <div class="col-12">
                                             <div class="">
@@ -82,6 +84,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 클립다운 V1 Tab -->
                                 </div>
                             </div>
                         </div>
@@ -93,6 +96,74 @@
         <!-- END PAGE BODY -->
         </div>
     </div>
+
+    <!-- Modal NewMediaRegister -->
+    <div class="modal" id="NewMediaRegister" tabindex="-1">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">신규 매체 등록</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-dards">
+                        <div class="mb-3 form_al_row">
+                            <div class="col-3">
+                                <label class="form-label">매체 ID</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" id="media_id" class="form-control" name="media_id" placeholder="ID를 입력하세요" />
+                            </div>
+                        </div>
+                        <div class="mb-3 form_al_row">
+                            <div class="col-3">
+                                <label class="form-label">매체 구분</label>
+                            </div>
+                            <div class="col-9">
+                                <select id="mid" name="mid" class="form-select">
+                                    <option value="jsfuture">제이스퓨처</option>
+                                    <option value="gomplayer">곰플레이어</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="mb-3 form_al_row">
+                            <div class="col-3">
+                                <label class="form-label">매체 코드</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control" name="example-text-input" placeholder="매체번호를 입력해주세요 ex)99" />
+                            </div>
+                        </div> 
+                        <div class="mb-3 form_al_row">
+                            <div class="col-3">
+                                <label class="form-label">매체명</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control" name="example-text-input" placeholder="매체명을 입력하세요" />
+                            </div>
+                        </div>  
+                        <div class="mb-3 form_al_row">
+                            <div class="col-3">
+                                <div class="form-label">테스트 유무</div>
+                            </div>
+                            <div class="col-9">
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" />
+                                    <span class="form-check-label">테스트</span>
+                                </label>
+                            </div>
+                        </div>  
+                    </div>     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Modal NewMediaRegister -->
 </body>
 <script src="/foundation/foundation.js"></script>
 <script>
@@ -105,8 +176,8 @@
         toolbar.innerHTML = `
         <div class="ms-auto d-flex flex-wrap btn-list">
             <a href="/views/clipdown/app-config_detail_bacon.html" class="btn">바탕화면 아이콘 경로 편집</a>
-            <a href="#" class="btn">신규 매체 등록</a>
             <a href="/views/clipdown/app-config_detail_edite_all.html" class="btn">일괄 수정</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NewMediaRegister">신규 매체 등록</a>
         </div>
         `;
 
@@ -151,7 +222,7 @@
 
                         return `
                             <div class="btn-list flex-nowrap justify-content-center">
-                                <button href="#" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</button>
+                                <a href="/views/clipdown/app-config_detail_edite.html" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">수정</a>
                             </div>
                         `;
                     }
@@ -162,9 +233,9 @@
         });
 
         const grid2 = new DataTable("#table-pro-v1", {
-            // layout: {
-            //     topEnd: toolbar,
-            // },
+            layout: {
+                topEnd: toolbar.cloneNode(true),
+            },
             data: [
                 {
                     data1: "제이스퓨처",

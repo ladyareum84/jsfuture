@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로그램 관리</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+            <!-- BEGIN PAGE HEADER -->
+            <div class="page-header">
+                <div class="container-xl">
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="mb-3">
+                                <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item ">
+                                        <a href="#">클립다운</a>
+                                    </li>
+                                    <li class="breadcrumb-item " aria-current="page">
+                                        <a href="/views/clipdown/app-config.html">프로그램 관리</a>
+                                    </li>
+                                    <li class="breadcrumb-item" aria-current="page">
+                                        <a href="/views/clipdown/app-config_detail_edite.html">업데이트 수정</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="#">UI 업데이트 내역</a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <h2 class="page-title">UI 업데이트 내역</h2>
+                            <div class="text-secondary mt-1">매체별 UI 업데이트 내역입니다.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE HEADER -->
+            <!-- BEGIN PAGE BODY -->
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards">
+                        <!-- Content Table Style -->
+                        <div class="col-12">
+                            <div class="accordion" id="accordion-history">  
+                                <div class="card mb-2">
+                                    <div class="card-header cursor-pointer" data-bs-toggle="collapse" data-bs-target="#collapseHistory0" aria-controls="collapseHistory0" aria-expanded="true">
+                                        <h3 class="card-title">2025-08-05 11:00:00</h3>
+                                        <div class="card-actions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div id="collapseHistory0" class="collapse show" data-bs-parent="#accordion-history">
+                                        <div class="card-body p-0">
+                                            <div class="row row-cards">
+                                                <!-- Content Table Style -->
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="tableHistory0" class="table table-vcenter table-selectable table-bordered"></table>
+                                                    </div>
+                                                </div>
+                                                <!-- // Content Table Style -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-2">
+                                    <div class="card-header cursor-pointer" data-bs-toggle="collapse" data-bs-target="#collapseHistory1" aria-controls="collapseHistory1" aria-expanded="true">
+                                        <h3 class="card-title">2025-02-10 14:00:00</h3>
+                                        <div class="card-actions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div id="collapseHistory1" class="collapse" data-bs-parent="#accordion-history">
+                                        <div class="card-body p-0">
+                                            <div class="row row-cards">
+                                                <!-- Content Table Style -->
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="tableHistory1" class="table table-vcenter table-selectable table-bordered"></table>
+                                                    </div>
+                                                </div>
+                                                <!-- // Content Table Style -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Content Table Style -->
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        // Table Data
+        let toolbar = document.createElement("div");
+        toolbar.innerHTML = `
+        <div class="ms-auto d-flex flex-wrap btn-list">
+            <a href="#" class="btn">바탕화면 아이콘 경로 편집</a>
+            <a href="#" class="btn">신규 매체 등록</a>
+            <a href="#" class="btn">일괄 수정</a>
+        </div>
+        `;
+
+        const grid = new DataTable("#tableHistory0", {
+            // layout: {
+            //     topEnd: toolbar,
+            // },
+            data: [
+                {
+                    data1: "bg_list.png",
+                    data2: "27,86",
+                    data3: "1.0.0.0",
+                    data4: "images/bg_list.png",
+                    data5: "2025-08-05 10:56:18",
+                },
+            ],
+            columns: [
+                {
+                    title: '파일명',
+                    data: 'data1'
+                },
+                {
+                    title: '사이즈',
+                    data: 'data2',
+                    width:'10%'
+                },
+                {
+                    title: '버전',
+                    data: 'data3',
+                    width:'10%'
+                },
+                {
+                    title: '다운로드 경로',
+                    data: 'data4'
+                    
+                },
+                {
+                    title: '업데이트 날짜',
+                    data: 'data5',
+                    width:'15%'
+                }
+            ],
+            ...dataTablesConfg,
+        });
+
+        const grid2 = new DataTable("#tableHistory1", {
+            // layout: {
+            //     topEnd: toolbar,
+            // },
+            data: [
+                {
+                    data1: "bg_list.png",
+                    data2: "27,86",
+                    data3: "1.0.0.0",
+                    data4: "images/bg_list.png",
+                    data5: "2025-08-05 10:56:18",
+                },
+            ],
+            columns: [
+                {
+                    title: '파일명',
+                    data: 'data1'
+                },
+                {
+                    title: '사이즈',
+                    data: 'data2',
+                    width:'10%'
+                },
+                {
+                    title: '버전',
+                    data: 'data3',
+                    width:'10%'
+                },
+                {
+                    title: '다운로드 경로',
+                    data: 'data4'
+                    
+                },
+                {
+                    title: '업데이트 날짜',
+                    data: 'data5',
+                    width:'15%'
+                }
+            ],
+            ...dataTablesConfg,
+        });
+        
+
+
+        // date picker 설정
+        if (window.Litepicker) {
+            document.querySelectorAll('.datepicker').forEach((el) => {
+                new Litepicker({
+                    element: el,
+                    buttonText: {
+                        previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                        nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                    },
+                    lang: 'ko',
+                    format: 'YYYY-MM-DD',
+                    i18n: {
+                        ko: {
+                            weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                            months: [
+                                '1월', '2월', '3월', '4월', '5월', '6월',
+                                '7월', '8월', '9월', '10월', '11월', '12월'
+                            ],
+                            nextMonth: '다음 달',
+                            prevMonth: '이전 달',
+                            reset: '초기화',
+                            apply: '적용',
+                        },
+                    },
+                });
+            });
+        }
+
+    }; //여기 안에 넣기
+    includeFoundation(callback);
+</script>
+
+</html>

@@ -43,10 +43,15 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-table">
-                            <div class="custom-table custom-table-lg table-responsive">
-                                <table id="grid" class="table table-vcenter table-selectable table-bordered"></table>
+                                <div class="custom-table custom-table-lg table-responsive">
+                                    <table id="downloadSite" class="table table-vcenter table-selectable table-bordered"></table>
+                                </div>
                             </div>
-                        </div>
+                            <div class="card-footer text-end">
+                                <div class="d-flex">
+                                    <button type="button" id="btnUpdate" class="btn btn-primary ms-auto">수정</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- // Content Table Style -->
@@ -61,104 +66,135 @@
 <script>
     // includeFoundation();
 </script>
+
 <script>
-    const callback = () => {
-        // Table Data
+    const callback = function() {
+        // 아이콘 정의 (Tabler SVG 스타일)
+        const iconPlus = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>`;
+        const iconTrash = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>`;
         
-        let toolbar = document.createElement("div");
-        toolbar.innerHTML = `<button href="#" class="btn btn-danger">필드 추가</button>`;
+        // 페이지네이션 화살표 SVG
+        const svgLeft = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 6l-6 6l6 6"></path></svg>`;
+        const svgRight = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>`;
 
-        const grid = new DataTable("#grid", {
-            layout: {
-                topEnd: toolbar,
-            },
-            data: [
-                    {
-                    data1: "1",
-                    data2: "YouTbue",
-                    data3: "https://www.youtube.com/watch?v=",
-                    data4: "[a-zA-Z0-9-_]{11,}",
-                },
-                
-            ],
-            columns: [
+        // 1. 컬럼 정의 함수
+        function getColumnDefs() {
+            return [
                 {
-                    title: '순번',
-                    data: 'data1',
-                    width: '10%',
+                    title: "순서",
+                    data: null,
+                    className: "text-center align-middle bg-light-subtle",
+                    width: "60px",
+                    render: (data, type, row, meta) => meta.row + 1
                 },
                 {
-                    title: '사이트명',
-                    data: 'data2'
+                    title: "사이트명<br><small class='text-muted fw-normal'>EX) Youtube</small>",
+                    data: "data1",
+                    render: (data) => `<input type="text" class="form-control px-2" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${data || ''}">`
                 },
                 {
-                    title: 'URL',
-                    data: 'data3'
+                    title: "사이트 URL",
+                    data: "data2",
+                    render: (data) => `<input type="text" class="form-control px-2" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${data || ''}">`
                 },
                 {
-                    title: 'Pattern',
-                    data: 'data4'
+                    title: "Pattern",
+                    data: "data3",
+                    render: (data) => `<input type="text" class="form-control px-2" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${data || ''}">`
                 },
                 {
-                    title: '삭제',
-                    data: 'null',
+                    title: "행 편집",
+                    data: null,
+                    className: "text-center align-middle",
+                    width: "110px",
                     orderable: false,
-                    searchable: false,
-                    render: function (data, type, row, meta) {
-                        const mediaPackageName = row.media_package_name;
-                        const advertisementId = row.id;
+                    render: () => `
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-icon btn-outline-danger btn-remove-row">${iconTrash}</a>
+                            <a href="#" class="btn btn-icon btn-outline-success btn-add-row">${iconPlus}</a>
+                        </div>`
+                }
+            ];
+        }
 
-                        return `
-                            <div class="btn-list flex-nowrap justify-content-center">
-                                <a href="#" class="modifyBtn btn btn-table" data-advertisement-id="" data-media-package-name="}">삭제</a>
-                            </div>
-                        `;
+        // 2. DataTable 초기화
+        const uiGrid = $("#downloadSite").DataTable({
+            layout: { 
+                bottomStart: {
+                    info: {
+                        callback: function (settings, start, end, max, total, pre) {
+                            return `현재 ${start} - ${end} / ${total}건`;
+                        }
+                    }
+                },
+                bottomEnd: {
+                    paging: {
+                        type: 'simple_numbers'
                     }
                 }
-            ],
-            ...dataTablesConfg,
+            },
+            data: [{ data1: "Youtube", data2: "https://www.youtube.com/watch?v=", data3: "[a-zA-Z0-9-_]{11,}" }],
+            columns: getColumnDefs(),
+            paging: true,
+            pageLength: 10,
+            searching: false, 
+            info: true,
+            ordering: false, 
+            autoWidth: false,
+            language: {
+                paginate: {
+                    previous: svgLeft,
+                    next: svgRight
+                }
+            },
+            drawCallback: function() { 
+                $(this).addClass('table-bordered');
+                // 페이지네이션 버튼 스타일 조정
+                const $paging = $(this).closest('.dt-container').find('.dt-paging-button');
+                $paging.filter('.current').addClass('active');
+            },
+            ...dataTablesConfg // 공통 설정 병합
         });
 
+        // 3. 행 추가/삭제 이벤트
+        $('#downloadSite').off('click').on('click', '.btn-add-row', function(e) {
+            e.preventDefault();
+            uiGrid.row.add({ data1: "", data2: "", data3: "" }).draw(false);
+        });
 
-
-             // date picker 설정
-            if (window.Litepicker) {
-                document.querySelectorAll('.datepicker').forEach((el) => {
-                    new Litepicker({
-                        element: el,
-                        buttonText: {
-                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
-                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
-                        },
-                        lang: 'ko',
-                        format: 'YYYY-MM-DD',
-                        i18n: {
-                            ko: {
-                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
-                                months: [
-                                    '1월', '2월', '3월', '4월', '5월', '6월',
-                                    '7월', '8월', '9월', '10월', '11월', '12월'
-                                ],
-                                nextMonth: '다음 달',
-                                prevMonth: '이전 달',
-                                reset: '초기화',
-                                apply: '적용',
-                            },
-                        },
-                    });
-                });
+        $('#downloadSite').on('click', '.btn-remove-row', function(e) {
+            e.preventDefault();
+            if (uiGrid.rows().count() > 1) {
+                uiGrid.row($(this).closest('tr')).remove().draw(false);
+            } else {
+                alert("최소 한 개의 행은 유지해야 합니다.");
             }
+        });
 
+        // 4. 수정 버튼 클릭 핸들러 (Global)
+        window.handleTabSubmit = function(actionType) {
+            if (actionType === 'btnUpdate') {
+                const resultData = [];
+                uiGrid.rows().nodes().to$().each(function() {
+                    const inputs = $(this).find('input');
+                    if (inputs.length > 0) {
+                        resultData.push({
+                            siteName: inputs.eq(0).val(),
+                            siteUrl: inputs.eq(1).val(),
+                            pattern: inputs.eq(2).val()
+                        });
+                    }
+                });
+                
+                console.log("전체 데이터 수집:", resultData);
+                if (confirm("변경 내용을 저장하시겠습니까?")) {
+                    alert("성공적으로 수정되었습니다.");
+                }
+            }
+        };
 
+    }; // callback end
 
-
-
-
-
-    }; //여기 안에 넣기
     includeFoundation(callback);
 </script>
-
 </html>

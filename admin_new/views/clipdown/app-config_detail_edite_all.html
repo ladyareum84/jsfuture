@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>클립다운 리포트</title>
+    <title>프로그램 일괄 수정</title>
 </head>
 
 <body>
@@ -20,10 +20,10 @@
                                     <li class="breadcrumb-item">
                                         <a href="#">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">
+                                    <li class="breadcrumb-item ">
                                         <a href="#">클립다운</a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
+                                    <li class="breadcrumb-item " aria-current="page">
                                         <a href="/views/clipdown/app-config.html">프로그램 관리</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
@@ -47,14 +47,161 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="content_item">
-                                        <div class="row mb-4">
-                                            <label for="packageName" class="col-md-2 col-lg-2 col-form-label">매체명</label>
-                                            <div class="col-sm-12 col-md-6  col-lg-6">
-                                                <input type="text" class="form-control" id="packageName" placeholder="" disabled="">
+                                        <div class="mb-3 list_border_bottom">
+                                            <div class="row">
+                                                <div class="col-md-3 col-lg-2 ">
+                                                    <label for="standardMedia" class="form-label col-form-label">기준 매체</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6  col-lg-6">
+                                                    <select id="standardMedia" name="standardMedia" class="form-select">
+                                                        <option value="">기준 매체를 선택해주세요</option>
+                                                        <option value="1">[1] 자료실_1</option>
+                                                        <option value="2">[2] 자료실_2</option>
+                                                        <option value="3">[3] 홈페이지_1</option>
+                                                    </select> 
+                                                </div>                                            
                                             </div>
                                         </div>
-                                        
+                                        <div class="mb-3 list_border_bottom">
+                                            <div class="row">
+                                                <div class="col-md-3 col-lg-2 ">
+                                                    <label for="updateInfo" class="form-label col-form-label">적용 항목</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-9  col-lg-10">
+                                                    <div id="updateInfo" name="updateInfo">
+                                                        
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 list_border_bottom">
+                                            <div class="row">
+                                                <div class="col-md-3 col-lg-2 ">
+                                                    <label for="applyUpdateType" class="form-label col-form-label">업데이트 종류</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-9  col-lg-10">
+                                                    <div class="d-flex pb-3">
+                                                        <div class="flex-wrap btn-list">
+                                                            <input type="checkbox" id="all_type" class="btn-check" name="applyUpdateTypeAll" value="전체선택"  onclick="javascript:allUpdateChecked('applyUpdateType[]');">
+                                                            <label for="all_type" class="btn btn-table">
+                                                                <span id="text_type">전체 선택</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-lt rounded-1"> 
+                                                        <div class="card-body">
+                                                            <div id="applyUpdateType" name="applyUpdateType" class="row g-3">
+                                                                <label class="form-check form-check-inline col-sm-3  col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyUpdateType[]" value="UI" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">UI 업데이트</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3  col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyUpdateType[]" value="COMPEL"/>
+                                                                    <span class="form-check-label text-secondary font-weight-medium">강제 업데이트</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3  col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyUpdateType[]" value="REQUIRE"/>
+                                                                    <span class="form-check-label text-secondary font-weight-medium">필수파일</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 list_border_bottom">
+                                            <div class="row">
+                                                <div class="col-md-3 col-lg-2 ">
+                                                    <label for="applyMedia" class="form-label col-form-label">적용 매체</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-9  col-lg-10">
+                                                    <div class="d-flex pb-3">
+                                                        <div class="flex-wrap btn-list">
+                                                            <input type="checkbox" id="all_media" class="btn-check" name="applyUpdateTypeAll" value="전체선택"  onclick="javascript:allUpdateChecked('applyMedia[]');">
+                                                            <label for="all_media" class="btn btn-table">
+                                                                <span id="text_media">전체 선택</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-lt rounded-1"> 
+                                                        <div class="card-body">
+                                                            <div id="applyMedia" name="applyMedia" class="row g-3">
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="1" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 1 ] 테스트_매체_01</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="2" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 2 ] 테스트_매체_02</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="3" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 3 ] 테스트_매체_03</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="4" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 4 ] 테스트_매체_04</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="5" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 5 ] 테스트_매체_05</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="6" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 6 ] 테스트_매체_06</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="7" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 7 ] 테스트_매체_07</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="8" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 8 ] 테스트_매체_08</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="9" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 9 ] 테스트_매체_09</span>
+                                                                </label>
+                                                                <label class="form-check form-check-inline col-sm-3 col-md-3">
+                                                                    <input class="form-check-input" type="checkbox" name="applyMedia[]" value="10" />
+                                                                    <span class="form-check-label text-secondary font-weight-medium">[ 10 ] 테스트_매체_10</span>
+                                                                </label>                                                                    
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                            
+                                            </div>
+                                        </div>                                        
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-md-3 col-lg-2 ">
+                                                    <label for="releaseDate" class="form-label col-form-label">이력 관리</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-9  col-lg-10">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">날짜</label>
+                                                        
+                                                        <div class="input-icon w-25">
+                                                            <span class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                                                                <path d="M16 3v4"></path>
+                                                                <path d="M8 3v4"></path>
+                                                                <path d="M4 11h16"></path>
+                                                                <path d="M11 15h1"></path>
+                                                                <path d="M12 15v3"></path></svg></span>
+                                                            <input class="form-control datepicker" placeholder="날짜를 선택하세요" id="datepicker-default" name="releaseDate" value="2026-03-30">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">내용</label>
+                                                        <textarea class="form-control" id="releaseDescription" name="releaseDescription" rows="6" placeholder=""></textarea>
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="card-footer text-end">
                                     <a href="#" class="btn btn-primary btn-2"> 수정 </a>
@@ -85,7 +232,7 @@
         </div>
         `;
 
-        const grid = new DataTable("#grid", {
+        const grid = new DataTable("#uiUpdateRow", {
             // layout: {
             //     topEnd: toolbar,
             // },
@@ -138,44 +285,87 @@
         });
 
 
-             // date picker 설정
-            if (window.Litepicker) {
-                document.querySelectorAll('.datepicker').forEach((el) => {
-                    new Litepicker({
-                        element: el,
-                        buttonText: {
-                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
-                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+        // date picker 설정
+        if (window.Litepicker) {
+            document.querySelectorAll('.datepicker').forEach((el) => {
+                new Litepicker({
+                    element: el,
+                    buttonText: {
+                        previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
+                        nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
+                    },
+                    lang: 'ko',
+                    format: 'YYYY-MM-DD',
+                    i18n: {
+                        ko: {
+                            weekdays: ['일', '월', '화', '수', '목', '금', '토'],
+                            months: [
+                                '1월', '2월', '3월', '4월', '5월', '6월',
+                                '7월', '8월', '9월', '10월', '11월', '12월'
+                            ],
+                            nextMonth: '다음 달',
+                            prevMonth: '이전 달',
+                            reset: '초기화',
+                            apply: '적용',
                         },
-                        lang: 'ko',
-                        format: 'YYYY-MM-DD',
-                        i18n: {
-                            ko: {
-                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
-                                months: [
-                                    '1월', '2월', '3월', '4월', '5월', '6월',
-                                    '7월', '8월', '9월', '10월', '11월', '12월'
-                                ],
-                                nextMonth: '다음 달',
-                                prevMonth: '이전 달',
-                                reset: '초기화',
-                                apply: '적용',
-                            },
-                        },
-                    });
+                    },
                 });
-            }
-
-
-
-
-
+            });
+        }
 
 
     }; //여기 안에 넣기
     includeFoundation(callback);
 </script>
+<script>
+/**
+ * @param {string} targetName - 체크/해제할 대상 체크박스들의 name
+ */
+function allUpdateChecked(targetName) {
+    // 1. 클릭된 이벤트를 발생시킨 주체(전체선택 체크박스)를 찾습니다.
+    // HTML 구조상 onclick이 input[type="checkbox"]에 걸려 있으므로 event.target을 활용합니다.
+    const allBtn = event.target;
+    const isChecked = allBtn.checked;
+    
+    // 2. 해당 그룹 내의 텍스트(span) 요소를 찾습니다.
+    // 버튼 바로 옆 label 내부의 span id가 text_type 또는 text_media로 되어 있으므로 이를 활용합니다.
+    // 만약 모든 전체선택 버튼의 텍스트를 바꾸고 싶다면 아래와 같이 타겟팅합니다.
+    const btnText = allBtn.nextElementSibling.querySelector('span');
+    
+    if (btnText) {
+        btnText.innerText = isChecked ? "전체 해제" : "전체 선택";
+    }
+
+    // 3. 대상 체크박스들 모두 체크/해제
+    const checkboxes = document.getElementsByName(targetName);
+    checkboxes.forEach((cb) => {
+        cb.checked = isChecked;
+    });
+}
+
+// [추가] 페이지 로드 시 모든 항목을 전체 선택 상태로 초기화하는 스크립트
+window.onload = function() {
+    // 1. 전체 선택 버튼들 체크 상태로 변경 및 텍스트 설정
+    const allCheckboxes = ['all_type', 'all_media'];
+    allCheckboxes.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.checked = true;
+            const span = el.nextElementSibling.querySelector('span');
+            if (span) span.innerText = "전체 해제";
+        }
+    });
+
+    // 2. 모든 하위 체크박스 항목들 체크
+    const targetNames = ['applyUpdateType[]', 'applyMedia[]'];
+    targetNames.forEach(name => {
+        const group = document.getElementsByName(name);
+        group.forEach(cb => cb.checked = true);
+    });
+};
+</script>
+
 
 </html>
