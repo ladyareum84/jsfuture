@@ -14,7 +14,7 @@
         <div class="page-header">
             <div class="container-xl">
                 <div class="row align-items-center mw-100">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="mb-3">
                             <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
                                 <li class="breadcrumb-item">
@@ -28,8 +28,15 @@
                                 </li>
                             </ol>
                         </div>
-                        <h2 class="page-title"> 프로그램 관리</h2>
+                    </div>
+                    <div class="col">
+                        <h2 class="page-title">프로그램 관리</h2>
                         <div class="text-secondary mt-1">매체별 정보 등록/수정 합니다.</div>
+                    </div>
+                    <div class="col-auto ms-auto">
+                        <div class="btn-list">
+                            <a href="#" class="btn btn-primary d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#NewMediaRegister">신규 매체 등록</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,7 +184,6 @@
         <div class="ms-auto d-flex flex-wrap btn-list">
             <a href="/views/clipdown/app-config_detail_bacon.html" class="btn">바탕화면 아이콘 경로 편집</a>
             <a href="/views/clipdown/app-config_detail_edite_all.html" class="btn">일괄 수정</a>
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NewMediaRegister">신규 매체 등록</a>
         </div>
         `;
 

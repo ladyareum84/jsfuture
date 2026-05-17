@@ -3,14 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://rsms.me/inter/inter.css');
 
-
 /* 
     * 2025-05-27
     * 제이스퓨처 통합 어드민 스타일 시트
     * Tabler UI 스타일 커스터마이징
 */
-
-
 
 :host, :root{
     --tblr-font-sans-serif: 'NotoSansKR', Roboto, sans-serif;
@@ -40,12 +37,10 @@ body {
     font-weight: var(--tblr-font-weight-headings);
 }
 
-
-
 /* form */
 .form-check.form-check-inline{
     margin-bottom: 0; 
-    padding: .5rem 0 .5rem 2rem;
+    padding: .2rem 0 .2rem 2rem;
 }
 .form-selectgroup-item .img_box{
     width: 15rem;
@@ -53,7 +48,6 @@ body {
 .form-selectgroup-item .img_box img{
     border-radius: 0.625rem;
 }
-
 
 /* coloris */
 .square .clr-field button, 
@@ -69,134 +63,18 @@ body {
 .circle .clr-field input{
     padding-left: 36px;
 }
-
-
-/* JSF Custom Style */
-.content_item .content-title{
-    display: block;
-    font-size: 1rem;
-    font-weight: var(--tblr-font-weight-bold);
-    line-height: 2rem;
-}
-
-.list_border_bottom{
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-}
-.filter_radio{
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0;
-}
-.filter_radio .form-check{
-    margin-bottom: 0;
-}
-.form-tilde{ /* datepicker 사이 물결표 */
-    display: flex; 
-    align-items: center; 
-    padding: 0;
-} 
-.filter-item .input-icon-addon{
-    left: .188rem;
-}
-.table-media .cell-sort{
-    text-align: left;
-}
-.btn-list .btn-table, .custom-table .btn-table{
-    --tblr-btn-line-height: 1;
-    --tblr-btn-font-size: 0.75rem;
-}
-
-.filter-subtit{
-    display: flex;
-    align-items: center;
-}
-.filter-subtit h3{
-    margin-bottom: 0;
-}
-
-/* Table Style 재매핑 CSS  */
-@charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://rsms.me/inter/inter.css');
-
 
 /* 
-    * 2025-05-27
-    * 제이스퓨처 통합 어드민 스타일 시트
-    * Tabler UI 스타일 커스터마이징
+
+    * JSF Custom Style 
+    
 */
-
-
-
-:host, :root{
-    --tblr-font-sans-serif: 'NotoSansKR', Roboto, sans-serif;
-    --tblr-font-en: 'Roboto' , sans-serif;
-    --tblr-font-weight-headings: var(--tblr-font-weight-black);
-}
-body {
-    font-feature-settings: "cv03", "cv04", "cv11";
-}
-.min-w-8{min-width: 8.8rem;}
-.col-md-20 {
-    flex: 0 0 auto;
-    width: 20%;
-}
-.breadcrumb {
-    --tblr-breadcrumb-item-active-font-weight: var(--tblr-font-weight-medium);
-}
-.card{
-    --tblr-card-spacer-y: 1.25rem; --tblr-card-spacer-x: 1.25rem;
-}
-.card-title{
-    font-weight: var(--tblr-font-weight-bold);
-}
-.page-title{
-    font-size: var(--tblr-font-size-h1);
-    line-height: var(--tblr-line-height-h1);
-    font-weight: var(--tblr-font-weight-headings);
-}
-
-
-
-/* form */
-.form-check.form-check-inline{
-    margin-bottom: 0; 
-    padding: .5rem 0 .5rem 2rem;
-}
-.form-selectgroup-item .img_box{
-    width: 15rem;
-}
-.form-selectgroup-item .img_box img{
-    border-radius: 0.625rem;
-}
-
-
-/* coloris */
-.square .clr-field button, 
-.circle .clr-field button{
-    width: 22px;
-    height: 22px;
-    left: 5px;
-    right: auto;
-    border-radius: 6px;
-    background-image: unset;
-}
-.square .clr-field input, 
-.circle .clr-field input{
-    padding-left: 36px;
-}
-
-
-/* JSF Custom Style */
 .content_item .content-title{
     display: block;
     font-size: 1rem;
     font-weight: var(--tblr-font-weight-bold);
     line-height: 2rem;
 }
-
 .list_border_bottom{
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
@@ -224,7 +102,6 @@ body {
     --tblr-btn-line-height: 1;
     --tblr-btn-font-size: 0.75rem;
 }
-
 .filter-subtit{
     display: flex;
     align-items: center;
@@ -233,11 +110,10 @@ body {
     margin-bottom: 0;
 }
 
-/* Table Style 재매핑 CSS  */
+/* Table Style 재매핑 CSS */
 .custom-table {}
 .custom-table.custom-table-lg{}
 .custom-table.custom-table-sm{}
-
 
 .card-table .custom-table  tr td:first-child, 
 .card-table .custom-table  tr th:first-child{
@@ -250,7 +126,6 @@ body {
 .card-table .custom-table  tbody tr:hover{
     background-color: color-mix(in srgb, var(--tblr-blue-lt) calc(var(--tblr-bg-opacity, 1) * 100%), transparent);
 }
-
 
 .custom-table .markdown>table thead th, .table thead th{
     font-weight: var(--tblr-font-weight-bold);
@@ -316,7 +191,6 @@ body {
     align-items: center;
     gap: 4px;
 }
-
 .custom-table table.dataTable thead>tr>th.dt-orderable-asc:hover, 
 .custom-table table.dataTable thead>tr>th.dt-orderable-desc:hover, 
 .custom-table table.dataTable thead>tr>td.dt-orderable-asc:hover, 
@@ -324,10 +198,8 @@ body {
     outline: 1px solid rgba(0, 0, 0, 0.05);
     outline-offset: 0;
 }
-
 .custom-table table.dataTable td.dt-type-numeric{
     text-align: center;
-
 } 
 .custom-table table.dataTable td.dt-type-date{
     text-align: center;
@@ -345,7 +217,6 @@ body {
 {
     border-top: 1px solid var(--tblr-border-color-translucent);
 }
-
 .custom-table .dt-layout-row.dt-layout-table{
     margin: 0;
 }
@@ -370,11 +241,10 @@ body {
     box-shadow: var(--tblr-shadow-input);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-/* length 개씩 보기 - 텍스트 */
 .custom-table .dt-length label { 
     margin-left: 0.25rem;
 }
+
 /* custom-table-sm Table Style */
 .custom-table-sm table.dataTable>tbody>tr>th, 
 .custom-table-sm.custom-table table.dataTable>tbody>tr>td{
@@ -383,7 +253,6 @@ body {
 .custom-table-sm > div > div.dt-layout-row:not(.dt-layout-table){
     display: none;
 }
-
 
 /* Pagination Table 스타일 커스터마이징 */
 .custom-table div.dt-container .dt-paging{
@@ -394,16 +263,13 @@ body {
     min-width: 2rem;
     padding: 6px 4px;
     border-radius: calc(6px * 1);
-
 }
-
 .custom-table div.dt-container .dt-paging .dt-paging-button:hover{
     color: #374151 !important; ;
     border: 1px solid #f7f7f7;
     background-color: #f7f7f7;
     background: #f7f7f7;
 }
-
 .custom-table div.dt-container .dt-paging .dt-paging-button.current, 
 .custom-table div.dt-container .dt-paging .dt-paging-button.current:hover{
     background-color: #206bc4; /* Tabler primary */
@@ -413,7 +279,6 @@ body {
 .custom-table  div.dt-container .dt-paging .dt-paging-button:active{
     box-shadow: none;
 }
-
 .custom-table div.dt-container .dt-paging .dt-paging-button.disabled, 
 .custom-table div.dt-container .dt-paging .dt-paging-button.disabled:hover, 
 .custom-table div.dt-container .dt-paging .dt-paging-button.disabled:active{
@@ -422,36 +287,33 @@ body {
 
 /* Table option 양 끝으로 벌어지게 함 */
 .dt-layout-row {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center ;
+    width: 100% ;
 }
 .dt-layout-start {
     display: flex !important;
     justify-content: flex-start !important;
-    flex: 1; /* 왼쪽 공간 확보 */
+    flex: 1; 
 }
 .dt-layout-end {
     display: flex !important;
     justify-content: flex-end !important;
-    flex: 1; /* 오른쪽 공간 확보 */
+    flex: 1; 
     text-align: right;
 }
 .dt-length, .dt-search {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* 셀렉트 박스와 텍스트 사이 간격 */
+    gap: 0.5rem; 
 }
-
 
 /* Tabs Style */
 .nav-tabs.tabs-header .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     color: var(--tblr-primary) !important;
     font-weight: var(--tblr-font-weight-bold);
 }
-
-.tabs-square .nav{}
 .tabs-square .nav-tabs{
     --tblr-nav-tabs-border-color: var(--tblr-border-color);
     --tblr-nav-tabs-border-radius:0;
@@ -470,7 +332,6 @@ body {
     border: var(--tblr-nav-tabs-border-width) solid var(--tblr-border-color);
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-
 }
 .tabs-square .nav-tabs .nav-item.show .nav-link, .tabs-square .nav-tabs .nav-link.active,
 .tabs-square .nav-tabs .nav-item.show:hover .nav-link, .tabs-square .nav-tabs .nav-link.active:hover{
@@ -480,7 +341,6 @@ body {
     border-color: var(--tblr-primary);
     z-index: 999;
 }
-
 .tabs-square .nav-tabs .nav-link:hover{
     background-color: var(--tblr-nav-link-hover-bg);
     border-color: transparent;
@@ -489,6 +349,15 @@ body {
 .tabs-square .nav-item>.nav-item:not(:first-child), .tabs-square .nav-item:not(.nav-link:first-child){
     margin-left: calc(-3 * var(--tblr-border-width));
 }
+.nav-pills.nav-line .nav-link {
+    border-radius: 0;
+}
+.nav-pills.nav-line .nav-link.active,  .nav-pills.nav-line .show>.nav-link{
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid #066fd1;
+    background-color: transparent;
+}
 
 /* Custom Tooltip Style */
 .custom-tooltip {
@@ -496,8 +365,6 @@ body {
     display: inline-block;
     cursor: help;
 }
-
-/* 툴팁 글자 스타일 (기본적으로 숨김) */
 .custom-tooltip-text {
     visibility: hidden;
     display: inline-block;
@@ -505,7 +372,7 @@ body {
     top: 50%;
     right: 125%; 
     transform: translateY(-50%);
-    margin-left: -100px; /* 가운데 정렬 */
+    margin-left: -100px; 
     width: auto;
     width: max-content;
     max-width: 400px;
@@ -520,10 +387,8 @@ body {
     opacity: 0;
     transition: opacity 0.3s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    z-index: 9999; /* 다른 요소보다 위에 표시 */
+    z-index: 9999; 
 }
-
-/* 화살표 모양 만들기 */
 .custom-tooltip-text::after {
     content: "";
     position: absolute;
@@ -534,45 +399,58 @@ body {
     border-style: solid;
     border-color: transparent transparent transparent #333;
 }
-
-/* 마우스를 올렸을 때 툴팁 보여주기 */
 .custom-tooltip:hover .custom-tooltip-text {
     visibility: visible;
     opacity: 1;
 }
-
 
 /* Form Row Style */
 .form_al_row {
     display: flex;
     align-items: center;
 }
-.form_al_row .form-label{
-    margin-bottom: 0;
-}
-.form_al_row .form-check{
+.form_al_row .form-label, .form_al_row .form-check{
     margin-bottom: 0;
 }
 
+/* 관리 버튼 & 배너 스타일 */
+.btn-table-action {
+    width: 28px !important;  
+    height: 28px !important; 
+    padding: 0 !important;   
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;      
+}
+.btn-table-action svg {
+    width: 16px !important;  
+    height: 16px !important;
+}
+.bg-light-green {
+    background-color: #f6faf6 !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+#bannerUpdateRow thead {
+    border-top: 1px solid #e6e7e9 !important;
+}
 
-/* 
-    * Media Query
-
-*/
+/* Media Query */
 @media (min-width: 992px) {
     :host, :root {
-        margin-left: 0 !important;;
+        margin-left: 0 !important;
         margin-right: 0;
     }
 }
 
-@media (min-width: 768px) {
-    #filterCollapse.collapse:not(.show) {
-        display: block !important;
-    }
-}
-
 @media (max-width: 767.98px) {
+    #filterCollapse.collapse:not(.show) {
+    display: block !important;
+    }
+    .accordion-header { display: none !important; }
+    .accordion-content { display: block !important; }
+    
     .form-control, .form-select {
         font-size: .875rem !important;
     }
@@ -586,45 +464,24 @@ body {
     .form-label.label_empty{
         display: none;
     }
-
-    .dt-layout-row {
-        display: flex !important;
-        flex-direction: row !important; /* 위아래로 쌓이지 않게 고정 */
-        justify-content: space-between !important; /* 양 끝으로 배치 */
-        align-items: center !important;
-        gap: 10px;
-    }
     .dt-layout-cell {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-    .dt-search input {
-            width: 100px !important; /* 모바일 대응 크기 */
-        }
-
-    .dt-layout-row {
-        /* 상단 영역 전체를 유연하게 관리 */
-        display: flex !important;
-        flex-wrap: wrap !important; 
-        justify-content: space-between !important;
-        gap: 10px;
+        margin: 0 !important;
+        padding: 0 !important;
     }
-
-    /* 버튼들이 아래로 떨어졌을 때 우측 정렬 유지 및 위쪽 간격 추가 */
+    .dt-search input {
+        width: 100px !important; 
+    }
     .dt-layout-end .d-flex {
         justify-content: flex-start;
         width: 100%;
-        margin-top: 5px; /* 줄바꿈 시 상단과의 간격 */
+        margin-top: 5px; 
     }
-
     .custom-table div.dt-container .dt-paging{
         justify-content: center;
     }
-
     div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell .btn{
         --tblr-btn-padding-x: 0.5625rem;
         --tblr-btn-padding-y: 0.3125rem;
-
     }
     .custom-table div.dt-container .dt-input{
         padding: 0.3125rem 2.25rem 0.3125rem 0.75rem;
@@ -633,37 +490,17 @@ body {
         padding: 1rem;
         background-color: rgba(0, 0, 0, 0.02);
     }
-    
-    /* 열렸을 때 아이콘 회전 애니메이션 (선택사항) */
     .card-header[aria-expanded="true"] .icon-tabler-chevron-down {
         transform: rotate(180deg);
         transition: transform 0.3s;
     }
-
-    
-
-
-}
-
-@media (max-width: 575.98px) {
-    .form-control, .form-select {
-        font-size: .875rem;
-    }
-}
-
-
-/* 모바일 전용 스타일 (768px 미만) */
-@media (max-width: 767.98px) {
-    /* 1. 부모 카드 외곽선 제거 */
     .main-card-wrapper {
         border: none !important;
         background: transparent !important;
         box-shadow: none !important;
     }
-
-    /* 2. 개별 항목을 독립된 카드로 만들기 */
     .custom-tab-item {
-        display: block !important; /* 모바일에서 리스트 형태로 보이게 강제 */
+        display: block !important; 
         opacity: 1 !important;
         margin-bottom: 12px !important;
         background: #fff !important;
@@ -672,8 +509,6 @@ body {
         box-shadow: 0 2px 4px rgba(0,0,0,0.04) !important;
         overflow: hidden;
     }
-
-    /* 3. 아코디언 헤더 */
     .accordion-header {
         padding: 16px;
         display: flex;
@@ -682,357 +517,18 @@ body {
         cursor: pointer;
         background: #fff;
     }
-
-    /* 4. 활성화 상태 디자인 */
     .custom-tab-item.active .accordion-header {
         border-bottom: 1px solid rgba(101, 109, 119, 0.08);
         color: #206bc4;
     }
-
-    /* 5. 열리지 않은 컨텐츠 숨기기 */
     .custom-tab-item:not(.active) .accordion-content {
         display: none !important;
     }
-
-    /* 6. 화살표 회전 */
     .accordion-arrow { transition: transform 0.3s; }
     .custom-tab-item.active .accordion-arrow { transform: rotate(180deg); }
 }
-
-/* 데스크톱 스타일 복구 */
-@media (min-width: 768px) {
-    .accordion-header { display: none !important; }
-    .accordion-content { display: block !important; }
-}
-
-
-/* 관리 버튼 크기 최소화 */
-.btn-table-action {
-    width: 28px !important;  /* 버튼 가로 크기 */
-    height: 28px !important; /* 버튼 세로 크기 */
-    padding: 0 !important;   /* 내부 여백 제거 */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;      /* 약간의 곡률 */
-}
-
-/* 버튼 내 아이콘 크기 조절 */
-.btn-table-action svg {
-    width: 16px !important;  /* 아이콘 크기 축소 */
-    height: 16px !important;
-}
-
-/* 연초록 배경 (이미지 스타일) */
-.bg-light-green {
-    background-color: #f6faf6 !important;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* 광고 설정 배너 테이블 상단 영역에만 구분선 추가 */
-#bannerUpdateRow thead {
-    border-top: 1px solid #e6e7e9 !important;
-}
-
-
-
-
-
-/* Tabs Style */
-.nav-tabs.tabs-header .nav-item.show .nav-link, .nav-tabs .nav-link.active{
-    color: var(--tblr-primary) !important;
-    font-weight: var(--tblr-font-weight-bold);
-}
-
-.tabs-square .nav{}
-.tabs-square .nav-tabs{
-    --tblr-nav-tabs-border-color: var(--tblr-border-color);
-    --tblr-nav-tabs-border-radius:0;
-    --tblr-nav-tabs-link-hover-border-color: var(--tblr-border-color) var(--tblr-border-color) var(--tblr-border-color);
-    --tblr-nav-tabs-link-active-bg: var(--tblr-body-bg);
-    --tblr-nav-tabs-link-active-border-color: var(--tblr-border-color) var(--tblr-border-color) var(--tblr-border-color);
-    border-bottom: inherit;
-}
-.tabs-square .nav-tabs .nav-link{
-    margin-bottom: calc(-1 * var(--tblr-nav-tabs-border-width));
-    border: var(--tblr-nav-tabs-border-width) solid transparent;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-}
-.tabs-square .nav-fill .nav-item, .tabs-square .nav-fill>.nav-link{
-    border: var(--tblr-nav-tabs-border-width) solid var(--tblr-border-color);
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-
-}
-.tabs-square .nav-tabs .nav-item.show .nav-link, .tabs-square .nav-tabs .nav-link.active,
-.tabs-square .nav-tabs .nav-item.show:hover .nav-link, .tabs-square .nav-tabs .nav-link.active:hover{
-    position: relative;
-    color: var(--tblr-primary);
-    background-color: rgba(var(--tblr-primary-rgb), .04);
-    border-color: var(--tblr-primary);
-    z-index: 999;
-}
-
-.tabs-square .nav-tabs .nav-link:hover{
-    background-color: var(--tblr-nav-link-hover-bg);
-    border-color: transparent;
-    color: var(--tblr-nav-link-color);
-}
-.tabs-square .nav-item>.nav-item:not(:first-child), .tabs-square .nav-item:not(.nav-link:first-child){
-    margin-left: calc(-3 * var(--tblr-border-width));
-}
-
-/* Custom Tooltip Style */
-.custom-tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: help;
-}
-
-/* 툴팁 글자 스타일 (기본적으로 숨김) */
-.custom-tooltip-text {
-    visibility: hidden;
-    display: inline-block;
-    position: absolute;    
-    top: 50%;
-    right: 125%; 
-    transform: translateY(-50%);
-    margin-left: -100px; /* 가운데 정렬 */
-    width: auto;
-    width: max-content;
-    max-width: 400px;
-    min-width: 100px;
-    background-color: #333;
-    color: #fff;
-    font-size: var(--tblr-font-size-h5);
-    line-height: 1.4;
-    text-align: left;
-    border-radius: 6px;
-    padding: 8px 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    z-index: 9999; /* 다른 요소보다 위에 표시 */
-}
-
-/* 화살표 모양 만들기 */
-.custom-tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent transparent #333;
-}
-
-/* 마우스를 올렸을 때 툴팁 보여주기 */
-.custom-tooltip:hover .custom-tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/* Form Row Style */
-.form_al_row {
-    display: flex;
-    align-items: center;
-}
-.form_al_row .form-label{
-    margin-bottom: 0;
-}
-.form_al_row .form-check{
-    margin-bottom: 0;
-}
-
-
-/* 
-    * Media Query
-
-*/
-@media (min-width: 992px) {
-    :host, :root {
-        margin-left: 0 !important;;
-        margin-right: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    #filterCollapse.collapse:not(.show) {
-        display: block !important;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .form-control, .form-select {
-        font-size: .875rem !important;
-    }
-    .filter-item .text-start{
-        text-align: center !important;
-    }
-    .filter-item .text-start .btn{
-        width: 100% !important;
-    }
-    .col-form-label.label_empty, 
-    .form-label.label_empty{
-        display: none;
-    }
-
-    .dt-layout-row {
-        display: flex !important;
-        flex-direction: row !important; /* 위아래로 쌓이지 않게 고정 */
-        justify-content: space-between !important; /* 양 끝으로 배치 */
-        align-items: center !important;
-        gap: 10px;
-    }
-    .dt-layout-cell {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-    .dt-search input {
-            width: 100px !important; /* 모바일 대응 크기 */
-        }
-
-    .dt-layout-row {
-        /* 상단 영역 전체를 유연하게 관리 */
-        display: flex !important;
-        flex-wrap: wrap !important; 
-        justify-content: space-between !important;
-        gap: 10px;
-    }
-
-    /* 버튼들이 아래로 떨어졌을 때 우측 정렬 유지 및 위쪽 간격 추가 */
-    .dt-layout-end .d-flex {
-        justify-content: flex-start;
-        width: 100%;
-        margin-top: 5px; /* 줄바꿈 시 상단과의 간격 */
-    }
-
-    .custom-table div.dt-container .dt-paging{
-        justify-content: center;
-    }
-
-    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell .btn{
-        --tblr-btn-padding-x: 0.5625rem;
-        --tblr-btn-padding-y: 0.3125rem;
-
-    }
-    .custom-table div.dt-container .dt-input{
-        padding: 0.3125rem 2.25rem 0.3125rem 0.75rem;
-    }
-    .card-header.cursor-pointer {
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.02);
-    }
-    
-    /* 열렸을 때 아이콘 회전 애니메이션 (선택사항) */
-    .card-header[aria-expanded="true"] .icon-tabler-chevron-down {
-        transform: rotate(180deg);
-        transition: transform 0.3s;
-    }
-
-    
-
-
-}
-
 @media (max-width: 575.98px) {
     .form-control, .form-select {
         font-size: .875rem;
     }
 }
-
-
-/* 모바일 전용 스타일 (768px 미만) */
-@media (max-width: 767.98px) {
-    /* 1. 부모 카드 외곽선 제거 */
-    .main-card-wrapper {
-        border: none !important;
-        background: transparent !important;
-        box-shadow: none !important;
-    }
-
-    /* 2. 개별 항목을 독립된 카드로 만들기 */
-    .custom-tab-item {
-        display: block !important; /* 모바일에서 리스트 형태로 보이게 강제 */
-        opacity: 1 !important;
-        margin-bottom: 12px !important;
-        background: #fff !important;
-        border: 1px solid rgba(101, 109, 119, 0.16) !important;
-        border-radius: 8px !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.04) !important;
-        overflow: hidden;
-    }
-
-    /* 3. 아코디언 헤더 */
-    .accordion-header {
-        padding: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        background: #fff;
-    }
-
-    /* 4. 활성화 상태 디자인 */
-    .custom-tab-item.active .accordion-header {
-        border-bottom: 1px solid rgba(101, 109, 119, 0.08);
-        color: #206bc4;
-    }
-
-    /* 5. 열리지 않은 컨텐츠 숨기기 */
-    .custom-tab-item:not(.active) .accordion-content {
-        display: none !important;
-    }
-
-    /* 6. 화살표 회전 */
-    .accordion-arrow { transition: transform 0.3s; }
-    .custom-tab-item.active .accordion-arrow { transform: rotate(180deg); }
-}
-
-/* 데스크톱 스타일 복구 */
-@media (min-width: 768px) {
-    .accordion-header { display: none !important; }
-    .accordion-content { display: block !important; }
-}
-
-
-/* 관리 버튼 크기 최소화 */
-.btn-table-action {
-    width: 28px !important;  /* 버튼 가로 크기 */
-    height: 28px !important; /* 버튼 세로 크기 */
-    padding: 0 !important;   /* 내부 여백 제거 */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;      /* 약간의 곡률 */
-}
-
-/* 버튼 내 아이콘 크기 조절 */
-.btn-table-action svg {
-    width: 16px !important;  /* 아이콘 크기 축소 */
-    height: 16px !important;
-}
-
-/* 연초록 배경 (이미지 스타일) */
-.bg-light-green {
-    background-color: #f6faf6 !important;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* 광고 설정 배너 테이블 상단 영역에만 구분선 추가 */
-#bannerUpdateRow thead {
-    border-top: 1px solid #e6e7e9 !important;
-}
-
-
-
-
-
-
-
-

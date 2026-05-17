@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클립다운 모바일 광고 설정</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+            <!-- BEGIN PAGE HEADER -->
+            <div class="page-header">
+                <div class="container-xl">
+                    <div class="row align-items-center mw-100">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                    <li class="breadcrumb-item active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        <a href="#">클립다운 모바일</a>
+                                    </li>
+                                    <li class="breadcrumb-item" aria-current="page">
+                                        <a href="/views/clipdown_mobile/mobile_ad-report.html">광고 보고서</a>
+                                    </li>
+                                    <li class="breadcrumb-item" aria-current="page">
+                                        <a href="/views/clipdown_mobile/mobile_ad-report_config.html">광고 설정</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="#">SDK 광고 설정</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2 class="page-title"> SDK 광고 설정</h2>
+                            <div class="text-secondary mt-1">내부, 외부 SDK 광고 등록 및 설정합니다. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE HEADER -->
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">광고 등록</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="contetn_item">
+                                        <div class="mb-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-3">
+                                                    <label for="standardMedia" class="form-label col-form-label">광고 구분</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="d-flex flex-row gap-4">
+                                                        <label for="status" class="form-check form-check-inline">
+                                                            <input id="work_manager_config_yn" value="Y" class="form-check-input" type="radio" name="work_manager_config_yn" checked="">
+                                                            <span class="form-check-label">내부 광고</span>
+                                                        </label>
+                                                        <label class="form-check form-check-inline">
+                                                            <input id="work_manager_config_yn" value="N" class="form-check-input" type="radio" name="work_manager_config_yn">
+                                                            <span class="form-check-label">외부 광고</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="standardMedia" class="form-label col-form-label">광고 배너 업로드</label>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="content_item">
+                                                        <div class="row mb-4">
+                                                            <label for="" class="form-label fw-bold">리스트 광고 업로드</label>
+                                                            <div class="col-6">
+                                                                <div class="row align-items-center g-3">
+                                                                    <div class="input_file">
+                                                                        <input type="file" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-4">
+                                                            <label for="" class="form-label fw-bold">하단 광고 업로드</label>
+                                                            <div class="col-6">
+                                                                <div class="row align-items-center g-3">
+                                                                    <div class="input_file">
+                                                                        <input type="file" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-4">
+                                                            <label for="" class="form-label fw-bold">검색 광고 업로드</label>
+                                                            <div class="col-6">
+                                                                <div class="row align-items-center g-3">
+                                                                    <div class="input_file">
+                                                                        <input type="file" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-3">
+                                                    <label for="standardMedia" class="form-label col-form-label">광고 URL</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="d-flex flex-row gap-4">
+                                                        <label for="status" class="form-check form-check-inline">
+                                                            <input id="work_manager_config_yn" value="Y" class="form-check-input" type="radio" name="work_manager_config_yn" checked="">
+                                                            <span class="form-check-label">내부 광고</span>
+                                                        </label>
+                                                        <label class="form-check form-check-inline">
+                                                            <input id="work_manager_config_yn" value="N" class="form-check-input" type="radio" name="work_manager_config_yn">
+                                                            <span class="form-check-label">외부 광고</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 p-3 border-top d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary" onclick="handleTabSubmit('adLocalAdd()')">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Tabs Style -->
+                        <div class="col-12 custom-accordion-container">
+                            <div class="card main-card-wrapper">
+                                <div class="card-header d-none d-md-block">
+                                    <ul class="nav nav-tabs card-header-tabs nav-fill" role="tablist">
+                                        <li class="nav-item"><a href="#adSdkLocal" class="nav-link active" data-bs-toggle="tab">내부 광고</a></li>
+                                        <li class="nav-item"><a href="#adsdkAdd" class="nav-link" data-bs-toggle="tab">외부 광고</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-body p-0 bg-transparent">
+                                    <div class="tab-content">                                    
+                                        <!-- #adSdkLocal -->
+                                        <div class="tab-pane custom-tab-item fade show active" id="adSdkLocal" role="tabpanel">
+                                            <div class="accordion-header d-md-none" onclick="runAccordion('configAD')">
+                                                <span class="fw-bold">광고 설정</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="content_body">
+
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <!-- // #adSdkLocal -->
+                                        <!-- #adsdkAdd -->
+                                        <div class="tab-pane fade custom-tab-item" id="adsdkAdd" role="tabpanel">
+                                            <div class="accordion-header d-md-none" onclick="runAccordion('configShareReview')">
+                                                <span class="fw-bold">공유/리뷰 설정</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M6 9l6 6l6 -6"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="content_body">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // #adsdkAdd -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Content Table Style -->
+                    </div>
+                </div>
+            </div><!-- BEGIN PAGE BODY -->
+        </div>
+        <!-- END PAGE -->
+    </div>
+    <!-- Modal adSDKLocal -->
+    <div class="modal visually-hidden" id="adSdkLocal" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">내부 SDK 광고 등록 리스트 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">First card</h3>
+                                </div>
+                                <div class="card-body p-0">
+                                    
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+                                    </div>
+                                </div>
+                            </div>                   
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                
+                            </div>                   
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Modal adSDKLocal -->
+    <!-- Modal adSDKAdd -->
+    <div class="modal visually-hidden" id="adsdkAdd" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">외부 SDK 광고 등록 리스트 </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cards">
+                        <div class="col-12">
+                            <div class="card">
+                                
+                            </div>                   
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">First card</h3>
+                                </div>
+                                <div class="card-body p-0">
+                                    
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+                                    </div>
+                                </div>
+                            </div>                   
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Modal adSDKAdd -->
+    
+</body>
+<!-- END PAGE BODY -->
+<script src="/foundation/foundation.js"></script>
+<script>
+    // includeFoundation();
+</script>
+<script>
+    const callback = () => {
+        const iconPlus = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5l0 14M5 12l14 0"></path></svg>`;
+        const iconTrash = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l16 0M10 11l0 6M14 11l0 6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>`;
+
+        // 1. 공통 설정 (기본 틀)
+        const commonConfig = {
+            paging: true,
+            searching: false,
+            autoWidth: false,
+            responsive: true,
+            language: { info: "현재 _START_ - _END_ / _TOTAL_건" },
+            drawCallback: function() {
+                const $container = $(this).closest('.dt-container');
+                const $paging = $container.find('.dt-paging');
+                $paging.find('.dt-paging-button').addClass('btn btn-sm btn-icon border-0');
+                $paging.find('.dt-paging-button.current').addClass('btn-primary text-white').removeClass('border-0');
+            }
+        };
+
+        // 2. [탭 1] 광고 설정 (adTable) - 복합 헤더 에러 해결
+        const adGrid = $("#adTable").DataTable({
+            ...commonConfig,
+            paging: false, 
+            info: false,
+            ordering: false, 
+            layout: null,    // Tabler 레이아웃 유지
+            // HTML의 실제 <td> 개수와 동일하게 7개를 선언해야 에러가 안 납니다.
+            columns: [
+                { className: "text-center" }, // 지면명 (구분)
+                { className: "text-center" }, // 지면명 (위치)
+                { className: "text-center" }, // 광고 설정
+                { className: "text-center" }, // 순위 1
+                { className: "text-center" }, // 순위 2
+                { className: "text-center" }, // 순위 3
+                { className: "text-center" }  // 노출 순번
+            ]
+        });
+
+        // 3. [탭 2] 공유/리뷰 설정 (ShareReviewRow)
+        const shareReviewGrid = $("#ShareReviewRow").DataTable({
+            ...commonConfig,
+            data: [
+                { data1: "공유", data2: "노출", data3: "유튜브탭", data4: "10", data5: "5" },
+                { data1: "리뷰", data2: "미노출", data3: "다운로드탭", data4: "10", data5: "5" }
+            ],
+            columns: [
+                { 
+                    title: "지면명", 
+                    data: "data1",
+                    width: "15%",  
+                    className: "text-center" 
+                },
+                { 
+                    title: "노출 설정", 
+                    data: "data2", 
+                    className: "text-center",
+                    render: (d, t, r, m) => `
+                        <div class="d-flex justify-content-center gap-2">
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="sh_${m.row}" value="노출" ${d==='노출'?'checked':''}>
+                                <span class="form-check-label">노출</span>
+                            </label>
+                            <label class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="sh_${m.row}" value="미노출" ${d==='미노출'?'checked':''}>
+                                <span class="form-check-label">미노출</span>
+                            </label>
+                        </div>`
+                },
+                { 
+                    title: "공유/리뷰 유형", 
+                    data: "data3", 
+                    className: "text-center",
+                    render: d => `
+                        <select class="form-select">
+                            <option value="유튜브탭" ${d==='유튜브탭'?'selected':''}>유튜브탭</option>
+                            <option value="다운로드탭" ${d==='다운로드탭'?'selected':''}>다운로드탭</option>
+                        </select>`
+                },
+                { 
+                    title: "노출 순번", 
+                    data: "data4", 
+                    className: "text-center", 
+                    width: "15%", 
+                    render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
+                },
+                { 
+                    title: "노출 제한", 
+                    data: "data5", 
+                    className: "text-center", 
+                    width: "15%", 
+                    render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
+                }
+            ]
+        });
+
+        // 4. [탭 3] 앱 호출 광고 설정 (AppCallAdRow)
+        const appCallAdGrid = $("#AppCallAdRow").DataTable({
+            ...commonConfig,
+            columns: [
+                { title: "순서", data: null, render: (d, t, r, m) => m.row + 1, className: "text-center", width: "60px" },
+                { title: "파라미터명", data: "paramName", render: d => `<input type="text" class="form-control" value="${d || ''}">` },
+                { title: "값(Value)", data: "paramValue", render: d => `<input type="text" class="form-control" value="${d || ''}">` },
+                { title: "행 편집", data: null, className: "text-center", width: "100px", render: () => `
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-icon btn-outline-danger btn-remove-row">${iconTrash}</button>
+                        <button class="btn btn-icon btn-outline-success btn-add-row">${iconPlus}</button>
+                    </div>` 
+                }
+            ]
+        });
+
+        // --- 이벤트 핸들러 ---
+        
+        // 행 삭제
+        $('table').on('click', '.btn-remove-row', function(e) {
+            e.preventDefault();
+            const table = $(this).closest('table').DataTable();
+            if (table.rows().count() > 1) table.row($(this).closest('tr')).remove().draw();
+        });
+
+        // 행 추가
+        $('#AppCallAdRow').on('click', '.btn-add-row', function(e) {
+            e.preventDefault();
+            appCallAdGrid.row.add({ paramName: "", paramValue: "" }).draw(false);
+        });
+
+        // 탭 클릭 시 테이블 너비 재계산 (매우 중요: 안 하면 안 보임)
+        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function() {
+            $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+        });
+
+        // 아코디언 대응
+        window.runAccordion = function(tabId) {
+            if (window.innerWidth >= 768) return;
+            $('.custom-tab-item').removeClass('show active');
+            const $target = $('#' + tabId).addClass('show active');
+            setTimeout(() => $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust(), 200);
+        };
+    };
+
+    includeFoundation(callback);
+</script>
+<script>
+function runAccordion(targetId) {
+    // 모바일 환경 체크
+    if (window.innerWidth >= 768) return;
+
+    const targetPane = document.getElementById(targetId);
+    const isActive = targetPane.classList.contains('active');
+
+    // 1. 모든 패널 닫기
+    document.querySelectorAll('.custom-tab-item').forEach(pane => {
+        pane.classList.remove('active', 'show');
+    });
+
+    // 2. 이미 열려있던걸 누른게 아니라면 열기 (토글)
+    if (!isActive) {
+        targetPane.classList.add('active', 'show');
+        
+        // 3. 상단 탭과 동기화 (데스크톱 뷰 전환 대비)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + targetId) {
+                link.classList.add('active');
+            }
+        });
+
+        // 4. 부드러운 스크롤
+        setTimeout(() => {
+            targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+}
+</script> 
+
+</html>
