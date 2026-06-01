@@ -56,16 +56,16 @@
                                         <div class="mb-4">
                                             <div class="row align-items-center">
                                                 <div class="col-md-3">
-                                                    <label for="standardMedia" class="form-label col-form-label">광고 구분</label>
+                                                    <label class="form-label col-form-label">광고 구분</label>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <div class="d-flex flex-row gap-4">
-                                                        <label for="status" class="form-check form-check-inline">
-                                                            <input id="work_manager_config_yn" value="Y" class="form-check-input" type="radio" name="work_manager_config_yn" checked="">
+                                                        <label class="form-check form-check-inline">
+                                                            <input id="addLocalAd" class="form-check-input" type="radio" name="adType" checked>
                                                             <span class="form-check-label">내부 광고</span>
                                                         </label>
                                                         <label class="form-check form-check-inline">
-                                                            <input id="work_manager_config_yn" value="N" class="form-check-input" type="radio" name="work_manager_config_yn">
+                                                            <input id="adsdkAdd" class="form-check-input" type="radio" name="adType">
                                                             <span class="form-check-label">외부 광고</span>
                                                         </label>
                                                     </div>
@@ -119,16 +119,19 @@
                                                 <div class="col-md-3">
                                                     <label for="standardMedia" class="form-label col-form-label">광고 URL</label>
                                                 </div>
-                                                <div class="col-md-5">
-                                                    <div class="d-flex flex-row gap-4">
-                                                        <label for="status" class="form-check form-check-inline">
-                                                            <input id="work_manager_config_yn" value="Y" class="form-check-input" type="radio" name="work_manager_config_yn" checked="">
-                                                            <span class="form-check-label">내부 광고</span>
-                                                        </label>
-                                                        <label class="form-check form-check-inline">
-                                                            <input id="work_manager_config_yn" value="N" class="form-check-input" type="radio" name="work_manager_config_yn">
-                                                            <span class="form-check-label">외부 광고</span>
-                                                        </label>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-flat">
+                                                        <!-- 아이콘 영역 -->
+                                                        <span class="input-group-text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24/0z" fill="none"></path>
+                                                                <path d="M9 15l6 -6"></path>
+                                                                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
+                                                                <path d="M13 18l-.397 .534a5 5 0 0 1 -7.072 -7.071l.396 -.534"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <!-- 인풋 창 -->
+                                                        <input type="url" class="form-control ps-2" placeholder="https://example.com" autocomplete="off">
                                                     </div>
                                                 </div>                                               
                                             </div>
@@ -141,45 +144,69 @@
                             </div>
                         </div>
                         <!-- Content Tabs Style -->
-                        <div class="col-12 custom-accordion-container">
-                            <div class="card main-card-wrapper">
+                        <div class="col-12">
+                            <div class="card">
                                 <div class="card-header d-none d-md-block">
-                                    <ul class="nav nav-tabs card-header-tabs nav-fill" role="tablist">
-                                        <li class="nav-item"><a href="#adSdkLocal" class="nav-link active" data-bs-toggle="tab">내부 광고</a></li>
-                                        <li class="nav-item"><a href="#adsdkAdd" class="nav-link" data-bs-toggle="tab">외부 광고</a></li>
+                                    <!-- Tab Menu --> 
+                                    <ul class="nav nav-tabs card-header-tabs tabs-header" data-bs-toggle="tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <!-- 페이지 로드 시 기본으로 켜질 버튼에 active 적용 -->
+                                            <a href="#adSdkLocal" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">내부 SDK 광고 리스트</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <!-- 외부 탭 버튼은 active를 제거하여 비활성 상태로 대기 -->
+                                            <a href="#adsdkAdd" class="nav-link" data-bs-toggle="tab" aria-selected="false" role="tab" tabindex="-1">외부 SDK 광고 리스트</a>
+                                        </li>
                                     </ul>
+                                    <!-- // Tab Menu --> 
                                 </div>
-                                <div class="card-body p-0 bg-transparent">
+                                <div class="content-item">
+                                    <!-- Tab Content -->
                                     <div class="tab-content">                                    
-                                        <!-- #adSdkLocal -->
-                                        <div class="tab-pane custom-tab-item fade show active" id="adSdkLocal" role="tabpanel">
-                                            <div class="accordion-header d-md-none" onclick="runAccordion('configAD')">
-                                                <span class="fw-bold">광고 설정</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6 -6"></path></svg>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="content_body">
-
+                                        <!-- 내부 SDK 광고 리스트 -->
+                                        <div class="tab-pane fade active show" id="adSdkLocal" role="tabpanel">
+                                            <div class="col-12">
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="table-ad-sdk-local" class="table table-bordered dataTable w-100">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>구분</th>
+                                                                    <th>리스트 광고 이미지</th>
+                                                                    <th>하단 광고 이미지</th>
+                                                                    <th>검색 광고 이미지</th>
+                                                                    <th>광고 이미지</th>
+                                                                    <th>내부 광고 URL</th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>                                            
                                         </div>
-                                        <!-- // #adSdkLocal -->
-                                        <!-- #adsdkAdd -->
-                                        <div class="tab-pane fade custom-tab-item" id="adsdkAdd" role="tabpanel">
-                                            <div class="accordion-header d-md-none" onclick="runAccordion('configShareReview')">
-                                                <span class="fw-bold">공유/리뷰 설정</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon accordion-arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M6 9l6 6l6 -6"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="content_body">
-                                                    
+                                        <!-- // 내부 SDK 광고 리스트 -->
+                                        <!-- 외부 SDK 광고 리스트-->
+                                        <div class="tab-pane fade" id="adsdkAdd" role="tabpanel">
+                                            <div class="col-12">
+                                                <div class="card-table">
+                                                    <div class="custom-table custom-table-lg table-responsive">
+                                                        <table id="table-ad-sdk-add" class="table table-bordered dataTable w-100">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>구분</th>
+                                                                    <th>리스트 광고 이미지</th>
+                                                                    <th>하단 광고 이미지</th>
+                                                                    <th>검색 광고 이미지</th>
+                                                                    <th>광고 이미지</th>
+                                                                    <th>내부 광고 URL</th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </div>                                            
                                         </div>
-                                        <!-- // #adsdkAdd -->
+                                        <!-- 외부 SDK 광고 리스트-->
                                     </div>
                                 </div>
                             </div>
@@ -281,32 +308,116 @@
 </script>
 <script>
     const callback = () => {
+        // [공통 UI] 아이콘 에셋 정의
         const iconPlus = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5l0 14M5 12l14 0"></path></svg>`;
         const iconTrash = `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l16 0M10 11l0 6M14 11l0 6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path></svg>`;
 
-        // 1. 공통 설정 (기본 틀)
+        // ==========================================
+        // 1. DataTables 공통 설정 옵션
+        // ==========================================
         const commonConfig = {
             paging: true,
             searching: false,
             autoWidth: false,
             responsive: true,
-            language: { info: "현재 _START_ - _END_ / _TOTAL_건" },
+            lengthMenu: [10, 25, 50, 100], 
+            language: { 
+                info: "현재 _START_ - _END_ / _TOTAL_건",
+                lengthMenu: "_MENU_개씩 보기" 
+            },
             drawCallback: function() {
                 const $container = $(this).closest('.dt-container');
                 const $paging = $container.find('.dt-paging');
                 $paging.find('.dt-paging-button').addClass('btn btn-sm btn-icon border-0');
                 $paging.find('.dt-paging-button.current').addClass('btn-primary text-white').removeClass('border-0');
+
+                // Tabler 팝오버 초기화 (이미지 마우스 오버용)
+                const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+                popoverTriggerList.map(function (popoverTriggerEl) {
+                    return new bootstrap.Popover(popoverTriggerEl, {
+                        html: true,
+                        trigger: 'hover',
+                        placement: 'auto'
+                    });
+                });
             }
         };
 
-        // 2. [탭 1] 광고 설정 (adTable) - 복합 헤더 에러 해결
+        // ==========================================
+        // 2. 공용 커스텀 렌더러 함수
+        // ==========================================
+        // [렌더러] 이미지 파일명 호버 시 프리뷰 팝오버 출력
+        const imagePreviewRenderer = (imgName) => {
+            if (!imgName) return `<span class="text-secondary">-</span>`;
+            const fullImgUrl = `/assets/img/ad/${imgName}`; 
+            return `
+                <span class="text-reset cursor-pointer" data-bs-toggle="popover" data-bs-content="<img src='${fullImgUrl}' class='img-fluid rounded' style='max-width:200px;' />">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1 text-secondary" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24/0z" fill="none"/><path d="M15 8h.01" /><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" /><path d="M3 16l5.158 -5.158a2 2 0 0 1 2.828 0l5.414 5.414" /><path d="M14 14l1.158 -1.158a2 2 0 0 1 2.828 0l3.014 3.014" /></svg>
+                    <span class="text-decoration-underline">${imgName}</span>
+                </span>`;
+        };
+
+        // [렌더러] 내부 광고 URL 새창 이동 아웃링크 적용
+        const urlLinkRenderer = (url) => {
+            if (!url) return `<span class="text-secondary">-</span>`;
+            return `<a href="${url}" target="_blank" class="text-truncate d-inline-block text-primary fw-medium" style="max-width: 150px;" title="${url}">${url}</a>`;
+        };
+
+        // [컬럼 스펙] SDK 테이블 전용 공용 컬럼 세팅
+        const sdkColumns = [
+            { 
+                title: "구분", 
+                data: "type", 
+                className: "text-center font-weight-bold", 
+                width: "10%" 
+            },
+            { 
+                title: "리스트 광고 이미지", 
+                data: "listImg", 
+                className: "text-center", 
+                render: d => imagePreviewRenderer(d) 
+            },
+            { 
+                title: "하단 광고 이미지", 
+                data: "bottomImg", 
+                className: "text-center", 
+                render: d => imagePreviewRenderer(d) 
+            },
+            { 
+                title: "검색 광고 이미지", 
+                data: "searchImg", 
+                className: "text-center", 
+                render: d => imagePreviewRenderer(d) 
+            },
+            { 
+                title: "광고 이미지", 
+                data: "adImg", 
+                className: "text-center", 
+                render: d => imagePreviewRenderer(d) 
+            },
+            { 
+                title: "내부 광고 URL", 
+                data: "internalUrl", 
+                className: "text-center", 
+                render: d => urlLinkRenderer(d) 
+            }
+        ];
+
+        // ==========================================
+        // 3. 각 탭 영역별 테이블 그리드 초기화
+        // ==========================================
+        // [기본탭 1] 광고 설정 테이블 (adTable)
         const adGrid = $("#adTable").DataTable({
             ...commonConfig,
             paging: false, 
             info: false,
             ordering: false, 
-            layout: null,    // Tabler 레이아웃 유지
-            // HTML의 실제 <td> 개수와 동일하게 7개를 선언해야 에러가 안 납니다.
+            layout: { 
+                topStart: null, 
+                topEnd: null, 
+                bottomStart: null, 
+                bottomEnd: null 
+            }, 
             columns: [
                 { className: "text-center" }, // 지면명 (구분)
                 { className: "text-center" }, // 지면명 (위치)
@@ -318,100 +429,198 @@
             ]
         });
 
-        // 3. [탭 2] 공유/리뷰 설정 (ShareReviewRow)
+        // [기본탭 2] 공유/리뷰 설정 테이블 (ShareReviewRow)
         const shareReviewGrid = $("#ShareReviewRow").DataTable({
-            ...commonConfig,
-            data: [
-                { data1: "공유", data2: "노출", data3: "유튜브탭", data4: "10", data5: "5" },
-                { data1: "리뷰", data2: "미노출", data3: "다운로드탭", data4: "10", data5: "5" }
-            ],
-            columns: [
-                { 
-                    title: "지면명", 
-                    data: "data1",
-                    width: "15%",  
-                    className: "text-center" 
-                },
-                { 
-                    title: "노출 설정", 
-                    data: "data2", 
-                    className: "text-center",
-                    render: (d, t, r, m) => `
-                        <div class="d-flex justify-content-center gap-2">
-                            <label class="form-check form-check-inline mb-0">
-                                <input class="form-check-input" type="radio" name="sh_${m.row}" value="노출" ${d==='노출'?'checked':''}>
-                                <span class="form-check-label">노출</span>
-                            </label>
-                            <label class="form-check form-check-inline mb-0">
-                                <input class="form-check-input" type="radio" name="sh_${m.row}" value="미노출" ${d==='미노출'?'checked':''}>
-                                <span class="form-check-label">미노출</span>
-                            </label>
-                        </div>`
-                },
-                { 
-                    title: "공유/리뷰 유형", 
-                    data: "data3", 
-                    className: "text-center",
-                    render: d => `
-                        <select class="form-select">
-                            <option value="유튜브탭" ${d==='유튜브탭'?'selected':''}>유튜브탭</option>
-                            <option value="다운로드탭" ${d==='다운로드탭'?'selected':''}>다운로드탭</option>
-                        </select>`
-                },
-                { 
-                    title: "노출 순번", 
-                    data: "data4", 
-                    className: "text-center", 
-                    width: "15%", 
-                    render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
-                },
-                { 
-                    title: "노출 제한", 
-                    data: "data5", 
-                    className: "text-center", 
-                    width: "15%", 
-                    render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
-                }
-            ]
-        });
-
-        // 4. [탭 3] 앱 호출 광고 설정 (AppCallAdRow)
+        ...commonConfig,
+        data: [
+            { 
+                data1: "공유", 
+                data2: "노출", 
+                data3: "유튜브탭", 
+                data4: "10", 
+                data5: "5" 
+            },
+            { 
+                data1: "리뷰", 
+                data2: "미노출", 
+                data3: "다운로드탭", 
+                data4: "10", 
+                data5: "5" 
+            }
+        ],
+        columns: [
+            { 
+                title: "지면명", 
+                data: "data1", 
+                width: "15%", 
+                className: "text-center" 
+            },
+            { 
+                title: "노출 설정", 
+                data: "data2", 
+                className: "text-center",
+                render: (d, t, r, m) => `
+                    <div class="d-flex justify-content-center gap-2">
+                        <label class="form-check form-check-inline mb-0">
+                            <input class="form-check-input" type="radio" name="sh_${m.row}" value="노출" ${d === '노출' ? 'checked' : ''}>
+                            <span class="form-check-label">노출</span>
+                        </label>
+                        <label class="form-check form-check-inline mb-0">
+                            <input class="form-check-input" type="radio" name="sh_${m.row}" value="미노출" ${d === '미노출' ? 'checked' : ''}>
+                            <span class="form-check-label">미노출</span>
+                        </label>
+                    </div>`
+            },
+            { 
+                title: "공유/리뷰 유형", 
+                data: "data3", 
+                className: "text-center",
+                render: d => `
+                    <select class="form-select">
+                        <option value="유튜브탭" ${d === '유튜브탭' ? 'selected' : ''}>유튜브탭</option>
+                        <option value="다운로드탭" ${d === '다운로드탭' ? 'selected' : ''}>다운로드탭</option>
+                    </select>`
+            },
+            { 
+                title: "노출 순번", 
+                data: "data4", 
+                className: "text-center", 
+                width: "15%", 
+                render: d => `
+                    <input type="text" class="form-control text-center" value="${d || ''}">` 
+            },
+            { 
+                title: "노출 제한", 
+                data: "data5", 
+                className: "text-center", 
+                width: "15%", 
+                render: d => `
+                    <input type="text" class="form-control text-center" value="${d || ''}">` 
+            }
+        ]
+    });
+        // [기본탭 3] 앱 호출 광고 설정 테이블 (AppCallAdRow)
         const appCallAdGrid = $("#AppCallAdRow").DataTable({
             ...commonConfig,
             columns: [
-                { title: "순서", data: null, render: (d, t, r, m) => m.row + 1, className: "text-center", width: "60px" },
-                { title: "파라미터명", data: "paramName", render: d => `<input type="text" class="form-control" value="${d || ''}">` },
-                { title: "값(Value)", data: "paramValue", render: d => `<input type="text" class="form-control" value="${d || ''}">` },
-                { title: "행 편집", data: null, className: "text-center", width: "100px", render: () => `
-                    <div class="d-flex justify-content-center gap-2">
-                        <button class="btn btn-icon btn-outline-danger btn-remove-row">${iconTrash}</button>
-                        <button class="btn btn-icon btn-outline-success btn-add-row">${iconPlus}</button>
-                    </div>` 
+                { 
+                    title: "순서", 
+                    data: null, 
+                    className: "text-center", 
+                    width: "60px",
+                    render: (d, t, r, m) => m.row + 1 
+                },
+                { 
+                    title: "파라미터명", 
+                    data: "paramName", 
+                    render: d => `
+                        <input type="text" class="form-control" value="${d || ''}">` 
+                },
+                { 
+                    title: "값(Value)", 
+                    data: "paramValue", 
+                    render: d => `
+                        <input type="text" class="form-control" value="${d || ''}">` 
+                },
+                { 
+                    title: "행 편집", 
+                    data: null, 
+                    className: "text-center", 
+                    width: "100px", 
+                    render: () => `
+                        <div class="d-flex justify-content-center gap-2">
+                            <button class="btn btn-icon btn-outline-danger btn-remove-row">${iconTrash}</button>
+                            <button class="btn btn-icon btn-outline-success btn-add-row">${iconPlus}</button>
+                        </div>` 
                 }
             ]
         });
 
-        // --- 이벤트 핸들러 ---
-        
-        // 행 삭제
+        // [SDK 매핑탭 1] 내부 SDK 광고 리스트 테이블
+        const localSdkGrid = $("#table-ad-sdk-local").DataTable({
+            ...commonConfig,
+            data: [
+                { 
+                    type: "내부 광고", 
+                    listImg: "local_list_01.png", 
+                    bottomImg: "local_bottom_01.png", 
+                    searchImg: "local_search_01.png", 
+                    adImg: "local_main_01.png", 
+                    internalUrl: "https://clipdown.net/local-landing1" 
+                },
+                { 
+                    type: "내부 광고", 
+                    listImg: "local_list_02.jpg", 
+                    bottomImg: "local_bottom_02.jpg", 
+                    searchImg: "", 
+                    adImg: "local_main_02.jpg", 
+                    internalUrl: "https://clipdown.net/local-landing2" 
+                }
+            ],
+            columns: sdkColumns
+        });
+
+        // [SDK 매핑탭 2] 외부 SDK 광고 리스트 테이블
+        const addSdkGrid = $("#table-ad-sdk-add").DataTable({
+            ...commonConfig,
+            data: [
+                { 
+                    type: "외부 SDK", 
+                    listImg: "external_list_01.png", 
+                    bottomImg: "external_bottom_01.png", 
+                    searchImg: "external_search_01.png", 
+                    adImg: "external_main_01.png", 
+                    internalUrl: "https://example.com/sdk-landing1" 
+                },
+                { 
+                    type: "외부 SDK", 
+                    listImg: "external_list_02.jpg", 
+                    bottomImg: "external_bottom_02.jpg", 
+                    searchImg: "external_search_02.jpg", 
+                    adImg: "external_main_02.jpg", 
+                    internalUrl: "https://example.com/sdk-landing2" 
+                }
+            ],
+            columns: sdkColumns
+        });
+
+        // ==========================================
+        // 4. 이벤트 핸들러 인터랙션
+        // ==========================================
+        // 동적 행 삭제 로직
         $('table').on('click', '.btn-remove-row', function(e) {
             e.preventDefault();
             const table = $(this).closest('table').DataTable();
             if (table.rows().count() > 1) table.row($(this).closest('tr')).remove().draw();
         });
 
-        // 행 추가
+        // 동적 행 추가 로직 (앱 호출 광고 타겟)
         $('#AppCallAdRow').on('click', '.btn-add-row', function(e) {
             e.preventDefault();
             appCallAdGrid.row.add({ paramName: "", paramValue: "" }).draw(false);
         });
 
-        // 탭 클릭 시 테이블 너비 재계산 (매우 중요: 안 하면 안 보임)
-        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function() {
-            $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+        // 상단 탭 전환 시 반응형 그리드 깨짐 교정
+        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // 1. 현재 렌더링되어 눈에 보이는 모든 DataTable의 스케일 자동 정렬
+            $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust().responsive.recalc();
+            
+            // 2. 사용자가 클릭한 탭의 목적지 ID 값 받아오기 (#adSdkLocal 또는 #adsdkAdd)
+            const targetTabId = $(e.target).attr('href') || $(e.target).data('bs-target');
+            
+            // 3. 외부 SDK 광고 리스트 탭이 열렸을 때, 지연 없는 강제 드로우 실행
+            if (targetTabId === '#adsdkAdd') {
+                // 비동기 렌더링 타이밍을 맞추기 위해 미세한 딜레이 후 그리드 레이아웃 재배치
+                setTimeout(() => {
+                    const $externalTable = $("#table-ad-sdk-add");
+                    if ($.fn.DataTable.isDataTable($externalTable)) {
+                        $externalTable.DataTable().columns.adjust().responsive.recalc();
+                    }
+                }, 50);
+            }
         });
 
-        // 아코디언 대응
+        // 모바일 아코디언 토글 연동 대응
         window.runAccordion = function(tabId) {
             if (window.innerWidth >= 768) return;
             $('.custom-tab-item').removeClass('show active');
