@@ -540,7 +540,7 @@
                                                                                 <table id="adTable" class="table table-bordered table-vcenter custom-table text-center">
                                                                                     <thead>
                                                                                         <tr>
-                                                                                            <th rowspan="2" colspan="2">지면명</th>
+                                                                                            <th rowspan="2" colspan="2" style="min-width: 130px;">지면명</th>
                                                                                             <th colspan="3">광고 코드</th>
                                                                                         </tr>
                                                                                         <tr>
@@ -858,7 +858,7 @@
                                                                 <div class="table-responsive">
                                                                     <div class="card-table">
                                                                         <div class="custom-table custom-table-lg table-responsive">
-                                                                            <table id="ShareReviewRow" class="table table-vcenter card-table table-bordered"></table>
+                                                                            <table id="ShareReviewRow" class="table table-vcenter table-bordered"></table>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -896,10 +896,11 @@
                                                         </li>
                                                     </ul>                                                  
                                                 </div>
-                                                <div class="content_body p-3">
+                                                <div class="content_body">
                                                     <div class="tab-content">
+                                                        <!-- 노출설정 -->
                                                         <div class="tab-pane active show" id="tab_ad_display">
-                                                            <div class="content_item">
+                                                            <div class="content_item p-3">
                                                                 <div class="mb-4">
                                                                     <div class="row">
                                                                         <div class="col-md-3">
@@ -1057,14 +1058,49 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!-- // 노출설정 -->
+                                                        <!-- 실행조건 -->
                                                         <div class="tab-pane" id="tab_ad_condition">
-                                                            <h4>실행 조건 설정</h4>
-                                                            <div></div>
+                                                            <div class="accordion-content">
+                                                                <div class="content_body">
+                                                                    <div class="content_item">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="table-responsive">
+                                                                                    <div class="card-table">
+                                                                                        <div class="custom-table custom-table-lg table-responsive">
+                                                                                            <table id="appExecuteConfig" class="table table-vcenter card-table table-bordered"></table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <!-- // 실행조건 -->
+                                                        <!-- 광고 리스트 -->
                                                         <div class="tab-pane" id="tab_ad_list">
-                                                            <h4>광고 목록</h4>
-                                                            <div class="table-responsive"> </div>
+                                                            <div class="accordion-content">
+                                                                <div class="content_body">
+                                                                    <div class="content_item">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="table-responsive">
+                                                                                    <div class="card-table">
+                                                                                        <div class="custom-table custom-table-lg table-responsive">
+                                                                                            <table id="appExecuteAdList" class="table table-vcenter card-table table-bordered"></table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <!-- //광고 리스트 -->
                                                     </div>
                                                 </div>
                                                 <div class="mt-3 p-3 border-top d-flex justify-content-end">
@@ -1184,7 +1220,8 @@
             searching: false,
             autoWidth: false,
             responsive: true,
-            language: { info: "현재 _START_ - _END_ / _TOTAL_건" },
+            language: { info: "현재 _START_ - _END_ / _TOTAL_건", lengthMenu: "_MENU_ 개씩 보기" },
+            
             drawCallback: function() {
                 const $container = $(this).closest('.dt-container');
                 const $paging = $container.find('.dt-paging');
@@ -1202,13 +1239,22 @@
             layout: null,    // Tabler 레이아웃 유지
             // HTML의 실제 <td> 개수와 동일하게 7개를 선언해야 에러가 안 납니다.
             columns: [
-                { className: "text-center" }, // 지면명 (구분)
-                { className: "text-center" }, // 지면명 (위치)
-                { className: "text-center" }, // 광고 설정
-                { className: "text-center" }, // 순위 1
-                { className: "text-center" }, // 순위 2
-                { className: "text-center" }, // 순위 3
-                { className: "text-center" }  // 노출 순번
+                { 
+                    className: "text-center align-middle text-nowrap", 
+                    style: "min-width: 90px;" // 지면명(구분) 최소 폭 보장
+                }, 
+                { 
+                    className: "text-center align-middle text-nowrap", 
+                    style: "min-width: 100px;" // 지면명(위치) 최소 폭 보장
+                }, 
+                { 
+                    className: "text-center align-middle", 
+                    style: "min-width: 150px;" // 광고 설정 (셀렉트박스/버튼 영역) 최소 폭 보장
+                }, 
+                { className: "text-center align-middle" }, // 순위 1
+                { className: "text-center align-middle" }, // 순위 2
+                { className: "text-center align-middle" }, // 순위 3
+                { className: "text-center align-middle" }  // 노출 순번
             ]
         });
 
@@ -1223,29 +1269,30 @@
                 { 
                     title: "지면명", 
                     data: "data1",
-                    width: "15%",  
+                    width: "10%",  
                     className: "text-center" 
                 },
                 { 
                     title: "노출 설정", 
                     data: "data2", 
-                    className: "text-center",
+                    width: "20%", 
+                    className: "text-center align-middle",
                     render: (d, t, r, m) => `
-                        <div class="d-flex justify-content-center gap-2">
-                            <label class="form-check form-check-inline mb-0">
+                        <div class="d-flex justify-content-center gap-3 text-nowrap mx-auto" style="min-width: 150px; flex-wrap: nowrap;">
+                            <label class="form-check form-check-inline mb-0" style="cursor: pointer;">
                                 <input class="form-check-input" type="radio" name="sh_${m.row}" value="노출" ${d==='노출'?'checked':''}>
                                 <span class="form-check-label">노출</span>
                             </label>
-                            <label class="form-check form-check-inline mb-0">
+                            <label class="form-check form-check-inline mb-0" style="cursor: pointer;">
                                 <input class="form-check-input" type="radio" name="sh_${m.row}" value="미노출" ${d==='미노출'?'checked':''}>
                                 <span class="form-check-label">미노출</span>
                             </label>
                         </div>`
-                },
+                    },
                 { 
                     title: "공유/리뷰 유형", 
                     data: "data3", 
-                    className: "text-center",
+                    className: "text-center align-middle",
                     render: d => `
                         <select class="form-select">
                             <option value="유튜브탭" ${d==='유튜브탭'?'selected':''}>유튜브탭</option>
@@ -1255,15 +1302,15 @@
                 { 
                     title: "노출 순번", 
                     data: "data4", 
-                    className: "text-center", 
-                    width: "15%", 
+                    className: "text-center align-middle", 
+                    width: "10%", 
                     render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
                 },
                 { 
                     title: "노출 제한", 
                     data: "data5", 
-                    className: "text-center", 
-                    width: "15%", 
+                    className: "text-center align-middle", 
+                    width: "10%", 
                     render: d => `<input type="text" class="form-control text-center" value="${d || ''}">` 
                 }
             ]
@@ -1285,13 +1332,206 @@
             ]
         });
 
+        // 5. [탭 4] 클립다운 실행조건 설정 (appExecuteConfig) - 추가
+        const appExecuteConfigData = [
+            { id: 1, appCode: "clipdown", appName: "클립다운", period: 7, duration: 10, isActive: "N" }
+        ];
+
+        const appExecuteConfigGrid = $("#appExecuteConfig").DataTable({
+            ...commonConfig,
+            data: appExecuteConfigData,
+            paging: false,   // 단일 혹은 소수 데이터이므로 페이징 비활성화
+            info: false,     // 하단 건수 안내 비활성화
+            ordering: false, // 임의 정렬 비활성화
+            columns: [
+                { 
+                    title: "노출앱", 
+                    data: "appName", 
+                    className: "text-center align-middle fw-medium text-secondary",
+                    width: "25%"
+                },
+                { 
+                    title: "실행주기", 
+                    data: "period", 
+                    className: "text-center",
+                    width: "25%",
+                    render: d => `
+                        <div class="input-group mx-auto" style="min-width: 140px; flex-wrap: nowrap;">
+                            <input type="number" class="form-control text-start val-period" value="${d ?? 0}" min="0" style="min-width: 60px;">
+                            <span class="input-group-text bg-light text-muted px-3" style="border-color: #e6e7e9;">일</span>
+                        </div>` 
+                },
+                { 
+                    title: "앱 유지시간", 
+                    data: "duration", 
+                    className: "text-center",
+                    width: "25%",
+                    render: d => `
+                        <div class="input-group mx-auto" style="min-width: 140px; flex-wrap: nowrap;">
+                            <input type="number" class="form-control text-start val-duration" value="${d ?? 0}" min="0" style="min-width: 60px;">
+                            <span class="input-group-text bg-light text-muted px-3" style="border-color: #e6e7e9;">초</span>
+                        </div>` 
+                },
+                { 
+                    title: "실행여부", 
+                    data: "isActive", 
+                    className: "text-center",
+                    width: "25%",
+                    render: d => `
+                        <select class="form-select text-start val-status mx-auto" style="min-width: 100px;">
+                            <option value="Y" ${d === 'Y' ? 'selected' : ''}>Y</option>
+                            <option value="N" ${d === 'N' || !d ? 'selected' : ''}>N</option>
+                        </select>` 
+                }
+            ],
+            drawCallback: function() {
+                // 개별 테이블 드로우 시 유효성 검사 실시간 연동
+                $("#appExecuteConfig input[type='number']").off("input").on("input", function() {
+                    if ($(this).val() < 0) {
+                        $(this).val(0);
+                        alert("0 이상의 숫자만 입력 가능합니다.");
+                    }
+                });
+            }
+        });
+
+        // 6. [탭 5] 광고 리스트 (appExecuteConfig) - 추가
+        const appExecuteAdListData = [
+            { 
+                id: 1, 
+                adName: "", 
+                packageName: "", 
+                adUrl: "", 
+                viewCount: 0, 
+                showHistory: "N", 
+                displayStatus: "노출", 
+                goHomeYn: "이동", 
+                delayStart: 0, 
+                delayEnd: 0 
+            }
+        ];
+        const appExecuteAdListGrid = $("#appExecuteAdList").DataTable({
+            ...commonConfig,
+            data: appExecuteAdListData,
+            paging: false,   // 테이블 특성에 맞춰 페이징 비활성화
+            info: false,     // 하단 건수 안내 비활성화
+            ordering: false, // 임의 정렬 비활성화
+            columns: [
+                { 
+                    title: "순서", 
+                    data: null, 
+                    className: "text-center align-middle bg-light-subtle", 
+                    width: "30px",
+                    render: (data, type, row, meta) => meta.row + 1 
+                },
+                { 
+                    title: "광고명", 
+                    data: "adName", 
+                    render: d => `<input type="text" class="form-control px-2 val-ad-name" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${d || ''}">` 
+                },
+                { 
+                    title: "패키지명", 
+                    data: "packageName", 
+                    render: d => `<input type="text" class="form-control px-2 val-package-name" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${d || ''}">` 
+                },
+                { 
+                    title: "광고 URL", 
+                    data: "adUrl", 
+                    render: d => `<input type="text" class="form-control px-2 val-ad-url" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${d || ''}">` 
+                },
+                { 
+                    title: "노출횟수", 
+                    data: "viewCount", 
+                    className: "text-center",
+                    width: "90px",
+                    render: d => `<input type="number" class="form-control px-2 text-center val-view-count" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;" value="${d ?? 0}" min="0">` 
+                },
+                { 
+                    title: "실행이력노출", 
+                    data: "showHistory", 
+                    className: "text-center",
+                    width: "110px",
+                    render: d => `
+                        <select class="form-select val-show-history" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;">
+                            <option value="N" ${d === 'N' || !d ? 'selected' : ''}>N</option>
+                            <option value="Y" ${d === 'Y' ? 'selected' : ''}>Y</option>
+                        </select>` 
+                },
+                { 
+                    title: "노출여부", 
+                    data: "displayStatus", 
+                    className: "text-center",
+                    width: "110px",
+                    render: d => `
+                        <select class="form-select val-display-status" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;">
+                            <option value="노출" ${d === '노출' || !d ? 'selected' : ''}>노출</option>
+                            <option value="중지" ${d === '중지' ? 'selected' : ''}>중지</option>
+                        </select>` 
+                },
+                { 
+                    title: "홈이동 유무", 
+                    data: "goHomeYn", 
+                    className: "text-center",
+                    width: "120px",
+                    render: d => `
+                        <select class="form-select val-gohome-yn" style="border-radius: 4px; border: 1px solid #e6e7e9; height: 38px;">
+                            <option value="이동" ${d === '이동' || !d ? 'selected' : ''}>이동</option>
+                            <option value="미 이동" ${d === '미 이동' ? 'selected' : ''}>미 이동</option>
+                        </select>` 
+                },
+                { 
+                    title: "홈 이동 딜레이 시간", 
+                    data: null, 
+                    className: "text-center align-middle",
+                    width: "300px",
+                    render: (data, type, row) => `
+                        <div class="input-group align-items-center mx-auto" style="min-width: 260px; flex-wrap: nowrap;">
+                            <input type="number" class="form-control px-2 text-start val-delay-start" style="border-radius: 4px 0 0 4px; border: 1px solid #e6e7e9; height: 38px; min-width: 60px;" value="${row.delayStart ?? 0}" min="0">
+                            <span class="input-group-text bg-light text-muted border-y border-end-0" style="height: 38px; border-color: #e6e7e9;">초</span>
+                            <span class="px-2 text-muted fw-bold">~</span>
+                            <input type="number" class="form-control px-2 text-start val-delay-end" style="border-top: 1px solid #e6e7e9; border-bottom: 1px solid #e6e7e9; border-left: 1px solid #e6e7e9; border-right: 0; height: 38px; min-width: 60px;" value="${row.delayEnd ?? 0}" min="0">
+                            <span class="input-group-text bg-light text-muted" style="border-radius: 0 4px 4px 0; border: 1px solid #e6e7e9; height: 38px;">초</span>
+                        </div>` 
+                },
+                { 
+                    title: "행 편집", 
+                    data: null, 
+                    className: "text-center align-middle", 
+                    width: "110px",
+                    render: () => `
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-icon btn-outline-danger btn-remove-row">${iconTrash}</a>
+                            <a href="#" class="btn btn-icon btn-outline-success btn-add-row">${iconPlus}</a>
+                        </div>` 
+                }
+            ],
+            drawCallback: function() {
+                // 개별 테이블 드로우 시 유효성 검사 실시간 연동 (넘버 인풋 음수 제한)
+                $("#appExecuteAdList input[type='number']").off("input").on("input", function() {
+                    if ($(this).val() < 0) {
+                        $(this).val(0);
+                        alert("0 이상의 숫자만 입력 가능합니다.");
+                    }
+                });
+            }
+        });
+
+
+
         // --- 이벤트 핸들러 ---
         
         // 행 삭제
         $('table').on('click', '.btn-remove-row', function(e) {
             e.preventDefault();
-            const table = $(this).closest('table').DataTable();
-            if (table.rows().count() > 1) table.row($(this).closest('tr')).remove().draw();
+            const $tableEl = $(this).closest('table');
+            const table = $tableEl.DataTable();
+            
+            // 데이터 유실 방지를 위해 최소 1개 로우 유지
+            if (table.rows().count() > 1) {
+                table.row($(this).closest('tr')).remove().draw(false);
+            } else {
+                alert("최소 1개의 행은 유지되어야 합니다.");
+            }
         });
 
         // 행 추가
@@ -1300,17 +1540,64 @@
             appCallAdGrid.row.add({ paramName: "", paramValue: "" }).draw(false);
         });
 
+        // 앱 실행 광고 목록 행 추가 기능 바인딩 (#appExecuteAdList)
+        $(document).off('click', '#appExecuteAdList .btn-add-row').on('click', '#appExecuteAdList .btn-add-row', function(e) {
+            e.preventDefault();
+            if (typeof appExecuteAdListGrid !== 'undefined') {
+                appExecuteAdListGrid.row.add({
+                    adName: "",
+                    packageName: "",
+                    adUrl: "",
+                    viewCount: 0,
+                    showHistory: "N",
+                    displayStatus: "노출",
+                    goHomeYn: "이동",
+                    delayStart: 0,
+                    delayEnd: 0
+                }).draw(false);
+            }
+        });
+        
+
         // 탭 클릭 시 테이블 너비 재계산 (매우 중요: 안 하면 안 보임)
         $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function() {
             $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
         });
 
         // 아코디언 대응
+        window.isFirstAccordionTouch = true;
+
         window.runAccordion = function(tabId) {
-            if (window.innerWidth >= 768) return;
-            $('.custom-tab-item').removeClass('show active');
-            const $target = $('#' + tabId).addClass('show active');
-            setTimeout(() => $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust(), 200);
+            if (window.innerWidth >= 768) return; // PC 해상도에서는 동작 방지
+            
+            const $target = $('#' + tabId);
+            
+            // HTML에 show active가 기본으로 박혀있는 상태에서 '첫 번째 리스트'를 처음 눌렀을 때의 예외 처리
+            if (window.isFirstAccordionTouch && $target.hasClass('active')) {
+                // 최초 진입 시 열려 있는 상태이므로, 첫 터치에 바로 닫히도록 클래스 소거
+                $target.removeClass('show active');
+                // 플래그를 false로 변경하여 이후부터는 일반 토글 로직을 타게 합니다.
+                window.isFirstAccordionTouch = false;
+            } else {
+                // 최초 진입 단계를 지났을 때의 일반적인 양방향 토글 규칙
+                window.isFirstAccordionTouch = false; // 다른 곳을 눌렀어도 플래그 해제
+                
+                if ($target.hasClass('active')) {
+                    // 열려 있다면 닫기
+                    $target.removeClass('show active');
+                } else {
+                    // 닫혀 있다면 기존에 열린 다른 아코디언들을 전부 닫고 현재 타겟만 열기
+                    $('.custom-tab-item').removeClass('show active');
+                    $target.addClass('show active');
+                }
+            }
+            
+            // 내부에 포함된 jQuery DataTables 그리드가 깨지거나 줄어들지 않도록 너비 재계산
+            setTimeout(() => {
+                if ($.fn.dataTable && $.fn.dataTable.tables) {
+                    $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+                }
+            }, 200);
         };
     };
 

@@ -445,11 +445,11 @@ body {
 }
 
 @media (max-width: 767.98px) {
-    #filterCollapse.collapse:not(.show) {
+    /* #filterCollapse.collapse:not(.show) {
     display: block !important;
     }
     .accordion-header { display: none !important; }
-    .accordion-content { display: block !important; }
+    .accordion-content { display: block !important; } */
     
     .form-control, .form-select {
         font-size: .875rem !important;
@@ -526,7 +526,7 @@ body {
     }
     .accordion-arrow { transition: transform 0.3s; }
     .custom-tab-item.active .accordion-arrow { transform: rotate(180deg); }
-}
+    .custom-table .form-control,  .custom-table .form-select{width: unset;}
 @media (max-width: 575.98px) {
     .form-control, .form-select {
         font-size: .875rem;
