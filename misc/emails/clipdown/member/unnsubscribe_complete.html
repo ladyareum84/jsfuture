@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 수신 거부 완료</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    body { background-color: #f7f7f7; font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', Arial, sans-serif; -webkit-font-smoothing: antialiased; display: flex; align-items: center; justify-content: center; min-height: 100vh; min-height: 100dvh; padding: 16px 16px; }
+    .hide { display: none; }
+    .card { background: #ffffff; border: 1px solid #e8e8e4; width: 100%; max-width: 700px; max-height: calc(100dvh - 32px); overflow-y: auto; padding: 60px 40px; text-align: center; }
+    .icon-wrap { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .icon-wrap.success { background-color: #eaf3de; }
+    .icon-wrap.warning { background-color: #f9fafc; }
+    .icon-wrap.error { background-color: #fcebeb; }
+    .icon-wrap svg { display: block; }
+    .title { font-size: 16px; font-weight: 700; color: #333333; line-height: 22px; margin-bottom: 15px; word-break: keep-all; }
+    .desc { font-size: 14px; color: #333333; line-height: 20px; word-break: keep-all; margin-bottom: 30px; }
+    .desc .guide-text { display: block; margin-top: 8px; font-size: 12px; color: #666666; line-height: 16px; }
+    .btn { background-color: #333333; color: #ffffff; font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', Arial, sans-serif; font-size: 14px; font-weight: 700; border-radius: 6px; letter-spacing: 0.5px; border: none; cursor: pointer; padding: 13px 60px; line-height: 20px; }
+    .btn:hover { background-color: #333333; }
+    .divider { height: 1px; background: #efefed; margin: 0 0 28px; }
+    @media only screen and (max-width: 520px) {
+        .card { padding: 36px 24px 32px; }
+        .desc { font-size: 12px; }
+        .btn { display: block; width: 100%; padding: 13px 32px;   }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <!-- Case 1 : 수신 거부 완료 -->
+        <div id="case1" class="">
+            <div class="icon-wrap success">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.985 511.985" width="28" height="28" fill="#3B6D11">
+                    <path d="M500.088,83.681c-15.841-15.862-41.564-15.852-57.426,0L184.205,342.148L69.332,227.276
+                        c-15.862-15.862-41.574-15.862-57.436,0c-15.862,15.862-15.862,41.574,0,57.436l143.585,143.585
+                        c7.926,7.926,18.319,11.899,28.713,11.899c10.394,0,20.797-3.963,28.723-11.899l287.171-287.181
+                        C515.95,125.265,515.95,99.542,500.088,83.681z"/>
+                </svg>
+            </div>
+            <p class="title">이메일 수신 거부 처리가<br>정상적으로 완료되었습니다.</p>
+            <p class="desc">
+                앞으로 광고성 혜택 및 이벤트 메일 발송에서 제외됩니다.
+                <span class="guide-text">단, 서비스 운영에 필요한 주요 공지 및 알림 메일은<br>수신 거부와 관계없이 정상 발송됩니다.</span>
+            </p>
+        </div>
+
+        <!-- Case 2:  이미 수신 거부 -->
+        <div id="case2" class="hide">
+            <div class="icon-wrap warning">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" width="36" height="36" fill="#666666">
+                    <path d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0zM165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z"/>
+                    <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z"/>
+                    <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z"/>
+                </svg>
+            </div>
+                <p class="title">이미 이메일 수신 거부 처리가<br>완료된 사용자입니다.</p>
+                <p class="desc">
+                    <span class="guide-text" style="margin-top:0;">단, 서비스 운영에 필요한 주요 공지 및 알림 메일은<br>수신 거부와 관계없이 정상 발송됩니다.</span>
+                </p>
+        </div> 
+
+        <!-- Case 3:  탈퇴 사용자 -->
+        <div id="case3" class="hide">
+            <div class="icon-wrap warning">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" width="36" height="36" fill="#666666">
+                    <path d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0zM165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z"/>
+                    <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z"/>
+                    <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z"/>
+                </svg>
+            </div>
+            <p class="title">이미 존재하지 않거나<br>이미 탈퇴한 회원입니다.</p>
+            <p class="desc" style="margin-bottom:32px;">&nbsp;</p>
+        </div>
+
+        <!-- Case 3: 비정상/만료 링크-->
+        <div id="case4" class="hide">
+            <div class="icon-wrap error">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.463 486.463" width="36" height="36" fill="#E21D19">
+                    <path d="M243.225,333.382c-13.6,0-25,11.4-25,25s11.4,25,25,25c13.1,0,25-11.4,24.4-24.4C268.225,344.682,256.925,333.382,243.225,333.382z"/>
+                    <path d="M474.625,421.982c15.7-27.1,15.8-59.4,0.2-86.4l-156.6-271.2c-15.5-27.3-43.5-43.5-74.9-43.5s-59.4,16.3-74.9,43.4l-156.8,271.5c-15.6,27.3-15.5,59.8,0.3,86.9c15.6,26.8,43.5,42.9,74.7,42.9h312.8C430.725,465.582,458.825,449.282,474.625,421.982zM440.625,402.382c-8.7,15-24.1,23.9-41.3,23.9h-312.8c-17,0-32.3-8.7-40.8-23.4c-8.6-14.9-8.7-32.7-0.1-47.7l156.8-271.4c8.5-14.9,23.7-23.7,40.9-23.7c17.1,0,32.4,8.9,40.9,23.8l156.7,271.4C449.325,369.882,449.225,387.482,440.625,402.382z"/>
+                    <path d="M237.025,157.882c-11.9,3.4-19.3,14.2-19.3,27.3c0.6,7.9,1.1,15.9,1.7,23.8c1.7,30.1,3.4,59.6,5.1,89.7c0.6,10.2,8.5,17.6,18.7,17.6c10.2,0,18.2-7.9,18.7-18.2c0-6.2,0-11.9,0.6-18.2c1.1-19.3,2.3-38.6,3.4-57.9c0.6-12.5,1.7-25,2.3-37.5c0-4.5-0.6-8.5-2.3-12.5C260.825,160.782,248.925,155.082,237.025,157.882z"/>
+                </svg>
+            </div>
+            <p class="title">유효기간이 만료되었거나<br>올바르지 않은 접근입니다.</p>
+            <p class="desc" style="margin-bottom:32px;">&nbsp;</p>
+        </div>
+
+        <button class="btn" onclick="window.close();">확인</button>
+
+    </div>
+
+</body>
+
+</html>
