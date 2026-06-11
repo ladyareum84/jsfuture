@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipDown PC UI Style Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #111; color: #fff; padding: 40px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+
+        .page-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .page-sub { font-size: 13px; color: #666; margin-bottom: 40px; }
+        .sec { margin-bottom: 40px; }
+        .sec-title { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #666; border-bottom: 1px solid #222; padding-bottom: 8px; margin-bottom: 20px; }
+        .divider { height: 1px; background: #1e1e1e; margin: 36px 0; }
+
+        /* ── Color swatches ── */
+        .swatch-row { display: flex; flex-wrap: wrap; gap: 12px; }
+        .swatch { display: flex; flex-direction: column; gap: 6px; min-width: 130px; }
+        .chip { height: 48px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.07); }
+        .swatch-name { font-size: 12px; font-weight: 700; color: #fff; }
+        .swatch-hex { font-size: 11px; color: #fff; }
+        .swatch-use { font-size: 10px; color: #888; }
+
+        /* ── Text color preview ── */
+        .text-color-list { display: flex; flex-direction: column; gap: 8px; }
+        .tc-row { display: flex; align-items: center; gap: 16px; }
+        .tc-sample { font-size: 13px; min-width: 280px; }
+        .tc-meta { font-size: 11px; color: #FFFFFF; }
+
+        /* ── Typography table ── */
+        .typo-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .typo-table th { text-align: left; color: #555; font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; padding: 0 16px 10px 0; border-bottom: 1px solid #222; }
+        .typo-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid #1e1e1e; color: #bbb; vertical-align: middle; }
+        .typo-table td:first-child { color: #fff; font-weight: 700; }
+
+        /* ── Component grid ── */
+        .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+        .comp-card { background: #1a1a1a; border: 1px solid #252525; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+        .comp-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; }
+        .comp-spec { font-size: 11px; color: #AAAAAA; line-height: 1.8; }
+
+        /* ── Button previews ── */
+        .btn-preview { height: 36px; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; cursor: default; font-family: 'Noto Sans KR', sans-serif; }
+        .btn-primary { background: #E21D19; color: #fff; border: none; }
+        .btn-outline { background: transparent; color: #E21D19; border: 1.5px solid #E21D19; }
+        .btn-ghost { background: transparent; color: #fff; border: 1px solid #444; }
+        .btn-dark { background: #111; color: #fff; border: none; }
+        .btn-icon-wrap { width: 36px; height: 36px; border-radius: 8px; background: #E21D19; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff; }
+
+        /* ── Badge ── */
+        .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 4px; font-size: 11px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif; }
+        .badge-red { background: #E21D19; color: #fff; }
+        .badge-orange { background: #FF8C00; color: #fff; }
+
+        /* ── Toggle ── */
+        .toggle-wrap { display: flex; align-items: center; gap: 10px; }
+        .toggle { width: 44px; height: 24px; border-radius: 100px; display: flex; align-items: center; padding: 3px; }
+        .toggle-on { background: #E21D19; justify-content: flex-end; }
+        .toggle-off { background: #2a2a2a; border: 1px solid #444; justify-content: flex-start; }
+        .toggle-knob { width: 18px; height: 18px; border-radius: 50%; background: #fff; }
+        .toggle-lbl { font-size: 12px; color: #aaa; }
+
+        /* ── Radio ── */
+        .radio-list { display: flex; flex-direction: column; gap: 8px; }
+        .radio-row { display: flex; align-items: center; gap: 8px; }
+        .radio-outer { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #555; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .radio-outer.on { border-color: #E21D19; }
+        .radio-dot { width: 8px; height: 8px; border-radius: 50%; background: #E21D19; }
+        .radio-lbl { font-size: 12px; color: #ccc; }
+
+        /* ── Input ── */
+        .input-preview { height: 36px; background: #2a2a2a; border: 1px solid #444; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: #555; }
+
+        /* ── Footer ── */
+        .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #1e1e1e; font-size: 11px; color: #444; }
+    </style>
+</head>
+
+<body>
+
+    <p class="page-title">ClipDown PC UI Style Guide</p>
+    <p class="page-sub">© J'SFUTURE Inc. — 내부 배포용 문서 / Last updated 2025</p>
+
+    <!-- ────────────────────────────── BRAND ── -->
+    <div class="sec">
+        <p class="sec-title">01 &nbsp; Brand / Primary</p>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="chip" style="background:#E21D19;"></div>
+                <span class="swatch-name">Brand Red</span>
+                <span class="swatch-hex">#E21D19</span>
+                <span class="swatch-use">버튼, 로고, CTA, PLUS+, Radio active, Point text</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#C41714;"></div>
+                <span class="swatch-name">Brand Red Hover</span>
+                <span class="swatch-hex">#C41714</span>
+                <span class="swatch-use">버튼 hover / pressed</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#fff; border:1px solid #333;"></div>
+                <span class="swatch-name">White</span>
+                <span class="swatch-hex">#FFFFFF</span>
+                <span class="swatch-use">버튼 텍스트, 아이콘 (on Red)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── BACKGROUND ── -->
+    <div class="sec">
+        <p class="sec-title">02 &nbsp; Background</p>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="chip" style="background:#1A1A1A;"></div>
+                <span class="swatch-name">BG Base</span>
+                <span class="swatch-hex">#1A1A1A</span>
+                <span class="swatch-use">앱 전체 배경</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#242424;"></div>
+                <span class="swatch-name">BG Sidebar</span>
+                <span class="swatch-hex">#242424</span>
+                <span class="swatch-use">좌측 사이드바</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#2C2C2C;"></div>
+                <span class="swatch-name">BG Modal</span>
+                <span class="swatch-hex">#2C2C2C</span>
+                <span class="swatch-use">다운로드 다이얼로그</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#333333;"></div>
+                <span class="swatch-name">BG Input</span>
+                <span class="swatch-hex">#333333</span>
+                <span class="swatch-use">입력 필드</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#3A3A3A;"></div>
+                <span class="swatch-name">BG Elevated</span>
+                <span class="swatch-hex">#3A3A3A</span>
+                <span class="swatch-use">hover, 선택 항목</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── TEXT COLOR ── -->
+    <div class="sec">
+        <p class="sec-title">03 &nbsp; Text Color</p>
+        <div class="text-color-list">
+            <div class="tc-row">
+                <span class="tc-sample" style="color:#FFFFFF; font-family:'Noto Sans KR',sans-serif;">Body text — 본문 주요
+                    텍스트</span>
+                <span class="tc-meta">#FFFFFF</span>
+            </div>
+            <div class="tc-row">
+                <span class="tc-sample" style="color:#FFFFFF; font-family:'Noto Sans KR',sans-serif;">Content text — 일반
+                    콘텐츠</span>
+                <span class="tc-meta">#FFFFFF</span>
+            </div>
+            <div class="tc-row">
+                <span class="tc-sample" style="color:#AAAAAA; font-family:'Noto Sans KR',sans-serif;">Sub content text —
+                    보조 텍스트</span>
+                <span class="tc-meta">#AAAAAA</span>
+            </div>
+            <div class="tc-row">
+                <span class="tc-sample" style="color:#9e9ea5; font-family:'Noto Sans KR',sans-serif;">Disabled / Caption
+                    text — 비활성·캡션</span>
+                <span class="tc-meta">#9e9ea5</span>
+            </div>
+            <div class="tc-row">
+                <span class="tc-sample" style="color:#E21D19; font-family:'Noto Sans KR',sans-serif;">Point text —
+                    포인트·강조 텍스트</span>
+                <span class="tc-meta">#E21D19</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── BORDER ── -->
+    <div class="sec">
+        <p class="sec-title">04 &nbsp; Border / Divider</p>
+        <div class="swatch-row">
+            <div class="swatch">
+                <div class="chip" style="background:#3D3D3D;"></div>
+                <span class="swatch-name">Border Default</span>
+                <span class="swatch-hex">#3D3D3D</span>
+                <span class="swatch-use">구분선, 입력 필드 border</span>
+            </div>
+            <div class="swatch">
+                <div class="chip" style="background:#555555;"></div>
+                <span class="swatch-name">Border Emphasis</span>
+                <span class="swatch-hex">#555555</span>
+                <span class="swatch-use">강조 border</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── TYPOGRAPHY ── -->
+    <div class="sec">
+        <p class="sec-title">05 &nbsp; Typography</p>
+        <table class="typo-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Font</th>
+                    <th>Size</th>
+                    <th>Weight</th>
+                    <th>Use</th>
+                    <th>Sample</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Title</td>
+                    <td>Noto Sans KR</td>
+                    <td>16px / 15px</td>
+                    <td>Bold</td>
+                    <td>앱 타이틀, 팝업 헤더</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:15px;font-weight:700;color:#fff;">제목
+                            타이틀</span></td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>Noto Sans KR</td>
+                    <td>14px</td>
+                    <td>Regular</td>
+                    <td>본문, 팝업 콘텐츠</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:14px;color:#FFFFFF;">본문 텍스트</span></td>
+                </tr>
+                <tr>
+                    <td>Content</td>
+                    <td>Noto Sans KR</td>
+                    <td>14px / 13px</td>
+                    <td>Bold / Regular</td>
+                    <td>강조 콘텐츠</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:13px;color:#FFFFFF;">콘텐츠 텍스트</span></td>
+                </tr>
+                <tr>
+                    <td>Label</td>
+                    <td>Noto Sans KR</td>
+                    <td>12px / 11px</td>
+                    <td>Bold / Regular</td>
+                    <td>라벨, 팝업 가이드</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:12px;font-weight:700;color:#ccc;">라벨
+                            텍스트</span></td>
+                </tr>
+                <tr>
+                    <td>Caption</td>
+                    <td>Noto Sans KR</td>
+                    <td>10px</td>
+                    <td>Regular</td>
+                    <td>캡션, 저작권 문구</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:10px;color:#666;">캡션 텍스트</span></td>
+                </tr>
+                <tr>
+                    <td>Number / EN</td>
+                    <td>Poppins</td>
+                    <td>—</td>
+                    <td>SemiBold</td>
+                    <td>숫자, 영문 전용</td>
+                    <td><span style="font-family:'Poppins';font-weight:600;font-size:14px;color:#fff;">Aa 0123</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── BUTTON ── -->
+    <div class="sec">
+        <p class="sec-title">06 &nbsp; Components — Button</p>
+        <div class="comp-grid">
+            <div class="comp-card">
+                <p class="comp-label">Primary (filled)</p>
+                <div class="btn-preview btn-primary">다운로드</div>
+                <div class="comp-spec">
+                    BG #E21D19 / Text #FFF<br>
+                    h: 36px / border-radius: 100px<br>
+                    hover: #C41714
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Outline (Brand)</p>
+                <div class="btn-preview btn-outline">로그인</div>
+                <div class="comp-spec">
+                    BG transparent<br>
+                    border: 1.5px solid #E21D19<br>
+                    Text #E21D19
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Ghost (neutral)</p>
+                <div class="btn-preview btn-ghost">아니요</div>
+                <div class="comp-spec">
+                    BG transparent<br>
+                    border: 1px solid #444<br>
+                    Text #FFF
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Filled (light theme)</p>
+                <div class="btn-preview btn-dark">적용</div>
+                <div class="comp-spec">
+                    BG #000 / Text #FFF<br>
+                    라이트 모드 전용
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Icon button</p>
+                <div class="btn-icon-wrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12.589" height="19.448" viewBox="0 0 12.589 19.448" fill="#fff">
+                        <path d="M11.295,16.947h-10a1.25,1.25,0,1,0,0,2.5h10a1.25,1.25,0,0,0,0-2.5Z"/>
+                        <path d="M5.4,12.967a1.265,1.265,0,0,0,1.787,0l5.047-5.047a1.262,1.262,0,0,0-1.785-1.784l-2.893,2.893V1.262a1.262,1.262,0,1,0-2.524,0v7.768l-2.893-2.893a1.262,1.262,0,0,0-1.785,1.784Z"/>
+                    </svg>
+
+                </div>
+                <div class="comp-spec">
+                    BG #E21D19<br>
+                    36×36px / border-radius: 8px
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── BADGE ── -->
+    <div class="sec">
+        <p class="sec-title">07 &nbsp; Components — Badge / Tag</p>
+        <div class="comp-grid">
+            <div class="comp-card">
+                <p class="comp-label">PLUS+ / VIDEO</p>
+                <div style="display:flex;gap:6px;">
+                    <span class="badge badge-red">PLUS+</span>
+                    <span class="badge badge-red">VIDEO</span>
+                </div>
+                <div class="comp-spec">
+                    BG #E21D19 / Text #FFF<br>
+                    11px Bold / border-radius: 4px
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">AUDIO</p>
+                <div style="display:flex;gap:6px;">
+                    <span class="badge badge-orange">AUDIO</span>
+                </div>
+                <div class="comp-spec">
+                    BG #FF8C00 / Text #FFF<br>
+                    11px Bold / border-radius: 4px
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ────────────────────────────── FORM ── -->
+    <div class="sec">
+        <p class="sec-title">08 &nbsp; Components — Form</p>
+        <div class="comp-grid">
+            <div class="comp-card">
+                <p class="comp-label">Toggle</p>
+                <div class="toggle-wrap">
+                    <div class="toggle toggle-on">
+                        <div class="toggle-knob"></div>
+                    </div>
+                    <span class="toggle-lbl">ON</span>
+                </div>
+                <div class="toggle-wrap" style="margin-top:6px;">
+                    <div class="toggle toggle-off">
+                        <div class="toggle-knob"></div>
+                    </div>
+                    <span class="toggle-lbl">OFF</span>
+                </div>
+                <div class="comp-spec">
+                    ON: track #E21D19<br>
+                    OFF: track #2A2A2A<br>
+                    knob #FFF / 44×24px
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Radio button</p>
+                <div class="radio-list">
+                    <div class="radio-row">
+                        <div class="radio-outer on">
+                            <div class="radio-dot"></div>
+                        </div>
+                        <span class="radio-lbl">Option 1 (selected)</span>
+                    </div>
+                    <div class="radio-row">
+                        <div class="radio-outer"></div>
+                        <span class="radio-lbl">Option 2</span>
+                    </div>
+                </div>
+                <div class="comp-spec">
+                    active dot #E21D19<br>
+                    border active: #E21D19<br>
+                    border default: #555
+                </div>
+            </div>
+            <div class="comp-card">
+                <p class="comp-label">Input field</p>
+                <div class="input-preview">C:/Users/AppData/Local…</div>
+                <div class="comp-spec">
+                    BG #2A2A2A<br>
+                    border: 1px solid #444<br>
+                    h: 36px / border-radius: 6px<br>
+                    placeholder: #666
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        ClipDown PC UI Style Guide &nbsp;·&nbsp; J'SFUTURE Inc. &nbsp;·&nbsp; 내부 배포용
+    </div>
+
+</body>
+
+</html>
