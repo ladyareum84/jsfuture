@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClipDown PC UI Style Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #111; color: #fff; padding: 40px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+        body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: #20222b; color: #fff; padding: 40px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
 
-        .page-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .page-title { font-size: 22px; font-weight: 600; color: #fff; margin-bottom: 4px; }
         .page-sub { font-size: 13px; color: #666; margin-bottom: 40px; }
         .sec { margin-bottom: 40px; }
-        .sec-title { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #666; border-bottom: 1px solid #222; padding-bottom: 8px; margin-bottom: 20px; }
-        .divider { height: 1px; background: #1e1e1e; margin: 36px 0; }
+        .sec-title { font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; border-bottom: 1px solid #404351; padding-bottom: 8px; margin-bottom: 20px; }
+        .divider { height: 1px; background: #3a3c4a; margin: 36px 0; }
 
         /* ── Color swatches ── */
         .swatch-row { display: flex; flex-wrap: wrap; gap: 12px; }
         .swatch { display: flex; flex-direction: column; gap: 6px; min-width: 130px; }
-        .chip { height: 48px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.07); }
-        .swatch-name { font-size: 12px; font-weight: 700; color: #fff; }
-        .swatch-hex { font-size: 11px; color: #fff; }
-        .swatch-use { font-size: 10px; color: #888; }
+        .chip { height: 48px; border-radius: 8px; border: 1px solid hwb(0 100% 0% / 0.07); }
+        .swatch-name { font-size: 14px; font-weight: 600; color: #fff; }
+        .swatch-hex { font-size: 13px; color: #fff; }
+        .swatch-use { font-size: 12px; color: #AAAAAA; }
 
         /* ── Text color preview ── */
         .text-color-list { display: flex; flex-direction: column; gap: 8px; }
@@ -33,26 +33,26 @@
 
         /* ── Typography table ── */
         .typo-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .typo-table th { text-align: left; color: #555; font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; padding: 0 16px 10px 0; border-bottom: 1px solid #222; }
-        .typo-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid #1e1e1e; color: #bbb; vertical-align: middle; }
-        .typo-table td:first-child { color: #fff; font-weight: 700; }
+        .typo-table th { text-align: left; color: #AAAAAA; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; padding: 0 16px 10px 0; border-bottom: 1px solid #272936; }
+        .typo-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid #272936; color: #bbb; vertical-align: middle; }
+        .typo-table td:first-child { color: #fff; font-weight: 600; }
 
         /* ── Component grid ── */
         .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
-        .comp-card { background: #1a1a1a; border: 1px solid #252525; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
-        .comp-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; }
-        .comp-spec { font-size: 11px; color: #AAAAAA; line-height: 1.8; }
+        .comp-card { background: #20222b; border: 1px solid #252525; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+        .comp-label { font-size: 11px; color: #AAAAAA; text-transform: uppercase; letter-spacing: 0.08em; }
+        .comp-spec { font-size: 12px; color: #AAAAAA; line-height: 1.8; }
 
         /* ── Button previews ── */
-        .btn-preview { height: 36px; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; cursor: default; font-family: 'Noto Sans KR', sans-serif; }
+        .btn-preview { height: 36px; border-radius: 100px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; cursor: default; font-family: 'Noto Sans KR', sans-serif; }
         .btn-primary { background: #E21D19; color: #fff; border: none; }
         .btn-outline { background: transparent; color: #E21D19; border: 1.5px solid #E21D19; }
-        .btn-ghost { background: transparent; color: #fff; border: 1px solid #444; }
+        .btn-ghost { background: #272936; color: #fff; border: 1px solid #464756; }
         .btn-dark { background: #111; color: #fff; border: none; }
         .btn-icon-wrap { width: 36px; height: 36px; border-radius: 8px; background: #E21D19; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff; }
 
         /* ── Badge ── */
-        .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 4px; font-size: 11px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif; }
+        .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 4px; font-size: 11px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; }
         .badge-red { background: #E21D19; color: #fff; }
         .badge-orange { background: #FF8C00; color: #fff; }
 
@@ -67,16 +67,16 @@
         /* ── Radio ── */
         .radio-list { display: flex; flex-direction: column; gap: 8px; }
         .radio-row { display: flex; align-items: center; gap: 8px; }
-        .radio-outer { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #555; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .radio-outer { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #bdbdc0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .radio-outer.on { border-color: #E21D19; }
         .radio-dot { width: 8px; height: 8px; border-radius: 50%; background: #E21D19; }
         .radio-lbl { font-size: 12px; color: #ccc; }
 
         /* ── Input ── */
-        .input-preview { height: 36px; background: #2a2a2a; border: 1px solid #444; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: #555; }
+        .input-preview { height: 36px; background: #20222b; border: 1px solid #3a3c4a; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: #AAAAAA; }
 
         /* ── Footer ── */
-        .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #1e1e1e; font-size: 11px; color: #444; }
+        .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #272936; font-size: 11px; color: #9e9ea5; }
     </style>
 </head>
 
@@ -96,9 +96,9 @@
                 <span class="swatch-use">버튼, 로고, CTA, PLUS+, Radio active, Point text</span>
             </div>
             <div class="swatch">
-                <div class="chip" style="background:#C41714;"></div>
+                <div class="chip" style="background:#f21914;"></div>
                 <span class="swatch-name">Brand Red Hover</span>
-                <span class="swatch-hex">#C41714</span>
+                <span class="swatch-hex">#f21914</span>
                 <span class="swatch-use">버튼 hover / pressed</span>
             </div>
             <div class="swatch">
@@ -117,34 +117,16 @@
         <p class="sec-title">02 &nbsp; Background</p>
         <div class="swatch-row">
             <div class="swatch">
-                <div class="chip" style="background:#1A1A1A;"></div>
+                <div class="chip" style="background:#20222b;"></div>
                 <span class="swatch-name">BG Base</span>
-                <span class="swatch-hex">#1A1A1A</span>
-                <span class="swatch-use">앱 전체 배경</span>
+                <span class="swatch-hex">#20222b</span>
+                <span class="swatch-use">앱 전체 배경, 입력 필드, 팝업 타이틀바 배경, hover</span>
             </div>
             <div class="swatch">
-                <div class="chip" style="background:#242424;"></div>
+                <div class="chip" style="background:#272936;"></div>
                 <span class="swatch-name">BG Sidebar</span>
-                <span class="swatch-hex">#242424</span>
-                <span class="swatch-use">좌측 사이드바</span>
-            </div>
-            <div class="swatch">
-                <div class="chip" style="background:#2C2C2C;"></div>
-                <span class="swatch-name">BG Modal</span>
-                <span class="swatch-hex">#2C2C2C</span>
-                <span class="swatch-use">다운로드 다이얼로그</span>
-            </div>
-            <div class="swatch">
-                <div class="chip" style="background:#333333;"></div>
-                <span class="swatch-name">BG Input</span>
-                <span class="swatch-hex">#333333</span>
-                <span class="swatch-use">입력 필드</span>
-            </div>
-            <div class="swatch">
-                <div class="chip" style="background:#3A3A3A;"></div>
-                <span class="swatch-name">BG Elevated</span>
-                <span class="swatch-hex">#3A3A3A</span>
-                <span class="swatch-use">hover, 선택 항목</span>
+                <span class="swatch-hex">#272936</span>
+                <span class="swatch-use">좌측 사이드바, 팝업 컨텐츠 배경</span>
             </div>
         </div>
     </div>
@@ -190,15 +172,15 @@
         <p class="sec-title">04 &nbsp; Border / Divider</p>
         <div class="swatch-row">
             <div class="swatch">
-                <div class="chip" style="background:#3D3D3D;"></div>
+                <div class="chip" style="background:#3a3c4a;"></div>
                 <span class="swatch-name">Border Default</span>
-                <span class="swatch-hex">#3D3D3D</span>
+                <span class="swatch-hex">#3a3c4a</span>
                 <span class="swatch-use">구분선, 입력 필드 border</span>
             </div>
             <div class="swatch">
-                <div class="chip" style="background:#555555;"></div>
+                <div class="chip" style="background:#404351;"></div>
                 <span class="swatch-name">Border Emphasis</span>
-                <span class="swatch-hex">#555555</span>
+                <span class="swatch-hex">#404351</span>
                 <span class="swatch-use">강조 border</span>
             </div>
         </div>
@@ -227,7 +209,7 @@
                     <td>16px / 15px</td>
                     <td>Bold</td>
                     <td>앱 타이틀, 팝업 헤더</td>
-                    <td><span style="font-family:'Noto Sans KR';font-size:15px;font-weight:700;color:#fff;">제목
+                    <td><span style="font-family:'Noto Sans KR';font-size:15px;font-weight:600;color:#fff;">제목
                             타이틀</span></td>
                 </tr>
                 <tr>
@@ -235,7 +217,7 @@
                     <td>Noto Sans KR</td>
                     <td>14px</td>
                     <td>Regular</td>
-                    <td>본문, 팝업 콘텐츠</td>
+                    <td>콘텐츠 공통 스타일</td>
                     <td><span style="font-family:'Noto Sans KR';font-size:14px;color:#FFFFFF;">본문 텍스트</span></td>
                 </tr>
                 <tr>
@@ -243,7 +225,7 @@
                     <td>Noto Sans KR</td>
                     <td>14px / 13px</td>
                     <td>Bold / Regular</td>
-                    <td>강조 콘텐츠</td>
+                    <td>본문, 팝업 콘텐츠</td>
                     <td><span style="font-family:'Noto Sans KR';font-size:13px;color:#FFFFFF;">콘텐츠 텍스트</span></td>
                 </tr>
                 <tr>
@@ -251,9 +233,8 @@
                     <td>Noto Sans KR</td>
                     <td>12px / 11px</td>
                     <td>Bold / Regular</td>
-                    <td>라벨, 팝업 가이드</td>
-                    <td><span style="font-family:'Noto Sans KR';font-size:12px;font-weight:700;color:#ccc;">라벨
-                            텍스트</span></td>
+                    <td>라벨, 팝업 콘텐츠, 가이드</td>
+                    <td><span style="font-family:'Noto Sans KR';font-size:12px;font-weight:600;color:#ccc;">라벨 텍스트</span></td>
                 </tr>
                 <tr>
                     <td>Caption</td>
@@ -288,7 +269,7 @@
                 <div class="comp-spec">
                     BG #E21D19 / Text #FFF<br>
                     h: 36px / border-radius: 100px<br>
-                    hover: #C41714
+                    hover: #f21914
                 </div>
             </div>
             <div class="comp-card">
@@ -386,7 +367,7 @@
                 </div>
                 <div class="comp-spec">
                     ON: track #E21D19<br>
-                    OFF: track #2A2A2A<br>
+                    OFF: track #20222b<br>
                     knob #FFF / 44×24px
                 </div>
             </div>
@@ -407,17 +388,17 @@
                 <div class="comp-spec">
                     active dot #E21D19<br>
                     border active: #E21D19<br>
-                    border default: #555
+                    border default: #bdbdc0
                 </div>
             </div>
             <div class="comp-card">
                 <p class="comp-label">Input field</p>
                 <div class="input-preview">C:/Users/AppData/Local…</div>
                 <div class="comp-spec">
-                    BG #2A2A2A<br>
-                    border: 1px solid #444<br>
+                    BG #20222b<br>
+                    border: 1px solid #3a3c4a<br>
                     h: 36px / border-radius: 6px<br>
-                    placeholder: #666
+                    placeholder: #9e9ea5
                 </div>
             </div>
         </div>
