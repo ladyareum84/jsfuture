@@ -66,14 +66,39 @@
 
         /* ── Radio ── */
         .radio-list { display: flex; flex-direction: column; gap: 8px; }
-        .radio-row { display: flex; align-items: center; gap: 8px; }
+        .radio-row { display: flex; align-items: center; gap: 8px; cursor: pointer; }
         .radio-outer { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #bdbdc0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .radio-outer.on { border-color: #E21D19; }
         .radio-dot { width: 8px; height: 8px; border-radius: 50%; background: #E21D19; }
         .radio-lbl { font-size: 12px; color: #ccc; }
+        input[type="radio"] {
+            -webkit-appearance: none; appearance: none;
+            width: 16px; height: 16px; border-radius: 50%;
+            border: 1.5px solid #bdbdc0;
+            flex-shrink: 0; cursor: pointer; margin: 0;
+            transition: border-color .15s;
+        }
+        input[type="radio"]:checked {
+            border-color: #E21D19;
+            background: radial-gradient(circle, #E21D19 42%, transparent 44%);
+        }
 
         /* ── Input ── */
         .input-preview { height: 36px; background: #20222b; border: 1px solid #3a3c4a; border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: #AAAAAA; }
+        .file-input-wrap { display: flex; align-items: center; gap: 6px; }
+        .file-path-input {
+            flex: 1; height: 36px;
+            background: #20222b; border: 1px solid #3a3c4a; border-radius: 100px;
+            color: #fff; font-size: 12px; font-family: 'Noto Sans KR', sans-serif;
+            padding: 0 14px; outline: none; cursor: default;
+        }
+        .file-browse-btn {
+            width: 28px; height: 28px; flex-shrink: 0;
+            background: transparent; border: none;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; padding: 0;
+        }
+        .file-browse-btn:hover svg { stroke: #fff; }
 
         /* ── Footer ── */
         .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #272936; font-size: 11px; color: #9e9ea5; }
@@ -351,7 +376,7 @@
     <div class="sec">
         <p class="sec-title">08 &nbsp; Components — Form</p>
         <div class="comp-grid">
-            <div class="comp-card">
+            <div class="comp-card" style="display: none;">
                 <p class="comp-label">Toggle</p>
                 <div class="toggle-wrap">
                     <div class="toggle toggle-on">
@@ -374,16 +399,14 @@
             <div class="comp-card">
                 <p class="comp-label">Radio button</p>
                 <div class="radio-list">
-                    <div class="radio-row">
-                        <div class="radio-outer on">
-                            <div class="radio-dot"></div>
-                        </div>
+                    <label class="radio-row">
+                        <input type="radio" name="radio-demo" checked>
                         <span class="radio-lbl">Option 1 (selected)</span>
-                    </div>
-                    <div class="radio-row">
-                        <div class="radio-outer"></div>
+                    </label>
+                    <label class="radio-row">
+                        <input type="radio" name="radio-demo">
                         <span class="radio-lbl">Option 2</span>
-                    </div>
+                    </label>
                 </div>
                 <div class="comp-spec">
                     active dot #E21D19<br>
@@ -393,7 +416,15 @@
             </div>
             <div class="comp-card">
                 <p class="comp-label">Input field</p>
-                <div class="input-preview">C:/Users/AppData/Local…</div>
+                <div class="file-input-wrap">
+                    <input type="text" class="file-path-input" value="C:\Users\design\Videos\Clipdown" readonly onclick="document.getElementById('file-hidden').click()" style="cursor:pointer;">
+                    <button type="button" class="file-browse-btn" onclick="document.getElementById('file-hidden').click()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#AAAAAA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+                    <input type="file" id="file-hidden" style="display:none">
+                </div>
                 <div class="comp-spec">
                     BG #20222b<br>
                     border: 1px solid #3a3c4a<br>
