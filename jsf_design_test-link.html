@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트별 테스트 링크</title>
+    <style>
+        :root {
+            --bg: #f5f6f8;
+            --bg-hover: #eef0f5;
+            --bg-surface: #ffffff;
+            --border: #e2e5ed;
+            --border-strong: #cdd1dd;
+            --accent-cm: #16a34a;
+            --accent-cd: #2563eb;
+            --accent-ad: #db2777;
+            --text-primary: #1a1d27;
+            --text-secondary: #5a6180;
+            --text-dim: #9ba3be;
+            --col-real: #16a34a;
+            --col-light: #2563eb;
+            --col-dark: #7c3aed;
+            --col-test: #ea6a0a;
+            --col-design: #db2777;
+            --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+            --header-h: 48px;
+            --platform-h: 38px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Noto Sans KR', -apple-system, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        /* ── TOP HEADER ── */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 300;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-strong);
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            height: var(--header-h);
+            gap: 14px;
+        }
+
+        .site-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .search-wrap {
+            flex: 1;
+            max-width: 320px;
+            position: relative;
+        }
+
+        .search-wrap svg {
+            position: absolute;
+            left: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dim);
+            pointer-events: none;
+        }
+
+        #search {
+            width: 100%;
+            background: #f0f2f7;
+            border: 1px solid var(--border-strong);
+            border-radius: 5px;
+            padding: 5px 9px 5px 29px;
+            color: var(--text-primary);
+            font-size: 12px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color .15s;
+        }
+
+        #search:focus {
+            border-color: #3b5bdb;
+        }
+
+        #search::placeholder {
+            color: var(--text-dim);
+        }
+
+        /* ── TOP PROJECT TABS ── */
+        .top-tab-nav {
+            display: flex;
+            gap: 2px;
+        }
+
+        .top-tab-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px 11px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all .12s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: .03em;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+
+        .top-tab-btn .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .top-tab-btn[data-top="cashmate"] .dot {
+            background: var(--accent-cm);
+        }
+
+        .top-tab-btn[data-top="clipdown"] .dot {
+            background: var(--accent-cd);
+        }
+
+        .top-tab-btn[data-top="ad"] .dot {
+            background: var(--accent-ad);
+        }
+
+        .top-tab-btn.active {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .top-tab-btn:hover:not(.active) {
+            background: #eef0f5;
+            color: var(--text-primary);
+        }
+
+        /* ── PLATFORM TAB BAR ── */
+        .platform-bar {
+            position: sticky;
+            top: var(--header-h);
+            z-index: 200;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-strong);
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            padding: 0 20px;
+            height: var(--platform-h);
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .platform-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .plat-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-dim);
+            white-space: nowrap;
+            transition: all .1s;
+            font-family: inherit;
+            letter-spacing: .03em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+
+        .plat-btn .cnt {
+            font-size: 9px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            background: #ffffff08;
+            color: var(--text-dim);
+            font-weight: 700;
+            letter-spacing: .05em;
+            transition: all .1s;
+        }
+
+        .plat-btn.active {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-cm);
+        }
+
+        .plat-btn.active .cnt {
+            background: #16a34a18;
+            color: var(--accent-cm);
+        }
+
+        .plat-btn:hover:not(.active) {
+            color: var(--text-secondary);
+            background: #eef0f5;
+        }
+
+        /* clipdown 탭의 platform bar accent */
+        .top-group[data-top="clipdown"] .plat-btn.active {
+            border-bottom-color: var(--accent-cd);
+        }
+
+        .top-group[data-top="clipdown"] .plat-btn.active .cnt {
+            background: #2563eb18;
+            color: var(--accent-cd);
+        }
+
+        .top-group[data-top="ad"] .plat-btn.active {
+            border-bottom-color: var(--accent-ad);
+        }
+
+        /* ── SECTION / PANELS ── */
+        .top-group {
+            display: none;
+        }
+
+        .top-group.active {
+            display: block;
+        }
+
+        .plat-panel {
+            display: none;
+            padding: 0 20px 80px;
+        }
+
+        .plat-panel.active {
+            display: block;
+        }
+
+        /* ── SECTION BLOCK ── */
+        .section-block {
+            margin-bottom: 24px;
+            padding-top: 16px;
+        }
+
+        .section-block-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-strong);
+            margin-bottom: 1px;
+        }
+
+        .sec-bar {
+            width: 2px;
+            height: 14px;
+            border-radius: 2px;
+        }
+
+        .sec-bar.cm {
+            background: var(--accent-cm);
+        }
+
+        .sec-bar.cd {
+            background: var(--accent-cd);
+        }
+
+        .sec-bar.ad {
+            background: var(--accent-ad);
+        }
+
+        .sec-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        /* ── TABLE ── */
+        .link-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .link-table col.c-page {
+            width: 190px;
+        }
+
+        .link-table col.c-real {
+            width: auto;
+        }
+
+        .link-table col.c-light {
+            width: auto;
+        }
+
+        .link-table col.c-dark {
+            width: auto;
+        }
+
+        .link-table col.c-test {
+            width: auto;
+        }
+
+        .link-table thead {
+            position: sticky;
+            top: calc(var(--header-h) + var(--platform-h));
+            z-index: 100;
+        }
+
+        .link-table thead tr {
+            background: #f0f2f7;
+        }
+
+        .link-table th {
+            padding: 6px 10px;
+            text-align: left;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-strong);
+            white-space: nowrap;
+        }
+
+        .th-page {
+            color: var(--text-dim);
+        }
+
+        .th-real {
+            color: var(--col-real);
+            border-left: 1px solid var(--border);
+            padding-left: 12px;
+        }
+
+        .th-light {
+            color: var(--col-light);
+            border-left: 1px solid var(--border);
+            padding-left: 12px;
+        }
+
+        .th-dark {
+            color: var(--col-dark);
+            border-left: 1px solid var(--border);
+            padding-left: 12px;
+        }
+
+        .th-test {
+            color: var(--col-test);
+            border-left: 2px solid #ea6a0a30;
+            background: #fff7f0;
+            padding-left: 14px;
+        }
+
+        /* ── ROWS ── */
+        .link-table tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+
+        .link-table tbody tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .link-table tbody tr.row-depth2 td.td-page .page-name {
+            padding-left: 14px;
+            color: var(--text-secondary);
+            font-size: 11px;
+        }
+
+        .link-table tbody tr.row-depth2 td.td-page .page-name::before {
+            content: '└ ';
+            color: var(--text-dim);
+        }
+
+        .link-table tbody tr.row-subhead td {
+            padding: 10px 10px 4px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            border-bottom: none;
+            background: transparent;
+        }
+
+        .link-table tbody tr.row-subhead:hover {
+            background: transparent;
+        }
+
+        .link-table td {
+            padding: 7px 10px;
+            vertical-align: middle;
+        }
+
+        .td-page {
+            border-right: 1px solid var(--border);
+        }
+
+        .td-real {
+            border-left: 1px solid var(--border);
+        }
+
+        .td-light {
+            border-left: 1px solid var(--border);
+        }
+
+        .td-dark {
+            border-left: 1px solid var(--border);
+        }
+
+        .td-test {
+            border-left: 2px solid #ea6a0a28;
+            background: #fff8f2;
+        }
+
+        .link-table tbody tr:hover .td-test {
+            background: #ffeedd;
+        }
+
+        .page-name {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .page-sub {
+            font-size: 10px;
+            color: var(--text-secondary);
+            display: block;
+            margin-top: 1px;
+        }
+
+        /* ── URL LINKS ── */
+        .url-link {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            text-decoration: none;
+            padding: 2px 0;
+            line-height: 1.4;
+            transition: color .1s;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .url-link.type-real {
+            color: #2d9e58;
+        }
+
+        .url-link.type-real:hover {
+            color: var(--col-real);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .url-link.type-light {
+            color: #3b74d4;
+        }
+
+        .url-link.type-light:hover {
+            color: var(--col-light);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .url-link.type-dark {
+            color: #7c3aed;
+        }
+
+        .url-link.type-dark:hover {
+            color: var(--col-dark);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .url-link.type-test {
+            color: #c9570a;
+        }
+
+        .url-link.type-test:hover {
+            color: var(--col-test);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .url-link.type-design {
+            color: #c0206a;
+        }
+
+        .url-link.type-design:hover {
+            color: var(--col-design);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .url-note {
+            font-size: 10.5px;
+            font-family: var(--font-mono);
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .cell-empty {
+            color: var(--text-dim);
+            font-size: 10px;
+        }
+
+        /* ── SEARCH HIDE ── */
+        .link-table tbody tr.row-hidden {
+            display: none;
+        }
+
+        .section-block.section-hidden {
+            display: none;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            :root {
+                --header-h: 96px;
+            }
+
+            .site-header {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 8px 14px;
+                gap: 8px;
+            }
+
+            .site-title {
+                order: 1;
+            }
+
+            .top-tab-nav {
+                order: 2;
+                margin-left: auto;
+            }
+
+            .search-wrap {
+                order: 3;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .platform-bar {
+                padding: 0 14px;
+            }
+
+            .plat-panel {
+                padding: 0 14px 60px;
+            }
+
+            /* 테이블 → 카드 레이아웃 */
+            .link-table,
+            .link-table thead,
+            .link-table tbody,
+            .link-table tr,
+            .link-table th,
+            .link-table td {
+                display: block;
+            }
+
+            .link-table thead {
+                display: none;
+            }
+
+            .link-table col {
+                display: none;
+            }
+
+            .link-table tbody tr {
+                background: var(--bg-surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin-bottom: 8px;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .link-table tbody tr:hover {
+                background: var(--bg-hover);
+            }
+
+            .link-table tbody tr.row-subhead {
+                border: none;
+                background: transparent;
+                border-radius: 0;
+                margin-bottom: 0;
+            }
+
+            .link-table td {
+                border: none !important;
+                padding: 6px 12px;
+                background: transparent !important;
+            }
+
+            .link-table td.td-page {
+                padding: 10px 12px 6px;
+                border-bottom: 1px solid var(--border) !important;
+            }
+
+            /* 모바일 셀 레이블 */
+            .link-table td:not(.td-page)::before {
+                display: inline-block;
+                font-size: 9px;
+                font-weight: 700;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                color: var(--text-dim);
+                width: 70px;
+                flex-shrink: 0;
+            }
+
+            .link-table td.td-real::before {
+                content: '실서버';
+            }
+
+            .link-table td.td-light::before {
+                content: '로컬 디자인';
+                color: var(--col-light);
+            }
+
+            .link-table td.td-dark::before {
+                content: '로컬 디자인 Dark';
+                color: var(--col-dark);
+            }
+
+            .link-table td.td-test::before {
+                content: '개발 테스트 서버';
+                color: var(--col-test);
+            }
+
+            .link-table td:not(.td-page) {
+                display: flex;
+                align-items: baseline;
+                gap: 8px;
+            }
+
+            /* 빈 셀 숨기기 (모바일) */
+            .link-table td:not(.td-page):has(> .cell-empty:only-child) {
+                display: none;
+            }
+
+            .link-table td.td-test {
+                border-left: 3px solid #ea6a0a40 !important;
+                background: #fff8f2 !important;
+            }
+
+            .url-link {
+                white-space: normal;
+                word-break: break-all;
+            }
+
+            .section-block {
+                padding-top: 12px;
+            }
+
+            .section-block-title {
+                padding-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .top-tab-btn {
+                padding: 4px 8px;
+                font-size: 10px;
+            }
+
+            .top-tab-btn .dot {
+                display: none;
+            }
+
+            .plat-btn {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            .plat-btn .cnt {
+                display: none;
+            }
+
+            .site-title {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <span class="site-title">JSF / Test Links</span>
+        <div class="search-wrap">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                <circle cx="5.5" cy="5.5" r="4.5" stroke="currentColor" stroke-width="1.4" />
+                <path d="M9 9L12.5 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+            </svg>
+            <input type="text" id="search" placeholder="페이지명 / URL 검색..." autocomplete="off">
+        </div>
+        <nav class="top-tab-nav">
+            <button class="top-tab-btn active" data-top="cashmate"><span class="dot"></span>캐시메이트</button>
+            <button class="top-tab-btn" data-top="clipdown"><span class="dot"></span>클립다운</button>
+            <button class="top-tab-btn" data-top="ad"><span class="dot"></span>AD / ECT</button>
+        </nav>
+    </header>
+
+
+    <!-- ═══════════════════════════════════════
+     CASHMATE
+════════════════════════════════════════ -->
+    <div class="top-group active" data-top="cashmate">
+        <div class="platform-bar" id="bar-cashmate">
+            <button class="plat-btn active" data-plat="cm-mobile">Mobile Webview <span class="cnt">16</span></button>
+            <button class="plat-btn" data-plat="cm-pc">PC Webview <span class="cnt">11</span></button>
+            <button class="plat-btn" data-plat="cm-mailing">Mailing <span class="cnt">6</span></button>
+            <button class="plat-btn" data-plat="cm-ect">ECT <span class="cnt">2</span></button>
+        </div>
+
+        <!-- Mobile Webview -->
+        <div class="plat-panel active" id="cm-mobile">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">포인트</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="포인트 쓰기">
+                            <td class="td-page"><span class="page-name">포인트 쓰기</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/point-use"
+                                    target="_blank">/webview/mobile/point-use</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/point-use"
+                                    target="_blank">192.168.0.217/…/point-use</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/point-use?cashmate_id=10004&client_id=b1fc4e19-cef4-44f2-aaf1-f4bfa7cc8f4f&theme=dark"
+                                    target="_blank">…/point-use?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="포인트 모으기">
+                            <td class="td-page"><span class="page-name">포인트 모으기</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/point-collect"
+                                    target="_blank">/webview/mobile/point-collect</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/point-collect"
+                                    target="_blank">192.168.0.217/…/point-collect</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/point-collect?type=all&cashmate_id=10004&client_id=b1fc4e19-cef4-44f2-aaf1-f4bfa7cc8f4f&theme=dark"
+                                    target="_blank">…/point-collect?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="포인트 내역">
+                            <td class="td-page"><span class="page-name">포인트 내역</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/point/list/store?cashmate_id=7079"
+                                    target="_blank">/mobile/point/list/store</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/point/list/store?cashmate_id=7079"
+                                    target="_blank">192.168.0.217/…/list/store</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/point/list/store?cashmate_id=10004&theme=dark"
+                                    target="_blank">…/list/store?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">마이페이지</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="회원정보 수정">
+                            <td class="td-page"><span class="page-name">회원정보 수정</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/info/7063"
+                                    target="_blank">/webview/mypage/info/7063</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/info/7063"
+                                    target="_blank">192.168.0.217/…/info/7063</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/info/10004?theme=dark"
+                                    target="_blank">…/info/10004?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="로그아웃">
+                            <td class="td-page"><span class="page-name">로그아웃</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/logout/10004"
+                                    target="_blank">/webview/mypage/logout/10004</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/logout/10004"
+                                    target="_blank">192.168.0.217/…/logout/10004</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/logout/10004?theme=dark"
+                                    target="_blank">…/logout/10004?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="서비스해지">
+                            <td class="td-page"><span class="page-name">서비스해지</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/delete/10004"
+                                    target="_blank">/webview/mypage/delete/10004</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/delete/10004"
+                                    target="_blank">192.168.0.217/…/delete/10004</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/delete/10004?theme=dark"
+                                    target="_blank">…/delete/10004?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="서비스해지 결과 안내">
+                            <td class="td-page"><span class="page-name">결과 안내</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/delete/10004"
+                                    target="_blank">/webview/mypage/delete/10004</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/delete/10004"
+                                    target="_blank">192.168.0.217/…/delete/10004</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/delete/10004?theme=dark"
+                                    target="_blank">…/delete/10004?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="에러페이지">
+                            <td class="td-page"><span class="page-name">에러페이지</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/error"
+                                    target="_blank">/webview/mypage/error</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/error"
+                                    target="_blank">192.168.0.217/…/mypage/error</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/error?theme=dark"
+                                    target="_blank">…/mypage/error?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="에러 로그인 안내">
+                            <td class="td-page"><span class="page-name">로그인 안내</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/point/list/store"
+                                    target="_blank">/mobile/point/list/store</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/point/list/store"
+                                    target="_blank">192.168.0.217/…/list/store</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/point/list/store?theme=dark"
+                                    target="_blank">…/list/store?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="프로필 등록 배너 with id">
+                            <td class="td-page"><span class="page-name">프로필 등록 배너<span class="page-sub">with
+                                        cashmate_id</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/banner?cashmate_id=10004&theme=dark"
+                                    target="_blank">/mypage/banner?cashmate_id=10004</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/banner?cashmate_id=10004"
+                                    target="_blank">192.168.0.217/…/banner?cashmate_id=10004</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/banner?cashmate_id=10004&theme=dark"
+                                    target="_blank">…/banner?cashmate_id=10004&theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="프로필 등록 배너 no id">
+                            <td class="td-page"><span class="page-name">프로필 등록 배너<span class="page-sub">no
+                                        ID</span></span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mypage/banner"
+                                    target="_blank">/mypage/banner</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mypage/banner"
+                                    target="_blank">192.168.0.217/…/mypage/banner</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mypage/banner?theme=dark"
+                                    target="_blank">…/mypage/banner?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">이벤트</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="이벤트 리스트">
+                            <td class="td-page"><span class="page-name">이벤트<span class="page-sub">리스트</span></span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/event#"
+                                    target="_blank">/webview/mobile/event</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/event#"
+                                    target="_blank">192.168.0.217/…/mobile/event</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/event?cashmate_id=10004&detect_value=06e2e21c405e8eb2&friend_event_code=&theme=dark"
+                                    target="_blank">…/mobile/event?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="출석체크">
+                            <td class="td-page"><span class="page-name">출석체크</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/event/attendance/7079"
+                                    target="_blank">/mobile/event/attendance/7079</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/event/attendance/7079"
+                                    target="_blank">192.168.0.217/…/attendance/7079</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="친구초대">
+                            <td class="td-page"><span class="page-name">친구초대</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/invitation?cashmate_id=10003"
+                                    target="_blank">/mobile/invitation?cashmate_id=10003</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/invitation?cashmate_id=10003"
+                                    target="_blank">192.168.0.217/…/invitation</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="눈치게임 규칙설명">
+                            <td class="td-page"><span class="page-name">눈치게임<span class="page-sub">규칙설명</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/nunchi-game/rule/10145"
+                                    target="_blank">/nunchi-game/rule/10145</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/nunchi-game/rule/10145"
+                                    target="_blank">192.168.0.217/…/rule/10145</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="눈치게임 라운드 기록">
+                            <td class="td-page"><span class="page-name">라운드 기록</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/nunchi-game/round-list/10145"
+                                    target="_blank">/nunchi-game/round-list/10145</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/nunchi-game/round-list/10145"
+                                    target="_blank">192.168.0.217/…/round-list/10145</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="눈치게임 참여 내역">
+                            <td class="td-page"><span class="page-name">참여 내역</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/nunchi-game/my-history/10145"
+                                    target="_blank">/nunchi-game/my-history/10145</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/nunchi-game/my-history/10145"
+                                    target="_blank">192.168.0.217/…/my-history/10145</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">고객센터</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="고객센터">
+                            <td class="td-page"><span class="page-name">고객센터</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/list/10004"
+                                    target="_blank">/customer/list/10004</a>
+                            </td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/customer/list/10004"
+                                    target="_blank">192.168.0.217/…/list/10004</a>
+                            </td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/customer/list/10004?theme=dark"
+                                    target="_blank">…/list/10004?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="문의하기">
+                            <td class="td-page"><span class="page-name">문의하기</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/inquiry/10086/form?type=missPointPayment"
+                                    target="_blank">/customer/inquiry/10086/form</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/customer/inquiry/10086/form?type=missPointPayment"
+                                    target="_blank">192.168.0.217/…/inquiry/10086</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/customer/inquiry/10004?theme=dark"
+                                    target="_blank">…/inquiry/10004?theme=dark</a></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/inquiry/10145?theme=dark"
+                                    target="_blank">testcash/…/inquiry/10145</a></td>
+                        </tr>
+                        <tr data-search="공지사항">
+                            <td class="td-page"><span class="page-name">공지사항</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/notice?cashmate_id=10091"
+                                    target="_blank">/customer/notice?cashmate_id=10091</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/customer/notice?cashmate_id=10091"
+                                    target="_blank">192.168.0.217/…/notice</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/customer/notice?cashmate_id=10004&theme=dark"
+                                    target="_blank">…/notice?theme=dark</a></td>
+                            <td class="td-test">
+                                <a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/notice?app_type=clipdown_lite"
+                                    target="_blank">testcash/…?app_type=clipdown_lite</a>
+                                <a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/notice?app_type=clipdown_lite_ios"
+                                    target="_blank">testcash/…?app_type=clipdown_lite_ios</a>
+                            </td>
+                        </tr>
+                        <tr data-search="약관 안내">
+                            <td class="td-page"><span class="page-name">약관 안내</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/policy/list/10089"
+                                    target="_blank">/customer/policy/list/10089</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/customer/policy/list/10089"
+                                    target="_blank">192.168.0.217/…/policy/list</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/customer/policy/list/10089?theme=dark"
+                                    target="_blank">…/policy/list?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="이용약관">
+                            <td class="td-page"><span class="page-name">이용약관</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/cashmate_info.php"
+                                    target="_blank">inflmate.com/policy/cashmate_info</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/policy/cashmate_info.php"
+                                    target="_blank">192.168.0.217/policy/cashmate_info</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/policy/cashmate_info.php?mode=cashmate&theme=dark"
+                                    target="_blank">…cashmate_info?mode=cashmate&theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="FAQ">
+                            <td class="td-page"><span class="page-name">FAQ</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/mobile/faq?cashmate_id={cashmate_id}"
+                                    target="_blank">/mobile/faq?cashmate_id=…</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/mobile/faq"
+                                    target="_blank">192.168.0.217/…/mobile/faq</a></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/mobile/faq?theme=dark"
+                                    target="_blank">…/mobile/faq?theme=dark</a>
+                            </td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /cm-mobile -->
+
+        <!-- PC Webview -->
+        <div class="plat-panel" id="cm-pc">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">포인트 / 마이페이지</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="포인트 쓰기 PC">
+                            <td class="td-page"><span class="page-name">포인트 쓰기</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/point-use?cashmate_id=10004&client_id=b1fc4e19-cef4-44f2-aaf1-f4bfa7cc8f4f&theme=dark"
+                                    target="_blank">/pc/point-use</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/webview/pc/point-use?cashmate_id=10004&client_id=b1fc4e19-cef4-44f2-aaf1-f4bfa7cc8f4f&theme=dark"
+                                    target="_blank">192.168.0.217/…/pc/point-use?theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="포인트 모으기 PC">
+                            <td class="td-page"><span class="page-name">포인트 모으기</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/point-collect"
+                                    target="_blank">/pc/point-collect</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/webview/pc/point-collect"
+                                    target="_blank">192.168.0.217/…/pc/point-collect</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="마이페이지 포인트 내역 PC">
+                            <td class="td-page"><span class="page-name">마이페이지<span class="page-sub">포인트 내역</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/mypage/10027"
+                                    target="_blank">/pc/mypage/10027</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/mypage/10027"
+                                    target="_blank">localhost/webview/pc/mypage/10027</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="마이페이지 회원정보 PC">
+                            <td class="td-page"><span class="page-name">회원정보</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/mypage/10027"
+                                    target="_blank">/pc/mypage/10027</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/mypage/10027"
+                                    target="_blank">localhost/webview/pc/mypage/10027</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">고객센터</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="문의하기 리스트 PC">
+                            <td class="td-page"><span class="page-name">문의하기<span class="page-sub">리스트</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/inquiry/list/10027"
+                                    target="_blank">/pc/inquiry/list/10027</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/inquiry/list/10027/form?render=pc"
+                                    target="_blank">localhost/…/inquiry/list/10027</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/pc/inquiry/list/1234/1234"
+                                    target="_blank">testcash/…/pc/inquiry/list/1234</a></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="클립다운 문의 PC">
+                            <td class="td-page"><span class="page-name">클립다운 문의</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/pc/inquiry/clipdown/10027"
+                                    target="_blank">/pc/inquiry/clipdown/10027</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/inquiry/clipdown/form"
+                                    target="_blank">localhost/…/inquiry/clipdown/form</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/pc/inquiry/clipdown/1234"
+                                    target="_blank">testcash/…/inquiry/clipdown/1234</a></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="캐시메이트 문의 PC">
+                            <td class="td-page"><span class="page-name">캐시메이트 문의</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/inquiry/43817/form?render=pc"
+                                    target="_blank">/customer/inquiry/43817/form?render=pc</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/customer/inquiry/43817/form?render=pc"
+                                    target="_blank">localhost/…/inquiry/43817?render=pc</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/inquiry/1234/form?render=pc"
+                                    target="_blank">testcash/…/inquiry/1234?render=pc</a></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="공지사항 PC">
+                            <td class="td-page"><span class="page-name">공지사항</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://cash.inflmate.com/webview/customer/notice?cashmate_id=10091"
+                                    target="_blank">/customer/notice?cashmate_id=10091</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/customer/notice?app_type=clipdown_pc"
+                                    target="_blank">localhost/…/notice?app_type=clipdown_pc</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/notice?app_type=clipdown_pc"
+                                    target="_blank">testcash/…?app_type=clipdown_pc</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">이벤트 / 기타</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="앱 이용안내 팝업 PC">
+                            <td class="td-page"><span class="page-name">[팝업] 앱 이용안내</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/connect-app"
+                                    target="_blank">localhost/webview/pc/connect-app</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="이벤트 친구초대 PC">
+                            <td class="td-page"><span class="page-name">이벤트<span class="page-sub">친구초대하기</span></span>
+                            </td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost/webview/pc/invitation"
+                                    target="_blank">localhost/webview/pc/invitation</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /cm-pc -->
+
+        <!-- Mailing -->
+        <div class="plat-panel" id="cm-mailing">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">이메일 템플릿</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="이메일 공지사항 안내">
+                            <td class="td-page"><span class="page-name">공통 이메일<span class="page-sub">공지사항
+                                        안내</span></span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-design"
+                                    href="https://design.jsfuture.co.kr/clipdown/2026/webview/cashmate/emails/member/template_general_noti_v1.html"
+                                    target="_blank">design.jsfuture.co.kr/…/template_general_noti_v1</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="이메일 포인트 소멸">
+                            <td class="td-page"><span class="page-name">공통 이메일<span class="page-sub">포인트 소멸 예정
+                                        안내</span></span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-design"
+                                    href="https://design.jsfuture.co.kr/clipdown/2026/webview/cashmate/emails/member/template_point_expiry_noti_v1.html"
+                                    target="_blank">design.jsfuture.co.kr/…/template_point_expiry_noti_v1</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="수신거부 Case별">
+                            <td class="td-page"><span class="page-name">수신거부<span class="page-sub">Case별</span></span>
+                            </td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-design"
+                                    href="https://design.jsfuture.co.kr/clipdown/2026/webview/cashmate/emails/member/unnsubscribe_complete.html"
+                                    target="_blank">design.jsfuture.co.kr/…/unnsubscribe_complete</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="수신거부 완료 이미 수신거부">
+                            <td class="td-page"><span class="page-name">수신 거부 완료 / 이미 수신 거부</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/member/unsubscribe?member_token=ScQq9qVDXYxokNEFm8X00g"
+                                    target="_blank">testcash/member/unsubscribe?token=ScQq…</a></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="비정상 만료 링크">
+                            <td class="td-page"><span class="page-name">비정상 / 만료 링크</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/member/unsubscribe?member_token=ScQq9qVDXYx"
+                                    target="_blank">testcash/member/unsubscribe?token=ScQq… (만료)</a></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="탈퇴한 회원">
+                            <td class="td-page"><span class="page-name">탈퇴한 회원</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/member/unsubscribe?member_token=9hSTumUtXVoLYhPVymL3ew"
+                                    target="_blank">testcash/member/unsubscribe?token=9hST…</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /cm-mailing -->
+
+        <!-- ECT -->
+        <div class="plat-panel" id="cm-ect">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cm"></div><span class="sec-label">ECT</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">비고</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="광고 호출 리모컨">
+                            <td class="td-page"><span class="page-name">광고 호출 리모컨</span></td>
+                            <td class="td-real"><a class="url-link type-real" href="https://cash.inflmate.com/control/"
+                                    target="_blank">cash.inflmate.com/control/</a></td>
+                            <td class="td-light"><span class="url-note">ID: jsfuture / jsfuture5111</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="광고 썸네일 포인트 모으기">
+                            <td class="td-page"><span class="page-name">광고 썸네일 데이터<span class="page-sub">포인트 모으기
+                                        리스트</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://partner.nstation.co.kr/api/campaign/lists?mkey=1065&mckey=10206"
+                                    target="_blank">partner.nstation.co.kr/api/campaign/lists</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /cm-ect -->
+
+    </div><!-- /cashmate -->
+
+
+    <!-- ═══════════════════════════════════════
+     CLIPDOWN
+════════════════════════════════════════ -->
+    <div class="top-group" data-top="clipdown">
+        <div class="platform-bar" id="bar-clipdown">
+            <button class="plat-btn active" data-plat="cd-site">클립다운 사이트 <span class="cnt">5</span></button>
+            <button class="plat-btn" data-plat="cd-policy">이용약관 <span class="cnt">6</span></button>
+            <button class="plat-btn" data-plat="cd-mobile">모바일 <span class="cnt">4</span></button>
+            <button class="plat-btn" data-plat="cd-admin">어드민 <span class="cnt">20</span></button>
+        </div>
+
+        <div class="plat-panel active" id="cd-site">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cd"></div><span class="sec-label">클립다운</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="메인 홈">
+                            <td class="td-page"><span class="page-name">메인 홈</span></td>
+                            <td class="td-real"><a class="url-link type-real" href="http://www.clipdown.net/"
+                                    target="_blank">www.clipdown.net/</a></td>
+                            <td class="td-light"><a class="url-link type-light" href="http://www.clipdown.net/"
+                                    target="_blank">www.clipdown.net/</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="다운로드 페이지">
+                            <td class="td-page"><span class="page-name">다운로드 페이지</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://www.clipdown.net/download_guide.php?ref="
+                                    target="_blank">clipdown.net/download_guide.php</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/download_guide.php?ref="
+                                    target="_blank">192.168.0.217/download_guide.php</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="클립다운 PLUS+">
+                            <td class="td-page"><span class="page-name">클립다운 PLUS+</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://www.clipdown.net/plus-info.php"
+                                    target="_blank">clipdown.net/plus-info.php</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/plus-info.php"
+                                    target="_blank">192.168.0.217/plus-info.php</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="캐시메이트 클립다운">
+                            <td class="td-page"><span class="page-name">캐시메이트</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://www.clipdown.net/cashmate.php"
+                                    target="_blank">clipdown.net/cashmate.php</a></td>
+                            <td class="td-light"><a class="url-link type-light" href="http://192.168.0.217/cashmate.php"
+                                    target="_blank">192.168.0.217/cashmate.php</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="캐시메이트 이용안내 클립다운라이트">
+                            <td class="td-page"><span class="page-name">캐시메이트 이용안내<span
+                                        class="page-sub">클립다운라이트</span></span></td>
+                            <td class="td-real"><a class="url-link type-real" href="https://www.cashmate.co.kr/"
+                                    target="_blank">www.cashmate.co.kr/</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><a class="url-link type-dark"
+                                    href="http://192.168.0.217/cashmate.php?guide=app&theme=dark"
+                                    target="_blank">192.168.0.217/cashmate.php?guide=app&theme=dark</a></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="plat-panel" id="cd-policy">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cd"></div><span class="sec-label">(공통) 이용약관 Web / APP / PC</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="인플메이트 약관">
+                            <td class="td-page"><span class="page-name">인플메이트</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/member.php"
+                                    target="_blank">inflmate.com/policy/member.php</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/policy/member.php"
+                                    target="_blank">192.168.0.217/policy/member.php</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="캐시메이트 약관">
+                            <td class="td-page"><span class="page-name">캐시메이트</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/cashmate_info.php?mode="
+                                    target="_blank">inflmate.com/policy/cashmate_info.php</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="클립다운 PLUS+ 약관">
+                            <td class="td-page"><span class="page-name">클립다운PLUS+</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/plus_info.php?mode="
+                                    target="_blank">inflmate.com/policy/plus_info.php</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="클립다운 소프트웨어 약관">
+                            <td class="td-page"><span class="page-name">클립다운 소프트웨어</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/software_info.php"
+                                    target="_blank">inflmate.com/policy/software_info.php</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="개인정보처리방침">
+                            <td class="td-page"><span class="page-name">개인정보처리방침</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/privacy.php"
+                                    target="_blank">inflmate.com/policy/privacy.php</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="청소년보호정책">
+                            <td class="td-page"><span class="page-name">청소년보호정책</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/youth_policy.php?mode="
+                                    target="_blank">inflmate.com/policy/youth_policy.php</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="plat-panel" id="cd-mobile">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cd"></div><span class="sec-label">클립다운 모바일</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="공지사항 모바일">
+                            <td class="td-page"><span class="page-name">공지사항</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/webview/customer/notice?app_type=clipdown_mobile"
+                                    target="_blank">inflmate.com/…/notice?app_type=clipdown_mobile</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testcash.inflmate.com/webview/customer/notice?app_type=clipdown_mobile"
+                                    target="_blank">testcash/…?app_type=clipdown_mobile</a></td>
+                        </tr>
+                        <tr data-search="이용약관 클립다운 소프트웨어 모바일">
+                            <td class="td-page"><span class="page-name">이용약관<span class="page-sub">클립다운
+                                        소프트웨어</span></span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/software_info.php?mode=clipdown_mobile"
+                                    target="_blank">inflmate.com/policy/software_info.php?mode=clipdown_mobile</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="개인정보처리방침 모바일">
+                            <td class="td-page"><span class="page-name">개인정보처리방침</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://inflmate.com/policy/privacy.php?mode=clipdown_mobile"
+                                    target="_blank">inflmate.com/policy/privacy.php?mode=clipdown_mobile</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="알림 PUSH 모바일">
+                            <td class="td-page"><span class="page-name">알림 (PUSH)</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://clipdown.co.kr/push?client_id=605844&secret_key=dXikd0M1BK8L1NoUrHJ9d5Bn9ZI0wCJnwAAIJfaR"
+                                    target="_blank">clipdown.co.kr/push?client_id=605844</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><a class="url-link type-test"
+                                    href="https://testapi.clipdown.co.kr/push?client_id=605844&secret_key=dXikd0M1BK8L1NoUrHJ9d5Bn9ZI0wCJnwAAIJfaR"
+                                    target="_blank">testapi.clipdown.co.kr/push?client_id=605844</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="plat-panel" id="cd-admin">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar cd"></div><span class="sec-label">신규 스타일 어드민 (adm-jsf)</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-subhead">
+                            <td colspan="5">앱호출 SDK</td>
+                        </tr>
+                        <tr data-search="SDK 요약 보고서">
+                            <td class="td-page"><span class="page-name">요약 보고서</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/sdk/summary"
+                                    target="_blank">admin.jsfuture.co.kr/sdk/summary</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="SDK 매체 관리">
+                            <td class="td-page"><span class="page-name">매체 관리</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/sdk/media"
+                                    target="_blank">admin.jsfuture.co.kr/sdk/media</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="SDK 매체별 광고 관리">
+                            <td class="td-page"><span class="page-name">매체별 광고 관리</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/sdk/advertisement"
+                                    target="_blank">admin.jsfuture.co.kr/sdk/advertisement</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-subhead">
+                            <td colspan="5">클립다운</td>
+                        </tr>
+                        <tr data-search="클립다운 요약 보고서 어드민">
+                            <td class="td-page"><span class="page-name">요약 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/summary.html"
+                                    target="_blank">localhost:8000/views/clipdown/summary.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="클립다운 리포트 어드민">
+                            <td class="td-page"><span class="page-name">클립다운 리포트</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/report.html"
+                                    target="_blank">localhost:8000/views/clipdown/report.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="SNS 공유하기 어드민">
+                            <td class="td-page"><span class="page-name">SNS 공유하기</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/sns-share.html"
+                                    target="_blank">localhost:8000/views/clipdown/sns-share.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="다운로드 보고서 어드민">
+                            <td class="td-page"><span class="page-name">다운로드 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/download.html"
+                                    target="_blank">localhost:8000/views/clipdown/download.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="IP 보고서 어드민">
+                            <td class="td-page"><span class="page-name">IP 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/ip-report.html"
+                                    target="_blank">localhost:8000/views/clipdown/ip-report.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="프로그램 관리 어드민">
+                            <td class="td-page"><span class="page-name">프로그램 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/app-config.html"
+                                    target="_blank">localhost:8000/…/app-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="바탕화면 아이콘 경로 편집">
+                            <td class="td-page"><span class="page-name">바탕화면 아이콘 경로 편집</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/app-config_detail_bacon.html"
+                                    target="_blank">localhost:8000/…/app-config_detail_bacon.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="프로그램 일괄 수정 어드민">
+                            <td class="td-page"><span class="page-name">프로그램 일괄 수정</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/app-config_detail_edite_all.html"
+                                    target="_blank">localhost:8000/…/app-config_detail_edite_all.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="업데이트 수정 어드민">
+                            <td class="td-page"><span class="page-name">업데이트 수정</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/app-config_detail_edite.html"
+                                    target="_blank">localhost:8000/…/app-config_detail_edite.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="다운로드 사이트 관리 어드민">
+                            <td class="td-page"><span class="page-name">다운로드 사이트 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown/download-site-config.html"
+                                    target="_blank">localhost:8000/…/download-site-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-subhead">
+                            <td colspan="5">클립다운 모바일</td>
+                        </tr>
+                        <tr data-search="모바일 요약 보고서 어드민">
+                            <td class="td-page"><span class="page-name">요약 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_summary.html"
+                                    target="_blank">localhost:8000/…/mobile_summary.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="모바일 다운로드 보고서 어드민">
+                            <td class="td-page"><span class="page-name">다운로드 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_downlad-report.html"
+                                    target="_blank">localhost:8000/…/mobile_downlad-report.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="모바일 광고 보고서 어드민">
+                            <td class="td-page"><span class="page-name">광고 보고서</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_ad-report.html"
+                                    target="_blank">localhost:8000/…/mobile_ad-report.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="모바일 광고 설정 어드민">
+                            <td class="td-page"><span class="page-name">광고 설정</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_ad-report_config.html"
+                                    target="_blank">localhost:8000/…/mobile_ad-report_config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="모바일 다운로드 사이트 관리 어드민">
+                            <td class="td-page"><span class="page-name">다운로드 사이트 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_download-site-config.html"
+                                    target="_blank">localhost:8000/…/mobile_download-site-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="설치 경로 관리 어드민">
+                            <td class="td-page"><span class="page-name">설치 경로 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_install-path-config.html"
+                                    target="_blank">localhost:8000/…/mobile_install-path-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="버전 관리 어드민">
+                            <td class="td-page"><span class="page-name">버전 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_version-config.html"
+                                    target="_blank">localhost:8000/…/mobile_version-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="모바일 PUSH 관리 어드민">
+                            <td class="td-page"><span class="page-name">모바일 PUSH 관리</span></td>
+                            <td class="td-real"><span class="cell-empty">—</span></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://localhost:8000/views/clipdown_mobile/mobile_push-config.html"
+                                    target="_blank">localhost:8000/…/mobile_push-config.html</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-subhead">
+                            <td colspan="5">공지사항</td>
+                        </tr>
+                        <tr data-search="공지사항 관리 어드민">
+                            <td class="td-page"><span class="page-name">공지사항 관리</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/notice/list"
+                                    target="_blank">admin.jsfuture.co.kr/notice/list</a></td>
+                            <td class="td-light"><a class="url-link type-light" href="http://192.168.0.217/notice/list"
+                                    target="_blank">192.168.0.217/notice/list</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="공지사항 신규 등록 어드민">
+                            <td class="td-page"><span class="page-name">신규 등록</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/notice/create"
+                                    target="_blank">admin.jsfuture.co.kr/notice/create</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/notice/create"
+                                    target="_blank">192.168.0.217/notice/create</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr class="row-depth2" data-search="공지사항 수정 어드민">
+                            <td class="td-page"><span class="page-name">공지사항 수정</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/sdk/media/update/com.gomcorp.gommix"
+                                    target="_blank">admin.jsfuture.co.kr/sdk/media/update/…</a></td>
+                            <td class="td-light"><a class="url-link type-light"
+                                    href="http://192.168.0.217/notice/73/edit"
+                                    target="_blank">192.168.0.217/notice/73/edit</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                        <tr data-search="통합 공지사항 어드민">
+                            <td class="td-page"><span class="page-name">통합 공지사항</span></td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="https://admin.jsfuture.co.kr/notice/list"
+                                    target="_blank">admin.jsfuture.co.kr/notice/list</a></td>
+                            <td class="td-light"><a class="url-link type-light" href="http://localhost/notice/list"
+                                    target="_blank">localhost/notice/list</a></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><!-- /clipdown -->
+
+
+    <!-- ═══════════════════════════════════════
+     AD / ECT
+════════════════════════════════════════ -->
+    <div class="top-group" data-top="ad">
+        <div class="platform-bar" id="bar-ad">
+            <button class="plat-btn active" data-plat="ad-main">AD <span class="cnt">1</span></button>
+        </div>
+        <div class="plat-panel active" id="ad-main">
+            <div class="section-block">
+                <div class="section-block-title">
+                    <div class="sec-bar ad"></div><span class="sec-label">AD</span>
+                </div>
+                <table class="link-table">
+                    <colgroup>
+                        <col class="c-page">
+                        <col class="c-real">
+                        <col class="c-light">
+                        <col class="c-dark">
+                        <col class="c-test">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th-page">Page</th>
+                            <th class="th-real">실서버</th>
+                            <th class="th-light">로컬 디자인</th>
+                            <th class="th-dark">로컬 디자인 Dark</th>
+                            <th class="th-test">개발 테스트 서버</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="랜딩페이지 네이버 서치">
+                            <td class="td-page"><span class="page-name">랜딩페이지<span class="page-sub">네이버 서치</span></span>
+                            </td>
+                            <td class="td-real"><a class="url-link type-real"
+                                    href="http://www.cashmate.co.kr/landing/naversearch"
+                                    target="_blank">cashmate.co.kr/landing/naversearch</a></td>
+                            <td class="td-light"><span class="cell-empty">—</span></td>
+                            <td class="td-dark"><span class="cell-empty">—</span></td>
+                            <td class="td-test"><span class="cell-empty">—</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><!-- /ad -->
+
+    <script>
+        // ── 한글 초성 추출 ──
+        const CHO = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
+        function toCho(str) {
+            return [...str].map(c => {
+                const code = c.charCodeAt(0) - 0xAC00;
+                if (code < 0 || code > 11171) return c;
+                return CHO[Math.floor(code / 588)];
+            }).join('');
+        }
+
+        // 행에 실제 링크가 하나라도 있는지 확인
+        function hasLink(row) {
+            return row.querySelectorAll('a[href]').length > 0;
+        }
+
+        // 각 row에서 검색 대상 텍스트 추출 (라벨 + URL 전체)
+        function getRowText(row) {
+            const label = (row.dataset.search || '').toLowerCase();
+            const links = [...row.querySelectorAll('a')].map(a => a.href + ' ' + a.textContent).join(' ').toLowerCase();
+            const plain = row.textContent.toLowerCase();
+            return label + ' ' + links + ' ' + plain;
+        }
+
+        // 매칭 함수: 링크 있어야 하고, 일반 포함 OR 초성 포함
+        function matches(row, q) {
+            if (!q) return true;
+            if (!hasLink(row)) return false;
+            const text = getRowText(row);
+            const cho = toCho(text);
+            return text.includes(q) || cho.includes(q);
+        }
+
+        // ── Top project tabs ──
+        document.querySelectorAll('.top-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.top-tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('.top-group').forEach(g => g.classList.remove('active'));
+                document.querySelector(`.top-group[data-top="${btn.dataset.top}"]`).classList.add('active');
+                applySearch(document.getElementById('search').value);
+            });
+        });
+
+        // ── Platform tabs ──
+        document.querySelectorAll('.plat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const bar = btn.closest('.platform-bar');
+                bar.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const group = btn.closest('.top-group');
+                group.querySelectorAll('.plat-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById(btn.dataset.plat).classList.add('active');
+                applySearch(document.getElementById('search').value);
+            });
+        });
+
+        // ── Search: 전체 탭·패널 횡단, URL 포함, 초성 지원 ──
+        function applySearch(q) {
+            q = q.trim().toLowerCase();
+
+            if (q) {
+                // 모든 top-group & plat-panel 열기
+                document.querySelectorAll('.top-group').forEach(g => g.classList.add('active'));
+                document.querySelectorAll('.plat-panel').forEach(p => p.classList.add('active'));
+
+                // top-tab 버튼 비활성화 표시 (검색 중 안내용)
+                document.querySelectorAll('.top-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
+            } else {
+                // 원래 활성 top-group 복원
+                const activeTop = document.querySelector('.top-tab-btn[data-top]') || document.querySelector('.top-tab-btn');
+                const savedTop = document._savedTop || 'cashmate';
+                document.querySelectorAll('.top-group').forEach(g => g.classList.remove('active'));
+                const activeGroup = document.querySelector(`.top-group[data-top="${savedTop}"]`);
+                if (activeGroup) activeGroup.classList.add('active');
+
+                // top-tab 버튼 복원
+                document.querySelectorAll('.top-tab-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.top === savedTop);
+                });
+
+                // 각 group의 활성 plat-panel 복원
+                document.querySelectorAll('.top-group').forEach(group => {
+                    group.querySelectorAll('.plat-panel').forEach(p => p.classList.remove('active'));
+                    const savedPlat = group._savedPlat;
+                    if (savedPlat) {
+                        const panel = document.getElementById(savedPlat);
+                        if (panel) panel.classList.add('active');
+                    } else {
+                        const firstPanel = group.querySelector('.plat-panel');
+                        if (firstPanel) firstPanel.classList.add('active');
+                    }
+                    // plat-btn 복원
+                    group.querySelectorAll('.plat-btn').forEach(b => {
+                        b.classList.toggle('active', b.dataset.plat === (group._savedPlat || group.querySelector('.plat-btn')?.dataset.plat));
+                    });
+                });
+            }
+
+            // 행 필터링
+            document.querySelectorAll('tbody tr').forEach(row => {
+                if (row.classList.contains('row-subhead')) return;
+                row.classList.toggle('row-hidden', q !== '' && !matches(row, q));
+            });
+
+            // 섹션 블록: 결과 없으면 숨김
+            document.querySelectorAll('.section-block').forEach(block => {
+                if (!q) {
+                    block.classList.remove('section-hidden');
+                    return;
+                }
+                const hasVisible = [...block.querySelectorAll('tbody tr:not(.row-subhead):not(.row-hidden)')].length > 0;
+                block.classList.toggle('section-hidden', !hasVisible);
+            });
+
+            // 결과 있는 패널/섹션 강조 (검색 시 빈 패널 숨김)
+            if (q) {
+                document.querySelectorAll('.plat-panel').forEach(panel => {
+                    const hasVisible = [...panel.querySelectorAll('tbody tr:not(.row-subhead):not(.row-hidden)')].length > 0;
+                    panel.style.display = hasVisible ? '' : 'none';
+                });
+                document.querySelectorAll('.top-group').forEach(group => {
+                    const hasVisible = [...group.querySelectorAll('tbody tr:not(.row-subhead):not(.row-hidden)')].length > 0;
+                    group.classList.toggle('active', hasVisible);
+                });
+                // 첫 번째 유효한 top-group 활성화
+                const firstActive = document.querySelector('.top-group.active');
+                if (firstActive) {
+                    const top = firstActive.dataset.top;
+                    document.querySelectorAll('.top-tab-btn').forEach(b => b.classList.toggle('active', b.dataset.top === top));
+                }
+            } else {
+                document.querySelectorAll('.plat-panel').forEach(p => p.style.display = '');
+            }
+        }
+
+        // 탭 클릭 시 현재 선택 저장
+        document.querySelectorAll('.top-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => { document._savedTop = btn.dataset.top; }, true);
+        });
+        document.querySelectorAll('.plat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.top-group')._savedPlat = btn.dataset.plat;
+            }, true);
+        });
+
+        // 초기화
+        document._savedTop = 'cashmate';
+        document.querySelector('.top-group[data-top="cashmate"]')._savedPlat = 'cm-mobile';
+        document.querySelector('.top-group[data-top="clipdown"]')._savedPlat = 'cd-site';
+        document.querySelector('.top-group[data-top="ad"]')._savedPlat = 'ad-main';
+
+        document.getElementById('search').addEventListener('input', e => applySearch(e.target.value));
+    </script>
+</body>
+
+</html>
