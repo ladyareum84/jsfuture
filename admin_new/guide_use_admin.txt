@@ -1,9 +1,8 @@
 [개인 로컬 Admin 실행방법]
-1. VSC 터미널(Command +J 또는 Ctrl+Shift+`)에서 python3 -m http.server 실행
+1. VSC 터미널(Command +J 또는 Ctrl+Shift+`)에서
+2. cd /Users/design/Documents/GitHub/jsfuture/admin_new
+3. python3 -m http.server 9000 
     - Ctrl + C : 실행 종료 (다시 실행 진행)
-2. http://localhost:8000/   ->> 열림
 
-
-
-http://localhost:9000/index.html
+http://localhost:9000/views/component.html
 http://localhost:9000/views/clipdown/summary.html

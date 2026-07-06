@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div class="page">
+        <div class="page-wrapper">
+            <!-- BEGIN PAGE HEADER -->
+            <div class="page-header">
+                <div class="container-xl"> 
+                    <div class="row align-items-center mw-100">
+                        <div class="col">
+                            <div class="mb-3">
+                                <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        <a href="#">depth1</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="#">depth2</a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <h2 class="page-title">페이지 헤더 타이틀</h2>
+                            <div class="text-secondary mt-1">페이지 간단 설명 영역</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE HEADER -->
+            <!-- BEGIN PAGE BODY -->
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards">
+                        <ul class="nav nav-pills" data-bs-toggle="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tabs-template"  data-bs-toggle="tab">Template</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#tabs-tables" data-bs-toggle="tab">Tables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#tabs-components" data-bs-toggle="tab">Components</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#tabs-forms" data-bs-toggle="tab">Form</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- 어드민 기본 템플릿 구성 -->
+                            <div class="tab-pane active " id="tabs-template">
+                                <div class="mt-3"> 
+                                    <!-- content card basic Template -->
+                                    <div class="col-12"> <!-- 여기서 부터 복사 -->
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">컨텐츠 헤더 타이틀
+                                                    <span class="card-subtitle">Subtitle</span>
+                                                </h3>                                    
+                                            </div>
+                                            <div class="card-body" style="min-height: 10rem">
+                                                <!-- Content Title -->
+                                                <div class="">
+                                                    <h3 class="card-title">컨텐츠 타이틀</h3>
+                                                </div>
+                                                <!-- //Content Title -->
+
+                                                <!-- Content -->
+                                                기본 HTMl 카드 템플릿
+                                                <!-- //Content  -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END content card basic Template -->
+                                </div>
+                                <div class="mt-3"> 
+                                    <!-- 조건검색 스타일 01 ,  여기서 부터 복사 -->
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <!-- 사용 시 card-header 영역 삭제  -->
+                                            <div class="card-header">
+                                                <h3 class="card-title">조건 검색 스타일 01
+                                                    <span class="card-subtitle">
+                                                        <code>card-footer</code> 있는 버전, 액션 버튼 영역
+                                                    </span>
+                                                </h3>                                    
+                                            </div> 
+                                            <!-- // 사용 시 card-header 영역 삭제  -->                   
+                                            <div class="card-body">
+                                                <div class="row row-cards">
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">조회구분</label>
+                                                            <select name="user[month]" class="form-select">
+                                                                <option value="day" selected="selected">일별</option>
+                                                                <option value="week">주별</option>
+                                                                <option value="month">월별</option>
+                                                            </select> 
+                                                        </div>                                                               
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">조회기간</label>
+                                                            <div class="row">
+                                                                <div class="input-icon w-50">
+                                                                    <span
+                                                                        class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                            <path
+                                                                                d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                            </path>
+                                                                            <path d="M16 3v4"></path>
+                                                                            <path d="M8 3v4"></path>
+                                                                            <path d="M4 11h16"></path>
+                                                                            <path d="M11 15h1"></path>
+                                                                            <path d="M12 15v3"></path>
+                                                                        </svg></span>
+                                                                    <input class="form-control" placeholder="시작날짜" id=""
+                                                                        value="">
+                                                                </div>
+                                                                <div class="input-icon w-50">
+                                                                    <span
+                                                                        class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                            <path
+                                                                                d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                            </path>
+                                                                            <path d="M16 3v4"></path>
+                                                                            <path d="M8 3v4"></path>
+                                                                            <path d="M4 11h16"></path>
+                                                                            <path d="M11 15h1"></path>
+                                                                            <path d="M12 15v3"></path>
+                                                                        </svg></span>
+                                                                    <input class="form-control" placeholder="종료날짜" id=""
+                                                                        value="">
+                                                                </div>
+                                                            </div>                                    
+                                                        </div>                                                               
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">서비스</label>
+                                                            <select name="user[month]" class="form-select">
+                                                                <option value="All" selected="selected">전체</option>
+                                                                <option value="Option01">$Option01</option>
+                                                                <option value="Option02">$Option02</option>
+                                                            </select>
+                                                        </div>                                                               
+                                                    </div>
+                                                </div>
+                                                <div class="row row-cards">                            
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">매체구분</label>
+                                                            <select name="user[month]" class="form-select">
+                                                                <option value="All" selected="selected">전체</option>
+                                                                <option value="ClipdownAPP">클립다운 모바일</option>
+                                                                <option value="ClipdownLite">클립다운 라이트</option>
+                                                                <option value="gomAudio">곰오디오</option>
+                                                                <option value="gomPlayer">곰플레이어</option>
+                                                            </select> 
+                                                        </div>                                                            
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">제휴사</label>
+                                                            <select name="user[month]" class="form-select">
+                                                                <option value="All" selected="selected">전체</option>
+                                                                <option value="partner01">$partner01</option>
+                                                                <option value="partner02">$partner02</option>
+                                                                <option value="partner03">$partner03</option>
+                                                            </select> 
+                                                        </div>                                                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer text-end">
+                                                <a href="#" class="btn btn-primary btn-2"> 조회 </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END 조건검색 스타일 01-->
+                                </div>
+                                <div class="mt-3">
+                                    <!-- 조건검색 스타일 02 -->
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <!-- card-header 영역  -->
+                                            <div class="card-header"> <!-- 사용 시 card-header 영역 삭제  -->
+                                                <h3 class="card-title">조건 검색 스타일 02
+                                                    <span class="card-subtitle">
+                                                        <code>card-footer</code> 없는 버전 / 모바일 일때 아코디언 형식으로 노출
+                                                    </span>
+                                                </h3>                                   
+                                            </div> <!-- // 사용 시 card-header 영역 삭제  -->
+                                            <div class="card-header d-md-none cursor-pointer" data-bs-toggle="collapse" data-bs-target="#filterCollapse">
+                                                <h3 class="card-title">조건 검색 스타일 02
+                                                    <span class="card-subtitle">
+                                                        모바일 일때 아코디언 형식으로 노출
+                                                    </span>
+                                                </h3> 
+                                                <div class="card-actions">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" />
+                                                    </svg>
+                                                </div>                                   
+                                            </div> 
+                                            <!-- // card-header 영역  -->      
+                                            <div class="collapse d-md-block" id="filterCollapse">               
+                                                <div class="card-body">
+                                                    <div class="filter-item">
+                                                        <div class="row row-cards">
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">조회구분</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="day" selected="selected">일별</option>
+                                                                        <option value="week">주별</option>
+                                                                        <option value="month">월별</option>
+                                                                    </select> 
+                                                                </div>                                                               
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">조회기간</label>
+                                                                    <div class="row">
+                                                                        <div class="input-icon w-50">
+                                                                            <span
+                                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                                    <path
+                                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                                    </path>
+                                                                                    <path d="M16 3v4"></path>
+                                                                                    <path d="M8 3v4"></path>
+                                                                                    <path d="M4 11h16"></path>
+                                                                                    <path d="M11 15h1"></path>
+                                                                                    <path d="M12 15v3"></path>
+                                                                                </svg></span>
+                                                                            <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
+                                                                        </div>
+                                                                        <div class="input-icon w-50">
+                                                                            <span
+                                                                                class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                                                    stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
+                                                                                    <path
+                                                                                        d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
+                                                                                    </path>
+                                                                                    <path d="M16 3v4"></path>
+                                                                                    <path d="M8 3v4"></path>
+                                                                                    <path d="M4 11h16"></path>
+                                                                                    <path d="M11 15h1"></path>
+                                                                                    <path d="M12 15v3"></path>
+                                                                                </svg></span>
+                                                                            <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
+                                                                        </div>
+                                                                    </div>                                    
+                                                                </div>                                                               
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">서비스</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="Option01">$Option01</option>
+                                                                        <option value="Option02">$Option02</option>
+                                                                    </select>
+                                                                </div>                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="row row-cards">
+                                                            
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">매체구분</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="ClipdownAPP">클립다운 모바일</option>
+                                                                        <option value="ClipdownLite">클립다운 라이트</option>
+                                                                        <option value="gomAudio">곰오디오</option>
+                                                                        <option value="gomPlayer">곰플레이어</option>
+                                                                    </select> 
+                                                                </div>                                                            
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">제휴사</label>
+                                                                    <select name="user[month]" class="form-select">
+                                                                        <option value="All" selected="selected">전체</option>
+                                                                        <option value="partner01">$partner01</option>
+                                                                        <option value="partner02">$partner02</option>
+                                                                        <option value="partner03">$partner03</option>
+                                                                    </select> 
+                                                                </div>                                                            
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">&nbsp;</label>
+                                                                    <div class="text-start">
+                                                                        <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
+                                                                    </div>
+                                                                </div>                                                            
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END 조건검색 스타일 02--> 
+                                </div>
+                            </div>
+                            <!-- // 어드민 기본 템플릿 구성 -->
+
+                            <!-- 컨텐츠 영역 테이블 스타일 -->
+                            <div class="tab-pane" id="tabs-tables">
+                                <div class="mt-3">
+                                    <!-- 큰 그리드 테이블,  여기서 부터 복사 -->
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <!-- 사용 시 card-header 영역 삭제 가능  -->
+                                            <div class="card-header">
+                                                <h3 class="card-title">큰 그리드
+                                                    <span class="card-subtitle">
+                                                        <code>id="grid"</code> 상단 옵션영역, 하단 페이지네이션 영역 필수, <code>card-body</code> 대신 <code>class="card-table" </code> 적용
+                                                    </span>
+                                                </h3>                                                
+                                            </div>
+                                            <div class="card-table">
+                                                <div class="custom-table custom-table-lg table-responsive">
+                                                    <table id="grid" class="table table-bordered dataTable" id=""></table>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- // 큰 그리드 테이블 -->
+                                </div>
+                                <div class="mt-3">
+                                    <!-- 작은 그리드 테이블 (컨텐츠 안에 들어가는 테이블) -->
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">작은 그리드
+                                                    <span class="card-subtitle">
+                                                        <code>id="grid2"</code> 컨텐츠 안에 들어가는 작은 테이블 스타일,하단 페이지네이션 영역 없음
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- 컨텐츠영역 작은 테이블 영역 여기서 부터 복사 -->
+                                                <div class="content_item">                        
+                                                    <div class="col">
+                                                        <div class="d-flex p-2"> <!-- 옵션영역, 없을땐 미사용 -->
+                                                            <div class="">
+                                                                <h4>광고 URL</h4>
+                                                            </div>
+                                                            <div class="ms-auto flex-wrap btn-list">
+                                                                <a id="appendAdvertisementListButton" href="#" type="button" class="btn btn-table">
+                                                                    추가 </a>
+                                                            </div>
+                                                        </div> <!-- //옵션영역, 없을땐 미사용 -->
+                                                        <div id="row">
+                                                            <div class="custom-table custom-table-sm table-responsive">
+                                                                <table id="grid2" class="table table-bordered dataTable"></table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- // 여기서 부터 복사 끝 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // 작은 그리드 테이블 (컨텐츠 안에 들어가는 테이블) -->
+                                </div>
+                            </div>
+                            <!-- // 컨텐츠 영역 테이블 스타일 -->
+                            <!-- 컨텐츠 인터페이스 컴포넌트 -->
+                            <div class="tab-pane" id="tabs-components">
+                                컨텐츠 인터페이스 컴포넌트
+                                menu button(Tabs)
+                                chip
+                                searchbar
+                                toast
+                                button
+                                table
+                                pagination
+                                typography
+                                color
+                            </div>
+                            <!-- // 컨텐츠 인터페이스 컴포넌트 -->
+                            <!-- 컨텐츠 폼 요소 -->
+                            <div class="tab-pane" id="tabs-forms">
+                                컨텐츠 폼 요소
+                            </div>
+                            <!-- // 컨텐츠 폼 요소 -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE BODY -->
+        </div>
+    </div>
+</body>
+<script src="/foundation/foundation.js"></script>
+<script>
+    const callback = () => {
+        const grid = new DataTable("#grid", {
+            data: [
+                {
+                    app_name: "sdk-test2222",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+                {
+                    app_name: "sdk-test",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+                {
+                    app_name: "sdk-test",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+            ],
+            columns: [
+                {
+                    title: "패키지명22",
+                    data: "package_name",
+                },
+                {
+                    title: "매체이름",
+                    data: "app_name",
+                },
+                {
+                    title: "SDK 활성화 상태",
+                    data: "status",
+                    render: function (data, type, row, meta) {
+                        const status = row.status;
+                        if (status === "active") {
+                            return `<span class="badge bg-success-lt">활성화</span>`;
+                        } else {
+                            return `<span class="badge">비활성화</span>`;
+                        }
+                    },
+                },
+                {
+                    title: "등록일",
+                    data: "created_at",
+                    type: "string",
+                },
+                {
+                    title: "",
+                    data: "null",
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const packageName = row.package_name;
+                        return `
+                    <div class="btn-list flex-nowrap justify-content-center">
+                        <a href="/sdk/media/update/${packageName}" class="btn btn-table">수정</a>
+                    </div>
+                `;
+                    },
+                },
+            ],
+            ...dataTablesConfg,
+        });
+
+        const grid2 = new DataTable("#grid2", {
+            data: [
+                {
+                    app_name: "sdk-test",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+                {
+                    app_name: "sdk-test",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+                {
+                    app_name: "sdk-test",
+                    company_name: "jsfuture",
+                    created_at: "2025-06-02 01:52:52",
+                    dev_language: "JAVA",
+                    package_name: "helloWorld",
+                    status: "active",
+                    updated_at: "2025-06-09T08:00:54.000000Z",
+                },
+            ],
+            columns: [
+                {
+                    title: "패키지명",
+                    data: "package_name",
+                },
+                {
+                    title: "매체이름",
+                    data: "app_name",
+                },
+                {
+                    title: "SDK 활성화 상태",
+                    data: "status",
+                    render: function (data, type, row, meta) {
+                        const status = row.status;
+                        if (status === "active") {
+                            return `<span class="badge bg-success-lt">활성화</span>`;
+                        } else {
+                            return `<span class="badge">비활성화</span>`;
+                        }
+                    },
+                },
+                {
+                    title: "등록일",
+                    data: "created_at",
+                    type: "string",
+                },
+                {
+                    title: "",
+                    data: "null",
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row, meta) {
+                        const packageName = row.package_name;
+                        return `
+                    <div class="btn-list flex-nowrap justify-content-center">
+                        <a href="/sdk/media/update/${packageName}" class="btn btn-table">수정</a>
+                    </div>
+                `;
+                    },
+                },
+            ],
+            ...dataTablesConfg,
+        });
+    };
+
+    includeFoundation(callback);
+</script>
+
+</html>

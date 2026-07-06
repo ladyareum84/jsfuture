@@ -116,6 +116,36 @@
                     </div>
                 </li>
                 <!-- END 클립다운 모바일 MENU -->
+                <!-- BEGIN CS 통합 민원 MENU -->
+                <li class="nav-item dropdown @if($activeMenu === 'cs_voc') active @endif">
+                    <a class="nav-link dropdown-toggle @if($activeMenu === 'cs_voc') show @endif" href="#navbar-base"
+                        data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+                        <span class="nav-link-icon d-md-none d-lg-flex justify-content-lg-start">
+                            <!-- Download SVG icon from http://tabler.io/icons/icon/headset -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-headset">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 12v-1a8 8 0 0 1 16 0v1" />
+                                <path
+                                    d="M18 15v6h-1a2 2 0 0 1 -2 -2v-2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2" />
+                                <path
+                                    d="M6 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">CS 통합 민원</span>
+                    </a>
+                    <div class="dropdown-menu show">
+                        <div class="dropdown-menu-columns">
+                            <div class="dropdown-menu-column">
+                                <a class="dropdown-item" href="/views/cs_voc/dashboard.html">CS 통합 대시보드</a>
+                                <a class="dropdown-item" href="/views/cs_voc/ai_replay.html">AI 상담 리플레이</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END CS 통합 민원 MENU -->
             </ul>
             <!-- END NAVBAR MENU -->
         </div>

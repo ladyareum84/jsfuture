@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CS VOC 대시보드 시안</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+	<style>
+		/* 공통 */
+		.ch-dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+
+		.ch-bar-bg {
+			height: 4px;
+			background: #e5e7eb;
+			border-radius: 2px;
+			overflow: hidden;
+			margin: 4px 0 3px;
+		}
+
+		.ch-bar {
+			height: 100%;
+			border-radius: 2px;
+		}
+
+		.kw-bar-bg {
+			flex: 1;
+			height: 6px;
+			background: #e9ecef;
+			border-radius: 3px;
+			overflow: hidden;
+		}
+
+		.kw-bar {
+			height: 100%;
+			border-radius: 3px;
+		}
+
+		.prog-bg {
+			height: 4px;
+			background: #e9ecef;
+			border-radius: 2px;
+			overflow: hidden;
+		}
+
+		.prog-bar {
+			height: 100%;
+			border-radius: 2px;
+		}
+
+		.ch-badge-voc {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 500;
+			padding: 2px 7px;
+			border-radius: 4px;
+			white-space: nowrap;
+		}
+
+		.badge-app {
+			background: #dbeafe;
+			color: #1d4ed8;
+		}
+
+		.badge-str {
+			background: #dcfce7;
+			color: #166534;
+		}
+
+		.badge-tel {
+			background: #fef3c7;
+			color: #92400e;
+		}
+
+		.badge-mail {
+			background: #ede9fe;
+			color: #5b21b6;
+		}
+
+		.kw-pill-sm {
+			display: inline-block;
+			font-size: 12px;
+			padding: 2px 8px;
+			border-radius: 100px;
+			background: #f1f3f5;
+			color: #6b7280;
+			border: 1px solid #dee2e6;
+		}
+
+		.card-title {
+			font-size: 1.25rem;
+		}
+
+		.table thead th {
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.setion_tit {
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		/* 탭 */
+		.siian-tab-nav {
+			display: flex;
+			gap: 4px;
+			background: #fff;
+			border: 1px solid #e5e7eb;
+			border-radius: 12px;
+			padding: 8px;
+			flex-wrap: wrap;
+		}
+
+		.siian-tab-btn {
+			padding: 7px 14px;
+			border: none;
+			border-radius: 7px;
+			font-size: 12px;
+			font-weight: 500;
+			color: #6b7280;
+			background: transparent;
+			cursor: pointer;
+			transition: all .15s;
+			white-space: nowrap;
+		}
+
+		.siian-tab-btn.active {
+			background: #206bc4;
+			color: #fff;
+		}
+
+		.siian-tab-btn:hover:not(.active) {
+			background: #f1f3f5;
+			color: #374151;
+		}
+
+		.siian-tab-pane {
+			display: none;
+		}
+
+		.siian-tab-pane.active {
+			display: block;
+		}
+
+		/* 도넛 */
+		.donut-wrap {
+			position: relative;
+			width: 90px;
+			height: 90px;
+			flex-shrink: 0;
+		}
+
+		.donut-center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.donut-num {
+			font-size: 20px;
+			font-weight: 700;
+			color: #1a1a2e;
+			line-height: 1;
+		}
+
+		.donut-unit {
+			font-size: 12px;
+			color: #9ca3af;
+		}
+
+		/* 다크탭 */
+		.dk {
+			color: #e5e7eb;
+		}
+
+		.dk .card {
+			background: #1f2329;
+			border-color: #2d3139;
+		}
+
+		.dk .card-header {
+			background: #252830;
+			border-color: #2d3139;
+		}
+
+		.dk .text-muted {
+			color: #6b7280 !important;
+		}
+
+		.dk .border-bottom {
+			border-color: #2d3139 !important;
+		}
+
+		.dk table thead th {
+			color: #6b7280;
+			border-color: #2d3139;
+		}
+
+		.dk table tbody td {
+			border-color: #2d3139;
+			color: #9ca3af;
+		}
+
+		.dk .progress {
+			background: #2d3139;
+		}
+
+		.dk-bg {
+			background: #13151a;
+			border-radius: 12px;
+			padding: 16px;
+		}
+
+		.dk-card-bg {
+			background: #1f2329 !important;
+			border: 1px solid #2d3139 !important;
+		}
+
+		.dk-card-hd {
+			background: #252830 !important;
+			border-bottom: 1px solid #2d3139 !important;
+		}
+	</style>
+</head>
+
+<body class="antialiased">
+	<div class="page">
+		<div class="page-wrapper">
+			<div class="container-xl">
+				<div class="page-header d-print-none mt-3">
+					<div class="row align-items-center">
+						<div class="col">
+							<h2 class="page-title">CS 통합 대시보드</h2>
+							<div class="text-secondary mt-1">CS 문의 및 VOC 현황을 조회하고 확인합니다.</div>
+						</div>
+						<div class="col-auto ms-auto d-print-none">
+							<span class="text-muted me-3" style="font-size:12px;">2026.06.22 기준 · 스토어 1시간 전 수집</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 탭 네비 -->
+				<div class="mt-4 mb-3">
+					<div class="siian-tab-nav">
+						<button class="siian-tab-btn active" onclick="switchTab(0)">① 스코어보드 카드형</button>
+						<button class="siian-tab-btn" onclick="switchTab(1)">② 스코어보드 카드형 2</button>
+						<button class="siian-tab-btn" onclick="switchTab(2)">③ 2컬럼 키워드 바</button>
+						<button class="siian-tab-btn" onclick="switchTab(3)">④ 도넛 + 프로그레스</button>
+						<button class="siian-tab-btn" onclick="switchTab(4)">⑤ AI 답변 화면</button>
+					</div>
+				</div>
+
+				<!-- ===== TAB 1: 스코어보드 카드형 ===== -->
+				<div class="siian-tab-pane active" id="tab0">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title"><i class="ti ti-layout-dashboard text-primary me-2"></i>고객 민원 통합
+								대시보드</div>
+							<div class="card-actions">
+								<button class="btn btn-sm btn-primary"><i class="ti ti-plus me-1"></i>CS 등록</button>
+							</div>
+						</div>
+						<div class="card-body">
+							<!-- 스코어보드 -->
+							<div class="card mb-3" style="border:1px solid #e5e7eb;">
+								<div class="row g-0">
+									<div
+										class="col-2 border-end d-flex align-items-center justify-content-center text-center px-4 py-3">
+										<div>
+											<div class="text-muted pb-1" style="font-size:14px; font-weight: 500;">오늘 총
+												인입</div>
+											<div style="color:#1a1a2e;">
+												<span class=""
+													style="font-size:34px;font-weight:700;line-height:1;">47</span><span
+													class="text-muted"
+													style="font-size:14px; font-weight: 700;">건</span>
+											</div>
+
+										</div>
+									</div>
+									<div class="col">
+										<div class="row g-0 h-100">
+											<div class="col border-end p-3">
+												<div class="ch-dot mb-2" style="background:#378add;"></div>
+												<div class="text-muted" style="font-size:12px;">앱 내 문의</div>
+												<div style="font-size:18px;font-weight:600;color:#1a1a2e;">30</div>
+												<div class="ch-bar-bg">
+													<div class="ch-bar" style="width:64%;background:#378add;"></div>
+												</div>
+												<div style="font-size:12px;color:#6b7280;">64%</div>
+											</div>
+											<div class="col border-end p-3">
+												<div class="ch-dot mb-2" style="background:#639922;"></div>
+												<div class="text-muted" style="font-size:12px;">스토어 리뷰</div>
+												<div style="font-size:18px;font-weight:600;color:#1a1a2e;">10</div>
+												<div class="ch-bar-bg">
+													<div class="ch-bar" style="width:21%;background:#639922;"></div>
+												</div>
+												<div style="font-size:12px;color:#6b7280;">21%</div>
+											</div>
+											<div class="col border-end p-3">
+												<div class="ch-dot mb-2" style="background:#ba7517;"></div>
+												<div class="text-muted" style="font-size:12px;">전화</div>
+												<div style="font-size:18px;font-weight:600;color:#1a1a2e;">4</div>
+												<div class="ch-bar-bg">
+													<div class="ch-bar" style="width:9%;background:#ba7517;"></div>
+												</div>
+												<div style="font-size:12px;color:#6b7280;">9%</div>
+											</div>
+											<div class="col p-3">
+												<div class="ch-dot mb-2" style="background:#7f77dd;"></div>
+												<div class="text-muted" style="font-size:12px;">이메일</div>
+												<div style="font-size:18px;font-weight:600;color:#1a1a2e;">3</div>
+												<div class="ch-bar-bg">
+													<div class="ch-bar" style="width:6%;background:#7f77dd;"></div>
+												</div>
+												<div style="font-size:12px;color:#6b7280;">6%</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row g-3 mb-3">
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-body">
+											<div class="d-flex align-items-center justify-content-between mb-3">
+												<div class="fw-medium setion_tit">
+													<i class="ti ti-trending-up me-1"></i>실시간 민원 TOP 3
+												</div>
+												<span class="text-muted" style="font-size:12px;">AI 자동 태깅</span>
+											</div>
+											<div class="d-flex align-items-center gap-2 py-2 border-bottom">
+												<span class="text-muted" style="font-size:12px;width:14px;">1</span>
+												<span class="badge"
+													style="background:#dbeafe;color:#1d4ed8;border-radius:100px;font-size:12px;width:64px;text-align:center;">#포인트</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:100%;background:#378add;"></div>
+												</div>
+												<span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">18건</span>
+											</div>
+											<div class="d-flex align-items-center gap-2 py-2 border-bottom">
+												<span class="text-muted" style="font-size:12px;width:14px;">2</span>
+												<span class="badge"
+													style="background:#dcfce7;color:#166534;border-radius:100px;font-size:12px;width:64px;text-align:center;">#로그인</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:67%;background:#639922;"></div>
+												</div>
+												<span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">12건</span>
+											</div>
+											<div class="d-flex align-items-center gap-2 py-2"><span class="text-muted"
+													style="font-size:12px;width:14px;">3</span><span class="badge"
+													style="background:#fee2e2;color:#991b1b;border-radius:100px;font-size:12px;width:64px;text-align:center;">#앱오류</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:44%;background:#e24b4a;"></div>
+												</div><span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">8건</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-body">
+											<div class="fw-medium setion_tit mb-3">
+												<i class="ti ti-check me-1"></i>처리 현황 <span class="text-muted fw-normal"
+													style="font-size:12px;">(향후 고도화)</span>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center py-2 border-bottom">
+												<span class="text-muted" style="font-size:12px;">미처리 대기</span><span
+													style="font-size:20px;font-weight:700;color:#d97706;">12건</span>
+											</div>
+											<div
+												class="d-flex justify-content-between align-items-center py-2 border-bottom">
+												<span class="text-muted" style="font-size:12px;">처리 완료</span><span
+													style="font-size:20px;font-weight:700;color:#16a34a;">35건</span>
+											</div>
+											<div class="d-flex justify-content-between align-items-center py-2"><span
+													class="text-muted" style="font-size:12px;">답변률</span><span
+													style="font-size:20px;font-weight:700;color:#1a1a2e;">74%</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- VOC 피드 -->
+							<div class="card" style="border:1px solid #e5e7eb;">
+								<div class="card-body pb-0">
+									<div class="fw-medium setion_tit mb-2" style="font-size: 16px; font-weight:700;"><i
+											class="ti ti-list me-1"></i>실시간 VOC 통합 피드</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-vcenter table-hover card-table">
+										<thead>
+											<tr>
+												<th style="width:10%;">채널</th>
+												<th style="width:6%;">시간</th>
+												<th>민원 요약</th>
+												<th style="width:10%;">키워드</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">14:32</td>
+												<td>포인트 적립이 안 되고 있어요. 어제부터 계속 이 상태입니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-str">플레이스토어</span></td>
+												<td class="text-muted">14:18</td>
+												<td>업데이트 후 로그인이 안 돼요. 별 1개 드립니다.</td>
+												<td><span class="kw-pill-sm">#로그인</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-tel">전화</span></td>
+												<td class="text-muted">14:05</td>
+												<td>기프티콘 사용 후 포인트 차감이 두 번 됐다고 문의</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">13:51</td>
+												<td>앱이 켜지자마자 꺼집니다. 갤럭시 S26 사용 중입니다.</td>
+												<td><span class="kw-pill-sm">#앱오류</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-mail">이메일</span></td>
+												<td class="text-muted">13:40</td>
+												<td>리워드 지급이 안 됐는데 확인 부탁드립니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<p class="text-muted mt-2" style="font-size:12px;"><i class="ti ti-info-circle me-1"></i>앱 내
+								문의·스토어 클릭 시 원본 시스템 새 탭 이동 / 전화·이메일·원스토어 클릭 시 대시보드 내 팝업 확인</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ===== TAB 2: 스코어보드 카드형 2 (다크) ===== -->
+				<div class="siian-tab-pane" id="tab1">
+					<div class="dk-bg">
+						<div class="card dk-card-bg">
+							<div class="card-header dk-card-hd">
+								<div class="card-title" style="color:#e5e7eb;"><i class="ti ti-layout-dashboard me-2"
+										style="color:#4e9de0;"></i>고객 민원 통합
+									대시보드</div>
+								<div class="card-actions">
+									<button class="btn btn-sm"
+										style="border:1px solid #4e9de0;color:#4e9de0;background:rgba(78,157,224,0.1);"><i
+											class="ti ti-plus me-1"></i>CS 등록</button>
+								</div>
+							</div>
+							<div class="card-body">
+								<!-- 스코어보드 -->
+								<div class="card mb-3 dk-card-bg">
+									<div class="row g-0">
+										<div
+											class="col-2 border-end d-flex align-items-center justify-content-center text-center px-4 py-3">
+											<div>
+												<div class="text-muted pb-1" style="font-size:14px; font-weight: 500;">오늘 총
+													인입</div>
+												<div style="color:#e5e7eb;">
+													<span
+														style="font-size:34px;font-weight:700;line-height:1;">47</span><span
+														class="text-muted"
+														style="font-size:14px; font-weight: 700;">건</span>
+												</div>
+
+											</div>
+										</div>
+										<div class="col">
+											<div class="row g-0 h-100">
+												<div class="col border-end p-3">
+													<div class="ch-dot mb-2" style="background:#4e9de0;"></div>
+													<div class="text-muted" style="font-size:12px;">앱 내 문의</div>
+													<div style="font-size:18px;font-weight:600;color:#e5e7eb;">30</div>
+													<div class="ch-bar-bg" style="background:#2d3139;">
+														<div class="ch-bar" style="width:64%;background:#4e9de0;"></div>
+													</div>
+													<div style="font-size:12px;color:#6b7280;">64%</div>
+												</div>
+												<div class="col border-end p-3">
+													<div class="ch-dot mb-2" style="background:#6ab04c;"></div>
+													<div class="text-muted" style="font-size:12px;">스토어 리뷰</div>
+													<div style="font-size:18px;font-weight:600;color:#e5e7eb;">10</div>
+													<div class="ch-bar-bg" style="background:#2d3139;">
+														<div class="ch-bar" style="width:21%;background:#6ab04c;"></div>
+													</div>
+													<div style="font-size:12px;color:#6b7280;">21%</div>
+												</div>
+												<div class="col border-end p-3">
+													<div class="ch-dot mb-2" style="background:#e0a23a;"></div>
+													<div class="text-muted" style="font-size:12px;">전화</div>
+													<div style="font-size:18px;font-weight:600;color:#e5e7eb;">4</div>
+													<div class="ch-bar-bg" style="background:#2d3139;">
+														<div class="ch-bar" style="width:9%;background:#e0a23a;"></div>
+													</div>
+													<div style="font-size:12px;color:#6b7280;">9%</div>
+												</div>
+												<div class="col p-3">
+													<div class="ch-dot mb-2" style="background:#9d8fe8;"></div>
+													<div class="text-muted" style="font-size:12px;">이메일</div>
+													<div style="font-size:18px;font-weight:600;color:#e5e7eb;">3</div>
+													<div class="ch-bar-bg" style="background:#2d3139;">
+														<div class="ch-bar" style="width:6%;background:#9d8fe8;"></div>
+													</div>
+													<div style="font-size:12px;color:#6b7280;">6%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row g-3 mb-3">
+									<div class="col-md-6">
+										<div class="card h-100 dk-card-bg">
+											<div class="card-body">
+												<div class="d-flex align-items-center justify-content-between mb-3">
+													<div class="fw-medium setion_tit" style="color:#9ca3af;">
+														<i class="ti ti-trending-up me-1"></i>실시간 민원 TOP 3
+													</div>
+													<span class="text-muted" style="font-size:12px;">AI 자동 태깅</span>
+												</div>
+												<div class="d-flex align-items-center gap-2 py-2 border-bottom">
+													<span class="text-muted" style="font-size:12px;width:14px;">1</span>
+													<span class="badge"
+														style="background:rgba(78,157,224,.15);color:#4e9de0;border-radius:100px;font-size:12px;width:66px;text-align:center;">#포인트</span>
+													<div class="kw-bar-bg" style="background:#2d3139;">
+														<div class="kw-bar" style="width:100%;background:#4e9de0;"></div>
+													</div>
+													<span class="text-muted"
+														style="font-size:12px;width:28px;text-align:right;">18건</span>
+												</div>
+												<div class="d-flex align-items-center gap-2 py-2 border-bottom">
+													<span class="text-muted" style="font-size:12px;width:14px;">2</span>
+													<span class="badge"
+														style="background:rgba(106,176,76,.15);color:#6ab04c;border-radius:100px;font-size:12px;width:66px;text-align:center;">#로그인</span>
+													<div class="kw-bar-bg" style="background:#2d3139;">
+														<div class="kw-bar" style="width:67%;background:#6ab04c;"></div>
+													</div>
+													<span class="text-muted"
+														style="font-size:12px;width:28px;text-align:right;">12건</span>
+												</div>
+												<div class="d-flex align-items-center gap-2 py-2"><span class="text-muted"
+														style="font-size:12px;width:14px;">3</span><span class="badge"
+														style="background:rgba(224,74,74,.15);color:#e04a4a;border-radius:100px;font-size:12px;width:66px;text-align:center;">#앱오류</span>
+													<div class="kw-bar-bg" style="background:#2d3139;">
+														<div class="kw-bar" style="width:44%;background:#e04a4a;"></div>
+													</div><span class="text-muted"
+														style="font-size:12px;width:28px;text-align:right;">8건</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="card h-100 dk-card-bg">
+											<div class="card-body">
+												<div class="fw-medium setion_tit mb-3" style="color:#9ca3af;">
+													<i class="ti ti-check me-1"></i>처리 현황 <span class="text-muted fw-normal"
+														style="font-size:12px;">(향후 고도화)</span>
+												</div>
+												<div
+													class="d-flex justify-content-between align-items-center py-2 border-bottom">
+													<span class="text-muted" style="font-size:12px;">미처리 대기</span><span
+														style="font-size:20px;font-weight:700;color:#e0a23a;">12건</span>
+												</div>
+												<div
+													class="d-flex justify-content-between align-items-center py-2 border-bottom">
+													<span class="text-muted" style="font-size:12px;">처리 완료</span><span
+														style="font-size:20px;font-weight:700;color:#6ab04c;">35건</span>
+												</div>
+												<div class="d-flex justify-content-between align-items-center py-2"><span
+														class="text-muted" style="font-size:12px;">답변률</span><span
+														style="font-size:20px;font-weight:700;color:#e5e7eb;">74%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- VOC 피드 -->
+								<div class="card dk-card-bg">
+									<div class="card-body pb-0">
+										<div class="fw-medium setion_tit mb-2"
+											style="font-size: 16px; font-weight:700;color:#9ca3af;"><i
+												class="ti ti-list me-1"></i>실시간 VOC 통합 피드</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-vcenter table-hover card-table" style="color:#9ca3af;">
+											<thead>
+												<tr style="border-color:#2d3139;">
+													<th style="width:10%;background:#1f2329;color:#6b7280;border-color:#2d3139;">채널</th>
+													<th style="width:6%;background:#1f2329;color:#6b7280;border-color:#2d3139;">시간</th>
+													<th style="background:#1f2329;color:#6b7280;border-color:#2d3139;">민원 요약</th>
+													<th style="width:10%;background:#1f2329;color:#6b7280;border-color:#2d3139;">키워드</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr style="border-color:#2d3139;">
+													<td style="border-color:#2d3139;"><span class="ch-badge-voc"
+															style="background:rgba(78,157,224,.15);color:#4e9de0;">앱 내
+															문의</span></td>
+													<td class="text-muted" style="border-color:#2d3139;">14:32</td>
+													<td style="border-color:#2d3139;">포인트 적립이 안 되고 있어요. 어제부터 계속 이 상태입니다.</td>
+													<td style="border-color:#2d3139;"><span class="kw-pill-sm"
+															style="background:#13151a;color:#6b7280;border-color:#2d3139;">#포인트</span>
+													</td>
+												</tr>
+												<tr style="border-color:#2d3139;">
+													<td style="border-color:#2d3139;"><span class="ch-badge-voc"
+															style="background:rgba(106,176,76,.15);color:#6ab04c;">플레이스토어</span>
+													</td>
+													<td class="text-muted" style="border-color:#2d3139;">14:18</td>
+													<td style="border-color:#2d3139;">업데이트 후 로그인이 안 돼요. 별 1개 드립니다.</td>
+													<td style="border-color:#2d3139;"><span class="kw-pill-sm"
+															style="background:#13151a;color:#6b7280;border-color:#2d3139;">#로그인</span>
+													</td>
+												</tr>
+												<tr style="border-color:#2d3139;">
+													<td style="border-color:#2d3139;"><span class="ch-badge-voc"
+															style="background:rgba(224,162,58,.15);color:#e0a23a;">전화</span>
+													</td>
+													<td class="text-muted" style="border-color:#2d3139;">14:05</td>
+													<td style="border-color:#2d3139;">기프티콘 사용 후 포인트 차감이 두 번 됐다고 문의</td>
+													<td style="border-color:#2d3139;"><span class="kw-pill-sm"
+															style="background:#13151a;color:#6b7280;border-color:#2d3139;">#포인트</span>
+													</td>
+												</tr>
+												<tr style="border-color:#2d3139;">
+													<td style="border-color:#2d3139;"><span class="ch-badge-voc"
+															style="background:rgba(78,157,224,.15);color:#4e9de0;">앱 내
+															문의</span></td>
+													<td class="text-muted" style="border-color:#2d3139;">13:51</td>
+													<td style="border-color:#2d3139;">앱이 켜지자마자 꺼집니다. 갤럭시 S26 사용 중입니다.</td>
+													<td style="border-color:#2d3139;"><span class="kw-pill-sm"
+															style="background:#13151a;color:#6b7280;border-color:#2d3139;">#앱오류</span>
+													</td>
+												</tr>
+												<tr style="border-color:#2d3139;">
+													<td style="border-color:#2d3139;"><span class="ch-badge-voc"
+															style="background:rgba(157,143,232,.15);color:#9d8fe8;">이메일</span>
+													</td>
+													<td class="text-muted" style="border-color:#2d3139;">13:40</td>
+													<td style="border-color:#2d3139;">리워드 지급이 안 됐는데 확인 부탁드립니다.</td>
+													<td style="border-color:#2d3139;"><span class="kw-pill-sm"
+															style="background:#13151a;color:#6b7280;border-color:#2d3139;">#포인트</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<p class="text-muted mt-2" style="font-size:12px;"><i class="ti ti-info-circle me-1"></i>앱 내
+									문의·스토어 클릭 시 원본 시스템 새 탭 이동 / 전화·이메일·원스토어 클릭 시 대시보드 내 팝업 확인</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ===== TAB 3: 2컬럼 키워드 바 ===== -->
+				<div class="siian-tab-pane" id="tab2">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title"><i class="ti ti-layout-dashboard text-primary me-2"></i>고객 민원 통합
+								대시보드</div>
+							<div class="card-actions">
+								<button class="btn btn-sm btn-primary"><i class="ti ti-plus me-1"></i>CS 등록</button>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row g-3 mb-3">
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-header py-2">
+											<div class="card-title" style="font-size:12px;"><i
+													class="ti ti-chart-donut me-1"></i>오늘 총 인입</div>
+											<div class="card-actions"><span class="text-muted"
+													style="font-size:12px;">2026.06.22</span></div>
+										</div>
+										<div class="card-body">
+											<div class="row g-0">
+												<div class="col-auto border-end pe-3 me-3 d-flex align-items-center">
+													<div class="text-center">
+														<div class="text-muted" style="font-size:12px;">총</div>
+														<div style="font-size:28px;font-weight:700;color:#1a1a2e;">47
+														</div>
+														<div class="text-muted" style="font-size:12px;">건</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#378add;"></span><span
+																	style="font-size:12px;color:#6b7280;">앱 내
+																	문의</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">30건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:64%;background:#378add;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">64%
+														</div>
+													</div>
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#639922;"></span><span
+																	style="font-size:12px;color:#6b7280;">스토어</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">10건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:21%;background:#639922;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">21%
+														</div>
+													</div>
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#ba7517;"></span><span
+																	style="font-size:12px;color:#6b7280;">전화</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">4건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:9%;background:#ba7517;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">9%
+														</div>
+													</div>
+													<div>
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#7f77dd;"></span><span
+																	style="font-size:12px;color:#6b7280;">이메일</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">3건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:6%;background:#7f77dd;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">6%
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-header py-2">
+											<div class="card-title" style="font-size:12px;"><i
+													class="ti ti-trending-up me-1"></i>실시간 민원 TOP 3</div>
+											<div class="card-actions"><span class="text-muted"
+													style="font-size:12px;">AI 자동 태깅</span></div>
+										</div>
+										<div class="card-body">
+											<div class="d-flex align-items-center gap-2 py-2 border-bottom"><span
+													class="text-muted" style="font-size:12px;width:14px;">1</span><span
+													class="badge"
+													style="background:#dbeafe;color:#1d4ed8;border-radius:100px;font-size:12px;width:66px;text-align:center;">#포인트</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:100%;background:#378add;"></div>
+												</div><span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">18건</span>
+											</div>
+											<div class="d-flex align-items-center gap-2 py-2 border-bottom"><span
+													class="text-muted" style="font-size:12px;width:14px;">2</span><span
+													class="badge"
+													style="background:#dcfce7;color:#166534;border-radius:100px;font-size:12px;width:66px;text-align:center;">#로그인</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:67%;background:#639922;"></div>
+												</div><span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">12건</span>
+											</div>
+											<div class="d-flex align-items-center gap-2 py-2"><span class="text-muted"
+													style="font-size:12px;width:14px;">3</span><span class="badge"
+													style="background:#fee2e2;color:#991b1b;border-radius:100px;font-size:12px;width:66px;text-align:center;">#앱오류</span>
+												<div class="kw-bar-bg">
+													<div class="kw-bar" style="width:44%;background:#e24b4a;"></div>
+												</div><span class="text-muted"
+													style="font-size:12px;width:28px;text-align:right;">8건</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card" style="border:1px solid #e5e7eb;">
+								<div class="card-body pb-0">
+									<div class=" fw-medium setion_tit mb-2" style="font-size:12px;"><i
+											class="ti ti-list me-1"></i>실시간 VOC 통합 피드</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-vcenter table-hover card-table">
+										<thead>
+											<tr>
+												<th style="width:90px;">채널</th>
+												<th style="width:60px;">시간</th>
+												<th>민원 요약</th>
+												<th style="width:70px;">키워드</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">14:32</td>
+												<td>포인트 적립이 안 되고 있어요. 어제부터 계속 이 상태입니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-str">플레이스토어</span></td>
+												<td class="text-muted">14:18</td>
+												<td>업데이트 후 로그인이 안 돼요. 별 1개 드립니다.</td>
+												<td><span class="kw-pill-sm">#로그인</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-tel">전화</span></td>
+												<td class="text-muted">14:05</td>
+												<td>기프티콘 사용 후 포인트 차감이 두 번 됐다고 문의</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">13:51</td>
+												<td>앱이 켜지자마자 꺼집니다. 갤럭시 S26 사용 중입니다.</td>
+												<td><span class="kw-pill-sm">#앱오류</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-mail">이메일</span></td>
+												<td class="text-muted">13:40</td>
+												<td>리워드 지급이 안 됐는데 확인 부탁드립니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<p class="text-muted mt-2" style="font-size:12px;"><i class="ti ti-info-circle me-1"></i>앱 내
+								문의·스토어 클릭 시 원본 시스템 새 탭 이동 / 전화·이메일·원스토어 클릭 시 팝업 확인</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ===== TAB 4: 도넛 + 프로그레스 ===== -->
+				<div class="siian-tab-pane" id="tab3">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title"><i class="ti ti-layout-dashboard text-primary me-2"></i>고객 민원 통합
+								대시보드</div>
+							<div class="card-actions">
+								<button class="btn btn-sm btn-primary"><i class="ti ti-plus me-1"></i>CS 등록</button>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row g-3 mb-3">
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-header py-2">
+											<div class="card-title" style="font-size:12px;"><i
+													class="ti ti-chart-donut me-1"></i>오늘 총 인입</div><span
+												class="text-muted" style="font-size:12px;">2026.06.22</span>
+										</div>
+										<div class="card-body">
+											<div class="d-flex align-items-center gap-3">
+												<div class="donut-wrap">
+													<svg width="90" height="90" viewBox="0 0 90 90">
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#f3f4f6"
+															stroke-width="9" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#378add"
+															stroke-width="9" stroke-dasharray="139.7 219.9"
+															stroke-dashoffset="55.0" stroke-linecap="round" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#639922"
+															stroke-width="9" stroke-dasharray="46.2 219.9"
+															stroke-dashoffset="-84.7" stroke-linecap="round" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#ba7517"
+															stroke-width="9" stroke-dasharray="19.8 219.9"
+															stroke-dashoffset="-130.9" stroke-linecap="round" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#7f77dd"
+															stroke-width="9" stroke-dasharray="13.2 219.9"
+															stroke-dashoffset="-150.7" stroke-linecap="round" />
+													</svg>
+													<div class="donut-center">
+														<div class="donut-num">47</div>
+														<div class="donut-unit">건</div>
+													</div>
+												</div>
+												<div class="flex-fill">
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#378add;"></span><span
+																	style="font-size:12px;color:#6b7280;">앱 내
+																	문의</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">30건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:64%;background:#378add;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">64%
+														</div>
+													</div>
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#639922;"></span><span
+																	style="font-size:12px;color:#6b7280;">스토어
+																	리뷰</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">10건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:21%;background:#639922;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">21%
+														</div>
+													</div>
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#ba7517;"></span><span
+																	style="font-size:12px;color:#6b7280;">전화</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">4건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:9%;background:#ba7517;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">9%
+														</div>
+													</div>
+													<div>
+														<div class="d-flex justify-content-between mb-1"><span
+																class="d-flex align-items-center gap-1"><span
+																	class="ch-dot"
+																	style="background:#7f77dd;"></span><span
+																	style="font-size:12px;color:#6b7280;">이메일</span></span><span
+																style="font-size:12px;font-weight:600;color:#1a1a2e;">3건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:6%;background:#7f77dd;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">6%
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="card h-100" style="border:1px solid #e5e7eb;">
+										<div class="card-header py-2">
+											<div class="card-title" style="font-size:12px;">
+												<i
+													class="ti ti-trending-up me-1"></i>실시간 민원 TOP 3
+												</div>
+												<span class="text-muted" style="font-size:12px;">AI 자동 태깅</span>
+										</div>
+										<div class="card-body">
+											<div class="d-flex align-items-center gap-3">
+												<div class="donut-wrap">
+													<svg width="90" height="90" viewBox="0 0 90 90">
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#f3f4f6"
+															stroke-width="9" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#378add"
+															stroke-width="9" stroke-dasharray="103.3 219.9"
+															stroke-dashoffset="55.0" stroke-linecap="round" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#639922"
+															stroke-width="9" stroke-dasharray="68.9 219.9"
+															stroke-dashoffset="-48.3" stroke-linecap="round" />
+														<circle cx="45" cy="45" r="35" fill="none" stroke="#e24b4a"
+															stroke-width="9" stroke-dasharray="45.9 219.9"
+															stroke-dashoffset="-117.2" stroke-linecap="round" />
+													</svg>
+													<div class="donut-center">
+														<div class="donut-num">38</div>
+														<div class="donut-unit">건</div>
+													</div>
+												</div>
+												<div class="flex-fill">
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																style="font-size:12px;font-weight:500;color:#1d4ed8;">#포인트</span><span
+																style="font-size:12px;font-weight:600;color:#185fa5;">18건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:100%;background:#378add;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">47%
+														</div>
+													</div>
+													<div class="mb-2">
+														<div class="d-flex justify-content-between mb-1"><span
+																style="font-size:12px;font-weight:500;color:#166534;">#로그인</span><span
+																style="font-size:12px;font-weight:600;color:#3b6d11;">12건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:67%;background:#639922;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">32%
+														</div>
+													</div>
+													<div>
+														<div class="d-flex justify-content-between mb-1"><span
+																style="font-size:12px;font-weight:500;color:#991b1b;">#앱오류</span><span
+																style="font-size:12px;font-weight:600;color:#a32d2d;">8건</span>
+														</div>
+														<div class="progress" style="height:4px;">
+															<div class="progress-bar"
+																style="width:44%;background:#e24b4a;"></div>
+														</div>
+														<div class="text-end text-muted" style="font-size:12px;">21%
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card" style="border:1px solid #e5e7eb;">
+								<div class="card-body pb-0">
+									<div class="fw-medium setion_tit mb-2" style="font-size:12px;"><i
+											class="ti ti-list me-1"></i>실시간 VOC 통합 피드</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-vcenter table-hover card-table">
+										<thead>
+											<tr>
+												<th style="width:90px;">채널</th>
+												<th style="width:60px;">시간</th>
+												<th>민원 요약</th>
+												<th style="width:70px;">키워드</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">14:32</td>
+												<td>포인트 적립이 안 되고 있어요. 어제부터 계속 이 상태입니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-str">플레이스토어</span></td>
+												<td class="text-muted">14:18</td>
+												<td>업데이트 후 로그인이 안 돼요. 별 1개 드립니다.</td>
+												<td><span class="kw-pill-sm">#로그인</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-tel">전화</span></td>
+												<td class="text-muted">14:05</td>
+												<td>기프티콘 사용 후 포인트 차감이 두 번 됐다고 문의</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-app">앱 내 문의</span></td>
+												<td class="text-muted">13:51</td>
+												<td>앱이 켜지자마자 꺼집니다. 갤럭시 S26 사용 중입니다.</td>
+												<td><span class="kw-pill-sm">#앱오류</span></td>
+											</tr>
+											<tr>
+												<td><span class="ch-badge-voc badge-mail">이메일</span></td>
+												<td class="text-muted">13:40</td>
+												<td>리워드 지급이 안 됐는데 확인 부탁드립니다.</td>
+												<td><span class="kw-pill-sm">#포인트</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<p class="text-muted mt-2" style="font-size:12px;"><i class="ti ti-info-circle me-1"></i>앱 내
+								문의·스토어 클릭 시 원본 시스템 새 탭 이동 / 전화·이메일·원스토어 클릭 시 팝업 확인</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ===== TAB 5: AI 답변 화면 ===== -->
+				<div class="siian-tab-pane" id="tab4">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">문의 답변</div>
+							<div class="card-actions"><button class="btn-close"></button></div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-bordered table-sm mb-0" style="font-size:12px;">
+								<tbody>
+									<tr>
+										<td class="text-muted bg-light" style="width:90px;">문의일시</td>
+										<td>2026-06-24 16:15:00 <span class="badge bg-blue-lt ms-1">포인트 지급 누락
+												문의</span><span class="badge bg-green-lt ms-1">답변완료</span></td>
+									</tr>
+									<tr>
+										<td class="text-muted bg-light">클라이언트</td>
+										<td>PC</td>
+									</tr>
+									<tr>
+										<td class="text-muted bg-light">내용</td>
+										<td>기프티콘 전송했는데 안 보여요. 어디서 확인할 수 있나요?</td>
+									</tr>
+									<tr>
+										<td class="text-muted bg-light">첨부파일</td>
+										<td class="text-muted">없음</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="card-body">
+							<div class="mb-3">
+								<label class="form-label text-muted" style="font-size:12px;">유사 민원 참고</label>
+								<div class="d-flex align-items-center gap-2 p-2 rounded border bg-light">
+									<i class="ti ti-file-text text-muted"></i>
+									<span style="font-size:12px;">포인트 누락 · 2026.05</span>
+									<span class="badge bg-yellow-lt">유사도 높음</span>
+									<span class="text-muted ms-auto" style="font-size:12px;">3/3건 참고 중</span>
+									<i class="ti ti-chevron-down text-muted"></i>
+								</div>
+							</div>
+							<div class="mb-3">
+								<label class="form-label text-muted" style="font-size:12px;">답변 작성</label>
+								<div class="card border">
+									<div class="card-header py-2 bg-light d-flex align-items-center gap-2 flex-wrap">
+										<button class="btn btn-sm btn-primary d-flex align-items-center gap-1"><i
+												class="ti ti-sparkles"></i> AI 초안 생성 <span class="badge bg-red ms-1"
+												style="font-size:9px;">NEW</span></button>
+										<div class="vr"></div>
+										<button
+											class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+												class="ti ti-wand"></i> AI 첨삭</button>
+										<div class="vr"></div>
+										<button
+											class="btn btn-sm btn-ghost-secondary d-flex align-items-center gap-1"><i
+												class="ti ti-refresh"></i> 초기화</button>
+									</div>
+									<textarea class="form-control border-0 rounded-0" rows="5"
+										placeholder="직접 답변을 작성하거나 AI 초안 생성 버튼을 눌러주세요."
+										style="resize:none;font-size:13px;"></textarea>
+									<div class="card-footer py-2 d-flex align-items-center gap-2 bg-light">
+										<span class="text-muted" style="font-size:12px;">초안이 도움됐나요?</span>
+										<button
+											class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+												class="ti ti-thumb-up" style="font-size:12px;"></i> 도움됐어요</button>
+										<button
+											class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+												class="ti ti-thumb-down" style="font-size:12px;"></i> 별로예요</button>
+									</div>
+								</div>
+								<p class="text-muted mt-1" style="font-size:12px;"><i
+										class="ti ti-info-circle me-1"></i>AI 답변 초안은 참고용이며, 운영자 검수 없이 외부로 자동 발송되지 않습니다.
+								</p>
+							</div>
+							<div class="mb-3">
+								<label class="form-label text-muted" style="font-size:12px;">비고</label>
+								<textarea class="form-control" rows="2" placeholder="민원처리 관련하여 작성한 참고사항"
+									style="font-size:12px;"></textarea>
+							</div>
+							<div class="d-flex justify-content-end gap-2">
+								<button class="btn btn-outline-secondary">취소</button>
+								<button class="btn btn-primary">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- /container -->
+		</div><!-- /page-wrapper -->
+	</div><!-- /page -->
+
+	<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+	<script>
+		function switchTab(idx) {
+			document.querySelectorAll('.siian-tab-pane').forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+			document.querySelectorAll('.siian-tab-btn').forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+		}
+	</script>
+</body>
+
+</html>
