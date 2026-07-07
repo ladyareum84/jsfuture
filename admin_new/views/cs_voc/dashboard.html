@@ -27,11 +27,18 @@
                                     <a href="#">CS 통합 대시보드</a>
                                 </li>
                             </ol>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="col">
                         <h2 class="page-title">CS 통합 대시보드</h2>
                         <div class="text-secondary mt-1">CS 문의 및 VOC 현황을 확인합니다.</div>
+                    </div>
+                    <div class="col-auto ms-auto">
+                        <div class="btn-list">
+                            <a type="button" href="#" class="btn btn-primary d-sm-inline-block">
+                                CS 등록
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,82 +48,52 @@
         <div class="page-body">
             <div class="container-xl">
                 <div class="row row-cards">
-                    <!-- 조건검색 스타일 02 -->
-                    <div class="col-12">
-                        <div class="card">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header py-3">
+                                <h3 class="card-title">오늘 총 인입</h3>
+                                <div class="card-actions"><span class="text-secondary small lh-base">2026.06.22</span></div>
+                            </div>
                             <div class="card-body">
-                                <div class="filter-item">
-                                    <div class="row row-cards">
-                                        <div class="col-md-3">
-                                            <div class="mb-3">
-                                                <label class="form-label">조회구분</label>
-                                                <select name="user[month]" class="form-select">
-                                                    <option value="day" selected="selected">일별</option>
-                                                    <option value="week">주별</option>
-                                                    <option value="month">월별</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">조회기간</label>
-                                                <div class="row">
-                                                    <div class="input-icon w-50">
-                                                        <span
-                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                <path
-                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                </path>
-                                                                <path d="M16 3v4"></path>
-                                                                <path d="M8 3v4"></path>
-                                                                <path d="M4 11h16"></path>
-                                                                <path d="M11 15h1"></path>
-                                                                <path d="M12 15v3"></path>
-                                                            </svg></span>
-                                                        <input class="form-control datepicker" placeholder="시작날짜" id="startDate" name="Date" value="">
-                                                    </div>
-                                                    <div class="input-icon w-50">
-                                                        <span
-                                                            class="input-icon-addon"><!-- Download SVG icon from http://tabler.io/icons/icon/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                                <path
-                                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
-                                                                </path>
-                                                                <path d="M16 3v4"></path>
-                                                                <path d="M8 3v4"></path>
-                                                                <path d="M4 11h16"></path>
-                                                                <path d="M11 15h1"></path>
-                                                                <path d="M12 15v3"></path>
-                                                            </svg></span>
-                                                        <input class="form-control datepicker" placeholder="종료날짜" id="endDate" name="Date" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="mb-3">
-                                                <label class="form-label">처리상태</label>
-                                                <select id="status" name="status" class="form-select">
-                                                    <option value="all" selected="selected">전체</option>
-                                                    <option value="receipt">접수</option>
-                                                    <option value="processing">처리중</option>
-                                                    <option value="complete">완료</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                <div class="d-flex align-items-center gap-3 donut-flex-row">
+                                    <div class="donut-wrap">
+                                        <div id="chart-inflow-donut"></div>
                                     </div>
-                                    <div class="row row-cards">
-                                        <div class="col-md-3">
-                                            <div class="mb-3">
-                                                <label class="form-label">&nbsp;</label>
-                                                <div class="text-start">
-                                                    <a href="#" id="searchButton" class="btn btn-outline-primary w-50">조회</a>
-                                                </div>
+                                    <div class="flex-fill">
+                                        <div class="mb-2">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="d-flex align-items-center gap-1"><span class="status-dot" style="background:#066fd1"></span>앱 내 문의</span>
+                                                <span class="fw-bold">30건 (64%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:64%;background-color:#066fd1" role="progressbar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="d-flex align-items-center gap-1"><span class="status-dot" style="background:#2fb344"></span>스토어 리뷰</span>
+                                                <span class="fw-bold">10건 (21%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:21%;background-color:#2fb344" role="progressbar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="d-flex align-items-center gap-1"><span class="status-dot" style="background:#f59f00"></span>전화</span>
+                                                <span class="fw-bold">4건 (9%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:9%;background-color:#f59f00" role="progressbar"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="d-flex align-items-center gap-1"><span class="status-dot" style="background:#ae3ec9"></span>이메일</span>
+                                                <span class="fw-bold">3건 (6%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:6%;background-color:#ae3ec9" role="progressbar"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -124,109 +101,117 @@
                             </div>
                         </div>
                     </div>
-                    <!-- END 조건검색 스타일 02-->
-                    <!-- 통계 카드 -->
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header py-3">
+                                <h3 class="card-title">실시간 민원 TOP 3</h3>
+                                <div class="card-actions"><span class="text-secondary small lh-base">AI 자동 태깅</span></div>
+                            </div>
                             <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="bg-primary text-white avatar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M8 9h8"></path>
-                                                <path d="M8 13h6"></path>
-                                                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z"></path>
-                                            </svg>
-                                        </span>
+                                <div class="d-flex align-items-center gap-3 donut-flex-row">
+                                    <div class="donut-wrap">
+                                        <div id="chart-top3-donut"></div>
                                     </div>
-                                    <div class="col">
-                                        <div class="font-weight-medium">0건</div>
-                                        <div class="text-secondary">총 문의</div>
+                                    <div class="flex-fill">
+                                        <div class="mb-2">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="badge bg-yellow-lt text-yellow">포인트</span>
+                                                <span class="fw-bold">18건 (47%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:100%;background-color:#f59f00" role="progressbar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="badge bg-green-lt text-green">로그인</span>
+                                                <span class="fw-bold">12건 (32%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:67%;background-color:#2fb344" role="progressbar"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="badge bg-red-lt text-red">앱오류</span>
+                                                <span class="fw-bold">8건 (21%)</span>
+                                            </div>
+                                            <div class="progress progress-sm">
+                                                <div class="progress-bar" style="width:44%;background-color:#d63939" role="progressbar"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="bg-yellow text-white avatar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                                                <path d="M12 7v5l3 3"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <div class="col">
-                                        <div class="font-weight-medium">0건</div>
-                                        <div class="text-secondary">접수</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="bg-azure text-white avatar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M20 6v6h-6"></path>
-                                                <path d="M4 18v-6h6"></path>
-                                                <path d="M4 12a8 8 0 0 1 14.5 -4.5m1.5 -1.5v6"></path>
-                                                <path d="M20 12a8 8 0 0 1 -14.5 4.5m-1.5 1.5v-6"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <div class="col">
-                                        <div class="font-weight-medium">0건</div>
-                                        <div class="text-secondary">처리중</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card card-sm">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <span class="bg-green text-white avatar">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                <path d="M5 12l5 5l10 -10"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <div class="col">
-                                        <div class="font-weight-medium">0건</div>
-                                        <div class="text-secondary">완료</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // 통계 카드 -->
                     <!-- Content Table Style -->
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">VOC 목록</h3>
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">실시간 VOC 통합 피드</h3>
                             </div>
                             <div class="card-table">
-                            <div class="custom-table custom-table-lg table-responsive">
-                                <table id="grid" class="table table-bordered"></table>
+                                <div class="custom-table custom-table-lg table-responsive">
+                                    <div id="grid_wrapper" class="dt-container dt-empty-footer">
+                                        <div class="dt-layout-row dt-layout-table">
+                                            <div class="dt-layout-cell  dt-layout-full">
+                                                <table class="table table-vcenter table-bordered" style="min-width:720px;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width:10%;">채널</th>
+                                                            <th style="width:6%;">시간</th>
+                                                            <th>민원 요약</th>
+                                                            <th style="width:10%;">키워드</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span class="badge bg-blue-lt">앱 내 문의</span></td>
+                                                            <td class="text-secondary">14:32</td>
+                                                            <td>포인트 적립이 안 되고 있어요. 어제부터 계속 이 상태입니다.</td>
+                                                            <td><span class="badge bg-secondary-lt">#포인트</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge bg-green-lt">플레이스토어</span></td>
+                                                            <td class="text-secondary">14:18</td>
+                                                            <td>업데이트 후 로그인이 안 돼요. 별 1개 드립니다.</td>
+                                                            <td><span class="badge bg-secondary-lt">#로그인</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge bg-yellow-lt">전화</span></td>
+                                                            <td class="text-secondary">14:05</td>
+                                                            <td>기프티콘 사용 후 포인트 차감이 두 번 됐다고 문의</td>
+                                                            <td><span class="badge bg-secondary-lt">#포인트</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge bg-blue-lt">앱 내 문의</span></td>
+                                                            <td class="text-secondary">13:51</td>
+                                                            <td>앱이 켜지자마자 꺼집니다. 갤럭시 S26 사용 중입니다.</td>
+                                                            <td><span class="badge bg-secondary-lt">#앱오류</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="badge bg-purple-lt">이메일</span></td>
+                                                            <td class="text-secondary">13:40</td>
+                                                            <td>리워드 지급이 안 됐는데 확인 부탁드립니다.</td>
+                                                            <td><span class="badge bg-secondary-lt">#포인트</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>                                                
+                                            </div>                                            
+                                        </div>
+                                        <div class="dt-layout-row">
+                                            <div class="col-12">
+                                                <p class="text-secondary small lh-base">앱 내 문의·스토어 클릭 시 원본 시스템 새 탭 이동 / 전화·이메일·원스토어 클릭 시 팝업 확인</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                     <!-- // Content Table Style -->
+                    
                 </div>
             </div>
         </div>
@@ -243,68 +228,109 @@
         // 페이지 전용 스타일 로드
         document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="/public/css/cs_dashboard.css">');
 
-        // Table Data
-        const grid = new DataTable("#grid", {
-            data: [
-
-            ],
-            columns: [
-                {
-                    title: '문의번호',
-                    data: 'voc_id'
+        // Donut Chart 공통 옵션
+        const donutChartOptions = (series, labels, colors) => ({
+            chart: {
+                type: 'donut',
+                fontFamily: 'inherit',
+                height: 120,
+                width: 120,
+                sparkline: { enabled: true },
+                animations: {
+                    enabled: true,
+                    easing: 'easeinout',
+                    dynamicAnimation: { enabled: true, speed: 250 },
                 },
-                {
-                    title: '접수일',
-                    data: 'receipt_date'
+                // expandOnClick의 실제 확대 효과는 슬라이스에 바인딩된 click 이벤트에서만 동작하므로
+                // 마우스 진입/이탈 시 click을 흉내 내어 튀어나오게(다시 클릭해서 원복) 처리
+                events: {
+                    dataPointMouseEnter: (event) => {
+                        event.target.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+                    },
+                    dataPointMouseLeave: (event) => {
+                        event.target.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+                    },
                 },
-                {
-                    title: '유형',
-                    data: 'category'
+            },
+            series: series,
+            labels: labels,
+            // 색상 변경은 이 배열만 수정하면 됩니다.
+            colors: colors,
+            fill: { opacity: 1 },
+            stroke: { width: 0 },
+            tooltip: {
+                // 외부 CSS에 의존하지 않고 마크업을 직접 그려 배경/글자색/보더를 고정
+                custom: ({ series, seriesIndex, w }) => {
+                    const label = w.globals.labels[seriesIndex];
+                    const value = series[seriesIndex];
+                    const dotColor = w.globals.colors[seriesIndex];
+                    return `
+                        <div style="background:#1f2937;color:#fff;border:none;box-shadow:none;border-radius:6px;padding:6px 10px;font-size:12px;display:flex;align-items:center;gap:6px;white-space:nowrap;">
+                            <span style="width:8px;height:8px;border-radius:50%;background:${dotColor};display:inline-block;flex-shrink:0;"></span>
+                            <span>${label}: <b>${value}건</b></span>
+                        </div>
+                    `;
                 },
-                {
-                    title: '처리상태',
-                    data: 'status'
-                },
-                {
-                    title: '처리자',
-                    data: 'manager'
-                }
-
-            ],
-            ...dataTablesConfg,
-        });
-
-
-             // date picker 설정
-            if (window.Litepicker) {
-                document.querySelectorAll('.datepicker').forEach((el) => {
-                    new Litepicker({
-                        element: el,
-                        buttonText: {
-                            previousMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-left -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M15 6l-6 6l6 6" /></svg>`,
-                            nextMonth: `<!-- Download SVG icon from http://tabler.io/icons/icon/chevron-right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-1"><path d="M9 6l6 6l-6 6" /></svg>`,
-                        },
-                        lang: 'ko',
-                        format: 'YYYY-MM-DD',
-                        i18n: {
-                            ko: {
-                                weekdays: ['일', '월', '화', '수', '목', '금', '토'],
-                                months: [
-                                    '1월', '2월', '3월', '4월', '5월', '6월',
-                                    '7월', '8월', '9월', '10월', '11월', '12월'
-                                ],
-                                nextMonth: '다음 달',
-                                prevMonth: '이전 달',
-                                reset: '초기화',
-                                apply: '적용',
+            },
+            legend: { show: false },
+            // 클릭한 조각이 어둡게 변하지 않고 지정한 colors 배열 색을 그대로 유지
+            states: {
+                active: { filter: { type: 'none' } },
+                hover: { filter: { type: 'none' } },
+            },
+            plotOptions: {
+                pie: {
+                    // 클릭 시 튀어나오는 조각까지 잘리지 않도록 도넛 자체를 캔버스 안쪽으로 살짝 축소
+                    customScale: 0.82,
+                    donut: {
+                        size: '68%',
+                        labels: {
+                            show: true,
+                            // "건" 캡션(total.label) 위치 - 실제로는 name.offsetY를 그대로 사용함
+                            name: {
+                                show: true,
+                                offsetY: 26,
+                                fontSize: '12px',
+                                color: 'var(--tblr-secondary)',
+                            },
+                            value: {
+                                fontSize: '28px',
+                                fontWeight: 700,
+                                color: 'inherit',
+                                offsetY: -8,
+                            },
+                            total: {
+                                show: true,
+                                showAlways: true,
+                                label: '건',
+                                fontSize: '12px',
+                                fontWeight: 600,
+                                color: 'var(--tblr-secondary)',
+                                formatter: (w) => w.globals.seriesTotals.reduce((a, b) => a + b, 0),
                             },
                         },
-                    });
-                });
-            }
+                    },
+                },
+            },
+        });
 
+        window.ApexCharts && new ApexCharts(
+            document.getElementById('chart-inflow-donut'),
+            donutChartOptions(
+                [30, 10, 4, 3],
+                ['앱 내 문의', '스토어 리뷰', '전화', '이메일'],
+                ['#066fd1', '#2fb344', '#f59f00', '#ae3ec9']
+            )
+        ).render();
+
+        window.ApexCharts && new ApexCharts(
+            document.getElementById('chart-top3-donut'),
+            donutChartOptions(
+                [18, 12, 8],
+                ['포인트', '로그인', '앱오류'],
+                ['#f59f00', '#2fb344', '#d63939']
+            )
+        ).render();
     }; //여기 안에 넣기
     includeFoundation(callback);
 </script>

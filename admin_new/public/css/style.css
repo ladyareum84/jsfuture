@@ -220,6 +220,7 @@ body {
 .custom-table .dt-layout-row.dt-layout-table{
     margin: 0;
 }
+.custom-table .card-header{border-bottom: 0;}
 
 /* length 개씩 보기 - select */
 .custom-table div.dt-container .dt-input {

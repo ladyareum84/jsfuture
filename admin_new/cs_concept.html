@@ -290,6 +290,8 @@
 						<button class="siian-tab-btn" onclick="switchTab(2)">③ 2컬럼 키워드 바</button>
 						<button class="siian-tab-btn" onclick="switchTab(3)">④ 도넛 + 프로그레스</button>
 						<button class="siian-tab-btn" onclick="switchTab(4)">⑤ AI 답변 화면</button>
+						<button class="siian-tab-btn" onclick="switchTab(5)">⑥ AI 답변 데이터그리드형</button>
+						<button class="siian-tab-btn" onclick="switchTab(6)">⑦ AI 답변 아코디언형</button>
 					</div>
 				</div>
 
@@ -1184,33 +1186,40 @@
 						<div class="card-header">
 							<div class="card-title">문의 답변</div>
 							<div class="card-actions"><button class="btn-close"></button></div>
-						</div>
-						<div class="table-responsive">
-							<table class="table table-bordered table-sm mb-0" style="font-size:12px;">
-								<tbody>
-									<tr>
-										<td class="text-muted bg-light" style="width:90px;">문의일시</td>
-										<td>2026-06-24 16:15:00 <span class="badge bg-blue-lt ms-1">포인트 지급 누락
-												문의</span><span class="badge bg-green-lt ms-1">답변완료</span></td>
-									</tr>
-									<tr>
-										<td class="text-muted bg-light">클라이언트</td>
-										<td>PC</td>
-									</tr>
-									<tr>
-										<td class="text-muted bg-light">내용</td>
-										<td>기프티콘 전송했는데 안 보여요. 어디서 확인할 수 있나요?</td>
-									</tr>
-									<tr>
-										<td class="text-muted bg-light">첨부파일</td>
-										<td class="text-muted">없음</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+						</div>						
 						<div class="card-body">
+							<div class="table-responsive mb-3">
+								<table class="table table-bordered table-sm mb-0" style="font-size:12px;">
+									<tbody>
+										<tr>
+											<td class="text-muted bg-light" style="width:90px;">문의일시</td>
+											<td>2026-06-24 16:15:00</td>
+										</tr>
+										<tr>
+											<td class="text-muted bg-light">문의 타입</td>
+											<td><span class="badge bg-blue-lt">포인트 지급 누락 문의</span></td>
+										</tr>
+										<tr>
+											<td class="text-muted bg-light">처리결과</td>
+											<td><span class="badge bg-green-lt">답변완료</span></td>
+										</tr>
+										<tr>
+											<td class="text-muted bg-light">클라이언트</td>
+											<td>PC</td>
+										</tr>
+										<tr>
+											<td class="text-muted bg-light">내용</td>
+											<td>기프티콘 전송했는데 안 보여요. 어디서 확인할 수 있나요?</td>
+										</tr>
+										<tr>
+											<td class="text-muted bg-light">첨부파일</td>
+											<td class="text-muted">없음</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<div class="mb-3">
-								<label class="form-label text-muted" style="font-size:12px;">유사 민원 참고</label>
+								<label class="form-label text-muted" style="font-size:14px;">유사 민원 참고</label>
 								<div class="d-flex align-items-center gap-2 p-2 rounded border bg-light">
 									<i class="ti ti-file-text text-muted"></i>
 									<span style="font-size:12px;">포인트 누락 · 2026.05</span>
@@ -1220,7 +1229,7 @@
 								</div>
 							</div>
 							<div class="mb-3">
-								<label class="form-label text-muted" style="font-size:12px;">답변 작성</label>
+								<label class="form-label text-muted" style="font-size:14x;">답변 작성</label>
 								<div class="card border">
 									<div class="card-header py-2 bg-light d-flex align-items-center gap-2 flex-wrap">
 										<button class="btn btn-sm btn-primary d-flex align-items-center gap-1"><i
@@ -1265,6 +1274,291 @@
 					</div>
 				</div>
 
+				<!-- ===== TAB 6: AI 답변 데이터그리드형 ===== -->
+				<div class="siian-tab-pane" id="tab5">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">문의 답변</div>
+							<div class="card-actions"><button class="btn-close"></button></div>
+						</div>
+						<div class="card-body">
+							<div class="row g-3">
+								<div class="col-md-5">
+									<div class="card border mb-3">
+										<div class="card-header py-2">
+											<div class="card-title" style="font-size:13px;">문의 상세</div>
+										</div>
+										<div class="card-body">
+											<div class="datagrid">
+												<div class="datagrid-item">
+													<div class="datagrid-title">문의일시</div>
+													<div class="datagrid-content">2026-06-24 16:15:00</div>
+												</div>
+												<div class="datagrid-item">
+													<div class="datagrid-title">문의 타입</div>
+													<div class="datagrid-content"><span class="badge bg-blue-lt">포인트 지급 누락
+															문의</span></div>
+												</div>
+												<div class="datagrid-item">
+													<div class="datagrid-title">처리결과</div>
+													<div class="datagrid-content"><span class="badge bg-green-lt">답변완료</span>
+													</div>
+												</div>
+												<div class="datagrid-item">
+													<div class="datagrid-title">클라이언트</div>
+													<div class="datagrid-content">PC</div>
+												</div>
+												<div class="datagrid-item" style="grid-column:1/-1;">
+													<div class="datagrid-title">내용</div>
+													<div class="datagrid-content">기프티콘 전송했는데 안 보여요. 어디서 확인할 수 있나요?</div>
+												</div>
+												<div class="datagrid-item" style="grid-column:1/-1;">
+													<div class="datagrid-title">첨부파일</div>
+													<div class="datagrid-content text-muted">없음</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card border">
+										<div class="card-header py-2 d-flex align-items-center justify-content-between">
+											<div class="card-title" style="font-size:13px;">유사 민원 참고</div>
+											<span class="text-muted" style="font-size:12px;">3건</span>
+										</div>
+										<div class="accordion accordion-flush" id="similarAccordion">
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button d-flex align-items-center collapsed" type="button"
+														data-bs-toggle="collapse" data-bs-target="#similarItem1"
+														style="font-size:12px;">
+														<span class="d-flex align-items-center flex-fill"><i
+																class="ti ti-file-text text-muted me-2"></i>포인트 누락 ·
+															2026.05</span>
+														<span class="badge bg-yellow-lt me-2">유사도 높음</span>
+													</button>
+												</h2>
+												<div id="similarItem1" class="accordion-collapse collapse">
+													<div class="accordion-body" style="font-size:12px;">
+														포인트 적립이 되지 않는다는 문의로, 앱 재설치 안내 후 정상 적립 확인되어 종결 처리함.
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button d-flex align-items-center collapsed" type="button"
+														data-bs-toggle="collapse" data-bs-target="#similarItem2"
+														style="font-size:12px;">
+														<span class="d-flex align-items-center flex-fill"><i
+																class="ti ti-file-text text-muted me-2"></i>포인트 미지급 ·
+															2026.04</span>
+														<span class="badge bg-yellow-lt me-2">유사도 높음</span>
+													</button>
+												</h2>
+												<div id="similarItem2" class="accordion-collapse collapse">
+													<div class="accordion-body" style="font-size:12px;">
+														이벤트 참여 리워드 포인트가 지급되지 않아 문의, 정산 지연 확인 후 수동 지급 완료.
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item">
+												<h2 class="accordion-header">
+													<button class="accordion-button d-flex align-items-center collapsed" type="button"
+														data-bs-toggle="collapse" data-bs-target="#similarItem3"
+														style="font-size:12px;">
+														<span class="d-flex align-items-center flex-fill"><i
+																class="ti ti-file-text text-muted me-2"></i>기프티콘 오류 ·
+															2026.03</span>
+														<span class="badge bg-azure-lt me-2">유사도 중간</span>
+													</button>
+												</h2>
+												<div id="similarItem3" class="accordion-collapse collapse">
+													<div class="accordion-body" style="font-size:12px;">
+														기프티콘 발송 후 수신함에 노출되지 않는 오류로, 서버 캐시 문제 확인 후 재전송 안내.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<label class="form-label text-muted" style="font-size:12px;">답변 작성</label>
+									<div class="card border">
+										<div class="card-header py-2 bg-light d-flex align-items-center gap-2 flex-wrap">
+											<button class="btn btn-sm btn-primary d-flex align-items-center gap-1"><i
+													class="ti ti-sparkles"></i> AI 초안 생성 <span class="badge bg-red ms-1"
+													style="font-size:9px;">NEW</span></button>
+											<div class="vr"></div>
+											<button
+												class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+													class="ti ti-wand"></i> AI 첨삭</button>
+											<div class="vr"></div>
+											<button
+												class="btn btn-sm btn-ghost-secondary d-flex align-items-center gap-1"><i
+													class="ti ti-refresh"></i> 초기화</button>
+										</div>
+										<textarea class="form-control border-0 rounded-0" rows="9"
+											placeholder="직접 답변을 작성하거나 AI 초안 생성 버튼을 눌러주세요."
+											style="resize:none;font-size:13px;"></textarea>
+										<div class="card-footer py-2 d-flex align-items-center gap-2 bg-light">
+											<span class="text-muted" style="font-size:12px;">초안이 도움됐나요?</span>
+											<button
+												class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+													class="ti ti-thumb-up" style="font-size:12px;"></i> 도움됐어요</button>
+											<button
+												class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+													class="ti ti-thumb-down" style="font-size:12px;"></i> 별로예요</button>
+										</div>
+									</div>
+									<p class="text-muted mt-1" style="font-size:12px;"><i
+											class="ti ti-info-circle me-1"></i>AI 답변 초안은 참고용이며, 운영자 검수 없이 외부로 자동 발송되지 않습니다.
+									</p>
+									<div class="mb-3">
+										<label class="form-label text-muted" style="font-size:12px;">비고</label>
+										<textarea class="form-control" rows="2" placeholder="민원처리 관련하여 작성한 참고사항"
+											style="font-size:12px;"></textarea>
+									</div>
+									<div class="d-flex justify-content-end gap-2">
+										<button class="btn btn-outline-secondary">취소</button>
+										<button class="btn btn-primary">확인</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ===== TAB 7: AI 답변 아코디언형 ===== -->
+				<div class="siian-tab-pane" id="tab6">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">문의 답변</div>
+							<div class="card-actions"><button class="btn-close"></button></div>
+						</div>
+						<div class="card-body">
+							<div class="accordion" id="aiAccordion">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse"
+											data-bs-target="#accItem1">
+											문의 상세
+											<span class="badge bg-blue-lt ms-2">포인트 지급 누락 문의</span>
+											<span class="badge bg-green-lt ms-1">답변완료</span>
+										</button>
+									</h2>
+									<div id="accItem1" class="accordion-collapse collapse show"
+										data-bs-parent="#aiAccordion">
+										<div class="accordion-body">
+											<table class="table table-bordered table-sm mb-0" style="font-size:12px;">
+												<tbody>
+													<tr>
+														<td class="text-muted bg-light" style="width:90px;">문의일시</td>
+														<td>2026-06-24 16:15:00</td>
+													</tr>
+													<tr>
+														<td class="text-muted bg-light">클라이언트</td>
+														<td>PC</td>
+													</tr>
+													<tr>
+														<td class="text-muted bg-light">내용</td>
+														<td>기프티콘 전송했는데 안 보여요. 어디서 확인할 수 있나요?</td>
+													</tr>
+													<tr>
+														<td class="text-muted bg-light">첨부파일</td>
+														<td class="text-muted">없음</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+											data-bs-target="#accItem2">
+											유사 민원 참고
+											<span class="badge bg-yellow-lt ms-2">3건</span>
+										</button>
+									</h2>
+									<div id="accItem2" class="accordion-collapse collapse" data-bs-parent="#aiAccordion">
+										<div class="accordion-body p-0">
+											<div class="list-group list-group-flush">
+												<div class="list-group-item d-flex align-items-center gap-2"
+													style="font-size:12px;">
+													<i class="ti ti-file-text text-muted"></i>
+													<span>포인트 누락 · 2026.05</span>
+													<span class="badge bg-yellow-lt ms-auto">유사도 높음</span>
+												</div>
+												<div class="list-group-item d-flex align-items-center gap-2"
+													style="font-size:12px;">
+													<i class="ti ti-file-text text-muted"></i>
+													<span>포인트 미지급 · 2026.04</span>
+													<span class="badge bg-yellow-lt ms-auto">유사도 높음</span>
+												</div>
+												<div class="list-group-item d-flex align-items-center gap-2"
+													style="font-size:12px;">
+													<i class="ti ti-file-text text-muted"></i>
+													<span>기프티콘 오류 · 2026.03</span>
+													<span class="badge bg-azure-lt ms-auto">유사도 중간</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse"
+											data-bs-target="#accItem3">
+											AI 답변 작성
+										</button>
+									</h2>
+									<div id="accItem3" class="accordion-collapse collapse show"
+										data-bs-parent="#aiAccordion">
+										<div class="accordion-body">
+											<div class="card border">
+												<div class="card-header py-2 bg-light d-flex align-items-center gap-2 flex-wrap">
+													<button class="btn btn-sm btn-primary d-flex align-items-center gap-1"><i
+															class="ti ti-sparkles"></i> AI 초안 생성 <span
+															class="badge bg-red ms-1" style="font-size:9px;">NEW</span></button>
+													<div class="vr"></div>
+													<button
+														class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+															class="ti ti-wand"></i> AI 첨삭</button>
+													<div class="vr"></div>
+													<button
+														class="btn btn-sm btn-ghost-secondary d-flex align-items-center gap-1"><i
+															class="ti ti-refresh"></i> 초기화</button>
+												</div>
+												<textarea class="form-control border-0 rounded-0" rows="6"
+													placeholder="직접 답변을 작성하거나 AI 초안 생성 버튼을 눌러주세요."
+													style="resize:none;font-size:13px;"></textarea>
+												<div class="card-footer py-2 d-flex align-items-center gap-2 bg-light">
+													<span class="text-muted" style="font-size:12px;">초안이 도움됐나요?</span>
+													<button
+														class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+															class="ti ti-thumb-up" style="font-size:12px;"></i> 도움됐어요</button>
+													<button
+														class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"><i
+															class="ti ti-thumb-down" style="font-size:12px;"></i> 별로예요</button>
+												</div>
+											</div>
+											<p class="text-muted mt-1" style="font-size:12px;"><i
+													class="ti ti-info-circle me-1"></i>AI 답변 초안은 참고용이며, 운영자 검수 없이 외부로 자동
+												발송되지 않습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mb-3 mt-3">
+								<label class="form-label text-muted" style="font-size:12px;">비고</label>
+								<textarea class="form-control" rows="2" placeholder="민원처리 관련하여 작성한 참고사항"
+									style="font-size:12px;"></textarea>
+							</div>
+							<div class="d-flex justify-content-end gap-2">
+								<button class="btn btn-outline-secondary">취소</button>
+								<button class="btn btn-primary">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div><!-- /container -->
 		</div><!-- /page-wrapper -->
 	</div><!-- /page -->

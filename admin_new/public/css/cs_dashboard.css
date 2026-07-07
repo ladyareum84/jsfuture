@@ -3,8 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://rsms.me/inter/inter.css');
 
-/* 
+/*
     * 2026-07-03
-    * 클립다운 CS 통합 대시보드 스타일 
+    * 클립다운 CS 통합 대시보드 스타일
     * Tabler UI 스타일 커스터마이징
 */
+
+@media (max-width: 576px) {
+    .donut-flex-row {
+        flex-direction: column;
+    }
+
+    .donut-flex-row .flex-fill {
+        width: 100%;
+    }
+}
+
+/* 도넛 차트 (ApexCharts) */
+.donut-wrap {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.donut-wrap .apexcharts-tooltip {
+    border: none !important;
+    box-shadow: none !important;
+    background: #1f2937 !important;
+    color: #fff !important;
+    padding: 4px 8px;
+
+}
