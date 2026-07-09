@@ -234,7 +234,7 @@
             window.ApexCharts && (new ApexCharts(document.getElementById(
                 'chart-demo-area'), {
                 chart: {
-                    type: "area",
+                    type: "line",
                     fontFamily: 'inherit',
                     height: 240,
                     parentHeightOffset: 0,
@@ -248,17 +248,10 @@
                 dataLabels: {
                     enabled: false,
                 },
-                fill: {
-                    colors: [
-                        'color-mix(in srgb, transparent, var(--tblr-primary) 16%)',
-                        'color-mix(in srgb, transparent, var(--tblr-primary) 16%)',
-                    ],
-                    type: 'solid'
-                },
                 stroke: {
                     width: 2,
                     lineCap: "round",
-                    curve: "smooth",
+                    curve: "straight",
                 },
                 series: [{
                     name: "series1",
